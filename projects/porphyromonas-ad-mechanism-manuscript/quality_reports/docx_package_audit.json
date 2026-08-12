@@ -1,0 +1,61 @@
+{
+  "schema": "local.docx_package_audit.v2",
+  "rendering_status": "UNAVAILABLE: no Office/LibreOffice/PDF renderer is installed; package and content checks are structural, not visual.",
+  "packages": {
+    "manuscript/manuscript_bilingual.docx": {
+      "path": "manuscript/manuscript_bilingual.docx",
+      "size_bytes": 660249,
+      "sha256": "5e049c2cf83438ef909d049f4f0ed5b68763cb42ab2ae1923e68fece21c6ef86",
+      "zip_crc_error": null,
+      "xml_parse_errors": [],
+      "relationship_errors": [],
+      "paragraphs": 799,
+      "tables": 8,
+      "drawings": 6,
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png"
+      ],
+      "missing_expected_tokens": [],
+      "document_text_characters": 67614,
+      "checks": {
+        "crc_ok": true,
+        "all_xml_parses": true,
+        "all_internal_relationship_targets_exist": true,
+        "paragraph_minimum_met": true,
+        "table_minimum_met": true,
+        "drawing_minimum_met": true,
+        "media_count_matches": true,
+        "expected_tokens_present": true
+      },
+      "verdict": "PASS"
+    },
+    "manuscript/supplementary_tables_bilingual.docx": {
+      "path": "manuscript/supplementary_tables_bilingual.docx",
+      "size_bytes": 12247,
+      "sha256": "1d568f5157e45e329b72112d81988918aa7107ba9010a8a52002823fc8518c48",
+      "zip_crc_error": null,
+      "xml_parse_errors": [],
+      "relationship_errors": [],
+      "paragraphs": 468,
+      "tables": 6,
+      "drawings": 0,
+      "embedded_media": [],
+      "missing_expected_tokens": [],
+      "document_text_characters": 5876,
+      "checks": {
+        "crc_ok": true,
+        "all_xml_parses": true,
+        "all_internal_relationship_targets_exist": true,
+        "paragraph_minimum_met": true,
+        "table_minimum_met": true,
+        "drawing_minimum_met": true,
+        "media_count_matches": true,
+        "expected_tokens_present": true
+      },
+      "verdict": "PASS"
+    }
+  },
+  "verdict": "PASS"
+}

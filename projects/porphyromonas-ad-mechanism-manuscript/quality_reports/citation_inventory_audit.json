@@ -1,0 +1,97 @@
+{
+  "schema": "local.citation_inventory_audit.v2",
+  "files": {
+    "manuscript_en": {
+      "path": "manuscript/manuscript_en.md",
+      "sha256": "25b39ec3d0e628dbda0cfd4f36d04303c4966de23e98fd0d1690b82a9bac969c",
+      "unique_doi_count": 53
+    },
+    "manuscript_zh": {
+      "path": "manuscript/manuscript_zh.md",
+      "sha256": "c6aab5c08046a01b154f2564089b2b26a1aa52da2ec4f8832933d624d245e459",
+      "unique_doi_count": 53
+    },
+    "verified_references": {
+      "path": "references/verified_references.md",
+      "sha256": "647985dfe9c16ea598bc04717dbf83a55b0f2895cd0c6dbe37a12bcedbcfe9fb",
+      "unique_doi_count": 53
+    },
+    "bibtex": {
+      "path": "references/references.bib",
+      "sha256": "dac0108f29c663e12f8c5c045f2c17a51a79c06edc8364baa819fcffddccdf22",
+      "unique_doi_count": 53
+    }
+  },
+  "canonical_dois": [
+    "10.1002/brb3.3486",
+    "10.1002/jcc.21334",
+    "10.1002/pro.70200",
+    "10.1007/s12668-016-0375-x",
+    "10.1016/j.cell.2019.05.010",
+    "10.1016/j.cell.2019.07.016",
+    "10.1016/j.cell.2024.07.027",
+    "10.1016/j.chom.2020.11.002",
+    "10.1016/j.gde.2017.04.002",
+    "10.1016/j.ica.2017.09.061",
+    "10.1016/j.ijbiomac.2019.08.220",
+    "10.1016/j.jebdp.2025.102094",
+    "10.1016/s0006-2952(02)01514-9",
+    "10.1016/s0140-6736(20)32205-4",
+    "10.1016/s0896-6273(00)80108-7",
+    "10.1016/s0969-2126(99)80040-9",
+    "10.1021/acs.jcim.1c00203",
+    "10.1021/bi0101392",
+    "10.1021/jm300871x",
+    "10.1038/s41467-026-72762-5",
+    "10.1038/s41522-021-00247-y",
+    "10.1038/s41522-025-00692-z",
+    "10.1038/s41598-020-78319-w",
+    "10.1038/srep34477",
+    "10.1074/jbc.rev120.008207",
+    "10.1093/ageing/afad015",
+    "10.1093/bib/bbad135",
+    "10.1093/bioinformatics/btac358",
+    "10.1093/brain/awy132",
+    "10.1093/database/baq013",
+    "10.1093/nar/gkr326",
+    "10.1111/j.1600-0757.2010.00377.x",
+    "10.1111/prd.12631",
+    "10.1126/sciadv.aau3333",
+    "10.1128/msystems.00187-18",
+    "10.1186/s12903-021-01827-2",
+    "10.1186/s12903-026-07725-9",
+    "10.1186/s12915-024-01883-4",
+    "10.1371/journal.pone.0123448",
+    "10.1371/journal.pone.0151081",
+    "10.1371/journal.pone.0204941",
+    "10.15252/emmm.201606210",
+    "10.15386/mpr-2278",
+    "10.2478/cait-2020-0068",
+    "10.3233/jad-200393",
+    "10.3233/jad-2012-121149",
+    "10.3233/jad-2012-129011",
+    "10.3233/jad-210448",
+    "10.3233/jad-220627",
+    "10.3389/fmicb.2024.1383404",
+    "10.3389/fmolb.2026.1858506",
+    "10.34133/2022/9781578",
+    "10.7717/peerj.2433"
+  ],
+  "canonical_count_is_53": true,
+  "english_chinese_doi_parity": true,
+  "all_file_doi_parity": true,
+  "missing_by_file": {
+    "manuscript_en": [],
+    "manuscript_zh": [],
+    "verified_references": [],
+    "bibtex": []
+  },
+  "extra_by_file": {
+    "manuscript_en": [],
+    "manuscript_zh": [],
+    "verified_references": [],
+    "bibtex": []
+  },
+  "verification_boundary": "Inventory parity only. Title, identifier, and core metadata checks are recorded in references/verified_references.md; final Crossmark, correction, and retraction screening remains required.",
+  "verdict": "PASS"
+}
