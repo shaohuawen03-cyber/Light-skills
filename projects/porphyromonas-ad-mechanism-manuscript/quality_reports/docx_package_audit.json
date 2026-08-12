@@ -1,0 +1,35 @@
+{
+  "schema": "local.docx_package_audit.v1",
+  "rendering_status": "UNAVAILABLE: no office/PDF renderer is installed; package and content checks are structural, not visual.",
+  "manuscript/manuscript_bilingual.docx": {
+    "path": "manuscript/manuscript_bilingual.docx",
+    "size_bytes": 337729,
+    "sha256": "e8f8119f1cacbdcc8e34c15c836496b9d67c1965a9978028d9430061b4851ea6",
+    "zip_crc_error": null,
+    "xml_parse_errors": [],
+    "paragraphs": 329,
+    "tables": 4,
+    "drawings": 2,
+    "embedded_media": [
+      "word/media/image1.png"
+    ],
+    "missing_expected_tokens": [],
+    "document_text_characters": 39620,
+    "verdict": "PASS"
+  },
+  "manuscript/supplementary_tables_bilingual.docx": {
+    "path": "manuscript/supplementary_tables_bilingual.docx",
+    "size_bytes": 9075,
+    "sha256": "0eb728cc3aa834b3651620b496ce49debd5d44ac477a9d0d7ddb78bf98e7bae4",
+    "zip_crc_error": null,
+    "xml_parse_errors": [],
+    "paragraphs": 271,
+    "tables": 3,
+    "drawings": 0,
+    "embedded_media": [],
+    "missing_expected_tokens": [],
+    "document_text_characters": 3048,
+    "verdict": "PASS"
+  },
+  "verdict": "PASS"
+}

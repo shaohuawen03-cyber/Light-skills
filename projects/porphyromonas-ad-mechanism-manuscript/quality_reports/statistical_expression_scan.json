@@ -1,0 +1,8 @@
+{
+  "tool": "extract_stats",
+  "n_extracted": 0,
+  "n_gross": 0,
+  "verdict": "NONE_FOUND",
+  "rows": [],
+  "honest_note": "Regex extraction is best-effort; a miss is silent, not 'clean'. Recompute is a magnitude sanity check, not a misconduct verdict."
+}

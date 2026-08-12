@@ -1,0 +1,61 @@
+{
+  "english": {
+    "path": "manuscript/manuscript_en.md",
+    "sha256": "4a119aaf56aff7ec4d8fa44a88d874597d13444c844382dbebeb0a1684ee184f",
+    "missing_expected_numbers": [],
+    "prohibited_claim_hits": [],
+    "placeholder_hits": [],
+    "reference_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "reference_sequence_ok": true
+  },
+  "chinese": {
+    "path": "manuscript/manuscript_zh.md",
+    "sha256": "dac0c241f34c128740a3f42fc98efd7650ea5c8a2f9cc6be9f9c1769db25fbc8",
+    "missing_expected_numbers": [],
+    "prohibited_claim_hits": [],
+    "placeholder_hits": [],
+    "reference_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "reference_sequence_ok": true
+  },
+  "core_number_presence_bilingual": true,
+  "prohibited_claims_absent": true,
+  "placeholders_absent": true,
+  "references_1_to_17_bilingual": true,
+  "verdict": "PASS"
+}

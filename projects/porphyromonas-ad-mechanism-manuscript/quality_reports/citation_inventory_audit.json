@@ -1,0 +1,61 @@
+{
+  "schema": "local.citation_inventory_audit.v1",
+  "files": {
+    "manuscript_en": {
+      "path": "manuscript/manuscript_en.md",
+      "sha256": "4a119aaf56aff7ec4d8fa44a88d874597d13444c844382dbebeb0a1684ee184f",
+      "unique_doi_count": 17
+    },
+    "manuscript_zh": {
+      "path": "manuscript/manuscript_zh.md",
+      "sha256": "dac0c241f34c128740a3f42fc98efd7650ea5c8a2f9cc6be9f9c1769db25fbc8",
+      "unique_doi_count": 17
+    },
+    "verified_references": {
+      "path": "references/verified_references.md",
+      "sha256": "89e2d1cd59b5471417185d60f879b0e689aa8381ccabf891a24ce93897274c3f",
+      "unique_doi_count": 17
+    },
+    "bibtex": {
+      "path": "references/references.bib",
+      "sha256": "16bfb9cbc0ecb77a26bb3d511d08c32a58aaf7716be903b2477a84ce50a33ea1",
+      "unique_doi_count": 17
+    }
+  },
+  "canonical_dois": [
+    "10.1002/pro.70200",
+    "10.1016/j.cell.2019.07.016",
+    "10.1016/j.jebdp.2025.102094",
+    "10.1038/s41522-021-00247-y",
+    "10.1038/s41598-020-78319-w",
+    "10.1093/ageing/afad015",
+    "10.1093/bib/bbad135",
+    "10.1093/bioinformatics/btac358",
+    "10.1093/database/baq013",
+    "10.1111/prd.12631",
+    "10.1126/sciadv.aau3333",
+    "10.1128/msystems.00187-18",
+    "10.15386/mpr-2278",
+    "10.2478/cait-2020-0068",
+    "10.3233/jad-220627",
+    "10.34133/2022/9781578",
+    "10.7717/peerj.2433"
+  ],
+  "english_chinese_doi_parity": true,
+  "manuscript_verified_record_parity": true,
+  "manuscript_bibtex_parity": true,
+  "missing_by_file": {
+    "manuscript_en": [],
+    "manuscript_zh": [],
+    "verified_references": [],
+    "bibtex": []
+  },
+  "extra_by_file": {
+    "manuscript_en": [],
+    "manuscript_zh": [],
+    "verified_references": [],
+    "bibtex": []
+  },
+  "verification_boundary": "Inventory parity only. DOI existence/identity was checked manually in references/verified_references.md; automated stage-10 resolver and retraction status remain unresolved.",
+  "verdict": "PASS"
+}

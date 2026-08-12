@@ -1,0 +1,16 @@
+{
+  "schema": "light.findings.v1",
+  "producer": "paper-writing",
+  "target": "draft.md",
+  "verdict": "pass",
+  "gates": [
+    {
+      "gate": "contribution_consistency",
+      "status": "pass",
+      "severity": "info",
+      "findings": []
+    }
+  ],
+  "summary": "贡献跨章节一致性：0 处漂移",
+  "fresh_evidence": true
+}
