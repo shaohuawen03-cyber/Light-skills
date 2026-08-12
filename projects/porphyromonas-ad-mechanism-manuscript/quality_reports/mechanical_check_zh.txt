@@ -1,0 +1,1341 @@
+findings=670  by_category={'punctuation': 669, 'overclaim': 1}
+  L1:C25 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L1:C34 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L3:C7 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L4:C7 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L4:C15 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L4:C30 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L4:C39 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L4:C42 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L4:C47 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L4:C63 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L4:C75 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C5 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C19 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C25 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C34 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C52 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C60 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C63 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C66 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C75 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L8:C114 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C5 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C35 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C43 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C73 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C77 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C82 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C96 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C105 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C113 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C130 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C135 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C142 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C146 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C149 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C159 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C166 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C175 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C185 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L10:C194 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C5 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C57 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C85 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C120 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C127 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C142 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C149 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C150 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C164 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C170 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C181 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C187 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C188 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C203 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C218 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C239 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C252 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C269 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C276 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C279 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C300 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C305 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C312 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C325 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C330 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C337 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C351 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C355 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C361 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L12:C373 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L14:C5 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L14:C25 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L14:C46 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L14:C62 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L14:C68 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L14:C81 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L14:C97 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L16:C6 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L16:C16 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L16:C23 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L16:C26 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L16:C30 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L16:C35 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L16:C42 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L16:C49 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L16:C54 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C17 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C37 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C53 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C56 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C71 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C104 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C123 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C128 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C141 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C151 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C196 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C222 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C230 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L20:C256 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C19 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C42 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C63 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C87 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C106 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C142 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C172 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C195 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C201 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C215 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C233 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C253 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L22:C292 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C26 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C39 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C78 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C103 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C113 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C121 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C154 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C163 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C199 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C206 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C234 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C252 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C266 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C281 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L24:C322 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C15 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C33 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C45 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C69 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C81 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C86 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C107 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C129 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C164 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C185 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C215 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C218 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C230 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C275 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C278 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C295 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L26:C317 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L28:C7 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L28:C21 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L28:C42 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L28:C69 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L28:C84 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L28:C95 [punctuation] Fullwidth/CJK punctuation '？' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L28:C120 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L28:C130 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L28:C148 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L32:C13 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C26 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C31 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C66 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C74 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C141 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C142 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C156 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C175 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C190 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L36:C31 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L36:C76 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L36:C114 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L36:C136 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L36:C153 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L36:C164 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C12 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C17 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C21 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C26 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C37 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C48 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C57 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C72 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C78 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C86 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C92 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C97 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C104 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C109 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C114 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C128 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C131 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C147 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L38:C167 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L42:C6 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L42:C33 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L42:C55 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L42:C99 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C3 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C21 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C41 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C49 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C68 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C90 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C106 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C126 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C154 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C181 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C208 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C238 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C271 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C301 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L44:C316 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C15 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C48 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C59 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C67 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C77 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C88 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C93 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C102 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C109 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C119 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C120 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C137 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C151 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L46:C166 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C37 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C56 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C71 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C99 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C119 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C124 [punctuation] Fullwidth/CJK punctuation '“' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C129 [punctuation] Fullwidth/CJK punctuation '”' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C131 [punctuation] Fullwidth/CJK punctuation '“' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C136 [punctuation] Fullwidth/CJK punctuation '”' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C137 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C142 [punctuation] Fullwidth/CJK punctuation '“' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C148 [punctuation] Fullwidth/CJK punctuation '”' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C150 [punctuation] Fullwidth/CJK punctuation '“' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C153 [punctuation] Fullwidth/CJK punctuation '”' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L50:C154 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C17 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C36 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C46 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C60 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C65 [punctuation] Fullwidth/CJK punctuation '“' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C77 [punctuation] Fullwidth/CJK punctuation '”' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C78 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C88 [punctuation] Fullwidth/CJK punctuation '“' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C97 [punctuation] Fullwidth/CJK punctuation '”' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L52:C98 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L54:C13 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L56:C34 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L56:C54 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L56:C66 [punctuation] Fullwidth/CJK punctuation '“' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L56:C70 [punctuation] Fullwidth/CJK punctuation '”' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L56:C71 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L56:C77 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L56:C110 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C9 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C37 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C55 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C79 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C88 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C98 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C103 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C114 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C141 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C151 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C154 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C172 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L58:C197 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C37 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C42 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C53 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C58 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C65 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C69 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C72 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C83 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C93 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C114 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C118 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C119 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C140 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C145 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C146 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C161 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C178 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C182 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L60:C211 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C9 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C27 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C38 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C51 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C64 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C86 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C107 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C112 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C117 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C120 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L64:C135 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L66:C16 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L66:C53 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L66:C64 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L66:C71 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L66:C86 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L66:C99 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L66:C130 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L66:C143 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L66:C169 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C51 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C60 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C76 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C91 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C107 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C123 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C124 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C126 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C146 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C160 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L72:C172 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C32 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C40 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C53 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C55 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C57 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C66 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C75 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C88 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C90 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L76:C92 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L78:C44 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L78:C50 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L78:C62 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L78:C67 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L79:C45 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L79:C51 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L79:C65 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L79:C70 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C29 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C36 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C57 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C64 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C65 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C81 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C87 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C98 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C104 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C105 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L83:C125 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C34 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C55 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C68 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C87 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C94 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C115 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C122 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C128 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C153 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C156 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C176 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L85:C192 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C38 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C56 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C71 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C83 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C84 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C99 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C113 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C130 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C144 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L89:C163 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C33 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C40 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C41 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C50 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C56 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C67 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C72 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C80 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C90 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C97 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C102 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L91:C123 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C44 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C54 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C61 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C68 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C81 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C88 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C95 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C110 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C116 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C122 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C138 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C162 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C175 [punctuation] Fullwidth/CJK punctuation '（' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C182 [punctuation] Fullwidth/CJK punctuation '）' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C183 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C193 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C202 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L93:C211 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L99:C39 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L100:C39 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L104:C45 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L107:C54 [punctuation] Space before punctuation.
+      → Remove the space before the mark.
+  L109:C22 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L111:C24 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L111:C41 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L111:C53 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L111:C77 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L111:C100 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L111:C127 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L111:C135 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C16 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C58 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C75 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C117 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C141 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C158 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C167 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C180 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C185 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C189 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L117:C203 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C3 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C14 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C39 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C59 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C65 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C66 [punctuation] Fullwidth/CJK punctuation '“' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C73 [punctuation] Fullwidth/CJK punctuation '”' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C82 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C93 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C105 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C108 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C125 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C136 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C40 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C87 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C104 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C146 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C157 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C172 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C182 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C202 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C225 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C249 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C263 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C12 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C15 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C27 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C40 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C65 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C72 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C91 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C109 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C112 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C130 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C138 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L125:C159 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L129:C25 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L129:C35 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L129:C44 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L129:C63 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L129:C66 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L129:C102 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L129:C122 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L129:C133 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C22 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C32 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C40 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C50 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C73 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C86 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C89 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C105 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C108 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C112 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L131:C123 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C18 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C40 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C53 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C62 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C93 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C111 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C132 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C138 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C161 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C183 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C202 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L135:C219 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C16 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C52 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C62 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C65 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C79 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C93 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C100 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C106 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C117 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L137:C131 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L139:C15 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L139:C31 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L139:C48 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L139:C88 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L139:C91 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L139:C125 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L139:C146 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L143:C10 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L143:C13 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L143:C22 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L143:C37 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L143:C54 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L143:C82 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L143:C99 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L143:C122 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L143:C156 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L145:C9 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L145:C18 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L145:C62 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L145:C95 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L145:C115 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L145:C133 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L145:C168 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L145:C178 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L145:C200 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C19 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C31 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C41 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C50 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C57 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C65 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C73 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C83 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C98 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C126 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L149:C161 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C15 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C23 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C34 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C45 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C50 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C54 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C59 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C67 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C73 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C76 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C87 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C98 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C123 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L151:C124 [punctuation] Space before punctuation.
+      → Remove the space before the mark.
+  L153:C13 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L155:C15 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L155:C34 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L155:C47 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L155:C57 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L155:C64 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L155:C69 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L155:C88 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L159:C14 [punctuation] Fullwidth/CJK punctuation '：' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L159:C21 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L159:C30 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L159:C40 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L159:C52 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L159:C60 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L159:C82 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C12 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C15 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C25 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C32 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C37 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C42 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C55 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C58 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C69 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C79 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C94 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C97 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C105 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C110 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C115 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C126 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C129 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C151 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C154 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C164 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C177 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C180 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C202 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C205 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C220 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C223 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C232 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C237 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C241 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C244 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C249 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C252 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C260 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L161:C278 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C54 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C67 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C81 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C105 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C121 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C124 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C134 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C148 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C156 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C170 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L165:C180 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L171:C26 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L171:C37 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L171:C48 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L171:C56 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L171:C91 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L171:C102 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L175:C13 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L175:C34 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C18 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C29 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C39 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C49 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C72 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C91 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C101 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C132 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C148 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C160 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C165 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C170 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C176 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C190 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C193 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C217 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C224 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L179:C244 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L183:C14 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L183:C19 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L183:C34 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L183:C46 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L183:C52 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L183:C60 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L183:C66 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L183:C81 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L183:C94 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L187:C8 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L187:C26 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L191:C16 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L191:C38 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L195:C11 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L195:C21 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L195:C42 [punctuation] Fullwidth/CJK punctuation '；' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L195:C57 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C18 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C24 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C32 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C44 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C54 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C65 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C72 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C85 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C88 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C91 [punctuation] Fullwidth/CJK punctuation '、' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C97 [punctuation] Fullwidth/CJK punctuation '，' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C112 [punctuation] Fullwidth/CJK punctuation '。' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L203:C111 [overclaim] Overclaim/unsupported intensifier 'novel'.
+      → Replace with measurable evidence or delete.
+  L221:C79 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L222:C79 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L223:C81 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L225:C74 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L227:C133 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').

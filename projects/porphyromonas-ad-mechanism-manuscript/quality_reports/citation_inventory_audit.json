@@ -1,0 +1,69 @@
+{
+  "schema": "local.citation_inventory_audit.v2",
+  "files": {
+    "manuscript_en": {
+      "path": "manuscript/manuscript_en.md",
+      "sha256": "a9cb2fe327f321827fc68a8a1ec3f13aa42441afddafa93054a74af85a547bf6",
+      "unique_doi_count": 25
+    },
+    "manuscript_zh": {
+      "path": "manuscript/manuscript_zh.md",
+      "sha256": "8d44a59d03866a0d64d9d5726c5b85b89523d530a779588ba87b8148de3c4eaa",
+      "unique_doi_count": 25
+    },
+    "verified_references": {
+      "path": "references/verified_references.md",
+      "sha256": "4a93ddb97461d7297fdf76d13483d276823a5f2025043ef58d168494ce8547f4",
+      "unique_doi_count": 25
+    },
+    "bibtex": {
+      "path": "references/references.bib",
+      "sha256": "c0d3b22c8032738a1cc324b09b1f1842bb7d007d670383f344d26b08ec8d49c6",
+      "unique_doi_count": 25
+    }
+  },
+  "canonical_dois": [
+    "10.1002/brb3.3486",
+    "10.1002/pro.70200",
+    "10.1016/j.cell.2019.07.016",
+    "10.1016/j.cell.2024.07.027",
+    "10.1016/j.chom.2020.11.002",
+    "10.1016/j.jebdp.2025.102094",
+    "10.1038/s41467-026-72762-5",
+    "10.1038/s41522-021-00247-y",
+    "10.1038/s41522-025-00692-z",
+    "10.1038/s41598-020-78319-w",
+    "10.1093/ageing/afad015",
+    "10.1093/bib/bbad135",
+    "10.1093/bioinformatics/btac358",
+    "10.1093/database/baq013",
+    "10.1111/prd.12631",
+    "10.1126/sciadv.aau3333",
+    "10.1128/msystems.00187-18",
+    "10.1186/s12903-026-07725-9",
+    "10.1186/s12915-024-01883-4",
+    "10.15386/mpr-2278",
+    "10.3233/jad-220627",
+    "10.3389/fmicb.2024.1383404",
+    "10.3389/fmolb.2026.1858506",
+    "10.34133/2022/9781578",
+    "10.7717/peerj.2433"
+  ],
+  "canonical_count_is_25": true,
+  "english_chinese_doi_parity": true,
+  "all_file_doi_parity": true,
+  "missing_by_file": {
+    "manuscript_en": [],
+    "manuscript_zh": [],
+    "verified_references": [],
+    "bibtex": []
+  },
+  "extra_by_file": {
+    "manuscript_en": [],
+    "manuscript_zh": [],
+    "verified_references": [],
+    "bibtex": []
+  },
+  "verification_boundary": "Inventory parity only. Title, identifier, and core metadata checks are recorded in references/verified_references.md; final Crossmark, correction, and retraction screening remains required.",
+  "verdict": "PASS"
+}

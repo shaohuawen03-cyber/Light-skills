@@ -1,0 +1,60 @@
+{
+  "schema": "local.docx_package_audit.v2",
+  "rendering_status": "UNAVAILABLE: no Office/LibreOffice/PDF renderer is installed; package and content checks are structural, not visual.",
+  "packages": {
+    "manuscript/manuscript_bilingual.docx": {
+      "path": "manuscript/manuscript_bilingual.docx",
+      "size_bytes": 542409,
+      "sha256": "ab7c0f8191d1e7b1af830bbcdb6f9870c0611f5c66b51f884ce5001e7b593335",
+      "zip_crc_error": null,
+      "xml_parse_errors": [],
+      "relationship_errors": [],
+      "paragraphs": 345,
+      "tables": 4,
+      "drawings": 4,
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png"
+      ],
+      "missing_expected_tokens": [],
+      "document_text_characters": 45351,
+      "checks": {
+        "crc_ok": true,
+        "all_xml_parses": true,
+        "all_internal_relationship_targets_exist": true,
+        "paragraph_minimum_met": true,
+        "table_minimum_met": true,
+        "drawing_minimum_met": true,
+        "media_count_matches": true,
+        "expected_tokens_present": true
+      },
+      "verdict": "PASS"
+    },
+    "manuscript/supplementary_tables_bilingual.docx": {
+      "path": "manuscript/supplementary_tables_bilingual.docx",
+      "size_bytes": 9256,
+      "sha256": "a3f2bf1ea2a158ebaae25f3198f4d534711428072b4ef961f7e0f85000d236fb",
+      "zip_crc_error": null,
+      "xml_parse_errors": [],
+      "relationship_errors": [],
+      "paragraphs": 271,
+      "tables": 3,
+      "drawings": 0,
+      "embedded_media": [],
+      "missing_expected_tokens": [],
+      "document_text_characters": 3208,
+      "checks": {
+        "crc_ok": true,
+        "all_xml_parses": true,
+        "all_internal_relationship_targets_exist": true,
+        "paragraph_minimum_met": true,
+        "table_minimum_met": true,
+        "drawing_minimum_met": true,
+        "media_count_matches": true,
+        "expected_tokens_present": true
+      },
+      "verdict": "PASS"
+    }
+  },
+  "verdict": "PASS"
+}

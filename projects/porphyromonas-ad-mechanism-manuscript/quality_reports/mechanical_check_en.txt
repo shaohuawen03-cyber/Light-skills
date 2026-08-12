@@ -1,0 +1,149 @@
+findings=74  by_category={'passive_voice': 50, 'punctuation': 13, 'passive_overuse': 10, 'overclaim': 1}
+  L14:C280 [passive_voice] Passive construction 'be released'.
+      → Consider active voice if the agent matters.
+  L22:C15 [passive_voice] Passive construction 'is accompanied'.
+      → Consider active voice if the agent matters.
+  L26:C148 [passive_voice] Passive construction 'be represented'.
+      → Consider active voice if the agent matters.
+  L26:C582 [passive_voice] Passive construction 'be transferred'.
+      → Consider active voice if the agent matters.
+  L26:C764 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L34:C291 [passive_voice] Passive construction 'was retained'.
+      → Consider active voice if the agent matters.
+  L36:C1 [passive_overuse] 2/3 sentences passive (67% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L36:C211 [passive_voice] Passive construction 'be linked'.
+      → Consider active voice if the agent matters.
+  L36:C350 [passive_voice] Passive construction 'is retained'.
+      → Consider active voice if the agent matters.
+  L38:C131 [passive_voice] Passive construction 'was performed'.
+      → Consider active voice if the agent matters.
+  L42:C60 [passive_voice] Passive construction 'was used'.
+      → Consider active voice if the agent matters.
+  L42:C179 [passive_voice] Passive construction 'were retained'.
+      → Consider active voice if the agent matters.
+  L44:C404 [passive_voice] Passive construction 'been used'.
+      → Consider active voice if the agent matters.
+  L46:C146 [passive_voice] Passive construction 'were divided'.
+      → Consider active voice if the agent matters.
+  L50:C188 [passive_voice] Passive construction 'was used'.
+      → Consider active voice if the agent matters.
+  L52:C109 [passive_voice] Passive construction 'were retained'.
+      → Consider active voice if the agent matters.
+  L52:C184 [passive_voice] Passive construction 'was tested'.
+      → Consider active voice if the agent matters.
+  L56:C1 [passive_overuse] 2/4 sentences passive (50% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L56:C168 [passive_voice] Passive construction 'were classified'.
+      → Consider active voice if the agent matters.
+  L56:C236 [passive_voice] Passive construction 'were summarized'.
+      → Consider active voice if the agent matters.
+  L60:C1 [passive_overuse] 3/5 sentences passive (60% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L60:C30 [passive_voice] Passive construction 'were evaluated'.
+      → Consider active voice if the agent matters.
+  L60:C149 [passive_voice] Passive construction 'were joined'.
+      → Consider active voice if the agent matters.
+  L60:C211 [passive_voice] Passive construction 'were retained'.
+      → Consider active voice if the agent matters.
+  L64:C1 [passive_overuse] 2/4 sentences passive (50% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L64:C8 [passive_voice] Passive construction 'were transcribed'.
+      → Consider active voice if the agent matters.
+  L64:C486 [passive_voice] Passive construction 'was calculated'.
+      → Consider active voice if the agent matters.
+  L66:C1 [passive_overuse] 3/3 sentences passive (100% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L66:C36 [passive_voice] Passive construction 'were implemented'.
+      → Consider active voice if the agent matters.
+  L66:C375 [passive_voice] Passive construction 'be nested'.
+      → Consider active voice if the agent matters.
+  L66:C413 [passive_voice] Passive construction 'was treated'.
+      → Consider active voice if the agent matters.
+  L91:C205 [passive_voice] Passive construction 'were predicted'.
+      → Consider active voice if the agent matters.
+  L93:C406 [passive_voice] Passive construction 'be listed'.
+      → Consider active voice if the agent matters.
+  L107:C97 [punctuation] Space before punctuation.
+      → Remove the space before the mark.
+  L111:C106 [passive_voice] Passive construction 'were transcribed'.
+      → Consider active voice if the agent matters.
+  L119:C227 [punctuation] Fullwidth/CJK punctuation '“' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L119:C241 [punctuation] Fullwidth/CJK punctuation '”' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L123:C651 [passive_voice] Passive construction 'were synthesized'.
+      → Consider active voice if the agent matters.
+  L123:C719 [passive_voice] Passive construction 'was claimed'.
+      → Consider active voice if the agent matters.
+  L129:C341 [passive_voice] Passive construction 'be treated'.
+      → Consider active voice if the agent matters.
+  L131:C316 [passive_voice] Passive construction 'were supplied'.
+      → Consider active voice if the agent matters.
+  L135:C189 [passive_voice] Passive construction 'were trained'.
+      → Consider active voice if the agent matters.
+  L137:C1 [passive_overuse] 2/4 sentences passive (50% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L137:C137 [passive_voice] Passive construction 'are unclassified'.
+      → Consider active voice if the agent matters.
+  L137:C409 [passive_voice] Passive construction 'be quantified'.
+      → Consider active voice if the agent matters.
+  L143:C205 [passive_voice] Passive construction 'is associated'.
+      → Consider active voice if the agent matters.
+  L149:C1 [passive_overuse] 2/4 sentences passive (50% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L149:C173 [passive_voice] Passive construction 'is needed'.
+      → Consider active voice if the agent matters.
+  L149:C336 [passive_voice] Passive construction 'be tested'.
+      → Consider active voice if the agent matters.
+  L151:C1 [passive_overuse] 2/3 sentences passive (67% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L151:C306 [passive_voice] Passive construction 'be considered'.
+      → Consider active voice if the agent matters.
+  L151:C388 [passive_voice] Passive construction 'are established'.
+      → Consider active voice if the agent matters.
+  L151:C458 [passive_voice] Passive construction 'being used'.
+      → Consider active voice if the agent matters.
+  L151:C518 [punctuation] Space before punctuation.
+      → Remove the space before the mark.
+  L159:C10 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L159:C284 [passive_voice] Passive construction 'be reproduced'.
+      → Consider active voice if the agent matters.
+  L161:C668 [passive_voice] Passive construction 'be audited'.
+      → Consider active voice if the agent matters.
+  L161:C754 [passive_voice] Passive construction 'be assessed'.
+      → Consider active voice if the agent matters.
+  L161:C880 [passive_voice] Passive construction 'was measured'.
+      → Consider active voice if the agent matters.
+  L161:C919 [passive_voice] Passive construction 'be corrected'.
+      → Consider active voice if the agent matters.
+  L171:C1 [passive_overuse] 2/3 sentences passive (67% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L171:C216 [passive_voice] Passive construction 'was conducted'.
+      → Consider active voice if the agent matters.
+  L171:C432 [passive_voice] Passive construction 'is inferred'.
+      → Consider active voice if the agent matters.
+  L175:C37 [passive_voice] Passive construction 'is included'.
+      → Consider active voice if the agent matters.
+  L175:C108 [passive_voice] Passive construction 'be confirmed'.
+      → Consider active voice if the agent matters.
+  L183:C1 [passive_overuse] 2/3 sentences passive (67% > 40%).
+      → Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').
+  L191:C117 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L199:C398 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L203:C111 [overclaim] Overclaim/unsupported intensifier 'novel'.
+      → Replace with measurable evidence or delete.
+  L221:C79 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L222:C79 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L223:C81 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L225:C74 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').
+  L227:C133 [punctuation] Fullwidth/CJK punctuation '’' in English text.
+      → Replace with ASCII equivalent (, . ; : ( ) ! ? " ').

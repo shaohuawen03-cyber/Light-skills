@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="980" viewBox="0 0 1800 980">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#78909C"/></marker></defs>
+<rect width="1800" height="980" fill="#FFFFFF"/>
+<style>.t{font-family:Arial,Helvetica,sans-serif;fill:#102A43}.b{font-family:Arial,Helvetica,sans-serif;fill:#334E68}.s{font-family:Arial,Helvetica,sans-serif;fill:#486581}</style>
+<text x="900" y="70" class="t" font-size="44" font-weight="700" text-anchor="middle">Evidence ladder: where the present study stops</text>
+<text x="900" y="116" class="s" font-size="25" text-anchor="middle">Prediction is a prioritization endpoint; it is not proof of identity, exposure, phenotype, mechanism, or disease causality</text>
+<rect x="70" y="275" width="250" height="245" rx="22" fill="#DFF3E4" stroke="#176B3A" stroke-width="4"/>
+<circle cx="195.0" cy="323" r="28" fill="#176B3A"/>
+<text x="195.0" y="333" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="28" font-weight="700" text-anchor="middle">1</text>
+<text x="195.0" y="387" class="t" font-size="17" font-weight="700" text-anchor="middle">Aggregate computational</text>
+<text x="195.0" y="420" class="t" font-size="17" font-weight="700" text-anchor="middle">prioritization</text>
+<rect x="105" y="455" width="180" height="42" rx="16" fill="#176B3A"/>
+<text x="195.0" y="483" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="20" font-weight="700" text-anchor="middle">REACHED</text>
+<line x1="328" y1="397.5" x2="346" y2="397.5" stroke="#78909C" stroke-width="5" marker-end="url(#arrow)"/>
+<rect x="360" y="275" width="250" height="245" rx="22" fill="#FFF1D6" stroke="#A35C00" stroke-width="4"/>
+<circle cx="485.0" cy="323" r="28" fill="#A35C00"/>
+<text x="485.0" y="333" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="28" font-weight="700" text-anchor="middle">2</text>
+<text x="485.0" y="387" class="t" font-size="17" font-weight="700" text-anchor="middle">Candidate identities</text>
+<text x="485.0" y="420" class="t" font-size="17" font-weight="700" text-anchor="middle">and row-level scores</text>
+<rect x="395" y="455" width="180" height="42" rx="16" fill="#A35C00"/>
+<text x="485.0" y="483" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="20" font-weight="700" text-anchor="middle">BLOCKED</text>
+<line x1="618" y1="397.5" x2="636" y2="397.5" stroke="#78909C" stroke-width="5" marker-end="url(#arrow)"/>
+<rect x="650" y="275" width="250" height="245" rx="22" fill="#F3F4F6" stroke="#5B6472" stroke-width="4"/>
+<circle cx="775.0" cy="323" r="28" fill="#5B6472"/>
+<text x="775.0" y="333" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="28" font-weight="700" text-anchor="middle">3</text>
+<text x="775.0" y="387" class="t" font-size="17" font-weight="700" text-anchor="middle">Translation and oral</text>
+<text x="775.0" y="420" class="t" font-size="17" font-weight="700" text-anchor="middle">cohort expression</text>
+<rect x="685" y="455" width="180" height="42" rx="16" fill="#5B6472"/>
+<text x="775.0" y="483" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="20" font-weight="700" text-anchor="middle">NOT TESTED</text>
+<line x1="908" y1="397.5" x2="926" y2="397.5" stroke="#78909C" stroke-width="5" marker-end="url(#arrow)"/>
+<rect x="940" y="275" width="250" height="245" rx="22" fill="#F3F4F6" stroke="#5B6472" stroke-width="4"/>
+<circle cx="1065.0" cy="323" r="28" fill="#5B6472"/>
+<text x="1065.0" y="333" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="28" font-weight="700" text-anchor="middle">4</text>
+<text x="1065.0" y="387" class="t" font-size="17" font-weight="700" text-anchor="middle">BBB transport and</text>
+<text x="1065.0" y="420" class="t" font-size="17" font-weight="700" text-anchor="middle">cellular toxicity</text>
+<rect x="975" y="455" width="180" height="42" rx="16" fill="#5B6472"/>
+<text x="1065.0" y="483" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="20" font-weight="700" text-anchor="middle">NOT TESTED</text>
+<line x1="1198" y1="397.5" x2="1216" y2="397.5" stroke="#78909C" stroke-width="5" marker-end="url(#arrow)"/>
+<rect x="1230" y="275" width="250" height="245" rx="22" fill="#F3F4F6" stroke="#5B6472" stroke-width="4"/>
+<circle cx="1355.0" cy="323" r="28" fill="#5B6472"/>
+<text x="1355.0" y="333" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="28" font-weight="700" text-anchor="middle">5</text>
+<text x="1355.0" y="387" class="t" font-size="17" font-weight="700" text-anchor="middle">Metal-dependent</text>
+<text x="1355.0" y="420" class="t" font-size="17" font-weight="700" text-anchor="middle">biochemical mechanism</text>
+<rect x="1265" y="455" width="180" height="42" rx="16" fill="#5B6472"/>
+<text x="1355.0" y="483" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="20" font-weight="700" text-anchor="middle">NOT TESTED</text>
+<line x1="1488" y1="397.5" x2="1506" y2="397.5" stroke="#78909C" stroke-width="5" marker-end="url(#arrow)"/>
+<rect x="1520" y="275" width="250" height="245" rx="22" fill="#F3F4F6" stroke="#5B6472" stroke-width="4"/>
+<circle cx="1645.0" cy="323" r="28" fill="#5B6472"/>
+<text x="1645.0" y="333" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="28" font-weight="700" text-anchor="middle">6</text>
+<text x="1645.0" y="387" class="t" font-size="17" font-weight="700" text-anchor="middle">Disease association</text>
+<text x="1645.0" y="420" class="t" font-size="17" font-weight="700" text-anchor="middle">or causality</text>
+<rect x="1555" y="455" width="180" height="42" rx="16" fill="#5B6472"/>
+<text x="1645.0" y="483" font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="20" font-weight="700" text-anchor="middle">NOT TESTED</text>
+<rect x="205" y="650" width="1390" height="175" rx="26" fill="#FFF7ED" stroke="#C2410C" stroke-width="4"/>
+<text x="900" y="704" font-family="Arial,Helvetica,sans-serif" fill="#9A3412" font-size="30" font-weight="700" text-anchor="middle">Required progression</text>
+<text x="900" y="746" class="b" font-size="23" text-anchor="middle">Release sequences and scores → confirm translation/expression → measure BBB transport and toxicity.</text>
+<text x="900" y="780" class="b" font-size="23" text-anchor="middle">Test metal-dependent effects with appropriate controls and biological replication.</text>
+<text x="900" y="814" class="b" font-size="23" text-anchor="middle">Only then evaluate a defined disease-relevant mechanism.</text>
+<text x="900" y="912" class="s" font-size="23" text-anchor="middle">BBB, blood–brain barrier. Grey stages are future evidence requirements and are not results of this study.</text>
+</svg>

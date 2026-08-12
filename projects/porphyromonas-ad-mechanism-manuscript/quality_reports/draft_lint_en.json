@@ -1,0 +1,95 @@
+{
+  "failed": false,
+  "n_gaps": 0,
+  "missing_sections": [],
+  "n_doi": 25,
+  "n_arxiv": 0,
+  "n_candidate_claims": 0,
+  "n_evidence_violations": 0,
+  "findings": [
+    {
+      "sev": "INFO",
+      "msg": "引用待核: 25 DOI + 0 arXiv（需 curl 实测记 HTTP 码）"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1002/brb3.3486"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1002/pro.70200"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1016/j.cell.2019.07.016"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1016/j.cell.2024.07.027"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1016/j.chom.2020.11.002"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1016/j.jebdp.2025.102094"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1038/s41467-026-72762-5"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1038/s41522-021-00247-y"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1038/s41522-025-00692-z"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1038/s41598-020-78319-w"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1093/ageing/afad015"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1093/bib/bbad135"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1093/bioinformatics/btac358"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1093/database/baq013"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1111/prd.12631"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1126/sciadv.aau3333"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1128/mSystems.00187-18"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1186/s12903-026-07725-9"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.1186/s12915-024-01883-4"
+    },
+    {
+      "sev": "",
+      "msg": "curl -sI -H \"Accept: application/vnd.citationstyles.csl+json\" https://doi.org/10.15386/mpr-2278"
+    }
+  ]
+}

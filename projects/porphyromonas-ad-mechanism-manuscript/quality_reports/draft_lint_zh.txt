@@ -1,0 +1,24 @@
+[WARN] 缺必备声明小节(按标题校验): Funding
+[INFO] 引用待核: 25 DOI + 0 arXiv（需 curl 实测记 HTTP 码）
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1002/brb3.3486
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1002/pro.70200
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1016/j.cell.2019.07.016
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1016/j.cell.2024.07.027
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1016/j.chom.2020.11.002
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1016/j.jebdp.2025.102094
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1038/s41467-026-72762-5
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1038/s41522-021-00247-y
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1038/s41522-025-00692-z
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1038/s41598-020-78319-w
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1093/ageing/afad015
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1093/bib/bbad135
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1093/bioinformatics/btac358
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1093/database/baq013
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1111/prd.12631
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1126/sciadv.aau3333
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1128/mSystems.00187-18
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1186/s12903-026-07725-9
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.1186/s12915-024-01883-4
+[  ] curl -sI -H "Accept: application/vnd.citationstyles.csl+json" https://doi.org/10.15386/mpr-2278
+
+==> PASS: 无 FAIL 级问题（WARN 仍需人判）

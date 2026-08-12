@@ -1,0 +1,606 @@
+{
+  "_meta": {
+    "n_findings": 74,
+    "by_category": {
+      "passive_voice": 50,
+      "punctuation": 13,
+      "passive_overuse": 10,
+      "overclaim": 1
+    },
+    "latex_stripped": false
+  },
+  "findings": [
+    {
+      "line": 14,
+      "col": 280,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be released'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "ow-level provenance must be released before synthesis, valida"
+    },
+    {
+      "line": 22,
+      "col": 15,
+      "category": "passive_voice",
+      "issue": "Passive construction 'is accompanied'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": " peptide.  Periodontitis is accompanied by ecological and functi"
+    },
+    {
+      "line": 26,
+      "col": 148,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be represented'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "the causal evidence must be represented accurately. Observationa"
+    },
+    {
+      "line": 26,
+      "col": 582,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be transferred'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "roducts [21], but cannot be transferred to taxonomically unassig"
+    },
+    {
+      "line": 26,
+      "col": 764,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '’' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": "tal disease and Alzheimer’s disease (AD) [23], and "
+    },
+    {
+      "line": 34,
+      "col": 291,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was retained'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "). The corresponding PDF was retained as an original file but "
+    },
+    {
+      "line": 36,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "2/3 sentences passive (67% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "The principal record named PRJNA678453 and PRJEB65451 and st"
+    },
+    {
+      "line": 36,
+      "col": 211,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be linked'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "titis. PRJNA678453 could be linked to a published oral meta"
+    },
+    {
+      "line": 36,
+      "col": 350,
+      "category": "passive_voice",
+      "issue": "Passive construction 'is retained'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "lved during drafting and is retained as an unresolved provena"
+    },
+    {
+      "line": 38,
+      "col": 131,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was performed'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "cs, or clinical analysis was performed. Only aggregate counts, "
+    },
+    {
+      "line": 42,
+      "col": 60,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was used'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": " sample-specific mapping was used to construct healthy and"
+    },
+    {
+      "line": 42,
+      "col": 179,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were retained'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "es 4–50 amino acids long were retained. The raw healthy and per"
+    },
+    {
+      "line": 44,
+      "col": 404,
+      "category": "passive_voice",
+      "issue": "Passive construction 'been used'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "taset [9]. PXD003151 has been used in an oral dysbiosis/car"
+    },
+    {
+      "line": 46,
+      "col": 146,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were divided'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "s remained. These totals were divided into short (5–30 amino a"
+    },
+    {
+      "line": 50,
+      "col": 188,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was used'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": " output of at least 0.80 was used as a common operational "
+    },
+    {
+      "line": 52,
+      "col": 109,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were retained'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "d periodontitis branches were retained for descriptive orientat"
+    },
+    {
+      "line": 52,
+      "col": 184,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was tested'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "between-group hypothesis was tested. Restricting later steps"
+    },
+    {
+      "line": 56,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "2/4 sentences passive (50% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "The periodontitis BBB-high set was next evaluated with NTxPr"
+    },
+    {
+      "line": 56,
+      "col": 168,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were classified'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "didates below this range were classified as not evaluated, not as"
+    },
+    {
+      "line": 56,
+      "col": 236,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were summarized'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "gative. NTxPred2 outputs were summarized as predicted positive or"
+    },
+    {
+      "line": 60,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "3/5 sentences passive (60% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "Mebipred-positive candidates were evaluated with AnOxPePred "
+    },
+    {
+      "line": 60,
+      "col": 30,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were evaluated'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "pred-positive candidates were evaluated with AnOxPePred [16]. Ac"
+    },
+    {
+      "line": 60,
+      "col": 149,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were joined'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "l-scavenging (FRS) files were joined by sequence identifier. "
+    },
+    {
+      "line": 60,
+      "col": 211,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were retained'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "hree operational outputs were retained: CHEL≥0.25; CHEL≥0.25 wi"
+    },
+    {
+      "line": 64,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "2/4 sentences passive (50% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "Counts were transcribed from the principal record. Percentag"
+    },
+    {
+      "line": 64,
+      "col": 8,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were transcribed'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "ducibility audit  Counts were transcribed from the principal recor"
+    },
+    {
+      "line": 64,
+      "col": 486,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was calculated'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "tiple-testing correction was calculated for healthy-versus-perio"
+    },
+    {
+      "line": 66,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "3/3 sentences passive (100% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "Arithmetic and monotonicity checks were implemented in Pytho"
+    },
+    {
+      "line": 66,
+      "col": 36,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were implemented'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": " and monotonicity checks were implemented in Python standard-libra"
+    },
+    {
+      "line": 66,
+      "col": 375,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be nested'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "ream threshold counts to be nested. The stricter FRS thresh"
+    },
+    {
+      "line": 66,
+      "col": 413,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was treated'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "e stricter FRS threshold was treated as the only reconstructa"
+    },
+    {
+      "line": 91,
+      "col": 205,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were predicted'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "ates, 923/3,299 (27.98%) were predicted positive. The source sta"
+    },
+    {
+      "line": 93,
+      "col": 406,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be listed'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "ate identities could not be listed because the correspondin"
+    },
+    {
+      "line": 107,
+      "col": 97,
+      "category": "punctuation",
+      "issue": "Space before punctuation.",
+      "suggestion": "Remove the space before the mark.",
+      "context": "tal-positive candidates |  ![Figure 1. Evidence-bound"
+    },
+    {
+      "line": 111,
+      "col": 106,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were transcribed'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "d operational thresholds were transcribed from the principal sourc"
+    },
+    {
+      "line": 119,
+      "col": 227,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '“' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": "ation. Most importantly, “12 candidates” is current"
+    },
+    {
+      "line": 119,
+      "col": 241,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '”' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": "portantly, “12 candidates” is currently a count, no"
+    },
+    {
+      "line": 123,
+      "col": 651,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were synthesized'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "ized microbiome peptides were synthesized and functionally tested "
+    },
+    {
+      "line": 123,
+      "col": 719,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was claimed'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "fore biological activity was claimed [17].  The present recor"
+    },
+    {
+      "line": 129,
+      "col": 341,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be treated'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "didates therefore cannot be treated as independent biologica"
+    },
+    {
+      "line": 131,
+      "col": 316,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were supplied'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "ates. None of these data were supplied. The descriptive differe"
+    },
+    {
+      "line": 135,
+      "col": 189,
+      "category": "passive_voice",
+      "issue": "Passive construction 'were trained'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "mebipred, and AnOxPePred were trained for different labels and"
+    },
+    {
+      "line": 137,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "2/4 sentences passive (50% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "Model compatibility also structures the final set. The 219 B"
+    },
+    {
+      "line": 137,
+      "col": 137,
+      "category": "passive_voice",
+      "issue": "Passive construction 'are unclassified'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "e are not negative; they are unclassified by that step. Downstream"
+    },
+    {
+      "line": 137,
+      "col": 409,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be quantified'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": " and domain shift cannot be quantified.  Metal-related outputs "
+    },
+    {
+      "line": 143,
+      "col": 205,
+      "category": "passive_voice",
+      "issue": "Passive construction 'is associated'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "ere severe periodontitis is associated with dementia outcomes ["
+    },
+    {
+      "line": 149,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "2/4 sentences passive (50% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "The most immediate requirement is not a complex disease expe"
+    },
+    {
+      "line": 149,
+      "col": 173,
+      "category": "passive_voice",
+      "issue": "Passive construction 'is needed'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "nance. Sequence identity is needed to inspect duplicates, a"
+    },
+    {
+      "line": 149,
+      "col": 336,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be tested'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "n/expression should then be tested with cohort-matched meta"
+    },
+    {
+      "line": 151,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "2/3 sentences passive (67% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "Metal-related hypotheses require orthogonal binding measurem"
+    },
+    {
+      "line": 151,
+      "col": 306,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be considered'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "lated experiments should be considered only after identity, exp"
+    },
+    {
+      "line": 151,
+      "col": 388,
+      "category": "passive_voice",
+      "issue": "Passive construction 'are established'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "nd biochemical mechanism are established. This ordering prevents "
+    },
+    {
+      "line": 151,
+      "col": 458,
+      "category": "passive_voice",
+      "issue": "Passive construction 'being used'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "-stage plausibility from being used to compensate for missin"
+    },
+    {
+      "line": 151,
+      "col": 518,
+      "category": "punctuation",
+      "issue": "Space before punctuation.",
+      "suggestion": "Remove the space before the mark.",
+      "context": "g earlier-stage evidence.  ![Figure 2. Evidence ladde"
+    },
+    {
+      "line": 159,
+      "col": 10,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '’' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": "nd limitations  The study’s strengths are transpare"
+    },
+    {
+      "line": 159,
+      "col": 284,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be reproduced'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "displayed arithmetic can be reproduced with dependency-free cod"
+    },
+    {
+      "line": 161,
+      "col": 668,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be audited'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "ndoff denominator cannot be audited row by row. Seventh, thr"
+    },
+    {
+      "line": 161,
+      "col": 754,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be assessed'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "dictor dependence cannot be assessed. Finally, no translation"
+    },
+    {
+      "line": 161,
+      "col": 880,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was measured'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "al, or clinical endpoint was measured. These limitations canno"
+    },
+    {
+      "line": 161,
+      "col": 919,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be corrected'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "These limitations cannot be corrected by statistical or lingui"
+    },
+    {
+      "line": 171,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "2/3 sentences passive (67% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "The available materials described aggregate secondary comput"
+    },
+    {
+      "line": 171,
+      "col": 216,
+      "category": "passive_voice",
+      "issue": "Passive construction 'was conducted'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": ", or specimen collection was conducted for this reconstruction."
+    },
+    {
+      "line": 171,
+      "col": 432,
+      "category": "passive_voice",
+      "issue": "Passive construction 'is inferred'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "tion; no approval number is inferred.  ### Consent for public"
+    },
+    {
+      "line": 175,
+      "col": 37,
+      "category": "passive_voice",
+      "issue": "Passive construction 'is included'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "able individual material is included in this draft. Any journ"
+    },
+    {
+      "line": 175,
+      "col": 108,
+      "category": "passive_voice",
+      "issue": "Passive construction 'be confirmed'.",
+      "suggestion": "Consider active voice if the agent matters.",
+      "context": "d consent statement must be confirmed by the accountable autho"
+    },
+    {
+      "line": 183,
+      "col": 1,
+      "category": "passive_overuse",
+      "issue": "2/3 sentences passive (67% > 40%).",
+      "suggestion": "Rewrite some sentences in active voice (e.g. 'We trained...' not 'was trained').",
+      "context": "No executable code for the original sORF discovery, exact ma"
+    },
+    {
+      "line": 191,
+      "col": 117,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '’' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": "must complete the journal’s declaration before subm"
+    },
+    {
+      "line": 199,
+      "col": 398,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '’' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": "ure to the target journal’s policy.  ## References "
+    },
+    {
+      "line": 203,
+      "col": 111,
+      "category": "overclaim",
+      "issue": "Overclaim/unsupported intensifier 'novel'.",
+      "suggestion": "Replace with measurable evidence or delete.",
+      "context": "veal thousands of small, novel genes. *Cell*. 2019;178("
+    },
+    {
+      "line": 221,
+      "col": 79,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '’' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": " Association of Alzheimer’s disease and periodontit"
+    },
+    {
+      "line": 222,
+      "col": 79,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '’' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": "al bacteria and Alzheimer’s disease: a systematic r"
+    },
+    {
+      "line": 223,
+      "col": 81,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '’' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": " gingivalis* in Alzheimer’s disease brains: evidenc"
+    },
+    {
+      "line": 225,
+      "col": 74,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '’' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": "ase and risk of Alzheimer’s disease: a two-sample M"
+    },
+    {
+      "line": 227,
+      "col": 133,
+      "category": "punctuation",
+      "issue": "Fullwidth/CJK punctuation '’' in English text.",
+      "suggestion": "Replace with ASCII equivalent (, . ; : ( ) ! ? \" ').",
+      "context": "se treatment in Alzheimer’s disease: a primer. *Per"
+    }
+  ]
+}

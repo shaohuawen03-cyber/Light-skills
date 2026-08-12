@@ -1,0 +1,474 @@
+{
+  "schema": "local.repository_inventory.v1",
+  "inventory_excludes": [
+    "quality_reports/repository_inventory.json (self-referential output)"
+  ],
+  "total_files": 85,
+  "total_bytes": 3413100,
+  "by_top_level_group": {
+    "evidence": {
+      "files": 11,
+      "bytes": 546303
+    },
+    "manuscript": {
+      "files": 11,
+      "bytes": 1261086
+    },
+    "project_root": {
+      "files": 3,
+      "bytes": 13643
+    },
+    "quality_reports": {
+      "files": 20,
+      "bytes": 415641
+    },
+    "references": {
+      "files": 3,
+      "bytes": 21411
+    },
+    "revision_v2": {
+      "files": 13,
+      "bytes": 69348
+    },
+    "scripts": {
+      "files": 14,
+      "bytes": 77723
+    },
+    "source_materials": {
+      "files": 4,
+      "bytes": 986227
+    },
+    "submission": {
+      "files": 6,
+      "bytes": 21718
+    }
+  },
+  "files": [
+    {
+      "path": "ARTIFACT_SHA256SUMS.txt",
+      "size_bytes": 8515,
+      "sha256": "9c365da45ea30437f9580f891016b4bcfc24290930a7ec63dfe35991f9aff93d"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 4643,
+      "sha256": "e6f7fc93af628525a6dbf202cb1ece05d8dd3861110b1db3dd03f24c7a69873b"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "size_bytes": 485,
+      "sha256": "a9f25aeadb79f53018f26ef42642e64ad507c3338324b9314741d73e0f43014d"
+    },
+    {
+      "path": "evidence/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/claim_evidence_ledger.md",
+      "size_bytes": 5672,
+      "sha256": "307976447f1f329267a1fb2fbdbd0bc164ba58e41b789e9e621046cd8707b018"
+    },
+    {
+      "path": "evidence/excluded_source_record.md",
+      "size_bytes": 1552,
+      "sha256": "9c36c36f9fe7caba88db9fb7f02c5aa66d874bc65a7c191058fcffdce9fd4ef8"
+    },
+    {
+      "path": "evidence/extracted/media/材料与方法及结果_机制研究版/image1.png",
+      "size_bytes": 283788,
+      "sha256": "02bc1f95b8ea8f8600a36c395357310941ba1e27d754c7fea249900aa000f426"
+    },
+    {
+      "path": "evidence/extracted/乙酰胆碱酯酶-_-淀粉样肽复合物分子动力学模拟_中文翻译.extracted.md",
+      "size_bytes": 18302,
+      "sha256": "d31c19bf8fae9ba8825a236bbf7c119de14ddfd08d3e6b2fc1c80e153c2155da"
+    },
+    {
+      "path": "evidence/extracted/乙酰胆碱酯酶-_-淀粉样肽复合物分子动力学模拟_中文翻译.structure.json",
+      "size_bytes": 30752,
+      "sha256": "d79fd2d62baae05a748410dec847bf610940024abcfbd6c832906e40fa20820e"
+    },
+    {
+      "path": "evidence/extracted/材料与方法及结果_机制研究版.extracted.md",
+      "size_bytes": 14159,
+      "sha256": "9526db724dc45b837a3a5bcef9d2ee4490331ecba2f9e6fdb88beafe660779ff"
+    },
+    {
+      "path": "evidence/extracted/材料与方法及结果_机制研究版.structure.json",
+      "size_bytes": 133867,
+      "sha256": "74d1dbeaeb2bffe8b1524fac309de9f19b6170d8ec4c03e03a9165728c47de97"
+    },
+    {
+      "path": "evidence/extracted/牙龈卟啉单胞菌肽与AD关联综述.extracted.md",
+      "size_bytes": 17332,
+      "sha256": "35eb30dbf02f7fb13d9307367d2c025e358e5def55b5f5f30408844e4b5f4f4f"
+    },
+    {
+      "path": "evidence/extracted/牙龈卟啉单胞菌肽与AD关联综述.structure.json",
+      "size_bytes": 32829,
+      "sha256": "3aecf37eb7a336e91439518bd2fabee080dda38d6f9bcc01166f4d9baddf251d"
+    },
+    {
+      "path": "evidence/source_understanding_and_scope.md",
+      "size_bytes": 8050,
+      "sha256": "f0071cbdf0a3e953d31751a6e19e94c5863f035e96389c8cd50af0bc77d32a66"
+    },
+    {
+      "path": "manuscript/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/figures/evidence_ladder.png",
+      "size_bytes": 188406,
+      "sha256": "39e457b0a540a9ddbd0bf14e377c961338a1c64c8898b9a8d30ca91fe91a91b2"
+    },
+    {
+      "path": "manuscript/figures/evidence_ladder.svg",
+      "size_bytes": 6816,
+      "sha256": "ee6d7f0c5fc8df681d8281ea5903db7d017f582df4becb76313e1b0a5409229e"
+    },
+    {
+      "path": "manuscript/figures/prioritization_funnel.png",
+      "size_bytes": 375079,
+      "sha256": "8cec3a20bfab016f6458672bf17d61088ea53456edf8a613bfa9bd1368ad6f45"
+    },
+    {
+      "path": "manuscript/figures/prioritization_funnel.svg",
+      "size_bytes": 5706,
+      "sha256": "b7088a4822cff7d0f09085e0d9cda1019647325ebd27af6f43a40c6f09471cf7"
+    },
+    {
+      "path": "manuscript/manuscript_bilingual.docx",
+      "size_bytes": 542409,
+      "sha256": "ab7c0f8191d1e7b1af830bbcdb6f9870c0611f5c66b51f884ce5001e7b593335"
+    },
+    {
+      "path": "manuscript/manuscript_bilingual.md",
+      "size_bytes": 61881,
+      "sha256": "d0fc29d02fa39eb1f763de2ffbe4d12ac168137da3e9cda563f691793243d81c"
+    },
+    {
+      "path": "manuscript/manuscript_en.md",
+      "size_bytes": 36184,
+      "sha256": "a9cb2fe327f321827fc68a8a1ec3f13aa42441afddafa93054a74af85a547bf6"
+    },
+    {
+      "path": "manuscript/manuscript_zh.md",
+      "size_bytes": 30500,
+      "sha256": "8d44a59d03866a0d64d9d5726c5b85b89523d530a779588ba87b8148de3c4eaa"
+    },
+    {
+      "path": "manuscript/supplementary_tables_bilingual.docx",
+      "size_bytes": 9256,
+      "sha256": "a3f2bf1ea2a158ebaae25f3198f4d534711428072b4ef961f7e0f85000d236fb"
+    },
+    {
+      "path": "manuscript/supplementary_tables_bilingual.md",
+      "size_bytes": 4849,
+      "sha256": "9afaf63de576793264a48cbd2e313c924f8cf9b4c8f379e5fe10f53177373884"
+    },
+    {
+      "path": "quality_reports/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/citation_inventory_audit.json",
+      "size_bytes": 2222,
+      "sha256": "b819b4bc08b8af3571dc5690f7e557cbe1c9f821147c7cb849132e381e285ac3"
+    },
+    {
+      "path": "quality_reports/descriptive_arithmetic_audit.json",
+      "size_bytes": 3837,
+      "sha256": "4a387a989a1d6838ba7fbea371185266684a78357f6387aa60dc7f844fbc139c"
+    },
+    {
+      "path": "quality_reports/docx_package_audit.json",
+      "size_bytes": 1986,
+      "sha256": "ec217763701e99b6411f2b0aa9745bf4a22ebeaf7862b5ef8351c2320b50d8f5"
+    },
+    {
+      "path": "quality_reports/draft_lint_en.json",
+      "size_bytes": 3274,
+      "sha256": "80122418cb53dcda8e1761fad0c9878367e3f57009a8e8e83a84647cda647bb6"
+    },
+    {
+      "path": "quality_reports/draft_lint_en.txt",
+      "size_bytes": 2274,
+      "sha256": "1f750e3378635bb013395e73928c178825d09330247877da2fb1ad8c14042e9f"
+    },
+    {
+      "path": "quality_reports/draft_lint_zh.json",
+      "size_bytes": 3388,
+      "sha256": "53d42deb933488477c75b3a4ddac7857ea948ed1bd921ea72d95b4a63b0aa04f"
+    },
+    {
+      "path": "quality_reports/draft_lint_zh.txt",
+      "size_bytes": 2329,
+      "sha256": "3862b89bbe941d77ac80b0cbf26efc66be43189267fe2adbd4d1113878d1d02f"
+    },
+    {
+      "path": "quality_reports/language_structure_audit.json",
+      "size_bytes": 1647,
+      "sha256": "abde42c4a87d7dd8fc26c967576bbee63f481b534ba89bfa39297be7f3ce5aa4"
+    },
+    {
+      "path": "quality_reports/literature_coverage.md",
+      "size_bytes": 4694,
+      "sha256": "8d04b99d9e5651b925209beb9a09bdb109b81a1817c6d475d899a0b6f66e0f59"
+    },
+    {
+      "path": "quality_reports/manuscript_consistency.json",
+      "size_bytes": 1273,
+      "sha256": "6464989217674f106d48c94271a034d7d7d931bdf97e2b99a68969a6fca497b4"
+    },
+    {
+      "path": "quality_reports/manuscript_word_count.json",
+      "size_bytes": 528,
+      "sha256": "67788e02f739e58215049ce4a7ebf6705a1289aca1479daf1fa0472c57358b56"
+    },
+    {
+      "path": "quality_reports/mechanical_check_en.json",
+      "size_bytes": 21974,
+      "sha256": "a5545e9ba3cb43deb73f1f707701a3643e2d142ccf8a936c2a3ac533ddbe43f7"
+    },
+    {
+      "path": "quality_reports/mechanical_check_en.txt",
+      "size_bytes": 9390,
+      "sha256": "abe16e8c31bdc62386d8a9873673bb800ae4112f3b6473b0f0b5da1b021dce6a"
+    },
+    {
+      "path": "quality_reports/mechanical_check_zh.json",
+      "size_bytes": 248666,
+      "sha256": "b8c6267d98ca740ce86ee6a0ab2f647085022fa889f345aac30173bf39aa3042"
+    },
+    {
+      "path": "quality_reports/mechanical_check_zh.txt",
+      "size_bytes": 91609,
+      "sha256": "bcfe624efac1168b007df061127b9433c5b0f70d892f78d06960fbbb0b09f5ae"
+    },
+    {
+      "path": "quality_reports/quality_summary.md",
+      "size_bytes": 6099,
+      "sha256": "6cd169b56f25ad9176ff1bb241c733e1e572641061b714145b9ceccc7ff36b27"
+    },
+    {
+      "path": "quality_reports/research_ethics_review.md",
+      "size_bytes": 5836,
+      "sha256": "7fe0beb88edf904375d495be9bc8232431e1db6dd21d8195e6fef36b3c9cc79b"
+    },
+    {
+      "path": "quality_reports/reviewer_self_review.md",
+      "size_bytes": 4328,
+      "sha256": "4adb558ff6838798c1324699085fb902d1a251e13d29919ccaa9cb05693caa70"
+    },
+    {
+      "path": "quality_reports/source_checksum_verification.txt",
+      "size_bytes": 287,
+      "sha256": "dc5c965a9a84750dfe44b135610cdcc19e8e4c23754b4026a910387e3c720827"
+    },
+    {
+      "path": "references/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "references/references.bib",
+      "size_bytes": 10132,
+      "sha256": "c0d3b22c8032738a1cc324b09b1f1842bb7d007d670383f344d26b08ec8d49c6"
+    },
+    {
+      "path": "references/verified_references.md",
+      "size_bytes": 11279,
+      "sha256": "4a93ddb97461d7297fdf76d13483d276823a5f2025043ef58d168494ce8547f4"
+    },
+    {
+      "path": "revision_v2/01_topic_brainstorming.md",
+      "size_bytes": 12190,
+      "sha256": "96318894de5527a5b441d0daabf94f87cd935f3e5fb9ab98f21c14231ec47f4d"
+    },
+    {
+      "path": "revision_v2/02_literature_search_and_novelty.md",
+      "size_bytes": 10106,
+      "sha256": "e0826ece54d28e012f456f3364a2d9eff4376f9515e2d9e4470268c948c3418b"
+    },
+    {
+      "path": "revision_v2/03_literature_review_and_evidence_synthesis.md",
+      "size_bytes": 12173,
+      "sha256": "2738a7611a3f246f42db15c731511477418dbba3105392bbcbef6d030049461b"
+    },
+    {
+      "path": "revision_v2/04_research_suite_coordination.md",
+      "size_bytes": 5266,
+      "sha256": "c92c3700ff450f746bbfb5eba6045f333ede360f873c3e6c35b32d78edba9a10"
+    },
+    {
+      "path": "revision_v2/05_statistics_review.md",
+      "size_bytes": 5611,
+      "sha256": "14ee6a37bac24d4b994186e7757db0e7621dd5a46f49fd712f989c83b70d625a"
+    },
+    {
+      "path": "revision_v2/06_scientific_visualization.md",
+      "size_bytes": 4101,
+      "sha256": "8d07d0eff21f4e560d7133b1ba049589b758fd8313f2e5d97873787463c52657"
+    },
+    {
+      "path": "revision_v2/07_nature_writing_rebuild.md",
+      "size_bytes": 4289,
+      "sha256": "13da1bf45cc2e8be5664f4af08e04e8bae43863771718ea60cead5358b14a342"
+    },
+    {
+      "path": "revision_v2/08_language_polishing.md",
+      "size_bytes": 4055,
+      "sha256": "d33ea80bc35887fdd236adc2faff62dc5392f132c98a057cc88b2ff8e1152bde"
+    },
+    {
+      "path": "revision_v2/09_submission_preparation.md",
+      "size_bytes": 3902,
+      "sha256": "2388b475119e40caa7373d440d03bd6a22039cd43ad5ab9a202b7ca3f1263d8d"
+    },
+    {
+      "path": "revision_v2/README.md",
+      "size_bytes": 1517,
+      "sha256": "650ee68e2cdecd7fc25ca28a65d5b102f9d0ed0aeacf872c20baf9575291cf0e"
+    },
+    {
+      "path": "revision_v2/SKILL_PROVENANCE.md",
+      "size_bytes": 3131,
+      "sha256": "44753b41a8aca4e4be42f08b0abf425fcbe4d8d7e78c5df78b9474da7806cbd5"
+    },
+    {
+      "path": "revision_v2/search_raw/openalex_failure_log.txt",
+      "size_bytes": 686,
+      "sha256": "33fbc3bc334feee1351b67da7964d8af8b98b0a48a72b9e18b1dec17303e7ece"
+    },
+    {
+      "path": "revision_v2/statistics_audit.json",
+      "size_bytes": 2321,
+      "sha256": "e2478ef1a6ac7635996c6e4226110d5e37eba1ef27c46d548be6c9abe248a33f"
+    },
+    {
+      "path": "scripts/audit_citation_inventory.py",
+      "size_bytes": 2521,
+      "sha256": "a8fe3bd99173f0ccdd248e394b0db3b8949cb3d18bedc776e28cf7ef2440a253"
+    },
+    {
+      "path": "scripts/audit_docx_packages.py",
+      "size_bytes": 5835,
+      "sha256": "2d1cee9f0dfb3dcfbdc67c5c7c60496f6232adeb71f7c9afd78ed5187b4556a0"
+    },
+    {
+      "path": "scripts/audit_language_structure.py",
+      "size_bytes": 2878,
+      "sha256": "a287d636c9892ab2a01113236ed31a6949089aeadd2674cdb1653036ef588d49"
+    },
+    {
+      "path": "scripts/audit_manuscript_consistency.py",
+      "size_bytes": 3618,
+      "sha256": "54da525aa7414b9b968be1deffb6458bd0c818679d2b6b227515c9666e05a229"
+    },
+    {
+      "path": "scripts/audit_manuscript_word_counts.py",
+      "size_bytes": 2039,
+      "sha256": "965ec45f8ed12357a5cfd09ee0ab3985f844acf53308bf08109597d606ec101f"
+    },
+    {
+      "path": "scripts/build_bilingual_markdown.py",
+      "size_bytes": 3369,
+      "sha256": "61220fad067d609a62c7174fa69488421cda9b069fade1770341f6a7ad337d7a"
+    },
+    {
+      "path": "scripts/build_docx_stdlib.py",
+      "size_bytes": 21239,
+      "sha256": "3eb7c12052af0023acc9ee001dc27a6e4d9694857438b0bd1b9256ff2b89fde7"
+    },
+    {
+      "path": "scripts/build_repository_inventory.py",
+      "size_bytes": 1761,
+      "sha256": "b44b54e691996a7a81cfcafdf812e371bfae31847af528ed7b5d9da4bca6a8e1"
+    },
+    {
+      "path": "scripts/extract_docx_stdlib.py",
+      "size_bytes": 11467,
+      "sha256": "8ad796cdc62ce66b4d37834ddb7b0253799c168f0beaf7ecf0b837c2c9054266"
+    },
+    {
+      "path": "scripts/generate_artifact_checksums.py",
+      "size_bytes": 918,
+      "sha256": "5f91d1c335990ae448ae9cc76cae80161c5bf40027f1aef6de9455c928f588c1"
+    },
+    {
+      "path": "scripts/generate_evidence_ladder.py",
+      "size_bytes": 6839,
+      "sha256": "222e24340c729877be14060cb454672291f34d58143f5a3e0a03d22ea7a2fbe2"
+    },
+    {
+      "path": "scripts/generate_funnel_figure.py",
+      "size_bytes": 9362,
+      "sha256": "bd8a8235fdd9981512156bfb83e0cef985e3e2bea23120a3b1e61ab22bf14fa3"
+    },
+    {
+      "path": "scripts/stage5_statistics_audit.py",
+      "size_bytes": 4159,
+      "sha256": "8790fedbc50264ed28707823cb2e40e1a03464d91f932361272ba177ee48bc68"
+    },
+    {
+      "path": "scripts/verify_source_checksums.py",
+      "size_bytes": 1718,
+      "sha256": "24e9d768f4d90bd38e8b7ccc91242184c4a83bba3b7d28433f44d6de6b6afa2e"
+    },
+    {
+      "path": "source_materials/乙酰胆碱酯酶-β-淀粉样肽复合物分子动力学模拟_中文翻译.docx",
+      "size_bytes": 44790,
+      "sha256": "f6d0093f261b012fa186a4500d5efcf6f88279ee4b90bf5918f7b8c74c0a00fb"
+    },
+    {
+      "path": "source_materials/材料与方法及结果_机制研究版.docx",
+      "size_bytes": 335541,
+      "sha256": "f4132a02cb9955c808739c3cbf15edd947f6203d577e8586490933a5d2daa4b5"
+    },
+    {
+      "path": "source_materials/材料与方法及结果_机制研究版.pdf",
+      "size_bytes": 560727,
+      "sha256": "88fba5ccd1f8cfab01a9555adb404400e390760ef134ee9a7e3393a616a76ce1"
+    },
+    {
+      "path": "source_materials/牙龈卟啉单胞菌肽与AD关联综述.docx",
+      "size_bytes": 45169,
+      "sha256": "3e1dfc501472d50307b5f66bb8df1c6cc8a64e9371b97a7dc0ca1ad08ce81ec6"
+    },
+    {
+      "path": "submission/cover_letter_bilingual_template.md",
+      "size_bytes": 4600,
+      "sha256": "76fca91b737cd705714cef197401009aba1cd2294a28ba0c9372b801220f24cd"
+    },
+    {
+      "path": "submission/highlights_bilingual.md",
+      "size_bytes": 811,
+      "sha256": "e9deefae4233dd318e6dc466a8a0ddb0d055490aa435b692f12c6eb8fb79f967"
+    },
+    {
+      "path": "submission/journal_targeting_bilingual.md",
+      "size_bytes": 4436,
+      "sha256": "ad2bc6bfc9342d645ac0eae086a834b2bc3f864980714fd4d3cfa46b80d5d03e"
+    },
+    {
+      "path": "submission/presubmission_enquiry_bilingual.md",
+      "size_bytes": 3458,
+      "sha256": "bd5e711f43cdd6032024c66b0f2c2860018cbae683e7d31110cecfe9a62efdf5"
+    },
+    {
+      "path": "submission/submission_readiness_checklist.md",
+      "size_bytes": 5020,
+      "sha256": "aef82fd421fa96c1e560550173de85f6bce64a36198a0b1326f400094c2992a5"
+    },
+    {
+      "path": "submission/title_page_bilingual_template.md",
+      "size_bytes": 3393,
+      "sha256": "cab88d1f51ffe299f74a496745d6ad720a4afc6808db81147cd956b982641ecf"
+    }
+  ],
+  "verdict": "INFORMATIONAL"
+}
