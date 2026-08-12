@@ -3,8 +3,8 @@
   "inventory_excludes": [
     "quality_reports/repository_inventory.json (self-referential output)"
   ],
-  "total_files": 107,
-  "total_bytes": 3425772,
+  "total_files": 109,
+  "total_bytes": 3437703,
   "by_top_level_group": {
     "evidence": {
       "files": 12,
@@ -15,8 +15,8 @@
       "bytes": 1593086
     },
     "project_root": {
-      "files": 3,
-      "bytes": 16387
+      "files": 4,
+      "bytes": 24222
     },
     "quality_reports": {
       "files": 21,
@@ -35,8 +35,8 @@
       "bytes": 22522
     },
     "scripts": {
-      "files": 19,
-      "bytes": 97443
+      "files": 20,
+      "bytes": 101539
     },
     "source_materials": {
       "files": 4,
@@ -50,18 +50,23 @@
   "files": [
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
-      "size_bytes": 10840,
-      "sha256": "a79823274dd6fb52c8e3192a21c4d756b2bde38d2e129ef08f6f7bbdc3e9a38a"
+      "size_bytes": 11021,
+      "sha256": "9badb5e05b3f0a0d7fe9650cc45ebde7f3fd7aeaad8fa3238095622e3caba510"
     },
     {
       "path": "README.md",
-      "size_bytes": 5062,
-      "sha256": "81c5f5957e1a296323423e3f069c67813ec5506c25ae6b25a06b8b5f59f76202"
+      "size_bytes": 5277,
+      "sha256": "8567165c588ad23a7005de5ccbfa5c4f30d8bf9bfcb51590f1ab473ea325b26d"
     },
     {
       "path": "SHA256SUMS.txt",
       "size_bytes": 485,
       "sha256": "a9f25aeadb79f53018f26ef42642e64ad507c3338324b9314741d73e0f43014d"
+    },
+    {
+      "path": "VERSION_HISTORY.md",
+      "size_bytes": 7439,
+      "sha256": "0a6d8fac804812687aadb3efbce8ab0d358f95067caaeb00dd4934a2c1815dff"
     },
     {
       "path": "evidence/.gitkeep",
@@ -440,8 +445,8 @@
     },
     {
       "path": "scripts/SYNC.md",
-      "size_bytes": 2246,
-      "sha256": "57631e46ba5a98468c8cf1f203ec10d05bfdd4f4f5789035208e57f7a1c9feb2"
+      "size_bytes": 2790,
+      "sha256": "11ebb04abc9b3df4360a513e8e7e9d9ac7b2862b36d6ca41e7a3e4541d022c76"
     },
     {
       "path": "scripts/audit_citation_inventory.py",
@@ -522,6 +527,11 @@
       "path": "scripts/generate_funnel_figure.py",
       "size_bytes": 9362,
       "sha256": "df9a37928df5594f40773224ce94054b03a570ae09c8fb9c41ce8fb107d41d0e"
+    },
+    {
+      "path": "scripts/manage_version_tag.py",
+      "size_bytes": 3552,
+      "sha256": "b46f77e3a0236cc94335f9e2ab12661b8dfb40e0fd5f125611378d1d5d434412"
     },
     {
       "path": "scripts/stage5_statistics_audit.py",

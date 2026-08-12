@@ -10,6 +10,8 @@
 
 ## 主要交付物
 
+- `VERSION_HISTORY.md` — 各版稿件、精确Git检查点、标签及安全恢复命令的唯一版本台账。
+- `scripts/manage_version_tag.py` — 创建和核验不可覆盖annotated tag的跨平台脚本。
 - `manuscript/manuscript_en.md`、`manuscript_zh.md` — 扩展英文稿与平行中文稿。
 - `manuscript/manuscript_bilingual.md`、`.docx` — 分节对照双语主稿及Word包。
 - `manuscript/supplementary_tables_bilingual.md`、`.docx` — S1–S6双语补充表。

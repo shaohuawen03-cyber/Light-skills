@@ -52,6 +52,17 @@ python3 scripts/generate_artifact_checksums.py
 python3 scripts/build_repository_inventory.py
 ```
 
+## Version tags and recovery
+
+The authoritative version ledger is `VERSION_HISTORY.md`. To create the current protected annotated tag after committing a clean tree:
+
+```bash
+python3 scripts/manage_version_tag.py create --version 3.0.0 --message "v3.0.0: expanded bilingual manuscript with provenance-controlled external-v0.4 integration" --push
+python3 scripts/manage_version_tag.py verify --version 3.0.0
+```
+
+Prefer `git worktree add <separate-path> <tag>` for recovery inspection; do not use destructive reset for routine version recovery.
+
 ## Important boundary
 
 These commands reproduce arithmetic checks, sequence-composition checks, figures, manuscripts and DOCX packages. They do not reproduce the original smORF/predictor workflow or the externally reported docking because the necessary row-level inputs and raw docking artefacts are absent.
