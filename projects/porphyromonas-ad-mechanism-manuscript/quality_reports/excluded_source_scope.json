@@ -1,0 +1,8 @@
+{
+  "schema": "local.excluded_source_scope.v1",
+  "identity_count_from_dedicated_record": 2,
+  "dedicated_record": "evidence/excluded_source_record.md",
+  "identity_occurrences_outside_dedicated_record": [],
+  "excluded_files_present": [],
+  "verdict": "PASS"
+}

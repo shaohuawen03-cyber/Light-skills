@@ -1,0 +1,638 @@
+{
+  "schema": "local.repository_inventory.v1",
+  "inventory_excludes": [
+    "quality_reports/repository_inventory.json (self-referential output)"
+  ],
+  "total_files": 117,
+  "total_bytes": 3691467,
+  "by_top_level_group": {
+    "evidence": {
+      "files": 12,
+      "bytes": 552286
+    },
+    "manuscript": {
+      "files": 19,
+      "bytes": 1831650
+    },
+    "project_root": {
+      "files": 4,
+      "bytes": 27164
+    },
+    "quality_reports": {
+      "files": 23,
+      "bytes": 40979
+    },
+    "references": {
+      "files": 3,
+      "bytes": 29513
+    },
+    "revision_v2": {
+      "files": 13,
+      "bytes": 69348
+    },
+    "revision_v3": {
+      "files": 12,
+      "bytes": 22522
+    },
+    "scripts": {
+      "files": 21,
+      "bytes": 106908
+    },
+    "source_materials": {
+      "files": 4,
+      "bytes": 986227
+    },
+    "submission": {
+      "files": 6,
+      "bytes": 24870
+    }
+  },
+  "files": [
+    {
+      "path": "ARTIFACT_SHA256SUMS.txt",
+      "size_bytes": 11929,
+      "sha256": "8d34220245ece1aa55325b7e476642d1f3bd6663529117f9b1633b573db0198c"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 5927,
+      "sha256": "283b0ddc73435720f5b63a2ca34ce2cd676ee6b7e7f10172eeef6869024853dd"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "size_bytes": 485,
+      "sha256": "a9f25aeadb79f53018f26ef42642e64ad507c3338324b9314741d73e0f43014d"
+    },
+    {
+      "path": "VERSION_HISTORY.md",
+      "size_bytes": 8823,
+      "sha256": "c3378d96b59ea055941309952563e6c622faacd1b5e5df2377166b06dd5f48bc"
+    },
+    {
+      "path": "evidence/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/claim_evidence_ledger.md",
+      "size_bytes": 6987,
+      "sha256": "19c25c3d276428fe060bf1b98fe3bd970e37840963a4cc7c05ff087d5fea16a3"
+    },
+    {
+      "path": "evidence/excluded_source_record.md",
+      "size_bytes": 1802,
+      "sha256": "adf326be951d328840a0ac7c4cb7a0d2ae95365dada4f68aea4f91e71c5bbb10"
+    },
+    {
+      "path": "evidence/external_v04_integration.md",
+      "size_bytes": 3782,
+      "sha256": "17d19d0e9edbad1853af0ecd966fb1b8ec7772ef718bcb1e3e9c8ff3cc449723"
+    },
+    {
+      "path": "evidence/extracted/media/材料与方法及结果_机制研究版/image1.png",
+      "size_bytes": 283788,
+      "sha256": "02bc1f95b8ea8f8600a36c395357310941ba1e27d754c7fea249900aa000f426"
+    },
+    {
+      "path": "evidence/extracted/乙酰胆碱酯酶-_-淀粉样肽复合物分子动力学模拟_中文翻译.extracted.md",
+      "size_bytes": 18302,
+      "sha256": "d31c19bf8fae9ba8825a236bbf7c119de14ddfd08d3e6b2fc1c80e153c2155da"
+    },
+    {
+      "path": "evidence/extracted/乙酰胆碱酯酶-_-淀粉样肽复合物分子动力学模拟_中文翻译.structure.json",
+      "size_bytes": 30752,
+      "sha256": "d79fd2d62baae05a748410dec847bf610940024abcfbd6c832906e40fa20820e"
+    },
+    {
+      "path": "evidence/extracted/材料与方法及结果_机制研究版.extracted.md",
+      "size_bytes": 14159,
+      "sha256": "9526db724dc45b837a3a5bcef9d2ee4490331ecba2f9e6fdb88beafe660779ff"
+    },
+    {
+      "path": "evidence/extracted/材料与方法及结果_机制研究版.structure.json",
+      "size_bytes": 133867,
+      "sha256": "74d1dbeaeb2bffe8b1524fac309de9f19b6170d8ec4c03e03a9165728c47de97"
+    },
+    {
+      "path": "evidence/extracted/牙龈卟啉单胞菌肽与AD关联综述.extracted.md",
+      "size_bytes": 17332,
+      "sha256": "35eb30dbf02f7fb13d9307367d2c025e358e5def55b5f5f30408844e4b5f4f4f"
+    },
+    {
+      "path": "evidence/extracted/牙龈卟啉单胞菌肽与AD关联综述.structure.json",
+      "size_bytes": 32829,
+      "sha256": "3aecf37eb7a336e91439518bd2fabee080dda38d6f9bcc01166f4d9baddf251d"
+    },
+    {
+      "path": "evidence/source_understanding_and_scope.md",
+      "size_bytes": 8686,
+      "sha256": "1f96351d08d8726198e74933881689e996eb9c60403dab231471c4108fc19c18"
+    },
+    {
+      "path": "manuscript/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "manuscript/figures/evidence_ladder.png",
+      "size_bytes": 194426,
+      "sha256": "43298dcfcfa4a8ed3ca5e7ff302a2ebedd2931cc7eb5d4c04933b09a002943c8"
+    },
+    {
+      "path": "manuscript/figures/evidence_ladder.svg",
+      "size_bytes": 6858,
+      "sha256": "c3bddc9b7770bad0eb7df89e42f893db6cd4da2582b05845aa9bdbf43b337fc9"
+    },
+    {
+      "path": "manuscript/figures/fig5_docking_scores.pdf",
+      "size_bytes": 20110,
+      "sha256": "3c9212380f59addb71646c5d09a2881427f3414e3d48903f1b7c7946f7c0bca9"
+    },
+    {
+      "path": "manuscript/figures/fig5_docking_scores.png",
+      "size_bytes": 104697,
+      "sha256": "3b1dae022e654ed1587f2f075740a870016070086628e67ff868ad04151daced"
+    },
+    {
+      "path": "manuscript/figures/fig5_docking_scores.svg",
+      "size_bytes": 8081,
+      "sha256": "b801028dcac6b661651a2cdf0d8887914fdb85f25a2ddb621b163d74a8c042dd"
+    },
+    {
+      "path": "manuscript/figures/prioritization_funnel.png",
+      "size_bytes": 377694,
+      "sha256": "4f09dd96facc91c61137139c222834f863aa36e7d9edde7473ef9758539ebb64"
+    },
+    {
+      "path": "manuscript/figures/prioritization_funnel.svg",
+      "size_bytes": 5708,
+      "sha256": "0561207e26880cc07e231d2c7f8b51da9c3fbddf991146a3da6c15b5d5684132"
+    },
+    {
+      "path": "manuscript/interim_teacher/README.md",
+      "size_bytes": 1535,
+      "sha256": "f66fbe2421b19698d88b32fd302d68c7edfc89b2525ba78c57fa926e17bdfb8d"
+    },
+    {
+      "path": "manuscript/interim_teacher/interim_teacher_en.docx",
+      "size_bytes": 102986,
+      "sha256": "95b23a9902f631a0e99d5001632da57b73b93f8ba455c44c26fd35f3b3ddf7b9"
+    },
+    {
+      "path": "manuscript/interim_teacher/interim_teacher_en.md",
+      "size_bytes": 16660,
+      "sha256": "93971e981d3ff9cfbf127003993279f9227bc000f96b860f91214d33bbf07005"
+    },
+    {
+      "path": "manuscript/interim_teacher/interim_teacher_zh.docx",
+      "size_bytes": 103289,
+      "sha256": "1277296bf96052c744e807a939f5d382fb238a0e5fadbb75aa187b16e9fde048"
+    },
+    {
+      "path": "manuscript/interim_teacher/interim_teacher_zh.md",
+      "size_bytes": 14094,
+      "sha256": "2a70cd24afd67b50ef5628d396dcaa05136dbf5b2d91c65c743992bb204cd99c"
+    },
+    {
+      "path": "manuscript/manuscript_bilingual.docx",
+      "size_bytes": 660249,
+      "sha256": "5e049c2cf83438ef909d049f4f0ed5b68763cb42ab2ae1923e68fece21c6ef86"
+    },
+    {
+      "path": "manuscript/manuscript_bilingual.md",
+      "size_bytes": 92080,
+      "sha256": "8ee05756225a11b7a7ce4eb787637cf90ac5631d1b2bd28a07f25dc891635bc5"
+    },
+    {
+      "path": "manuscript/manuscript_en.md",
+      "size_bytes": 55612,
+      "sha256": "25b39ec3d0e628dbda0cfd4f36d04303c4966de23e98fd0d1690b82a9bac969c"
+    },
+    {
+      "path": "manuscript/manuscript_zh.md",
+      "size_bytes": 46192,
+      "sha256": "c6aab5c08046a01b154f2564089b2b26a1aa52da2ec4f8832933d624d245e459"
+    },
+    {
+      "path": "manuscript/supplementary_tables_bilingual.docx",
+      "size_bytes": 12247,
+      "sha256": "1d568f5157e45e329b72112d81988918aa7107ba9010a8a52002823fc8518c48"
+    },
+    {
+      "path": "manuscript/supplementary_tables_bilingual.md",
+      "size_bytes": 9132,
+      "sha256": "82b0a898a722354326e326391a9eff64c8a1946f81d00844a4bbe5ffd783d302"
+    },
+    {
+      "path": "quality_reports/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "quality_reports/citation_inventory_audit.json",
+      "size_bytes": 3117,
+      "sha256": "2cee6f4100db40ef17750e19b19a0550b390a293cdc73d0e061eacb5dcf243f1"
+    },
+    {
+      "path": "quality_reports/descriptive_arithmetic_audit.json",
+      "size_bytes": 3837,
+      "sha256": "4a387a989a1d6838ba7fbea371185266684a78357f6387aa60dc7f844fbc139c"
+    },
+    {
+      "path": "quality_reports/docx_package_audit.json",
+      "size_bytes": 3821,
+      "sha256": "e9cfa162c704875d49c7f022fb2daae1c7d9acec1c148bf88e1cd3fc6a8ad8d8"
+    },
+    {
+      "path": "quality_reports/draft_lint_en.json",
+      "size_bytes": 375,
+      "sha256": "fbbb64ed5408d611a9571c3b55688a7a97fe07e151021694208721ff4a4c4939"
+    },
+    {
+      "path": "quality_reports/draft_lint_en.txt",
+      "size_bytes": 250,
+      "sha256": "552343fd792636a4384e978df4236ef65d8a4fd00cd9517035d6dc312367fdab"
+    },
+    {
+      "path": "quality_reports/draft_lint_zh.json",
+      "size_bytes": 362,
+      "sha256": "33e9678e751447eec444bfef6929f4c3da48ecc001aebe836952c1b0b3825b45"
+    },
+    {
+      "path": "quality_reports/draft_lint_zh.txt",
+      "size_bytes": 237,
+      "sha256": "7c131e2a8c51e306d4506f5bd8a0efc7763860a4bf2d0f16f7ab3e4f8de1612e"
+    },
+    {
+      "path": "quality_reports/excluded_source_scope.json",
+      "size_bytes": 262,
+      "sha256": "7bc2cafe9f25d1e390ccfd0334fa3afaadbf88e0d35983a8f345ad744c7d9a97"
+    },
+    {
+      "path": "quality_reports/interim_teacher_package_audit.json",
+      "size_bytes": 3528,
+      "sha256": "2e3f63fa9a22d5feef446b1e756f72331f876b06520d11246997fa8c49be5145"
+    },
+    {
+      "path": "quality_reports/interim_teacher_quality_summary.md",
+      "size_bytes": 1560,
+      "sha256": "f728ed80508f324d0e48d712cd5757ee7af3207bb5dd475022e3d77f315297a5"
+    },
+    {
+      "path": "quality_reports/language_structure_audit.json",
+      "size_bytes": 2212,
+      "sha256": "81e1f6b0b208564f2976434a07418439a7f0d8463cea3addf471bb4fc86dd3ce"
+    },
+    {
+      "path": "quality_reports/literature_coverage.md",
+      "size_bytes": 3492,
+      "sha256": "17b0ab46ca7cc8844740dd640e2fb80adff57ecde2bcb98b408286120f11dd3a"
+    },
+    {
+      "path": "quality_reports/manuscript_consistency.json",
+      "size_bytes": 1833,
+      "sha256": "caee22a3f3b2912918b81d01e75f2a28e781d6ab347830df6128ae5f0f2a3702"
+    },
+    {
+      "path": "quality_reports/manuscript_word_count.json",
+      "size_bytes": 528,
+      "sha256": "4b2b860ce94099ce5e716d932c4e79fbac0f7b6034392fa3e02867322506d0e4"
+    },
+    {
+      "path": "quality_reports/mechanical_check_en.json",
+      "size_bytes": 482,
+      "sha256": "69a1fe71301b55da214b615f572fed1edb3665ad27aafcaa69619d183dcc72ba"
+    },
+    {
+      "path": "quality_reports/mechanical_check_en.txt",
+      "size_bytes": 344,
+      "sha256": "8930741db8c8bef656c334909c84ad96b9e8213f3051884a8ba34281595d8233"
+    },
+    {
+      "path": "quality_reports/mechanical_check_zh.json",
+      "size_bytes": 482,
+      "sha256": "c36080aad396cd67f4ec2efd5fe4c79ae4055e5474aae6cc60cc909e33de57e6"
+    },
+    {
+      "path": "quality_reports/mechanical_check_zh.txt",
+      "size_bytes": 344,
+      "sha256": "60b81c3285c1077bc1be89caca005412f37c69592179865ccd81792cc8ac907a"
+    },
+    {
+      "path": "quality_reports/quality_summary.md",
+      "size_bytes": 5676,
+      "sha256": "37aa7ed7b469b059f23ede8fd1bf788363d4f9d7bace61b8b0aae373b06a1d29"
+    },
+    {
+      "path": "quality_reports/research_ethics_review.md",
+      "size_bytes": 3683,
+      "sha256": "55ab3f4ca5a70d1f0fbe73585d4366e887583bc2954f3199731a444f5285331a"
+    },
+    {
+      "path": "quality_reports/reviewer_self_review.md",
+      "size_bytes": 4267,
+      "sha256": "e20b64759781a111033625a87d34050fc442407612ba30406ffaa3ed6f15bfdd"
+    },
+    {
+      "path": "quality_reports/source_checksum_verification.txt",
+      "size_bytes": 287,
+      "sha256": "dc5c965a9a84750dfe44b135610cdcc19e8e4c23754b4026a910387e3c720827"
+    },
+    {
+      "path": "references/.gitkeep",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "references/references.bib",
+      "size_bytes": 22439,
+      "sha256": "dac0108f29c663e12f8c5c045f2c17a51a79c06edc8364baa819fcffddccdf22"
+    },
+    {
+      "path": "references/verified_references.md",
+      "size_bytes": 7074,
+      "sha256": "647985dfe9c16ea598bc04717dbf83a55b0f2895cd0c6dbe37a12bcedbcfe9fb"
+    },
+    {
+      "path": "revision_v2/01_topic_brainstorming.md",
+      "size_bytes": 12190,
+      "sha256": "96318894de5527a5b441d0daabf94f87cd935f3e5fb9ab98f21c14231ec47f4d"
+    },
+    {
+      "path": "revision_v2/02_literature_search_and_novelty.md",
+      "size_bytes": 10106,
+      "sha256": "e0826ece54d28e012f456f3364a2d9eff4376f9515e2d9e4470268c948c3418b"
+    },
+    {
+      "path": "revision_v2/03_literature_review_and_evidence_synthesis.md",
+      "size_bytes": 12173,
+      "sha256": "2738a7611a3f246f42db15c731511477418dbba3105392bbcbef6d030049461b"
+    },
+    {
+      "path": "revision_v2/04_research_suite_coordination.md",
+      "size_bytes": 5266,
+      "sha256": "c92c3700ff450f746bbfb5eba6045f333ede360f873c3e6c35b32d78edba9a10"
+    },
+    {
+      "path": "revision_v2/05_statistics_review.md",
+      "size_bytes": 5611,
+      "sha256": "14ee6a37bac24d4b994186e7757db0e7621dd5a46f49fd712f989c83b70d625a"
+    },
+    {
+      "path": "revision_v2/06_scientific_visualization.md",
+      "size_bytes": 4101,
+      "sha256": "8d07d0eff21f4e560d7133b1ba049589b758fd8313f2e5d97873787463c52657"
+    },
+    {
+      "path": "revision_v2/07_nature_writing_rebuild.md",
+      "size_bytes": 4289,
+      "sha256": "13da1bf45cc2e8be5664f4af08e04e8bae43863771718ea60cead5358b14a342"
+    },
+    {
+      "path": "revision_v2/08_language_polishing.md",
+      "size_bytes": 4055,
+      "sha256": "d33ea80bc35887fdd236adc2faff62dc5392f132c98a057cc88b2ff8e1152bde"
+    },
+    {
+      "path": "revision_v2/09_submission_preparation.md",
+      "size_bytes": 3902,
+      "sha256": "2388b475119e40caa7373d440d03bd6a22039cd43ad5ab9a202b7ca3f1263d8d"
+    },
+    {
+      "path": "revision_v2/README.md",
+      "size_bytes": 1517,
+      "sha256": "650ee68e2cdecd7fc25ca28a65d5b102f9d0ed0aeacf872c20baf9575291cf0e"
+    },
+    {
+      "path": "revision_v2/SKILL_PROVENANCE.md",
+      "size_bytes": 3131,
+      "sha256": "44753b41a8aca4e4be42f08b0abf425fcbe4d8d7e78c5df78b9474da7806cbd5"
+    },
+    {
+      "path": "revision_v2/search_raw/openalex_failure_log.txt",
+      "size_bytes": 686,
+      "sha256": "33fbc3bc334feee1351b67da7964d8af8b98b0a48a72b9e18b1dec17303e7ece"
+    },
+    {
+      "path": "revision_v2/statistics_audit.json",
+      "size_bytes": 2321,
+      "sha256": "e2478ef1a6ac7635996c6e4226110d5e37eba1ef27c46d548be6c9abe248a33f"
+    },
+    {
+      "path": "revision_v3/01_topic_brainstorming.md",
+      "size_bytes": 1798,
+      "sha256": "ca3e7df6bae017067e7a819bb69f304b62ebc089ebb0f6161f68e8af5b49851f"
+    },
+    {
+      "path": "revision_v3/02_literature_search_and_novelty.md",
+      "size_bytes": 1703,
+      "sha256": "a3869b1bcc8660576beab834bcee59049ad3ed97ce0a86dcd2292705f594d287"
+    },
+    {
+      "path": "revision_v3/03_literature_review_and_evidence_synthesis.md",
+      "size_bytes": 1681,
+      "sha256": "fd79412fa2b1d64dcf983487014997268b35113d644558f3b2ead7ff94d1b079"
+    },
+    {
+      "path": "revision_v3/04_research_suite_coordination.md",
+      "size_bytes": 1631,
+      "sha256": "0229dd1148e671cf44373d3ba339e3ecb58a2876b19c3aaa8d015bf3ca225f25"
+    },
+    {
+      "path": "revision_v3/05_statistics_review.md",
+      "size_bytes": 1518,
+      "sha256": "c0cdc6171c8060ef6c9517e8730ae42e56a681f7636084ce8406dfb321970ca4"
+    },
+    {
+      "path": "revision_v3/06_scientific_visualization.md",
+      "size_bytes": 1351,
+      "sha256": "11f1d70dab1cc2997715c25c7417226c8950731bcc937118ae2ccd487a7124e8"
+    },
+    {
+      "path": "revision_v3/07_scientific_writing_rebuild.md",
+      "size_bytes": 1570,
+      "sha256": "b293a18343da228382d18262adac6a0be46ba8c1dc3e8c20af265eaccef6a7ba"
+    },
+    {
+      "path": "revision_v3/08_language_polishing.md",
+      "size_bytes": 1479,
+      "sha256": "c92fa3205c41d2c16175c0100a0921144a220f3613fde743bf7bca4fe4e3d250"
+    },
+    {
+      "path": "revision_v3/09_submission_preparation.md",
+      "size_bytes": 1916,
+      "sha256": "55ca330e9b1cc84f412dcfa19297515eaffcaaa28764cd537c3220865773fcbd"
+    },
+    {
+      "path": "revision_v3/EXTERNAL_WORKFLOW_MAPPING.md",
+      "size_bytes": 1978,
+      "sha256": "92b818adc442cce07ef9953a0a616e2318870a0db38a2f13ce5f2ca7bea18aca"
+    },
+    {
+      "path": "revision_v3/README.md",
+      "size_bytes": 1508,
+      "sha256": "f43e5a0dc036eec569210cab8163578f55cf69e6025698722875e4db8323e879"
+    },
+    {
+      "path": "revision_v3/external_docking_audit.json",
+      "size_bytes": 4389,
+      "sha256": "18db374bfd1c17e540f61024298f3d8949429e3d677cd009501088fe13affa6d"
+    },
+    {
+      "path": "scripts/SYNC.md",
+      "size_bytes": 3243,
+      "sha256": "2d5419852ed178efdcbb2e91a4ddf96701dee5870f59d6bea156450dbb947c1e"
+    },
+    {
+      "path": "scripts/audit_citation_inventory.py",
+      "size_bytes": 2521,
+      "sha256": "06725f8d80e3009c750086d4792b8e315c60399c4f753a20ecf9d2090a30cf22"
+    },
+    {
+      "path": "scripts/audit_docx_packages.py",
+      "size_bytes": 6722,
+      "sha256": "f2b23c9315cf4d897766a80d508ce915cfeef11a8bbd2e6bd27a7acbeadb23fe"
+    },
+    {
+      "path": "scripts/audit_excluded_source_scope.py",
+      "size_bytes": 2309,
+      "sha256": "2133dbb03fd0624d40c72bc5d0299944e3f1d961818d35b93c1981e4bb11f349"
+    },
+    {
+      "path": "scripts/audit_external_docking_summary.py",
+      "size_bytes": 3320,
+      "sha256": "a7fd3e0ecd4e02b004af63bfaffd609f4a27a8dd94063f4111f65624d4b226a5"
+    },
+    {
+      "path": "scripts/audit_interim_teacher_package.py",
+      "size_bytes": 4095,
+      "sha256": "db8cfff288eeaa1db859cfd72e8524a4d0fbaf4078d193c14521175bdb9d60fd"
+    },
+    {
+      "path": "scripts/audit_language_structure.py",
+      "size_bytes": 2878,
+      "sha256": "1a82636fa274d4220cb3d441c45477b635c4aeb038fda4f450f166e230ea94f4"
+    },
+    {
+      "path": "scripts/audit_manuscript_consistency.py",
+      "size_bytes": 3722,
+      "sha256": "ff7c0ed7d39f36dd8eb94782d0b4e7b5f470a8de6f8afbf942dab64d953f4d64"
+    },
+    {
+      "path": "scripts/audit_manuscript_word_counts.py",
+      "size_bytes": 2039,
+      "sha256": "965ec45f8ed12357a5cfd09ee0ab3985f844acf53308bf08109597d606ec101f"
+    },
+    {
+      "path": "scripts/audit_text_quality.py",
+      "size_bytes": 5268,
+      "sha256": "0137e52824cfe07dfd7f5ee7cb5ae4d3ea7477d371a7eb2c2f2993c0686e8d8b"
+    },
+    {
+      "path": "scripts/build_bilingual_markdown.py",
+      "size_bytes": 3369,
+      "sha256": "61220fad067d609a62c7174fa69488421cda9b069fade1770341f6a7ad337d7a"
+    },
+    {
+      "path": "scripts/build_docx_stdlib.py",
+      "size_bytes": 21239,
+      "sha256": "3eb7c12052af0023acc9ee001dc27a6e4d9694857438b0bd1b9256ff2b89fde7"
+    },
+    {
+      "path": "scripts/build_repository_inventory.py",
+      "size_bytes": 1761,
+      "sha256": "b44b54e691996a7a81cfcafdf812e371bfae31847af528ed7b5d9da4bca6a8e1"
+    },
+    {
+      "path": "scripts/extract_docx_stdlib.py",
+      "size_bytes": 11467,
+      "sha256": "8ad796cdc62ce66b4d37834ddb7b0253799c168f0beaf7ecf0b837c2c9054266"
+    },
+    {
+      "path": "scripts/generate_artifact_checksums.py",
+      "size_bytes": 918,
+      "sha256": "5f91d1c335990ae448ae9cc76cae80161c5bf40027f1aef6de9455c928f588c1"
+    },
+    {
+      "path": "scripts/generate_docking_score_figure.py",
+      "size_bytes": 6351,
+      "sha256": "38ec22d7027f987013cbd4a571a90b0e63296174646fb6da6bbc8ef0c041c887"
+    },
+    {
+      "path": "scripts/generate_evidence_ladder.py",
+      "size_bytes": 6895,
+      "sha256": "934052ff2fd29a4ba7d48f9e4b4490c5276d14d6a34423a6b853a59a37e04555"
+    },
+    {
+      "path": "scripts/generate_funnel_figure.py",
+      "size_bytes": 9362,
+      "sha256": "df9a37928df5594f40773224ce94054b03a570ae09c8fb9c41ce8fb107d41d0e"
+    },
+    {
+      "path": "scripts/manage_version_tag.py",
+      "size_bytes": 3552,
+      "sha256": "b46f77e3a0236cc94335f9e2ab12661b8dfb40e0fd5f125611378d1d5d434412"
+    },
+    {
+      "path": "scripts/stage5_statistics_audit.py",
+      "size_bytes": 4159,
+      "sha256": "8790fedbc50264ed28707823cb2e40e1a03464d91f932361272ba177ee48bc68"
+    },
+    {
+      "path": "scripts/verify_source_checksums.py",
+      "size_bytes": 1718,
+      "sha256": "24e9d768f4d90bd38e8b7ccc91242184c4a83bba3b7d28433f44d6de6b6afa2e"
+    },
+    {
+      "path": "source_materials/乙酰胆碱酯酶-β-淀粉样肽复合物分子动力学模拟_中文翻译.docx",
+      "size_bytes": 44790,
+      "sha256": "f6d0093f261b012fa186a4500d5efcf6f88279ee4b90bf5918f7b8c74c0a00fb"
+    },
+    {
+      "path": "source_materials/材料与方法及结果_机制研究版.docx",
+      "size_bytes": 335541,
+      "sha256": "f4132a02cb9955c808739c3cbf15edd947f6203d577e8586490933a5d2daa4b5"
+    },
+    {
+      "path": "source_materials/材料与方法及结果_机制研究版.pdf",
+      "size_bytes": 560727,
+      "sha256": "88fba5ccd1f8cfab01a9555adb404400e390760ef134ee9a7e3393a616a76ce1"
+    },
+    {
+      "path": "source_materials/牙龈卟啉单胞菌肽与AD关联综述.docx",
+      "size_bytes": 45169,
+      "sha256": "3e1dfc501472d50307b5f66bb8df1c6cc8a64e9371b97a7dc0ca1ad08ce81ec6"
+    },
+    {
+      "path": "submission/cover_letter_bilingual_template.md",
+      "size_bytes": 5557,
+      "sha256": "99fbdec2da1d756a80787338bdbdd119ec28bbf800d040de1c757441142647c5"
+    },
+    {
+      "path": "submission/highlights_bilingual.md",
+      "size_bytes": 774,
+      "sha256": "7774dcfa902b64912f958c670cbbb081bd4e2decc2ab92a7f11ccd331bdb685f"
+    },
+    {
+      "path": "submission/journal_targeting_bilingual.md",
+      "size_bytes": 4756,
+      "sha256": "fb25931942db416ca9ab716d4cde7cf7ce2e6317e7eb00fe4946892c17e1725f"
+    },
+    {
+      "path": "submission/presubmission_enquiry_bilingual.md",
+      "size_bytes": 4434,
+      "sha256": "d172d3431dbd4ec0f2e966956ea8c507a0858ab4bcb95556c3a9f36ef7b2c134"
+    },
+    {
+      "path": "submission/submission_readiness_checklist.md",
+      "size_bytes": 5898,
+      "sha256": "6951252fec5edbe24d1f30e9f94ee4a8436e5479db3b7634a4538dce05dff35d"
+    },
+    {
+      "path": "submission/title_page_bilingual_template.md",
+      "size_bytes": 3451,
+      "sha256": "47904d19b7230ab4b43e7d6de577b21fcdb20c9670a5bad7504929c6e17896ca"
+    }
+  ],
+  "verdict": "INFORMATIONAL"
+}
