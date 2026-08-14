@@ -13,7 +13,7 @@
 - `VERSION_HISTORY.md` — 各版稿件、精确Git检查点、标签及安全恢复命令的唯一版本台账。
 - `scripts/manage_version_tag.py` — 创建和核验不可覆盖annotated tag的跨平台脚本。
 - `manuscript/manuscript_en.md`、`manuscript_zh.md` — 扩展英文稿与平行中文稿。
-- `manuscript/interim_teacher/interim_teacher_en.docx`、`interim_teacher_zh.docx` — v3.1.0阶段性导师提交简稿，英文和中文独立成卷。
+- `manuscript/concise/English.docx`、`Chinese.docx` — v3.2.0精简SCI稿，英文和中文独立成卷；无页眉、页脚或页码域。
 - `manuscript/manuscript_bilingual.md`、`.docx` — 分节对照双语完整主稿及Word包。
 - `manuscript/supplementary_tables_bilingual.md`、`.docx` — S1–S6双语补充表。
 - `manuscript/figures/` — 三幅活动主图的SVG/PNG；外部对接PDF仅作来源存档。
@@ -25,6 +25,8 @@
 
 - `evidence/source_understanding_and_scope.md` — 主要来源理解和范围。
 - `evidence/external_v04_integration.md` — 外部提交身份、文件哈希、接纳/拒绝决策及报告规则。
+- `evidence/prjna678453_prjeb65451_provenance.md` — PRJNA678453来源队列与PRJEB65451衍生TPA组装关系核验。
+- `evidence/prediction_tool_methods.md` — UniDL4BioPep及下游预测工具的算法和版本边界核验。
 - `evidence/claim_evidence_ledger.md` — 主张—证据—措辞边界。
 - `references/verified_references.md` — 53条记录级整理文献及分组使用边界。
 - `references/references.bib` — 与英文/中文DOI清单一致的53条BibTeX。
@@ -38,6 +40,8 @@
 - 主要来源支持从原始smORF到证据过滤、BBB高分、NTxPred2和CHEL/FRS计数的描述性漏斗。
 - 外部v0.4报告12条互不重复的7–9 aa序列；其组成可由字符串独立重算。
 - 外部报告针对人AChE PDB 4EY6的Vina均值为−9.60至−8.25 kcal/mol，SD为0.04至0.12；数值可核验转录与排序，但因缺少输入、配置、日志和构象而不能复现对接。
+- 经核验，PRJNA678453来源队列为11名口腔健康对照和11名牙周炎患者，共66份口腔标本；PRJEB65451是该项目经metaSPAdes v3.15.3构建的衍生TPA组装资源，而非另一临床队列。
+- UniDL4BioPep、NTxPred2、mebipred和AnOxPePred采用的算法并不相同，不能统称为同一深度学习流程。
 - 候选计数不是独立生物学重复，故不进行肽层面的健康—牙周炎推断检验。
 - 序列与主要来源逐行链路、严格8/12成员、表达/暴露/表型/机制仍未解决。
 
@@ -75,17 +79,17 @@ python3 scripts/build_docx_stdlib.py \
   --output manuscript/supplementary_tables_bilingual.docx \
   --title "Bilingual supplementary tables / 中英文补充表"
 
-python3 scripts/build_docx_stdlib.py \
-  --input manuscript/interim_teacher/interim_teacher_en.md \
-  --output manuscript/interim_teacher/interim_teacher_en.docx \
-  --title "Interim Oral Micropeptide Prioritization Study"
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z \
+  --input manuscript/concise/English.md \
+  --output manuscript/concise/English.docx \
+  --title "Aggregate Prioritization of Oral Micropeptides at the Periodontitis–Alzheimer’s Disease Interface"
 
-python3 scripts/build_docx_stdlib.py \
-  --input manuscript/interim_teacher/interim_teacher_zh.md \
-  --output manuscript/interim_teacher/interim_teacher_zh.docx \
-  --title "口腔微肽优选阶段性研究简稿"
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z \
+  --input manuscript/concise/Chinese.md \
+  --output manuscript/concise/Chinese.docx \
+  --title "牙周炎—阿尔茨海默病界面口腔微肽的汇总优选"
 
-python3 scripts/audit_interim_teacher_package.py
+python3 scripts/audit_concise_package.py
 python3 scripts/audit_docx_packages.py
 ```
 

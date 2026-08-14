@@ -39,27 +39,37 @@ PACKAGES = {
             "computational accounting units",
         ],
     },
-    "manuscript/interim_teacher/interim_teacher_en.docx": {
-        "minimum_paragraphs": 160,
+    "manuscript/concise/English.docx": {
+        "minimum_paragraphs": 140,
         "minimum_tables": 2,
         "minimum_drawings": 1,
         "expected_media": 1,
+        "clean_manuscript": True,
+        "expected_core_timestamp": "2026-08-14T00:00:00Z",
         "tokens": [
-            "Aggregate Prioritization of Periodontitis-Cohort Oral Micropeptides",
-            "Interim Original Research Draft",
+            "Aggregate Prioritization of Oral Micropeptides at the Periodontitis–Alzheimer’s Disease Interface",
+            "11 orally healthy controls and 11 patients with periodontitis",
+            "metaSPAdes v3.15.3",
+            "six-layer convolutional neural network",
+            "Extra Trees classifiers",
             "FLLHTTR",
             "−9.60",
             "References",
         ],
     },
-    "manuscript/interim_teacher/interim_teacher_zh.docx": {
-        "minimum_paragraphs": 160,
+    "manuscript/concise/Chinese.docx": {
+        "minimum_paragraphs": 140,
         "minimum_tables": 2,
         "minimum_drawings": 1,
         "expected_media": 1,
+        "clean_manuscript": True,
+        "expected_core_timestamp": "2026-08-14T00:00:00Z",
         "tokens": [
-            "牙周炎队列口腔微肽的汇总优选",
-            "阶段性原创研究简稿",
+            "牙周炎—阿尔茨海默病界面口腔微肽的汇总优选",
+            "11名口腔健康对照和11名牙周炎患者",
+            "metaSPAdes v3.15.3",
+            "六层卷积神经网络",
+            "Extra Trees",
             "FLLHTTR",
             "−9.60",
             "参考文献",
@@ -114,6 +124,7 @@ def audit(path: Path, spec: dict) -> dict:
     rel_errors: list[str] = []
     with zipfile.ZipFile(path) as zf:
         names = set(zf.namelist())
+        zip_timestamps = sorted({info.date_time for info in zf.infolist()})
         result["zip_crc_error"] = zf.testzip()
         roots = {}
         for member in sorted(names):
@@ -135,8 +146,44 @@ def audit(path: Path, spec: dict) -> dict:
             tables = sum(1 for _ in doc_root.iter(f"{{{W}}}tbl"))
             drawings = sum(1 for _ in doc_root.iter(f"{{{W}}}drawing"))
         media = sorted(name for name in names if name.startswith("word/media/") and not name.endswith("/"))
+        xml_package_text = "\n".join(
+            zf.read(name).decode("utf-8", errors="replace")
+            for name in sorted(names)
+            if name.endswith((".xml", ".rels"))
+        )
+        header_footer_members = sorted(
+            name for name in names
+            if name.startswith("word/header") or name.startswith("word/footer")
+        )
+        page_break_before_count = (
+            sum(1 for _ in doc_root.iter(f"{{{W}}}pageBreakBefore"))
+            if doc_root is not None else 0
+        )
 
     missing_tokens = [token for token in spec["tokens"] if token not in text]
+    clean_required = bool(spec.get("clean_manuscript"))
+    administrative_tokens = [
+        "Bilingual scientific-content draft", "Arena.ai drafting workflow",
+        "interim", "teacher", "supervisor", "Draft Note",
+    ]
+    administrative_hits = [token for token in administrative_tokens if token.lower() in xml_package_text.lower()]
+    clean_checks = {
+        "header_footer_parts_absent": not header_footer_members,
+        "header_footer_relationships_absent": (
+            "/relationships/header" not in xml_package_text
+            and "/relationships/footer" not in xml_package_text
+        ),
+        "page_field_absent": (
+            '<w:fldSimple w:instr="PAGE"' not in xml_package_text
+            and "<w:instrText" not in xml_package_text
+        ),
+        "automatic_section_page_breaks_absent": page_break_before_count == 0,
+        "administrative_metadata_absent": not administrative_hits,
+        "zip_member_timestamps_stable": zip_timestamps == [(1980, 1, 1, 0, 0, 0)],
+        "core_timestamp_matches_release": (
+            xml_package_text.count(spec.get("expected_core_timestamp", "__missing__")) == 2
+        ),
+    }
     structural_checks = {
         "crc_ok": result["zip_crc_error"] is None,
         "all_xml_parses": not xml_errors,
@@ -147,6 +194,8 @@ def audit(path: Path, spec: dict) -> dict:
         "media_count_matches": len(media) == spec["expected_media"],
         "expected_tokens_present": not missing_tokens,
     }
+    if clean_required:
+        structural_checks.update(clean_checks)
     result.update({
         "xml_parse_errors": xml_errors,
         "relationship_errors": rel_errors,
@@ -156,6 +205,11 @@ def audit(path: Path, spec: dict) -> dict:
         "embedded_media": media,
         "missing_expected_tokens": missing_tokens,
         "document_text_characters": len(text),
+        "clean_manuscript_required": clean_required,
+        "header_footer_members": header_footer_members,
+        "page_break_before_count": page_break_before_count,
+        "administrative_metadata_hits": administrative_hits,
+        "zip_member_timestamps": zip_timestamps,
         "checks": structural_checks,
         "verdict": "PASS" if all(structural_checks.values()) else "FAIL",
     })
@@ -166,7 +220,7 @@ def main() -> int:
     records = {name: audit(ROOT / name, spec) for name, spec in PACKAGES.items()}
     verdict = "PASS" if all(item["verdict"] == "PASS" for item in records.values()) else "FAIL"
     report = {
-        "schema": "local.docx_package_audit.v2",
+        "schema": "local.docx_package_audit.v3",
         "rendering_status": (
             "UNAVAILABLE: no Office/LibreOffice/PDF renderer is installed; package and content checks are structural, not visual."
         ),

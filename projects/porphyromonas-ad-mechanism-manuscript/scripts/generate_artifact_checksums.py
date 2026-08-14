@@ -18,7 +18,12 @@ def main() -> int:
     rows = []
     for path in sorted(p for p in ROOT.rglob("*") if p.is_file()):
         rel = path.relative_to(ROOT).as_posix()
-        if rel in EXACT_EXCLUDES or rel.startswith("source_materials/"):
+        if (
+            rel in EXACT_EXCLUDES
+            or rel.startswith("source_materials/")
+            or "__pycache__" in path.parts
+            or path.suffix == ".pyc"
+        ):
             continue
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         rows.append(f"{digest}  {rel}")

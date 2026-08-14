@@ -3,7 +3,8 @@
 
 Supported Markdown: headings, paragraphs, simple emphasis/code spans, pipe tables,
 numbered/bulleted items, and local PNG images. The output is an OOXML package that
-can be opened in Microsoft Word or LibreOffice. Rendering is not performed here.
+can be opened in Microsoft Word or LibreOffice. ZIP member metadata is stable; passing
+``--timestamp`` also fixes core metadata for byte-reproducible output. Rendering is not performed here.
 """
 from __future__ import annotations
 
@@ -20,6 +21,17 @@ R = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 WP = "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
 A = "http://schemas.openxmlformats.org/drawingml/2006/main"
 PIC = "http://schemas.openxmlformats.org/drawingml/2006/picture"
+ZIP_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
+
+
+def zip_member(zf: zipfile.ZipFile, name: str, data: str | bytes) -> None:
+    """Write a DOCX member with stable ZIP metadata for reproducible builds."""
+    info = zipfile.ZipInfo(name, date_time=ZIP_TIMESTAMP)
+    info.compress_type = zipfile.ZIP_DEFLATED
+    info.create_system = 3
+    info.external_attr = 0o100644 << 16
+    payload = data.encode("utf-8") if isinstance(data, str) else data
+    zf.writestr(info, payload)
 
 
 def x(text: str) -> str:
@@ -142,7 +154,7 @@ def is_separator(line: str) -> bool:
     return bool(cells) and all(re.fullmatch(r":?-{3,}:?", c.replace(" ", "")) for c in cells)
 
 
-def parse_markdown(md_path: Path):
+def parse_markdown(md_path: Path, *, section_page_breaks: bool = True):
     lines = md_path.read_text(encoding="utf-8").splitlines()
     body = []
     images: dict[Path, str] = {}
@@ -188,7 +200,7 @@ def parse_markdown(md_path: Path):
             style = f"Heading{min(level, 4)}"
             page_break = False
             if level == 2:
-                page_break = not first_h2
+                page_break = section_page_breaks and not first_h2
                 first_h2 = False
             body.append(para_xml(text, style, keep=True, page_break_before=page_break))
             i += 1
@@ -223,7 +235,7 @@ def styles_xml() -> str:
   <w:style w:type="paragraph" w:styleId="Heading2"><w:name w:val="heading 2"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="280" w:after="140"/><w:outlineLvl w:val="1"/></w:pPr><w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:eastAsia="黑体"/><w:b/><w:color w:val="17365D"/><w:sz w:val="30"/><w:szCs w:val="30"/></w:rPr></w:style>
   <w:style w:type="paragraph" w:styleId="Heading3"><w:name w:val="heading 3"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:spacing w:before="220" w:after="100"/><w:outlineLvl w:val="2"/></w:pPr><w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:eastAsia="黑体"/><w:b/><w:color w:val="2F5597"/><w:sz w:val="26"/><w:szCs w:val="26"/></w:rPr></w:style>
   <w:style w:type="paragraph" w:styleId="Heading4"><w:name w:val="heading 4"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:spacing w:before="180" w:after="80"/><w:outlineLvl w:val="3"/></w:pPr><w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:eastAsia="黑体"/><w:b/><w:color w:val="365F91"/><w:sz w:val="23"/><w:szCs w:val="23"/></w:rPr></w:style>
-  <w:style w:type="paragraph" w:styleId="Note"><w:name w:val="Draft Note"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="80"/><w:jc w:val="left"/></w:pPr><w:rPr><w:color w:val="5B6573"/><w:i/><w:sz w:val="19"/><w:szCs w:val="19"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Note"><w:name w:val="Note"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="80"/><w:jc w:val="left"/></w:pPr><w:rPr><w:color w:val="5B6573"/><w:i/><w:sz w:val="19"/><w:szCs w:val="19"/></w:rPr></w:style>
   <w:style w:type="paragraph" w:styleId="Keywords"><w:name w:val="Keywords"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="160"/></w:pPr><w:rPr><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr></w:style>
   <w:style w:type="paragraph" w:styleId="Caption"><w:name w:val="Caption"/><w:basedOn w:val="Normal"/><w:pPr><w:keepNext/><w:spacing w:before="60" w:after="120"/><w:jc w:val="left"/></w:pPr><w:rPr><w:i/><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:style>
   <w:style w:type="paragraph" w:styleId="Figure"><w:name w:val="Figure"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:before="120" w:after="60"/><w:jc w:val="center"/></w:pPr></w:style>
@@ -234,54 +246,88 @@ def styles_xml() -> str:
 </w:styles>'''
 
 
-def build(md_path: Path, out_path: Path, title: str):
-    body, images, image_order = parse_markdown(md_path)
+def build(
+    md_path: Path,
+    out_path: Path,
+    title: str,
+    *,
+    clean_manuscript: bool = False,
+    core_timestamp: str | None = None,
+):
+    body, images, image_order = parse_markdown(
+        md_path,
+        section_page_breaks=not clean_manuscript,
+    )
     ns = f'xmlns:w="{W}" xmlns:r="{R}" xmlns:wp="{WP}" xmlns:a="{A}" xmlns:pic="{PIC}"'
-    sect = '''<w:sectPr><w:headerReference w:type="default" r:id="rId4"/><w:footerReference w:type="default" r:id="rId5"/><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="600" w:footer="600" w:gutter="0"/><w:cols w:space="720"/><w:docGrid w:linePitch="312"/></w:sectPr>'''
+    header_footer_refs = "" if clean_manuscript else (
+        '<w:headerReference w:type="default" r:id="rId4"/>'
+        '<w:footerReference w:type="default" r:id="rId5"/>'
+    )
+    sect = (
+        f'<w:sectPr>{header_footer_refs}<w:pgSz w:w="11906" w:h="16838"/>'
+        '<w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" '
+        'w:header="600" w:footer="600" w:gutter="0"/><w:cols w:space="720"/>'
+        '<w:docGrid w:linePitch="312"/></w:sectPr>'
+    )
     document = f'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document {ns}><w:body>{body}{sect}</w:body></w:document>'
 
     rels = [
         ('rId1', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles', 'styles.xml'),
         ('rId2', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings', 'settings.xml'),
         ('rId3', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable', 'fontTable.xml'),
-        ('rId4', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/header', 'header1.xml'),
-        ('rId5', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer', 'footer1.xml'),
     ]
+    if not clean_manuscript:
+        rels.extend([
+            ('rId4', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/header', 'header1.xml'),
+            ('rId5', 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer', 'footer1.xml'),
+        ])
     for path in image_order:
         idx = image_order.index(path) + 1
         rels.append((images[path], 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/image', f'media/image{idx}.png'))
     rel_xml = ''.join(f'<Relationship Id="{rid}" Type="{typ}" Target="{target}"/>' for rid, typ, target in rels)
     doc_rels = f'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">{rel_xml}</Relationships>'
 
-    content_types = '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    header_footer_types = "" if clean_manuscript else (
+        '<Override PartName="/word/header1.xml" '
+        'ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml"/>'
+        '<Override PartName="/word/footer1.xml" '
+        'ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/>'
+    )
+    content_types = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
 <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="png" ContentType="image/png"/>
-<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/settings.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"/><Override PartName="/word/fontTable.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml"/><Override PartName="/word/header1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml"/><Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/><Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/>
+<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/settings.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"/><Override PartName="/word/fontTable.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml"/>{header_footer_types}<Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/><Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/>
 </Types>'''
     root_rels = '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/><Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/></Relationships>'''
     settings = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:settings xmlns:w="{W}"><w:zoom w:percent="100"/><w:defaultTabStop w:val="720"/><w:characterSpacingControl w:val="doNotCompress"/><w:compat><w:compatSetting w:name="compatibilityMode" w:uri="http://schemas.microsoft.com/office/word" w:val="15"/></w:compat></w:settings>'''
     fonts = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:fonts xmlns:w="{W}"><w:font w:name="Times New Roman"/><w:font w:name="Arial"/><w:font w:name="宋体"/><w:font w:name="黑体"/><w:font w:name="Consolas"/><w:font w:name="等线"/></w:fonts>'''
     header = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:hdr xmlns:w="{W}"><w:p><w:pPr><w:jc w:val="right"/><w:pBdr><w:bottom w:val="single" w:sz="4" w:space="4" w:color="B7C9E2"/></w:pBdr></w:pPr>{run_xml("Bilingual scientific-content draft | 中英文科学内容草案 | 2026-08-12", size=17, color="60758A")}</w:p></w:hdr>'''
     footer = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:ftr xmlns:w="{W}"><w:p><w:pPr><w:jc w:val="center"/></w:pPr>{run_xml("Page ", size=18, color="60758A")}<w:fldSimple w:instr="PAGE"><w:r><w:rPr><w:sz w:val="18"/><w:color w:val="60758A"/></w:rPr><w:t>1</w:t></w:r></w:fldSimple></w:p></w:ftr>'''
-    now = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
-    core = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>{x(title)}</dc:title><dc:subject>Original research scientific-content draft</dc:subject><dc:creator>Accountable authors to be supplied</dc:creator><cp:lastModifiedBy>Arena.ai drafting workflow</cp:lastModifiedBy><dcterms:created xsi:type="dcterms:W3CDTF">{now}</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">{now}</dcterms:modified></cp:coreProperties>'''
+    now = core_timestamp or datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    administrative_metadata = "" if clean_manuscript else (
+        "<dc:subject>Original research scientific-content draft</dc:subject>"
+        "<dc:creator>Accountable authors to be supplied</dc:creator>"
+        "<cp:lastModifiedBy>Arena.ai drafting workflow</cp:lastModifiedBy>"
+    )
+    core = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>{x(title)}</dc:title>{administrative_metadata}<dcterms:created xsi:type="dcterms:W3CDTF">{now}</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">{now}</dcterms:modified></cp:coreProperties>'''
     app = '''<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"><Application>Dependency-free OOXML builder</Application><DocSecurity>0</DocSecurity><ScaleCrop>false</ScaleCrop><Company></Company><LinksUpToDate>false</LinksUpToDate><SharedDoc>false</SharedDoc><HyperlinksChanged>false</HyperlinksChanged><AppVersion>1.0</AppVersion></Properties>'''
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(out_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
-        zf.writestr("[Content_Types].xml", content_types)
-        zf.writestr("_rels/.rels", root_rels)
-        zf.writestr("docProps/core.xml", core)
-        zf.writestr("docProps/app.xml", app)
-        zf.writestr("word/document.xml", document)
-        zf.writestr("word/_rels/document.xml.rels", doc_rels)
-        zf.writestr("word/styles.xml", styles_xml())
-        zf.writestr("word/settings.xml", settings)
-        zf.writestr("word/fontTable.xml", fonts)
-        zf.writestr("word/header1.xml", header)
-        zf.writestr("word/footer1.xml", footer)
+        zip_member(zf, "[Content_Types].xml", content_types)
+        zip_member(zf, "_rels/.rels", root_rels)
+        zip_member(zf, "docProps/core.xml", core)
+        zip_member(zf, "docProps/app.xml", app)
+        zip_member(zf, "word/document.xml", document)
+        zip_member(zf, "word/_rels/document.xml.rels", doc_rels)
+        zip_member(zf, "word/styles.xml", styles_xml())
+        zip_member(zf, "word/settings.xml", settings)
+        zip_member(zf, "word/fontTable.xml", fonts)
+        if not clean_manuscript:
+            zip_member(zf, "word/header1.xml", header)
+            zip_member(zf, "word/footer1.xml", footer)
         for idx, path in enumerate(image_order, start=1):
-            zf.write(path, f"word/media/image{idx}.png")
+            zip_member(zf, f"word/media/image{idx}.png", path.read_bytes())
     print(out_path)
 
 
@@ -289,9 +335,35 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--title", default="Bilingual scientific-content draft")
+    parser.add_argument("--title", default="Scientific manuscript")
+    parser.add_argument(
+        "--timestamp",
+        dest="core_timestamp",
+        help="Fixed W3C timestamp for reproducible core metadata, e.g. 2026-08-14T00:00:00Z.",
+    )
+    parser.add_argument(
+        "--clean-manuscript",
+        action="store_true",
+        help=(
+            "Omit header/footer parts, page-number fields, administrative core metadata, "
+            "and automatic page breaks before top-level sections."
+        ),
+    )
     args = parser.parse_args()
-    build(args.input.resolve(), args.output.resolve(), args.title)
+    if args.core_timestamp:
+        try:
+            parsed_timestamp = datetime.fromisoformat(args.core_timestamp.replace("Z", "+00:00"))
+        except ValueError:
+            parser.error("--timestamp must be an ISO 8601/W3C date-time")
+        if parsed_timestamp.tzinfo is None:
+            parser.error("--timestamp must include a timezone, preferably Z")
+    build(
+        args.input.resolve(),
+        args.output.resolve(),
+        args.title,
+        clean_manuscript=args.clean_manuscript,
+        core_timestamp=args.core_timestamp,
+    )
 
 
 if __name__ == "__main__":

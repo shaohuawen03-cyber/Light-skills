@@ -1,5 +1,5 @@
 {
-  "schema": "local.docx_package_audit.v2",
+  "schema": "local.docx_package_audit.v3",
   "rendering_status": "UNAVAILABLE: no Office/LibreOffice/PDF renderer is installed; package and content checks are structural, not visual.",
   "packages": {
     "manuscript/manuscript_bilingual.docx": {
@@ -19,6 +19,27 @@
       ],
       "missing_expected_tokens": [],
       "document_text_characters": 67614,
+      "clean_manuscript_required": false,
+      "header_footer_members": [
+        "word/footer1.xml",
+        "word/header1.xml"
+      ],
+      "page_break_before_count": 7,
+      "administrative_metadata_hits": [
+        "Bilingual scientific-content draft",
+        "Arena.ai drafting workflow",
+        "Draft Note"
+      ],
+      "zip_member_timestamps": [
+        [
+          2026,
+          8,
+          12,
+          7,
+          27,
+          10
+        ]
+      ],
       "checks": {
         "crc_ok": true,
         "all_xml_parses": true,
@@ -44,6 +65,27 @@
       "embedded_media": [],
       "missing_expected_tokens": [],
       "document_text_characters": 5876,
+      "clean_manuscript_required": false,
+      "header_footer_members": [
+        "word/footer1.xml",
+        "word/header1.xml"
+      ],
+      "page_break_before_count": 5,
+      "administrative_metadata_hits": [
+        "Bilingual scientific-content draft",
+        "Arena.ai drafting workflow",
+        "Draft Note"
+      ],
+      "zip_member_timestamps": [
+        [
+          2026,
+          8,
+          12,
+          7,
+          27,
+          10
+        ]
+      ],
       "checks": {
         "crc_ok": true,
         "all_xml_parses": true,
@@ -56,21 +98,35 @@
       },
       "verdict": "PASS"
     },
-    "manuscript/interim_teacher/interim_teacher_en.docx": {
-      "path": "manuscript/interim_teacher/interim_teacher_en.docx",
-      "size_bytes": 102986,
-      "sha256": "95b23a9902f631a0e99d5001632da57b73b93f8ba455c44c26fd35f3b3ddf7b9",
+    "manuscript/concise/English.docx": {
+      "path": "manuscript/concise/English.docx",
+      "size_bytes": 356931,
+      "sha256": "50f978f241433582fb4125455377a3a050249cd61b57c93cac3222d29c6fd732",
       "zip_crc_error": null,
       "xml_parse_errors": [],
       "relationship_errors": [],
-      "paragraphs": 170,
+      "paragraphs": 163,
       "tables": 2,
       "drawings": 1,
       "embedded_media": [
         "word/media/image1.png"
       ],
       "missing_expected_tokens": [],
-      "document_text_characters": 15781,
+      "document_text_characters": 17668,
+      "clean_manuscript_required": true,
+      "header_footer_members": [],
+      "page_break_before_count": 0,
+      "administrative_metadata_hits": [],
+      "zip_member_timestamps": [
+        [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
       "checks": {
         "crc_ok": true,
         "all_xml_parses": true,
@@ -79,25 +135,46 @@
         "table_minimum_met": true,
         "drawing_minimum_met": true,
         "media_count_matches": true,
-        "expected_tokens_present": true
+        "expected_tokens_present": true,
+        "header_footer_parts_absent": true,
+        "header_footer_relationships_absent": true,
+        "page_field_absent": true,
+        "automatic_section_page_breaks_absent": true,
+        "administrative_metadata_absent": true,
+        "zip_member_timestamps_stable": true,
+        "core_timestamp_matches_release": true
       },
       "verdict": "PASS"
     },
-    "manuscript/interim_teacher/interim_teacher_zh.docx": {
-      "path": "manuscript/interim_teacher/interim_teacher_zh.docx",
-      "size_bytes": 103289,
-      "sha256": "1277296bf96052c744e807a939f5d382fb238a0e5fadbb75aa187b16e9fde048",
+    "manuscript/concise/Chinese.docx": {
+      "path": "manuscript/concise/Chinese.docx",
+      "size_bytes": 357389,
+      "sha256": "acb4a9ecf90978ce06f74f51fec94fcbe753a2c5cd3fc424c47de6c3cb5bd390",
       "zip_crc_error": null,
       "xml_parse_errors": [],
       "relationship_errors": [],
-      "paragraphs": 170,
+      "paragraphs": 163,
       "tables": 2,
       "drawings": 1,
       "embedded_media": [
         "word/media/image1.png"
       ],
       "missing_expected_tokens": [],
-      "document_text_characters": 7840,
+      "document_text_characters": 8625,
+      "clean_manuscript_required": true,
+      "header_footer_members": [],
+      "page_break_before_count": 0,
+      "administrative_metadata_hits": [],
+      "zip_member_timestamps": [
+        [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
       "checks": {
         "crc_ok": true,
         "all_xml_parses": true,
@@ -106,7 +183,14 @@
         "table_minimum_met": true,
         "drawing_minimum_met": true,
         "media_count_matches": true,
-        "expected_tokens_present": true
+        "expected_tokens_present": true,
+        "header_footer_parts_absent": true,
+        "header_footer_relationships_absent": true,
+        "page_field_absent": true,
+        "automatic_section_page_breaks_absent": true,
+        "administrative_metadata_absent": true,
+        "zip_member_timestamps_stable": true,
+        "core_timestamp_matches_release": true
       },
       "verdict": "PASS"
     }

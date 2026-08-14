@@ -21,7 +21,11 @@ def main() -> int:
     by_group_bytes: Counter[str] = Counter()
     for path in sorted(p for p in ROOT.rglob("*") if p.is_file()):
         rel = path.relative_to(ROOT).as_posix()
-        if rel == "quality_reports/repository_inventory.json":
+        if (
+            rel == "quality_reports/repository_inventory.json"
+            or "__pycache__" in path.parts
+            or path.suffix == ".pyc"
+        ):
             continue
         group = rel.split("/", 1)[0] if "/" in rel else "project_root"
         size = path.stat().st_size
@@ -30,7 +34,10 @@ def main() -> int:
         by_group_bytes[group] += size
     report = {
         "schema": "local.repository_inventory.v1",
-        "inventory_excludes": ["quality_reports/repository_inventory.json (self-referential output)"],
+        "inventory_excludes": [
+            "quality_reports/repository_inventory.json (self-referential output)",
+            "Python bytecode caches (__pycache__ and *.pyc)",
+        ],
         "total_files": len(rows),
         "total_bytes": sum(item["size_bytes"] for item in rows),
         "by_top_level_group": {
