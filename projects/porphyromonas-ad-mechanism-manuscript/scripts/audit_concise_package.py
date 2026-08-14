@@ -20,12 +20,14 @@ EXPECTED_PROVENANCE = [
     "PRJNA678453", "PRJEB65451", "metaSPAdes v3.15.3", "22", "11", "66", "118",
 ]
 EXPECTED_MODELS = [
-    "UniDL4BioPep", "ESM-2", "320", "six-layer", "ESM2-t30", "Extra Trees",
-    "mebipred", "5-mer", "AnOxPePred", "one-dimensional convolution",
+    "deep-learning-guided", "protein language model", "320-dimensional", "six-layer deep convolutional",
+    "fine-tuning", "ESM2-t30", "two-tier artificial-neural-network", "mebipred", "5-mer",
+    "multi-task deep convolutional neural network", "AnOxPePred", "one-dimensional convolutional layer",
 ]
 EXPECTED_MODELS_ZH = [
-    "UniDL4BioPep", "ESM-2", "320", "六层卷积神经网络", "ESM2-t30", "Extra Trees",
-    "mebipred", "5-mer", "AnOxPePred", "一维卷积",
+    "深度学习引导", "蛋白质语言模型", "320维", "六层深度卷积神经网络", "迁移学习",
+    "ESM2-t30", "两级人工神经网络", "mebipred", "5-mer", "多任务深度卷积神经网络",
+    "AnOxPePred", "一维卷积层",
 ]
 
 
@@ -69,7 +71,15 @@ def audit(
     body, refs = text.split(ref_heading, 1)
     introduction = body.split(introduction_heading, 1)[1].split(next_heading, 1)[0]
     ref_numbers = [int(x) for x in re.findall(r"(?m)^(\d+)\.\s", refs)]
+    unnumbered_reference_lines = [
+        line for line in refs.splitlines()
+        if line.strip() and not re.match(r"^\d+\.\s", line)
+    ]
     cited = citations(body)
+    introduction_citation_tokens = CITATION_RE.findall(introduction)
+    grouped_introduction_citations = [
+        token for token in introduction_citation_tokens if not token.strip().isdigit()
+    ]
     return {
         "path": str(path.relative_to(ROOT)),
         "sha256": sha256(path),
@@ -80,9 +90,12 @@ def audit(
         "missing_provenance_terms": [x for x in EXPECTED_PROVENANCE if x not in body],
         "missing_model_terms": [x for x in model_terms if x not in body],
         "introduction_sequence_present": ordered(introduction, introduction_anchors),
+        "introduction_cited_numbers": citations(introduction),
+        "grouped_introduction_citations": grouped_introduction_citations,
         "cited_numbers": cited,
         "all_references_cited": cited == list(range(1, 21)),
         "reference_numbers_sequential": ref_numbers == list(range(1, 21)),
+        "unnumbered_reference_lines": unnumbered_reference_lines,
         "doi_set": sorted(dois(refs)),
         "prohibited_hits": [phrase for phrase in prohibited if phrase.lower() in body.lower()],
         "gap_markers": sorted(set(re.findall(r"\b(?:TODO|TBD|RESULT GAP|MATERIAL GAP)\b", text, re.I))),
@@ -101,7 +114,7 @@ def main() -> int:
         EXPECTED_MODELS,
         "## Introduction",
         "## Materials and methods",
-        ["Alzheimer’s disease", "*Porphyromonas gingivalis*", "several routes", "mechanistic gap", "We therefore"],
+        ["Alzheimer’s disease", "*Porphyromonas gingivalis*", "Several non-exclusive mechanisms", "mechanistic gap", "We therefore"],
     )
     zh = audit(
         BASE / "Chinese.md",
@@ -113,7 +126,7 @@ def main() -> int:
         EXPECTED_MODELS_ZH,
         "## 引言",
         "## 材料与方法",
-        ["阿尔茨海默病", "牙龈卟啉单胞菌", "可能路径", "机制空白", "本研究开展"],
+        ["阿尔茨海默病", "牙龈卟啉单胞菌", "多条互不排斥的路径", "机制空白", "本研究实施"],
     )
     expected_files = {"English.md", "English.docx", "Chinese.md", "Chinese.docx", "README.md"}
     observed_files = {path.name for path in BASE.iterdir() if path.is_file()}
@@ -133,19 +146,28 @@ def main() -> int:
         "verified_provenance_present_bilingual": not en["missing_provenance_terms"] and not zh["missing_provenance_terms"],
         "prediction_algorithms_present_bilingual": not en["missing_model_terms"] and not zh["missing_model_terms"],
         "introduction_flow_present_bilingual": en["introduction_sequence_present"] and zh["introduction_sequence_present"],
+        "introduction_uses_single_references_1_to_10_bilingual": (
+            en["introduction_cited_numbers"] == list(range(1, 11))
+            and zh["introduction_cited_numbers"] == list(range(1, 11))
+            and not en["grouped_introduction_citations"]
+            and not zh["grouped_introduction_citations"]
+        ),
         "references_1_to_20_sequential_bilingual": en["reference_numbers_sequential"] and zh["reference_numbers_sequential"],
         "references_1_to_20_cited_bilingual": en["all_references_cited"] and zh["all_references_cited"],
+        "reference_entries_are_one_numbered_record_per_line": (
+            not en["unnumbered_reference_lines"] and not zh["unnumbered_reference_lines"]
+        ),
         "twenty_doi_inventory_parity": len(en["doi_set"]) == 20 and en["doi_set"] == zh["doi_set"],
         "administrative_and_prohibited_assertions_absent": not en["prohibited_hits"] and not zh["prohibited_hits"],
         "gap_markers_absent": not en["gap_markers"] and not zh["gap_markers"],
         "unsupported_24_26_296_claim_explicitly_rejected_bilingual": (
-            "was not retained" in (BASE / "English.md").read_text(encoding="utf-8")
-            and "未予保留" in (BASE / "Chinese.md").read_text(encoding="utf-8")
+            "those quantities were not used" in (BASE / "English.md").read_text(encoding="utf-8")
+            and "本研究不使用这些数量" in (BASE / "Chinese.md").read_text(encoding="utf-8")
         ),
     }
     report = {
-        "schema": "local.concise_package_audit.v2",
-        "version": "3.2.0",
+        "schema": "local.concise_package_audit.v3",
+        "version": "3.3.0",
         "english": en,
         "chinese": zh,
         "checks": checks,

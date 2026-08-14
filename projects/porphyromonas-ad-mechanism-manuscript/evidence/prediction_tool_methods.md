@@ -11,7 +11,7 @@ Verification date: 2026-08-14
 | mebipred | General and Cu/Fe/Zn-related metal-binding prediction | Alignment-free sequence features (composition, physicochemical properties and metal-binding 5-mer counts) feed a general feed-forward neural network and ion-specific second-tier models | Engineered-feature neural networks |
 | AnOxPePred | Free-radical-scavenging and chelation outputs | One-hot sequence encoding, one-dimensional convolution, average pooling, a 256-node fully connected layer and two task outputs | Deep convolutional neural network |
 
-These tools do not constitute a single uniform deep-learning pipeline. The concise manuscripts therefore use “deep-learning and machine-learning sequence predictors” and identify each algorithm separately.
+For the peptide workflow, UniDL4BioPep, the peptide-specific NTxPred2 mode and AnOxPePred are deep-learning architectures; mebipred contributes a two-tier artificial-neural-network classifier. The concise manuscripts therefore describe the workflow as a **deep-learning-guided multi-model cascade** and report the architecture relevant to each peptide-analysis stage. NTxPred2 Extra Trees models are documented here for completeness but are not presented as the peptide mode used in the manuscript.
 
 ## Sources and software pages
 

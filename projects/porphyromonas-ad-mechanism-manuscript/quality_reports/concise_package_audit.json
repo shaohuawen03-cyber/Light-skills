@@ -1,11 +1,11 @@
 {
-  "schema": "local.concise_package_audit.v2",
-  "version": "3.2.0",
+  "schema": "local.concise_package_audit.v3",
+  "version": "3.3.0",
   "english": {
     "path": "manuscript/concise/English.md",
-    "sha256": "082dec78f507e49e465dd9168441a6d7008d12364e86a5101d6b685fea0294db",
-    "characters": 18417,
-    "body_whitespace_tokens": 1929,
+    "sha256": "54fecb8de79bf799f88b77b58a05da38d099b4b53ce327265066d7f131b6bc28",
+    "characters": 21419,
+    "body_whitespace_tokens": 2284,
     "h2_sections": [
       "Abstract",
       "Introduction",
@@ -19,6 +19,19 @@
     "missing_provenance_terms": [],
     "missing_model_terms": [],
     "introduction_sequence_present": true,
+    "introduction_cited_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "grouped_introduction_citations": [],
     "cited_numbers": [
       1,
       2,
@@ -43,6 +56,7 @@
     ],
     "all_references_cited": true,
     "reference_numbers_sequential": true,
+    "unnumbered_reference_lines": [],
     "doi_set": [
       "10.1002/brb3.3486",
       "10.1002/jcc.21334",
@@ -70,9 +84,9 @@
   },
   "chinese": {
     "path": "manuscript/concise/Chinese.md",
-    "sha256": "f04714515b04514f6254abe3f38ce8f67486a121f701ec6af1500285f53a56ed",
-    "characters": 9333,
-    "body_whitespace_tokens": 327,
+    "sha256": "15afee7ae6659b36b16eab7dc0cc0e4aac5f86670b6eec3d6db67bbe8091c65c",
+    "characters": 10114,
+    "body_whitespace_tokens": 339,
     "h2_sections": [
       "摘要",
       "引言",
@@ -86,6 +100,19 @@
     "missing_provenance_terms": [],
     "missing_model_terms": [],
     "introduction_sequence_present": true,
+    "introduction_cited_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "grouped_introduction_citations": [],
     "cited_numbers": [
       1,
       2,
@@ -110,6 +137,7 @@
     ],
     "all_references_cited": true,
     "reference_numbers_sequential": true,
+    "unnumbered_reference_lines": [],
     "doi_set": [
       "10.1002/brb3.3486",
       "10.1002/jcc.21334",
@@ -144,8 +172,10 @@
     "verified_provenance_present_bilingual": true,
     "prediction_algorithms_present_bilingual": true,
     "introduction_flow_present_bilingual": true,
+    "introduction_uses_single_references_1_to_10_bilingual": true,
     "references_1_to_20_sequential_bilingual": true,
     "references_1_to_20_cited_bilingual": true,
+    "reference_entries_are_one_numbered_record_per_line": true,
     "twenty_doi_inventory_parity": true,
     "administrative_and_prohibited_assertions_absent": true,
     "gap_markers_absent": true,

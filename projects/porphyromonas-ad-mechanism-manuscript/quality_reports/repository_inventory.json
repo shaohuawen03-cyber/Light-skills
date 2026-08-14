@@ -5,23 +5,23 @@
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
   "total_files": 119,
-  "total_bytes": 4223418,
+  "total_bytes": 4234811,
   "by_top_level_group": {
     "evidence": {
       "files": 14,
-      "bytes": 557654
+      "bytes": 557943
     },
     "manuscript": {
       "files": 19,
-      "bytes": 2344159
+      "bytes": 2351505
     },
     "project_root": {
       "files": 4,
-      "bytes": 29394
+      "bytes": 30629
     },
     "quality_reports": {
       "files": 23,
-      "bytes": 44396
+      "bytes": 45378
     },
     "references": {
       "files": 3,
@@ -37,7 +37,7 @@
     },
     "scripts": {
       "files": 21,
-      "bytes": 115335
+      "bytes": 116876
     },
     "source_materials": {
       "files": 4,
@@ -52,12 +52,12 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 12043,
-      "sha256": "c00a4301cac0733866e0c833b4a2d98d033a4b402391be603bd08760b0420f84"
+      "sha256": "8a60dbc1eba78db4910de5595e606ef816262a598a744831316e275eb1ef8a22"
     },
     {
       "path": "README.md",
-      "size_bytes": 6584,
-      "sha256": "c0a6897efbc2b86398c3496aa44c4f8d91fc5efacf96acbae05fa2284f88bc5e"
+      "size_bytes": 6726,
+      "sha256": "8f15253ef9f4d1b0db14780bbc3b27c42aaf088c766205456fce81ae871a2a86"
     },
     {
       "path": "SHA256SUMS.txt",
@@ -66,8 +66,8 @@
     },
     {
       "path": "VERSION_HISTORY.md",
-      "size_bytes": 10282,
-      "sha256": "143b752ab82a39e438ce26be327e3fabbea2642efb1dbc3d82a96b4373bf4dad"
+      "size_bytes": 11375,
+      "sha256": "7923261cd3878ea713678ada1bda392aa082447fd83963a58e1b383f3e344076"
     },
     {
       "path": "evidence/.gitkeep",
@@ -126,8 +126,8 @@
     },
     {
       "path": "evidence/prediction_tool_methods.md",
-      "size_bytes": 2844,
-      "sha256": "efc32c4f64262b3a7ce406506d165dfa44cc9dcf24787b20503b7738a625f6e1"
+      "size_bytes": 3133,
+      "sha256": "6e628ce094132de19cd820cd6d2ceb209ef92a771898d459170f1de2d7678e2b"
     },
     {
       "path": "evidence/prjna678453_prjeb65451_provenance.md",
@@ -146,28 +146,28 @@
     },
     {
       "path": "manuscript/concise/Chinese.docx",
-      "size_bytes": 357389,
-      "sha256": "acb4a9ecf90978ce06f74f51fec94fcbe753a2c5cd3fc424c47de6c3cb5bd390"
+      "size_bytes": 358417,
+      "sha256": "37fd98e2d39f4f22a561de9b3fe2d26a6f7bc539d4cfed6b1f096a4f206128c8"
     },
     {
       "path": "manuscript/concise/Chinese.md",
-      "size_bytes": 16266,
-      "sha256": "f04714515b04514f6254abe3f38ce8f67486a121f701ec6af1500285f53a56ed"
+      "size_bytes": 18507,
+      "sha256": "15afee7ae6659b36b16eab7dc0cc0e4aac5f86670b6eec3d6db67bbe8091c65c"
     },
     {
       "path": "manuscript/concise/English.docx",
-      "size_bytes": 356931,
-      "sha256": "50f978f241433582fb4125455377a3a050249cd61b57c93cac3222d29c6fd732"
+      "size_bytes": 357968,
+      "sha256": "a84671a883632173e7d6eb2718b97cd6fc9fbba11f459fa2d56fce61e8dda410"
     },
     {
       "path": "manuscript/concise/English.md",
-      "size_bytes": 18550,
-      "sha256": "082dec78f507e49e465dd9168441a6d7008d12364e86a5101d6b685fea0294db"
+      "size_bytes": 21546,
+      "sha256": "54fecb8de79bf799f88b77b58a05da38d099b4b53ce327265066d7f131b6bc28"
     },
     {
       "path": "manuscript/concise/README.md",
-      "size_bytes": 1937,
-      "sha256": "9ee3b7400228bb2ade598de9515a72625d4016cb506a9ca89cf3e240755740ff"
+      "size_bytes": 1981,
+      "sha256": "4c7454a87001b4ad04b3a43311dd97123d9745d51f904db8435ffa8ec7da1227"
     },
     {
       "path": "manuscript/figures/evidence_ladder.png",
@@ -246,13 +246,13 @@
     },
     {
       "path": "quality_reports/concise_package_audit.json",
-      "size_bytes": 4124,
-      "sha256": "8623357d30e47ec4d1b582c98bb3209a6c43f3e497e0483bee48192639be4487"
+      "size_bytes": 4682,
+      "sha256": "27db9aa6dfcf1b526a40adf2f9f19a2d0120098ff770ae63c10745027dda69f6"
     },
     {
       "path": "quality_reports/concise_package_quality_summary.md",
-      "size_bytes": 2263,
-      "sha256": "f88d917919888ddc3deaf25d9c9f09a3853ee6ccf6c4a02037a9e0668d0ba070"
+      "size_bytes": 2687,
+      "sha256": "dc7793dddbe10131701a9af3ccad19383bbf3567e42679388fa0a4d07d4cdd7e"
     },
     {
       "path": "quality_reports/descriptive_arithmetic_audit.json",
@@ -262,7 +262,7 @@
     {
       "path": "quality_reports/docx_package_audit.json",
       "size_bytes": 5939,
-      "sha256": "93690b4a68ec70084f2157a520d9251eea712fbabc8d19d0c86778d7271c16d3"
+      "sha256": "52469bbaaf8f70c148524acc9b677b788932718216eed20e64029f5fc163de91"
     },
     {
       "path": "quality_reports/draft_lint_en.json",
@@ -491,8 +491,8 @@
     },
     {
       "path": "scripts/SYNC.md",
-      "size_bytes": 3470,
-      "sha256": "1583299c7f2f920f7fc8a1c0f80b2238ab1c17f8f337764c0734ce6c2ae28bad"
+      "size_bytes": 3542,
+      "sha256": "d0a172bf0f01f0bc47456275d8319927e2cd726d2e288c8ad15eb43e19dd18dd"
     },
     {
       "path": "scripts/audit_citation_inventory.py",
@@ -501,13 +501,13 @@
     },
     {
       "path": "scripts/audit_concise_package.py",
-      "size_bytes": 7113,
-      "sha256": "1bddd0e6a28bda6d6eae39059a0aba481aeffd515c56e3baebe10c310552a786"
+      "size_bytes": 8479,
+      "sha256": "f782a302cb1a42b51e57eaad84f050798de6156f1e6d4d9d93f9e5aec6f636f1"
     },
     {
       "path": "scripts/audit_docx_packages.py",
-      "size_bytes": 9297,
-      "sha256": "025e5d5c56d8492d8672d0b3e73df091441523cea3618c4bc49107d170ca042c"
+      "size_bytes": 9400,
+      "sha256": "af5c2bea98f5f6ad32d953e4c7e58e78aa68d170829f2b42d17abd0955a90261"
     },
     {
       "path": "scripts/audit_excluded_source_scope.py",

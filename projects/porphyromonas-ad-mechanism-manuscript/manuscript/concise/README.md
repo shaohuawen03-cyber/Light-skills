@@ -1,6 +1,6 @@
 # Concise manuscript package / 精简稿件包
 
-Version: v3.2.0
+Version: v3.3.0
 Date: 2026-08-14
 
 ## Files
@@ -23,11 +23,11 @@ From the project root:
 python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z \
   --input manuscript/concise/English.md \
   --output manuscript/concise/English.docx \
-  --title "Aggregate Prioritization of Oral Micropeptides at the Periodontitis–Alzheimer’s Disease Interface"
+  --title "Deep-Learning-Guided Multi-Model Prioritization of Oral Micropeptides at the Periodontitis–Alzheimer’s Disease Interface"
 python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z \
   --input manuscript/concise/Chinese.md \
   --output manuscript/concise/Chinese.docx \
-  --title "牙周炎—阿尔茨海默病界面口腔微肽的汇总优选"
+  --title "深度学习引导的牙周炎—阿尔茨海默病界面口腔微肽多模型优选"
 python3 scripts/audit_concise_package.py
 python3 scripts/audit_docx_packages.py
 ```

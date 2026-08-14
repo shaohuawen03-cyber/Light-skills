@@ -33,7 +33,8 @@ Rules / 规则：
 | **v2.0.0 — nine-stage aggregate rebuild** | 2026-08-12 | `a31d29466dc8d376d6012abd916152eb82e017f1` | Untagged historical checkpoint | Superseded | Nine-stage reconstruction, 25-reference corpus, aggregate-only evidence boundary, figures, DOCX and submission package. / 九阶段重建、25条文献、汇总证据边界、图件、DOCX及投稿包。 |
 | **v3.0.0 — external-v0.4 evidence integration** | 2026-08-12 | Manuscript content commit `2a7573604b6e12bd1d51b897d52c58f0d9ead077`; release-management commit `012d0cbcd3c45a26aed0adf9ba9bce2f70e4844b` | `porphyromonas-ad-manuscript-v3.0.0` | **Current full-manuscript release** | Expanded 53-reference parallel manuscript; twelve externally reported sequences; independently recomputed composition; source-reported AChE docking summary; three figures; six supplementary tables; revision-v3 workflow, provenance controls and deterministic audits. / 扩展至53条文献；整合12条外部报告序列、组成审计、来源报告AChE对接汇总、三幅主图、六个补充表、revision-v3工作流及确定性审计。 |
 | **v3.1.0 — initial concise package** | 2026-08-14 | `ef8493c8d26f31fefef6ad6e79ca31a412d4af0a` | `porphyromonas-ad-manuscript-v3.1.0` | **Frozen prior concise release** | Added separate short English and Chinese SCI-style DOCX files with two tables, one figure and 20 selected references. / 新增英文、中文独立DOCX精简稿，保留两表、一图和20条精选文献。 |
-| **v3.2.0 — provenance-verified clean concise package** | 2026-08-14 | The annotated tag resolves the final v3.2.0 release commit | `porphyromonas-ad-manuscript-v3.2.0` | **Current concise release** | Renamed deliverables to `English.docx` and `Chinese.docx`; removed headers, footers, page-number fields and workflow metadata; rebuilt the AD–*P. gingivalis* Introduction; documented predictor algorithms; and corrected the PRJNA678453/PRJEB65451 provenance to 11 healthy plus 11 periodontitis participants and 66 specimens. / 采用中性文件名，删除页眉页脚页码及流程元数据，重构AD—*P. gingivalis*引言，补充预测算法，并核正来源队列为11名健康对照、11名牙周炎患者及66份标本。 |
+| **v3.2.0 — provenance-verified clean concise package** | 2026-08-14 | `273e352a5b92620df66e482b30fbd759472fad8b` | `porphyromonas-ad-manuscript-v3.2.0` | **Frozen prior concise release** | Renamed deliverables to `English.docx` and `Chinese.docx`; removed headers, footers, page-number fields and workflow metadata; rebuilt the AD–*P. gingivalis* Introduction; documented predictor algorithms; and corrected the PRJNA678453/PRJEB65451 provenance to 11 healthy plus 11 periodontitis participants and 66 specimens. / 采用中性文件名，删除页眉页脚页码及流程元数据，重构AD—*P. gingivalis*引言，补充预测算法，并核正来源队列为11名健康对照、11名牙周炎患者及66份标本。 |
+| **v3.3.0 — SCI-style Introduction and deep-learning-guided Methods** | 2026-08-14 | The annotated tag resolves the final v3.3.0 release commit | `porphyromonas-ad-manuscript-v3.3.0` | **Current concise release** | Rewrote the Introduction with individually bracketed references [1]–[10]; reorganized Methods into conventional SCI subsections; and emphasized the relevant deep-learning peptide modes—ESM-2/CNN, fine-tuned ESM2-t30 and multi-task 1D CNN—while retaining the neural-network and evidence boundaries. / 引言采用[1]–[10]逐篇独立引用；方法按SCI结构重组；突出ESM-2/CNN、微调ESM2-t30和多任务一维CNN等肽分析深度学习模式，同时保留神经网络及证据边界。 |
 
 ## 3. Scientific status and package relationship / 科学状态与版本关系
 
@@ -50,9 +51,11 @@ Rules / 规则：
 - independently reproduced docking, verified poses/contacts, affinity, free energy, or completed molecular dynamics;
 - measured expression, BBB transport, toxicity, metal chemistry, AChE/Aβ function, disease specificity, or AD causality.
 
-**v3.1.0 and v3.2.0 relationship / 精简稿关系：** v3.1.0 is the frozen initial concise package. v3.2.0 supersedes it as the current concise package after scientific and formatting corrections; it does not replace or strengthen the evidence in the complete v3.0.0 manuscript. / v3.1.0为冻结的初始精简稿；v3.2.0经科学内容与格式修正后取代其成为当前精简稿，但不替代完整v3.0.0稿，也不提高后者的证据等级。
+**v3.1.0–v3.3.0 relationship / 精简稿关系：** v3.1.0 and v3.2.0 are frozen prior concise packages. v3.3.0 supersedes them as the current concise package after SCI-structure revision; it does not replace or strengthen the evidence in the complete v3.0.0 manuscript. / v3.1.0和v3.2.0为冻结的既往精简稿；v3.3.0经SCI结构修订后成为当前精简稿，但不替代完整v3.0.0稿，也不提高后者的证据等级。
 
-**v3.2.0 corrections / v3.2.0修正：** PRJNA678453 is reported as a 22-participant cohort (11 orally healthy and 11 with periodontitis) producing 66 oral specimens; PRJEB65451 is reported as the derived EBI-EMG/MGnify TPA assembly project. The concise manuscripts describe each predictor by its documented algorithm and retain the absence of row-level model, lineage and docking inputs as a reproducibility limitation. / PRJNA678453按22名参与者（11名口腔健康、11名牙周炎）和66份口腔标本报告；PRJEB65451按衍生TPA组装项目报告。精简稿逐一说明预测器算法，并继续把逐行模型输出、来源链和对接输入缺失列为可重复性局限。
+**v3.2.0 provenance correction / v3.2.0来源修正：** PRJNA678453 is reported as a 22-participant cohort (11 orally healthy and 11 with periodontitis) producing 66 oral specimens; PRJEB65451 is reported as the derived EBI-EMG/MGnify TPA assembly project. / PRJNA678453按22名参与者（11名口腔健康、11名牙周炎）和66份口腔标本报告；PRJEB65451按衍生TPA组装项目报告。
+
+**v3.3.0 scientific-writing correction / v3.3.0科学写作修正：** Introduction references [1]–[10] are cited one paper per bracket. Methods emphasize the relevant deep-learning peptide modes and retain the absence of row-level model, lineage and docking inputs as a reproducibility limitation. / 引言文献[1]–[10]采用每个括号一篇文献；方法突出与肽分析相关的深度学习模式，并继续把逐行模型输出、来源链和对接输入缺失列为可重复性局限。
 
 ## 4. Create and push the current tag / 创建并推送本次标签
 
@@ -60,8 +63,8 @@ The repository includes a guarded cross-platform helper: / 仓库提供带保护
 
 ```bash
 python3 scripts/manage_version_tag.py create \
-  --version 3.2.0 \
-  --message "v3.2.0: concise manuscripts with verified provenance and clean DOCX output" \
+  --version 3.3.0 \
+  --message "v3.3.0: SCI-style Introduction and deep-learning-guided Methods" \
   --push
 ```
 
@@ -69,9 +72,9 @@ Equivalent native Git commands / 等价Git命令：
 
 ```bash
 git status --short
-git tag -a porphyromonas-ad-manuscript-v3.2.0 \
-  -m "v3.2.0: concise manuscripts with verified provenance and clean DOCX output"
-git push origin refs/tags/porphyromonas-ad-manuscript-v3.2.0
+git tag -a porphyromonas-ad-manuscript-v3.3.0 \
+  -m "v3.3.0: SCI-style Introduction and deep-learning-guided Methods"
+git push origin refs/tags/porphyromonas-ad-manuscript-v3.3.0
 ```
 
 The helper refuses to tag a dirty working tree, the wrong branch, or an existing tag. / 脚本会拒绝脏工作区、错误分支或重复标签。
@@ -79,11 +82,12 @@ The helper refuses to tag a dirty working tree, the wrong branch, or an existing
 ## 5. Verify a tag / 核验标签
 
 ```bash
-python3 scripts/manage_version_tag.py verify --version 3.2.0
-git show --no-patch --decorate porphyromonas-ad-manuscript-v3.2.0
-git rev-list -n 1 porphyromonas-ad-manuscript-v3.2.0
+python3 scripts/manage_version_tag.py verify --version 3.3.0
+git show --no-patch --decorate porphyromonas-ad-manuscript-v3.3.0
+git rev-list -n 1 porphyromonas-ad-manuscript-v3.3.0
 
 # Earlier immutable baselines remain independently verifiable:
+python3 scripts/manage_version_tag.py verify --version 3.2.0
 python3 scripts/manage_version_tag.py verify --version 3.1.0
 python3 scripts/manage_version_tag.py verify --version 3.0.0
 ```
@@ -97,9 +101,10 @@ Recommended: create a separate worktree. / 推荐创建独立worktree，不改�
 ```powershell
 Set-Location 'E:\0writing\Light-skills'
 git fetch origin --tags
-git worktree add 'E:\0writing\Light-skills-restore-v3.2.0' porphyromonas-ad-manuscript-v3.2.0
+git worktree add 'E:\0writing\Light-skills-restore-v3.3.0' porphyromonas-ad-manuscript-v3.3.0
 
-# To inspect either earlier immutable baseline instead:
+# To inspect an earlier immutable baseline instead:
+git worktree add 'E:\0writing\Light-skills-restore-v3.2.0' porphyromonas-ad-manuscript-v3.2.0
 git worktree add 'E:\0writing\Light-skills-restore-v3.1.0' porphyromonas-ad-manuscript-v3.1.0
 git worktree add 'E:\0writing\Light-skills-restore-v3.0.0' porphyromonas-ad-manuscript-v3.0.0
 ```
@@ -107,8 +112,9 @@ git worktree add 'E:\0writing\Light-skills-restore-v3.0.0' porphyromonas-ad-manu
 Remove it after inspection / 检查后移除：
 
 ```powershell
+git worktree remove 'E:\0writing\Light-skills-restore-v3.3.0'
+# Or remove an earlier baseline worktree if one was created:
 git worktree remove 'E:\0writing\Light-skills-restore-v3.2.0'
-# Or remove either earlier baseline worktree if one was created:
 git worktree remove 'E:\0writing\Light-skills-restore-v3.1.0'
 git worktree remove 'E:\0writing\Light-skills-restore-v3.0.0'
 ```
