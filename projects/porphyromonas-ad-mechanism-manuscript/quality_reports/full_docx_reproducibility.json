@@ -6,29 +6,29 @@
     "full/English": {
       "source": "manuscript/full/English.md",
       "released_docx": "manuscript/full/English.docx",
-      "released_sha256": "c0a1c6485114cd980d7bb2e6ef7eb00128edce8192fd46079fe7066becb85bc2",
-      "isolated_rebuild_sha256": "c0a1c6485114cd980d7bb2e6ef7eb00128edce8192fd46079fe7066becb85bc2",
+      "released_sha256": "291ac87cfe3e0c00871f7e819532354d6a53994996fd72a9760742329664300c",
+      "isolated_rebuild_sha256": "291ac87cfe3e0c00871f7e819532354d6a53994996fd72a9760742329664300c",
       "byte_identical": true
     },
     "full/Chinese": {
       "source": "manuscript/full/Chinese.md",
       "released_docx": "manuscript/full/Chinese.docx",
-      "released_sha256": "83334dff63d85c8670b2efca14aa83eb046c6c0a9d61b45691f950a8ef7a6375",
-      "isolated_rebuild_sha256": "83334dff63d85c8670b2efca14aa83eb046c6c0a9d61b45691f950a8ef7a6375",
+      "released_sha256": "e394a2b86e736426b483dd4778cad1c617f6294e4759ad8bb5b99eb347998a28",
+      "isolated_rebuild_sha256": "e394a2b86e736426b483dd4778cad1c617f6294e4759ad8bb5b99eb347998a28",
       "byte_identical": true
     },
     "concise/English": {
       "source": "manuscript/concise/English.md",
       "released_docx": "manuscript/concise/English.docx",
-      "released_sha256": "93f9974937aa143bf7047cf32cee97ac2d4100c46016cdb5c4076873cff5301a",
-      "isolated_rebuild_sha256": "93f9974937aa143bf7047cf32cee97ac2d4100c46016cdb5c4076873cff5301a",
+      "released_sha256": "b1992d9fc101045ab8f2218ef98c2b52f491f2a2fe215f16e2a459513b253a31",
+      "isolated_rebuild_sha256": "b1992d9fc101045ab8f2218ef98c2b52f491f2a2fe215f16e2a459513b253a31",
       "byte_identical": true
     },
     "concise/Chinese": {
       "source": "manuscript/concise/Chinese.md",
       "released_docx": "manuscript/concise/Chinese.docx",
-      "released_sha256": "7cceb5a5e3241a4fa02c43018b62ecb7920f3bb83077fee7bef7b33a627da58b",
-      "isolated_rebuild_sha256": "7cceb5a5e3241a4fa02c43018b62ecb7920f3bb83077fee7bef7b33a627da58b",
+      "released_sha256": "89ec35d265a50b3e73704791bc6ab9c48b298a2b073b2303a731a68869848f3f",
+      "isolated_rebuild_sha256": "89ec35d265a50b3e73704791bc6ab9c48b298a2b073b2303a731a68869848f3f",
       "byte_identical": true
     }
   },

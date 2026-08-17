@@ -31,8 +31,11 @@ def main() -> int:
         "all_four_tables_are_three_line": all(
             item["checks"]["every_docx_table_is_three_line"] for item in records.values()
         ),
-        "conclusion_proceeds_directly_to_references": all(
-            item["checks"]["conclusion_proceeds_directly_to_references"] for item in records.values()
+        "conclusion_and_statistical_analysis_sections_are_absent": all(
+            item["checks"]["standalone_conclusion_section_absent"]
+            and item["checks"]["statistical_analysis_subsection_absent"]
+            and item["checks"]["discussion_proceeds_directly_to_references"]
+            for item in records.values()
         ),
         "zotero_live_status_is_not_misrepresented": all(
             item["zotero_live_field_count"] == 0 for item in records.values()

@@ -132,12 +132,16 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
     md = md_path.read_text(encoding="utf-8")
     body, references = md.split(spec["references"], 1)
     abstract_block = body.split(spec["abstract"], 1)[1].split(spec["intro"], 1)[0]
+    english = label.endswith("/English")
+    keywords_pattern = r"\n\n\*\*Keywords:\*\*" if english else r"\n\n\*\*关键词：\*\*"
+    abstract_main = re.split(keywords_pattern, abstract_block, maxsplit=1)[0].strip()
+    abstract_paragraphs = [part.strip() for part in re.split(r"\n\s*\n", abstract_main) if part.strip()]
     body_word_count = len(body.split())
     body_character_count = len(body)
     h2 = re.findall(r"(?m)^##\s+.+$", md)
     expected_h2 = [
         spec["abstract"], spec["intro"], spec["methods"], spec["results"],
-        spec["discussion"], spec["conclusion"], spec["references"],
+        spec["discussion"], spec["references"],
     ]
     cited = re.findall(r"@([A-Za-z0-9_.:+-]+)", body)
     cited_set = set(cited)
@@ -180,11 +184,41 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         drawings = sum(1 for _ in doc.iter(W + "drawing"))
         citation_fields = document_xml.count("ADDIN ZOTERO_ITEM CSL_CITATION")
 
-    english = label.endswith("/English")
+        current_section = None
+        abstract_docx_paragraphs = []
+        main_text_paragraph_styles = []
+        main_sections = {
+            spec["intro"].removeprefix("## "), spec["methods"].removeprefix("## "),
+            spec["results"].removeprefix("## "), spec["discussion"].removeprefix("## "),
+        }
+        for paragraph in doc.iter(W + "p"):
+            text = "".join(node.text or "" for node in paragraph.iter(W + "t")).strip()
+            style_node = paragraph.find(f"{W}pPr/{W}pStyle")
+            style = style_node.get(W + "val") if style_node is not None else None
+            if style == "Heading2":
+                current_section = text
+                continue
+            if not text:
+                continue
+            if current_section == spec["abstract"].removeprefix("## ") and style not in {"Keywords", "Heading3", "Heading4"}:
+                abstract_docx_paragraphs.append(text)
+            if current_section in main_sections and style not in {
+                "Heading3", "Heading4", "Caption", "TableText", "ListParagraph", "Figure",
+            }:
+                main_text_paragraph_styles.append(style)
+
     abstract_labels = (
         ["**Background:**", "**Objective:**", "**Methods:**", "**Results:**", "**Conclusions:**"]
         if english else ["**背景：**", "**目的：**", "**方法：**", "**结果：**", "**结论：**"]
     )
+    abstract_conclusion_patterns = (
+        [r"\bbounded shortlist\b", r"\bprespecified 100[- ]ns GROMACS extension\b"]
+        if english else [r"边界明确的候选清单", r"预设的100\s*ns\s*GROMACS扩展"]
+    )
+    abstract_conclusion_hits = [
+        pattern for pattern in abstract_conclusion_patterns
+        if re.search(pattern, abstract_main, re.I)
+    ]
     negative_md_patterns = (
         [r"no (?:molecular[- ]dynamics|MD) result", r"no trajectory result", r"without MD result", r"not report(?:ing)? MD result"]
         if english else [r"不报告.*(?:MD|分子动力学).*结果", r"不分析任何MD结果", r"不包含轨迹结果", r"不能作为结果"]
@@ -197,12 +231,19 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
 
     checks = {
         "markdown_starts_with_abstract_and_has_no_h1": md.lstrip().startswith(spec["abstract"]) and not re.search(r"(?m)^#\s+", md),
-        "seven_article_sections_in_order": h2 == expected_h2,
+        "six_article_sections_in_order": h2 == expected_h2,
         "journal_style_unnumbered_headings": not re.search(r"(?m)^#{2,3}\s+\d+(?:\.\d+)?\.?\s+", body),
-        "structured_abstract_has_required_labels": all(label_text in abstract_block for label_text in abstract_labels),
-        "english_abstract_within_250_words": (len(abstract_block.split()) <= 250 if english else True),
-        "abstract_contains_no_citations": "[@" not in abstract_block,
-        "conclusion_proceeds_directly_to_references": h2[-2:] == [spec["conclusion"], spec["references"]],
+        "abstract_is_one_unstructured_paragraph": len(abstract_paragraphs) == 1 and not any(
+            label_text in abstract_main for label_text in abstract_labels
+        ),
+        "abstract_conclusion_component_absent": not abstract_conclusion_hits,
+        "english_abstract_within_250_words": (len(abstract_main.split()) <= 250 if english else True),
+        "abstract_contains_no_citations": "[@" not in abstract_main,
+        "statistical_analysis_subsection_absent": not re.search(
+            r"(?m)^###\s+(?:Statistical analysis|统计分析)\s*$", body
+        ),
+        "standalone_conclusion_section_absent": spec["conclusion"] not in h2,
+        "discussion_proceeds_directly_to_references": h2[-2:] == [spec["discussion"], spec["references"]],
         "declarations_and_administrative_prose_absent": not admin_hits,
         "specific_participant_specimen_mag_counts_absent": not count_hits,
         "markdown_has_no_figure_markup": "![" not in body and not re.search(r"(?mi)^\*\*(?:Figure|图)\s*\d", body),
@@ -215,8 +256,8 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         "reference_dois_are_in_bibtex": ref_dois <= known_dois,
         "reference_count_matches_variant": len(ref_dois) == spec["refs"],
         "variant_has_substantive_length": (
-            body_word_count >= (6000 if label == "full/English" else 3000)
-            if english else body_character_count >= (16000 if label == "full/Chinese" else 8500)
+            body_word_count >= (5800 if label == "full/English" else 2850)
+            if english else body_character_count >= (15500 if label == "full/Chinese" else 8000)
         ),
         "prospective_md_method_present": bool(re.search(r"100[- ]ns", body)) and ("GROMACS" in body),
         "md_analysis_is_ongoing_and_scheduled_for_integration": ongoing_md_language,
@@ -230,6 +271,16 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
             and '<w:sz w:val="24"/><w:szCs w:val="24"/>' in styles_xml_text
             and 'w:line="480" w:lineRule="auto"' in styles_xml_text
             and 'w:color w:val="17365D"' not in styles_xml_text
+        ),
+        "docx_main_text_uses_480_twip_first_line_indent": (
+            '<w:style w:type="paragraph" w:styleId="BodyText">' in styles_xml_text
+            and '<w:ind w:firstLine="480"/>' in styles_xml_text
+            and bool(main_text_paragraph_styles)
+            and all(style == "BodyText" for style in main_text_paragraph_styles)
+        ),
+        "docx_abstract_is_one_unindented_paragraph": (
+            len(abstract_docx_paragraphs) == 1
+            and 'w:pStyle w:val="BodyText"' not in document_xml.split("Introduction" if english else "引言", 1)[0]
         ),
         "docx_uses_one_inch_margins": all(
             f'w:{side}="1440"' in document_xml for side in ("top", "right", "bottom", "left")
@@ -261,8 +312,9 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         "reference_doi_count": len(ref_dois),
         "body_word_count": body_word_count,
         "body_character_count": body_character_count,
-        "abstract_word_count": len(abstract_block.split()),
+        "abstract_word_count": len(abstract_main.split()),
         "administrative_pattern_hits": admin_hits,
+        "abstract_conclusion_pattern_hits": abstract_conclusion_hits,
         "prohibited_no_md_result_pattern_hits": negative_md_hits,
         "prohibited_count_hits": count_hits,
         "grouped_introduction_citations": grouped_intro,

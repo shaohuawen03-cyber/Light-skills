@@ -1,6 +1,6 @@
 # Concise manuscript package / 精简稿件包
 
-Version: v3.7.0
+Version: v3.8.0
 Date: 2026-08-17
 
 ## Files
@@ -9,12 +9,15 @@ Date: 2026-08-17
 - `Chinese.docx` — titleless, standalone concise Chinese SCI manuscript.
 - `English.md` and `Chinese.md` — synchronized sources using Pandoc/BibTeX citation keys.
 
-Each DOCX begins with a structured abstract and contains two three-line tables,
-no figures, no header/footer/page-number fields, and no administrative sections.
-The expanded English body is approximately 3,200 words, about 74% longer than
-v3.6.0. The manuscripts use unnumbered journal-style headings, 12-point Times New
-Roman, double spacing, and one-inch margins. Conclusion is followed directly by
-References, with the same 22-item bibliography in English and Chinese.
+Each DOCX begins with a single-paragraph unstructured abstract whose former
+Conclusions component has been removed. Each contains two three-line tables, no
+figures, no header/footer/page-number fields, and no administrative sections. The
+expanded English body is approximately 3,000 words, about 63% longer than v3.6.0.
+The manuscripts use unnumbered journal-style headings, 12-point Times New Roman,
+double spacing, one-inch margins, and a 480-twip first-line indent for main-text
+paragraphs. The standalone Statistical analysis and Conclusion sections are absent;
+Discussion is followed directly by the same 22-item References list in English and
+Chinese.
 
 ## Scientific scope
 
