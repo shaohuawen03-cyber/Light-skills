@@ -3,12 +3,42 @@
   "packages": {
     "full/English": {
       "path": "manuscript/full/English.docx",
-      "sha256": "291ac87cfe3e0c00871f7e819532354d6a53994996fd72a9760742329664300c",
+      "sha256": "98943ba415134a0ca47b00022371d9e75abe6d76cac9d8f540cc6984adca2c32",
       "embedded_media": [],
       "drawings": 0,
       "zotero_live_field_count": 0,
       "citation_mode": "static numbered cache generated from Pandoc citekeys; not Zotero-live",
       "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
         {
           "table_border_values": {
             "top": "single",
@@ -84,18 +114,49 @@
         "every_docx_table_is_three_line": true,
         "docx_contains_rendered_numbers_not_citekeys": true,
         "docx_does_not_claim_unverified_zotero_live_fields": true,
-        "docx_locked_values_present": true
+        "docx_locked_values_present": true,
+        "docx_multidimensional_values_and_long_peptide_limit_present": true
       },
       "verdict": "PASS"
     },
     "full/Chinese": {
       "path": "manuscript/full/Chinese.docx",
-      "sha256": "e394a2b86e736426b483dd4778cad1c617f6294e4759ad8bb5b99eb347998a28",
+      "sha256": "610fcb7f7c09287233fa699c8f7043b665aa1a5d06d4d05e0c3f527ee8125c91",
       "embedded_media": [],
       "drawings": 0,
       "zotero_live_field_count": 0,
       "citation_mode": "static numbered cache generated from Pandoc citekeys; not Zotero-live",
       "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
         {
           "table_border_values": {
             "top": "single",
@@ -171,18 +232,34 @@
         "every_docx_table_is_three_line": true,
         "docx_contains_rendered_numbers_not_citekeys": true,
         "docx_does_not_claim_unverified_zotero_live_fields": true,
-        "docx_locked_values_present": true
+        "docx_locked_values_present": true,
+        "docx_multidimensional_values_and_long_peptide_limit_present": true
       },
       "verdict": "PASS"
     },
     "concise/English": {
       "path": "manuscript/concise/English.docx",
-      "sha256": "b1992d9fc101045ab8f2218ef98c2b52f491f2a2fe215f16e2a459513b253a31",
+      "sha256": "7dfbe9e65504d61e56fb58d39940bc9e0ded439a07557be21913e4def2a994b7",
       "embedded_media": [],
       "drawings": 0,
       "zotero_live_field_count": 0,
       "citation_mode": "static numbered cache generated from Pandoc citekeys; not Zotero-live",
       "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
         {
           "table_border_values": {
             "top": "single",
@@ -228,18 +305,34 @@
         "every_docx_table_is_three_line": true,
         "docx_contains_rendered_numbers_not_citekeys": true,
         "docx_does_not_claim_unverified_zotero_live_fields": true,
-        "docx_locked_values_present": true
+        "docx_locked_values_present": true,
+        "docx_multidimensional_values_and_long_peptide_limit_present": true
       },
       "verdict": "PASS"
     },
     "concise/Chinese": {
       "path": "manuscript/concise/Chinese.docx",
-      "sha256": "89ec35d265a50b3e73704791bc6ab9c48b298a2b073b2303a731a68869848f3f",
+      "sha256": "e1529a0bb0f2e22afc68e7e9966816f4f3d9a3a496159dc9aaf98a42a9241ddc",
       "embedded_media": [],
       "drawings": 0,
       "zotero_live_field_count": 0,
       "citation_mode": "static numbered cache generated from Pandoc citekeys; not Zotero-live",
       "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
         {
           "table_border_values": {
             "top": "single",
@@ -285,7 +378,8 @@
         "every_docx_table_is_three_line": true,
         "docx_contains_rendered_numbers_not_citekeys": true,
         "docx_does_not_claim_unverified_zotero_live_fields": true,
-        "docx_locked_values_present": true
+        "docx_locked_values_present": true,
+        "docx_multidimensional_values_and_long_peptide_limit_present": true
       },
       "verdict": "PASS"
     }

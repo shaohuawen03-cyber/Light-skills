@@ -1,6 +1,6 @@
 # Concise manuscript package / 精简稿件包
 
-Version: v3.8.0
+Version: v3.9.0
 Date: 2026-08-17
 
 ## Files
@@ -10,14 +10,15 @@ Date: 2026-08-17
 - `English.md` and `Chinese.md` — synchronized sources using Pandoc/BibTeX citation keys.
 
 Each DOCX begins with a single-paragraph unstructured abstract whose former
-Conclusions component has been removed. Each contains two three-line tables, no
+Conclusions component has been removed. Each contains three tables in three-line format, no
 figures, no header/footer/page-number fields, and no administrative sections. The
-expanded English body is approximately 3,000 words, about 63% longer than v3.6.0.
+expanded English body is approximately 3,700 whitespace-delimited tokens including table text.
 The manuscripts use unnumbered journal-style headings, 12-point Times New Roman,
 double spacing, one-inch margins, and a 480-twip first-line indent for main-text
 paragraphs. The standalone Statistical analysis and Conclusion sections are absent;
 Discussion is followed directly by the same 22-item References list in English and
-Chinese.
+Chinese. The added compact multidimensional table retains all 22 long- and
+short-branch UniDL4BioPep outputs from the principal source.
 
 ## Scientific scope
 
@@ -29,7 +30,10 @@ not establish candidate expression, disease specificity, *Porphyromonas
 gingivalis* sequence origin, BBB transport, toxicity, metal chemistry, AChE
 binding/function or AD causality. The prespecified molecular-dynamics analysis is
 ongoing, and trajectory-derived measurements will be incorporated after completion
-and quality control.
+and quality control. The stated limitations now explain that all 72 metaproteome-supported,
+dereplicated long BBB-high candidates were lost at the NTxPred2-positive gate; the
+downstream metal/CHEL/FRS cascade and final aggregate set of 12 therefore contain
+short peptides only, without implying biological inactivity of the long peptides.
 
 ## Rebuild and audit
 

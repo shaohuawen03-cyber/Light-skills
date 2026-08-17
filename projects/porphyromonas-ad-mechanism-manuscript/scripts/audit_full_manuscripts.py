@@ -28,7 +28,7 @@ def main() -> int:
             == records["full/Chinese"]["reference_doi_count"] == 55
         ),
         "both_docx_files_are_figure_free": all(not item["embedded_media"] for item in records.values()),
-        "all_eight_tables_are_three_line": all(
+        "all_twelve_tables_are_three_line": all(
             item["checks"]["every_docx_table_is_three_line"] for item in records.values()
         ),
         "conclusion_and_statistical_analysis_sections_are_absent": all(

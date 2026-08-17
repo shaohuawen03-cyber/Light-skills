@@ -6,29 +6,29 @@
     "full/English": {
       "source": "manuscript/full/English.md",
       "released_docx": "manuscript/full/English.docx",
-      "released_sha256": "291ac87cfe3e0c00871f7e819532354d6a53994996fd72a9760742329664300c",
-      "isolated_rebuild_sha256": "291ac87cfe3e0c00871f7e819532354d6a53994996fd72a9760742329664300c",
+      "released_sha256": "98943ba415134a0ca47b00022371d9e75abe6d76cac9d8f540cc6984adca2c32",
+      "isolated_rebuild_sha256": "98943ba415134a0ca47b00022371d9e75abe6d76cac9d8f540cc6984adca2c32",
       "byte_identical": true
     },
     "full/Chinese": {
       "source": "manuscript/full/Chinese.md",
       "released_docx": "manuscript/full/Chinese.docx",
-      "released_sha256": "e394a2b86e736426b483dd4778cad1c617f6294e4759ad8bb5b99eb347998a28",
-      "isolated_rebuild_sha256": "e394a2b86e736426b483dd4778cad1c617f6294e4759ad8bb5b99eb347998a28",
+      "released_sha256": "610fcb7f7c09287233fa699c8f7043b665aa1a5d06d4d05e0c3f527ee8125c91",
+      "isolated_rebuild_sha256": "610fcb7f7c09287233fa699c8f7043b665aa1a5d06d4d05e0c3f527ee8125c91",
       "byte_identical": true
     },
     "concise/English": {
       "source": "manuscript/concise/English.md",
       "released_docx": "manuscript/concise/English.docx",
-      "released_sha256": "b1992d9fc101045ab8f2218ef98c2b52f491f2a2fe215f16e2a459513b253a31",
-      "isolated_rebuild_sha256": "b1992d9fc101045ab8f2218ef98c2b52f491f2a2fe215f16e2a459513b253a31",
+      "released_sha256": "7dfbe9e65504d61e56fb58d39940bc9e0ded439a07557be21913e4def2a994b7",
+      "isolated_rebuild_sha256": "7dfbe9e65504d61e56fb58d39940bc9e0ded439a07557be21913e4def2a994b7",
       "byte_identical": true
     },
     "concise/Chinese": {
       "source": "manuscript/concise/Chinese.md",
       "released_docx": "manuscript/concise/Chinese.docx",
-      "released_sha256": "89ec35d265a50b3e73704791bc6ab9c48b298a2b073b2303a731a68869848f3f",
-      "isolated_rebuild_sha256": "89ec35d265a50b3e73704791bc6ab9c48b298a2b073b2303a731a68869848f3f",
+      "released_sha256": "e1529a0bb0f2e22afc68e7e9966816f4f3d9a3a496159dc9aaf98a42a9241ddc",
+      "isolated_rebuild_sha256": "e1529a0bb0f2e22afc68e7e9966816f4f3d9a3a496159dc9aaf98a42a9241ddc",
       "byte_identical": true
     }
   },

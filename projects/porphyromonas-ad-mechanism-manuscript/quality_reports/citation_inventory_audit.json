@@ -11,7 +11,7 @@
   "manuscripts": {
     "full_english": {
       "path": "manuscript/full/English.md",
-      "sha256": "6f4d7b01f96fe7097c645e043149870c54afede8fb2af32f200f9f826e92a2bf",
+      "sha256": "2e2e4b1fc2000f4b4811d6ca530b2a4fb2527732d5d358ea0b91b947f960af6b",
       "reference_doi_count": 55,
       "cited_key_count": 55,
       "unknown_keys": [],
@@ -19,7 +19,7 @@
     },
     "full_chinese": {
       "path": "manuscript/full/Chinese.md",
-      "sha256": "79160ade18702aac8bc9e788a497a7b9eb99da69f50fc5936e1fe6ac6da175b2",
+      "sha256": "4c8c93795b040f78324816e3ac56aaadeaf278effe34b55d44419b99c67bb22c",
       "reference_doi_count": 55,
       "cited_key_count": 55,
       "unknown_keys": [],
@@ -27,7 +27,7 @@
     },
     "concise_english": {
       "path": "manuscript/concise/English.md",
-      "sha256": "6aedf22bd8cf98f92c0d30d7c9931e7d2047f7cad7f70cfc58d4a00000f4fab2",
+      "sha256": "e1870916e12d72fe4a686ba18cf4dd3009b11f28528c9c3258b5ecfebfcb6217",
       "reference_doi_count": 22,
       "cited_key_count": 22,
       "unknown_keys": [],
@@ -35,7 +35,7 @@
     },
     "concise_chinese": {
       "path": "manuscript/concise/Chinese.md",
-      "sha256": "f0fd4c17a1c5b41e6b5dc85de332bca69c6fcc0e3736cdcf9426383d64c05def",
+      "sha256": "4d4fe2d6f01ec5c90acecc879d71fbda6b5923b2520bd3cc65d8ab53a0a10b0a",
       "reference_doi_count": 22,
       "cited_key_count": 22,
       "unknown_keys": [],

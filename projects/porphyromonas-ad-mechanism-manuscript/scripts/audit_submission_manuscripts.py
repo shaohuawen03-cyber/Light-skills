@@ -17,6 +17,12 @@ LOCKED = [
     "11,269,961", "11,721,988", "31,510", "33,786", "3,518", "3,299",
     "923", "111", "15", "12", "8", "FLLHTTR", "HVLLLRQCA", "−9.60", "−8.25",
 ]
+MULTIDIMENSIONAL_LOCKED = [
+    "635", "66.63", "641", "62.11", "288", "30.22", "280", "27.13",
+    "82", "8.60", "77", "7.46", "13", "1.36", "18", "1.74",
+    "30,537", "99.93", "32,721", "99.90", "21,185", "69.33",
+    "22,010", "67.20", "12,674", "4,019", "4,728",
+]
 COMMON_ADMIN_PATTERNS = [
     r"\bTier\s+[A-D]\b", r"SHA-?256", r"\bcommit\s+[0-9a-f]{7,40}\b",
     r"acceptance decision", r"evidence tier", r"source-reported",
@@ -45,7 +51,7 @@ SPECS = {
         "start": "Abstract", "abstract": "## Abstract", "intro": "## Introduction",
         "methods": "## Materials and methods", "results": "## Results",
         "discussion": "## Discussion", "conclusion": "## Conclusion",
-        "references": "## References", "core_title": "English", "tables": 4, "refs": 55,
+        "references": "## References", "core_title": "English", "tables": 6, "refs": 55,
         "patterns": COMMON_ADMIN_PATTERNS, "counts": PROHIBITED_COUNTS_EN,
     },
     "full/Chinese": {
@@ -53,7 +59,7 @@ SPECS = {
         "start": "摘要", "abstract": "## 摘要", "intro": "## 引言",
         "methods": "## 材料与方法", "results": "## 结果",
         "discussion": "## 讨论", "conclusion": "## 结论",
-        "references": "## 参考文献", "core_title": "Chinese", "tables": 4, "refs": 55,
+        "references": "## 参考文献", "core_title": "Chinese", "tables": 6, "refs": 55,
         "patterns": COMMON_ADMIN_PATTERNS_ZH, "counts": PROHIBITED_COUNTS_ZH,
     },
     "concise/English": {
@@ -61,7 +67,7 @@ SPECS = {
         "start": "Abstract", "abstract": "## Abstract", "intro": "## Introduction",
         "methods": "## Materials and methods", "results": "## Results",
         "discussion": "## Discussion", "conclusion": "## Conclusion",
-        "references": "## References", "core_title": "English", "tables": 2, "refs": 22,
+        "references": "## References", "core_title": "English", "tables": 3, "refs": 22,
         "patterns": COMMON_ADMIN_PATTERNS, "counts": PROHIBITED_COUNTS_EN,
     },
     "concise/Chinese": {
@@ -69,7 +75,7 @@ SPECS = {
         "start": "摘要", "abstract": "## 摘要", "intro": "## 引言",
         "methods": "## 材料与方法", "results": "## 结果",
         "discussion": "## 讨论", "conclusion": "## 结论",
-        "references": "## 参考文献", "core_title": "Chinese", "tables": 2, "refs": 22,
+        "references": "## 参考文献", "core_title": "Chinese", "tables": 3, "refs": 22,
         "patterns": COMMON_ADMIN_PATTERNS_ZH, "counts": PROHIBITED_COUNTS_ZH,
     },
 }
@@ -98,6 +104,20 @@ def bib_doi_key_map(text: str) -> dict[str, str]:
         if doi:
             mapping[doi.group(1).strip().lower().rstrip(".")] = key
     return mapping
+
+
+def markdown_table_row_count_after_caption(text: str, caption_fragment: str) -> int:
+    """Count data rows in the first Markdown table following a unique caption."""
+    if caption_fragment not in text:
+        return 0
+    lines = text.split(caption_fragment, 1)[1].lstrip().splitlines()
+    table_lines = []
+    for line in lines:
+        if line.startswith("|"):
+            table_lines.append(line)
+        elif table_lines:
+            break
+    return max(0, len(table_lines) - 2)  # header and alignment separator
 
 
 def table_checks(table: ET.Element) -> dict:
@@ -228,6 +248,49 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         "ongoing" in body.lower() and ("will add" in body.lower() or "will be incorporated" in body.lower())
         if english else "正在进行" in body and "完成后补充" in body
     )
+    multidimensional_headings_present = (
+        (
+            "### Long-peptide multidimensional functional prediction results" in body
+            and "### Short-peptide multidimensional functional prediction results" in body
+        ) if label == "full/English" else
+        (
+            "### 长肽多维功能预测结果" in body
+            and "### 短肽多维功能预测结果" in body
+        ) if label == "full/Chinese" else
+        "### Long- and short-peptide multidimensional functional prediction results" in body
+        if label == "concise/English" else
+        "### 长肽与短肽多维功能预测结果" in body
+    )
+    multidimensional_table_row_counts = (
+        [
+            markdown_table_row_count_after_caption(body, "Long-peptide multidimensional functional outputs"),
+            markdown_table_row_count_after_caption(body, "Short-peptide multidimensional functional outputs"),
+        ] if label == "full/English" else
+        [
+            markdown_table_row_count_after_caption(body, "长肽多维功能预测结果。**"),
+            markdown_table_row_count_after_caption(body, "短肽多维功能预测结果。**"),
+        ] if label == "full/Chinese" else
+        [markdown_table_row_count_after_caption(body, "Long- and short-peptide multidimensional functional outputs")]
+        if label == "concise/English" else
+        [markdown_table_row_count_after_caption(body, "长肽与短肽多维功能预测结果。**")]
+    )
+    long_peptide_attrition_limit_present = (
+        (
+            "72" in body
+            and "metaproteome-supported and dereplicated" in body
+            and "BBB-high long peptides" in body
+            and bool(re.search(r"all 923 NTxPred2-positive (?:candidates|sequences) were ≤30 aa", body, re.I))
+            and bool(re.search(r"(?:final aggregate set|aggregate 12-candidate endpoint).*?only short peptides", body, re.I))
+            and "does not show that long peptides biologically lack" in body
+        ) if english else (
+            "72条" in body
+            and "宏蛋白质组支持并去重" in body
+            and "BBB高分" in body
+            and bool(re.search(r"923条NTxPred2阳性(?:候选|序列)全部≤30 aa", body))
+            and bool(re.search(r"(?:最终汇总的12条候选|汇总的12条终点).*?只包含短肽", body))
+            and "不能证明长肽在生物学上缺乏" in body
+        )
+    )
 
     checks = {
         "markdown_starts_with_abstract_and_has_no_h1": md.lstrip().startswith(spec["abstract"]) and not re.search(r"(?m)^#\s+", md),
@@ -248,6 +311,12 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         "specific_participant_specimen_mag_counts_absent": not count_hits,
         "markdown_has_no_figure_markup": "![" not in body and not re.search(r"(?mi)^\*\*(?:Figure|图)\s*\d", body),
         "all_locked_scientific_values_present": all(value in body for value in LOCKED),
+        "long_and_short_multidimensional_results_retained": (
+            multidimensional_headings_present
+            and all(value in body for value in MULTIDIMENSIONAL_LOCKED)
+            and multidimensional_table_row_counts == ([22, 22] if label.startswith("full/") else [22])
+        ),
+        "short_only_final_set_and_long_peptide_attrition_limit_reported": long_peptide_attrition_limit_present,
         "pandoc_citation_keys_present": bool(cited),
         "all_citation_keys_exist_in_bibtex": cited_set <= known_bib_keys,
         "introduction_uses_one_reference_per_citation": not grouped_intro,
@@ -300,6 +369,10 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         "docx_contains_rendered_numbers_not_citekeys": "@" not in doc_text and "[1]" in doc_text,
         "docx_does_not_claim_unverified_zotero_live_fields": citation_fields == 0,
         "docx_locked_values_present": all(value in doc_text for value in LOCKED),
+        "docx_multidimensional_values_and_long_peptide_limit_present": (
+            all(value in doc_text for value in MULTIDIMENSIONAL_LOCKED)
+            and ("only short peptides" in doc_text if english else "只包含短肽" in doc_text)
+        ),
     }
     return {
         "label": label,
@@ -313,6 +386,7 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         "body_word_count": body_word_count,
         "body_character_count": body_character_count,
         "abstract_word_count": len(abstract_main.split()),
+        "multidimensional_table_data_row_counts": multidimensional_table_row_counts,
         "administrative_pattern_hits": admin_hits,
         "abstract_conclusion_pattern_hits": abstract_conclusion_hits,
         "prohibited_no_md_result_pattern_hits": negative_md_hits,

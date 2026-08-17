@@ -1,7 +1,7 @@
 {
   "schema": "local.zotero_live_status.v1",
   "input": "manuscript/full/English.md",
-  "requested_output": "/tmp/English-zotero-live-v38.docx",
+  "requested_output": "/tmp/English-zotero-live-v39.docx",
   "citation_key_count": 55,
   "first_citation_key": "scheltens2021alzheimer",
   "pandoc_available": false,

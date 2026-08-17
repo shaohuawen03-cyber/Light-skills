@@ -39,11 +39,12 @@ Rules / 规则：
 | **v3.5.0 — review-grade Introduction and prospective MD methods** | 2026-08-17 | The annotated tag resolves the final v3.5.0 release commit | `porphyromonas-ad-manuscript-v3.5.0` | **Frozen prior full release** | Replaced the abstract with a concise high-impact-SCI narrative; expanded the Introduction through evidence-class synthesis; omitted participant, specimen, assembly-analysis and MAG totals from the article bodies; registered the user-derived 296-MAG value as pending audit; added a versioned prospective 100-ns GROMACS protocol without MD results; hid the visible article title; retained no headers, footers, page fields or comments; and audited editable-text SVG sources. / 采用高水平SCI叙事摘要和证据综合型扩展引言；正文省略参与者、标本、组装分析和MAG总数；将用户原始映射所得296个MAG登记为待审计；新增版本化100 ns GROMACS前瞻性方案但不加入MD结果；隐藏正文标题并保持无页眉、页脚、页码和批注；审计可编辑文字SVG。 |
 | **v3.6.0 — clean full and concise submission variants** | 2026-08-17 | The annotated tag resolves the final v3.6.0 release commit | `porphyromonas-ad-manuscript-v3.6.0` | **Frozen prior release** | Rebuilt complete and concise English/Chinese manuscripts; converted every table to a three-line structure; removed figures from all four DOCX files; ended each article at Conclusion followed directly by References; removed evidence-tier, hash, commit, archive, acceptance and workflow-governance prose from article bodies; and converted source citations to Pandoc/BibTeX keys with an explicit Better BibTeX/Word acceptance gate. / 重建完整与精简中英文稿；全部表格改为三线表；四份DOCX移除所有图像；结论后直接进入参考文献；正文删除证据分层、哈希、提交、归档、接纳和工作流治理表述；正文引文改为Pandoc/BibTeX键，并设置明确的Better BibTeX/Word验收门。 |
 | **v3.7.0 — journal-aligned manuscripts and expanded concise variants** | 2026-08-17 | The annotated tag resolves the final v3.7.0 release commit | `porphyromonas-ad-manuscript-v3.7.0` | **Frozen prior release** | Reframed the ongoing MD work as a pending analysis extension whose trajectory measurements will be integrated after completion; removed “no MD result” wording; expanded the concise English body by approximately 74% with synchronized Chinese content; adopted structured abstracts, unnumbered IMRaD headings, 12-point Times New Roman, double spacing and one-inch margins; retained figure-free DOCX files, three-line tables and Conclusion-to-References order. / 将MD表述修正为正在进行、完成后补充轨迹指标的分析扩展，删除“不报告MD结果”措辞；精简英文正文扩展约74%并同步中文；采用结构式摘要、无编号IMRaD标题、12磅Times New Roman、双倍行距和1英寸页边距；继续保持DOCX无图、三线表及结论后直接进入参考文献。 |
-| **v3.8.0 — single-paragraph abstracts and simplified article ending** | 2026-08-17 | The annotated tag resolves the final v3.8.0 release commit | `porphyromonas-ad-manuscript-v3.8.0` | **Current full and concise release** | Converted all four abstracts to one unlabelled paragraph and removed their Conclusions components; removed the Statistical analysis subsection and standalone Conclusion section; made Discussion proceed directly to References; added a 480-twip first-line indent to ordinary main-text paragraphs while retaining unindented abstracts and non-body elements; preserved synchronized science, ongoing-MD language, figure-free DOCX files and three-line tables. / 四稿摘要改为单段无标签形式并删除摘要结论内容；删除“统计分析”小节和独立“结论”章节，使讨论后直接进入参考文献；正文普通段落增加480 twip首行缩进，摘要及非正文元素保持顶格；继续保持中英文科学同步、MD正在分析、DOCX无图和三线表。 |
+| **v3.8.0 — single-paragraph abstracts and simplified article ending** | 2026-08-17 | The annotated tag resolves the final v3.8.0 release commit | `porphyromonas-ad-manuscript-v3.8.0` | **Frozen prior release** | Converted all four abstracts to one unlabelled paragraph and removed their Conclusions components; removed the Statistical analysis subsection and standalone Conclusion section; made Discussion proceed directly to References; added a 480-twip first-line indent to ordinary main-text paragraphs while retaining unindented abstracts and non-body elements; preserved synchronized science, ongoing-MD language, figure-free DOCX files and three-line tables. / 四稿摘要改为单段无标签形式并删除摘要结论内容；删除“统计分析”小节和独立“结论”章节，使讨论后直接进入参考文献；正文普通段落增加480 twip首行缩进，摘要及非正文元素保持顶格；继续保持中英文科学同步、MD正在分析、DOCX无图和三线表。 |
+| **v3.9.0 — restored multidimensional long/short results and attrition limitation** | 2026-08-17 | The annotated tag resolves the final v3.9.0 release commit | `porphyromonas-ad-manuscript-v3.9.0` | **Current full and concise release** | Restored all 22 principal-source UniDL4BioPep functional outputs for both long and short branches in all four manuscripts; retained exact counts and percentages in separate full-version tables and a compact concise table; documented that all 72 metaproteome-supported, dereplicated long BBB-high candidates were absent from the all-≤30-aa NTxPred2-positive set, so downstream metal/CHEL/FRS screening and the final aggregate 12 retained only short peptides; treated this as a serial-pipeline limitation rather than biological inactivity. / 四稿恢复主源长肽与短肽各22项UniDL4BioPep功能输出，完整稿分别列表、精简稿合并列表并保留精确计数与比例；明确72条经宏蛋白质组支持、去重且BBB高分的长肽均未进入全部≤30 aa的NTxPred2阳性集合，故后续金属/CHEL/FRS筛选及最终12条仅保留短肽；将其界定为串行流程局限，而非长肽无生物活性。 |
 
 ## 3. Scientific status and package relationship / 科学状态与版本关系
 
-**v3.0.0–v3.8.0 full manuscripts support / 完整稿可支持：**
+**v3.0.0–v3.9.0 full manuscripts support / 完整稿可支持：**
 
 - principal-source aggregate funnel and recomputed descriptive percentages;
 - twelve externally reported 7–9-aa sequence strings and independently recomputed composition;
@@ -51,7 +52,7 @@ Rules / 规则：
 - a versioned 100-ns GROMACS extension whose trajectory analysis is ongoing and whose measurements await completion and quality control;
 - a provenance-aware, hypothesis-generating validation roadmap.
 
-**v3.0.0–v3.8.0 do not support / 不支持：**
+**v3.0.0–v3.9.0 do not support / 不支持：**
 
 - row-level linkage between the twelve strings and the principal screening funnel or stricter eight;
 - independently reproduced docking, verified poses/contacts, affinity, free energy, or completed molecular dynamics;
@@ -61,7 +62,7 @@ Rules / 规则：
 
 **v3.5.0 full-package relationship / 完整稿关系：** v3.5.0 superseded v3.4.0 as the prior full release. Its historical deliverables remain frozen. / v3.5.0曾取代v3.4.0成为上一版完整稿，其历史交付物保持冻结。
 
-**v3.8.0 package relationship / 当前版本关系：** v3.8.0 supersedes v3.7.0 as the current release for both full and expanded concise variants. The four current deliverables are the separate English and Chinese DOCX files under `manuscript/full/` and `manuscript/concise/`; historical bilingual manuscripts, supplementary files and figures are not v3.8.0 manuscript deliverables. / v3.8.0取代v3.7.0，成为完整稿与扩展精简稿的当前版本；当前交付物仅为`manuscript/full/`和`manuscript/concise/`下的四份独立中英文DOCX，历史双语稿、补充文件和图件不属于v3.8.0稿件交付。
+**v3.9.0 package relationship / 当前版本关系：** v3.9.0 supersedes v3.8.0 as the current release for both full and expanded concise variants. The four current deliverables are the separate English and Chinese DOCX files under `manuscript/full/` and `manuscript/concise/`; historical bilingual manuscripts, supplementary files and figures are not v3.9.0 manuscript deliverables. / v3.9.0取代v3.8.0，成为完整稿与扩展精简稿的当前版本；当前交付物仅为`manuscript/full/`和`manuscript/concise/`下的四份独立中英文DOCX，历史双语稿、补充文件和图件不属于v3.9.0稿件交付。
 
 **v3.2.0 provenance correction / v3.2.0来源修正：** PRJNA678453 is reported as a 22-participant cohort (11 orally healthy and 11 with periodontitis) producing 66 oral specimens; PRJEB65451 is reported as the derived EBI-EMG/MGnify TPA assembly project. / PRJNA678453按22名参与者（11名口腔健康、11名牙周炎）和66份口腔标本报告；PRJEB65451按衍生TPA组装项目报告。
 
@@ -77,8 +78,8 @@ The repository includes a guarded cross-platform helper: / 仓库提供带保护
 
 ```bash
 python3 scripts/manage_version_tag.py create \
-  --version 3.8.0 \
-  --message "v3.8.0: single-paragraph abstracts, simplified endings, and indented body text" \
+  --version 3.9.0 \
+  --message "v3.9.0: restore multidimensional long/short results and document long-peptide attrition" \
   --push
 ```
 
@@ -86,9 +87,9 @@ Equivalent native Git commands / 等价Git命令：
 
 ```bash
 git status --short
-git tag -a porphyromonas-ad-manuscript-v3.8.0 \
-  -m "v3.8.0: single-paragraph abstracts, simplified endings, and indented body text"
-git push origin refs/tags/porphyromonas-ad-manuscript-v3.8.0
+git tag -a porphyromonas-ad-manuscript-v3.9.0 \
+  -m "v3.9.0: restore multidimensional long/short results and document long-peptide attrition"
+git push origin refs/tags/porphyromonas-ad-manuscript-v3.9.0
 ```
 
 The helper refuses to tag a dirty working tree, the wrong branch, or an existing tag. / 脚本会拒绝脏工作区、错误分支或重复标签。
@@ -96,11 +97,12 @@ The helper refuses to tag a dirty working tree, the wrong branch, or an existing
 ## 5. Verify a tag / 核验标签
 
 ```bash
-python3 scripts/manage_version_tag.py verify --version 3.8.0
-git show --no-patch --decorate porphyromonas-ad-manuscript-v3.8.0
-git rev-list -n 1 porphyromonas-ad-manuscript-v3.8.0
+python3 scripts/manage_version_tag.py verify --version 3.9.0
+git show --no-patch --decorate porphyromonas-ad-manuscript-v3.9.0
+git rev-list -n 1 porphyromonas-ad-manuscript-v3.9.0
 
 # Earlier immutable baselines remain independently verifiable:
+python3 scripts/manage_version_tag.py verify --version 3.8.0
 python3 scripts/manage_version_tag.py verify --version 3.7.0
 python3 scripts/manage_version_tag.py verify --version 3.6.0
 python3 scripts/manage_version_tag.py verify --version 3.5.0
@@ -118,7 +120,7 @@ Recommended: create a separate worktree. / 推荐创建独立worktree，不改�
 ```powershell
 Set-Location 'E:\0writing\Light-skills'
 git fetch origin --tags
-git worktree add 'E:\0writing\Light-skills-restore-v3.8.0' porphyromonas-ad-manuscript-v3.8.0
+git worktree add 'E:\0writing\Light-skills-restore-v3.9.0' porphyromonas-ad-manuscript-v3.9.0
 
 # To inspect an earlier immutable baseline instead:
 git worktree add 'E:\0writing\Light-skills-restore-v3.4.0' porphyromonas-ad-manuscript-v3.4.0
@@ -131,7 +133,7 @@ git worktree add 'E:\0writing\Light-skills-restore-v3.0.0' porphyromonas-ad-manu
 Remove it after inspection / 检查后移除：
 
 ```powershell
-git worktree remove 'E:\0writing\Light-skills-restore-v3.8.0'
+git worktree remove 'E:\0writing\Light-skills-restore-v3.9.0'
 # Or remove an earlier baseline worktree if one was created:
 git worktree remove 'E:\0writing\Light-skills-restore-v3.4.0'
 git worktree remove 'E:\0writing\Light-skills-restore-v3.3.0'
@@ -143,7 +145,7 @@ git worktree remove 'E:\0writing\Light-skills-restore-v3.0.0'
 ### 6.2 Restore one file from the tag
 
 ```bash
-git restore --source=porphyromonas-ad-manuscript-v3.8.0 -- \
+git restore --source=porphyromonas-ad-manuscript-v3.9.0 -- \
   projects/porphyromonas-ad-mechanism-manuscript/manuscript/full/English.docx
 ```
 

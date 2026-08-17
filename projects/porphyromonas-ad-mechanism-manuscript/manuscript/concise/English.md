@@ -36,6 +36,8 @@ The filtered libraries were divided into short (5–30 aa) and long (31–50 aa)
 
 UniDL4BioPep provided the first functional-prioritization layer. The documented architecture uses the pretrained ESM-2 model `esm2_t6_8M_UR50D` to encode each peptide as a 320-dimensional contextual representation, followed by a six-layer task-specific convolutional neural network for binary peptide-bioactivity classification [@du2023unidl4biopep]. An output threshold of ≥0.80 was applied, including for BBB prioritization. The output was termed “BBB-high” rather than BBB-permeable because model calibration and experimental transport were not available for this very-short microbiome-peptide domain.
 
+The principal source also retained high-confidence counts for 22 UniDL4BioPep functional outputs separately in the short and long branches. These covered ACE inhibition, TTCA, BBB, anti-parasitic, NeuroPred, antibacterial, antifungal, antiviral, toxicity, antioxidant FRS, allergenicity, DPP-IV inhibition, cell penetration, bitter and umami taste, broad antimicrobial activity, two antimalarial outputs, quorum sensing, two anticancer outputs, and Anti-MRSA activity. Every task used the supplied ≥0.80 threshold. Counts and percentages were transcribed against the branch-specific backgrounds (long: 953 healthy-labelled and 1,032 periodontitis-labelled; short: 30,557 and 32,754); outputs were overlapping task labels and were not used as independent biological replicates or as evidence of between-group enrichment.
+
 The periodontitis-labelled BBB-high set then entered the peptide mode of NTxPred2. This model fine-tunes the ESM2-t30 protein language model on neurotoxic-peptide sequences [@rathore2025ntxpred2]. Only peptides within the documented 7–50-aa input range were considered evaluated; shorter candidates were classified as outside model coverage rather than negative.
 
 Mebipred evaluated Cu-, Fe-, and Zn-related binding potential. Unlike the ESM-based stages, mebipred combines amino-acid composition, physicochemical descriptors, and metal-binding 5-mer frequencies in a two-tier artificial-neural-network framework: a general metal-binding network is followed by ion-specific classifiers [@aptekmann2022mebipred]. A decision threshold of 0.50 was applied.
@@ -64,11 +66,45 @@ The supplied periodontitis-labelled length summary contained 547 candidates at 5
 
 A broad antimicrobial output was nearly saturated: 30,537/30,557 healthy-labelled short candidates (99.93%) and 32,721/32,754 periodontitis-labelled short candidates (99.90%) exceeded the common 0.80 threshold. Such near-universal positivity is unlikely to represent the prevalence of experimentally active oral antibiotics and instead indicates possible domain shift, calibration limitations, or an unsuitable common threshold for that label.
 
+### Long- and short-peptide multidimensional functional prediction results
+
+The multidimensional summaries from the principal source were retained in compact form (Table 1). Long-branch percentages used 953 healthy-labelled and 1,032 periodontitis-labelled candidates; short-branch percentages used 30,557 and 32,754. Long-peptide outputs were led by Bitter (66.63%; 62.11%), Anti-parasitic (30.22%; 27.13%), and Antimicrobial (21.62%; 23.06%). Short-peptide Antimicrobial_activity was nearly saturated (99.93%; 99.90%), with large APP_Anti-parasitic, Quorum_sensing, and ACP_Anticancer_main outputs. The periodontitis-labelled short branch contained 3,446 BBB, 4,019 NeuroPred, and 4,728 Anti-MRSA high-confidence outputs. The source used slightly different model-label suffixes in the two branch summaries; Table 1 pairs the corresponding functional categories without treating them as calibrated or experimentally equivalent measurements.
+
+**Table 1. Long- and short-peptide multidimensional functional outputs at UniDL4BioPep score ≥0.80.**
+
+| Functional output | Long healthy n (%) | Long periodontitis n (%) | Short healthy n (%) | Short periodontitis n (%) |
+| --- | ---: | ---: | ---: | ---: |
+| Anticancer (alternative) | 91 (9.55%) | 121 (11.72%) | 7,878 (25.78%) | 8,380 (25.58%) |
+| BBB | 40 (4.20%) | 72 (6.98%) | 3,359 (10.99%) | 3,446 (10.52%) |
+| Quorum sensing | 173 (18.15%) | 190 (18.41%) | 11,834 (38.73%) | 12,674 (38.69%) |
+| Antimicrobial | 206 (21.62%) | 238 (23.06%) | 30,537 (99.93%) | 32,721 (99.90%) |
+| Antibacterial | 111 (11.65%) | 153 (14.83%) | 9,269 (30.33%) | 9,273 (28.31%) |
+| Anti-MRSA | 47 (4.93%) | 62 (6.01%) | 4,315 (14.12%) | 4,728 (14.43%) |
+| Cell-penetrating peptide | 15 (1.57%) | 29 (2.81%) | 4,435 (14.51%) | 4,133 (12.62%) |
+| Antifungal | 73 (7.66%) | 96 (9.30%) | 8,732 (28.58%) | 8,475 (25.87%) |
+| Toxicity | 13 (1.36%) | 18 (1.74%) | 2,770 (9.07%) | 2,751 (8.40%) |
+| Umami | 17 (1.78%) | 15 (1.45%) | 6,095 (19.95%) | 6,094 (18.61%) |
+| Antimalarial (alternative) | 12 (1.26%) | 14 (1.36%) | 1,724 (5.64%) | 1,695 (5.17%) |
+| TTCA | 1 (0.10%) | 1 (0.10%) | 9,123 (29.86%) | 9,161 (27.97%) |
+| Antioxidant FRS | 43 (4.51%) | 41 (3.97%) | 4,171 (13.65%) | 4,093 (12.50%) |
+| DPP-IV inhibitory | 0 (0.00%) | 0 (0.00%) | 207 (0.68%) | 266 (0.81%) |
+| Antimalarial (main) | 0 (0.00%) | 0 (0.00%) | 6,496 (21.26%) | 6,586 (20.11%) |
+| Anti-parasitic | 288 (30.22%) | 280 (27.13%) | 21,185 (69.33%) | 22,010 (67.20%) |
+| NeuroPred | 82 (8.60%) | 77 (7.46%) | 3,876 (12.68%) | 4,019 (12.27%) |
+| Anticancer (main) | 37 (3.88%) | 31 (3.00%) | 11,370 (37.21%) | 12,023 (36.71%) |
+| ACE inhibitory | 20 (2.10%) | 14 (1.36%) | 2,781 (9.10%) | 2,856 (8.72%) |
+| Allergenicity | 16 (1.68%) | 11 (1.07%) | 8,599 (28.14%) | 9,422 (28.77%) |
+| Antiviral | 55 (5.77%) | 52 (5.04%) | 7,501 (24.55%) | 7,221 (22.05%) |
+| Bitter | 635 (66.63%) | 641 (62.11%) | 5,037 (16.48%) | 4,986 (15.22%) |
+
+
 ### Serial model prioritization
 
-NTxPred2 evaluated 3,299/3,518 periodontitis-labelled BBB-high candidates (93.77%); 219/3,518 (6.23%) were outside the stated length range. Among evaluated candidates, 923/3,299 (27.98%) were model-positive. Subsequent aggregate filters retained 111 mebipred-positive candidates, 15 candidates with CHEL≥0.25, 12 candidates with CHEL≥0.25 and FRS<0.50, and 8 candidates with CHEL≥0.25 and FRS<0.45 (Table 1). Tightening the FRS threshold retained 8/12 (66.67%) of the main count. Because candidate-level handoff data were unavailable, 111/923 was not interpreted as a verified transition rate.
+NTxPred2 evaluated 3,299/3,518 periodontitis-labelled BBB-high candidates (93.77%); 219/3,518 (6.23%) were outside the stated length range. Among evaluated candidates, 923/3,299 (27.98%) were model-positive. Subsequent aggregate filters retained 111 mebipred-positive candidates, 15 candidates with CHEL≥0.25, 12 candidates with CHEL≥0.25 and FRS<0.50, and 8 candidates with CHEL≥0.25 and FRS<0.45 (Table 2). Tightening the FRS threshold retained 8/12 (66.67%) of the main count. Because candidate-level handoff data were unavailable, 111/923 was not interpreted as a verified transition rate.
 
-**Table 1. Aggregate computational prioritization results.**
+All 923 NTxPred2-positive candidates were reported to be ≤30 aa. Consequently, none of the 72 periodontitis-labelled, metaproteome-supported and dereplicated 31–50-aa BBB-high long peptides remained in the neurotoxicity-positive set that fed the downstream mebipred and AnOxPePred metal/CHEL/FRS filters. The aggregate 12-candidate endpoint therefore contained only short peptides. Row-level outputs were unavailable, so the exclusion reason for each long peptide could not be reconstructed.
+
+**Table 2. Aggregate computational prioritization results.**
 
 | Stage | Operational rule | n | Denominator or limitation |
 | --- | --- | ---: | --- |
@@ -90,9 +126,9 @@ NTxPred2 evaluated 3,299/3,518 periodontitis-labelled BBB-high candidates (93.77
 
 The separate table contained twelve unique peptides composed of standard amino acids and ranging from 7 to 9 residues. Eleven contained histidine, six contained cysteine, and every sequence contained at least one Arg or Lys. These properties provide plausible synthesis and coordination hypotheses but do not establish metal binding, BBB transport, toxicity, taxonomy, or correspondence to the aggregate endpoint.
 
-Vina means ranged from −9.60 to −8.25 kcal/mol, with standard deviations from 0.04 to 0.12 (Table 2). FLLHTTR, YLSLLQR, and ALLLHRC had the three lowest means; HLPLLHRCC and HVLLLRQCA had the two highest. The 1.35-kcal/mol span describes only this scoring table. The run-level denominator for the standard deviations was unavailable, and no residue-level interaction could be evaluated without poses.
+Vina means ranged from −9.60 to −8.25 kcal/mol, with standard deviations from 0.04 to 0.12 (Table 3). FLLHTTR, YLSLLQR, and ALLLHRC had the three lowest means; HLPLLHRCC and HVLLLRQCA had the two highest. The 1.35-kcal/mol span describes only this scoring table. The run-level denominator for the standard deviations was unavailable, and no residue-level interaction could be evaluated without poses.
 
-**Table 2. Twelve-sequence set and available AChE docking scores.**
+**Table 3. Twelve-sequence set and available AChE docking scores.**
 
 | Rank | Sequence | Length (aa) | Mean score (kcal/mol) | SD |
 | ---: | --- | ---: | ---: | ---: |
@@ -138,6 +174,8 @@ A credible molecular chain requires sequence-to-contig or assembly mapping, samp
 The first priority is to recover a candidate-level table linking sequence, stable identifier, genomic coordinates, assembly, sample, group, taxonomy, peptide-spectrum evidence, every predictor score and applicability flag, CHEL/FRS values, main/strict membership, and docking ligand identity. This would resolve whether the twelve explicit sequences are the same twelve candidates represented by the aggregate endpoint and identify the stricter subset of eight.
 
 After fixed-version computational reproduction, synthesized peptides should undergo identity, purity, solubility, aggregation, and serum/protease-stability testing. BBB transport and cytotoxicity should be evaluated separately using concentration–response designs and non-neuronal controls. Metal chemistry, AChE/BChE activity, direct binding, and Aβ aggregation should then be tested under prespecified conditions. The ongoing MD extension will contribute trajectory-derived stability and contact measurements after quality control, but disease models should be considered only after molecular identity, exposure, reproducible biochemical activity, and biologically replicated phenotypes have been established.
+
+A further pipeline limitation is the length-dependent attrition introduced after BBB prioritization. Although 72 metaproteome-supported and dereplicated long peptides were BBB-high in the periodontitis-labelled branch, all 923 NTxPred2-positive sequences were ≤30 aa; the downstream web-predictor cascade for metal binding and CHEL/FRS therefore retained no long peptide, and the final aggregate set of 12 consisted only of short peptides. This pattern does not show that long peptides biologically lack neurotoxicity or metal-related activity. It may reflect the serial thresholds, model applicability or calibration, and web-predictor implementation; without candidate-level scores, these explanations cannot be separated.
 
 The decisive limitations are the absence of row-level funnel data, unresolved membership of the aggregate 12 and 8 endpoints, lack of raw docking inputs and poses, ongoing MD trajectory analysis, and absence of biological measurements. The similar aggregate retention rates in the healthy-labelled and periodontitis-labelled libraries cannot support disease enrichment because the participant or sample is the appropriate inferential unit. These constraints limit the present work to computational prioritization and validation planning.
 

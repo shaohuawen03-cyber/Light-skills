@@ -6,14 +6,17 @@
       "label": "concise/English",
       "markdown": "manuscript/concise/English.md",
       "docx": "manuscript/concise/English.docx",
-      "markdown_sha256": "6aedf22bd8cf98f92c0d30d7c9931e7d2047f7cad7f70cfc58d4a00000f4fab2",
-      "docx_sha256": "b1992d9fc101045ab8f2218ef98c2b52f491f2a2fe215f16e2a459513b253a31",
+      "markdown_sha256": "e1870916e12d72fe4a686ba18cf4dd3009b11f28528c9c3258b5ecfebfcb6217",
+      "docx_sha256": "7dfbe9e65504d61e56fb58d39940bc9e0ded439a07557be21913e4def2a994b7",
       "cited_key_count": 22,
       "reference_count": 22,
       "reference_doi_count": 22,
-      "body_word_count": 2978,
-      "body_character_count": 23067,
+      "body_word_count": 3728,
+      "body_character_count": 28039,
       "abstract_word_count": 159,
+      "multidimensional_table_data_row_counts": [
+        22
+      ],
       "administrative_pattern_hits": [],
       "abstract_conclusion_pattern_hits": [],
       "prohibited_no_md_result_pattern_hits": [],
@@ -103,6 +106,21 @@
           "header_bottom_rule_present_in_every_cell": true,
           "body_cells_have_no_overriding_borders": true,
           "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
         }
       ],
       "checks": {
@@ -120,6 +138,8 @@
         "specific_participant_specimen_mag_counts_absent": true,
         "markdown_has_no_figure_markup": true,
         "all_locked_scientific_values_present": true,
+        "long_and_short_multidimensional_results_retained": true,
+        "short_only_final_set_and_long_peptide_attrition_limit_reported": true,
         "pandoc_citation_keys_present": true,
         "all_citation_keys_exist_in_bibtex": true,
         "introduction_uses_one_reference_per_citation": true,
@@ -145,7 +165,8 @@
         "every_docx_table_is_three_line": true,
         "docx_contains_rendered_numbers_not_citekeys": true,
         "docx_does_not_claim_unverified_zotero_live_fields": true,
-        "docx_locked_values_present": true
+        "docx_locked_values_present": true,
+        "docx_multidimensional_values_and_long_peptide_limit_present": true
       },
       "verdict": "PASS"
     },
@@ -153,14 +174,17 @@
       "label": "concise/Chinese",
       "markdown": "manuscript/concise/Chinese.md",
       "docx": "manuscript/concise/Chinese.docx",
-      "markdown_sha256": "f0fd4c17a1c5b41e6b5dc85de332bca69c6fcc0e3736cdcf9426383d64c05def",
-      "docx_sha256": "89ec35d265a50b3e73704791bc6ab9c48b298a2b073b2303a731a68869848f3f",
+      "markdown_sha256": "4d4fe2d6f01ec5c90acecc879d71fbda6b5923b2520bd3cc65d8ab53a0a10b0a",
+      "docx_sha256": "e1529a0bb0f2e22afc68e7e9966816f4f3d9a3a496159dc9aaf98a42a9241ddc",
       "cited_key_count": 22,
       "reference_count": 22,
       "reference_doi_count": 22,
-      "body_word_count": 415,
-      "body_character_count": 8214,
+      "body_word_count": 783,
+      "body_character_count": 10955,
       "abstract_word_count": 4,
+      "multidimensional_table_data_row_counts": [
+        22
+      ],
       "administrative_pattern_hits": [],
       "abstract_conclusion_pattern_hits": [],
       "prohibited_no_md_result_pattern_hits": [],
@@ -250,6 +274,21 @@
           "header_bottom_rule_present_in_every_cell": true,
           "body_cells_have_no_overriding_borders": true,
           "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
         }
       ],
       "checks": {
@@ -267,6 +306,8 @@
         "specific_participant_specimen_mag_counts_absent": true,
         "markdown_has_no_figure_markup": true,
         "all_locked_scientific_values_present": true,
+        "long_and_short_multidimensional_results_retained": true,
+        "short_only_final_set_and_long_peptide_attrition_limit_reported": true,
         "pandoc_citation_keys_present": true,
         "all_citation_keys_exist_in_bibtex": true,
         "introduction_uses_one_reference_per_citation": true,
@@ -292,7 +333,8 @@
         "every_docx_table_is_three_line": true,
         "docx_contains_rendered_numbers_not_citekeys": true,
         "docx_does_not_claim_unverified_zotero_live_fields": true,
-        "docx_locked_values_present": true
+        "docx_locked_values_present": true,
+        "docx_multidimensional_values_and_long_peptide_limit_present": true
       },
       "verdict": "PASS"
     }
@@ -302,7 +344,7 @@
     "chinese_concise_pass": true,
     "reference_inventory_is_synchronized": true,
     "both_docx_files_are_figure_free": true,
-    "all_four_tables_are_three_line": true,
+    "all_six_tables_are_three_line": true,
     "conclusion_and_statistical_analysis_sections_are_absent": true,
     "zotero_live_status_is_not_misrepresented": true
   },

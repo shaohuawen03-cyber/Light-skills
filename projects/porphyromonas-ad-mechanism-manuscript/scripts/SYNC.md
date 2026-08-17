@@ -27,7 +27,7 @@ git switch --track -c arena/019ff377-light-skills origin/arena/019ff377-light-sk
 projects/porphyromonas-ad-mechanism-manuscript/
 ```
 
-## Deterministic v3.8.0 rebuild
+## Deterministic v3.9.0 rebuild
 
 Run from the project root:
 
@@ -73,8 +73,8 @@ Zotero-live.
 After committing a clean tree on the fixed branch:
 
 ```bash
-python3 scripts/manage_version_tag.py create --version 3.8.0 --message "v3.8.0: single-paragraph abstracts, simplified endings, and indented body text" --push
-python3 scripts/manage_version_tag.py verify --version 3.8.0
+python3 scripts/manage_version_tag.py create --version 3.9.0 --message "v3.9.0: restore multidimensional long/short results and document long-peptide attrition" --push
+python3 scripts/manage_version_tag.py verify --version 3.9.0
 ```
 
 Existing release tags are immutable and must not be moved or overwritten.
