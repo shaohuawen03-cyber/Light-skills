@@ -1,0 +1,21 @@
+{
+  "schema": "local.full_docx_reproducibility.v1",
+  "fixed_core_timestamp": "2026-08-17T00:00:00Z",
+  "records": {
+    "English": {
+      "source": "manuscript/full/English.md",
+      "released_docx": "manuscript/full/English.docx",
+      "released_sha256": "6ed5cd0d6eb8e71da8474c20031753f08c0b83356a4cb93d3e47d0e1db86c843",
+      "isolated_rebuild_sha256": "6ed5cd0d6eb8e71da8474c20031753f08c0b83356a4cb93d3e47d0e1db86c843",
+      "byte_identical": true
+    },
+    "Chinese": {
+      "source": "manuscript/full/Chinese.md",
+      "released_docx": "manuscript/full/Chinese.docx",
+      "released_sha256": "3ffc4b29b9836fcd0f3723601767990958963b0514e5306799b7951333dddc0d",
+      "isolated_rebuild_sha256": "3ffc4b29b9836fcd0f3723601767990958963b0514e5306799b7951333dddc0d",
+      "byte_identical": true
+    }
+  },
+  "verdict": "PASS"
+}

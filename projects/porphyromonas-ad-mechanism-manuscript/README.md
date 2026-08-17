@@ -2,7 +2,7 @@
 
 ## 项目定位
 
-本项目以`source_materials/材料与方法及结果_机制研究版.docx`为**主要筛选结果来源**，并按用户要求整合指定外部v0.4项目中的12条序列和AChE对接汇总。两类结果始终分层报告：主要来源定义筛选漏斗；外部记录仅提供“来源报告”的序列/分数，不能追溯填补逐行筛选数据，也不代表已独立复现对接。
+本项目以`source_materials/材料与方法及结果_机制研究版.docx`为**主要筛选结果来源**，并分层整合单独归档的外部来源记录中的12条序列和AChE对接汇总。主要来源定义筛选漏斗；外部记录仅提供“来源报告”的序列/分数，不能追溯填补逐行筛选数据，也不代表已独立复现对接。
 
 项目维护一套中英文分节对照的原创研究型SCI科学内容包。研究定位为**汇总层面、保留来源边界的描述性计算优选与假设生成**。不声称牙周炎特异性、当前队列表达、特定微生物来源、实测BBB转运/毒性/金属结合、经验证的AChE结合、完成的MD、AD机制或因果关系。
 
@@ -12,9 +12,10 @@
 
 - `VERSION_HISTORY.md` — 各版稿件、精确Git检查点、标签及安全恢复命令的唯一版本台账。
 - `scripts/manage_version_tag.py` — 创建和核验不可覆盖annotated tag的跨平台脚本。
-- `manuscript/manuscript_en.md`、`manuscript_zh.md` — 扩展英文稿与平行中文稿。
-- `manuscript/concise/English.docx`、`Chinese.docx` — v3.3.0精简SCI稿，英文和中文独立成卷；无页眉、页脚或页码域。
-- `manuscript/manuscript_bilingual.md`、`.docx` — 分节对照双语完整主稿及Word包。
+- `manuscript/full/English.md`、`English.docx` — v3.4.0完整英文SCI稿及无页眉、页脚和页码域的确定性Word包。
+- `manuscript/full/Chinese.md`、`Chinese.docx` — v3.4.0平行完整中文SCI稿及无页眉、页脚和页码域的确定性Word包。
+- `manuscript/concise/English.docx`、`Chinese.docx` — 冻结的v3.3.0精简SCI稿，英文和中文独立成卷。
+- `manuscript/manuscript_en.md`、`manuscript_zh.md`及`manuscript_bilingual.*` — v3.0.0既往扩展/双语组合稿，保留作历史基线，不是v3.4.0交付物。
 - `manuscript/supplementary_tables_bilingual.md`、`.docx` — S1–S6双语补充表。
 - `manuscript/figures/` — 三幅活动主图的SVG/PNG；外部对接PDF仅作来源存档。
 - `submission/` — 期刊定位、预投稿询问、投稿信模板、标题页、Highlights及就绪清单。
@@ -89,7 +90,19 @@ python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T0
   --output manuscript/concise/Chinese.docx \
   --title "深度学习引导的牙周炎—阿尔茨海默病界面口腔微肽多模型优选"
 
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z \
+  --input manuscript/full/English.md \
+  --output manuscript/full/English.docx \
+  --title "Deep-Learning-Guided Multi-Model Prioritization of Periodontitis-Cohort Oral Micropeptides"
+
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z \
+  --input manuscript/full/Chinese.md \
+  --output manuscript/full/Chinese.docx \
+  --title "深度学习引导的牙周炎队列口腔微肽多模型优选"
+
 python3 scripts/audit_concise_package.py
+python3 scripts/audit_full_manuscripts.py
+python3 scripts/audit_full_docx_reproducibility.py
 python3 scripts/audit_docx_packages.py
 ```
 

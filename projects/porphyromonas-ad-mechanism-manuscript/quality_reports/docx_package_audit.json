@@ -18,6 +18,7 @@
         "word/media/image3.png"
       ],
       "missing_expected_tokens": [],
+      "prohibited_tokens_found": [],
       "document_text_characters": 67614,
       "clean_manuscript_required": false,
       "header_footer_members": [
@@ -48,7 +49,8 @@
         "table_minimum_met": true,
         "drawing_minimum_met": true,
         "media_count_matches": true,
-        "expected_tokens_present": true
+        "expected_tokens_present": true,
+        "prohibited_tokens_absent": true
       },
       "verdict": "PASS"
     },
@@ -64,6 +66,7 @@
       "drawings": 0,
       "embedded_media": [],
       "missing_expected_tokens": [],
+      "prohibited_tokens_found": [],
       "document_text_characters": 5876,
       "clean_manuscript_required": false,
       "header_footer_members": [
@@ -94,7 +97,8 @@
         "table_minimum_met": true,
         "drawing_minimum_met": true,
         "media_count_matches": true,
-        "expected_tokens_present": true
+        "expected_tokens_present": true,
+        "prohibited_tokens_absent": true
       },
       "verdict": "PASS"
     },
@@ -112,6 +116,7 @@
         "word/media/image1.png"
       ],
       "missing_expected_tokens": [],
+      "prohibited_tokens_found": [],
       "document_text_characters": 20646,
       "clean_manuscript_required": true,
       "header_footer_members": [],
@@ -136,6 +141,7 @@
         "drawing_minimum_met": true,
         "media_count_matches": true,
         "expected_tokens_present": true,
+        "prohibited_tokens_absent": true,
         "header_footer_parts_absent": true,
         "header_footer_relationships_absent": true,
         "page_field_absent": true,
@@ -160,6 +166,7 @@
         "word/media/image1.png"
       ],
       "missing_expected_tokens": [],
+      "prohibited_tokens_found": [],
       "document_text_characters": 9380,
       "clean_manuscript_required": true,
       "header_footer_members": [],
@@ -184,6 +191,111 @@
         "drawing_minimum_met": true,
         "media_count_matches": true,
         "expected_tokens_present": true,
+        "prohibited_tokens_absent": true,
+        "header_footer_parts_absent": true,
+        "header_footer_relationships_absent": true,
+        "page_field_absent": true,
+        "automatic_section_page_breaks_absent": true,
+        "administrative_metadata_absent": true,
+        "zip_member_timestamps_stable": true,
+        "core_timestamp_matches_release": true
+      },
+      "verdict": "PASS"
+    },
+    "manuscript/full/English.docx": {
+      "path": "manuscript/full/English.docx",
+      "size_bytes": 638485,
+      "sha256": "6ed5cd0d6eb8e71da8474c20031753f08c0b83356a4cb93d3e47d0e1db86c843",
+      "zip_crc_error": null,
+      "xml_parse_errors": [],
+      "relationship_errors": [],
+      "paragraphs": 426,
+      "tables": 4,
+      "drawings": 3,
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png"
+      ],
+      "missing_expected_tokens": [],
+      "prohibited_tokens_found": [],
+      "document_text_characters": 56449,
+      "clean_manuscript_required": true,
+      "header_footer_members": [],
+      "page_break_before_count": 0,
+      "administrative_metadata_hits": [],
+      "zip_member_timestamps": [
+        [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "checks": {
+        "crc_ok": true,
+        "all_xml_parses": true,
+        "all_internal_relationship_targets_exist": true,
+        "paragraph_minimum_met": true,
+        "table_minimum_met": true,
+        "drawing_minimum_met": true,
+        "media_count_matches": true,
+        "expected_tokens_present": true,
+        "prohibited_tokens_absent": true,
+        "header_footer_parts_absent": true,
+        "header_footer_relationships_absent": true,
+        "page_field_absent": true,
+        "automatic_section_page_breaks_absent": true,
+        "administrative_metadata_absent": true,
+        "zip_member_timestamps_stable": true,
+        "core_timestamp_matches_release": true
+      },
+      "verdict": "PASS"
+    },
+    "manuscript/full/Chinese.docx": {
+      "path": "manuscript/full/Chinese.docx",
+      "size_bytes": 638566,
+      "sha256": "3ffc4b29b9836fcd0f3723601767990958963b0514e5306799b7951333dddc0d",
+      "zip_crc_error": null,
+      "xml_parse_errors": [],
+      "relationship_errors": [],
+      "paragraphs": 426,
+      "tables": 4,
+      "drawings": 3,
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png"
+      ],
+      "missing_expected_tokens": [],
+      "prohibited_tokens_found": [],
+      "document_text_characters": 24931,
+      "clean_manuscript_required": true,
+      "header_footer_members": [],
+      "page_break_before_count": 0,
+      "administrative_metadata_hits": [],
+      "zip_member_timestamps": [
+        [
+          1980,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "checks": {
+        "crc_ok": true,
+        "all_xml_parses": true,
+        "all_internal_relationship_targets_exist": true,
+        "paragraph_minimum_met": true,
+        "table_minimum_met": true,
+        "drawing_minimum_met": true,
+        "media_count_matches": true,
+        "expected_tokens_present": true,
+        "prohibited_tokens_absent": true,
         "header_footer_parts_absent": true,
         "header_footer_relationships_absent": true,
         "page_field_absent": true,

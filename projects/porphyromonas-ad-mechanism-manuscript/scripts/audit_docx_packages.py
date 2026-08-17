@@ -75,6 +75,81 @@ PACKAGES = {
             "参考文献",
         ],
     },
+    "manuscript/full/English.docx": {
+        "minimum_paragraphs": 400,
+        "minimum_tables": 4,
+        "minimum_drawings": 3,
+        "expected_media": 3,
+        "clean_manuscript": True,
+        "expected_core_timestamp": "2026-08-17T00:00:00Z",
+        "tokens": [
+            "Deep-Learning-Guided Multi-Model Prioritization of Periodontitis-Cohort Oral Micropeptides",
+            "11 orally healthy controls and 11 patients with periodontitis",
+            "66 specimens",
+            "118 sequence-assembly analyses",
+            "esm2_t6_8M_UR50D",
+            "six-layer task-specific convolutional neural network",
+            "fine-tuning the ESM2-t30 protein language model",
+            "two-tier artificial-neural-network framework",
+            "multi-task deep convolutional neural network",
+            "FLLHTTR",
+            "HVLLLRQCA",
+            "−9.60",
+            "Declarations",
+            "References",
+        ],
+        "prohibited_tokens": [
+            "Article type:",
+            "Draft status:",
+            "user-designated",
+            "external-v0.4",
+            "PRJEB65451 remains unresolved",
+            "could not be independently resolved",
+            "24 healthy",
+            "24 controls",
+            "26 periodontitis",
+            "26 patients",
+            "296 high-quality",
+            "accountable authors",
+            "pre-submission",
+        ],
+    },
+    "manuscript/full/Chinese.docx": {
+        "minimum_paragraphs": 400,
+        "minimum_tables": 4,
+        "minimum_drawings": 3,
+        "expected_media": 3,
+        "clean_manuscript": True,
+        "expected_core_timestamp": "2026-08-17T00:00:00Z",
+        "tokens": [
+            "深度学习引导的牙周炎队列口腔微肽多模型优选",
+            "11名口腔健康对照和11名牙周炎患者",
+            "66份标本",
+            "118项序列组装分析",
+            "esm2_t6_8M_UR50D",
+            "六层卷积神经网络",
+            "微调ESM2-t30蛋白质语言模型",
+            "两级人工神经网络框架",
+            "多任务深度卷积神经网络",
+            "FLLHTTR",
+            "HVLLLRQCA",
+            "−9.60",
+            "声明",
+            "参考文献",
+        ],
+        "prohibited_tokens": [
+            "文章类型：",
+            "草稿状态：",
+            "用户指定",
+            "外部v0.4",
+            "当前环境中无法独立解析PRJEB65451",
+            "责任作者",
+            "投稿前",
+            "24名健康",
+            "26名牙周炎",
+            "296个高质量",
+        ],
+    },
 }
 W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 REL_NS = "http://schemas.openxmlformats.org/package/2006/relationships"
@@ -161,6 +236,10 @@ def audit(path: Path, spec: dict) -> dict:
         )
 
     missing_tokens = [token for token in spec["tokens"] if token not in text]
+    prohibited_tokens_found = [
+        token for token in spec.get("prohibited_tokens", [])
+        if token.lower() in text.lower()
+    ]
     clean_required = bool(spec.get("clean_manuscript"))
     administrative_tokens = [
         "Bilingual scientific-content draft", "Arena.ai drafting workflow",
@@ -193,6 +272,7 @@ def audit(path: Path, spec: dict) -> dict:
         "drawing_minimum_met": drawings >= spec["minimum_drawings"],
         "media_count_matches": len(media) == spec["expected_media"],
         "expected_tokens_present": not missing_tokens,
+        "prohibited_tokens_absent": not prohibited_tokens_found,
     }
     if clean_required:
         structural_checks.update(clean_checks)
@@ -204,6 +284,7 @@ def audit(path: Path, spec: dict) -> dict:
         "drawings": drawings,
         "embedded_media": media,
         "missing_expected_tokens": missing_tokens,
+        "prohibited_tokens_found": prohibited_tokens_found,
         "document_text_characters": len(text),
         "clean_manuscript_required": clean_required,
         "header_footer_members": header_footer_members,
