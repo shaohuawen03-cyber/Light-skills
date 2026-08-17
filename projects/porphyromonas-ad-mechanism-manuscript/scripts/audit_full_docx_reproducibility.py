@@ -14,8 +14,8 @@ BUILDER = ROOT / "scripts" / "build_docx_stdlib.py"
 OUT = ROOT / "quality_reports" / "full_docx_reproducibility.json"
 TIMESTAMP = "2026-08-17T00:00:00Z"
 SPECS = {
-    "English": "Deep-Learning-Guided Multi-Model Prioritization of Periodontitis-Cohort Oral Micropeptides",
-    "Chinese": "深度学习引导的牙周炎队列口腔微肽多模型优选",
+    "English": "English",
+    "Chinese": "Chinese",
 }
 
 
@@ -51,7 +51,7 @@ def main() -> int:
             }
     verdict = "PASS" if all(item["byte_identical"] for item in records.values()) else "FAIL"
     report = {
-        "schema": "local.full_docx_reproducibility.v1",
+        "schema": "local.full_docx_reproducibility.v2",
         "fixed_core_timestamp": TIMESTAMP,
         "records": records,
         "verdict": verdict,

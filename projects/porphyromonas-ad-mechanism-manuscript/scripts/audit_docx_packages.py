@@ -76,22 +76,26 @@ PACKAGES = {
         ],
     },
     "manuscript/full/English.docx": {
-        "minimum_paragraphs": 400,
+        "minimum_paragraphs": 420,
         "minimum_tables": 4,
         "minimum_drawings": 3,
         "expected_media": 3,
         "clean_manuscript": True,
         "expected_core_timestamp": "2026-08-17T00:00:00Z",
+        "expected_core_title": "English",
+        "expected_start_token": "Abstract",
         "tokens": [
-            "Deep-Learning-Guided Multi-Model Prioritization of Periodontitis-Cohort Oral Micropeptides",
-            "11 orally healthy controls and 11 patients with periodontitis",
-            "66 specimens",
-            "118 sequence-assembly analyses",
+            "Periodontitis-associated oral dysbiosis",
+            "computation-only",
+            "PRJEB65451 is not an independent clinical cohort",
             "esm2_t6_8M_UR50D",
             "six-layer task-specific convolutional neural network",
             "fine-tuning the ESM2-t30 protein language model",
             "two-tier artificial-neural-network framework",
             "multi-task deep convolutional neural network",
+            "Prospective GROMACS molecular-dynamics protocol",
+            "100 ns with a 2-fs time step",
+            "no molecular-dynamics result is reported",
             "FLLHTTR",
             "HVLLLRQCA",
             "−9.60",
@@ -99,38 +103,36 @@ PACKAGES = {
             "References",
         ],
         "prohibited_tokens": [
-            "Article type:",
-            "Draft status:",
-            "user-designated",
-            "external-v0.4",
-            "PRJEB65451 remains unresolved",
-            "could not be independently resolved",
-            "24 healthy",
-            "24 controls",
-            "26 periodontitis",
-            "26 patients",
-            "296 high-quality",
-            "accountable authors",
-            "pre-submission",
+            "Deep-Learning-Guided Multi-Model Prioritization of Periodontitis-Cohort Oral Micropeptides",
+            "Article type:", "Draft status:", "user-designated", "external-v0.4",
+            "PRJEB65451 remains unresolved", "could not be independently resolved",
+            "11 orally healthy controls", "11 patients with periodontitis",
+            "22 participants", "66 specimens", "118 sequence-assembly analyses",
+            "24 healthy", "24 controls", "26 periodontitis", "26 patients",
+            "296 high-quality", "accountable authors", "pre-submission",
         ],
     },
     "manuscript/full/Chinese.docx": {
-        "minimum_paragraphs": 400,
+        "minimum_paragraphs": 420,
         "minimum_tables": 4,
         "minimum_drawings": 3,
         "expected_media": 3,
         "clean_manuscript": True,
         "expected_core_timestamp": "2026-08-17T00:00:00Z",
+        "expected_core_title": "Chinese",
+        "expected_start_token": "摘要",
         "tokens": [
-            "深度学习引导的牙周炎队列口腔微肽多模型优选",
-            "11名口腔健康对照和11名牙周炎患者",
-            "66份标本",
-            "118项序列组装分析",
+            "牙周炎相关口腔菌群失调",
+            "纯计算",
+            "PRJEB65451并非独立临床队列",
             "esm2_t6_8M_UR50D",
             "六层卷积神经网络",
             "微调ESM2-t30蛋白质语言模型",
             "两级人工神经网络框架",
             "多任务深度卷积神经网络",
+            "前瞻性GROMACS分子动力学方案",
+            "生产阶段为100 ns，步长2 fs",
+            "不报告任何分子动力学结果",
             "FLLHTTR",
             "HVLLLRQCA",
             "−9.60",
@@ -138,16 +140,12 @@ PACKAGES = {
             "参考文献",
         ],
         "prohibited_tokens": [
-            "文章类型：",
-            "草稿状态：",
-            "用户指定",
-            "外部v0.4",
-            "当前环境中无法独立解析PRJEB65451",
-            "责任作者",
-            "投稿前",
-            "24名健康",
-            "26名牙周炎",
-            "296个高质量",
+            "深度学习引导的牙周炎队列口腔微肽多模型优选",
+            "文章类型：", "草稿状态：", "用户指定", "外部v0.4",
+            "当前环境中无法独立解析PRJEB65451", "责任作者", "投稿前",
+            "11名口腔健康对照", "11名牙周炎患者", "22名参与者",
+            "66份标本", "118项序列组装分析", "24名健康",
+            "26名牙周炎", "296个高质量",
         ],
     },
 }
@@ -230,6 +228,10 @@ def audit(path: Path, spec: dict) -> dict:
             name for name in names
             if name.startswith("word/header") or name.startswith("word/footer")
         )
+        comment_annotation_members = sorted(
+            name for name in names
+            if name.startswith("word/comments") or name.startswith("word/people")
+        )
         page_break_before_count = (
             sum(1 for _ in doc_root.iter(f"{{{W}}}pageBreakBefore"))
             if doc_root is not None else 0
@@ -258,9 +260,20 @@ def audit(path: Path, spec: dict) -> dict:
         ),
         "automatic_section_page_breaks_absent": page_break_before_count == 0,
         "administrative_metadata_absent": not administrative_hits,
+        "comments_and_annotations_absent": (
+            not comment_annotation_members and "commentReference" not in xml_package_text
+        ),
         "zip_member_timestamps_stable": zip_timestamps == [(1980, 1, 1, 0, 0, 0)],
         "core_timestamp_matches_release": (
             xml_package_text.count(spec.get("expected_core_timestamp", "__missing__")) == 2
+        ),
+        "core_title_matches_expected_neutral_title": (
+            not spec.get("expected_core_title")
+            or f'<dc:title>{spec["expected_core_title"]}</dc:title>' in xml_package_text
+        ),
+        "visible_content_starts_with_expected_token": (
+            not spec.get("expected_start_token")
+            or text.startswith(spec["expected_start_token"])
         ),
     }
     structural_checks = {
@@ -288,6 +301,7 @@ def audit(path: Path, spec: dict) -> dict:
         "document_text_characters": len(text),
         "clean_manuscript_required": clean_required,
         "header_footer_members": header_footer_members,
+        "comment_annotation_members": comment_annotation_members,
         "page_break_before_count": page_break_before_count,
         "administrative_metadata_hits": administrative_hits,
         "zip_member_timestamps": zip_timestamps,
@@ -301,7 +315,7 @@ def main() -> int:
     records = {name: audit(ROOT / name, spec) for name, spec in PACKAGES.items()}
     verdict = "PASS" if all(item["verdict"] == "PASS" for item in records.values()) else "FAIL"
     report = {
-        "schema": "local.docx_package_audit.v3",
+        "schema": "local.docx_package_audit.v4",
         "rendering_status": (
             "UNAVAILABLE: no Office/LibreOffice/PDF renderer is installed; package and content checks are structural, not visual."
         ),

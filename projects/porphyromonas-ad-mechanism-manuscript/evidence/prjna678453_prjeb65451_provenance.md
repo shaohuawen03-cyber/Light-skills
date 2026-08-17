@@ -1,6 +1,6 @@
 # PRJNA678453–PRJEB65451 provenance verification
 
-Verification date: 2026-08-14
+Verification dates: 2026-08-14; reporting decision updated 2026-08-17
 
 ## Determination
 
@@ -8,8 +8,9 @@ Verification date: 2026-08-14
 2. **Clinical composition:** the cohort comprised 22 participants—11 orally healthy controls and 11 patients with periodontitis.
 3. **Specimens:** three oral specimens were collected per participant, yielding 66 specimens: 22 subgingival-plaque samples, 22 tongue scrapings and 22 stimulated-saliva samples.
 4. **Derived assembly resource:** PRJEB65451 (secondary accession ERP150574) is an EBI-EMG-brokered Third Party Annotation metagenomic assembly project derived from PRJNA678453 and assembled with metaSPAdes v3.15.3. It is not a second clinical cohort.
-5. **Assembly-record count:** the ENA browser currently displays 118 sequence-assembly analyses under PRJEB65451. This count is not interchangeable with participants, specimens, paired DNA/RNA measurements or metagenome-assembled genomes.
-6. **Unsupported source wording:** the statement that this accession chain contains 24 healthy controls, 26 patients with periodontitis and 296 high-quality metagenome-assembled genomes could not be substantiated from the accession records or primary cohort paper and is not retained in the concise manuscripts.
+5. **Assembly records are not MAGs:** the ENA project exposes one metagenome-assembly FASTA per registered analysis. These records are not interchangeable with participants, specimens, paired DNA/RNA measurements or metagenome-assembled genome bins.
+6. **User-derived mapping statement:** the principal source records an alternative participant mapping and a total of 296 high-quality metagenome-assembled genomes. The user clarified on 2026-08-17 that this was derived from their own raw-data mapping rather than copied from the public project description.
+7. **Independent recount status:** the public ENA assembly records do not include the bin manifest, bin-to-assembly map or quality table needed to recount 296 MAGs. No such files are present in the active manuscript repository. The value is therefore registered as user-provided and pending independent audit; it is neither rejected nor promoted into the full manuscript.
 
 ## Sources checked
 
@@ -21,4 +22,4 @@ Verification date: 2026-08-14
 
 ## Reporting rule
 
-The concise manuscripts report the 11-versus-11 participant composition and 66-specimen design as source-cohort provenance. Because participant-to-candidate and accession-to-group mappings are unavailable in the supplied aggregate material, these clinical counts are not used as candidate-level denominators and do not validate the health/disease labels of individual sequences.
+The frozen concise manuscripts retain the previously verified public-cohort composition. Beginning with the v3.5.0 full package, the English and Chinese article bodies do not report participant, specimen, assembly-analysis or MAG counts. They identify the accession relationship and state that the supplied candidate-to-sample, accession-to-group and MAG-bin mappings are unavailable for independent audit. The pending 296-MAG value may enter a later manuscript version only after a stable MAG manifest or recountable bin directory, bin-to-source mapping and quality-control table are archived.

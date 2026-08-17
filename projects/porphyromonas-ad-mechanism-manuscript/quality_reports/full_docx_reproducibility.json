@@ -1,19 +1,19 @@
 {
-  "schema": "local.full_docx_reproducibility.v1",
+  "schema": "local.full_docx_reproducibility.v2",
   "fixed_core_timestamp": "2026-08-17T00:00:00Z",
   "records": {
     "English": {
       "source": "manuscript/full/English.md",
       "released_docx": "manuscript/full/English.docx",
-      "released_sha256": "6ed5cd0d6eb8e71da8474c20031753f08c0b83356a4cb93d3e47d0e1db86c843",
-      "isolated_rebuild_sha256": "6ed5cd0d6eb8e71da8474c20031753f08c0b83356a4cb93d3e47d0e1db86c843",
+      "released_sha256": "ec1d24f509985e2f725f957263d0a68e37b969e1dcb243e4182a8c0185f3fef2",
+      "isolated_rebuild_sha256": "ec1d24f509985e2f725f957263d0a68e37b969e1dcb243e4182a8c0185f3fef2",
       "byte_identical": true
     },
     "Chinese": {
       "source": "manuscript/full/Chinese.md",
       "released_docx": "manuscript/full/Chinese.docx",
-      "released_sha256": "3ffc4b29b9836fcd0f3723601767990958963b0514e5306799b7951333dddc0d",
-      "isolated_rebuild_sha256": "3ffc4b29b9836fcd0f3723601767990958963b0514e5306799b7951333dddc0d",
+      "released_sha256": "bafdab114f91c9ae35e88b28a7e7e5f1934a78bde39bdd13723e99e03b465df2",
+      "isolated_rebuild_sha256": "bafdab114f91c9ae35e88b28a7e7e5f1934a78bde39bdd13723e99e03b465df2",
       "byte_identical": true
     }
   },

@@ -1,5 +1,5 @@
 {
-  "schema": "local.docx_package_audit.v3",
+  "schema": "local.docx_package_audit.v4",
   "rendering_status": "UNAVAILABLE: no Office/LibreOffice/PDF renderer is installed; package and content checks are structural, not visual.",
   "packages": {
     "manuscript/manuscript_bilingual.docx": {
@@ -25,6 +25,7 @@
         "word/footer1.xml",
         "word/header1.xml"
       ],
+      "comment_annotation_members": [],
       "page_break_before_count": 7,
       "administrative_metadata_hits": [
         "Bilingual scientific-content draft",
@@ -73,6 +74,7 @@
         "word/footer1.xml",
         "word/header1.xml"
       ],
+      "comment_annotation_members": [],
       "page_break_before_count": 5,
       "administrative_metadata_hits": [
         "Bilingual scientific-content draft",
@@ -120,6 +122,7 @@
       "document_text_characters": 20646,
       "clean_manuscript_required": true,
       "header_footer_members": [],
+      "comment_annotation_members": [],
       "page_break_before_count": 0,
       "administrative_metadata_hits": [],
       "zip_member_timestamps": [
@@ -147,8 +150,11 @@
         "page_field_absent": true,
         "automatic_section_page_breaks_absent": true,
         "administrative_metadata_absent": true,
+        "comments_and_annotations_absent": true,
         "zip_member_timestamps_stable": true,
-        "core_timestamp_matches_release": true
+        "core_timestamp_matches_release": true,
+        "core_title_matches_expected_neutral_title": true,
+        "visible_content_starts_with_expected_token": true
       },
       "verdict": "PASS"
     },
@@ -170,6 +176,7 @@
       "document_text_characters": 9380,
       "clean_manuscript_required": true,
       "header_footer_members": [],
+      "comment_annotation_members": [],
       "page_break_before_count": 0,
       "administrative_metadata_hits": [],
       "zip_member_timestamps": [
@@ -197,19 +204,22 @@
         "page_field_absent": true,
         "automatic_section_page_breaks_absent": true,
         "administrative_metadata_absent": true,
+        "comments_and_annotations_absent": true,
         "zip_member_timestamps_stable": true,
-        "core_timestamp_matches_release": true
+        "core_timestamp_matches_release": true,
+        "core_title_matches_expected_neutral_title": true,
+        "visible_content_starts_with_expected_token": true
       },
       "verdict": "PASS"
     },
     "manuscript/full/English.docx": {
       "path": "manuscript/full/English.docx",
-      "size_bytes": 638485,
-      "sha256": "6ed5cd0d6eb8e71da8474c20031753f08c0b83356a4cb93d3e47d0e1db86c843",
+      "size_bytes": 650566,
+      "sha256": "ec1d24f509985e2f725f957263d0a68e37b969e1dcb243e4182a8c0185f3fef2",
       "zip_crc_error": null,
       "xml_parse_errors": [],
       "relationship_errors": [],
-      "paragraphs": 426,
+      "paragraphs": 438,
       "tables": 4,
       "drawings": 3,
       "embedded_media": [
@@ -219,9 +229,10 @@
       ],
       "missing_expected_tokens": [],
       "prohibited_tokens_found": [],
-      "document_text_characters": 56449,
+      "document_text_characters": 68644,
       "clean_manuscript_required": true,
       "header_footer_members": [],
+      "comment_annotation_members": [],
       "page_break_before_count": 0,
       "administrative_metadata_hits": [],
       "zip_member_timestamps": [
@@ -249,19 +260,22 @@
         "page_field_absent": true,
         "automatic_section_page_breaks_absent": true,
         "administrative_metadata_absent": true,
+        "comments_and_annotations_absent": true,
         "zip_member_timestamps_stable": true,
-        "core_timestamp_matches_release": true
+        "core_timestamp_matches_release": true,
+        "core_title_matches_expected_neutral_title": true,
+        "visible_content_starts_with_expected_token": true
       },
       "verdict": "PASS"
     },
     "manuscript/full/Chinese.docx": {
       "path": "manuscript/full/Chinese.docx",
-      "size_bytes": 638566,
-      "sha256": "3ffc4b29b9836fcd0f3723601767990958963b0514e5306799b7951333dddc0d",
+      "size_bytes": 649897,
+      "sha256": "bafdab114f91c9ae35e88b28a7e7e5f1934a78bde39bdd13723e99e03b465df2",
       "zip_crc_error": null,
       "xml_parse_errors": [],
       "relationship_errors": [],
-      "paragraphs": 426,
+      "paragraphs": 438,
       "tables": 4,
       "drawings": 3,
       "embedded_media": [
@@ -271,9 +285,10 @@
       ],
       "missing_expected_tokens": [],
       "prohibited_tokens_found": [],
-      "document_text_characters": 24931,
+      "document_text_characters": 28157,
       "clean_manuscript_required": true,
       "header_footer_members": [],
+      "comment_annotation_members": [],
       "page_break_before_count": 0,
       "administrative_metadata_hits": [],
       "zip_member_timestamps": [
@@ -301,8 +316,11 @@
         "page_field_absent": true,
         "automatic_section_page_breaks_absent": true,
         "administrative_metadata_absent": true,
+        "comments_and_annotations_absent": true,
         "zip_member_timestamps_stable": true,
-        "core_timestamp_matches_release": true
+        "core_timestamp_matches_release": true,
+        "core_title_matches_expected_neutral_title": true,
+        "visible_content_starts_with_expected_token": true
       },
       "verdict": "PASS"
     }

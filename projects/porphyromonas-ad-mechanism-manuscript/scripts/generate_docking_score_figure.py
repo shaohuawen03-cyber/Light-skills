@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plot the external v0.4 source-reported Vina summary with an explicit provenance boundary."""
+"""Plot the external source-record Vina summary with an explicit provenance boundary."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -34,7 +34,7 @@ def main() -> None:
         '<rect width="1600" height="940" fill="#FFFFFF"/>',
         '<style>.t{font-family:Arial,Helvetica,sans-serif;fill:#102A43}.s{font-family:Arial,Helvetica,sans-serif;fill:#52616B}</style>',
         '<text x="130" y="58" class="t" font-size="34" font-weight="700">Source-reported PAS-focused docking summary (human AChE, PDB 4EY6)</text>',
-        '<text x="130" y="96" class="s" font-size="22">Mean ± SD values transcribed from external v0.4; raw runs and poses were unavailable for independent reproduction</text>',
+        '<text x="130" y="96" class="s" font-size="22">Mean ± SD values transcribed from the external source record; raw runs and poses were unavailable for independent reproduction</text>',
         f'<line x1="{left}" y1="{baseline}" x2="{right}" y2="{baseline}" stroke="#263238" stroke-width="3"/>',
         f'<line x1="{left}" y1="150" x2="{left}" y2="{baseline}" stroke="#263238" stroke-width="3"/>',
     ]
@@ -78,7 +78,7 @@ def main() -> None:
             if bold:
                 cmd.extend(["-font", "DejaVu-Sans"])
         text(130, 58, "Source-reported PAS-focused docking summary (human AChE, PDB 4EY6)", 34, bold=True)
-        text(130, 96, "Mean +/- SD values transcribed from external v0.4; raw runs and poses unavailable for reproduction", 22, "#52616B")
+        text(130, 96, "Mean +/- SD values transcribed from the external source record; raw runs and poses unavailable for reproduction", 22, "#52616B")
         draw(f"line {left},{baseline} {right},{baseline}", sw=3)
         draw(f"line {left},150 {left},{baseline}", sw=3)
         for tick in (-10.0, -9.5, -9.0, -8.5, -8.0):

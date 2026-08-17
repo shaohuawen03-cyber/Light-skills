@@ -49,8 +49,8 @@ python3 scripts/build_docx_stdlib.py --input manuscript/manuscript_bilingual.md 
 python3 scripts/build_docx_stdlib.py --input manuscript/supplementary_tables_bilingual.md --output manuscript/supplementary_tables_bilingual.docx --title "Bilingual supplementary tables / 中英文补充表"
 python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z --input manuscript/concise/English.md --output manuscript/concise/English.docx --title "Deep-Learning-Guided Multi-Model Prioritization of Oral Micropeptides at the Periodontitis–Alzheimer’s Disease Interface"
 python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z --input manuscript/concise/Chinese.md --output manuscript/concise/Chinese.docx --title "深度学习引导的牙周炎—阿尔茨海默病界面口腔微肽多模型优选"
-python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --input manuscript/full/English.md --output manuscript/full/English.docx --title "Deep-Learning-Guided Multi-Model Prioritization of Periodontitis-Cohort Oral Micropeptides"
-python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --input manuscript/full/Chinese.md --output manuscript/full/Chinese.docx --title "深度学习引导的牙周炎队列口腔微肽多模型优选"
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --input manuscript/full/English.md --output manuscript/full/English.docx --title "English"
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --input manuscript/full/Chinese.md --output manuscript/full/Chinese.docx --title "Chinese"
 python3 scripts/audit_concise_package.py
 python3 scripts/audit_full_manuscripts.py
 python3 scripts/audit_full_docx_reproducibility.py
@@ -64,11 +64,11 @@ python3 scripts/build_repository_inventory.py
 The authoritative version ledger is `VERSION_HISTORY.md`. To create the current protected annotated tag after committing a clean tree:
 
 ```bash
-python3 scripts/manage_version_tag.py create --version 3.4.0 --message "v3.4.0: separate provenance-corrected full English and Chinese manuscripts" --push
-python3 scripts/manage_version_tag.py verify --version 3.4.0
+python3 scripts/manage_version_tag.py create --version 3.5.0 --message "v3.5.0: expanded review-grade Introduction and prospective MD methods" --push
+python3 scripts/manage_version_tag.py verify --version 3.5.0
 ```
 
-The existing `porphyromonas-ad-manuscript-v3.0.0`, `porphyromonas-ad-manuscript-v3.1.0`, `porphyromonas-ad-manuscript-v3.2.0`, and `porphyromonas-ad-manuscript-v3.3.0` tags are immutable and must not be moved. Prefer `git worktree add <separate-path> <tag>` for recovery inspection; do not use destructive reset for routine version recovery.
+The existing `porphyromonas-ad-manuscript-v3.0.0` through `porphyromonas-ad-manuscript-v3.4.0` tags are immutable and must not be moved. Prefer `git worktree add <separate-path> <tag>` for recovery inspection; do not use destructive reset for routine version recovery.
 
 ## Important boundary
 

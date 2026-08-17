@@ -1,5 +1,5 @@
 {
-  "schema": "local.full_manuscript_audit.v1",
+  "schema": "local.full_manuscript_audit.v2",
   "scope": "Separate full English and Chinese manuscripts; no bilingual full deliverable.",
   "expected_files": [
     "Chinese.docx",
@@ -21,6 +21,10 @@
       "grouped_introduction_citations": [],
       "missing_required_tokens": [],
       "prohibited_tokens_found": [],
+      "abstract_word_count": 294,
+      "abstract_characters": 2443,
+      "introduction_word_count": 2737,
+      "introduction_characters": 21572,
       "references": {
         "numbers": [
           1,
@@ -147,11 +151,17 @@
           "zip_crc_ok": true,
           "header_footer_parts_absent": true,
           "page_number_fields_absent": true,
+          "comments_and_annotations_absent": true,
           "three_figures_embedded": true,
           "all_locked_numbers_present": true,
-          "all_twelve_sequences_present": true
+          "all_twelve_sequences_present": true,
+          "visible_content_starts_with_abstract": true,
+          "article_title_absent_from_visible_content": true,
+          "core_metadata_uses_neutral_language_name": true
         },
         "header_footer_parts": [],
+        "comment_annotation_parts": [],
+        "core_metadata_text": "English2026-08-17T00:00:00Z2026-08-17T00:00:00Z",
         "embedded_media": [
           "word/media/image1.png",
           "word/media/image2.png",
@@ -161,7 +171,10 @@
       },
       "checks": {
         "complete_sections_present_in_order": true,
-        "introduction_starts_with_ad_and_p_gingivalis_rationale": true,
+        "markdown_starts_with_abstract_and_has_no_visible_title": true,
+        "abstract_is_concise_unstructured_sci_narrative": true,
+        "introduction_has_review_grade_depth": true,
+        "introduction_starts_with_ad_then_p_gingivalis_rationale": true,
         "introduction_citation_brackets_are_single_reference": true,
         "reference_numbers_are_consecutive_1_to_53": true,
         "required_provenance_and_model_descriptions_present": true,
@@ -170,7 +183,8 @@
         "all_twelve_sequences_present": true,
         "three_figure_links_present": true,
         "all_figure_links_resolve": true,
-        "docx_contains_markdown_title": true,
+        "no_md_result_subsection_or_claim_in_results": true,
+        "hidden_article_title_absent_from_markdown": true,
         "docx_package_passes_clean_checks": true
       },
       "verdict": "PASS"
@@ -182,6 +196,10 @@
       "grouped_introduction_citations": [],
       "missing_required_tokens": [],
       "prohibited_tokens_found": [],
+      "abstract_word_count": 7,
+      "abstract_characters": 736,
+      "introduction_word_count": 64,
+      "introduction_characters": 6066,
       "references": {
         "numbers": [
           1,
@@ -308,11 +326,17 @@
           "zip_crc_ok": true,
           "header_footer_parts_absent": true,
           "page_number_fields_absent": true,
+          "comments_and_annotations_absent": true,
           "three_figures_embedded": true,
           "all_locked_numbers_present": true,
-          "all_twelve_sequences_present": true
+          "all_twelve_sequences_present": true,
+          "visible_content_starts_with_abstract": true,
+          "article_title_absent_from_visible_content": true,
+          "core_metadata_uses_neutral_language_name": true
         },
         "header_footer_parts": [],
+        "comment_annotation_parts": [],
+        "core_metadata_text": "Chinese2026-08-17T00:00:00Z2026-08-17T00:00:00Z",
         "embedded_media": [
           "word/media/image1.png",
           "word/media/image2.png",
@@ -322,7 +346,10 @@
       },
       "checks": {
         "complete_sections_present_in_order": true,
-        "introduction_starts_with_ad_and_p_gingivalis_rationale": true,
+        "markdown_starts_with_abstract_and_has_no_visible_title": true,
+        "abstract_is_concise_unstructured_sci_narrative": true,
+        "introduction_has_review_grade_depth": true,
+        "introduction_starts_with_ad_then_p_gingivalis_rationale": true,
         "introduction_citation_brackets_are_single_reference": true,
         "reference_numbers_are_consecutive_1_to_53": true,
         "required_provenance_and_model_descriptions_present": true,
@@ -331,17 +358,46 @@
         "all_twelve_sequences_present": true,
         "three_figure_links_present": true,
         "all_figure_links_resolve": true,
-        "docx_contains_markdown_title": true,
+        "no_md_result_subsection_or_claim_in_results": true,
+        "hidden_article_title_absent_from_markdown": true,
         "docx_package_passes_clean_checks": true
       },
       "verdict": "PASS"
     }
+  },
+  "editable_svg_audit": {
+    "figures": [
+      {
+        "path": "manuscript/figures/prioritization_funnel.svg",
+        "text_nodes": 31,
+        "characters": 1215,
+        "editable_text_present": true
+      },
+      {
+        "path": "manuscript/figures/fig5_docking_scores.svg",
+        "text_nodes": 21,
+        "characters": 429,
+        "editable_text_present": true
+      },
+      {
+        "path": "manuscript/figures/evidence_ladder.svg",
+        "text_nodes": 35,
+        "characters": 892,
+        "editable_text_present": true
+      }
+    ],
+    "checks": {
+      "three_svg_source_figures_present": true,
+      "all_svgs_retain_editable_text_nodes": true
+    },
+    "verdict": "PASS"
   },
   "package_checks": {
     "only_separate_english_and_chinese_deliverables_present": true,
     "no_bilingual_full_deliverable": true,
     "english_chinese_reference_number_parity": true,
     "english_chinese_doi_inventory_parity": true,
+    "editable_text_svg_sources_pass": true,
     "both_language_audits_pass": true
   },
   "verdict": "PASS"

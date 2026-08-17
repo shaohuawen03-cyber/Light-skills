@@ -2,6 +2,7 @@
 """Generate an editable SVG figure for the aggregate prioritization funnel."""
 from __future__ import annotations
 
+from html import escape
 from pathlib import Path
 import subprocess
 
@@ -14,11 +15,11 @@ PNG = FIG / "prioritization_funnel.png"
 def box(x, y, w, h, fill, title, lines, stroke="#18324A", title_size=31, body_size=25):
     body = [
         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="22" fill="{fill}" stroke="{stroke}" stroke-width="4"/>',
-        f'<text x="{x+w/2}" y="{y+42}" class="title" font-size="{title_size}" text-anchor="middle">{title}</text>',
+        f'<text x="{x+w/2}" y="{y+42}" class="title" font-size="{title_size}" text-anchor="middle">{escape(title)}</text>',
     ]
     start = y + 79
     for i, line in enumerate(lines):
-        body.append(f'<text x="{x+w/2}" y="{start+i*34}" class="body" font-size="{body_size}" text-anchor="middle">{line}</text>')
+        body.append(f'<text x="{x+w/2}" y="{start+i*34}" class="body" font-size="{body_size}" text-anchor="middle">{escape(line)}</text>')
     return "\n".join(body)
 
 
@@ -58,7 +59,7 @@ def main():
         '<text x="435" y="1307" class="small" font-size="22" text-anchor="middle">brain exposure, toxicity, pro-oxidant activity,</text>',
         '<text x="435" y="1339" class="small" font-size="22" text-anchor="middle">taxonomic origin, or AD causation</text>',
         '<text x="900" y="1460" class="small" font-size="23" text-anchor="middle">BBB, blood–brain barrier; CHEL, predicted chelating score; FRS, predicted free-radical-scavenging score.</text>',
-        '<text x="900" y="1500" class="small" font-size="21" text-anchor="middle">Principal-source identities are unavailable; external v0.4 reports 12 sequences, but row-level lineage remains unresolved.</text>',
+        '<text x="900" y="1500" class="small" font-size="21" text-anchor="middle">Principal-source identities are unavailable; the external source record reports 12 sequences, but row-level lineage remains unresolved.</text>',
         '</svg>',
     ]
     SVG.write_text("\n".join(parts), encoding="utf-8")
@@ -109,7 +110,7 @@ def main():
         rtext(435, 1307, "brain exposure, toxicity, pro-oxidant activity,", 22)
         rtext(435, 1339, "taxonomic origin, or AD causation", 22)
         rtext(900, 1460, "BBB, blood-brain barrier; CHEL, predicted chelating score; FRS, predicted free-radical-scavenging score.", 23)
-        rtext(900, 1500, "Principal-source identities unavailable; external v0.4 reports 12 sequences, but row-level lineage remains unresolved.", 21)
+        rtext(900, 1500, "Principal-source identities unavailable; the external source record reports 12 sequences, but row-level lineage remains unresolved.", 21)
         raster.append(str(PNG))
         subprocess.run(raster, check=True)
     print(PNG)

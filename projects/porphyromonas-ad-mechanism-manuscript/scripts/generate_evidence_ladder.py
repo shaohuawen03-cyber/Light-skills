@@ -12,19 +12,20 @@ PNG = FIG / "evidence_ladder.png"
 
 stages = [
     ("1", "Aggregate screening", "counts and thresholds", "REACHED", "#DFF3E4", "#176B3A"),
-    ("2", "Twelve sequences", "external v0.4 report", "PARTIAL", "#E7F5FF", "#0B6E99"),
+    ("2", "Twelve sequences", "external source record", "PARTIAL", "#E7F5FF", "#0B6E99"),
     ("3", "Docking scores", "external summary only", "PARTIAL", "#E7F5FF", "#0B6E99"),
-    ("4", "Translation and BBB", "transport / toxicity", "NOT TESTED", "#F3F4F6", "#5B6472"),
-    ("5", "Metal-dependent", "biochemical mechanism", "NOT TESTED", "#F3F4F6", "#5B6472"),
-    ("6", "Disease association", "or causality", "NOT TESTED", "#F3F4F6", "#5B6472"),
+    ("4", "MD protocol", "analysis pending", "METHOD ONLY", "#E7F5FF", "#0B6E99"),
+    ("5", "Translation and BBB", "transport / toxicity", "NOT TESTED", "#F3F4F6", "#5B6472"),
+    ("6", "Metal-dependent", "biochemical mechanism", "NOT TESTED", "#F3F4F6", "#5B6472"),
+    ("7", "Disease association", "or causality", "NOT TESTED", "#F3F4F6", "#5B6472"),
 ]
 
 
 def main() -> None:
     FIG.mkdir(parents=True, exist_ok=True)
     width, height = 1800, 980
-    box_w, box_h = 250, 245
-    x0, gap, y = 70, 40, 275
+    box_w, box_h = 215, 245
+    x0, gap, y = 45, 30, 275
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#78909C"/></marker></defs>',
