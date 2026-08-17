@@ -71,7 +71,9 @@ For each retained record, title, journal, year, and DOI were compared against th
 51. `10.1002/jcc.21334` — Trott and Olson; AutoDock Vina.
 52. `10.1021/acs.jcim.1c00203` — Eberhardt et al.; AutoDock Vina 1.2.
 53. `10.1093/nar/gkr326` — London et al.; FlexPepDock.
+54. `10.1016/j.softx.2015.06.001` — Abraham et al.; GROMACS software and parallel simulation framework.
+55. `10.1002/prot.22711` — Lindorff-Larsen et al.; Amber99SB-ILDN side-chain torsion potentials.
 
 ## Canonical formatted list
 
-The fully formatted numbered list is maintained identically in `manuscript/manuscript_en.md` and as the shared list in `manuscript/manuscript_bilingual.md`. The Chinese manuscript repeats the same bibliographic metadata because DOI, title, journal, and pagination are language-independent.
+The 55-reference DOI inventory is represented in both full manuscripts, whose numbered lists follow first-citation order and are identical between English and Chinese. The concise manuscripts use a synchronized 22-reference subset, also ordered by first citation. DOI, title, journal, and pagination are language-independent.

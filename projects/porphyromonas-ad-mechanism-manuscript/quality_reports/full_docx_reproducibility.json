@@ -1,19 +1,34 @@
 {
-  "schema": "local.full_docx_reproducibility.v2",
+  "schema": "local.docx_reproducibility.v3",
   "fixed_core_timestamp": "2026-08-17T00:00:00Z",
+  "bibliography": "references/references.bib",
   "records": {
-    "English": {
+    "full/English": {
       "source": "manuscript/full/English.md",
       "released_docx": "manuscript/full/English.docx",
-      "released_sha256": "ec1d24f509985e2f725f957263d0a68e37b969e1dcb243e4182a8c0185f3fef2",
-      "isolated_rebuild_sha256": "ec1d24f509985e2f725f957263d0a68e37b969e1dcb243e4182a8c0185f3fef2",
+      "released_sha256": "cf3322b28baf02d4936469ddacab458805da0c15e75f21479b9661456cb55547",
+      "isolated_rebuild_sha256": "cf3322b28baf02d4936469ddacab458805da0c15e75f21479b9661456cb55547",
       "byte_identical": true
     },
-    "Chinese": {
+    "full/Chinese": {
       "source": "manuscript/full/Chinese.md",
       "released_docx": "manuscript/full/Chinese.docx",
-      "released_sha256": "bafdab114f91c9ae35e88b28a7e7e5f1934a78bde39bdd13723e99e03b465df2",
-      "isolated_rebuild_sha256": "bafdab114f91c9ae35e88b28a7e7e5f1934a78bde39bdd13723e99e03b465df2",
+      "released_sha256": "6d566f90a4f951dcffd14aa3998610fc779cd2d68b42463fc56ebee4e95e3abb",
+      "isolated_rebuild_sha256": "6d566f90a4f951dcffd14aa3998610fc779cd2d68b42463fc56ebee4e95e3abb",
+      "byte_identical": true
+    },
+    "concise/English": {
+      "source": "manuscript/concise/English.md",
+      "released_docx": "manuscript/concise/English.docx",
+      "released_sha256": "e444906a2818795946a21668802e1565b2af3296e3103d954bcf017abeb85901",
+      "isolated_rebuild_sha256": "e444906a2818795946a21668802e1565b2af3296e3103d954bcf017abeb85901",
+      "byte_identical": true
+    },
+    "concise/Chinese": {
+      "source": "manuscript/concise/Chinese.md",
+      "released_docx": "manuscript/concise/Chinese.docx",
+      "released_sha256": "c2ff9853ec006f3b687c35c8cdf0e8efbb138eb9afc02075238b8388cea8efa8",
+      "isolated_rebuild_sha256": "c2ff9853ec006f3b687c35c8cdf0e8efbb138eb9afc02075238b8388cea8efa8",
       "byte_identical": true
     }
   },

@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Dependency-free Markdown-to-DOCX builder for the manuscript deliverables.
 
-Supported Markdown: headings, paragraphs, simple emphasis/code spans, pipe tables,
-numbered/bulleted items, and local PNG images. The output is an OOXML package that
-can be opened in Microsoft Word or LibreOffice. ZIP member metadata is stable; passing
-``--timestamp`` also fixes core metadata for byte-reproducible output. Rendering is not performed here.
+Supported Markdown: headings, paragraphs, simple emphasis/code spans, Pandoc-style
+citation keys, pipe tables, numbered/bulleted items, and local PNG images. The standard
+builder resolves citation keys to cached numbered text from a BibTeX file; genuine
+Zotero fields require the separate Zotero/Better BibTeX bridge. The output is an OOXML
+package that can be opened in Microsoft Word or LibreOffice. ZIP member metadata is
+stable; passing ``--timestamp`` also fixes core metadata for byte-reproducible output.
+Rendering is not performed here.
 """
 from __future__ import annotations
 
@@ -38,6 +41,72 @@ def x(text: str) -> str:
     return escape(text, quote=True)
 
 
+def bibtex_doi_to_key(path: Path) -> dict[str, str]:
+    """Return normalized DOI -> citekey mappings from a conventional BibTeX file."""
+    text = path.read_text(encoding="utf-8")
+    entries = re.finditer(
+        r"(?ms)^@[A-Za-z]+\{([^,]+),(.*?)(?=^@[A-Za-z]+\{|\Z)",
+        text,
+    )
+    mapping: dict[str, str] = {}
+    for entry in entries:
+        key, fields = entry.groups()
+        doi = re.search(r"(?mi)^\s*doi\s*=\s*[\{\"]([^\}\"]+)", fields)
+        if doi:
+            normalized = doi.group(1).strip().lower().rstrip(".")
+            if normalized in mapping and mapping[normalized] != key.strip():
+                raise ValueError(f"Duplicate DOI in BibTeX: {normalized}")
+            mapping[normalized] = key.strip()
+    return mapping
+
+
+def manuscript_citation_numbers(md_path: Path, bib_path: Path | None) -> dict[str, int]:
+    """Map Pandoc citekeys to the manuscript's numbered reference-list entries."""
+    text = md_path.read_text(encoding="utf-8")
+    if "[@" not in text:
+        return {}
+    if bib_path is None:
+        raise ValueError(f"Pandoc-style citations require --bibliography: {md_path}")
+    doi_to_key = bibtex_doi_to_key(bib_path)
+    mapping: dict[str, int] = {}
+    reference_lines = re.findall(r"(?m)^(\d+)\.\s.*?doi:(10\.\d{4,9}/\S+)", text)
+    for raw_number, raw_doi in reference_lines:
+        doi = raw_doi.rstrip(".,;:)]}").lower()
+        key = doi_to_key.get(doi)
+        if key is None:
+            raise ValueError(f"Reference DOI not found in BibTeX: {doi} ({md_path})")
+        mapping[key] = int(raw_number)
+    cited_keys = set(re.findall(r"@([A-Za-z0-9_.:+-]+)", text.split("## References", 1)[0].split("## 参考文献", 1)[0]))
+    missing = sorted(cited_keys - set(mapping))
+    if missing:
+        raise ValueError(f"Cited keys are absent from the numbered reference list: {missing}")
+    return mapping
+
+
+def render_number_cluster(numbers: list[int]) -> str:
+    """Render sorted citation numbers with consecutive values compressed to ranges."""
+    values = sorted(set(numbers))
+    groups: list[str] = []
+    i = 0
+    while i < len(values):
+        start = values[i]
+        end = start
+        while i + 1 < len(values) and values[i + 1] == end + 1:
+            i += 1
+            end = values[i]
+        groups.append(str(start) if start == end else f"{start}–{end}")
+        i += 1
+    return "[" + ",".join(groups) + "]"
+
+
+def citation_text(raw: str, citation_numbers: dict[str, int]) -> str:
+    keys = re.findall(r"@([A-Za-z0-9_.:+-]+)", raw)
+    unknown = [key for key in keys if key not in citation_numbers]
+    if unknown:
+        raise ValueError(f"Unknown citation keys: {unknown}")
+    return render_number_cluster([citation_numbers[key] for key in keys])
+
+
 def png_size(path: Path) -> tuple[int, int]:
     data = path.read_bytes()[:24]
     if data[:8] != b"\x89PNG\r\n\x1a\n":
@@ -65,16 +134,20 @@ def run_xml(text: str, *, bold=False, italic=False, code=False, size=None, color
     return f"<w:r>{rpr}<w:t{space}>{x(text)}</w:t></w:r>"
 
 
-def inline_runs(text: str, *, base_size=None) -> str:
+def inline_runs(text: str, *, base_size=None, citation_numbers: dict[str, int] | None = None) -> str:
     # Keep this intentionally conservative: no nested emphasis or Markdown links.
-    token = re.compile(r"(\*\*.+?\*\*|(?<!\*)\*[^*]+?\*(?!\*)|`[^`]+?`)")
+    token = re.compile(r"(\[@[^\]]+\]|\*\*.+?\*\*|(?<!\*)\*[^*]+?\*(?!\*)|`[^`]+?`)")
     out = []
     pos = 0
     for match in token.finditer(text):
         if match.start() > pos:
             out.append(run_xml(text[pos:match.start()], size=base_size))
         raw = match.group(0)
-        if raw.startswith("**"):
+        if raw.startswith("[@"):
+            if citation_numbers is None:
+                raise ValueError("Citation markup found without a citation-number map")
+            out.append(run_xml(citation_text(raw, citation_numbers), size=base_size))
+        elif raw.startswith("**"):
             out.append(run_xml(raw[2:-2], bold=True, size=base_size))
         elif raw.startswith("*"):
             out.append(run_xml(raw[1:-1], italic=True, size=base_size))
@@ -86,7 +159,7 @@ def inline_runs(text: str, *, base_size=None) -> str:
     return "".join(out)
 
 
-def para_xml(text: str, style="Normal", *, align=None, indent=None, keep=False, page_break_before=False, base_size=None) -> str:
+def para_xml(text: str, style="Normal", *, align=None, indent=None, keep=False, page_break_before=False, base_size=None, citation_numbers=None) -> str:
     ppr = [f'<w:pStyle w:val="{style}"/>']
     if align:
         ppr.append(f'<w:jc w:val="{align}"/>')
@@ -96,7 +169,7 @@ def para_xml(text: str, style="Normal", *, align=None, indent=None, keep=False, 
         ppr.append("<w:keepNext/>")
     if page_break_before:
         ppr.append("<w:pageBreakBefore/>")
-    return f"<w:p><w:pPr>{''.join(ppr)}</w:pPr>{inline_runs(text, base_size=base_size)}</w:p>"
+    return f"<w:p><w:pPr>{''.join(ppr)}</w:pPr>{inline_runs(text, base_size=base_size, citation_numbers=citation_numbers)}</w:p>"
 
 
 def image_para(rel_id: str, path: Path, docpr_id: int, alt: str) -> str:
@@ -123,7 +196,8 @@ def image_para(rel_id: str, path: Path, docpr_id: int, alt: str) -> str:
     return f'<w:p><w:pPr><w:pStyle w:val="Figure"/><w:jc w:val="center"/><w:keepNext/></w:pPr>{drawing}</w:p>'
 
 
-def table_xml(rows: list[list[str]]) -> str:
+def table_xml(rows: list[list[str]], citation_numbers: dict[str, int] | None = None) -> str:
+    """Build a journal-style three-line table: top, header-bottom, and final-bottom."""
     cols = max(len(r) for r in rows)
     rows = [r + [""] * (cols - len(r)) for r in rows]
     total = 9360
@@ -133,15 +207,33 @@ def table_xml(rows: list[list[str]]) -> str:
     for ri, row in enumerate(rows):
         cells = []
         for cell in row:
-            shade = '<w:shd w:val="clear" w:color="auto" w:fill="DCE6F1"/>' if ri == 0 else ""
-            tcpr = f'<w:tcPr><w:tcW w:w="{colw}" w:type="dxa"/>{shade}<w:vAlign w:val="center"/></w:tcPr>'
+            header_rule = (
+                '<w:tcBorders><w:bottom w:val="single" w:sz="8" '
+                'w:space="0" w:color="000000"/></w:tcBorders>'
+                if ri == 0 else ""
+            )
+            tcpr = (
+                f'<w:tcPr><w:tcW w:w="{colw}" w:type="dxa"/>{header_rule}'
+                '<w:vAlign w:val="center"/></w:tcPr>'
+            )
             ppr = '<w:pPr><w:pStyle w:val="TableText"/><w:spacing w:before="0" w:after="0" w:line="220" w:lineRule="auto"/></w:pPr>'
-            content = inline_runs(cell.strip(), base_size=17)
+            content = inline_runs(cell.strip(), base_size=17, citation_numbers=citation_numbers)
             cells.append(f'<w:tc>{tcpr}<w:p>{ppr}{content}</w:p></w:tc>')
         trpr = '<w:trPr><w:tblHeader/></w:trPr>' if ri == 0 else ""
         tr_xml.append(f'<w:tr>{trpr}{"".join(cells)}</w:tr>')
-    borders = "".join(f'<w:{side} w:val="single" w:sz="4" w:space="0" w:color="9AA6B2"/>' for side in ("top", "left", "bottom", "right", "insideH", "insideV"))
-    tblpr = f'<w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="5000" w:type="pct"/><w:tblLayout w:type="fixed"/><w:tblBorders>{borders}</w:tblBorders><w:tblCellMar><w:top w:w="70" w:type="dxa"/><w:left w:w="80" w:type="dxa"/><w:bottom w:w="70" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tblCellMar></w:tblPr>'
+    borders = (
+        '<w:top w:val="single" w:sz="12" w:space="0" w:color="000000"/>'
+        '<w:left w:val="nil"/><w:bottom w:val="single" w:sz="12" '
+        'w:space="0" w:color="000000"/><w:right w:val="nil"/>'
+        '<w:insideH w:val="nil"/><w:insideV w:val="nil"/>'
+    )
+    tblpr = (
+        '<w:tblPr><w:tblStyle w:val="ThreeLineTable"/><w:tblW w:w="5000" w:type="pct"/>'
+        f'<w:tblLayout w:type="fixed"/><w:tblBorders>{borders}</w:tblBorders>'
+        '<w:tblCellMar><w:top w:w="70" w:type="dxa"/><w:left w:w="80" w:type="dxa"/>'
+        '<w:bottom w:w="70" w:type="dxa"/><w:right w:w="80" w:type="dxa"/>'
+        '</w:tblCellMar></w:tblPr>'
+    )
     return f'<w:tbl>{tblpr}<w:tblGrid>{grid}</w:tblGrid>{"".join(tr_xml)}</w:tbl>'
 
 
@@ -154,8 +246,15 @@ def is_separator(line: str) -> bool:
     return bool(cells) and all(re.fullmatch(r":?-{3,}:?", c.replace(" ", "")) for c in cells)
 
 
-def parse_markdown(md_path: Path, *, section_page_breaks: bool = True):
+def parse_markdown(
+    md_path: Path,
+    *,
+    section_page_breaks: bool = True,
+    bibliography: Path | None = None,
+    reject_images: bool = False,
+):
     lines = md_path.read_text(encoding="utf-8").splitlines()
+    citation_numbers = manuscript_citation_numbers(md_path, bibliography)
     body = []
     images: dict[Path, str] = {}
     image_order: list[Path] = []
@@ -174,6 +273,8 @@ def parse_markdown(md_path: Path, *, section_page_breaks: bool = True):
             continue
         image = re.fullmatch(r"!\[(.*?)\]\((.*?)\)", line.strip())
         if image:
+            if reject_images:
+                raise ValueError(f"Image markup is prohibited for clean manuscripts: {md_path}:{i + 1}")
             alt, raw_path = image.groups()
             img_path = (md_path.parent / raw_path).resolve()
             if img_path not in images:
@@ -190,7 +291,7 @@ def parse_markdown(md_path: Path, *, section_page_breaks: bool = True):
             while i < len(lines) and lines[i].lstrip().startswith("|"):
                 rows.append(split_table_row(lines[i]))
                 i += 1
-            body.append(table_xml(rows))
+            body.append(table_xml(rows, citation_numbers))
             body.append('<w:p><w:pPr><w:spacing w:after="40"/></w:pPr></w:p>')
             continue
         heading = re.match(r"^(#{1,6})\s+(.+)$", line)
@@ -202,25 +303,25 @@ def parse_markdown(md_path: Path, *, section_page_breaks: bool = True):
             if level == 2:
                 page_break = section_page_breaks and not first_h2
                 first_h2 = False
-            body.append(para_xml(text, style, keep=True, page_break_before=page_break))
+            body.append(para_xml(text, style, keep=True, page_break_before=page_break, citation_numbers=citation_numbers))
             i += 1
             continue
         if re.match(r"^\d+\.\s+", line):
-            body.append(para_xml(line, "Reference", indent="360", base_size=18))
+            body.append(para_xml(line, "Reference", indent="360", base_size=18, citation_numbers=citation_numbers))
             i += 1
             continue
         if re.match(r"^[-*]\s+", line):
-            body.append(para_xml("• " + re.sub(r"^[-*]\s+", "", line), "ListParagraph", indent="360"))
+            body.append(para_xml("• " + re.sub(r"^[-*]\s+", "", line), "ListParagraph", indent="360", citation_numbers=citation_numbers))
             i += 1
             continue
         style = "Normal"
-        if line.startswith("**Table") or line.startswith("**表 ") or line.startswith("**Figure") or line.startswith("**图 "):
+        if line.startswith("**Table") or line.startswith("**表") or line.startswith("**Figure") or line.startswith("**图"):
             style = "Caption"
         elif line.startswith("**Article type") or line.startswith("**Draft status") or line.startswith("**文章类型") or line.startswith("**稿件状态") or line.startswith("**Bilingual"):
             style = "Note"
         elif line.startswith("**Keywords") or line.startswith("**关键词"):
             style = "Keywords"
-        body.append(para_xml(line, style))
+        body.append(para_xml(line, style, citation_numbers=citation_numbers))
         i += 1
     return "".join(body), images, image_order
 
@@ -242,7 +343,7 @@ def styles_xml() -> str:
   <w:style w:type="paragraph" w:styleId="Reference"><w:name w:val="Reference"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="60" w:line="220" w:lineRule="auto"/><w:jc w:val="left"/></w:pPr><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:style>
   <w:style w:type="paragraph" w:styleId="ListParagraph"><w:name w:val="List Paragraph"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="60"/></w:pPr></w:style>
   <w:style w:type="paragraph" w:styleId="TableText"><w:name w:val="Table Text"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="0"/><w:jc w:val="left"/></w:pPr><w:rPr><w:sz w:val="17"/><w:szCs w:val="17"/></w:rPr></w:style>
-  <w:style w:type="table" w:styleId="TableGrid"><w:name w:val="Table Grid"/><w:tblPr><w:tblBorders><w:top w:val="single" w:sz="4" w:color="9AA6B2"/><w:left w:val="single" w:sz="4" w:color="9AA6B2"/><w:bottom w:val="single" w:sz="4" w:color="9AA6B2"/><w:right w:val="single" w:sz="4" w:color="9AA6B2"/><w:insideH w:val="single" w:sz="4" w:color="9AA6B2"/><w:insideV w:val="single" w:sz="4" w:color="9AA6B2"/></w:tblBorders></w:tblPr></w:style>
+  <w:style w:type="table" w:styleId="ThreeLineTable"><w:name w:val="Three-Line Table"/><w:tblPr><w:tblBorders><w:top w:val="single" w:sz="12" w:color="000000"/><w:left w:val="nil"/><w:bottom w:val="single" w:sz="12" w:color="000000"/><w:right w:val="nil"/><w:insideH w:val="nil"/><w:insideV w:val="nil"/></w:tblBorders></w:tblPr></w:style>
 </w:styles>'''
 
 
@@ -253,10 +354,13 @@ def build(
     *,
     clean_manuscript: bool = False,
     core_timestamp: str | None = None,
+    bibliography: Path | None = None,
 ):
     body, images, image_order = parse_markdown(
         md_path,
         section_page_breaks=not clean_manuscript,
+        bibliography=bibliography,
+        reject_images=clean_manuscript,
     )
     ns = f'xmlns:w="{W}" xmlns:r="{R}" xmlns:wp="{WP}" xmlns:a="{A}" xmlns:pic="{PIC}"'
     header_footer_refs = "" if clean_manuscript else (
@@ -337,6 +441,11 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--title", default="Scientific manuscript")
     parser.add_argument(
+        "--bibliography",
+        type=Path,
+        help="BibTeX authority used to resolve Pandoc-style citation keys to reference numbers.",
+    )
+    parser.add_argument(
         "--timestamp",
         dest="core_timestamp",
         help="Fixed W3C timestamp for reproducible core metadata, e.g. 2026-08-14T00:00:00Z.",
@@ -363,6 +472,7 @@ def main():
         args.title,
         clean_manuscript=args.clean_manuscript,
         core_timestamp=args.core_timestamp,
+        bibliography=args.bibliography.resolve() if args.bibliography else None,
     )
 
 

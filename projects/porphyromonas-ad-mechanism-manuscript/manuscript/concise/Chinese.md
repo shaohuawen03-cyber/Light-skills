@@ -1,147 +1,123 @@
-# 深度学习引导的牙周炎—阿尔茨海默病界面口腔微肽多模型优选
-
 ## 摘要
 
-**背景：** 阿尔茨海默病（Alzheimer’s disease，AD）涉及淀粉样蛋白、tau、神经免疫和血管异常的相互作用。牙周感染，特别是涉及牙龈卟啉单胞菌（*Porphyromonas gingivalis*）的感染，被认为可能参与这一多因素过程，但其在人类中的因果关系和分子链路仍未解决。
+牙周炎相关口腔菌群失调被认为可能影响阿尔茨海默病（AD）相关炎症，但具体分子链路仍不确定。本研究对口腔小开放阅读框（smORF）汇总数据进行纯计算二次分析，以优选可供验证的微肽。筛选级联整合ESM-2嵌入与任务特异性卷积网络、ESM2-t30神经毒性模型、两级神经网络金属结合预测器和多任务抗氧化卷积网络。序列证据过滤从11,269,961条和11,721,988条smORF起始库中分别保留31,510条和33,786条候选。在牙周炎标记分支中，3,518条候选达到BBB高分；NTxPred2评价3,299条并将923条判为阳性，后续筛选依次保留111、15、12和8条候选。另一张表包含12条7–9 aa序列，其AChE Vina均值范围为−9.60至−8.25 kcal/mol。序列组成和评分排序可以核对，但12条序列与汇总终点的关系、对接执行和分子动力学结果均不可获得。因此，本研究形成的是供独立重现和实验检验的计算候选清单，而不是*Porphyromonas gingivalis*来源、脑暴露、AChE结合或AD机制的证据。
 
-**目的：** 在由*P. gingivalis*启发、但不进行菌种来源指认的AD假设框架内，优选可供机制验证的口腔微肽候选。
-
-**方法：** 对健康标记和牙周炎标记的口腔宏基因组候选集汇总记录实施深度学习引导的级联分析，整合蛋白质语言模型嵌入、任务特异性卷积神经网络、分层神经网络金属结合预测及多任务抗氧化预测。核查公共登录记录，以区分PRJNA678453来源队列与其衍生的EBI-EMG/MGnify第三方注释（TPA）组装项目PRJEB65451。来源报告乙酰胆碱酯酶（AChE）对接单独汇总，并仅进行描述性计算。
-
-**结果：** 所提供漏斗始于11,269,961条健康标记和11,721,988条牙周炎标记smORF，分别保留31,510条和33,786条经蛋白质组支持的非冗余候选。后续汇总记录包含3,518条BBB高分候选；NTxPred2实际覆盖3,299条，其中923条被判为神经毒性阳性。金属结合和抗氧化筛选依次保留111、15、12和最终8条候选。另一份外部记录列出12条序列，首尾为FLLHTTR和HVLLLRQCA，并报告其针对AChE的Vina均值范围为−9.60至−8.25 kcal/mol。
-
-**结论：** 本分析得到的是用于后续验证的紧凑计算候选集，而非已经证实的牙周炎—AD机制。序列来源链、菌种归属、独立对接复现和实验验证仍不可缺少。
-
-**关键词：** 阿尔茨海默病；牙龈卟啉单胞菌；牙周炎；口腔微肽；宏基因组学；机器学习；乙酰胆碱酯酶
+**关键词：** 阿尔茨海默病；牙龈卟啉单胞菌；牙周炎；口腔微肽；smORF；深度学习；乙酰胆碱酯酶
 
 ## 引言
 
-阿尔茨海默病（Alzheimer’s disease，AD）是一种进行性神经退行性疾病，也是痴呆的首要原因，其病理连续过程可在明显认知障碍出现前多年启动[1]。当前疾病模型将淀粉样蛋白β积累置于tau病理、突触功能障碍、先天免疫激活和神经血管损伤相互作用的网络中，而不再把疾病进展归因于单一通路[2]。
+阿尔茨海默病（AD）的发生发展涉及淀粉样蛋白、tau、突触、免疫和血管过程的相互作用，而非单一分子通路[@scheltens2021alzheimer]。淀粉样蛋白仍具有重要生物学意义，但其与疾病进展的关系必须在这一更广泛网络中解释[@selkoe2016amyloid]。
 
-牙周炎是一种与菌群失调相关的慢性炎症性疾病，其潜在神经系统影响推动了口腔—脑轴研究[3]。在失调性牙周生物膜中，牙龈卟啉单胞菌（*Porphyromonas gingivalis*）是一种具有显著免疫调节和组织破坏能力的革兰阴性厌氧条件致病菌[4]。溃疡化牙周界面可能使机体间歇性暴露于细菌、炎症介质和毒力产物，从而为局部口腔感染影响远隔组织提供生物学上合理的路径。
+牙周炎是一种与菌群失调相关的炎症性疾病，可能增加全身炎症负担，并推动了口腔—脑轴研究[@chalmers2025primer]。在牙周生物膜中，牙龈卟啉单胞菌（*Porphyromonas gingivalis*）是一种可参与蛋白水解、免疫调节、组织破坏和群落重塑的条件致病菌[@guo2010gingipain]。死后组织研究曾在AD脑组织中报告*P. gingivalis*相关信号，但不能据此确定方向或因果关系[@dominy2019pgingivalis]。小鼠反复口腔暴露可引起神经炎症和淀粉样蛋白相关改变，支持实验合理性，但不能直接外推到人类[@ilievski2018oral]。囊泡也被提出可运输浓缩微生物货物，但其与人类自然脑暴露的关系仍未解决[@nara2021omv]。一项孟德尔随机化分析未确认牙周病对AD的遗传因果效应，为强因果表述提供了重要限制[@hu2024mendelian]。
 
-多条互不排斥的路径可能连接*P. gingivalis*暴露与AD相关分子过程。一项死后组织研究在AD脑组织中报告了*P. gingivalis* DNA和牙龈蛋白酶免疫反应性，但这些观察尚不足以确定方向性或因果关系[5]。在野生型小鼠中，反复口腔感染引起神经炎症和淀粉样蛋白相关改变，支持实验可行性，但不能直接外推到人类[6]。另一项小鼠研究显示，*P. gingivalis*外膜囊泡可到达脑组织，并与炎症小体激活、tau磷酸化和记忆功能障碍相关[7]。相反，一项双样本孟德尔随机化分析未发现牙周病导致AD的遗传学证据，进一步表明人类因果关系仍未解决[8]。
+微生物组编码的微肽可能是一类尚未充分研究的分子。人类相关微生物组含有大量保守小基因[@sberro2019smallgenes]，专用注释方法能够提高常规流程容易遗漏的smORF检出率[@durrant2021sorf]。然而，预测序列不一定被翻译、从生物膜释放、在循环中保持稳定、跨越血脑屏障（BBB）或在神经组织中发挥作用。
 
-因此，牙周菌群失调与神经退行性改变之间的分子桥梁仍不完整。人类相关微生物组中广泛存在小开放阅读框，并编码数量庞大但尚未得到充分表征的肽分子库[9]。计算注释能够发现常规基因识别流程容易遗漏的候选小蛋白[10]。牙周炎标记口腔宏基因组候选集所代表的肽是否真实表达、能否从生物膜释放并进入循环、能否跨越血脑屏障（BBB），以及是否会影响神经元、金属/氧化还原或胆碱能过程，均属尚未解决的机制空白。为此，本研究实施深度学习引导的多模型优选，以形成可开展来源链重建和实验验证的候选集合。本分析明确保持探索性定位，不把候选归属于*P. gingivalis*，也不把模型分数视为AD机制证据。
+因此，相关机制仍不清楚。本研究旨在采用现代序列模型缩小口腔smORF汇总候选空间，表征现有12条肽，并明确检验AChE、金属/氧化还原、BBB和神经毒性假设所需的后续工作。分析保持探索性，不把任何候选归属于*P. gingivalis*，也不把模型评分视为生物学确认。
 
 ## 材料与方法
 
-### 研究设计与登录号来源
+### 研究设计与数据范围
 
-本研究为基于所提供汇总筛选记录的结构化描述性二次分析。记录包含健康标记和牙周炎标记候选的汇总数量，但不含参与者层面映射、登录号—分组对应表或逐行模型输出。
+本研究为纯计算二次分析，使用汇总筛选计数、一张12条序列表和一张AChE对接评分表。本文未开展参与者招募、标本采集、湿实验、新组学处理、预测器再训练、对接重跑或完整MD分析。完整漏斗的逐行序列、受试者/样本映射、登录号与分组对应关系、分类学信息、肽谱匹配、完整模型输出及对接输入均不可获得。
 
-主要序列来源为BioProject PRJNA678453。已发表队列共22名参与者，包括11名口腔健康对照和11名牙周炎患者；共采集66份口腔标本，包括22份龈下菌斑、22份舌刮取物和22份刺激性唾液，并完成配对宏基因组和宏转录组测量[11]。PRJEB65451经核验为由PRJNA678453衍生、使用metaSPAdes v3.15.3组装并由EBI-EMG/MGnify代理的第三方注释宏基因组组装项目，而不是独立临床队列。ENA记录目前在PRJEB65451下列出118项序列组装分析；这些组装记录不被解释为参与者、临床标本或宏基因组组装基因组。由于该登录号链及队列论文不支持24名健康对照、26名牙周炎患者和296个高质量宏基因组组装基因组的另一种构成，本研究不使用这些数量。经核验的临床构成仅用于说明来源，不作为候选层面推断的分母。
+PRJNA678453被视为配对口腔宏基因组和宏转录组数据的来源项目[@belstrom2021periodontitis]。PRJEB65451并非独立临床队列，而是由PRJNA678453衍生、使用metaSPAdes v3.15.3组装并由EBI-EMG/MGnify代理的第三方注释宏基因组组装项目。由于缺少一致的映射和bin层面清单，本文不报告具体参与者、标本、组装分析或宏基因组组装基因组总数。
 
-### 候选定义与蛋白质组证据过滤
+### 候选构建与模型级联
 
-根据归档的汇总流程，编码4–50 aa肽的推定小开放阅读框按来源提供的健康状态标签分组。候选序列与来源记录中的口腔蛋白质组资源进行精确匹配，包括PXD003151、PXD004319、PXD026727及HOMD相关蛋白序列。精确匹配结果经去重后形成非冗余、具有蛋白质组支持的候选集合。由于逐序列输入和匹配表不可得，该阶段按来源报告过滤步骤处理，未被独立重新运行。
+所提供分析保留编码4–50 aa肽的smORF。健康标记和牙周炎标记起始库分别含11,269,961条和11,721,988条候选。与指定口腔序列和蛋白质组资源精确匹配并去冗余后，分别保留31,510条和33,786条候选。资源匹配被解释为序列支持信息，而不是分析临床分组中真实表达的证明。
 
-### 深度学习引导的多模型优选
+UniDL4BioPep采用预训练ESM-2模型`esm2_t6_8M_UR50D`编码肽序列，产生320维上下文嵌入，再输入六层任务特异性卷积神经网络[@du2023unidl4biopep]。应用阈值为≥0.80，包括BBB优选。NTxPred2随后在文献规定的7–50 aa范围内评价候选，其方法是在神经毒性肽序列上微调ESM2-t30蛋白质语言模型[@rathore2025ntxpred2]。短于7 aa的序列记为模型覆盖范围之外，而不是阴性。
 
-本研究采用串行架构，依次整合上下文序列表征、任务特异性深度分类、分层金属结合预测和多任务抗氧化评分。各阶段回答不同的生物学优选问题，因此下游保留代表串行决策规则，而不是相互独立的实验确证。
+Mebipred把氨基酸组成、理化描述符和金属结合5-mer频率整合到两级人工神经网络框架中，包括一般和离子特异性分类器[@aptekmann2022mebipred]，应用阈值为0.50。AnOxPePred使用包含一维卷积、平均池化和256单元全连接层的多任务深度卷积神经网络，产生自由基清除（FRS）和螯合（CHEL）评分[@olsen2020anoxpepred]。分析终点为CHEL≥0.25、CHEL≥0.25且FRS<0.50，以及CHEL≥0.25且FRS<0.45。本研究未重新训练模型，多模型串行一致不视为独立验证。
 
-首先，UniDL4BioPep使用预训练ESM-2模型`esm2_t6_8M_UR50D`，将每条肽转换为320维上下文敏感嵌入。该嵌入随后输入针对不同肽活性任务分别训练的六层深度卷积神经网络[12]。预测概率≥0.8定义为高置信度模型输出，仅BBB概率≥0.8的候选进入后续级联。
+### 序列、对接与前瞻性MD分析
 
-其次，采用肽特异性NTxPred2架构评价神经毒性。该模型通过迁移学习，在神经毒性肽序列上微调ESM2-t30蛋白质语言模型[13]。分析仅覆盖模型规定的7–50 aa输入范围；长度小于7 aa的序列记录为模型覆盖范围之外，而不视为阴性预测。
+对于另一张12条序列表，我们直接依据字符串重算长度，以及组氨酸、半胱氨酸、Arg+Lys和Phe+Tyr+Trp数量。现有对接汇总描述了人AChE PDB 4EY6的AutoDock Vina 1.2.5评分。本研究仅对均值和标准差进行描述性分析。由于缺少制备结构、PDBQT输入、质子化和电荷设置、精确搜索坐标、运行定义、原始分数、日志、构象和相互作用表，未重跑对接，也不把Vina评分解释为亲和力或自由能。
 
-第三，采用mebipred评价Cu、Fe和Zn相关结合潜力。该方法将氨基酸组成、理化描述符和金属结合5-mer频率整合到两级人工神经网络框架中：先由一般金属结合网络进行判定，再进入离子特异性神经分类器[14]。来源记录中的判定阈值为0.5。
+前瞻性100 ns方案用于游离AChE及标记为ALLLHRC、FLLHTTR和YLSLLQR的复合物。计划使用GROMACS[@abraham2015gromacs]、Amber99SB-ILDN[@lindorfflarsen2010amber]、TIP3P水和0.15 mol/L NaCl，依次开展约束NVT、约束NPT和无约束NPT平衡，随后在300 K、1 bar条件下以2 fs步长进行100 ns生产模拟。计划分析RMSD/RMSF、回转半径、溶剂可及表面积、氢键、残基接触、二级结构、径向分布函数和桥连水。由于起始复合物和完整轨迹不可获得，本文不分析任何MD结果。
 
-第四，采用多任务深度卷积神经网络AnOxPePred评价抗氧化相关特征。经one-hot编码的肽序列依次通过一维卷积层、平均池化和含256个单元的全连接层，最终分别输出自由基清除（FRS）和螯合（CHEL）分数[15]。首先应用CHEL≥0.25阈值，再应用来源记录中的CHEL/FRS组合标准。
+### 统计分析
 
-本次二次分析未重新训练或微调任何模型。历史网页服务器构建版本、模型哈希、随机种子、提交输入文件及逐行输出均未被保存。因此，上述算法说明记录的是文献所述架构及与本研究相关的肽模式，而阈值和保留数量仍属于来源报告的汇总记录。
-
-### 外部序列表征与对接证据
-
-外部12条序列记录作为独立证据层分析，不与汇总筛选漏斗进行逐行合并。使用版本控制代码直接依据序列字符串重新计算序列长度、分子质量、名义电荷、疏水残基比例和氨基酸组成。
-
-AChE被选作结构分析背景靶点，是因为已有研究报告该酶可通过外周区域加速淀粉样蛋白β纤维形成[16]。外部记录指定人AChE结构PDB 4EY6，该结构具有配体结合结构信息[17]。Vina均值和标准差按来源报告精确转录。由于受体及配体原始文件、质子化状态、网格定义、构象、日志和逐次运行分数均不可得，本研究未重新运行对接，也不推断接触模式、亲和力或功能。该12条外部序列无法映射到更严格的8条汇总终点集。
-
-### 统计分析与证据解释
-
-所有分析均为描述性分析。保留率以前一个有记录的阶段作为分母。候选序列属于计算记账单位，而不是独立参与者或生物学重复，因此未开展健康—牙周炎假设检验、置信区间估计或肽层面推断模型，也未对缺失的逐行数据进行插补。
-
-Vina分数仅用于来源记录内部排序，不被解释为实验亲和力或结合自由能[18]。当前Vina实现虽改进了搜索和力场选项，但仍无法消除受体准备、搜索空间定义及采样设置的影响[19]。鉴于蛋白质—肽识别可能涉及分散的界面热点片段，单一刚性受体对接排序不被转化为机制结论[20]。
+所有分析均为描述性分析。保留率以前一有明确记录的阶段为分母。候选序列是嵌套于样本、组装、基因组和同源序列组的计算单位，而非独立生物学重复。因此，未开展健康与牙周炎的汇总假设检验，也未计算置信区间和效应量。
 
 ## 结果
 
 ### 汇总优选漏斗
 
-来源提供11,269,961条健康标记和11,721,988条牙周炎标记smORF。经蛋白质组匹配和去重后分别保留31,510条和33,786条候选，占各自起始库的0.2796%和0.2882%。后续记录包含3,518条BBB高分候选。219条长度小于7 aa的序列超出所记录的NTxPred2输入范围，NTxPred2对3,299条序列给出预测，其中923条标记为神经毒性阳性。面向Cu/Fe/Zn的mebipred筛选保留111条；AnOxPePred在CHEL≥0.25时保留15条，按记录的组合标准保留12条，最终优选8条。
+序列证据过滤分别保留31,510/11,269,961条健康标记候选（0.2796%）和33,786/11,721,988条牙周炎标记候选（0.2882%）。牙周炎标记分支含3,518条BBB高分输出。NTxPred2评价3,299条，其中923条为模型阳性；另有219条低于规定长度范围。后续筛选得到111条金属结合阳性候选、15条CHEL≥0.25候选、12条CHEL≥0.25且FRS<0.50候选，以及8条CHEL≥0.25且FRS<0.45候选（表1）。由于缺少NTxPred2至mebipred的逐行交接，111/923不被视为已验证转换率。
 
-**表1. 汇总计算筛选漏斗。计数为描述性计算记账单位。**
+**表1. 汇总计算优选结果。**
 
-| 阶段 | 保留数量 | 证据状态 |
-| --- | ---: | --- |
-| 健康标记smORF | 11,269,961 | 来源汇总计数 |
-| 牙周炎标记smORF | 11,721,988 | 来源汇总计数 |
-| 蛋白质组支持的健康标记候选 | 31,510 | 来源汇总计数 |
-| 蛋白质组支持的牙周炎标记候选 | 33,786 | 来源汇总计数 |
-| BBB概率≥0.8 | 3,518 | 来源模型汇总 |
-| NTxPred2实际输出 | 3,299 | 来源模型汇总 |
-| 神经毒性阳性 | 923 | 来源模型汇总 |
-| Cu/Fe/Zn金属结合阳性 | 111 | 来源模型汇总 |
-| CHEL≥0.25 | 15 | 来源模型汇总 |
-| 组合筛选 | 12 | 来源模型汇总 |
-| 最终严格集 | 8 | 成员未知 |
+| 阶段 | 操作规则 | n | 分母或限制 |
+| --- | --- | ---: | --- |
+| 健康标记smORF | 4–50 aa | 11,269,961 | 起始库 |
+| 牙周炎标记smORF | 4–50 aa | 11,721,988 | 起始库 |
+| 证据过滤后健康标记候选 | 精确匹配与去冗余 | 31,510 | 11,269,961 |
+| 证据过滤后牙周炎标记候选 | 精确匹配与去冗余 | 33,786 | 11,721,988 |
+| BBB高分 | UniDL4BioPep输出≥0.80 | 3,518 | 牙周炎标记分支 |
+| NTxPred2已评估 | 7–50 aa | 3,299 | 3,518 |
+| NTxPred2阳性 | 模型阳性标签 | 923 | 3,299 |
+| 金属结合阳性 | Mebipred输出≥0.50 | 111 | 逐行交接不可获得 |
+| CHEL优先 | CHEL≥0.25 | 15 | 111 |
+| 主集合 | CHEL≥0.25且FRS<0.50 | 12 | 111 |
+| 严格子集 | CHEL≥0.25且FRS<0.45 | 8 | 成员未知 |
 
-![汇总计算优选漏斗](../figures/prioritization_funnel.png)
+### 12条序列表与对接评分
 
-**图1.** 汇总计算优选漏斗。该图汇总来源计数，不代表参与者流程或独立生物学重复。
+另一张表包含12条互不重复的7–9 aa肽。其中11条含组氨酸，6条含半胱氨酸，每条均含Arg或Lys。Vina均值范围为−9.60至−8.25 kcal/mol（表2）。在现有评分表内，FLLHTTR排名第一，HVLLLRQCA排名最后。序列组成可以重算，但无法建立对接执行及这些序列与汇总12条或8条集合之间的关系。
 
-### 外部12条序列记录
+**表2. 12条序列及现有AChE对接评分。**
 
-外部记录列出12条互不重复的肽。其针对AChE的来源报告Vina均值范围为−9.60至−8.25 kcal/mol。在该记录内部，FLLHTTR排序第一，HVLLLRQCA排序最后。序列组成经独立重算，但对接构象和分数未被独立复现。
-
-**表2. 外部序列记录及来源报告AChE对接汇总。**
-
-| 排名 | 序列 | 长度（aa） | 来源报告均值（kcal/mol） | 来源报告SD |
+| 排名 | 序列 | 长度（aa） | 平均评分（kcal/mol） | SD |
 | ---: | --- | ---: | ---: | ---: |
 | 1 | FLLHTTR | 7 | −9.60 | 0.08 |
-| 2 | KNGIYHLK | 8 | −9.42 | 0.06 |
-| 3 | KNAIRLQ | 7 | −9.31 | 0.05 |
-| 4 | NRPPHPPY | 8 | −9.18 | 0.09 |
-| 5 | QMMKQAQK | 8 | −9.05 | 0.07 |
-| 6 | WNMSKYYK | 8 | −8.94 | 0.04 |
-| 7 | YPWINHPQ | 8 | −8.83 | 0.10 |
-| 8 | WVAHKNY | 7 | −8.71 | 0.06 |
-| 9 | YPIVIHPN | 8 | −8.58 | 0.11 |
-| 10 | YDRNWNNK | 8 | −8.46 | 0.08 |
-| 11 | RKQIKRYL | 8 | −8.34 | 0.05 |
-| 12 | HVLLLRQCA | 9 | −8.25 | 0.12 |
+| 2 | YLSLLQR | 7 | −9.49 | 0.05 |
+| 3 | ALLLHRC | 7 | −9.29 | 0.11 |
+| 4 | FCLHLQLR | 8 | −9.27 | 0.09 |
+| 5 | YHHLLCRR | 8 | −9.03 | 0.07 |
+| 6 | LLHLPKRTT | 9 | −9.01 | 0.06 |
+| 7 | LLHPLRL | 7 | −8.94 | 0.10 |
+| 8 | WLLVHLKK | 8 | −8.94 | 0.04 |
+| 9 | LLHPLRC | 7 | −8.91 | 0.08 |
+| 10 | HLLTLKKHV | 9 | −8.88 | 0.05 |
+| 11 | HLPLLHRCC | 9 | −8.35 | 0.12 |
+| 12 | HVLLLRQCA | 9 | −8.25 | 0.09 |
 
 ## 讨论
 
-本分析把规模很大的来源候选池压缩为两个边界清楚的后续对象：一个成员信息缺失的8条汇总终点集，以及一份独立的12条外部序列记录。其价值在于优选和定位证据缺口，而不是发现已经验证的AD机制。
+本研究在保持“预测不等于机制”这一边界的同时形成紧凑验证集合。深度学习和神经网络模型使大规模搜索可行，但基于异质数据训练的输出可能不适用于极短微生物组肽。完整分析中几乎完全阳性的广义抗菌输出也说明，多个模型标签同时为阳性不能替代生物学重复。
 
-本研究的生物学动机始于牙周炎—AD界面。*P. gingivalis*感染可合理地关联于系统性炎症信号、LPS和牙龈蛋白酶暴露、囊泡介导的成分运输、BBB扰动及小胶质细胞激活[3–7]。候选流程进一步提出：口腔微生物肽是否可能构成一类尚少研究、并具有BBB、神经毒性、金属/氧化还原或AChE相关预测特征的分子。然而，本研究结果均未证明候选在来源参与者中表达、从口腔生物膜释放、进入循环、跨越BBB、影响神经系统或具有AD特异性。尤其重要的是，汇总来源不能证明任何候选由*P. gingivalis*编码；该菌在本文中是机制研究动机，而不是已确定的序列来源。
+AChE外周区域可影响Aβ组装，因此可提供合理结构背景[@inestrosa1996ache]；PDB 4EY6则提供实验测定的人源结构[@cheung2012ache]。然而，Vina属于筛选方法，排序受受体与配体制备、搜索空间和采样影响[@trott2010vina]。较新Vina实现不能消除这些要求[@eberhardt2021vina]，柔性肽对接还可能需要肽特异性精修[@london2011flexpepdock]。缺少构象和运行定义时，评分范围不能证明AChE结合、位点偏好、抑制、选择性或Aβ调节。
 
-经核验的登录号关系也改变了输入数据的表述方式。PRJNA678453是11名健康对照、11名牙周炎患者和66份标本的原始队列；PRJEB65451则是衍生TPA组装资源。参与者、临床标本、配对DNA/RNA测量和组装分析属于不同统计单位，不能混用。由于缺少参与者—序列映射，两组近似的汇总保留率不能支持疾病富集结论。
+牙周研究背景同样需要严格限定。现有研究支持考察炎症、牙龈蛋白酶、感染和囊泡相关路径，但不能把群落来源肽归属于*P. gingivalis*。只有建立从序列到组装、样本、临床标签、分类学、表达、循环、BBB转运和靶点作用的候选层面链路，才能进一步检验疾病主张。
 
-本研究存在数项决定性局限。第一，逐行模型输出和精确服务器版本缺失，阈值及计数只能在汇总层面审计。第二，8条与12条的成员关系仍未解决。第三，对接记录缺少复现及检查构象所需材料。第四，基于异质数据集训练的预测器可能不适用于极短的微生物组来源肽；多个模型结果一致也不等同于实验独立性。合理的下一步是恢复候选来源链，使用固定版本重新运行预测和对接，继而检验合成质量、稳定性、细胞毒性、BBB转运、金属相互作用、AChE活性以及神经元或胶质细胞表型，之后再讨论疾病机制。
+当前优先事项是恢复漏斗逐行成员，确定严格8/12子集，使用固定版本重跑预测和对接，并在合成后验证肽身份与稳定性。随后应在适当对照下评价BBB转运、细胞毒性、Cu/Fe/Zn相互作用、金属依赖氧化还原效应、AChE/BChE功能、直接结合和Aβ表型。缺少逐行映射、原始对接材料、完整MD输入及实验测量，是本研究的决定性局限。
 
 ## 结论
 
-汇总证据支持形成一个透明的待验证候选清单，但不支持从牙周炎或*P. gingivalis*到AD的因果链。核正后的来源为：PRJNA678453是包含22名参与者、66份口腔标本的来源队列；PRJEB65451是其衍生的EBI-EMG/MGnify TPA组装项目。12条外部序列及其来源报告AChE分数仍与成员未知的最终8条集合分离。恢复逐行来源并完成独立计算和实验验证，是进行机制解释的前提。
+汇总数据支持一条透明计算漏斗，终点为12条主集合和8条严格子集计数。另一张12条肽的表格提供序列组成和AChE评分排序，但无法逐行连接到这些终点，也未独立产生对接或MD结果。该清单适用于分阶段验证，但不能证明*P. gingivalis*来源、疾病特异性、脑暴露、靶点结合、生物活性或因果关系。
 
 ## 参考文献
 
-1. Scheltens P, De Strooper B, Kivipelto M, et al. Alzheimer’s disease. *Lancet*. 2021;397:1577–1590. doi:10.1016/S0140-6736(20)32205-4.
-2. Selkoe DJ. Treatments for Alzheimer’s disease emerge. *Nature*. 2023;616:33–34. doi:10.1038/s41586-023-05769-3.
-3. Chalmers JC, Hernandez-Kapila YL. The role of the oral microbiome, host response, and periodontal disease treatment in Alzheimer’s disease: a primer. *Periodontol 2000*. 2025;98:220–227. doi:10.1111/prd.12631.
-4. Liu S, Butler CA, Ayton S, Reynolds EC, Dashper SG. *Porphyromonas gingivalis* and the pathogenesis of Alzheimer’s disease. *Crit Rev Microbiol*. 2024;50:127–137. doi:10.1080/1040841X.2022.2163613.
-5. Dominy SS, Lynch C, Ermini F, et al. *Porphyromonas gingivalis* in Alzheimer’s disease brains: evidence for disease causation and treatment with small-molecule inhibitors. *Sci Adv*. 2019;5:eaau3333. doi:10.1126/sciadv.aau3333.
-6. Ilievski V, Zuchowska PK, Green SJ, et al. Chronic oral application of a periodontal pathogen results in brain inflammation, neurodegeneration and amyloid beta production in wild type mice. *PLoS One*. 2018;13:e0204941. doi:10.1371/journal.pone.0204941.
-7. Gong T, Chen Q, Mao H, et al. Outer membrane vesicles of *Porphyromonas gingivalis* trigger NLRP3 inflammasome and induce neuroinflammation, tau phosphorylation, and memory dysfunction in mice. *Front Cell Infect Microbiol*. 2022;12:925435. doi:10.3389/fcimb.2022.925435.
-8. Hu C, Li H, Huang L, et al. Periodontal disease and risk of Alzheimer’s disease: a two-sample Mendelian randomization. *Brain Behav*. 2024;14:e3486. doi:10.1002/brb3.3486.
-9. Sberro H, Fremin BJ, Zlitni S, et al. Large-scale analyses of human microbiomes reveal thousands of small, novel genes. *Cell*. 2019;178:1245–1259.e14. doi:10.1016/j.cell.2019.07.016.
-10. Durrant MG, Bhatt AS. Automated prediction and annotation of small open reading frames in microbial genomes. *Nat Microbiol*. 2021;6:564–574. doi:10.1038/s41564-021-00891-0.
-11. Belstrøm D, Constancias F, Drautz-Moses DI, et al. Periodontitis associates with species-specific gene expression of the oral microbiota. *NPJ Biofilms Microbiomes*. 2021;7:76. doi:10.1038/s41522-021-00247-y.
-12. Du Z, Ding X, Xu Y, Li W. UniDL4BioPep: a universal deep learning architecture for binary classification in peptide bioactivity. *Brief Bioinform*. 2023;24:bbad135. doi:10.1093/bib/bbad135.
-13. Rathore AS, Jain S, Choudhury S, Raghava GPS. A large language model for predicting neurotoxic peptides and neurotoxins. *Protein Sci*. 2025;34:e70200. doi:10.1002/pro.70200.
-14. Valasatava Y, Rosato A, Banci L, Andreini C. mebipred: identifying metal-binding potential in protein sequence. *Bioinformatics*. 2022;38:3532–3540. doi:10.1093/bioinformatics/btac358.
+1. Scheltens P, De Strooper B, Kivipelto M, et al. Alzheimer’s disease. *Lancet*. 2021;397(10284):1577–1590. doi:10.1016/S0140-6736(20)32205-4.
+2. Selkoe DJ, Hardy J. The amyloid hypothesis of Alzheimer’s disease at 25 years. *EMBO Mol Med*. 2016;8(6):595–608. doi:10.15252/emmm.201606210.
+3. Chalmers JC, Hernandez-Kapila YL. The role of the oral microbiome, host response, and periodontal disease treatment in Alzheimer’s disease: a primer. *Periodontol 2000*. 2025;98(1):220–227. doi:10.1111/prd.12631.
+4. Guo Y, Nguyen KA, Potempa J. Dichotomy of gingipains action as virulence factors. *Periodontol 2000*. 2010;54(1):15–44. doi:10.1111/j.1600-0757.2010.00377.x.
+5. Dominy SS, Lynch C, Ermini F, et al. *Porphyromonas gingivalis* in Alzheimer’s disease brains. *Sci Adv*. 2019;5(1):eaau3333. doi:10.1126/sciadv.aau3333.
+6. Ilievski V, Zuchowska PK, Green SJ, et al. Chronic oral application of a periodontal pathogen results in brain inflammation, neurodegeneration and amyloid beta production in wild type mice. *PLoS One*. 2018;13(10):e0204941. doi:10.1371/journal.pone.0204941.
+7. Nara PL, Sindelar D, Penn MS, et al. *Porphyromonas gingivalis* outer membrane vesicles as the major driver of and explanation for neuropathogenesis. *J Alzheimers Dis*. 2021;82(4):1417–1450. doi:10.3233/JAD-210448.
+8. Hu C, Li H, Huang L, et al. Periodontal disease and risk of Alzheimer’s disease: a two-sample Mendelian randomization. *Brain Behav*. 2024;14(4):e3486. doi:10.1002/brb3.3486.
+9. Sberro H, Fremin BJ, Zlitni S, et al. Large-scale analyses of human microbiomes reveal thousands of small, novel genes. *Cell*. 2019;178(5):1245–1259.e14. doi:10.1016/j.cell.2019.07.016.
+10. Durrant MG, Bhatt AS. Automated prediction and annotation of small open reading frames in microbial genomes. *Cell Host Microbe*. 2021;29(1):121–131.e4. doi:10.1016/j.chom.2020.11.002.
+11. Belstrøm D, Constancias F, Drautz-Moses DI, et al. Periodontitis associates with species-specific gene expression of the oral microbiota. *npj Biofilms Microbiomes*. 2021;7:76. doi:10.1038/s41522-021-00247-y.
+12. Du Z, Ding X, Xu Y, Li Y. UniDL4BioPep: a universal deep learning architecture for binary classification in peptide bioactivity. *Brief Bioinform*. 2023;24(3):bbad135. doi:10.1093/bib/bbad135.
+13. Rathore AS, Jain S, Choudhury S, Raghava GPS. A large language model for predicting neurotoxic peptides and neurotoxins. *Protein Sci*. 2025;34(8):e70200. doi:10.1002/pro.70200.
+14. Aptekmann AA, Buongiorno J, Giovannelli D, et al. mebipred: identifying metal-binding potential in protein sequence. *Bioinformatics*. 2022;38(14):3532–3540. doi:10.1093/bioinformatics/btac358.
 15. Olsen TH, Yesiltas B, Marin FI, et al. AnOxPePred: using deep learning for the prediction of antioxidative properties of peptides. *Sci Rep*. 2020;10:21471. doi:10.1038/s41598-020-78319-w.
-16. Inestrosa NC, Alvarez A, Pérez CA, et al. Acetylcholinesterase accelerates assembly of amyloid-β-peptides into Alzheimer’s fibrils. *Neuron*. 1996;16:881–891. doi:10.1016/S0896-6273(00)80108-7.
-17. Cheung J, Rudolph MJ, Burshteyn F, et al. Structures of human acetylcholinesterase in complex with pharmacologically important ligands. *J Med Chem*. 2012;55:10282–10286. doi:10.1021/jm300871x.
-18. Trott O, Olson AJ. AutoDock Vina: improving the speed and accuracy of docking. *J Comput Chem*. 2010;31:455–461. doi:10.1002/jcc.21334.
-19. Eberhardt J, Santos-Martins D, Tillack AF, Forli S. AutoDock Vina 1.2.0: new docking methods, expanded force field, and Python bindings. *J Chem Inf Model*. 2021;61:3891–3898. doi:10.1021/acs.jcim.1c00203.
-20. London N, Raveh B, Schueler-Furman O. Druggable protein–protein interactions—from hot spots to hot segments. *Curr Opin Chem Biol*. 2013;17:952–959. doi:10.1016/j.cbpa.2013.10.011.
+16. Abraham MJ, Murtola T, Schulz R, et al. GROMACS: high performance molecular simulations through multi-level parallelism from laptops to supercomputers. *SoftwareX*. 2015;1–2:19–25. doi:10.1016/j.softx.2015.06.001.
+17. Lindorff-Larsen K, Piana S, Palmo K, et al. Improved side-chain torsion potentials for the Amber ff99SB protein force field. *Proteins*. 2010;78(8):1950–1958. doi:10.1002/prot.22711.
+18. Inestrosa NC, Alvarez A, Pérez CA, et al. Acetylcholinesterase accelerates assembly of amyloid-β-peptides into Alzheimer’s fibrils. *Neuron*. 1996;16(4):881–891. doi:10.1016/s0896-6273(00)80108-7.
+19. Cheung J, Rudolph MJ, Burshteyn F, et al. Structures of human acetylcholinesterase in complex with pharmacologically important ligands. *J Med Chem*. 2012;55(23):10282–10286. doi:10.1021/jm300871x.
+20. Trott O, Olson AJ. AutoDock Vina: improving the speed and accuracy of docking with a new scoring function. *J Comput Chem*. 2010;31(2):455–461. doi:10.1002/jcc.21334.
+21. Eberhardt J, Santos-Martins D, Tillack AF, Forli S. AutoDock Vina 1.2.0: new docking methods, expanded force field, and Python bindings. *J Chem Inf Model*. 2021;61(8):3891–3898. doi:10.1021/acs.jcim.1c00203.
+22. London N, Raveh B, Cohen E, et al. Rosetta FlexPepDock web server—high resolution modeling of peptide–protein interactions. *Nucleic Acids Res*. 2011;39:W249–W253. doi:10.1093/nar/gkr326.

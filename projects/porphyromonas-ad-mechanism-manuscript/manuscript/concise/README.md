@@ -1,35 +1,50 @@
 # Concise manuscript package / 精简稿件包
 
-Version: v3.3.0
-Date: 2026-08-14
+Version: v3.6.0
+Date: 2026-08-17
 
 ## Files
 
-- `English.docx` — standalone English SCI-style manuscript.
-- `Chinese.docx` — standalone Chinese SCI-style manuscript.
-- `English.md` and `Chinese.md` — version-controlled source text.
+- `English.docx` — titleless, standalone concise English SCI manuscript.
+- `Chinese.docx` — titleless, standalone concise Chinese SCI manuscript.
+- `English.md` and `Chinese.md` — synchronized sources using Pandoc/BibTeX citation keys.
 
-The English and Chinese Word files are separate. Each contains the same locked aggregate results, two tables, one figure and a 20-reference bibliography. The DOCX files contain no running header, footer, page-number field or workflow-purpose metadata.
+Each DOCX begins with the abstract and contains two three-line tables, no figures,
+no header/footer/page-number fields, and no administrative sections. Conclusion
+is followed directly by References. The bibliography contains the same 22-item
+subset in English and Chinese.
 
 ## Scientific scope
 
-The manuscripts report an exploratory, aggregate-level computational prioritization. They distinguish PRJNA678453 (22 participants: 11 orally healthy and 11 with periodontitis; 66 oral specimens) from the derived EBI-EMG/MGnify TPA assembly project PRJEB65451. The analysis does not establish candidate expression, disease specificity, *Porphyromonas gingivalis* sequence origin, BBB transport, toxicity, metal chemistry, AChE binding/function or AD causality.
+The package reports an exploratory, aggregate-level computational prioritization.
+It omits specific participant, specimen, assembly-analysis, and MAG totals. It
+distinguishes PRJNA678453 from the derived EBI-EMG/MGnify TPA assembly project
+PRJEB65451 without treating the latter as a separate cohort. The analysis does
+not establish candidate expression, disease specificity, *Porphyromonas
+gingivalis* sequence origin, BBB transport, toxicity, metal chemistry, AChE
+binding/function, molecular-dynamics results, or AD causality.
 
 ## Rebuild and audit
 
 From the project root:
 
 ```bash
-python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z \
+python3 scripts/build_docx_stdlib.py --clean-manuscript \
+  --timestamp 2026-08-17T00:00:00Z \
+  --bibliography references/references.bib \
   --input manuscript/concise/English.md \
-  --output manuscript/concise/English.docx \
-  --title "Deep-Learning-Guided Multi-Model Prioritization of Oral Micropeptides at the Periodontitis–Alzheimer’s Disease Interface"
-python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z \
+  --output manuscript/concise/English.docx --title English
+python3 scripts/build_docx_stdlib.py --clean-manuscript \
+  --timestamp 2026-08-17T00:00:00Z \
+  --bibliography references/references.bib \
   --input manuscript/concise/Chinese.md \
-  --output manuscript/concise/Chinese.docx \
-  --title "深度学习引导的牙周炎—阿尔茨海默病界面口腔微肽多模型优选"
+  --output manuscript/concise/Chinese.docx --title Chinese
 python3 scripts/audit_concise_package.py
 python3 scripts/audit_docx_packages.py
+python3 scripts/audit_full_docx_reproducibility.py
 ```
 
-Provenance and algorithm checks are documented in `../../evidence/prjna678453_prjeb65451_provenance.md` and `../../evidence/prediction_tool_methods.md`. Version and recovery information is maintained in `../../VERSION_HISTORY.md`.
+The committed DOCX files contain automatically numbered citation text generated
+from the BibTeX-linked source keys, but they are not represented as Zotero-live.
+See `../../references/ZOTERO_WORD_ACCEPTANCE.md` for the Better BibTeX/Pandoc and
+desktop Word/Zotero acceptance gate.

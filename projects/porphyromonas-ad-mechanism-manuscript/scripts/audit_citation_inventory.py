@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit DOI-set parity across both manuscripts and reference records."""
+"""Audit BibTeX/citation/reference parity for full and concise manuscripts."""
 from __future__ import annotations
 
 import hashlib
@@ -8,58 +8,74 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = {
-    "manuscript_en": ROOT / "manuscript" / "manuscript_en.md",
-    "manuscript_zh": ROOT / "manuscript" / "manuscript_zh.md",
-    "verified_references": ROOT / "references" / "verified_references.md",
-    "bibtex": ROOT / "references" / "references.bib",
-}
 OUT = ROOT / "quality_reports" / "citation_inventory_audit.json"
+BIB = ROOT / "references" / "references.bib"
+VERIFIED = ROOT / "references" / "verified_references.md"
+MANUSCRIPTS = {
+    "full_english": ROOT / "manuscript/full/English.md",
+    "full_chinese": ROOT / "manuscript/full/Chinese.md",
+    "concise_english": ROOT / "manuscript/concise/English.md",
+    "concise_chinese": ROOT / "manuscript/concise/Chinese.md",
+}
 DOI_RE = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.I)
-TRAILING = ".,;:)]}"
 
 
 def dois(text: str) -> set[str]:
-    return {match.group(0).rstrip(TRAILING).lower() for match in DOI_RE.finditer(text)}
+    return {m.group(0).rstrip(".,;:)]}").lower() for m in DOI_RE.finditer(text)}
+
+
+def keys(text: str) -> set[str]:
+    return set(re.findall(r"(?m)^@[A-Za-z]+\{([^,]+),", text))
 
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def body_keys(text: str) -> set[str]:
+    heading = "## References" if "## References" in text else "## 参考文献"
+    return set(re.findall(r"@([A-Za-z0-9_.:+-]+)", text.split(heading, 1)[0]))
+
+
 def main() -> int:
-    sets: dict[str, set[str]] = {}
+    bib_text = BIB.read_text(encoding="utf-8")
+    bib_dois = dois(bib_text)
+    bib_keys = keys(bib_text)
+    verified_dois = dois(VERIFIED.read_text(encoding="utf-8"))
     records = {}
-    for name, path in FILES.items():
-        found = dois(path.read_text(encoding="utf-8"))
-        sets[name] = found
+    manuscript_dois = {}
+    manuscript_keys = {}
+    for name, path in MANUSCRIPTS.items():
+        text = path.read_text(encoding="utf-8")
+        manuscript_dois[name] = dois(text.split("## References", 1)[-1].split("## 参考文献", 1)[-1])
+        manuscript_keys[name] = body_keys(text)
         records[name] = {
             "path": str(path.relative_to(ROOT)),
             "sha256": sha256(path),
-            "unique_doi_count": len(found),
+            "reference_doi_count": len(manuscript_dois[name]),
+            "cited_key_count": len(manuscript_keys[name]),
+            "unknown_keys": sorted(manuscript_keys[name] - bib_keys),
+            "unknown_reference_dois": sorted(manuscript_dois[name] - bib_dois),
         }
-
-    canonical = sets["verified_references"]
-    missing = {name: sorted(canonical - found) for name, found in sets.items()}
-    extra = {name: sorted(found - canonical) for name, found in sets.items()}
-    parity = all(found == canonical for found in sets.values())
-    expected_count = len(canonical) == 53
-    report = {
-        "schema": "local.citation_inventory_audit.v2",
-        "files": records,
-        "canonical_dois": sorted(canonical),
-        "canonical_count_is_53": expected_count,
-        "english_chinese_doi_parity": sets["manuscript_en"] == sets["manuscript_zh"],
-        "all_file_doi_parity": parity,
-        "missing_by_file": missing,
-        "extra_by_file": extra,
-        "verification_boundary": (
-            "Inventory parity only. Title, identifier, and core metadata checks are recorded in "
-            "references/verified_references.md; final Crossmark, correction, and retraction screening remains required."
-        ),
-        "verdict": "PASS" if parity and expected_count else "FAIL",
+    checks = {
+        "bibtex_has_55_unique_keys_and_dois": len(bib_keys) == 55 and len(bib_dois) == 55,
+        "verified_reference_inventory_matches_bibtex": verified_dois == bib_dois,
+        "full_english_chinese_reference_parity": manuscript_dois["full_english"] == manuscript_dois["full_chinese"] == bib_dois,
+        "full_cited_keys_exist_in_bibtex": manuscript_keys["full_english"] <= bib_keys and manuscript_keys["full_chinese"] <= bib_keys,
+        "concise_english_chinese_reference_parity": manuscript_dois["concise_english"] == manuscript_dois["concise_chinese"],
+        "concise_reference_count_is_22": len(manuscript_dois["concise_english"]) == 22,
+        "concise_cited_keys_match_reference_subset": manuscript_keys["concise_english"] == manuscript_keys["concise_chinese"] and len(manuscript_keys["concise_english"]) == 22,
+        "no_unknown_keys_or_dois": all(not item["unknown_keys"] and not item["unknown_reference_dois"] for item in records.values()),
     }
-    OUT.parent.mkdir(parents=True, exist_ok=True)
+    report = {
+        "schema": "local.citation_inventory_audit.v3",
+        "bibtex": {"path": str(BIB.relative_to(ROOT)), "sha256": sha256(BIB)},
+        "verified_references": {"path": str(VERIFIED.relative_to(ROOT)), "sha256": sha256(VERIFIED)},
+        "manuscripts": records,
+        "checks": checks,
+        "zotero_source_mode": "Pandoc citation keys linked to references/references.bib",
+        "verdict": "PASS" if all(checks.values()) else "FAIL",
+    }
     OUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(OUT)
     return 0 if report["verdict"] == "PASS" else 1

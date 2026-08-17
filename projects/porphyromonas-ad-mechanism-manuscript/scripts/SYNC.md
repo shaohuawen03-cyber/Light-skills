@@ -27,7 +27,7 @@ git switch --track -c arena/019ff377-light-skills origin/arena/019ff377-light-sk
 projects/porphyromonas-ad-mechanism-manuscript/
 ```
 
-## Deterministic rebuild
+## Deterministic v3.6.0 rebuild
 
 Run from the project root:
 
@@ -36,40 +36,53 @@ python3 scripts/verify_source_checksums.py
 python3 scripts/audit_excluded_source_scope.py
 python3 scripts/stage5_statistics_audit.py
 python3 scripts/audit_external_docking_summary.py
-python3 scripts/generate_funnel_figure.py
-python3 scripts/generate_docking_score_figure.py
-python3 scripts/generate_evidence_ladder.py
-python3 scripts/build_bilingual_markdown.py
-python3 scripts/audit_manuscript_consistency.py > quality_reports/manuscript_consistency.json
-python3 scripts/audit_language_structure.py
-python3 scripts/audit_citation_inventory.py
-python3 scripts/audit_manuscript_word_counts.py
-python3 scripts/audit_text_quality.py
-python3 scripts/build_docx_stdlib.py --input manuscript/manuscript_bilingual.md --output manuscript/manuscript_bilingual.docx --title "Provenance-Aware Multi-Model Prioritization / 基于来源边界的口腔微肽多模型优选"
-python3 scripts/build_docx_stdlib.py --input manuscript/supplementary_tables_bilingual.md --output manuscript/supplementary_tables_bilingual.docx --title "Bilingual supplementary tables / 中英文补充表"
-python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z --input manuscript/concise/English.md --output manuscript/concise/English.docx --title "Deep-Learning-Guided Multi-Model Prioritization of Oral Micropeptides at the Periodontitis–Alzheimer’s Disease Interface"
-python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-14T00:00:00Z --input manuscript/concise/Chinese.md --output manuscript/concise/Chinese.docx --title "深度学习引导的牙周炎—阿尔茨海默病界面口腔微肽多模型优选"
-python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --input manuscript/full/English.md --output manuscript/full/English.docx --title "English"
-python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --input manuscript/full/Chinese.md --output manuscript/full/Chinese.docx --title "Chinese"
-python3 scripts/audit_concise_package.py
+
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input manuscript/full/English.md --output manuscript/full/English.docx --title English
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input manuscript/full/Chinese.md --output manuscript/full/Chinese.docx --title Chinese
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input manuscript/concise/English.md --output manuscript/concise/English.docx --title English
+python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input manuscript/concise/Chinese.md --output manuscript/concise/Chinese.docx --title Chinese
+
+python3 scripts/audit_submission_manuscripts.py
 python3 scripts/audit_full_manuscripts.py
-python3 scripts/audit_full_docx_reproducibility.py
+python3 scripts/audit_concise_package.py
 python3 scripts/audit_docx_packages.py
+python3 scripts/audit_full_docx_reproducibility.py
+python3 scripts/audit_citation_inventory.py
 python3 scripts/generate_artifact_checksums.py
 python3 scripts/build_repository_inventory.py
 ```
 
-## Version tags and recovery
+## Zotero-live acceptance gate
 
-The authoritative version ledger is `VERSION_HISTORY.md`. To create the current protected annotated tag after committing a clean tree:
+The standard rebuild produces automatically numbered citation text from Pandoc
+citation keys and `references/references.bib`; it does not claim Zotero-live
+fields. On a workstation with Pandoc, Zotero, Better BibTeX, and the Word add-in:
 
 ```bash
-python3 scripts/manage_version_tag.py create --version 3.5.0 --message "v3.5.0: expanded review-grade Introduction and prospective MD methods" --push
-python3 scripts/manage_version_tag.py verify --version 3.5.0
+python3 scripts/test_better_bibtex.py scheltens2021alzheimer
+python3 scripts/build_zotero_live_docx.py --input manuscript/full/English.md --output manuscript/full/English.zotero-candidate.docx --reference-doc manuscript/full/English.docx --report quality_reports/zotero_live_full_english.json
 ```
 
-The existing `porphyromonas-ad-manuscript-v3.0.0` through `porphyromonas-ad-manuscript-v3.4.0` tags are immutable and must not be moved. Prefer `git worktree add <separate-path> <tag>` for recovery inspection; do not use destructive reset for routine version recovery.
+Repeat for the other three sources, then perform Zotero Document Preferences,
+Refresh, and Add/Edit Bibliography in desktop Word. See
+`references/ZOTERO_WORD_ACCEPTANCE.md`. Never describe static numbered text as
+Zotero-live.
 
-## Important boundary
+## Version tag
 
-These commands reproduce arithmetic checks, sequence-composition checks, figures, manuscripts and DOCX packages. They do not reproduce the original smORF/predictor workflow or the externally reported docking because the necessary row-level inputs and raw docking artefacts are absent.
+After committing a clean tree on the fixed branch:
+
+```bash
+python3 scripts/manage_version_tag.py create --version 3.6.0 --message "v3.6.0: clean figure-free full and concise manuscripts with three-line tables" --push
+python3 scripts/manage_version_tag.py verify --version 3.6.0
+```
+
+Existing release tags are immutable and must not be moved or overwritten.
+
+## Scientific boundary
+
+These commands reproduce arithmetic checks, sequence-composition checks,
+reference mapping, manuscripts, and DOCX packages. They do not reproduce the
+original smORF/predictor analysis, the available docking-score table, or an MD
+result because the required row-level inputs, prepared structures, run outputs,
+and complete trajectories are unavailable.

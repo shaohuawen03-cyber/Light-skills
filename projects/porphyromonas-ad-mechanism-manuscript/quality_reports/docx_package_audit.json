@@ -1,329 +1,286 @@
 {
   "schema": "local.docx_package_audit.v4",
-  "rendering_status": "UNAVAILABLE: no Office/LibreOffice/PDF renderer is installed; package and content checks are structural, not visual.",
   "packages": {
-    "manuscript/manuscript_bilingual.docx": {
-      "path": "manuscript/manuscript_bilingual.docx",
-      "size_bytes": 660249,
-      "sha256": "5e049c2cf83438ef909d049f4f0ed5b68763cb42ab2ae1923e68fece21c6ef86",
-      "zip_crc_error": null,
-      "xml_parse_errors": [],
-      "relationship_errors": [],
-      "paragraphs": 799,
-      "tables": 8,
-      "drawings": 6,
-      "embedded_media": [
-        "word/media/image1.png",
-        "word/media/image2.png",
-        "word/media/image3.png"
-      ],
-      "missing_expected_tokens": [],
-      "prohibited_tokens_found": [],
-      "document_text_characters": 67614,
-      "clean_manuscript_required": false,
-      "header_footer_members": [
-        "word/footer1.xml",
-        "word/header1.xml"
-      ],
-      "comment_annotation_members": [],
-      "page_break_before_count": 7,
-      "administrative_metadata_hits": [
-        "Bilingual scientific-content draft",
-        "Arena.ai drafting workflow",
-        "Draft Note"
-      ],
-      "zip_member_timestamps": [
-        [
-          2026,
-          8,
-          12,
-          7,
-          27,
-          10
-        ]
-      ],
-      "checks": {
-        "crc_ok": true,
-        "all_xml_parses": true,
-        "all_internal_relationship_targets_exist": true,
-        "paragraph_minimum_met": true,
-        "table_minimum_met": true,
-        "drawing_minimum_met": true,
-        "media_count_matches": true,
-        "expected_tokens_present": true,
-        "prohibited_tokens_absent": true
-      },
-      "verdict": "PASS"
-    },
-    "manuscript/supplementary_tables_bilingual.docx": {
-      "path": "manuscript/supplementary_tables_bilingual.docx",
-      "size_bytes": 12247,
-      "sha256": "1d568f5157e45e329b72112d81988918aa7107ba9010a8a52002823fc8518c48",
-      "zip_crc_error": null,
-      "xml_parse_errors": [],
-      "relationship_errors": [],
-      "paragraphs": 468,
-      "tables": 6,
-      "drawings": 0,
-      "embedded_media": [],
-      "missing_expected_tokens": [],
-      "prohibited_tokens_found": [],
-      "document_text_characters": 5876,
-      "clean_manuscript_required": false,
-      "header_footer_members": [
-        "word/footer1.xml",
-        "word/header1.xml"
-      ],
-      "comment_annotation_members": [],
-      "page_break_before_count": 5,
-      "administrative_metadata_hits": [
-        "Bilingual scientific-content draft",
-        "Arena.ai drafting workflow",
-        "Draft Note"
-      ],
-      "zip_member_timestamps": [
-        [
-          2026,
-          8,
-          12,
-          7,
-          27,
-          10
-        ]
-      ],
-      "checks": {
-        "crc_ok": true,
-        "all_xml_parses": true,
-        "all_internal_relationship_targets_exist": true,
-        "paragraph_minimum_met": true,
-        "table_minimum_met": true,
-        "drawing_minimum_met": true,
-        "media_count_matches": true,
-        "expected_tokens_present": true,
-        "prohibited_tokens_absent": true
-      },
-      "verdict": "PASS"
-    },
-    "manuscript/concise/English.docx": {
-      "path": "manuscript/concise/English.docx",
-      "size_bytes": 357968,
-      "sha256": "a84671a883632173e7d6eb2718b97cd6fc9fbba11f459fa2d56fce61e8dda410",
-      "zip_crc_error": null,
-      "xml_parse_errors": [],
-      "relationship_errors": [],
-      "paragraphs": 172,
-      "tables": 2,
-      "drawings": 1,
-      "embedded_media": [
-        "word/media/image1.png"
-      ],
-      "missing_expected_tokens": [],
-      "prohibited_tokens_found": [],
-      "document_text_characters": 20646,
-      "clean_manuscript_required": true,
-      "header_footer_members": [],
-      "comment_annotation_members": [],
-      "page_break_before_count": 0,
-      "administrative_metadata_hits": [],
-      "zip_member_timestamps": [
-        [
-          1980,
-          1,
-          1,
-          0,
-          0,
-          0
-        ]
-      ],
-      "checks": {
-        "crc_ok": true,
-        "all_xml_parses": true,
-        "all_internal_relationship_targets_exist": true,
-        "paragraph_minimum_met": true,
-        "table_minimum_met": true,
-        "drawing_minimum_met": true,
-        "media_count_matches": true,
-        "expected_tokens_present": true,
-        "prohibited_tokens_absent": true,
-        "header_footer_parts_absent": true,
-        "header_footer_relationships_absent": true,
-        "page_field_absent": true,
-        "automatic_section_page_breaks_absent": true,
-        "administrative_metadata_absent": true,
-        "comments_and_annotations_absent": true,
-        "zip_member_timestamps_stable": true,
-        "core_timestamp_matches_release": true,
-        "core_title_matches_expected_neutral_title": true,
-        "visible_content_starts_with_expected_token": true
-      },
-      "verdict": "PASS"
-    },
-    "manuscript/concise/Chinese.docx": {
-      "path": "manuscript/concise/Chinese.docx",
-      "size_bytes": 358417,
-      "sha256": "37fd98e2d39f4f22a561de9b3fe2d26a6f7bc539d4cfed6b1f096a4f206128c8",
-      "zip_crc_error": null,
-      "xml_parse_errors": [],
-      "relationship_errors": [],
-      "paragraphs": 172,
-      "tables": 2,
-      "drawings": 1,
-      "embedded_media": [
-        "word/media/image1.png"
-      ],
-      "missing_expected_tokens": [],
-      "prohibited_tokens_found": [],
-      "document_text_characters": 9380,
-      "clean_manuscript_required": true,
-      "header_footer_members": [],
-      "comment_annotation_members": [],
-      "page_break_before_count": 0,
-      "administrative_metadata_hits": [],
-      "zip_member_timestamps": [
-        [
-          1980,
-          1,
-          1,
-          0,
-          0,
-          0
-        ]
-      ],
-      "checks": {
-        "crc_ok": true,
-        "all_xml_parses": true,
-        "all_internal_relationship_targets_exist": true,
-        "paragraph_minimum_met": true,
-        "table_minimum_met": true,
-        "drawing_minimum_met": true,
-        "media_count_matches": true,
-        "expected_tokens_present": true,
-        "prohibited_tokens_absent": true,
-        "header_footer_parts_absent": true,
-        "header_footer_relationships_absent": true,
-        "page_field_absent": true,
-        "automatic_section_page_breaks_absent": true,
-        "administrative_metadata_absent": true,
-        "comments_and_annotations_absent": true,
-        "zip_member_timestamps_stable": true,
-        "core_timestamp_matches_release": true,
-        "core_title_matches_expected_neutral_title": true,
-        "visible_content_starts_with_expected_token": true
-      },
-      "verdict": "PASS"
-    },
-    "manuscript/full/English.docx": {
+    "full/English": {
       "path": "manuscript/full/English.docx",
-      "size_bytes": 650566,
-      "sha256": "ec1d24f509985e2f725f957263d0a68e37b969e1dcb243e4182a8c0185f3fef2",
-      "zip_crc_error": null,
-      "xml_parse_errors": [],
-      "relationship_errors": [],
-      "paragraphs": 438,
-      "tables": 4,
-      "drawings": 3,
-      "embedded_media": [
-        "word/media/image1.png",
-        "word/media/image2.png",
-        "word/media/image3.png"
-      ],
-      "missing_expected_tokens": [],
-      "prohibited_tokens_found": [],
-      "document_text_characters": 68644,
-      "clean_manuscript_required": true,
-      "header_footer_members": [],
-      "comment_annotation_members": [],
-      "page_break_before_count": 0,
-      "administrative_metadata_hits": [],
-      "zip_member_timestamps": [
-        [
-          1980,
-          1,
-          1,
-          0,
-          0,
-          0
-        ]
+      "sha256": "cf3322b28baf02d4936469ddacab458805da0c15e75f21479b9661456cb55547",
+      "embedded_media": [],
+      "drawings": 0,
+      "zotero_live_field_count": 0,
+      "citation_mode": "static numbered cache generated from Pandoc citekeys; not Zotero-live",
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
       ],
       "checks": {
-        "crc_ok": true,
-        "all_xml_parses": true,
-        "all_internal_relationship_targets_exist": true,
-        "paragraph_minimum_met": true,
-        "table_minimum_met": true,
-        "drawing_minimum_met": true,
-        "media_count_matches": true,
-        "expected_tokens_present": true,
-        "prohibited_tokens_absent": true,
-        "header_footer_parts_absent": true,
-        "header_footer_relationships_absent": true,
-        "page_field_absent": true,
-        "automatic_section_page_breaks_absent": true,
-        "administrative_metadata_absent": true,
-        "comments_and_annotations_absent": true,
-        "zip_member_timestamps_stable": true,
-        "core_timestamp_matches_release": true,
-        "core_title_matches_expected_neutral_title": true,
-        "visible_content_starts_with_expected_token": true
+        "docx_zip_crc_ok": true,
+        "docx_visible_content_starts_with_abstract": true,
+        "docx_neutral_core_title": true,
+        "docx_header_footer_page_number_and_comments_absent": true,
+        "docx_is_figure_free": true,
+        "docx_table_count_matches_markdown": true,
+        "every_docx_table_is_three_line": true,
+        "docx_contains_rendered_numbers_not_citekeys": true,
+        "docx_does_not_claim_unverified_zotero_live_fields": true,
+        "docx_locked_values_present": true
       },
       "verdict": "PASS"
     },
-    "manuscript/full/Chinese.docx": {
+    "full/Chinese": {
       "path": "manuscript/full/Chinese.docx",
-      "size_bytes": 649897,
-      "sha256": "bafdab114f91c9ae35e88b28a7e7e5f1934a78bde39bdd13723e99e03b465df2",
-      "zip_crc_error": null,
-      "xml_parse_errors": [],
-      "relationship_errors": [],
-      "paragraphs": 438,
-      "tables": 4,
-      "drawings": 3,
-      "embedded_media": [
-        "word/media/image1.png",
-        "word/media/image2.png",
-        "word/media/image3.png"
-      ],
-      "missing_expected_tokens": [],
-      "prohibited_tokens_found": [],
-      "document_text_characters": 28157,
-      "clean_manuscript_required": true,
-      "header_footer_members": [],
-      "comment_annotation_members": [],
-      "page_break_before_count": 0,
-      "administrative_metadata_hits": [],
-      "zip_member_timestamps": [
-        [
-          1980,
-          1,
-          1,
-          0,
-          0,
-          0
-        ]
+      "sha256": "6d566f90a4f951dcffd14aa3998610fc779cd2d68b42463fc56ebee4e95e3abb",
+      "embedded_media": [],
+      "drawings": 0,
+      "zotero_live_field_count": 0,
+      "citation_mode": "static numbered cache generated from Pandoc citekeys; not Zotero-live",
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
       ],
       "checks": {
-        "crc_ok": true,
-        "all_xml_parses": true,
-        "all_internal_relationship_targets_exist": true,
-        "paragraph_minimum_met": true,
-        "table_minimum_met": true,
-        "drawing_minimum_met": true,
-        "media_count_matches": true,
-        "expected_tokens_present": true,
-        "prohibited_tokens_absent": true,
-        "header_footer_parts_absent": true,
-        "header_footer_relationships_absent": true,
-        "page_field_absent": true,
-        "automatic_section_page_breaks_absent": true,
-        "administrative_metadata_absent": true,
-        "comments_and_annotations_absent": true,
-        "zip_member_timestamps_stable": true,
-        "core_timestamp_matches_release": true,
-        "core_title_matches_expected_neutral_title": true,
-        "visible_content_starts_with_expected_token": true
+        "docx_zip_crc_ok": true,
+        "docx_visible_content_starts_with_abstract": true,
+        "docx_neutral_core_title": true,
+        "docx_header_footer_page_number_and_comments_absent": true,
+        "docx_is_figure_free": true,
+        "docx_table_count_matches_markdown": true,
+        "every_docx_table_is_three_line": true,
+        "docx_contains_rendered_numbers_not_citekeys": true,
+        "docx_does_not_claim_unverified_zotero_live_fields": true,
+        "docx_locked_values_present": true
+      },
+      "verdict": "PASS"
+    },
+    "concise/English": {
+      "path": "manuscript/concise/English.docx",
+      "sha256": "e444906a2818795946a21668802e1565b2af3296e3103d954bcf017abeb85901",
+      "embedded_media": [],
+      "drawings": 0,
+      "zotero_live_field_count": 0,
+      "citation_mode": "static numbered cache generated from Pandoc citekeys; not Zotero-live",
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "checks": {
+        "docx_zip_crc_ok": true,
+        "docx_visible_content_starts_with_abstract": true,
+        "docx_neutral_core_title": true,
+        "docx_header_footer_page_number_and_comments_absent": true,
+        "docx_is_figure_free": true,
+        "docx_table_count_matches_markdown": true,
+        "every_docx_table_is_three_line": true,
+        "docx_contains_rendered_numbers_not_citekeys": true,
+        "docx_does_not_claim_unverified_zotero_live_fields": true,
+        "docx_locked_values_present": true
+      },
+      "verdict": "PASS"
+    },
+    "concise/Chinese": {
+      "path": "manuscript/concise/Chinese.docx",
+      "sha256": "c2ff9853ec006f3b687c35c8cdf0e8efbb138eb9afc02075238b8388cea8efa8",
+      "embedded_media": [],
+      "drawings": 0,
+      "zotero_live_field_count": 0,
+      "citation_mode": "static numbered cache generated from Pandoc citekeys; not Zotero-live",
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "checks": {
+        "docx_zip_crc_ok": true,
+        "docx_visible_content_starts_with_abstract": true,
+        "docx_neutral_core_title": true,
+        "docx_header_footer_page_number_and_comments_absent": true,
+        "docx_is_figure_free": true,
+        "docx_table_count_matches_markdown": true,
+        "every_docx_table_is_three_line": true,
+        "docx_contains_rendered_numbers_not_citekeys": true,
+        "docx_does_not_claim_unverified_zotero_live_fields": true,
+        "docx_locked_values_present": true
       },
       "verdict": "PASS"
     }
   },
+  "checks": {
+    "four_current_docx_packages_audited": true,
+    "all_packages_pass": true,
+    "all_packages_are_figure_free": true,
+    "all_tables_are_three_line": true,
+    "static_files_are_not_misrepresented_as_zotero_live": true
+  },
+  "zotero_acceptance_state": "setup gate",
   "verdict": "PASS"
 }

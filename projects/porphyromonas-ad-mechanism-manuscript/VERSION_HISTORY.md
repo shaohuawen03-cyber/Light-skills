@@ -34,13 +34,14 @@ Rules / 规则：
 | **v3.0.0 — external-v0.4 evidence integration** | 2026-08-12 | Manuscript content commit `2a7573604b6e12bd1d51b897d52c58f0d9ead077`; release-management commit `012d0cbcd3c45a26aed0adf9ba9bce2f70e4844b` | `porphyromonas-ad-manuscript-v3.0.0` | **Frozen prior full release** | Expanded 53-reference parallel manuscript; twelve externally reported sequences; independently recomputed composition; source-reported AChE docking summary; three figures; six supplementary tables; revision-v3 workflow, provenance controls and deterministic audits. / 扩展至53条文献；整合12条外部报告序列、组成审计、来源报告AChE对接汇总、三幅主图、六个补充表、revision-v3工作流及确定性审计。 |
 | **v3.1.0 — initial concise package** | 2026-08-14 | `ef8493c8d26f31fefef6ad6e79ca31a412d4af0a` | `porphyromonas-ad-manuscript-v3.1.0` | **Frozen prior concise release** | Added separate short English and Chinese SCI-style DOCX files with two tables, one figure and 20 selected references. / 新增英文、中文独立DOCX精简稿，保留两表、一图和20条精选文献。 |
 | **v3.2.0 — provenance-verified clean concise package** | 2026-08-14 | `273e352a5b92620df66e482b30fbd759472fad8b` | `porphyromonas-ad-manuscript-v3.2.0` | **Frozen prior concise release** | Renamed deliverables to `English.docx` and `Chinese.docx`; removed headers, footers, page-number fields and workflow metadata; rebuilt the AD–*P. gingivalis* Introduction; documented predictor algorithms; and corrected the PRJNA678453/PRJEB65451 provenance to 11 healthy plus 11 periodontitis participants and 66 specimens. / 采用中性文件名，删除页眉页脚页码及流程元数据，重构AD—*P. gingivalis*引言，补充预测算法，并核正来源队列为11名健康对照、11名牙周炎患者及66份标本。 |
-| **v3.3.0 — SCI-style Introduction and deep-learning-guided Methods** | 2026-08-14 | `e8c16c630d658424e8656ea89aa1c9c52cc33966` | `porphyromonas-ad-manuscript-v3.3.0` | **Current concise release** | Rewrote the Introduction with individually bracketed references [1]–[10]; reorganized Methods into conventional SCI subsections; and emphasized the relevant deep-learning peptide modes—ESM-2/CNN, fine-tuned ESM2-t30 and multi-task 1D CNN—while retaining the neural-network and evidence boundaries. / 引言采用[1]–[10]逐篇独立引用；方法按SCI结构重组；突出ESM-2/CNN、微调ESM2-t30和多任务一维CNN等肽分析深度学习模式，同时保留神经网络及证据边界。 |
+| **v3.3.0 — SCI-style Introduction and deep-learning-guided Methods** | 2026-08-14 | `e8c16c630d658424e8656ea89aa1c9c52cc33966` | `porphyromonas-ad-manuscript-v3.3.0` | **Frozen prior concise release** | Rewrote the Introduction with individually bracketed references [1]–[10]; reorganized Methods into conventional SCI subsections; and emphasized the relevant deep-learning peptide modes—ESM-2/CNN, fine-tuned ESM2-t30 and multi-task 1D CNN—while retaining the neural-network and evidence boundaries. / 引言采用[1]–[10]逐篇独立引用；方法按SCI结构重组；突出ESM-2/CNN、微调ESM2-t30和多任务一维CNN等肽分析深度学习模式，同时保留神经网络及证据边界。 |
 | **v3.4.0 — separate provenance-corrected full manuscripts** | 2026-08-17 | `918f7f9abf531c467b83a409ba5ccd4e86cd4c76` | `porphyromonas-ad-manuscript-v3.4.0` | **Frozen prior full release** | Added separate neutral `English.docx` and `Chinese.docx` full manuscripts with abstract, AD-first Introduction, complete Methods/Results/Discussion/Conclusions, declarations, four tables, three figures, and 53 verified references; carried forward the corrected PRJNA678453/PRJEB65451 provenance and model-specific architecture descriptions; removed headers, footers, page fields, draft notes, purpose-facing text, and the unsupported cohort/assembly summary. / 新增中性命名的独立英文、中文完整稿，含摘要、AD起始引言、完整方法/结果/讨论/结论、声明、四表、三图和53条核验文献；继承来源与模型架构修正，并删除页眉、页脚、页码域、草稿说明、用途性文字及无依据的队列/组装汇总。 |
-| **v3.5.0 — review-grade Introduction and prospective MD methods** | 2026-08-17 | The annotated tag resolves the final v3.5.0 release commit | `porphyromonas-ad-manuscript-v3.5.0` | **Current full-manuscript release** | Replaced the abstract with a concise high-impact-SCI narrative; expanded the Introduction through evidence-class synthesis; omitted participant, specimen, assembly-analysis and MAG totals from the article bodies; registered the user-derived 296-MAG value as pending audit; added a versioned prospective 100-ns GROMACS protocol without MD results; hid the visible article title; retained no headers, footers, page fields or comments; and audited editable-text SVG sources. / 采用高水平SCI叙事摘要和证据综合型扩展引言；正文省略参与者、标本、组装分析和MAG总数；将用户原始映射所得296个MAG登记为待审计；新增版本化100 ns GROMACS前瞻性方案但不加入MD结果；隐藏正文标题并保持无页眉、页脚、页码和批注；审计可编辑文字SVG。 |
+| **v3.5.0 — review-grade Introduction and prospective MD methods** | 2026-08-17 | The annotated tag resolves the final v3.5.0 release commit | `porphyromonas-ad-manuscript-v3.5.0` | **Frozen prior full release** | Replaced the abstract with a concise high-impact-SCI narrative; expanded the Introduction through evidence-class synthesis; omitted participant, specimen, assembly-analysis and MAG totals from the article bodies; registered the user-derived 296-MAG value as pending audit; added a versioned prospective 100-ns GROMACS protocol without MD results; hid the visible article title; retained no headers, footers, page fields or comments; and audited editable-text SVG sources. / 采用高水平SCI叙事摘要和证据综合型扩展引言；正文省略参与者、标本、组装分析和MAG总数；将用户原始映射所得296个MAG登记为待审计；新增版本化100 ns GROMACS前瞻性方案但不加入MD结果；隐藏正文标题并保持无页眉、页脚、页码和批注；审计可编辑文字SVG。 |
+| **v3.6.0 — clean full and concise submission variants** | 2026-08-17 | The annotated tag resolves the final v3.6.0 release commit | `porphyromonas-ad-manuscript-v3.6.0` | **Current full and concise release** | Rebuilt complete and concise English/Chinese manuscripts; converted every table to a three-line structure; removed figures from all four DOCX files; ended each article at Conclusion followed directly by References; removed evidence-tier, hash, commit, archive, acceptance and workflow-governance prose from article bodies; synchronized prospective MD methods without MD results; and converted source citations to Pandoc/BibTeX keys with an explicit Better BibTeX/Word acceptance gate. / 重建完整与精简中英文稿；全部表格改为三线表；四份DOCX移除所有图像；结论后直接进入参考文献；正文删除证据分层、哈希、提交、归档、接纳和工作流治理表述；同步仅方法无结果的前瞻性MD方案；正文引文改为Pandoc/BibTeX键，并设置明确的Better BibTeX/Word验收门。 |
 
 ## 3. Scientific status and package relationship / 科学状态与版本关系
 
-**v3.0.0–v3.5.0 full manuscripts support / 完整稿可支持：**
+**v3.0.0–v3.6.0 full manuscripts support / 完整稿可支持：**
 
 - principal-source aggregate funnel and recomputed descriptive percentages;
 - twelve externally reported 7–9-aa sequence strings and independently recomputed composition;
@@ -48,15 +49,17 @@ Rules / 规则：
 - a versioned prospective 100-ns GROMACS protocol, explicitly without accepted MD outcomes;
 - a provenance-aware, hypothesis-generating validation roadmap.
 
-**v3.0.0–v3.5.0 do not support / 不支持：**
+**v3.0.0–v3.6.0 do not support / 不支持：**
 
 - row-level linkage between the twelve strings and the principal screening funnel or stricter eight;
 - independently reproduced docking, verified poses/contacts, affinity, free energy, or completed molecular dynamics;
 - measured expression, BBB transport, toxicity, metal chemistry, AChE/Aβ function, disease specificity, or AD causality.
 
-**v3.1.0–v3.3.0 relationship / 精简稿关系：** v3.1.0 and v3.2.0 are frozen prior concise packages. v3.3.0 supersedes them as the current concise package after SCI-structure revision; it does not strengthen the evidence in the full manuscripts. / v3.1.0和v3.2.0为冻结的既往精简稿；v3.3.0经SCI结构修订后成为当前精简稿，但不提高完整稿的证据等级。
+**v3.1.0–v3.3.0 relationship / 精简稿关系：** v3.1.0 and v3.2.0 are frozen prior concise packages. v3.3.0 superseded them after SCI-structure revision and is now itself frozen after v3.6.0; none of these versions strengthens the underlying evidence. / v3.1.0和v3.2.0为冻结的既往精简稿；v3.3.0曾在SCI结构修订后取代它们，现也已被v3.6.0冻结；这些版本均不提高底层证据强度。
 
-**v3.5.0 full-package relationship / 完整稿关系：** v3.5.0 supersedes v3.4.0 as the current full release. Its manuscript deliverables remain only the separate `manuscript/full/English.docx` and `Chinese.docx` files, with parallel Markdown sources; the historical bilingual DOCX remains frozen and is not a v3.5.0 deliverable. / v3.5.0取代v3.4.0成为当前完整稿；稿件交付物仍仅为独立的英文、中文DOCX及平行Markdown源文件，历史双语组合DOCX保持冻结且不属于v3.5.0交付。
+**v3.5.0 full-package relationship / 完整稿关系：** v3.5.0 superseded v3.4.0 as the prior full release. Its historical deliverables remain frozen. / v3.5.0曾取代v3.4.0成为上一版完整稿，其历史交付物保持冻结。
+
+**v3.6.0 package relationship / 当前版本关系：** v3.6.0 supersedes v3.5.0 and v3.3.0 as the single current release line for both full and concise variants. The four current deliverables are the separate English and Chinese DOCX files under `manuscript/full/` and `manuscript/concise/`; historical bilingual manuscripts, supplementary files and figures are not v3.6.0 manuscript deliverables. / v3.6.0统一取代v3.5.0完整稿与v3.3.0精简稿，成为完整、精简两类任务的当前版本；当前交付物仅为`manuscript/full/`和`manuscript/concise/`下的四份独立中英文DOCX，历史双语稿、补充文件和图件不属于v3.6.0稿件交付。
 
 **v3.2.0 provenance correction / v3.2.0来源修正：** PRJNA678453 is reported as a 22-participant cohort (11 orally healthy and 11 with periodontitis) producing 66 oral specimens; PRJEB65451 is reported as the derived EBI-EMG/MGnify TPA assembly project. / PRJNA678453按22名参与者（11名口腔健康、11名牙周炎）和66份口腔标本报告；PRJEB65451按衍生TPA组装项目报告。
 
@@ -72,8 +75,8 @@ The repository includes a guarded cross-platform helper: / 仓库提供带保护
 
 ```bash
 python3 scripts/manage_version_tag.py create \
-  --version 3.5.0 \
-  --message "v3.5.0: expanded review-grade Introduction and prospective MD methods" \
+  --version 3.6.0 \
+  --message "v3.6.0: clean figure-free full and concise manuscripts with three-line tables" \
   --push
 ```
 
@@ -81,9 +84,9 @@ Equivalent native Git commands / 等价Git命令：
 
 ```bash
 git status --short
-git tag -a porphyromonas-ad-manuscript-v3.5.0 \
-  -m "v3.5.0: expanded review-grade Introduction and prospective MD methods"
-git push origin refs/tags/porphyromonas-ad-manuscript-v3.5.0
+git tag -a porphyromonas-ad-manuscript-v3.6.0 \
+  -m "v3.6.0: clean figure-free full and concise manuscripts with three-line tables"
+git push origin refs/tags/porphyromonas-ad-manuscript-v3.6.0
 ```
 
 The helper refuses to tag a dirty working tree, the wrong branch, or an existing tag. / 脚本会拒绝脏工作区、错误分支或重复标签。
@@ -91,13 +94,13 @@ The helper refuses to tag a dirty working tree, the wrong branch, or an existing
 ## 5. Verify a tag / 核验标签
 
 ```bash
-python3 scripts/manage_version_tag.py verify --version 3.5.0
-git show --no-patch --decorate porphyromonas-ad-manuscript-v3.5.0
-git rev-list -n 1 porphyromonas-ad-manuscript-v3.5.0
+python3 scripts/manage_version_tag.py verify --version 3.6.0
+git show --no-patch --decorate porphyromonas-ad-manuscript-v3.6.0
+git rev-list -n 1 porphyromonas-ad-manuscript-v3.6.0
 
 # Earlier immutable baselines remain independently verifiable:
+python3 scripts/manage_version_tag.py verify --version 3.5.0
 python3 scripts/manage_version_tag.py verify --version 3.4.0
-python3 scripts/manage_version_tag.py verify --version 3.3.0
 python3 scripts/manage_version_tag.py verify --version 3.2.0
 python3 scripts/manage_version_tag.py verify --version 3.1.0
 python3 scripts/manage_version_tag.py verify --version 3.0.0
