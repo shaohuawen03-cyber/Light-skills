@@ -196,7 +196,7 @@ def image_para(rel_id: str, path: Path, docpr_id: int, alt: str) -> str:
     return f'<w:p><w:pPr><w:pStyle w:val="Figure"/><w:jc w:val="center"/><w:keepNext/></w:pPr>{drawing}</w:p>'
 
 
-def table_xml(rows: list[list[str]], citation_numbers: dict[str, int] | None = None) -> str:
+def table_xml(rows: list[list[str]], citation_numbers: dict[str, int] | None = None, base_size: int = 17) -> str:
     """Build a journal-style three-line table: top, header-bottom, and final-bottom."""
     cols = max(len(r) for r in rows)
     rows = [r + [""] * (cols - len(r)) for r in rows]
@@ -216,8 +216,9 @@ def table_xml(rows: list[list[str]], citation_numbers: dict[str, int] | None = N
                 f'<w:tcPr><w:tcW w:w="{colw}" w:type="dxa"/>{header_rule}'
                 '<w:vAlign w:val="center"/></w:tcPr>'
             )
-            ppr = '<w:pPr><w:pStyle w:val="TableText"/><w:spacing w:before="0" w:after="0" w:line="220" w:lineRule="auto"/></w:pPr>'
-            content = inline_runs(cell.strip(), base_size=17, citation_numbers=citation_numbers)
+            table_line = 240 if base_size >= 20 else 220
+            ppr = f'<w:pPr><w:pStyle w:val="TableText"/><w:spacing w:before="0" w:after="0" w:line="{table_line}" w:lineRule="auto"/></w:pPr>'
+            content = inline_runs(cell.strip(), base_size=base_size, citation_numbers=citation_numbers)
             cells.append(f'<w:tc>{tcpr}<w:p>{ppr}{content}</w:p></w:tc>')
         trpr = '<w:trPr><w:tblHeader/></w:trPr>' if ri == 0 else ""
         tr_xml.append(f'<w:tr>{trpr}{"".join(cells)}</w:tr>')
@@ -291,7 +292,7 @@ def parse_markdown(
             while i < len(lines) and lines[i].lstrip().startswith("|"):
                 rows.append(split_table_row(lines[i]))
                 i += 1
-            body.append(table_xml(rows, citation_numbers))
+            body.append(table_xml(rows, citation_numbers, base_size=20 if reject_images else 17))
             body.append('<w:p><w:pPr><w:spacing w:after="40"/></w:pPr></w:p>')
             continue
         heading = re.match(r"^(#{1,6})\s+(.+)$", line)
@@ -307,7 +308,7 @@ def parse_markdown(
             i += 1
             continue
         if re.match(r"^\d+\.\s+", line):
-            body.append(para_xml(line, "Reference", indent="360", base_size=18, citation_numbers=citation_numbers))
+            body.append(para_xml(line, "Reference", indent="360", base_size=24 if reject_images else 18, citation_numbers=citation_numbers))
             i += 1
             continue
         if re.match(r"^[-*]\s+", line):
@@ -326,7 +327,7 @@ def parse_markdown(
     return "".join(body), images, image_order
 
 
-def styles_xml() -> str:
+def legacy_styles_xml() -> str:
     return f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:styles xmlns:w="{W}">
   <w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="宋体" w:cs="Times New Roman"/><w:sz w:val="22"/><w:szCs w:val="22"/><w:lang w:val="en-US" w:eastAsia="zh-CN"/></w:rPr></w:rPrDefault>
@@ -343,6 +344,30 @@ def styles_xml() -> str:
   <w:style w:type="paragraph" w:styleId="Reference"><w:name w:val="Reference"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="60" w:line="220" w:lineRule="auto"/><w:jc w:val="left"/></w:pPr><w:rPr><w:sz w:val="18"/><w:szCs w:val="18"/></w:rPr></w:style>
   <w:style w:type="paragraph" w:styleId="ListParagraph"><w:name w:val="List Paragraph"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="60"/></w:pPr></w:style>
   <w:style w:type="paragraph" w:styleId="TableText"><w:name w:val="Table Text"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="0"/><w:jc w:val="left"/></w:pPr><w:rPr><w:sz w:val="17"/><w:szCs w:val="17"/></w:rPr></w:style>
+  <w:style w:type="table" w:styleId="ThreeLineTable"><w:name w:val="Three-Line Table"/><w:tblPr><w:tblBorders><w:top w:val="single" w:sz="12" w:color="000000"/><w:left w:val="nil"/><w:bottom w:val="single" w:sz="12" w:color="000000"/><w:right w:val="nil"/><w:insideH w:val="nil"/><w:insideV w:val="nil"/></w:tblBorders></w:tblPr></w:style>
+</w:styles>'''
+
+
+def styles_xml(journal_manuscript: bool = False) -> str:
+    """Return conservative journal-submission styles for clean manuscripts."""
+    if not journal_manuscript:
+        return legacy_styles_xml()
+    return f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:styles xmlns:w="{W}">
+  <w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="宋体" w:cs="Times New Roman"/><w:sz w:val="24"/><w:szCs w:val="24"/><w:lang w:val="en-US" w:eastAsia="zh-CN"/></w:rPr></w:rPrDefault>
+  <w:pPrDefault><w:pPr><w:spacing w:before="0" w:after="0" w:line="480" w:lineRule="auto"/><w:jc w:val="both"/><w:widowControl/></w:pPr></w:pPrDefault></w:docDefaults>
+  <w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/><w:pPr><w:spacing w:before="0" w:after="0" w:line="480" w:lineRule="auto"/><w:jc w:val="both"/><w:widowControl/></w:pPr><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading1"><w:name w:val="heading 1"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="240" w:after="120"/><w:jc w:val="left"/><w:outlineLvl w:val="0"/></w:pPr><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="黑体"/><w:b/><w:color w:val="000000"/><w:sz w:val="30"/><w:szCs w:val="30"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading2"><w:name w:val="heading 2"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="240" w:after="120"/><w:jc w:val="left"/><w:outlineLvl w:val="1"/></w:pPr><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="黑体"/><w:b/><w:color w:val="000000"/><w:sz w:val="28"/><w:szCs w:val="28"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading3"><w:name w:val="heading 3"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="180" w:after="60"/><w:outlineLvl w:val="2"/></w:pPr><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="黑体"/><w:b/><w:i/><w:color w:val="000000"/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Heading4"><w:name w:val="heading 4"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:spacing w:before="120" w:after="0"/><w:outlineLvl w:val="3"/></w:pPr><w:rPr><w:i/><w:color w:val="000000"/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Note"><w:name w:val="Note"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="0" w:line="480" w:lineRule="auto"/></w:pPr><w:rPr><w:i/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Keywords"><w:name w:val="Keywords"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="120" w:line="480" w:lineRule="auto"/></w:pPr><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Caption"><w:name w:val="Caption"/><w:basedOn w:val="Normal"/><w:pPr><w:keepNext/><w:spacing w:before="120" w:after="60" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/></w:pPr><w:rPr><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="Figure"><w:name w:val="Figure"/><w:basedOn w:val="Normal"/></w:style>
+  <w:style w:type="paragraph" w:styleId="Reference"><w:name w:val="Reference"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="0" w:line="480" w:lineRule="auto"/><w:jc w:val="left"/></w:pPr><w:rPr><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:style>
+  <w:style w:type="paragraph" w:styleId="ListParagraph"><w:name w:val="List Paragraph"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:after="0" w:line="480" w:lineRule="auto"/></w:pPr></w:style>
+  <w:style w:type="paragraph" w:styleId="TableText"><w:name w:val="Table Text"/><w:basedOn w:val="Normal"/><w:pPr><w:spacing w:before="0" w:after="0" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/></w:pPr><w:rPr><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr></w:style>
   <w:style w:type="table" w:styleId="ThreeLineTable"><w:name w:val="Three-Line Table"/><w:tblPr><w:tblBorders><w:top w:val="single" w:sz="12" w:color="000000"/><w:left w:val="nil"/><w:bottom w:val="single" w:sz="12" w:color="000000"/><w:right w:val="nil"/><w:insideH w:val="nil"/><w:insideV w:val="nil"/></w:tblBorders></w:tblPr></w:style>
 </w:styles>'''
 
@@ -367,11 +392,13 @@ def build(
         '<w:headerReference w:type="default" r:id="rId4"/>'
         '<w:footerReference w:type="default" r:id="rId5"/>'
     )
+    margin = 1440 if clean_manuscript else 1134
+    line_pitch = 480 if clean_manuscript else 312
     sect = (
         f'<w:sectPr>{header_footer_refs}<w:pgSz w:w="11906" w:h="16838"/>'
-        '<w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" '
+        f'<w:pgMar w:top="{margin}" w:right="{margin}" w:bottom="{margin}" w:left="{margin}" '
         'w:header="600" w:footer="600" w:gutter="0"/><w:cols w:space="720"/>'
-        '<w:docGrid w:linePitch="312"/></w:sectPr>'
+        f'<w:docGrid w:linePitch="{line_pitch}"/></w:sectPr>'
     )
     document = f'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document {ns}><w:body>{body}{sect}</w:body></w:document>'
 
@@ -424,7 +451,7 @@ def build(
         zip_member(zf, "docProps/app.xml", app)
         zip_member(zf, "word/document.xml", document)
         zip_member(zf, "word/_rels/document.xml.rels", doc_rels)
-        zip_member(zf, "word/styles.xml", styles_xml())
+        zip_member(zf, "word/styles.xml", styles_xml(journal_manuscript=clean_manuscript))
         zip_member(zf, "word/settings.xml", settings)
         zip_member(zf, "word/fontTable.xml", fonts)
         if not clean_manuscript:

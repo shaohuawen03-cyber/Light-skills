@@ -42,24 +42,24 @@ PROHIBITED_COUNTS_ZH = [
 SPECS = {
     "full/English": {
         "md": "manuscript/full/English.md", "docx": "manuscript/full/English.docx",
-        "start": "Abstract", "abstract": "## Abstract", "intro": "## 1. Introduction",
-        "methods": "## 2. Materials and Methods", "results": "## 3. Results",
-        "discussion": "## 4. Discussion", "conclusion": "## 5. Conclusions",
+        "start": "Abstract", "abstract": "## Abstract", "intro": "## Introduction",
+        "methods": "## Materials and methods", "results": "## Results",
+        "discussion": "## Discussion", "conclusion": "## Conclusion",
         "references": "## References", "core_title": "English", "tables": 4, "refs": 55,
         "patterns": COMMON_ADMIN_PATTERNS, "counts": PROHIBITED_COUNTS_EN,
     },
     "full/Chinese": {
         "md": "manuscript/full/Chinese.md", "docx": "manuscript/full/Chinese.docx",
-        "start": "摘要", "abstract": "## 摘要", "intro": "## 1. 引言",
-        "methods": "## 2. 材料与方法", "results": "## 3. 结果",
-        "discussion": "## 4. 讨论", "conclusion": "## 5. 结论",
+        "start": "摘要", "abstract": "## 摘要", "intro": "## 引言",
+        "methods": "## 材料与方法", "results": "## 结果",
+        "discussion": "## 讨论", "conclusion": "## 结论",
         "references": "## 参考文献", "core_title": "Chinese", "tables": 4, "refs": 55,
         "patterns": COMMON_ADMIN_PATTERNS_ZH, "counts": PROHIBITED_COUNTS_ZH,
     },
     "concise/English": {
         "md": "manuscript/concise/English.md", "docx": "manuscript/concise/English.docx",
         "start": "Abstract", "abstract": "## Abstract", "intro": "## Introduction",
-        "methods": "## Materials and Methods", "results": "## Results",
+        "methods": "## Materials and methods", "results": "## Results",
         "discussion": "## Discussion", "conclusion": "## Conclusion",
         "references": "## References", "core_title": "English", "tables": 2, "refs": 22,
         "patterns": COMMON_ADMIN_PATTERNS, "counts": PROHIBITED_COUNTS_EN,
@@ -131,6 +131,9 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
     docx_path = ROOT / spec["docx"]
     md = md_path.read_text(encoding="utf-8")
     body, references = md.split(spec["references"], 1)
+    abstract_block = body.split(spec["abstract"], 1)[1].split(spec["intro"], 1)[0]
+    body_word_count = len(body.split())
+    body_character_count = len(body)
     h2 = re.findall(r"(?m)^##\s+.+$", md)
     expected_h2 = [
         spec["abstract"], spec["intro"], spec["methods"], spec["results"],
@@ -162,6 +165,7 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         doc = ET.fromstring(archive.read("word/document.xml"))
         doc_text = "".join(node.text or "" for node in doc.iter(W + "t"))
         document_xml = archive.read("word/document.xml").decode("utf-8", errors="replace")
+        styles_xml_text = archive.read("word/styles.xml").decode("utf-8", errors="replace")
         all_xml = "\n".join(
             archive.read(name).decode("utf-8", errors="replace")
             for name in names if name.endswith((".xml", ".rels"))
@@ -176,9 +180,28 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         drawings = sum(1 for _ in doc.iter(W + "drawing"))
         citation_fields = document_xml.count("ADDIN ZOTERO_ITEM CSL_CITATION")
 
+    english = label.endswith("/English")
+    abstract_labels = (
+        ["**Background:**", "**Objective:**", "**Methods:**", "**Results:**", "**Conclusions:**"]
+        if english else ["**背景：**", "**目的：**", "**方法：**", "**结果：**", "**结论：**"]
+    )
+    negative_md_patterns = (
+        [r"no (?:molecular[- ]dynamics|MD) result", r"no trajectory result", r"without MD result", r"not report(?:ing)? MD result"]
+        if english else [r"不报告.*(?:MD|分子动力学).*结果", r"不分析任何MD结果", r"不包含轨迹结果", r"不能作为结果"]
+    )
+    negative_md_hits = [pattern for pattern in negative_md_patterns if re.search(pattern, body, re.I)]
+    ongoing_md_language = (
+        "ongoing" in body.lower() and ("will add" in body.lower() or "will be incorporated" in body.lower())
+        if english else "正在进行" in body and "完成后补充" in body
+    )
+
     checks = {
         "markdown_starts_with_abstract_and_has_no_h1": md.lstrip().startswith(spec["abstract"]) and not re.search(r"(?m)^#\s+", md),
         "seven_article_sections_in_order": h2 == expected_h2,
+        "journal_style_unnumbered_headings": not re.search(r"(?m)^#{2,3}\s+\d+(?:\.\d+)?\.?\s+", body),
+        "structured_abstract_has_required_labels": all(label_text in abstract_block for label_text in abstract_labels),
+        "english_abstract_within_250_words": (len(abstract_block.split()) <= 250 if english else True),
+        "abstract_contains_no_citations": "[@" not in abstract_block,
         "conclusion_proceeds_directly_to_references": h2[-2:] == [spec["conclusion"], spec["references"]],
         "declarations_and_administrative_prose_absent": not admin_hits,
         "specific_participant_specimen_mag_counts_absent": not count_hits,
@@ -191,11 +214,26 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         "numbered_references_follow_first_citation_appearance": reference_keys_in_order == citation_keys_in_first_appearance_order,
         "reference_dois_are_in_bibtex": ref_dois <= known_dois,
         "reference_count_matches_variant": len(ref_dois) == spec["refs"],
+        "variant_has_substantive_length": (
+            body_word_count >= (6000 if label == "full/English" else 3000)
+            if english else body_character_count >= (16000 if label == "full/Chinese" else 8500)
+        ),
         "prospective_md_method_present": bool(re.search(r"100[- ]ns", body)) and ("GROMACS" in body),
-        "no_md_result_in_results": not re.search(r"(?i)molecular[- ]dynamics result|分子动力学结果|MD结果", results),
+        "md_analysis_is_ongoing_and_scheduled_for_integration": ongoing_md_language,
+        "prohibited_no_md_result_wording_absent": not negative_md_hits,
+        "md_results_section_awaits_completed_analysis": not re.search(r"(?i)molecular[- ]dynamics result|分子动力学结果|MD结果", results),
         "docx_zip_crc_ok": crc is None,
         "docx_visible_content_starts_with_abstract": doc_text.startswith(spec["start"]),
         "docx_neutral_core_title": spec["core_title"] in core_text,
+        "docx_uses_12_point_times_double_spaced_journal_body": (
+            '<w:style w:type="paragraph" w:default="1" w:styleId="Normal">' in styles_xml_text
+            and '<w:sz w:val="24"/><w:szCs w:val="24"/>' in styles_xml_text
+            and 'w:line="480" w:lineRule="auto"' in styles_xml_text
+            and 'w:color w:val="17365D"' not in styles_xml_text
+        ),
+        "docx_uses_one_inch_margins": all(
+            f'w:{side}="1440"' in document_xml for side in ("top", "right", "bottom", "left")
+        ),
         "docx_header_footer_page_number_and_comments_absent": (
             not header_footer and not comments and 'w:instr="PAGE"' not in all_xml
         ),
@@ -221,7 +259,11 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
         "cited_key_count": len(cited_set),
         "reference_count": len(ref_numbers),
         "reference_doi_count": len(ref_dois),
+        "body_word_count": body_word_count,
+        "body_character_count": body_character_count,
+        "abstract_word_count": len(abstract_block.split()),
         "administrative_pattern_hits": admin_hits,
+        "prohibited_no_md_result_pattern_hits": negative_md_hits,
         "prohibited_count_hits": count_hits,
         "grouped_introduction_citations": grouped_intro,
         "unknown_citation_keys": sorted(cited_set - known_bib_keys),

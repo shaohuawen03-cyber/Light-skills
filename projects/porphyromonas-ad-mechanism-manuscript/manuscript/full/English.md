@@ -1,12 +1,20 @@
 ## Abstract
 
-Periodontitis-associated oral dysbiosis has been proposed as a modifiable contributor to neuroinflammatory processes relevant to Alzheimer’s disease (AD), but the molecular entities connecting the oral microbiome to the brain remain unresolved. Microbiome small open reading frames (smORFs) encode a largely uncharacterized peptide space that can be computationally prioritized but cannot support direct mechanistic inference without experimental evidence. We conducted a computation-only secondary analysis of aggregate oral-smORF screening data and a separate acetylcholinesterase (AChE) docking summary. Candidate libraries were filtered by sequence and proteomic evidence and prioritized with ESM-2 embeddings followed by task-specific convolutional networks, a fine-tuned ESM2-t30 neurotoxicity model, a two-tier neural-network metal-binding predictor, and a multi-task antioxidant convolutional network. Evidence filtering retained 31,510 and 33,786 candidates in the two supplied branches. In the periodontitis-labelled branch, 3,518 candidates were BBB-high; 3,299 were within the NTxPred2 peptide-length domain and 923 were model-positive. Subsequent filters retained 111 metal-binding-positive candidates, 15 CHEL-priority candidates, a 12-member main set, and an 8-member stricter subset. A separate dataset contained twelve unique 7–9-residue sequences and AChE Vina means spanning −9.60 to −8.25 kcal/mol. The sequence composition and score ordering were reproducible from the available tables, whereas docking execution could not be reproduced because prepared structures, configurations, run-level scores, logs, and poses were unavailable. A prospective 100-ns GROMACS protocol was specified, but no molecular-dynamics result is reported. The resulting shortlist is a hypothesis set for validation rather than evidence of translation, brain exposure, toxicity, metal-dependent chemistry, AChE engagement, disease specificity, or an AD mechanism.
+**Background:** Periodontitis-associated oral dysbiosis may contribute to Alzheimer’s disease (AD)-relevant inflammation, but the molecular entities linking the oral microbiome to the brain remain unresolved. Microbiome small open reading frames (smORFs) provide a large, poorly characterized peptide space for computational prioritization.
 
-**Keywords:** deep learning; protein language model; oral microbiome; small open reading frame; micropeptide; periodontitis; blood–brain barrier; neurotoxicity prediction; metal-binding prediction; acetylcholinesterase; molecular docking; molecular dynamics; hypothesis generation
+**Objective:** To reconstruct an aggregate oral-smORF screening cascade, characterize a supplied peptide shortlist, and define testable AChE, metal/redox, blood–brain barrier (BBB), and neurotoxicity hypotheses.
 
-## 1. Introduction
+**Methods:** This computation-only secondary analysis integrated sequence/proteomic filtering, ESM-2 embeddings with task-specific convolutional networks, a fine-tuned ESM2-t30 neurotoxicity model, a two-tier neural-network metal-binding predictor, a multi-task antioxidant convolutional network, and a separate AChE docking summary.
 
-### 1.1 Alzheimer’s disease as a multilevel biological problem
+**Results:** Filtering retained 31,510 and 33,786 candidates in the two supplied branches. In the periodontitis-labelled branch, 3,518 candidates were BBB-high; 3,299 were within the NTxPred2 length domain and 923 were model-positive. Subsequent filters retained 111, 15, 12, and 8 candidates. A separate dataset contained twelve unique 7–9-residue sequences with AChE Vina means from −9.60 to −8.25 kcal/mol. Sequence composition and score ordering were reproducible, whereas sequence-level funnel linkage and docking execution could not be reconstructed from the available material.
+
+**Conclusions:** The analysis yields a bounded shortlist for independent computational and experimental validation rather than evidence of peptide expression, brain exposure, *Porphyromonas gingivalis* origin, AChE engagement, or an AD mechanism. A prespecified 100-ns GROMACS extension will add trajectory-derived stability and contact analyses after completion and quality control.
+
+**Keywords:** Alzheimer’s disease; *Porphyromonas gingivalis*; periodontitis; oral microbiome; smORF; deep learning; acetylcholinesterase; molecular dynamics
+
+## Introduction
+
+### Alzheimer’s disease as a multilevel biological problem
 
 Alzheimer’s disease (AD) is a progressive neurodegenerative disorder in which amyloid-β (Aβ) deposition, tau pathology, synaptic failure, glial activation, vascular dysfunction, and systemic comorbidity interact over a prolonged preclinical and clinical continuum [@scheltens2021alzheimer]. The amyloid hypothesis remains central to disease biology, particularly as a framework for initiating events, but amyloid burden alone does not account for the full spatial, temporal, and clinical heterogeneity of AD [@selkoe2016amyloid]. Contemporary interpretation therefore places amyloid and tau within a broader network that includes innate immune signalling, neuronal vulnerability, lipid and metal homeostasis, cerebrovascular integrity, and age-dependent loss of resilience. This systems view is important when evaluating peripheral exposures: a biologically plausible contributor need not be a single sufficient cause, but it must still be connected to disease-relevant tissue through traceable molecular and temporal evidence.
 
@@ -14,7 +22,7 @@ The cholinergic system illustrates the distinction between clinical relevance an
 
 Chronic peripheral inflammatory states have consequently attracted attention as possible modifiers of neurodegenerative vulnerability. Periodontitis is of particular interest because it combines persistent mucosal inflammation, a dysbiotic polymicrobial biofilm, episodic access of microbial products to the circulation, and strong age and comorbidity gradients [@chalmers2025primer]. These same features make causal interpretation difficult. Periodontitis may contribute to systemic inflammatory burden, but it may also share determinants with cognitive decline, while declining cognition can worsen oral hygiene and access to dental care. A rigorous molecular study must therefore separate association, route plausibility, molecular identity, and demonstrated function rather than treating them as interchangeable evidence.
 
-### 1.2 Periodontal dysbiosis and *Porphyromonas gingivalis*
+### Periodontal dysbiosis and *Porphyromonas gingivalis*
 
 Periodontitis is an ecological disease of the tooth-supporting tissues rather than the consequence of a single pathogen. In susceptible hosts, altered community structure, inflammatory nutrient release, and impaired resolution can reinforce one another, producing a dysbiotic environment with site-specific transcriptional activity. Paired oral metagenomic and metatranscriptomic data show that disease-associated signals vary by species and oral site and that taxonomic abundance cannot substitute for functional activity [@belstrom2021periodontitis]. Cross-study metatranscriptomic synthesis further shows that disease signatures depend on cohort definition, sampling site, sequencing depth, normalization, covariates, and subject-level replication [@ovsepian2024periodontal]. These observations argue against describing every sequence recovered from a disease-labelled branch as disease-specific.
 
@@ -22,7 +30,7 @@ Within this community, *Porphyromonas gingivalis* is a well-studied Gram-negativ
 
 The distinction between an organism-level hypothesis and a community-peptide hypothesis is fundamental. Detection of *P. gingivalis* DNA, antigen, gingipain-associated signal, or vesicular material does not imply that a particular short peptide was expressed, secreted, stable in blood, transported across the blood–brain barrier (BBB), or active in neural tissue. Conversely, a metagenome-derived peptide that cannot be assigned to *P. gingivalis* could still originate from another oral taxon or from an assembly artefact. The oral metagenome is therefore treated here as a community sequence space, while *P. gingivalis* provides mechanistic context rather than a presumed taxonomic label.
 
-### 1.3 Human, experimental, and genetic evidence do not carry equal causal weight
+### Human, experimental, and genetic evidence do not carry equal causal weight
 
 The periodontitis–AD literature contains several evidence classes that address different questions. Observational reviews and meta-analyses commonly report associations between periodontal disease and cognitive disorders, but their estimates vary with periodontal definitions, dementia ascertainment, follow-up, age structure, and adjustment strategy [@larvin2023periodontalcognition]. Clinical syntheses likewise identify a recurring association while emphasizing heterogeneity and the limited ability of retrospective designs to establish directionality [@kaliamoorthy2022periodontitisad]. Reviews focused on oral bacteria broaden the candidate mechanisms but also reveal that organism detection, antibody responses, oral disease status, and dementia outcomes are often measured in different populations [@liu2023oralbacteriaad]. More recent evidence assessments continue to classify periodontitis as a possible risk marker while calling for stronger longitudinal and interventional designs [@kim2025periodontitisdementia].
 
@@ -34,7 +42,7 @@ Mechanistic studies answer narrower questions under controlled conditions. *P. g
 
 Taken together, the literature supports a research question, not a settled pathway. Human associations establish relevance, experimental models establish selected possibilities, and negative or equivocal causal analyses constrain interpretation. A defensible study should identify a molecular entity, trace it to its source, demonstrate exposure, and then test a prespecified function. The present work addresses only the first computational steps of that sequence.
 
-### 1.4 Candidate routes from the periodontal niche to the brain
+### Candidate routes from the periodontal niche to the brain
 
 Several non-exclusive routes have been proposed to connect periodontal dysbiosis with neurodegenerative processes. One is indirect: chronic periodontal inflammation may alter circulating cytokines, acute-phase responses, endothelial activation, or immune-cell states, which could influence neurovascular and glial function without requiring a viable organism to enter the brain [@chalmers2025primer]. A second involves episodic dissemination of bacterial cells or soluble products during tissue inflammation or routine mechanical disturbance. A third involves outer-membrane vesicles, which protect and concentrate lipids, proteins, nucleic acids, and other bacterial cargo [@ho2015omv]. A fourth involves specific enzymes or molecular fragments, including gingipain-related products, that could modify host substrates [@guo2010gingipain]. The relative contribution of these routes in humans remains uncertain.
 
@@ -42,7 +50,7 @@ Each route imposes a different evidence requirement. An inflammatory route requi
 
 Microbially encoded small proteins and peptides remain underexplored within this framework. Short molecules could in principle act as ligands, enzyme modulators, membrane-active agents, immune signals, metal-binding species, or inert degradation products. The hypothesis space is therefore broad, but broad plausibility is not evidence for a particular sequence. The unresolved molecular gap is whether any traceable oral-microbial peptide is expressed in the relevant ecological context, disseminates beyond the mouth, and exerts a reproducible neural or vascular effect. Computational prioritization is valuable only insofar as it reduces this space without erasing these sequential requirements.
 
-### 1.5 Microbiome smORFs form a legitimate but technically difficult discovery space
+### Microbiome smORFs form a legitimate but technically difficult discovery space
 
 Small open reading frames (smORFs) are systematically under-annotated because short coding regions are difficult to distinguish from random open reading frames, provide limited phylogenetic signal, and often fall below conventional gene-calling thresholds. Large-scale analysis of human-associated microbiomes nevertheless identified thousands of conserved small-gene families, many lacking known domains [@sberro2019smallgenes]. Dedicated annotation approaches improve discovery by combining profile models, coding features, conservation, and other evidence rather than applying protein-length cut-offs designed for conventional genes [@durrant2021sorf]. High-resolution multi-omics can strengthen candidate status by linking predictions to transcriptional and proteomic observations [@davin2026multiomics].
 
@@ -52,7 +60,7 @@ Oral sequence and metaproteome resources provide complementary but non-equivalen
 
 This distinction makes sample-level traceability indispensable. A disease comparison requires a chain from sequence to contig, assembly or bin, specimen, participant, oral site, clinical group, and processing batch. Without that chain, candidate counts are computational accounting units rather than independent biological replicates. The available data preserve aggregate branch labels and counts but not the row-level mapping needed to estimate prevalence, enrichment, taxonomic origin, or between-participant uncertainty. Accordingly, the term “periodontitis-labelled branch” is used instead of “periodontitis-specific peptidome.”
 
-### 1.6 Deep-learning-guided prioritization is triage, not validation
+### Deep-learning-guided prioritization is triage, not validation
 
 The scale of the smORF search space motivates sequence-based models, but their outputs inherit the assumptions and domain limits of their training data. UniDL4BioPep uses contextual embeddings from a pretrained ESM-2 model followed by task-specific convolutional neural networks for peptide-bioactivity classification [@du2023unidl4biopep]. Protein language models can capture sequence regularities that are difficult to encode manually, yet an output score remains model-specific: it is not a calibrated biological probability unless calibration has been demonstrated in a comparable sequence and task domain.
 
@@ -62,37 +70,37 @@ The downstream tools are likewise heterogeneous. The peptide mode of NTxPred2 fi
 
 The appropriate interpretation is triage. “Neurotoxic-positive” is not neuronal toxicity; “metal-binding-positive” is not a measured dissociation constant or coordination geometry; CHEL and FRS outputs are not redox chemistry. A strong precedent from microbiome peptide mining shows that computational candidates become biological findings only after synthesis and controlled functional testing [@torres2024peptideantibiotics]. In a computation-only study, the scientific contribution is therefore the transparent reduction of a candidate space, explicit model descriptions, domain warnings, and a reproducible account of what remains untested.
 
-### 1.7 AChE, metal homeostasis, docking, and molecular dynamics define a structural hypothesis
+### AChE, metal homeostasis, docking, and molecular dynamics define a structural hypothesis
 
 AChE provides a biologically motivated but demanding structural follow-up. Beyond hydrolysing acetylcholine, AChE can accelerate Aβ fibril assembly [@inestrosa1996ache]. A defined AChE motif has been implicated in promoting Aβ fibril formation [@deferrari2001motif], and PAS-directed ligands can inhibit AChE-induced Aβ aggregation in biochemical systems [@bartolini2003pas]. Structural studies map an aromatic gorge connecting the catalytic machinery with the peripheral site [@kryger1999e2020]. The human AChE structure represented by PDB 4EY6 provides an experimentally determined receptor framework for ligand-oriented questions [@cheung2012ache]. These findings justify asking whether a candidate peptide can occupy a reproducible region of the AChE surface; they do not establish binding, inhibition, or an effect on Aβ.
 
 Docking flexible 7–9-residue peptides is especially uncertain because peptide protonation, termini, initial conformers, receptor flexibility, search-space placement, scoring stochasticity, and post-docking refinement can alter rank order. AutoDock Vina is a useful screening engine, but its scores are not experimental affinities or binding free energies [@trott2010vina]. Later Vina implementations expand methods and interfaces without removing the need for complete preparation and execution records [@eberhardt2021vina]. Peptide-specific refinement methods such as FlexPepDock illustrate the higher-resolution standard that could be applied after a transparent initial screen [@london2011flexpepdock].
 
-Molecular dynamics (MD) can test whether a prepared complex remains within a defined conformational basin under a specified force field and solvent model, but MD cannot rescue an untraceable or poorly prepared docking pose. Published AChE–Aβ simulations demonstrate that peptide residence and contacts can change over time [@atanasova2020md]. Accelerated simulations further show how alternative AChE surface interactions may be explored [@lushchekina2017amd]. For the present candidates, meaningful MD would require versioned starting coordinates, topology and protonation decisions, independently seeded trajectories, convergence assessment, and prespecified analyses. Until those elements and complete trajectories are available, MD remains a protocol rather than a result.
+Molecular dynamics (MD) can test whether a prepared complex remains within a defined conformational basin under a specified force field and solvent model, but MD cannot rescue an untraceable or poorly prepared docking pose. Published AChE–Aβ simulations demonstrate that peptide residence and contacts can change over time [@atanasova2020md]. Accelerated simulations further show how alternative AChE surface interactions may be explored [@lushchekina2017amd]. For the present candidates, meaningful MD would require versioned starting coordinates, topology and protonation decisions, independently seeded trajectories, convergence assessment, and prespecified analyses. The ongoing MD extension will evaluate residence, conformational stability, and contact persistence after the predefined trajectory analyses and quality-control checks are complete.
 
 Metal biology defines a second structural hypothesis. Copper, iron, and zinc dyshomeostasis intersects with Aβ aggregation, redox chemistry, lipid peroxidation, and neuronal injury [@bush2013metal]. Broader elementomic perspectives place these interactions within a network rather than a single-metal mechanism [@lei2021elements]. Histidine- and cysteine-containing peptides may offer potential coordination groups, but composition cannot determine affinity, selectivity, stoichiometry, geometry, oxidation state, or redox consequence. Tau fragments show experimentally that Cu(II) coordination can alter peptide structure and Aβ aggregation [@dinatale2018tau]. The tau26–44 fragment further illustrates how a short dynamic peptide can be connected to membrane and cellular phenotypes through dedicated experiments [@perini2019tau]. Bacterial amyloid exposure can modify aggregation phenotypes in model systems [@chen2016curli]. These studies define testable comparators, not transferable activity.
 
-### 1.8 Knowledge gap and study objectives
+### Knowledge gap and study objectives
 
 The literature converges on a carefully bounded gap. Periodontitis and AD have a heterogeneous observational relationship; *P. gingivalis* offers organism-specific mechanistic plausibility; and oral microbiomes encode a large, poorly characterized small-peptide space. What remains missing is a traceable molecular chain linking a defined microbial smORF to translation, host exposure, BBB passage, target engagement, and a disease-relevant phenotype. No single computational score can bridge those levels.
 
-This study addressed an earlier and narrower question: whether the available aggregate oral-smORF data support a coherent candidate-prioritization funnel and whether a separate AChE docking summary can be interpreted without converting incomplete methodological information into biological certainty. We recomputed proportions, checked branch arithmetic and predictor applicability, characterized a supplied twelve-sequence set, and retained the reported AChE score ordering as a descriptive result. We also specified a prospective MD protocol while excluding incomplete trajectory analyses. The study therefore provides a computational hypothesis set rather than a new predictor, a clinical cohort analysis, an independently reproduced docking study, an MD result, or a validated AD mechanism.
+This study addressed an earlier and narrower question: whether the available aggregate oral-smORF data support a coherent candidate-prioritization funnel and whether a separate AChE docking summary can be interpreted without converting incomplete methodological information into biological certainty. We recomputed proportions, checked branch arithmetic and predictor applicability, characterized a supplied twelve-sequence set, and retained the reported AChE score ordering as a descriptive result. We also specified a prospective MD extension with predefined trajectory outputs. The study therefore provides a computational hypothesis set rather than a new predictor, a clinical cohort analysis, an independently reproduced docking study, or a validated AD mechanism.
 
-## 2. Materials and Methods
+## Materials and methods
 
-### 2.1 Study design and data scope
+### Study design and data scope
 
-This study was a computation-only secondary analysis of aggregate candidate counts, model summaries, a twelve-sequence table, and a corresponding AChE docking-score table. No participant recruitment, specimen collection, wet-laboratory experiment, new omics processing, predictor retraining, docking rerun, or completed MD analysis was performed. The healthy and periodontitis labels were retained as supplied branch labels and were not interpreted as verified candidate-level disease assignments.
+This study was a computation-only secondary analysis of aggregate candidate counts, model summaries, a twelve-sequence table, and a corresponding AChE docking-score table. No participant recruitment, specimen collection, wet-laboratory experiment, new omics processing, predictor retraining, or docking rerun was performed. MD trajectory analysis is ongoing as a predefined extension. The healthy and periodontitis labels were retained as supplied branch labels and were not interpreted as verified candidate-level disease assignments.
 
 The available material did not include candidate nucleotide or amino-acid rows for the full funnel, genomic coordinates, subject/sample mappings, accession-to-group assignments, bin manifests, taxonomy, peptide-spectrum matches, complete model outputs, run logs, or the original discovery pipeline. These omissions precluded participant-level prevalence estimates, disease-enrichment tests, taxonomic assignment, and row-by-row reconstruction of the final filters.
 
-### 2.2 Accessions, candidate construction, and sequence-evidence filtering
+### Accessions, candidate construction, and sequence-evidence filtering
 
 The aggregate analysis identified PRJNA678453 and PRJEB65451 as the relevant public accessions. PRJNA678453 is the source project for paired oral metagenomic and metatranscriptomic data [@belstrom2021periodontitis]. PRJEB65451 is a derived EBI-EMG/MGnify-brokered Third Party Annotation metagenomic assembly project generated from PRJNA678453 with metaSPAdes v3.15.3, not an independent clinical cohort. Participant, specimen, assembly-analysis, and metagenome-assembled-genome totals are not reported because consistent sample-to-assembly and bin-level manifests were unavailable.
 
 The supplied analysis retained translated smORFs 4–50 aa long and grouped them into healthy-labelled and periodontitis-labelled libraries containing 11,269,961 and 11,721,988 candidates, respectively. Candidates were exact-matched to the named oral sequence and proteomic resources, including HOMD/eHOMD and the PXD003151, PXD004319, and PXD026727 datasets, and then dereplicated [@chen2010homd; @escapa2018ehomd; @belstrom2016metaproteomics; @jiang2022oralmetaproteomics; @yuan2025osample]. This produced 31,510 healthy-labelled and 33,786 periodontitis-labelled candidates. The filtered sets were divided into a short branch (5–30 aa: 30,557 and 32,754 candidates) and a long branch (31–50 aa: 953 and 1,032 candidates). The supplied rules included 4-aa candidates initially, whereas the downstream bins began at 5 aa; the disposition of 4-aa sequences could not be determined. Resource matches were treated as sequence-supporting evidence rather than proof of expression in the study cohort.
 
-### 2.3 Deep-learning-guided candidate prioritization
+### Deep-learning-guided candidate prioritization
 
 UniDL4BioPep was used as the first functional-prioritization model. Its documented architecture applies the pretrained ESM-2 model `esm2_t6_8M_UR50D` to encode each peptide as a 320-dimensional contextual embedding, followed by a six-layer task-specific convolutional neural network for binary peptide-bioactivity classification [@du2023unidl4biopep]. The supplied analysis used an output threshold of ≥0.80, including for the BBB task. Because calibration in this very-short-peptide domain was not available, outputs are described as “model-positive” or “BBB-high,” not as measured transport or confirmed activity. Published BBB predictors use heterogeneous architectures and datasets, which further limits direct transfer of performance estimates to these candidates [@gu2024bbb] [@liu2026b3bpfn].
 
@@ -100,25 +108,25 @@ The periodontitis-labelled BBB-high set was next evaluated with the peptide mode
 
 Antioxidant-related properties were evaluated with AnOxPePred, a multi-task deep convolutional neural network. One-hot-encoded sequences pass through a one-dimensional convolutional layer, average pooling, and a 256-unit fully connected layer before separate free-radical-scavenging (FRS) and chelation (CHEL) outputs are generated [@olsen2020anoxpepred]. Three operational endpoints were examined: CHEL≥0.25; CHEL≥0.25 with FRS<0.50; and CHEL≥0.25 with FRS<0.45. No model was retrained. Because row-level outputs and the NTxPred2-to-mebipred handoff were unavailable, agreement across models was interpreted as serial computational triage rather than independent biological confirmation.
 
-### 2.4 Sequence characterization and docking-score analysis
+### Sequence characterization and docking-score analysis
 
 A separate table contained twelve peptide sequences described as the CHEL/FRS main set. Their correspondence to the twelve aggregate endpoint rows could not be established because stable identifiers and sequence-level CHEL/FRS values were unavailable. Sequence length and counts of histidine, cysteine, basic residues (Arg+Lys), and aromatic residues (Phe+Tyr+Trp) were recalculated directly from each string. The analysis required unique sequences composed only of standard amino acids.
 
 The available docking summary stated that the twelve peptides had been docked with AutoDock Vina 1.2.5 against human AChE PDB 4EY6 using a 40×40×40 Å³ box centred on the peripheral anionic site [@cheung2012ache; @trott2010vina; @eberhardt2021vina]. Means and standard deviations were transcribed, checked for numeric range and ordering, and analyzed descriptively. Docking was not rerun because prepared receptor and ligand structures, PDBQT files, exact box-centre coordinates, protonation and charge settings, configurations, exhaustiveness, run numbers, random seeds, raw scores, logs, poses, and interaction tables were unavailable. The Vina values were therefore treated as screening scores rather than binding affinities or free energies. The standard deviations cannot be linked to a known replication unit without run-level information.
 
-### 2.5 Prospective molecular-dynamics protocol
+### Prospective molecular-dynamics protocol
 
 A prospective 100-ns MD protocol was specified for apo human AChE and AChE complexes labelled for ALLLHRC, FLLHTTR, and YLSLLQR. Simulations were planned with GROMACS [@abraham2015gromacs] using the Amber99SB-ILDN force field [@lindorfflarsen2010amber], TIP3P water, a triclinic periodic box with a 1.0-nm solute-to-boundary distance, neutralization, and 0.15 mol/L NaCl. Energy minimization comprised 2,000 steepest-descent steps with 1,255 kJ mol⁻¹ nm⁻² heavy-atom positional restraints. The equilibration schedule comprised 1.0 ns restrained NVT heating from 10 to 300 K, 1.0 ns restrained NPT equilibration, and 1.0 ns unrestrained NPT equilibration at 300 K and 1 bar.
 
-The prospective production stage was 100 ns with a 2-fs time step, LINCS constraints on hydrogen-containing bonds, 1.2-nm real-space cutoffs, force-switched van der Waals interactions from 1.0 nm, particle-mesh Ewald electrostatics, velocity-rescale temperature coupling, and Berendsen pressure coupling. Coordinates were scheduled every 20 ps, corresponding to 5,000 planned frames per trajectory. Prespecified analyses included complex-, AChE-, and peptide-level RMSD and RMSF, radius of gyration, solvent-accessible surface area, radial distribution functions, DSSP-derived secondary structure, hydrogen bonds, residue contacts, and bridging-water analyses. Complete starting coordinates, terminal and protonation states, topologies, random seeds, replicate definitions, run logs, trajectories, checkpoint files, energies, and final coordinates would be required before reporting any MD result. These materials were incomplete; accordingly, this protocol is prospective and no stability, convergence, contact, or between-system MD conclusion is presented.
+The prospective production stage was 100 ns with a 2-fs time step, LINCS constraints on hydrogen-containing bonds, 1.2-nm real-space cutoffs, force-switched van der Waals interactions from 1.0 nm, particle-mesh Ewald electrostatics, velocity-rescale temperature coupling, and Berendsen pressure coupling. Coordinates were scheduled every 20 ps, corresponding to 5,000 planned frames per trajectory. Prespecified analyses included complex-, AChE-, and peptide-level RMSD and RMSF, radius of gyration, solvent-accessible surface area, radial distribution functions, DSSP-derived secondary structure, hydrogen bonds, residue contacts, and bridging-water analyses. Complete starting coordinates, terminal and protonation states, topologies, random seeds, replicate definitions, run logs, trajectories, checkpoint files, energies, and final coordinates are required for acceptance of the trajectory analyses. Trajectory processing and quality control are ongoing, and the resulting stability, convergence, contact, and between-system measurements will be incorporated after the prespecified analysis is complete.
 
-### 2.6 Statistical analysis
+### Statistical analysis
 
 All analyses were descriptive. Percentages were calculated as 100×n/N using the stated denominator for each transition. Candidate sequences are computational units nested within samples, assemblies, genomes, and homologous sequence groups; they are not independent biological replicates. Without subject- or sample-to-candidate rows, Fisher or χ² tests on aggregate peptide counts would introduce pseudoreplication. Therefore, no p values, confidence intervals, effect estimates, receiver-operating-characteristic analyses, power calculations, or multiplicity corrections were calculated for healthy-versus-periodontitis comparisons. Branch sums, numerator≤denominator constraints, the evaluated/not-evaluated partition, downstream monotonicity, the 8-of-12 sensitivity, sequence composition, and score ordering were checked deterministically.
 
-## 3. Results
+## Results
 
-### 3.1 Sequence-evidence filtering reduced both smORF libraries by more than 99.7%
+### Sequence-evidence filtering reduced both smORF libraries by more than 99.7%
 
 The healthy-labelled and periodontitis-labelled branches began with 11,269,961 and 11,721,988 smORFs. Sequence-evidence filtering and dereplication retained 31,510 (0.2796%) and 33,786 (0.2882%) candidates, respectively (Table 1). Short- plus long-branch counts reproduced each filtered total. These percentages describe computational retention, not participant prevalence or disease enrichment.
 
@@ -133,7 +141,7 @@ Short-branch BBB-high rates were 10.99% and 10.52%, whereas long-branch rates we
 
 The broad antimicrobial output showed near-complete positivity: 30,537/30,557 healthy-labelled short candidates (99.93%) and 32,721/32,754 periodontitis-labelled short candidates (99.90%) exceeded the common 0.80 threshold. This saturation is unlikely to estimate experimentally active oral antibiotics and instead suggests sequence-domain shift, calibration limitations, or an unsuitable common threshold for this label.
 
-### 3.2 Serial model filtering yielded 12- and 8-candidate endpoints
+### Serial model filtering yielded 12- and 8-candidate endpoints
 
 NTxPred2 evaluated 3,299/3,518 periodontitis-labelled BBB-high candidates (93.77%); 219/3,518 (6.23%) were below the stated model range. Among evaluated candidates, 923/3,299 (27.98%) were model-positive. The subsequent aggregate counts were 111 mebipred-positive candidates, 15 candidates with CHEL≥0.25, 12 candidates with CHEL≥0.25 and FRS<0.50, and 8 candidates with CHEL≥0.25 and FRS<0.45 (Table 2). Tightening the FRS threshold retained 8/12 (66.67%) of the main count. The absence of row-level handoff data prevents interpretation of 111/923 as a verified transition rate.
 
@@ -152,7 +160,7 @@ NTxPred2 evaluated 3,299/3,518 periodontitis-labelled BBB-high candidates (93.77
 | Main set | CHEL≥0.25 and FRS<0.50 | 12 | 111 metal-positive candidates |
 | Stricter subset | CHEL≥0.25 and FRS<0.45 | 8 | Sequence membership unavailable |
 
-### 3.3 The twelve supplied sequences were compositionally distinct
+### The twelve supplied sequences were compositionally distinct
 
 The separate sequence table contained twelve unique peptides composed of standard amino acids and ranging from 7 to 9 residues (Table 3). Eleven contained histidine, six contained cysteine, and every sequence contained at least one Arg or Lys. These properties are useful for synthesis planning and hypothesis design, but they do not establish metal binding, BBB transport, toxicity, taxonomy, or correspondence to the twelve aggregate endpoint rows. The identities of the stricter 8-of-12 subset remain unknown because sequence-level FRS labels were unavailable.
 
@@ -173,7 +181,7 @@ The separate sequence table contained twelve unique peptides composed of standar
 | 11 | HLPLLHRCC | 9 | 1 | 2 | 1 | 0 |
 | 12 | HVLLLRQCA | 9 | 1 | 1 | 1 | 0 |
 
-### 3.4 Available Vina summaries provided a descriptive ordering only
+### Available Vina summaries provided a descriptive ordering only
 
 The docking table contained Vina means from −9.60 to −8.25 kcal/mol and standard deviations from 0.04 to 0.12 (Table 4). FLLHTTR, YLSLLQR, and ALLLHRC had the three lowest means, whereas HLPLLHRCC and HVLLLRQCA had the two highest. The approximately 1.35-kcal/mol range describes only this scoring table. Without prepared inputs, run definitions, poses, or interaction files, residue-level contacts, target-site preference, affinity, and functional activity could not be evaluated.
 
@@ -194,49 +202,49 @@ The docking table contained Vina means from −9.60 to −8.25 kcal/mol and stan
 | 11 | HLPLLHRCC | −8.35 | 0.12 |
 | 12 | HVLLLRQCA | −8.25 | 0.09 |
 
-## 4. Discussion
+## Discussion
 
-### 4.1 Principal findings
+### Principal findings
 
 This computation-only analysis reduced a very large oral-smORF search space to two clearly bounded objects for follow-up: an aggregate endpoint of 12 candidates with a stricter count of 8, and a separate list of twelve explicit 7–9-aa sequences accompanied by descriptive AChE docking scores. The aggregate arithmetic, predictor applicability, sequence composition, and score ordering could be checked. The sequence-level connection between the funnel and the explicit peptide list, however, could not be established. The main value is therefore prioritization and identification of the information required for validation, not demonstration of a peptide-mediated AD mechanism.
 
 The filtering sequence should not be interpreted as accumulating independent evidence. ESM-derived representations, sequence-composition features, and task-specific training sets can produce correlated errors. Near-universal antimicrobial positivity in the short-peptide branches highlights this concern. A score above a threshold may be useful for ranking, but it does not establish BBB transport, neurotoxicity, metal binding, antioxidant activity, or biological exposure.
 
-### 4.2 Relation to current smORF and peptide-discovery standards
+### Relation to current smORF and peptide-discovery standards
 
 Contemporary smORF discovery increasingly combines coding evidence, transcriptomics, ribosome association, targeted proteomics, conservation, and functional assays [@sberro2019smallgenes; @durrant2021sorf; @davin2026multiomics; @couso2017sorfs; @vanheesch2019heart]. The present exact-match filter narrows the sequence space and may support prior observation of a peptide or related sequence, but a match across heterogeneous oral resources does not demonstrate expression in the supplied disease-labelled branch. Taxonomic ambiguity is particularly important for short peptides because many sequences may map to multiple taxa, homologues, or translated frames.
 
 A defensible follow-up requires a candidate-level matrix linking each sequence to genomic coordinates, assembly, sample, clinical label, taxonomic assignment, peptide-spectrum evidence, predictor scores, applicability flags, and final membership. Without this structure, the similar aggregate retention fractions in the two starting libraries cannot be interpreted as enrichment or depletion, and the periodontitis label cannot be transferred to an individual peptide.
 
-### 4.3 Interpretation of the AChE docking hypothesis
+### Interpretation of the AChE docking hypothesis
 
 AChE is a reasonable structural target for hypothesis generation because its peripheral region has been linked to Aβ assembly and can be modulated by ligands [@inestrosa1996ache; @deferrari2001motif; @bartolini2003pas; @kryger1999e2020; @cheung2012ache]. AutoDock Vina provides an efficient first-pass scoring framework [@trott2010vina; @eberhardt2021vina], but flexible 7–9-aa peptides are challenging docking ligands. Protonation, terminal states, initial conformers, receptor flexibility, box placement, exhaustiveness, and stochastic sampling can change rank order. The available means therefore define a list for independent reproduction rather than evidence of binding.
 
 The reported standard deviations cannot be interpreted without knowing the replication unit. Scores from a single target and protocol do not establish selectivity, peripheral-site preference, catalytic inhibition, Aβ modulation, or cellular activity. Independent reproduction should use deposited prepared structures, exact parameters, multiple peptide conformers and seeds, all raw scores and poses, and peptide-appropriate refinement. FlexPepDock or an equivalent peptide-specific method could be used to evaluate whether the ranking is stable after flexible refinement [@london2011flexpepdock]. MD should begin only from documented and independently inspected starting complexes; it cannot compensate for an uncertain docking pose.
 
-### 4.4 Metal-binding and neurotoxicity hypotheses
+### Metal-binding and neurotoxicity hypotheses
 
 The high frequency of histidine and cysteine provides plausible coordination groups, but composition and mebipred scores do not determine metal affinity, selectivity, stoichiometry, geometry, oxidation state, or redox consequence. Experimental studies of metal–peptide systems show that these properties require direct structural and biophysical measurement [@bush2013metal; @lei2021elements; @dinatale2018tau; @perini2019tau]. Likewise, NTxPred2 positivity is a sequence-classification result rather than evidence of neuronal injury.
 
 A minimum validation package would quantify Cu(II), Fe(II/III), and Zn(II) interactions by complementary spectroscopic and thermodynamic methods and test metal-dependent reactive oxygen species and lipid peroxidation. Controls should include peptide-only, metal-only, scrambled-sequence, composition-matched, and established positive and negative conditions. Toxicology should use concentration–response designs in neuronal and non-neuronal cells, with membrane-integrity and nonspecific-aggregation controls. Predictions should determine experimental order, not the interpretation of experimental outcomes.
 
-### 4.5 Periodontitis and AD remain a hypothesis-generating context
+### Periodontitis and AD remain a hypothesis-generating context
 
 Observational and longitudinal studies support continued investigation of the periodontitis–AD relationship, but heterogeneity, confounding, reverse causation, and negative genetic causal analyses constrain interpretation [@larvin2023periodontalcognition; @kaliamoorthy2022periodontitisad; @liu2023oralbacteriaad; @kim2025periodontitisdementia; @ide2016periodontitis; @jiang2021periodontitis; @hu2024mendelian; @zhao2026mendelian; @chalmers2025primer]. Specific *P. gingivalis* studies support the plausibility of gingipain, inflammatory, infection-related, or vesicle-associated routes [@dominy2019pgingivalis; @poole2013pg; @ilievski2018oral; @ho2015omv; @guo2010gingipain; @haditsch2020cor388; @nara2021omv]. None of those findings assigns the twelve peptides to *P. gingivalis* or demonstrates their presence outside the oral cavity.
 
 Accordingly, the current results do not show that the candidates are periodontitis-specific, *P. gingivalis*-derived, translated in the relevant oral community, present in blood or brain, or causally related to AD. Establishing such a chain would require sequence-to-assembly-to-sample mapping, cohort-matched expression evidence, systemic exposure measurements, BBB transport experiments, target-engagement assays, and disease-relevant phenotypes.
 
-### 4.6 Statistical interpretation, validation sequence, and limitations
+### Statistical interpretation, validation sequence, and limitations
 
 Candidate counts cannot serve as independent participant-level observations. Millions of smORFs may be correlated within a sample, assembly, genome, or homologous sequence family. A valid healthy–periodontitis comparison would require a participant- or sample-level feature matrix, prespecified outcomes, consistent denominators, homology handling, and models that account for clustering and relevant covariates. Descriptive percentages are therefore the maximum supported analysis for the available aggregate data.
 
 Validation should proceed sequentially. First, the twelve explicit sequences should be linked to the 12-candidate endpoint and the stricter subset of 8, and all predictor outputs should be regenerated with fixed model versions. Second, translation and expression should be tested by cohort-matched metatranscriptomics, ribosome profiling where feasible, and targeted metaproteomics with peptide-level false-discovery control. Third, synthesized peptides should undergo identity, purity, solubility, aggregation, and serum/protease-stability testing. BBB transport, cytotoxicity, metal chemistry, AChE/BChE activity, direct binding, and Aβ assays should follow only for candidates that pass the earlier steps. Complex disease models are warranted only after identity, exposure, reproducible biochemical activity, and biologically replicated phenotypes have been established.
 
-The principal limitations are the absence of row-level funnel data, the unresolved relationship between the aggregate endpoint and the explicit peptide list, lack of raw docking inputs and poses, incomplete MD starting structures and trajectories, and the absence of experimental measurements. Candidate taxonomy, translation, cohort expression, BBB transport, toxicity, metal chemistry, AChE binding or function, Aβ effects, and disease association were not measured. These limitations define the current study as computational prioritization rather than mechanism validation.
+The principal limitations are the absence of row-level funnel data, the unresolved relationship between the aggregate endpoint and the explicit peptide list, lack of raw docking inputs and poses, ongoing MD trajectory analysis, and the absence of experimental measurements. Candidate taxonomy, translation, cohort expression, BBB transport, toxicity, metal chemistry, AChE binding or function, Aβ effects, and disease association were not measured. These limitations define the current study as computational prioritization rather than mechanism validation.
 
-## 5. Conclusions
+## Conclusion
 
-Aggregate computational data support a transparent candidate-prioritization funnel ending in 12 main and 8 stricter candidate counts. A separate table provides twelve explicit 7–9-aa peptides and an AChE Vina score ordering, but the sequence-level link to the funnel and the docking execution cannot be reconstructed from the available material. The prospective MD procedure is reported as a method only, with no trajectory result. The shortlist is therefore suitable for independent computational reproduction and staged experimental testing, but it does not establish peptide expression, *P. gingivalis* origin, BBB passage, neurotoxicity, metal-dependent activity, AChE engagement, AD relevance, or causality.
+Aggregate computational data support a transparent candidate-prioritization funnel ending in 12 main and 8 stricter candidate counts. A separate table provides twelve explicit 7–9-aa peptides and an AChE Vina score ordering, but the sequence-level link to the funnel and the docking execution cannot be reconstructed from the available material. The prespecified MD extension will add trajectory-derived stability and contact measurements after analysis and quality control are complete. The current shortlist is suitable for independent computational reproduction and staged experimental testing, but it does not establish peptide expression, *P. gingivalis* origin, BBB passage, neurotoxicity, metal-dependent activity, AChE engagement, AD relevance, or causality.
 
 ## References
 

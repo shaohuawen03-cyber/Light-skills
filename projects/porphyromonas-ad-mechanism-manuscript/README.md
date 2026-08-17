@@ -2,26 +2,26 @@
 
 ## 当前版本
 
-v3.6.0同时提供完整稿和精简稿，每种版本均包含独立英文、中文DOCX及其Markdown源文件：
+v3.7.0同时提供完整稿和扩展后的精简稿，每种版本均包含独立英文、中文DOCX及其Markdown源文件：
 
 - `manuscript/full/English.docx`
 - `manuscript/full/Chinese.docx`
 - `manuscript/concise/English.docx`
 - `manuscript/concise/Chinese.docx`
 
-四份DOCX均从摘要开始，不显示论文标题，不含页眉、页脚、页码、批注或图像。完整稿含4个三线表和55条参考文献；精简稿含2个三线表和22条参考文献。所有表格仅保留顶线、表头下横线和底线，不使用竖线、内部正文横线或表头底色。结论之后直接进入参考文献，不含Declarations或其他管理性章节。
+四份DOCX均从结构式摘要开始，不显示论文标题，不含页眉、页脚、页码、批注或图像。英文稿参照*Journal of Alzheimer's Disease Reports* Research Article的核心要求，采用IMRaD结构、无编号标题、≤250词结构式摘要、12磅Times New Roman、双倍行距和1英寸页边距；中文稿保持同步结构。具体对齐和用户要求形成的例外见`quality_reports/journal_format_alignment_v37.md`。完整稿含4个三线表和55条参考文献；扩展精简稿含2个三线表和22条参考文献，英文正文较v3.6.0增加约74%。所有表格仅保留顶线、表头下横线和底线，不使用竖线、内部正文横线或表头底色。结论之后直接进入参考文献，不含Declarations或其他管理性章节。
 
 ## 科学定位
 
 项目以`source_materials/材料与方法及结果_机制研究版.docx`为主要科学材料，报告纯计算、汇总层面的口腔smORF候选优选。候选级联包括UniDL4BioPep的ESM-2/CNN、NTxPred2肽模式的ESM2-t30微调模型、mebipred两级人工神经网络和AnOxPePred多任务一维CNN。
 
-当前结果支持描述性筛选漏斗、12条独立序列的组成核对及现有AChE Vina评分排序，但不支持牙周炎特异性、*Porphyromonas gingivalis*来源、当前队列表达、BBB通过、神经毒性、金属化学、AChE结合/功能、AD机制或因果关系。100 ns GROMACS过程仅作为前瞻性方法描述；起始复合物和完整轨迹尚不齐全，稿件不报告MD结果。
+当前结果支持描述性筛选漏斗、12条独立序列的组成核对及现有AChE Vina评分排序，但不支持牙周炎特异性、*Porphyromonas gingivalis*来源、当前队列表达、BBB通过、神经毒性、金属化学、AChE结合/功能、AD机制或因果关系。100 ns GROMACS轨迹分析作为预设扩展正在进行；稳定性、收敛性和接触结果将在分析与质量控制完成后补充。
 
 正文不报告具体参与者、标本、组装分析或MAG总数。用户说明的296个MAG在`evidence/mag_count_audit.md`中保留为待核查信息，未进入稿件。
 
 ## 图和表
 
-`manuscript/figures/`保留历史SVG/PNG源文件，便于项目内部追踪，但它们不是v3.6.0稿件DOCX的一部分。当前DOCX包经OpenXML检查不含`word/media/`、drawing对象或图像关系。
+`manuscript/figures/`保留历史SVG/PNG源文件，便于项目内部追踪，但它们不是v3.7.0稿件DOCX的一部分。当前DOCX包经OpenXML检查不含`word/media/`、drawing对象或图像关系。
 
 ## 引文与Zotero
 
@@ -90,4 +90,4 @@ python3 scripts/build_repository_inventory.py
 
 ## 证据和历史材料
 
-内部证据记录、哈希、版本提交、排除材料和复现边界保留在`evidence/`、`revision_v2/`、`revision_v3/`和`VERSION_HISTORY.md`中。此类管理信息用于项目追踪，不进入当前SCI稿件正文。历史双语组合稿、补充表和图件不属于v3.6.0四份稿件交付物。
+内部证据记录、哈希、版本提交、排除材料和复现边界保留在`evidence/`、`revision_v2/`、`revision_v3/`和`VERSION_HISTORY.md`中。此类管理信息用于项目追踪，不进入当前SCI稿件正文。历史双语组合稿、补充表和图件不属于v3.7.0四份稿件交付物。

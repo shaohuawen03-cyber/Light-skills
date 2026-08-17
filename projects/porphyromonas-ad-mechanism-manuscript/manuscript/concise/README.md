@@ -1,6 +1,6 @@
 # Concise manuscript package / 精简稿件包
 
-Version: v3.6.0
+Version: v3.7.0
 Date: 2026-08-17
 
 ## Files
@@ -9,10 +9,12 @@ Date: 2026-08-17
 - `Chinese.docx` — titleless, standalone concise Chinese SCI manuscript.
 - `English.md` and `Chinese.md` — synchronized sources using Pandoc/BibTeX citation keys.
 
-Each DOCX begins with the abstract and contains two three-line tables, no figures,
-no header/footer/page-number fields, and no administrative sections. Conclusion
-is followed directly by References. The bibliography contains the same 22-item
-subset in English and Chinese.
+Each DOCX begins with a structured abstract and contains two three-line tables,
+no figures, no header/footer/page-number fields, and no administrative sections.
+The expanded English body is approximately 3,200 words, about 74% longer than
+v3.6.0. The manuscripts use unnumbered journal-style headings, 12-point Times New
+Roman, double spacing, and one-inch margins. Conclusion is followed directly by
+References, with the same 22-item bibliography in English and Chinese.
 
 ## Scientific scope
 
@@ -22,7 +24,9 @@ distinguishes PRJNA678453 from the derived EBI-EMG/MGnify TPA assembly project
 PRJEB65451 without treating the latter as a separate cohort. The analysis does
 not establish candidate expression, disease specificity, *Porphyromonas
 gingivalis* sequence origin, BBB transport, toxicity, metal chemistry, AChE
-binding/function, molecular-dynamics results, or AD causality.
+binding/function or AD causality. The prespecified molecular-dynamics analysis is
+ongoing, and trajectory-derived measurements will be incorporated after completion
+and quality control.
 
 ## Rebuild and audit
 

@@ -4,8 +4,8 @@
     "quality_reports/repository_inventory.json (self-referential output)",
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
-  "total_files": 137,
-  "total_bytes": 3813263,
+  "total_files": 139,
+  "total_bytes": 3860297,
   "by_top_level_group": {
     "evidence": {
       "files": 17,
@@ -13,15 +13,15 @@
     },
     "manuscript": {
       "files": 23,
-      "bytes": 1831786
+      "bytes": 1859244
     },
     "project_root": {
       "files": 4,
-      "bytes": 36366
+      "bytes": 37912
     },
     "quality_reports": {
-      "files": 28,
-      "bytes": 99078
+      "files": 30,
+      "bytes": 109463
     },
     "references": {
       "files": 4,
@@ -37,7 +37,7 @@
     },
     "scripts": {
       "files": 26,
-      "bytes": 139956
+      "bytes": 147601
     },
     "source_materials": {
       "files": 4,
@@ -51,13 +51,13 @@
   "files": [
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
-      "size_bytes": 13895,
-      "sha256": "86d9529760f526db168d7193549a8ba70f88f7545192b5ad7abda3c6b57f7cef"
+      "size_bytes": 14115,
+      "sha256": "e0bf401b5c96158ab56025cdf9e1aced9c3358e80255b8b24d3f73f039d6a66e"
     },
     {
       "path": "README.md",
-      "size_bytes": 4893,
-      "sha256": "09118a4eb78be43a1ec4f0bbebc338534cb28a1846d71db99213ad06fd0d5010"
+      "size_bytes": 5311,
+      "sha256": "5f175aff283c881b5aa38808bb2fe718c022216a9559344bb77a9949df663c4a"
     },
     {
       "path": "SHA256SUMS.txt",
@@ -66,8 +66,8 @@
     },
     {
       "path": "VERSION_HISTORY.md",
-      "size_bytes": 17093,
-      "sha256": "b0b0b836af7c7cc193778c3f1f3f1bee36326a5d9674b199b5c62ea0404a5e23"
+      "size_bytes": 18001,
+      "sha256": "889e7f91369680d2a48aa1629956327d91e083751fdb1c865ff29aae47e7310d"
     },
     {
       "path": "evidence/.gitkeep",
@@ -161,28 +161,28 @@
     },
     {
       "path": "manuscript/concise/Chinese.docx",
-      "size_bytes": 13889,
-      "sha256": "c2ff9853ec006f3b687c35c8cdf0e8efbb138eb9afc02075238b8388cea8efa8"
+      "size_bytes": 17903,
+      "sha256": "7cceb5a5e3241a4fa02c43018b62ecb7920f3bb83077fee7bef7b33a627da58b"
     },
     {
       "path": "manuscript/concise/Chinese.md",
-      "size_bytes": 15710,
-      "sha256": "8dad5a78a3e1757d93e6bc2bc779ed519ac1ace960579042fed4ba1e408c798e"
+      "size_bytes": 23998,
+      "sha256": "9b778f5322a43ca05ed4b6ba8932418eaf854b3cfec8db71895e28a24e5ddbdf"
     },
     {
       "path": "manuscript/concise/English.docx",
-      "size_bytes": 13526,
-      "sha256": "e444906a2818795946a21668802e1565b2af3296e3103d954bcf017abeb85901"
+      "size_bytes": 17786,
+      "sha256": "93f9974937aa143bf7047cf32cee97ac2d4100c46016cdb5c4076873cff5301a"
     },
     {
       "path": "manuscript/concise/English.md",
-      "size_bytes": 18061,
-      "sha256": "f8b388f02d0a71759ecff5db7676edbd649f9907f8a9768b8b932a58d9b06aa9"
+      "size_bytes": 29215,
+      "sha256": "c22522c802eb22675cd91efba3a9eedb39958d68d5d53a0f3323764807811404"
     },
     {
       "path": "manuscript/concise/README.md",
-      "size_bytes": 2113,
-      "sha256": "54b070d9a3155c1def09d2b8d57a48bd14c977e2350761b98bf2d393e9c62f96"
+      "size_bytes": 2435,
+      "sha256": "2834e3725592dbfa53d7e8c2015a40d4713a4b159d3eeb896356d1998cbd97d4"
     },
     {
       "path": "manuscript/figures/evidence_ladder.png",
@@ -221,23 +221,23 @@
     },
     {
       "path": "manuscript/full/Chinese.docx",
-      "size_bytes": 29374,
-      "sha256": "6d566f90a4f951dcffd14aa3998610fc779cd2d68b42463fc56ebee4e95e3abb"
+      "size_bytes": 29223,
+      "sha256": "83334dff63d85c8670b2efca14aa83eb046c6c0a9d61b45691f950a8ef7a6375"
     },
     {
       "path": "manuscript/full/Chinese.md",
-      "size_bytes": 49387,
-      "sha256": "a32bba84999b51c1966d563bf35a7972b2612a239710994b7290e1023ae9e737"
+      "size_bytes": 49230,
+      "sha256": "e76c2ced084052f0a4dd4d972042649171a41854c7bafda912503b45fade48fd"
     },
     {
       "path": "manuscript/full/English.docx",
-      "size_bytes": 29349,
-      "sha256": "cf3322b28baf02d4936469ddacab458805da0c15e75f21479b9661456cb55547"
+      "size_bytes": 29239,
+      "sha256": "c0a1c6485114cd980d7bb2e6ef7eb00128edce8192fd46079fe7066becb85bc2"
     },
     {
       "path": "manuscript/full/English.md",
-      "size_bytes": 59347,
-      "sha256": "9b35328ccb45e980c2361c548e4c861953f87af06466c38bc574cc99187f15f3"
+      "size_bytes": 59185,
+      "sha256": "dce9aada89b4725b0413ef2d678cd70c75646644a4538f79f4a7eda5b5d6caa1"
     },
     {
       "path": "manuscript/manuscript_bilingual.docx",
@@ -277,12 +277,12 @@
     {
       "path": "quality_reports/citation_inventory_audit.json",
       "size_bytes": 2023,
-      "sha256": "79412aeb8873763d6e85309eff9ce86846a5fbc8456b30aa47c7f17765d72f96"
+      "sha256": "0695c72ef2484cd2eff0225d62466a913d52499fc3f466012ece94a99741b940"
     },
     {
       "path": "quality_reports/concise_package_audit.json",
-      "size_bytes": 9904,
-      "sha256": "6213ff2eedea767ac6fc9f6fc32efd5f2642e1174d6a49a6788e16baf499bc3c"
+      "size_bytes": 11235,
+      "sha256": "96bf93a2960aa4cc61e8bcdb6f984b3f6308ba8ca00a44328dbfd33df8a6c338"
     },
     {
       "path": "quality_reports/concise_package_quality_summary.md",
@@ -296,8 +296,8 @@
     },
     {
       "path": "quality_reports/docx_package_audit.json",
-      "size_bytes": 10012,
-      "sha256": "0836f76f4139db9fca118e6ea91d475f9105dead2b45c7d0f8c9b9a3627e0677"
+      "size_bytes": 10464,
+      "sha256": "aa0a7006fa75cfccb401a00a5d88537a925adec4b4c4a721b0e73f421e1f4521"
     },
     {
       "path": "quality_reports/draft_lint_en.json",
@@ -327,12 +327,17 @@
     {
       "path": "quality_reports/full_docx_reproducibility.json",
       "size_bytes": 1615,
-      "sha256": "d7b946e0fa162652a1a173be64b473234f50fff64d488e59ac326b10b20e260e"
+      "sha256": "10a67e63fa5c44f62ff709b31648dc2b756756e608e14debf74e7722342b4603"
     },
     {
       "path": "quality_reports/full_manuscript_audit.json",
-      "size_bytes": 15816,
-      "sha256": "5a6248c30a79d5e31cd68894a02f9b385b8d1bf3a036e57cfc9648861aa4a15a"
+      "size_bytes": 17148,
+      "sha256": "889d1d352bcdf3589ee2db15260386efe2bf5157a9630729ef002c635563ba88"
+    },
+    {
+      "path": "quality_reports/journal_format_alignment_v37.md",
+      "size_bytes": 2450,
+      "sha256": "09bc3fe47b54aed054a051ab7e3d93d5575c277c2c78f63b33a21720bd70ad30"
     },
     {
       "path": "quality_reports/language_structure_audit.json",
@@ -396,13 +401,18 @@
     },
     {
       "path": "quality_reports/submission_manuscript_audit.json",
-      "size_bytes": 25327,
-      "sha256": "067bfee2f487bf5ac9b9ee6bd8b0baddcf5e5e5f1d1c64c148f1b719aa44d320"
+      "size_bytes": 27990,
+      "sha256": "2967953abcecc775e8dbf13440d779e1efa2781889cd337df9bdf7e9a1a60e68"
     },
     {
       "path": "quality_reports/v3.6_quality_summary.md",
-      "size_bytes": 2090,
-      "sha256": "671cc5ee1498aa19dac4990f3fda231084164c277349b921b6456397e5c15af6"
+      "size_bytes": 2101,
+      "sha256": "84f3b6b980267dd22f5217dd93ad327d0081c60cce73a6e30bc5e16ad02c4418"
+    },
+    {
+      "path": "quality_reports/v3.7_quality_summary.md",
+      "size_bytes": 2146,
+      "sha256": "b9a964686f8b8479198366949c5d07e3c36a7f356f7d7e017202bca479c5ae23"
     },
     {
       "path": "quality_reports/zotero_live_status.json",
@@ -556,8 +566,8 @@
     },
     {
       "path": "scripts/SYNC.md",
-      "size_bytes": 3730,
-      "sha256": "03660fea65a83f41fcf57a8c977e67b2bb55a334ea2c0ddbd2d30975dd7eedb9"
+      "size_bytes": 3746,
+      "sha256": "4d2caa0ab2721d8b7b79e20bde385b908704faafbea036a492f77e10a376fc76"
     },
     {
       "path": "scripts/audit_citation_inventory.py",
@@ -611,8 +621,8 @@
     },
     {
       "path": "scripts/audit_submission_manuscripts.py",
-      "size_bytes": 14463,
-      "sha256": "0aa40841514a2eb68a2d0a0ab8e1afefd47021facad8454c95fed3d9950b24b7"
+      "size_bytes": 17156,
+      "sha256": "92d9bce47363a1fa23f82b1effad0c39f17ee517416dec31b654b7e25d81e3cc"
     },
     {
       "path": "scripts/audit_text_quality.py",
@@ -626,8 +636,8 @@
     },
     {
       "path": "scripts/build_docx_stdlib.py",
-      "size_bytes": 28089,
-      "sha256": "3055c565527de80a8d4ebcf354d745e4b256ef06d4e9a3e07746c02f06f963ff"
+      "size_bytes": 33025,
+      "sha256": "200ae2a39f3384eb197cb47f0e2da3a7a6466513545d94d8a0e39ea952acb7e0"
     },
     {
       "path": "scripts/build_repository_inventory.py",
