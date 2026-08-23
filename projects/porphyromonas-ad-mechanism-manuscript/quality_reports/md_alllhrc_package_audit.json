@@ -1,0 +1,361 @@
+{
+  "schema": "local.md_alllhrc_package_audit.v1",
+  "scope": "Standalone full/concise English/Chinese ALLLHRC–AChE 100-ns MD manuscripts.",
+  "source_support_sha256": {
+    "source_materials/md_alllhrc/digitized_rmsd_100ns.csv": {
+      "expected": "b34c48db440f5cddd2a782e12713172359edc23c737b14726c602cfef32b565a",
+      "matches": true
+    },
+    "source_materials/md_alllhrc/peptide_rmsd_jump_diagnosis.txt": {
+      "expected": "43f3f84ae57b1f037e80f4aed3d9cb3614a0df92f64a7e3c92c2972291f6f3f3",
+      "matches": true
+    }
+  },
+  "original_v3_9_docx_sha256": {
+    "manuscript/full/Chinese.docx": {
+      "expected": "610fcb7f7c09287233fa699c8f7043b665aa1a5d06d4d05e0c3f527ee8125c91",
+      "matches": true
+    },
+    "manuscript/full/English.docx": {
+      "expected": "98943ba415134a0ca47b00022371d9e75abe6d76cac9d8f540cc6984adca2c32",
+      "matches": true
+    },
+    "manuscript/concise/Chinese.docx": {
+      "expected": "e1529a0bb0f2e22afc68e7e9966816f4f3d9a3a496159dc9aaf98a42a9241ddc",
+      "matches": true
+    },
+    "manuscript/concise/English.docx": {
+      "expected": "7dfbe9e65504d61e56fb58d39940bc9e0ded439a07557be21913e4def2a994b7",
+      "matches": true
+    }
+  },
+  "records": {
+    "full/English": {
+      "label": "full/English",
+      "markdown": "manuscript/md_alllhrc/full/English.md",
+      "docx": "manuscript/md_alllhrc/full/English.docx",
+      "markdown_sha256": "8366b00af4405174d3ad760c87f3e5221ca53e09fbfceeee5b1b5d4958ea1194",
+      "docx_sha256": "bf52b704c4f187ac721e5a936243726c97102eff0389fc1b8ba55c0f936973aa",
+      "abstract_word_count": 197,
+      "body_word_count": 2785,
+      "body_character_count": 20213,
+      "reference_count": 7,
+      "table_data_row_counts": [
+        9,
+        6
+      ],
+      "grouped_introduction_citations": [],
+      "unknown_citation_keys": [],
+      "embedded_media": [],
+      "drawings": 0,
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "rebuild_error": "",
+      "checks": {
+        "markdown_starts_with_abstract_and_has_no_visible_title": true,
+        "article_sections_are_complete_and_in_order": true,
+        "abstract_is_one_unstructured_paragraph": true,
+        "english_abstract_is_within_250_words": true,
+        "abstract_has_no_citation_or_conclusion_label": true,
+        "statistical_analysis_and_conclusion_sections_absent": true,
+        "discussion_proceeds_directly_to_references": true,
+        "figure_markup_is_absent": true,
+        "all_principal_numeric_observations_are_retained": true,
+        "digitized_rmsd_status_is_disclosed": true,
+        "source_plot_identity_discrepancy_is_disclosed": true,
+        "atanasova_is_framework_not_transferred_data": true,
+        "binding_and_function_boundaries_are_explicit": true,
+        "single_trajectory_and_raw_archive_limitations_are_explicit": true,
+        "pandoc_citation_keys_are_valid": true,
+        "introduction_uses_one_reference_per_citation": true,
+        "references_are_sequential": true,
+        "references_follow_first_citation_order": true,
+        "reference_count_matches_variant": true,
+        "markdown_table_count_matches_variant": true,
+        "docx_zip_crc_is_valid": true,
+        "docx_visible_content_starts_with_abstract": true,
+        "docx_core_title_is_neutral": true,
+        "docx_has_no_media_drawings_header_footer_page_or_comments": true,
+        "docx_uses_journal_body_style": true,
+        "docx_main_text_is_first_line_indented": true,
+        "docx_abstract_is_one_unindented_paragraph": true,
+        "docx_has_one_inch_margins": true,
+        "docx_table_count_matches_markdown": true,
+        "docx_tables_are_three_line": true,
+        "docx_contains_rendered_citations_not_citekeys": true,
+        "docx_is_byte_reproducible": true
+      },
+      "verdict": "PASS"
+    },
+    "full/Chinese": {
+      "label": "full/Chinese",
+      "markdown": "manuscript/md_alllhrc/full/Chinese.md",
+      "docx": "manuscript/md_alllhrc/full/Chinese.docx",
+      "markdown_sha256": "3433ef4e41f523d6e4cf131e428cb5d57c7ef11dd4cea60dc211b063415f961e",
+      "docx_sha256": "be279a68ceb41515bcd097b9a73b05be49e44cccff7aad8ab502ca9dc200b50f",
+      "abstract_word_count": 21,
+      "body_word_count": 316,
+      "body_character_count": 6813,
+      "reference_count": 7,
+      "table_data_row_counts": [
+        9,
+        6
+      ],
+      "grouped_introduction_citations": [],
+      "unknown_citation_keys": [],
+      "embedded_media": [],
+      "drawings": 0,
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "rebuild_error": "",
+      "checks": {
+        "markdown_starts_with_abstract_and_has_no_visible_title": true,
+        "article_sections_are_complete_and_in_order": true,
+        "abstract_is_one_unstructured_paragraph": true,
+        "english_abstract_is_within_250_words": true,
+        "abstract_has_no_citation_or_conclusion_label": true,
+        "statistical_analysis_and_conclusion_sections_absent": true,
+        "discussion_proceeds_directly_to_references": true,
+        "figure_markup_is_absent": true,
+        "all_principal_numeric_observations_are_retained": true,
+        "digitized_rmsd_status_is_disclosed": true,
+        "source_plot_identity_discrepancy_is_disclosed": true,
+        "atanasova_is_framework_not_transferred_data": true,
+        "binding_and_function_boundaries_are_explicit": true,
+        "single_trajectory_and_raw_archive_limitations_are_explicit": true,
+        "pandoc_citation_keys_are_valid": true,
+        "introduction_uses_one_reference_per_citation": true,
+        "references_are_sequential": true,
+        "references_follow_first_citation_order": true,
+        "reference_count_matches_variant": true,
+        "markdown_table_count_matches_variant": true,
+        "docx_zip_crc_is_valid": true,
+        "docx_visible_content_starts_with_abstract": true,
+        "docx_core_title_is_neutral": true,
+        "docx_has_no_media_drawings_header_footer_page_or_comments": true,
+        "docx_uses_journal_body_style": true,
+        "docx_main_text_is_first_line_indented": true,
+        "docx_abstract_is_one_unindented_paragraph": true,
+        "docx_has_one_inch_margins": true,
+        "docx_table_count_matches_markdown": true,
+        "docx_tables_are_three_line": true,
+        "docx_contains_rendered_citations_not_citekeys": true,
+        "docx_is_byte_reproducible": true
+      },
+      "verdict": "PASS"
+    },
+    "concise/English": {
+      "label": "concise/English",
+      "markdown": "manuscript/md_alllhrc/concise/English.md",
+      "docx": "manuscript/md_alllhrc/concise/English.docx",
+      "markdown_sha256": "c0528b3785959273beb3a5b3ae77deeadbc24fba11abb86db8aaf5b52c5f1841",
+      "docx_sha256": "e0564158aff137fc75d8e807b098229b7f10fadb7f514f7f0cdc66a2f81cc4c9",
+      "abstract_word_count": 140,
+      "body_word_count": 1048,
+      "body_character_count": 7529,
+      "reference_count": 5,
+      "table_data_row_counts": [
+        7
+      ],
+      "grouped_introduction_citations": [],
+      "unknown_citation_keys": [],
+      "embedded_media": [],
+      "drawings": 0,
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "rebuild_error": "",
+      "checks": {
+        "markdown_starts_with_abstract_and_has_no_visible_title": true,
+        "article_sections_are_complete_and_in_order": true,
+        "abstract_is_one_unstructured_paragraph": true,
+        "english_abstract_is_within_250_words": true,
+        "abstract_has_no_citation_or_conclusion_label": true,
+        "statistical_analysis_and_conclusion_sections_absent": true,
+        "discussion_proceeds_directly_to_references": true,
+        "figure_markup_is_absent": true,
+        "all_principal_numeric_observations_are_retained": true,
+        "digitized_rmsd_status_is_disclosed": true,
+        "source_plot_identity_discrepancy_is_disclosed": true,
+        "atanasova_is_framework_not_transferred_data": true,
+        "binding_and_function_boundaries_are_explicit": true,
+        "single_trajectory_and_raw_archive_limitations_are_explicit": true,
+        "pandoc_citation_keys_are_valid": true,
+        "introduction_uses_one_reference_per_citation": true,
+        "references_are_sequential": true,
+        "references_follow_first_citation_order": true,
+        "reference_count_matches_variant": true,
+        "markdown_table_count_matches_variant": true,
+        "docx_zip_crc_is_valid": true,
+        "docx_visible_content_starts_with_abstract": true,
+        "docx_core_title_is_neutral": true,
+        "docx_has_no_media_drawings_header_footer_page_or_comments": true,
+        "docx_uses_journal_body_style": true,
+        "docx_main_text_is_first_line_indented": true,
+        "docx_abstract_is_one_unindented_paragraph": true,
+        "docx_has_one_inch_margins": true,
+        "docx_table_count_matches_markdown": true,
+        "docx_tables_are_three_line": true,
+        "docx_contains_rendered_citations_not_citekeys": true,
+        "docx_is_byte_reproducible": true
+      },
+      "verdict": "PASS"
+    },
+    "concise/Chinese": {
+      "label": "concise/Chinese",
+      "markdown": "manuscript/md_alllhrc/concise/Chinese.md",
+      "docx": "manuscript/md_alllhrc/concise/Chinese.docx",
+      "markdown_sha256": "4c2a5dc3740b6af638c4eaf07963c2fd0c8efaaa41513aedd24064341a0645a7",
+      "docx_sha256": "87d6d37a2d2918335a1d334b7be08f51c493b29dae6bebb4adf3e8fdbc389f94",
+      "abstract_word_count": 21,
+      "body_word_count": 166,
+      "body_character_count": 2907,
+      "reference_count": 5,
+      "table_data_row_counts": [
+        7
+      ],
+      "grouped_introduction_citations": [],
+      "unknown_citation_keys": [],
+      "embedded_media": [],
+      "drawings": 0,
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "rebuild_error": "",
+      "checks": {
+        "markdown_starts_with_abstract_and_has_no_visible_title": true,
+        "article_sections_are_complete_and_in_order": true,
+        "abstract_is_one_unstructured_paragraph": true,
+        "english_abstract_is_within_250_words": true,
+        "abstract_has_no_citation_or_conclusion_label": true,
+        "statistical_analysis_and_conclusion_sections_absent": true,
+        "discussion_proceeds_directly_to_references": true,
+        "figure_markup_is_absent": true,
+        "all_principal_numeric_observations_are_retained": true,
+        "digitized_rmsd_status_is_disclosed": true,
+        "source_plot_identity_discrepancy_is_disclosed": true,
+        "atanasova_is_framework_not_transferred_data": true,
+        "binding_and_function_boundaries_are_explicit": true,
+        "single_trajectory_and_raw_archive_limitations_are_explicit": true,
+        "pandoc_citation_keys_are_valid": true,
+        "introduction_uses_one_reference_per_citation": true,
+        "references_are_sequential": true,
+        "references_follow_first_citation_order": true,
+        "reference_count_matches_variant": true,
+        "markdown_table_count_matches_variant": true,
+        "docx_zip_crc_is_valid": true,
+        "docx_visible_content_starts_with_abstract": true,
+        "docx_core_title_is_neutral": true,
+        "docx_has_no_media_drawings_header_footer_page_or_comments": true,
+        "docx_uses_journal_body_style": true,
+        "docx_main_text_is_first_line_indented": true,
+        "docx_abstract_is_one_unindented_paragraph": true,
+        "docx_has_one_inch_margins": true,
+        "docx_table_count_matches_markdown": true,
+        "docx_tables_are_three_line": true,
+        "docx_contains_rendered_citations_not_citekeys": true,
+        "docx_is_byte_reproducible": true
+      },
+      "verdict": "PASS"
+    }
+  },
+  "package_checks": {
+    "four_new_language_variant_pairs_are_present": true,
+    "all_four_new_manuscripts_pass": true,
+    "all_source_support_hashes_match": true,
+    "original_v3_9_docx_files_are_unchanged": true,
+    "full_language_parity": true,
+    "concise_language_parity": true,
+    "all_new_docx_files_are_figure_free": true
+  },
+  "citation_mode": "BibTeX-linked Markdown with static numbered DOCX cache; not Zotero-live",
+  "verdict": "PASS"
+}

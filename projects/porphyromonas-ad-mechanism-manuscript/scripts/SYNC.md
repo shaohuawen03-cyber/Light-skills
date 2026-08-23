@@ -27,7 +27,7 @@ git switch --track -c arena/019ff377-light-skills origin/arena/019ff377-light-sk
 projects/porphyromonas-ad-mechanism-manuscript/
 ```
 
-## Deterministic v3.9.0 rebuild
+## Deterministic v3.10.0 rebuild
 
 Run from the project root:
 
@@ -42,12 +42,19 @@ python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T0
 python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input manuscript/concise/English.md --output manuscript/concise/English.docx --title English
 python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input manuscript/concise/Chinese.md --output manuscript/concise/Chinese.docx --title Chinese
 
+for variant in full concise; do
+  for language in English Chinese; do
+    python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-23T00:00:00Z --bibliography references/references.bib --input "manuscript/md_alllhrc/${variant}/${language}.md" --output "manuscript/md_alllhrc/${variant}/${language}.docx" --title "${language}"
+  done
+done
+
 python3 scripts/audit_submission_manuscripts.py
 python3 scripts/audit_full_manuscripts.py
 python3 scripts/audit_concise_package.py
 python3 scripts/audit_docx_packages.py
 python3 scripts/audit_full_docx_reproducibility.py
 python3 scripts/audit_citation_inventory.py
+python3 scripts/audit_md_alllhrc_package.py
 python3 scripts/generate_artifact_checksums.py
 python3 scripts/build_repository_inventory.py
 ```
@@ -73,8 +80,8 @@ Zotero-live.
 After committing a clean tree on the fixed branch:
 
 ```bash
-python3 scripts/manage_version_tag.py create --version 3.9.0 --message "v3.9.0: restore multidimensional long/short results and document long-peptide attrition" --push
-python3 scripts/manage_version_tag.py verify --version 3.9.0
+python3 scripts/manage_version_tag.py create --version 3.10.0 --message "v3.10.0: add standalone ALLLHRC-AChE molecular-dynamics manuscripts" --push
+python3 scripts/manage_version_tag.py verify --version 3.10.0
 ```
 
 Existing release tags are immutable and must not be moved or overwritten.
@@ -82,7 +89,9 @@ Existing release tags are immutable and must not be moved or overwritten.
 ## Scientific boundary
 
 These commands reproduce arithmetic checks, sequence-composition checks,
-reference mapping, manuscripts, and DOCX packages. They do not reproduce the
-original smORF/predictor analysis, the available docking-score table, or an MD
-result because the required row-level inputs, prepared structures, run outputs,
-and complete trajectories are unavailable.
+reference mapping, manuscripts, and DOCX packages. They also reproduce the
+standalone ALLLHRC manuscript text and deterministic DOCX packaging from the
+preserved plot-derived RMSD support. They do not reproduce the original
+smORF/predictor analysis, the available docking-score table, or the underlying
+MD trajectory: prepared structures, complete run outputs, raw trajectories and
+independently seeded replicas remain unavailable.
