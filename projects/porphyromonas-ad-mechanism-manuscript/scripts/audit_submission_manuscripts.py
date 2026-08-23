@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit the four clean, figure-free SCI manuscript deliverables."""
+"""Audit the six clean, figure-free screening-manuscript deliverables."""
 from __future__ import annotations
 
 import hashlib
@@ -60,6 +60,22 @@ SPECS = {
         "methods": "## 材料与方法", "results": "## 结果",
         "discussion": "## 讨论", "conclusion": "## 结论",
         "references": "## 参考文献", "core_title": "Chinese", "tables": 6, "refs": 55,
+        "patterns": COMMON_ADMIN_PATTERNS_ZH, "counts": PROHIBITED_COUNTS_ZH,
+    },
+    "intermediate/English": {
+        "md": "manuscript/intermediate/English.md", "docx": "manuscript/intermediate/English.docx",
+        "start": "Abstract", "abstract": "## Abstract", "intro": "## Introduction",
+        "methods": "## Materials and methods", "results": "## Results",
+        "discussion": "## Discussion", "conclusion": "## Conclusion",
+        "references": "## References", "core_title": "English", "tables": 4, "refs": 40,
+        "patterns": COMMON_ADMIN_PATTERNS, "counts": PROHIBITED_COUNTS_EN,
+    },
+    "intermediate/Chinese": {
+        "md": "manuscript/intermediate/Chinese.md", "docx": "manuscript/intermediate/Chinese.docx",
+        "start": "摘要", "abstract": "## 摘要", "intro": "## 引言",
+        "methods": "## 材料与方法", "results": "## 结果",
+        "discussion": "## 讨论", "conclusion": "## 结论",
+        "references": "## 参考文献", "core_title": "Chinese", "tables": 4, "refs": 40,
         "patterns": COMMON_ADMIN_PATTERNS_ZH, "counts": PROHIBITED_COUNTS_ZH,
     },
     "concise/English": {
@@ -258,7 +274,7 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
             and "### 短肽多维功能预测结果" in body
         ) if label == "full/Chinese" else
         "### Long- and short-peptide multidimensional functional prediction results" in body
-        if label == "concise/English" else
+        if english else
         "### 长肽与短肽多维功能预测结果" in body
     )
     multidimensional_table_row_counts = (
@@ -271,7 +287,7 @@ def audit_one(label: str, spec: dict, known_bib_keys: set[str], known_dois: set[
             markdown_table_row_count_after_caption(body, "短肽多维功能预测结果。**"),
         ] if label == "full/Chinese" else
         [markdown_table_row_count_after_caption(body, "Long- and short-peptide multidimensional functional outputs")]
-        if label == "concise/English" else
+        if english else
         [markdown_table_row_count_after_caption(body, "长肽与短肽多维功能预测结果。**")]
     )
     long_peptide_attrition_limit_present = (
@@ -417,21 +433,33 @@ def main() -> int:
     }
     checks = {
         "bibtex_has_55_unique_keys_and_dois": len(known_keys) == 55 and len(known_dois) == 55,
-        "all_four_manuscripts_pass": all(record["verdict"] == "PASS" for record in records.values()),
+        "all_six_manuscripts_pass": all(record["verdict"] == "PASS" for record in records.values()),
         "full_reference_parity": (
             records["full/English"]["reference_doi_count"]
             == records["full/Chinese"]["reference_doi_count"] == 55
+        ),
+        "intermediate_reference_parity": (
+            records["intermediate/English"]["reference_doi_count"]
+            == records["intermediate/Chinese"]["reference_doi_count"] == 40
         ),
         "concise_reference_parity": (
             records["concise/English"]["reference_doi_count"]
             == records["concise/Chinese"]["reference_doi_count"] == 22
         ),
+        "length_order_is_full_then_intermediate_then_concise": (
+            records["full/English"]["body_word_count"]
+            > records["intermediate/English"]["body_word_count"]
+            > records["concise/English"]["body_word_count"]
+            and records["full/Chinese"]["body_character_count"]
+            > records["intermediate/Chinese"]["body_character_count"]
+            > records["concise/Chinese"]["body_character_count"]
+        ),
         "all_delivered_docx_are_figure_free": all(not record["embedded_media"] for record in records.values()),
         "all_delivered_tables_are_three_line": all(record["checks"]["every_docx_table_is_three_line"] for record in records.values()),
     }
     report = {
-        "schema": "local.submission_manuscript_audit.v1",
-        "scope": "Full and concise English/Chinese clean manuscripts.",
+        "schema": "local.submission_manuscript_audit.v2",
+        "scope": "Full, intermediate, and concise English/Chinese clean screening manuscripts.",
         "records": records,
         "package_checks": checks,
         "zotero_acceptance_state": "setup gate",

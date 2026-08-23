@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit BibTeX/citation/reference parity for full and concise manuscripts."""
+"""Audit BibTeX/citation/reference parity for full, intermediate, and concise manuscripts."""
 from __future__ import annotations
 
 import hashlib
@@ -14,6 +14,8 @@ VERIFIED = ROOT / "references" / "verified_references.md"
 MANUSCRIPTS = {
     "full_english": ROOT / "manuscript/full/English.md",
     "full_chinese": ROOT / "manuscript/full/Chinese.md",
+    "intermediate_english": ROOT / "manuscript/intermediate/English.md",
+    "intermediate_chinese": ROOT / "manuscript/intermediate/Chinese.md",
     "concise_english": ROOT / "manuscript/concise/English.md",
     "concise_chinese": ROOT / "manuscript/concise/Chinese.md",
 }
@@ -62,13 +64,16 @@ def main() -> int:
         "verified_reference_inventory_matches_bibtex": verified_dois == bib_dois,
         "full_english_chinese_reference_parity": manuscript_dois["full_english"] == manuscript_dois["full_chinese"] == bib_dois,
         "full_cited_keys_exist_in_bibtex": manuscript_keys["full_english"] <= bib_keys and manuscript_keys["full_chinese"] <= bib_keys,
+        "intermediate_english_chinese_reference_parity": manuscript_dois["intermediate_english"] == manuscript_dois["intermediate_chinese"],
+        "intermediate_reference_count_is_40": len(manuscript_dois["intermediate_english"]) == 40,
+        "intermediate_cited_keys_match_reference_subset": manuscript_keys["intermediate_english"] == manuscript_keys["intermediate_chinese"] and len(manuscript_keys["intermediate_english"]) == 40,
         "concise_english_chinese_reference_parity": manuscript_dois["concise_english"] == manuscript_dois["concise_chinese"],
         "concise_reference_count_is_22": len(manuscript_dois["concise_english"]) == 22,
         "concise_cited_keys_match_reference_subset": manuscript_keys["concise_english"] == manuscript_keys["concise_chinese"] and len(manuscript_keys["concise_english"]) == 22,
         "no_unknown_keys_or_dois": all(not item["unknown_keys"] and not item["unknown_reference_dois"] for item in records.values()),
     }
     report = {
-        "schema": "local.citation_inventory_audit.v3",
+        "schema": "local.citation_inventory_audit.v4",
         "bibtex": {"path": str(BIB.relative_to(ROOT)), "sha256": sha256(BIB)},
         "verified_references": {"path": str(VERIFIED.relative_to(ROOT)), "sha256": sha256(VERIFIED)},
         "manuscripts": records,

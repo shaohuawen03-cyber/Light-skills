@@ -1,5 +1,5 @@
 {
-  "schema": "local.citation_inventory_audit.v3",
+  "schema": "local.citation_inventory_audit.v4",
   "bibtex": {
     "path": "references/references.bib",
     "sha256": "d6ec080a31da05b74f17540de6d119393dfc6ecf6459ec61ae2aedb192e6c26d"
@@ -25,6 +25,22 @@
       "unknown_keys": [],
       "unknown_reference_dois": []
     },
+    "intermediate_english": {
+      "path": "manuscript/intermediate/English.md",
+      "sha256": "caeae2a3db617dc2d42b83bb9d8b985ff93f3f75158884b35aedb2f814d5061b",
+      "reference_doi_count": 40,
+      "cited_key_count": 40,
+      "unknown_keys": [],
+      "unknown_reference_dois": []
+    },
+    "intermediate_chinese": {
+      "path": "manuscript/intermediate/Chinese.md",
+      "sha256": "a80490acf24d17c54f4cfcb0682c83937775df43155bf76bb8ca90998f4cd2ab",
+      "reference_doi_count": 40,
+      "cited_key_count": 40,
+      "unknown_keys": [],
+      "unknown_reference_dois": []
+    },
     "concise_english": {
       "path": "manuscript/concise/English.md",
       "sha256": "e1870916e12d72fe4a686ba18cf4dd3009b11f28528c9c3258b5ecfebfcb6217",
@@ -47,6 +63,9 @@
     "verified_reference_inventory_matches_bibtex": true,
     "full_english_chinese_reference_parity": true,
     "full_cited_keys_exist_in_bibtex": true,
+    "intermediate_english_chinese_reference_parity": true,
+    "intermediate_reference_count_is_40": true,
+    "intermediate_cited_keys_match_reference_subset": true,
     "concise_english_chinese_reference_parity": true,
     "concise_reference_count_is_22": true,
     "concise_cited_keys_match_reference_subset": true,

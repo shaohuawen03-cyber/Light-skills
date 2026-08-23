@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit DOCX packaging for all four current manuscript deliverables."""
+"""Audit DOCX packaging for all six screening-manuscript deliverables."""
 from __future__ import annotations
 
 import json
@@ -34,7 +34,7 @@ def main() -> int:
             "verdict": "PASS" if all(checks.values()) else "FAIL",
         }
     checks = {
-        "four_current_docx_packages_audited": len(packages) == 4,
+        "six_screening_docx_packages_audited": len(packages) == 6,
         "all_packages_pass": all(item["verdict"] == "PASS" for item in packages.values()),
         "all_packages_are_figure_free": all(not item["embedded_media"] and item["drawings"] == 0 for item in packages.values()),
         "all_tables_are_three_line": all(
@@ -45,7 +45,7 @@ def main() -> int:
         ),
     }
     report = {
-        "schema": "local.docx_package_audit.v4",
+        "schema": "local.docx_package_audit.v5",
         "packages": packages,
         "checks": checks,
         "zotero_acceptance_state": master["zotero_acceptance_state"],

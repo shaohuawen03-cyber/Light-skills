@@ -41,11 +41,12 @@ Rules / 规则：
 | **v3.7.0 — journal-aligned manuscripts and expanded concise variants** | 2026-08-17 | The annotated tag resolves the final v3.7.0 release commit | `porphyromonas-ad-manuscript-v3.7.0` | **Frozen prior release** | Reframed the ongoing MD work as a pending analysis extension whose trajectory measurements will be integrated after completion; removed “no MD result” wording; expanded the concise English body by approximately 74% with synchronized Chinese content; adopted structured abstracts, unnumbered IMRaD headings, 12-point Times New Roman, double spacing and one-inch margins; retained figure-free DOCX files, three-line tables and Conclusion-to-References order. / 将MD表述修正为正在进行、完成后补充轨迹指标的分析扩展，删除“不报告MD结果”措辞；精简英文正文扩展约74%并同步中文；采用结构式摘要、无编号IMRaD标题、12磅Times New Roman、双倍行距和1英寸页边距；继续保持DOCX无图、三线表及结论后直接进入参考文献。 |
 | **v3.8.0 — single-paragraph abstracts and simplified article ending** | 2026-08-17 | The annotated tag resolves the final v3.8.0 release commit | `porphyromonas-ad-manuscript-v3.8.0` | **Frozen prior release** | Converted all four abstracts to one unlabelled paragraph and removed their Conclusions components; removed the Statistical analysis subsection and standalone Conclusion section; made Discussion proceed directly to References; added a 480-twip first-line indent to ordinary main-text paragraphs while retaining unindented abstracts and non-body elements; preserved synchronized science, ongoing-MD language, figure-free DOCX files and three-line tables. / 四稿摘要改为单段无标签形式并删除摘要结论内容；删除“统计分析”小节和独立“结论”章节，使讨论后直接进入参考文献；正文普通段落增加480 twip首行缩进，摘要及非正文元素保持顶格；继续保持中英文科学同步、MD正在分析、DOCX无图和三线表。 |
 | **v3.9.0 — restored multidimensional long/short results and attrition limitation** | 2026-08-17 | The annotated tag resolves the final v3.9.0 release commit | `porphyromonas-ad-manuscript-v3.9.0` | **Frozen prior screening release** | Restored all 22 principal-source UniDL4BioPep functional outputs for both long and short branches in all four manuscripts; retained exact counts and percentages in separate full-version tables and a compact concise table; documented that all 72 metaproteome-supported, dereplicated long BBB-high candidates were absent from the all-≤30-aa NTxPred2-positive set, so downstream metal/CHEL/FRS screening and the final aggregate 12 retained only short peptides; treated this as a serial-pipeline limitation rather than biological inactivity. / 四稿恢复主源长肽与短肽各22项UniDL4BioPep功能输出，完整稿分别列表、精简稿合并列表并保留精确计数与比例；明确72条经宏蛋白质组支持、去重且BBB高分的长肽均未进入全部≤30 aa的NTxPred2阳性集合，故后续金属/CHEL/FRS筛选及最终12条仅保留短肽；将其界定为串行流程局限，而非长肽无生物活性。 |
-| **v3.10.0 — standalone ALLLHRC–AChE MD package** | 2026-08-23 | The annotated tag resolves the final v3.10.0 release commit | `porphyromonas-ad-manuscript-v3.10.0` | **Current project release** | Preserved the four v3.9.0 screening DOCX files byte-for-byte and added separate full/concise English/Chinese manuscripts for the user-designated 100-ns ALLLHRC–AChE trajectory; interpreted RMSD, RMSF, center-of-mass RDF, SASA, secondary-structure fractions and hydrogen bonds using Atanasova et al. as a framework; disclosed that the RMSD diagnostic is digitized, the plot retains an inherited Aβ title, and raw/replicate data are incomplete; kept every new DOCX titleless and figure-free. / 原v3.9.0四份筛选DOCX逐字节保持不变；新增用户指定ALLLHRC–AChE 100 ns轨迹的完整/简洁中英文独立稿；以Atanasova等为框架解释RMSD、RMSF、质心RDF、SASA、二级结构比例和氢键；披露RMSD诊断来自数字化曲线、图标题继承Aβ文字且原始/重复数据不完整；新增DOCX继续无标题、无图。 |
+| **v3.10.0 — standalone ALLLHRC–AChE MD package** | 2026-08-23 | The annotated tag resolves the final v3.10.0 release commit | `porphyromonas-ad-manuscript-v3.10.0` | **Frozen prior project release** | Preserved the four v3.9.0 screening DOCX files byte-for-byte and added separate full/concise English/Chinese manuscripts for the user-designated 100-ns ALLLHRC–AChE trajectory; interpreted RMSD, RMSF, center-of-mass RDF, SASA, secondary-structure fractions and hydrogen bonds using Atanasova et al. as a framework; disclosed that the RMSD diagnostic is digitized, the plot retains an inherited Aβ title, and raw/replicate data are incomplete; kept every new DOCX titleless and figure-free. / 原v3.9.0四份筛选DOCX逐字节保持不变；新增用户指定ALLLHRC–AChE 100 ns轨迹的完整/简洁中英文独立稿；以Atanasova等为框架解释RMSD、RMSF、质心RDF、SASA、二级结构比例和氢键；披露RMSD诊断来自数字化曲线、图标题继承Aβ文字且原始/重复数据不完整；新增DOCX继续无标题、无图。 |
+| **v3.11.0 — intermediate submission manuscripts** | 2026-08-23 | The annotated tag resolves the final v3.11.0 release commit | `porphyromonas-ad-manuscript-v3.11.0` | **Current project release** | Added separate English/Chinese intermediate screening manuscripts positioned between the full and concise variants, with approximately 4,600 English main-text words, 40 references and four three-line tables; retained all 22 paired long/short multidimensional outputs, funnel counts, the twelve-sequence composition/docking summary and the long-peptide attrition limitation; excluded the new standalone MD result and created no intermediate MD variant; preserved all pre-existing full, concise and MD DOCX hashes. / 在筛选论文完整稿与简洁稿之间新增独立中英文中间版，含约4,600个英文正文词、40条参考文献和4个三线表；保留全部22项长/短肽配对多维结果、漏斗计数、12条序列组成/对接汇总和长肽流失局限；不纳入新的独立MD结果，也不创建MD中间版；既有完整、简洁和MD DOCX哈希保持不变。 |
 
 ## 3. Scientific status and package relationship / 科学状态与版本关系
 
-**v3.0.0–v3.10.0 screening manuscripts support / 筛选稿可支持：**
+**v3.0.0–v3.11.0 screening manuscripts support / 筛选稿可支持：**
 
 - principal-source aggregate funnel and recomputed descriptive percentages;
 - twelve externally reported 7–9-aa sequence strings and independently recomputed composition;
@@ -60,7 +61,7 @@ Rules / 规则：
 - qualitative RMSF, center-of-mass RDF, SASA, secondary-structure and hydrogen-bond patterns;
 - explicit disclosure that the numeric RMSD diagnostic is plot-digitized and that the inherited Aβ plot title requires identity confirmation.
 
-**v3.0.0–v3.10.0 do not support / 不支持：**
+**v3.0.0–v3.11.0 do not support / 不支持：**
 
 - row-level linkage between the twelve strings and the principal screening funnel or stricter eight;
 - independently reproduced docking, verified pose/PAS residence, binding affinity, free energy, ensemble convergence, or biochemical AChE inhibition;
@@ -70,7 +71,7 @@ Rules / 规则：
 
 **v3.5.0 full-package relationship / 完整稿关系：** v3.5.0 superseded v3.4.0 as the prior full release. Its historical deliverables remain frozen. / v3.5.0曾取代v3.4.0成为上一版完整稿，其历史交付物保持冻结。
 
-**v3.10.0 package relationship / 当前版本关系：** v3.10.0 preserves the four v3.9.0 screening deliverables byte-for-byte and adds four independent MD deliverables under `manuscript/md_alllhrc/full/` and `manuscript/md_alllhrc/concise/`. The MD manuscripts are a separate result package and are not merged into the screening manuscripts. Historical bilingual manuscripts, supplementary files and figures remain outside the current DOCX deliverables. / v3.10.0逐字节保留v3.9.0四份筛选稿，并在`manuscript/md_alllhrc/full/`和`manuscript/md_alllhrc/concise/`新增四份独立MD稿；MD稿属于单独结果包，不与筛选稿合并；历史双语稿、补充文件和图件仍不属于当前DOCX交付物。
+**v3.11.0 package relationship / 当前版本关系：** v3.11.0 preserves the existing full and concise screening manuscripts and all four standalone MD manuscripts, and adds two intermediate screening deliverables under `manuscript/intermediate/`. The submission-oriented intermediate files retain the complete multidimensional and attrition results but do not integrate the new ALLLHRC MD result. No intermediate MD variant exists. Historical bilingual manuscripts, supplementary files and figures remain outside the current DOCX deliverables. / v3.11.0保留既有筛选完整稿、简洁稿和四份独立MD稿，并在`manuscript/intermediate/`新增两份筛选中间稿；用于本次提交的中间稿保留完整多维结果和流失局限，但不整合新的ALLLHRC动力学结果；MD包不设中间版。历史双语稿、补充文件和图件仍不属于当前DOCX交付物。
 
 **v3.2.0 provenance correction / v3.2.0来源修正：** PRJNA678453 is reported as a 22-participant cohort (11 orally healthy and 11 with periodontitis) producing 66 oral specimens; PRJEB65451 is reported as the derived EBI-EMG/MGnify TPA assembly project. / PRJNA678453按22名参与者（11名口腔健康、11名牙周炎）和66份口腔标本报告；PRJEB65451按衍生TPA组装项目报告。
 
@@ -86,8 +87,8 @@ The repository includes a guarded cross-platform helper: / 仓库提供带保护
 
 ```bash
 python3 scripts/manage_version_tag.py create \
-  --version 3.10.0 \
-  --message "v3.10.0: add standalone ALLLHRC-AChE molecular-dynamics manuscripts" \
+  --version 3.11.0 \
+  --message "v3.11.0: add intermediate English and Chinese submission manuscripts" \
   --push
 ```
 
@@ -95,9 +96,9 @@ Equivalent native Git commands / 等价Git命令：
 
 ```bash
 git status --short
-git tag -a porphyromonas-ad-manuscript-v3.10.0 \
-  -m "v3.10.0: add standalone ALLLHRC-AChE molecular-dynamics manuscripts"
-git push origin refs/tags/porphyromonas-ad-manuscript-v3.10.0
+git tag -a porphyromonas-ad-manuscript-v3.11.0 \
+  -m "v3.11.0: add intermediate English and Chinese submission manuscripts"
+git push origin refs/tags/porphyromonas-ad-manuscript-v3.11.0
 ```
 
 The helper refuses to tag a dirty working tree, the wrong branch, or an existing tag. / 脚本会拒绝脏工作区、错误分支或重复标签。
@@ -105,11 +106,12 @@ The helper refuses to tag a dirty working tree, the wrong branch, or an existing
 ## 5. Verify a tag / 核验标签
 
 ```bash
-python3 scripts/manage_version_tag.py verify --version 3.10.0
-git show --no-patch --decorate porphyromonas-ad-manuscript-v3.10.0
-git rev-list -n 1 porphyromonas-ad-manuscript-v3.10.0
+python3 scripts/manage_version_tag.py verify --version 3.11.0
+git show --no-patch --decorate porphyromonas-ad-manuscript-v3.11.0
+git rev-list -n 1 porphyromonas-ad-manuscript-v3.11.0
 
 # Earlier immutable baselines remain independently verifiable:
+python3 scripts/manage_version_tag.py verify --version 3.10.0
 python3 scripts/manage_version_tag.py verify --version 3.9.0
 python3 scripts/manage_version_tag.py verify --version 3.8.0
 python3 scripts/manage_version_tag.py verify --version 3.7.0
@@ -129,7 +131,7 @@ Recommended: create a separate worktree. / 推荐创建独立worktree，不改�
 ```powershell
 Set-Location 'E:\0writing\Light-skills'
 git fetch origin --tags
-git worktree add 'E:\0writing\Light-skills-restore-v3.10.0' porphyromonas-ad-manuscript-v3.10.0
+git worktree add 'E:\0writing\Light-skills-restore-v3.11.0' porphyromonas-ad-manuscript-v3.11.0
 
 # To inspect an earlier immutable baseline instead:
 git worktree add 'E:\0writing\Light-skills-restore-v3.4.0' porphyromonas-ad-manuscript-v3.4.0
@@ -142,7 +144,7 @@ git worktree add 'E:\0writing\Light-skills-restore-v3.0.0' porphyromonas-ad-manu
 Remove it after inspection / 检查后移除：
 
 ```powershell
-git worktree remove 'E:\0writing\Light-skills-restore-v3.10.0'
+git worktree remove 'E:\0writing\Light-skills-restore-v3.11.0'
 # Or remove an earlier baseline worktree if one was created:
 git worktree remove 'E:\0writing\Light-skills-restore-v3.4.0'
 git worktree remove 'E:\0writing\Light-skills-restore-v3.3.0'
@@ -154,8 +156,8 @@ git worktree remove 'E:\0writing\Light-skills-restore-v3.0.0'
 ### 6.2 Restore one file from the tag
 
 ```bash
-git restore --source=porphyromonas-ad-manuscript-v3.10.0 -- \
-  projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/full/English.docx
+git restore --source=porphyromonas-ad-manuscript-v3.11.0 -- \
+  projects/porphyromonas-ad-mechanism-manuscript/manuscript/intermediate/English.docx
 ```
 
 Review the diff before committing the restored file. / 提交恢复文件前先检查差异。
