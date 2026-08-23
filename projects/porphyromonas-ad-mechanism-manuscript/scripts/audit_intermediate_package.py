@@ -17,10 +17,6 @@ UNCHANGED_DOCX = {
     "manuscript/full/English.docx": "98943ba415134a0ca47b00022371d9e75abe6d76cac9d8f540cc6984adca2c32",
     "manuscript/concise/Chinese.docx": "e1529a0bb0f2e22afc68e7e9966816f4f3d9a3a496159dc9aaf98a42a9241ddc",
     "manuscript/concise/English.docx": "7dfbe9e65504d61e56fb58d39940bc9e0ded439a07557be21913e4def2a994b7",
-    "manuscript/md_alllhrc/full/Chinese.docx": "be279a68ceb41515bcd097b9a73b05be49e44cccff7aad8ab502ca9dc200b50f",
-    "manuscript/md_alllhrc/full/English.docx": "bf52b704c4f187ac721e5a936243726c97102eff0389fc1b8ba55c0f936973aa",
-    "manuscript/md_alllhrc/concise/Chinese.docx": "87d6d37a2d2918335a1d334b7be08f51c493b29dae6bebb4adf3e8fdbc389f94",
-    "manuscript/md_alllhrc/concise/English.docx": "e0564158aff137fc75d8e807b098229b7f10fadb7f514f7f0cdc66a2f81cc4c9",
 }
 
 
@@ -68,11 +64,11 @@ def main() -> int:
             for item in records.values()
         ),
         "intermediate_length_is_between_full_and_concise": master["package_checks"]["length_order_is_full_then_intermediate_then_concise"],
-        "preexisting_full_concise_and_md_docx_files_are_unchanged": all(item["matches"] for item in unchanged.values()),
+        "preexisting_full_and_concise_screening_docx_files_are_unchanged": all(item["matches"] for item in unchanged.values()),
         "zotero_live_status_is_not_misrepresented": all(item["zotero_live_field_count"] == 0 for item in records.values()),
     }
     report = {
-        "schema": "local.intermediate_package_audit.v1",
+        "schema": "local.intermediate_package_audit.v2",
         "scope": "Separate titleless, figure-free intermediate English and Chinese screening manuscripts; MD package excluded.",
         "records": records,
         "unchanged_preexisting_docx": unchanged,

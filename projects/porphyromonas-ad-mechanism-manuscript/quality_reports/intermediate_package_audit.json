@@ -1,5 +1,5 @@
 {
-  "schema": "local.intermediate_package_audit.v1",
+  "schema": "local.intermediate_package_audit.v2",
   "scope": "Separate titleless, figure-free intermediate English and Chinese screening manuscripts; MD package excluded.",
   "records": {
     "intermediate/English": {
@@ -461,26 +461,6 @@
       "expected": "7dfbe9e65504d61e56fb58d39940bc9e0ded439a07557be21913e4def2a994b7",
       "actual": "7dfbe9e65504d61e56fb58d39940bc9e0ded439a07557be21913e4def2a994b7",
       "matches": true
-    },
-    "manuscript/md_alllhrc/full/Chinese.docx": {
-      "expected": "be279a68ceb41515bcd097b9a73b05be49e44cccff7aad8ab502ca9dc200b50f",
-      "actual": "be279a68ceb41515bcd097b9a73b05be49e44cccff7aad8ab502ca9dc200b50f",
-      "matches": true
-    },
-    "manuscript/md_alllhrc/full/English.docx": {
-      "expected": "bf52b704c4f187ac721e5a936243726c97102eff0389fc1b8ba55c0f936973aa",
-      "actual": "bf52b704c4f187ac721e5a936243726c97102eff0389fc1b8ba55c0f936973aa",
-      "matches": true
-    },
-    "manuscript/md_alllhrc/concise/Chinese.docx": {
-      "expected": "87d6d37a2d2918335a1d334b7be08f51c493b29dae6bebb4adf3e8fdbc389f94",
-      "actual": "87d6d37a2d2918335a1d334b7be08f51c493b29dae6bebb4adf3e8fdbc389f94",
-      "matches": true
-    },
-    "manuscript/md_alllhrc/concise/English.docx": {
-      "expected": "e0564158aff137fc75d8e807b098229b7f10fadb7f514f7f0cdc66a2f81cc4c9",
-      "actual": "e0564158aff137fc75d8e807b098229b7f10fadb7f514f7f0cdc66a2f81cc4c9",
-      "matches": true
     }
   },
   "checks": {
@@ -493,7 +473,7 @@
     "both_docx_files_are_titleless_and_figure_free": true,
     "conclusion_and_statistical_analysis_sections_are_absent": true,
     "intermediate_length_is_between_full_and_concise": true,
-    "preexisting_full_concise_and_md_docx_files_are_unchanged": true,
+    "preexisting_full_and_concise_screening_docx_files_are_unchanged": true,
     "zotero_live_status_is_not_misrepresented": true
   },
   "zotero_acceptance_state": "setup gate",

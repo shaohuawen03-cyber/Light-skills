@@ -1,30 +1,14 @@
-## 摘要
-
-乙酰胆碱酯酶（acetylcholinesterase，AChE）是阿尔茨海默病研究中具有结构和生物学意义的靶点，但仅凭对接评分无法确定短肽能否在显式溶剂轨迹中持续与该酶关联。本研究采用Atanasova等发表的AChE–β-淀粉样肽研究作为分析框架，对一条归属于AChE–ALLLHRC复合物的100 ns分子动力学（molecular dynamics，MD）输出进行解读，同时严格区分两种肽体系。配置的流程采用GROMACS、Amber99SB-ILDN力场、TIP3P水、生理离子强度、分阶段平衡和100 ns产物模拟。在现有诊断导出中，AChE骨架RMSD为0.1803 ± 0.0220 nm。肽自拟合骨架RMSD呈现三个平台：0.0–22.6 ns为0.0582 ± 0.0091 nm，23.4–55.6 ns为0.1432 ± 0.0161 nm，57.0–100.0 ns为0.2694 ± 0.0148 nm。距离分布在约1.2和1.4 nm处显示优选的肽–AChE质心间距；复合物与肽的溶剂可及表面积分别大致维持在210–223和10–12 nm²。分子间氢键数在0–11之间波动，轨迹后段通常较少。现有数据不包括独立重复、残基分辨率界面图、结合自由能、AChE活性实验或完整原始轨迹档案。
-
-**关键词：** ALLLHRC；乙酰胆碱酯酶；分子动力学；肽–蛋白复合物；RMSD；径向分布函数；氢键；阿尔茨海默病
-
-## 引言
-
-阿尔茨海默病（Alzheimer’s disease，AD）是一种进行性神经退行性疾病，涉及β-淀粉样蛋白（Aβ）、tau、突触功能障碍、神经炎症、血管因素及随年龄增长而减弱的生物韧性[@scheltens2021alzheimer]。乙酰胆碱酯酶（AChE）水解乙酰胆碱，并且仍是AD对症治疗的药物靶点，因而具有明确的临床相关性[@hampel2018cholinergic]。AChE还可通过非催化相互作用影响Aβ组装，其外周区域被认为与淀粉样纤维形成加速有关[@inestrosa1996ache]。这些发现支持对AChE相互作用分子进行结构研究，但并不意味着经计算优选的肽必然结合AChE、抑制催化、改变Aβ聚集或影响AD生物学。
-
-短肽是特别具有挑战性的结构配体。末端状态、质子化、起始构象、内部柔性、受体放置方式和溶剂暴露都可能明显影响对接与MD行为。因此，有利的对接评分只是起始假设，而不是结合测量。MD可以在给定力场和溶剂模型下检验已构建体系是否停留在某一构象状态；骨架偏差、残基涨落、溶剂暴露、距离分布、二级结构比例和氢键则从不同角度描述轨迹。
-
-本分析针对七肽ALLLHRC与人AChE形成的复合物。上游结构流程将PDB 4EY6所代表的人AChE晶体结构指定为受体框架[@cheung2012ache]。然而，现有结果包中不含确切的已制备起始坐标文件，因此无法独立核查受体处理、肽末端、质子化、链命名和起始位点。
-
-Atanasova等采用1 μs全原子轨迹研究AChE–Aβ复合物，并分析了骨架运动、肽驻留、径向分布、溶剂可及表面积、二级结构、接触、氢键和水介导桥连[@atanasova2020md]。该研究提供的是分析框架，而不是可以迁移的数据。ALLLHRC是不同的七残基肽，本研究轨迹为100 ns而非1 μs，参考研究中的任何Aβ残基接触、AChE驻留区域或机制结论都不能归属于ALLLHRC。本研究的目标是仅描述现有ALLLHRC–AChE轨迹输出，识别内部一致的模式，并界定提出结合或功能主张之前仍需补充的数据。
-
-## 材料与方法
+## 分析方法
 
 ### 研究设计与证据范围
 
-本研究是对已有MD输出进行的纯计算描述性分析。可用证据包括与`md_alllhrc`体系目录关联的一张六面板轨迹汇总图和一份RMSD诊断导出。各面板报告了100 ns内的骨架RMSD、骨架RMSF、肽–AChE质心径向分布、溶剂可及表面积（solvent-accessible surface area，SASA）、二级结构比例和分子间氢键数。本稿未实施湿实验、新对接、新MD产物模拟、统计比较或生物学测定。
+本研究是对已有MD输出进行的纯计算描述性分析。可用证据包括与`md_alllhrc`体系目录关联的一张六面板轨迹汇总图和一份RMSD诊断导出。各面板报告了100 ns内的骨架RMSD、骨架RMSF、肽–AChE质心径向分布、溶剂可及表面积（solvent-accessible surface area，SASA）、二级结构比例和分子间氢键数。本结果报告未实施湿实验、新对接、新MD产物模拟、统计比较或生物学测定。
 
 体系身份依据ALLLHRC目录标签和结果随附的明确体系说明进行归属。图形标题仍保留继承的“AChE–Aβ”标签。本研究将其视为有待核实的标注差异，而不将其视为模拟肽为Aβ的证据。参考文献中的任何Aβ特异序列、接触残基、表面区域或相互作用均未被移植到ALLLHRC结果中。仍需提供拓扑–轨迹清单及相互匹配的坐标哈希，才能关闭这一身份溯源缺口。
 
 ### 配置的分子动力学方案
 
-上游流程指定使用GROMACS生成并分析轨迹[@abraham2015gromacs]。其可执行的100 ns配置采用Amber99SB-ILDN力场；该力场改进了Amber ff99SB家族中的侧链扭转势[@lindorfflarsen2010amber]。体系配置于三斜周期性盒中，溶质至盒边距离为1.0 nm，采用与TIP3P兼容的水坐标，并加入中和离子和0.15 mol/L NaCl。由于缺少完整运行日志和二进制输入文件，这些内容被报告为“配置参数”，而非已经独立确认的实际运行参数。
+上游流程指定使用GROMACS生成并分析轨迹。其可执行的100 ns配置采用Amber99SB-ILDN力场；该力场改进了Amber ff99SB家族中的侧链扭转势。体系配置于三斜周期性盒中，溶质至盒边距离为1.0 nm，采用与TIP3P兼容的水坐标，并加入中和离子和0.15 mol/L NaCl。由于缺少完整运行日志和二进制输入文件，这些内容被报告为“配置参数”，而非已经独立确认的实际运行参数。
 
 配置的预处理包括在1,255 kJ mol⁻¹ nm⁻²重原子位置约束下进行2,000步最速下降能量最小化，随后进行1.0 ns从10 K升温至300 K的受限NVT平衡、1.0 ns受限NPT平衡以及300 K和1 bar下1.0 ns无约束NPT平衡。产物阶段配置为100 ns，时间步长2 fs，采用LINCS约束含氢键，实空间截断为1.2 nm，范德华相互作用从1.0 nm开始力切换，长程静电采用粒子网格Ewald，温度耦合采用速度重标度，压力耦合采用Berendsen方法。坐标计划每20 ps保存一次，相当于5,000个预期帧。现有材料未提供确切GROMACS版本、生成的速度种子、硬件、运行完成日志、能量文件、检查点、拓扑和最终坐标。
 
@@ -99,7 +83,7 @@ RDF与氢键曲线补充了界面层面的信息，但不能把RMSD模式转化�
 
 ### 与参考AChE–Aβ研究的关系
 
-Atanasova研究的重要意义在于表明：肽在AChE表面移动可以与受体稳定性同时存在，且仅凭RMSD不足以界定驻留行为[@atanasova2020md]。其1 μs AChE–Aβ分析包含快照、残基接触、氢键、疏水相互作用、SASA、二级结构、RDF和水介导桥连。本研究采用相同指标类别组织结果，但并未复现该研究。
+Atanasova研究的重要意义在于表明：肽在AChE表面移动可以与受体稳定性同时存在，且仅凭RMSD不足以界定驻留行为。其1 μs AChE–Aβ分析包含快照、残基接触、氢键、疏水相互作用、SASA、二级结构、RDF和水介导桥连。本研究采用相同指标类别组织结果，但并未复现该研究。
 
 两者存在多项不能直接迁移的差异。ALLLHRC是七残基序列而不是Aβ；产物阶段的时长只有参考研究的十分之一；配置的力场和运行实现也不同。现有ALLLHRC输出不含经过核实的残基接触图、水桥分析、肽驻留区域或与实验相关的表型。因此，不能把AChE 344–361驻留区、PAS迁移、Aβ聚集行为或任何Aβ特异相互作用赋予ALLLHRC。图标题中继承的Aβ文字还需要在源分析包中更正，并通过拓扑与轨迹标识符进行确认。
 
@@ -110,13 +94,3 @@ Atanasova研究的重要意义在于表明：肽在AChE表面移动可以与受�
 当前输出还缺少完整复现材料，包括确切GROMACS版本、起始坐标、末端和质子化状态、拓扑、TPR、XTC/TRR、EDR、LOG、CPT、索引组、分析命令及文件哈希。全复合物RMSD尤其容易受到周期性边界成像影响。后续分析应明确拟合和居中顺序，并在肽自拟合RMSD之外提供受体拟合后的肽RMSD。还应固定RMSF残基名称、二级结构分析选择、RDF归一化、氢键几何定义和帧排除规则。
 
 本研究未测量结合自由能、动力学驻留时间、AChE催化活性、与已知配体的竞争、Aβ聚集、BBB转运、细胞毒性或AD相关表型。该轨迹不能证明ALLLHRC抑制AChE、结合外周阴离子位点、改变淀粉样组装、进入脑内或参与疾病。回答这些问题需要经过核实的体系身份、独立种子轨迹、残基层面结构分析、生化结合和酶学实验，以及适当的肽对照。
-
-## 参考文献
-
-1. Scheltens P, De Strooper B, Kivipelto M, et al. Alzheimer’s disease. *Lancet*. 2021;397(10284):1577–1590. doi:10.1016/S0140-6736(20)32205-4.
-2. Hampel H, Mesulam MM, Cuello AC, et al. The cholinergic system in the pathophysiology and treatment of Alzheimer’s disease. *Brain*. 2018;141(7):1917–1933. doi:10.1093/brain/awy132.
-3. Inestrosa NC, Alvarez A, Pérez CA, et al. Acetylcholinesterase accelerates assembly of amyloid-β-peptides into Alzheimer’s fibrils. *Neuron*. 1996;16(4):881–891. doi:10.1016/s0896-6273(00)80108-7.
-4. Cheung J, Rudolph MJ, Burshteyn F, et al. Structures of human acetylcholinesterase in complex with pharmacologically important ligands. *J Med Chem*. 2012;55(23):10282–10286. doi:10.1021/jm300871x.
-5. Atanasova M, Dimitrov I, Ivanov S. Molecular dynamics simulations of acetylcholinesterase–beta-amyloid peptide complex. *Cybern Inf Technol*. 2020;20(6):140–154. doi:10.2478/cait-2020-0068.
-6. Abraham MJ, Murtola T, Schulz R, et al. GROMACS: high performance molecular simulations through multi-level parallelism from laptops to supercomputers. *SoftwareX*. 2015;1–2:19–25. doi:10.1016/j.softx.2015.06.001.
-7. Lindorff-Larsen K, Piana S, Palmo K, et al. Improved side-chain torsion potentials for the Amber ff99SB protein force field. *Proteins*. 2010;78(8):1950–1958. doi:10.1002/prot.22711.
