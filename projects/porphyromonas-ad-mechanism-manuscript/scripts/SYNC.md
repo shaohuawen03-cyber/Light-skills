@@ -46,7 +46,7 @@ git switch --track -c arena/01a04122-light-skills origin/arena/01a04122-light-sk
 projects/porphyromonas-ad-mechanism-manuscript/
 ```
 
-## Deterministic v3.14.0 rebuild
+## Deterministic v3.15.0 rebuild
 
 Run from the project root:
 
@@ -61,7 +61,9 @@ for language in English Chinese; do
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input "manuscript/full/${language}.md" --output "manuscript/full/${language}.docx" --title "${language}"
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-23T00:00:00Z --bibliography references/references.bib --input "manuscript/intermediate/${language}.md" --output "manuscript/intermediate/${language}.docx" --title "${language}"
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-23T00:00:00Z --bibliography references/references.bib --input "manuscript/concise/${language}.md" --output "manuscript/concise/${language}.docx" --title "${language}"
-  python3 scripts/build_docx_stdlib.py --clean-manuscript --allow-images --timestamp 2026-08-23T00:00:00Z --input "manuscript/md_alllhrc/full/${language}.md" --output "manuscript/md_alllhrc/full/${language}.docx" --title "${language}"
+  for version in full intermediate concise; do
+    python3 scripts/build_docx_stdlib.py --clean-manuscript --allow-images --timestamp 2026-08-23T00:00:00Z --input "manuscript/md_alllhrc/${version}/${language}.md" --output "manuscript/md_alllhrc/${version}/${language}.docx" --title "${language}"
+  done
 done
 
 python3 scripts/audit_submission_manuscripts.py
@@ -76,7 +78,7 @@ python3 scripts/generate_artifact_checksums.py
 python3 scripts/build_repository_inventory.py
 ```
 
-The MD rebuild intentionally omits `--bibliography`: those two reports contain only Analysis methods, Results, and Discussion; Methods and Results have no citation markup, while the Discussion section cites high-impact SCI literature directly. The `manuscript/md_alllhrc/concise/` directory must remain absent.
+The MD rebuild intentionally omits `--bibliography`: the six reports contain only Analysis methods, Results, and Discussion; Methods and Results have no citation markup, while the Discussion section cites high-impact SCI literature directly. Full, intermediate, and concise variants all embed the same seven PNG figures.
 
 ## Zotero-live acceptance gate
 
@@ -102,4 +104,4 @@ Existing release tags are immutable and must not be moved or overwritten. The he
 
 ## Scientific boundary
 
-These commands reproduce arithmetic checks, sequence-composition checks, the local three-run Vina summary audit, reference mapping, the six screening manuscripts, and the two expanded standalone docking and MD reports. They also reproduce the DOCX packages from versioned Markdown and the preserved multi-system MD metrics. They do not claim in vitro binding validation, cellular neurotoxicity assays, or clinical causality without dedicated prospective wet-lab experiments. No standalone docking/MD result is integrated into a screening manuscript.
+These commands reproduce arithmetic checks, sequence-composition checks, the local three-run Vina summary audit, reference mapping, the six screening manuscripts, and the six illustrated standalone docking and MD reports. They also reproduce the DOCX packages from versioned Markdown and the preserved multi-system MD metrics. They do not claim in vitro binding validation, cellular neurotoxicity assays, or clinical causality without dedicated prospective wet-lab experiments. No standalone docking/MD result is integrated into a screening manuscript.

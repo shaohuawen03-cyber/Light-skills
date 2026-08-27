@@ -1,11 +1,15 @@
 # Standalone molecular docking and molecular dynamics report package
 
-This package contains separate full English and Chinese reports for the local AutoDock Vina docking of 12 periodontitis candidate micropeptides against human acetylcholinesterase (rhAChE, PDB 4EY6) and subsequent 100-ns all-atom GROMACS molecular dynamics (MD) simulations (apo AChE vs. ALLLHRC, FLLHTTR, and YLSLLQR):
+This package contains separate English and Chinese reports for the local AutoDock Vina docking of 12 periodontitis candidate micropeptides against human acetylcholinesterase (rhAChE, PDB 4EY6) and subsequent 100-ns all-atom GROMACS molecular dynamics (MD) simulations (apo AChE vs. ALLLHRC, FLLHTTR, and YLSLLQR). Three length variants are delivered; **every variant embeds the same seven PNG figures** and retains the same principal docking and MD numerics:
 
 - `full/English.docx` and `full/English.md`
 - `full/Chinese.docx` and `full/Chinese.md`
+- `intermediate/English.docx` and `intermediate/English.md`
+- `intermediate/Chinese.docx` and `intermediate/Chinese.md`
+- `concise/English.docx` and `concise/English.md`
+- `concise/Chinese.docx` and `concise/Chinese.md`
 
-No concise or intermediate MD version is delivered. The standalone reports remain separate from the full, intermediate, and concise oral-smORF screening manuscripts; no docking/MD result is imported into those screening manuscripts.
+Version roles, figure-to-table concordance, and frozen figure hashes are recorded in `VERSIONS.md`. The standalone reports remain separate from the full, intermediate, and concise oral-smORF screening manuscripts; no docking/MD result is imported into those screening manuscripts.
 
 ## Report structure
 
@@ -15,7 +19,7 @@ Each language report contains exactly three top-level sections, in this order:
 2. Results / 结果
 3. Discussion / 讨论
 
-The reports have no displayed title, abstract, keywords, or Introduction. Methods and Results contain no in-text citation markup. The Discussion section cites high-impact SCI literature to elucidate the molecular mechanisms linking periodontal micropeptides, peripheral anionic site (PAS) binding, active gorge occlusion, and AChE-mediated pathological chaperone amyloid co-nucleation in Alzheimer's disease (AD). Both versions retain three editable three-line tables, in-text citations of docking and MD comparison figures (Figures 1–6 and Figure S1 / 图1–6、图S1), and explicit evidentiary boundaries.
+The reports have no displayed title, abstract, keywords, or Introduction. Methods and Results contain no in-text citation markup. The Discussion section cites high-impact SCI literature. All six files retain three editable three-line tables, in-text citations of docking and MD comparison figures (Figures 1–6 and Figure S1 / 图1–6、图S1), and explicit evidentiary boundaries.
 
 ## Scientific scope
 
@@ -26,7 +30,7 @@ The reports have no displayed title, abstract, keywords, or Introduction. Method
 
 ## DOCX formatting
 
-Both DOCX files:
+All six DOCX files:
 
 - begin directly with `Analysis methods` or `分析方法` and display no article title;
 - contain no header, footer, page number, or comment;
@@ -40,13 +44,15 @@ Both DOCX files:
 From the project root:
 
 ```bash
-for language in English Chinese; do
-  python3 scripts/build_docx_stdlib.py --clean-manuscript --allow-images \
-    --timestamp 2026-08-23T00:00:00Z \
-    --input "manuscript/md_alllhrc/full/${language}.md" \
-    --output "manuscript/md_alllhrc/full/${language}.docx" \
-    --title "${language}"
+for version in full intermediate concise; do
+  for language in English Chinese; do
+    python3 scripts/build_docx_stdlib.py --clean-manuscript --allow-images \
+      --timestamp 2026-08-23T00:00:00Z \
+      --input "manuscript/md_alllhrc/${version}/${language}.md" \
+      --output "manuscript/md_alllhrc/${version}/${language}.docx" \
+      --title "${language}"
+  done
 done
 ```
 
-Run `python3 scripts/audit_local_vina_docking.py` and `python3 scripts/audit_md_alllhrc_package.py` to validate the local three-run summary, both Markdown/DOCX pairs, the cited figure files, the absent concise directory, and the frozen hashes of all six screening DOCX files.
+Run `python3 scripts/audit_local_vina_docking.py` and `python3 scripts/audit_md_alllhrc_package.py` to validate the local three-run summary, all six Markdown/DOCX pairs, the frozen hashes of the cited figure files, length order (full > intermediate > concise), and the frozen hashes of all six screening DOCX files.

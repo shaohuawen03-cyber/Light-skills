@@ -76,7 +76,7 @@ Rules / 规则：
 
 **v3.5.0 full-package relationship / 完整稿关系：** v3.5.0 superseded v3.4.0 as the prior full release. Its historical deliverables remain frozen. / v3.5.0曾取代v3.4.0成为上一版完整稿，其历史交付物保持冻结。
 
-**v3.14.0 package relationship / 当前版本关系：** v3.14.0 preserves the six full, intermediate, and concise screening DOCX files byte-for-byte. Screening manuscripts continue to carry the frozen external v0.4 transcribed docking summaries. The standalone docking/MD reports now use the local three-run Vina summary and best-pose composites as the docking authority. No docking or MD result is imported into the screening manuscripts. / v3.14.0逐字节保留六份筛选完整稿、中间稿和简洁稿DOCX；筛选稿继续使用冻结的外部v0.4转录对接汇总；独立对接与MD报告改以本地三次Vina汇总表与最优构象复合图为对接权威来源；任何对接与MD结果均未导入筛选稿。
+**v3.15.0 package relationship / 当前版本关系：** v3.15.0 preserves the six full, intermediate, and concise screening DOCX files byte-for-byte. Screening manuscripts continue to carry the frozen external v0.4 transcribed docking summaries. The standalone docking/MD package now ships full, intermediate, and concise English/Chinese reports, all illustrated with the same seven figures. No docking or MD result is imported into the screening manuscripts. / v3.15.0逐字节保留六份筛选完整稿、中间稿和简洁稿DOCX；筛选稿继续使用冻结的外部v0.4转录对接汇总；独立对接与MD包现含完整/中间/简洁中英文报告，三版均嵌入同一套7幅图；任何对接与MD结果均未导入筛选稿。
 
 **v3.2.0 provenance correction / v3.2.0来源修正：** PRJNA678453 is reported as a 22-participant cohort (11 orally healthy and 11 with periodontitis) producing 66 oral specimens; PRJEB65451 is reported as the derived EBI-EMG/MGnify TPA assembly project. / PRJNA678453按22名参与者（11名口腔健康、11名牙周炎）和66份口腔标本报告；PRJEB65451按衍生TPA组装项目报告。
 
@@ -178,6 +178,35 @@ Review the diff before committing the restored file. / 提交恢复文件前先�
 git fetch origin --tags
 git diff --stat porphyromonas-ad-manuscript-v3.0.0..arena/019ff377-light-skills
 git diff porphyromonas-ad-manuscript-v3.0.0..arena/019ff377-light-skills -- \
+  projects/porphyromonas-ad-mechanism-manuscript/
+```
+
+### 6.4 Recover an older untagged historical version
+
+Use a separate worktree with the exact checkpoint, for example v2.0.0: / 使用精确提交在独立worktree中恢复，例如v2.0.0：
+
+```powershell
+git worktree add 'E:\0writing\Light-skills-restore-v2.0.0' a31d29466dc8d376d6012abd916152eb82e017f1
+```
+
+Do not use `git reset --hard` for routine recovery; it can discard uncommitted work. / 常规恢复不要使用`git reset --hard`，以免丢失未提交内容。
+
+## 7. Template for the next version / 下一版本记录模板
+
+Copy one row into the ledger and complete: / 在台账中复制一行并补齐：
+
+```text
+Version:
+Date:
+Scientific change:
+Evidence added or removed:
+Files changed:
+Audits and verdicts:
+Known limitations:
+Content commit:
+Release tag:
+Push verification:
+```
   projects/porphyromonas-ad-mechanism-manuscript/
 ```
 

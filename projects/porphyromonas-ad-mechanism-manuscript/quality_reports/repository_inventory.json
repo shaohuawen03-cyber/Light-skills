@@ -4,8 +4,8 @@
     "quality_reports/repository_inventory.json (self-referential output)",
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
-  "total_files": 192,
-  "total_bytes": 43630441,
+  "total_files": 202,
+  "total_bytes": 82340461,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -16,16 +16,16 @@
       "bytes": 573723
     },
     "manuscript": {
-      "files": 44,
-      "bytes": 34180466
+      "files": 53,
+      "bytes": 72865081
     },
     "project_root": {
       "files": 4,
-      "bytes": 58027
+      "bytes": 60233
     },
     "quality_reports": {
-      "files": 42,
-      "bytes": 211539
+      "files": 43,
+      "bytes": 231407
     },
     "references": {
       "files": 4,
@@ -41,7 +41,7 @@
     },
     "scripts": {
       "files": 29,
-      "bytes": 186955
+      "bytes": 190286
     },
     "source_materials": {
       "files": 15,
@@ -55,13 +55,13 @@
   "files": [
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
-      "size_bytes": 18722,
-      "sha256": "b344574487ed79e0f89e33e73589cb89cdbcef52f457bf7eadcfc14bc2632233"
+      "size_bytes": 19813,
+      "sha256": "2f0bcdb8cb6a389cfb79ff1548d21c7f14f2953fae2c242f88f4a25334855241"
     },
     {
       "path": "README.md",
-      "size_bytes": 10151,
-      "sha256": "bb4d19f42e4878f9851ef550c52906eeda49b81fcd70c740f18e81de49c723c5"
+      "size_bytes": 10398,
+      "sha256": "7a2840c84899fe90baa9ce96aed275bab29f3d7fe03e4289da3bcf98169ed963"
     },
     {
       "path": "SHA256SUMS.txt",
@@ -70,8 +70,8 @@
     },
     {
       "path": "VERSION_HISTORY.md",
-      "size_bytes": 28350,
-      "sha256": "59e77b31f4561e1567359ca0f9d15c916705ae388f36eb0f14eb05ade692d4e3"
+      "size_bytes": 29218,
+      "sha256": "83e91be5d89503951dbd362afa725d4c97d7111367cdffc0ccbbdaebdab3147a"
     },
     {
       "path": "docking/README.md",
@@ -350,8 +350,8 @@
     },
     {
       "path": "manuscript/intermediate/README.md",
-      "size_bytes": 2472,
-      "sha256": "76d58239b22d18d8bc6e57c356a47c52f619ca72d97a06ad8ff7806eec970b6e"
+      "size_bytes": 2509,
+      "sha256": "98df5f1484a5ecf1e125fd0ea815aa842e4b3e3ab9c7a0b7b5dc7aed4e4247bb"
     },
     {
       "path": "manuscript/manuscript_bilingual.docx",
@@ -375,8 +375,33 @@
     },
     {
       "path": "manuscript/md_alllhrc/README.md",
-      "size_bytes": 3918,
-      "sha256": "642a69254a6b57cd1b59362e6ba3d4dec65791db266fef685a697fbe4dd026c3"
+      "size_bytes": 4218,
+      "sha256": "5135b3e49753670b9febdd6c80cab04716961452dbda26dcf32cf2f04136fb62"
+    },
+    {
+      "path": "manuscript/md_alllhrc/VERSIONS.md",
+      "size_bytes": 8852,
+      "sha256": "f6302e65a226ac1c1f038f26e58d81cadfab2be6b12c227594acdd5e679699c8"
+    },
+    {
+      "path": "manuscript/md_alllhrc/concise/Chinese.docx",
+      "size_bytes": 9656148,
+      "sha256": "3492d1e7ba62ce872730a564ed35a05fdbdd472b57b87edf118f3fe34136238d"
+    },
+    {
+      "path": "manuscript/md_alllhrc/concise/Chinese.md",
+      "size_bytes": 8297,
+      "sha256": "905ec0c0e38847d61bd827b0dcce37e040b3dc28292a29e145a22c0e1ed91967"
+    },
+    {
+      "path": "manuscript/md_alllhrc/concise/English.docx",
+      "size_bytes": 9655795,
+      "sha256": "bde8c41fdc2fe9202816bbdd52a75cf949604ce93f8170e325758071e6a2fe23"
+    },
+    {
+      "path": "manuscript/md_alllhrc/concise/English.md",
+      "size_bytes": 8689,
+      "sha256": "0251ef6adb218ee3b704bfdc36b3697b98857cc6324a649f656badcc64dee44c"
     },
     {
       "path": "manuscript/md_alllhrc/full/Chinese.docx",
@@ -397,6 +422,26 @@
       "path": "manuscript/md_alllhrc/full/English.md",
       "size_bytes": 41593,
       "sha256": "c60eda6ec1f662edd97a853e71559b45024821938c619622a0b93827a2a03543"
+    },
+    {
+      "path": "manuscript/md_alllhrc/intermediate/Chinese.docx",
+      "size_bytes": 9659123,
+      "sha256": "269820a7513db3cbeca7d5c8611e4af7ad61e8ccbed6f21567ec84043a9fad8b"
+    },
+    {
+      "path": "manuscript/md_alllhrc/intermediate/Chinese.md",
+      "size_bytes": 13735,
+      "sha256": "e14a6662ab205d5d319b775e1d84e557d700c12fe8edd2e8d419feedb5d61c65"
+    },
+    {
+      "path": "manuscript/md_alllhrc/intermediate/English.docx",
+      "size_bytes": 9658667,
+      "sha256": "57f265bbc6eb07e6675537abc1b47dc59fa2eb0c2f5d6f871ceee2417aaec3a4"
+    },
+    {
+      "path": "manuscript/md_alllhrc/intermediate/English.md",
+      "size_bytes": 14972,
+      "sha256": "b674b5f9ced4d9c2d7623555bd0a032106877c21176d06d40e681d9c808885ea"
     },
     {
       "path": "manuscript/supplementary_tables_bilingual.docx",
@@ -520,8 +565,8 @@
     },
     {
       "path": "quality_reports/md_alllhrc_package_audit.json",
-      "size_bytes": 11548,
-      "sha256": "daa28337bac0469f762bb58816f3da44bf9b858b0bba9df5de6edca4e59e6506"
+      "size_bytes": 27523,
+      "sha256": "9f59cd5a461ea61f662140f71be290cb3f828a360a763e757173f4f24e91f11b"
     },
     {
       "path": "quality_reports/mechanical_check_en.json",
@@ -592,6 +637,11 @@
       "path": "quality_reports/v3.14_quality_summary.md",
       "size_bytes": 3181,
       "sha256": "6f3f7293b0ffa53e05ed8b285b0d2bcaa734187db651ae90c1f41dafd8ec105e"
+    },
+    {
+      "path": "quality_reports/v3.15_quality_summary.md",
+      "size_bytes": 3893,
+      "sha256": "7dd8fe320016906994002305fd84aed736b9ffd671d6a4255d5c70cffc351b75"
     },
     {
       "path": "quality_reports/v3.6_quality_summary.md",
@@ -765,8 +815,8 @@
     },
     {
       "path": "scripts/SYNC.md",
-      "size_bytes": 6116,
-      "sha256": "7ab35a894842e5e2c04613f3a75ae21e8a48d40627391303cee27447c6a8f1a1"
+      "size_bytes": 6197,
+      "sha256": "6f897ddd04e899e5d34f01dc16bdfc728b864512e24d953178ec2b8874fab9ea"
     },
     {
       "path": "scripts/audit_citation_inventory.py",
@@ -830,8 +880,8 @@
     },
     {
       "path": "scripts/audit_md_alllhrc_package.py",
-      "size_bytes": 15886,
-      "sha256": "a9c68b11daa99a47c097440dea8069c4a248dfb99715489caff58c75f0339748"
+      "size_bytes": 19136,
+      "sha256": "bf4e0e9c687f4fd251159806b14c64b3bb79ef609b3dd0543d46a627ed7e3a5a"
     },
     {
       "path": "scripts/audit_submission_manuscripts.py",

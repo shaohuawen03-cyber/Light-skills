@@ -2,20 +2,20 @@
 
 ## 当前版本
 
-v3.14.0以用户上传的本地三次独立AutoDock Vina汇总表与最优构象复合图为对接权威来源，重建独立分子对接与分子动力学完整报告。对接打分同时报告最优单次亲和力（-8.25 至 -9.60 kcal/mol）与三次成功运行均值±标准差（-8.07 ± 0.16 至 -9.44 ± 0.09 kcal/mol，n = 3）；最优构象排序仍以FLLHTTR为最强（-9.60 kcal/mol），均值排序则以YLSLLQR为最强（-9.44 ± 0.09 kcal/mol），并明示FLLHTTR三次运行离散度最大（-8.77 ± 1.41 kcal/mol）。正文引用打分图、A–F/G–L最优构象图、12肽总览补充图及三套100 ns动力学对比图（图1–6、图S1 / Figures 1–6, Figure S1）。仅保留完整英文、中文版本；两份报告均从“分析方法/Analysis methods”起始，无显示标题、摘要、关键词或引言；分析方法与结果章节不含引文标记，讨论章节系统性引用高分SCI经典文献。六份口腔smORF筛选DOCX逐字节保持不变，且不导入任何对接或动力学结果。
+v3.15.0在核对图件与本地三次Vina/100 ns对比CSV数字一致的前提下，为独立分子对接与分子动力学报告新增简洁版和中间版。三版（简洁/中间/完整）中英各一份，**全部嵌入同一套7幅PNG**（图1打分、图2/图3构象、图S1总览、图4–6三套apo–复合物100 ns对比图），核心数值不改写。对接打分同时报告最优单次亲和力（-8.25 至 -9.60 kcal/mol）与三次成功运行均值±标准差（-8.07 ± 0.16 至 -9.44 ± 0.09 kcal/mol，n = 3）；最优构象排序仍以FLLHTTR为最强（-9.60 kcal/mol），均值排序则以YLSLLQR为最强（-9.44 ± 0.09 kcal/mol），并明示FLLHTTR三次运行离散度最大（-8.77 ± 1.41 kcal/mol）。各报告均从“分析方法/Analysis methods”起始，无显示标题、摘要、关键词或引言；分析方法与结果章节不含引文标记，讨论章节引用高分SCI经典文献。版本对照与图文核对见 `manuscript/md_alllhrc/VERSIONS.md`。六份口腔smORF筛选DOCX逐字节保持不变，且不导入任何对接或动力学结果。
 
 当前交付物均提供彼此分离的英文、中文DOCX及Markdown源文件：
 
 - 筛选完整稿：`manuscript/full/{English,Chinese}.{docx,md}`
 - 筛选中间稿：`manuscript/intermediate/{English,Chinese}.{docx,md}`
 - 筛选简洁稿：`manuscript/concise/{English,Chinese}.{docx,md}`
-- 独立对接与MD完整报告：`manuscript/md_alllhrc/full/{English,Chinese}.{docx,md}`
+- 独立对接与MD完整/中间/简洁报告：`manuscript/md_alllhrc/{full,intermediate,concise}/{English,Chinese}.{docx,md}`（三版均带图；对照见 `manuscript/md_alllhrc/VERSIONS.md`）
 
 筛选稿完整、中间和简洁三个版本均采用无标题、单段非结构式摘要起始；包含Introduction、Materials and methods、Results、Discussion和References，不设独立“统计分析”小节或“结论”章节。完整稿含6个三线表、约6,900个英文正文词和55条参考文献；中间稿含4个三线表、约4,600个英文正文词和40条参考文献；简洁稿含3个三线表、约3,700个英文正文词和22条参考文献。
 
-独立MD报告是明确例外：DOCX直接从`Analysis methods`或`分析方法`开始，仅含分析方法、结果和讨论三个一级章节；无显示标题、摘要、关键词、引言、统计分析章节或独立结论。分析方法与结果章节不含引文标记，讨论部分引用高分SCI文献解释致病肽导致AD的分子机制。每份报告保留3个三线表（表1：12条微肽本地三次Vina最优打分、均值±SD、氢键与PAS位点结合特征表；表2：apo AChE与三种复合物100 ns动力学全套定量指标对比表；表3：证据边界与支持/不支持解释清单，含FLLHTTR三次运行离散度边界）。
+独立MD报告是明确例外：DOCX直接从`Analysis methods`或`分析方法`开始，仅含分析方法、结果和讨论三个一级章节；无显示标题、摘要、关键词、引言、统计分析章节或独立结论。分析方法与结果章节不含引文标记，讨论部分引用高分SCI文献解释致病肽导致AD的分子机制。每份报告保留3个三线表（表1：12条微肽本地三次Vina最优打分、均值±SD、氢键与PAS结合；表2：apo AChE与三种复合物100 ns动力学指标，与图4–6面板对齐；表3：证据边界）。完整版表2为13行，中间版8行，简洁版6行；三版核心数字相同。
 
-六份筛选DOCX不含页眉、页脚、页码、批注或嵌入图像。两份独立对接与MD报告同样不含页眉、页脚、页码或批注，但在正文中嵌入7幅PNG图（图1打分图、图2/图3最优构象、图S1总览、图4–6三套100 ns动力学对比图）；高分辨率原图仍保存在`manuscript/figures/`。全部DOCX使用12磅正文、双倍行距和1英寸页边距。正文普通段落采用480 twip首行缩进，摘要、章节标题、图题、表题、表格和参考文献等非普通正文元素不缩进。所有表格仅保留顶线、表头下横线和底线，不使用竖线、内部正文横线或表头底色。
+六份筛选DOCX不含页眉、页脚、页码、批注或嵌入图像。六份独立对接与MD报告同样不含页眉、页脚、页码或批注，但在正文中嵌入同一套7幅PNG图（图1打分图、图2/图3最优构象、图S1总览、图4–6三套100 ns动力学对比图）；高分辨率原图仍保存在`manuscript/figures/`。全部DOCX使用12磅正文、双倍行距和1英寸页边距。正文普通段落采用480 twip首行缩进，摘要、章节标题、图题、表题、表格和参考文献等非普通正文元素不缩进。所有表格仅保留顶线、表头下横线和底线，不使用竖线、内部正文横线或表头底色。
 
 ## 科学定位
 
@@ -46,7 +46,7 @@ v3.14.0以用户上传的本地三次独立AutoDock Vina汇总表与最优构象
 
 筛选稿DOCX不嵌入图像。独立对接与MD报告在图题前嵌入对应PNG，便于直接阅读；高分辨率原图同时作为独立文件存放。
 
-六份筛选Markdown使用Pandoc格式的BibTeX键并链接`references/references.bib`；标准库DOCX构建器生成连续编号的Vancouver式缓存文字。两份MD报告在方法与结果部分不含引文标记，在讨论部分系统引用高分SCI经典文献并附参考文献列表。
+六份筛选Markdown使用Pandoc格式的BibTeX键并链接`references/references.bib`；标准库DOCX构建器生成连续编号的Vancouver式缓存文字。六份独立对接与MD报告在方法与结果部分不含引文标记，在讨论部分引用高分SCI经典文献并附参考文献列表。
 
 相关Zotero验收工具与说明位于：
 
@@ -64,7 +64,9 @@ for language in English Chinese; do
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input "manuscript/full/${language}.md" --output "manuscript/full/${language}.docx" --title "${language}"
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-23T00:00:00Z --bibliography references/references.bib --input "manuscript/intermediate/${language}.md" --output "manuscript/intermediate/${language}.docx" --title "${language}"
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input "manuscript/concise/${language}.md" --output "manuscript/concise/${language}.docx" --title "${language}"
-  python3 scripts/build_docx_stdlib.py --clean-manuscript --allow-images --timestamp 2026-08-23T00:00:00Z --input "manuscript/md_alllhrc/full/${language}.md" --output "manuscript/md_alllhrc/full/${language}.docx" --title "${language}"
+  for version in full intermediate concise; do
+    python3 scripts/build_docx_stdlib.py --clean-manuscript --allow-images --timestamp 2026-08-23T00:00:00Z --input "manuscript/md_alllhrc/${version}/${language}.md" --output "manuscript/md_alllhrc/${version}/${language}.docx" --title "${language}"
+  done
 done
 ```
 

@@ -5,7 +5,7 @@ This directory contains the submission-oriented version positioned between the e
 - `English.docx` and `English.md`
 - `Chinese.docx` and `Chinese.md`
 
-The package is independent of `manuscript/md_alllhrc/`; no intermediate variant was created for the standalone molecular-dynamics result.
+The package is independent of `manuscript/md_alllhrc/`. Standalone docking/MD intermediate reports live under `manuscript/md_alllhrc/intermediate/` and are not imported here.
 
 ## Content position
 

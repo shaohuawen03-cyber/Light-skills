@@ -1,6 +1,6 @@
 {
-  "schema": "local.md_alllhrc_package_audit.v3",
-  "scope": "Full-only English/Chinese docking and MD reports containing analysis methods, results and discussion; Discussion cites high-impact SCI literature.",
+  "schema": "local.md_alllhrc_package_audit.v5",
+  "scope": "Full, intermediate and concise English/Chinese docking and MD reports; all versions embed the same seven PNG figures and retain the same principal numerics.",
   "source_support_sha256": {
     "source_materials/md_alllhrc/digitized_rmsd_100ns.csv": {
       "expected": "b34c48db440f5cddd2a782e12713172359edc23c737b14726c602cfef32b565a",
@@ -69,15 +69,47 @@
       "matches": true
     }
   },
-  "cited_figure_files": {
-    "manuscript/figures/fig5_docking_scores.svg": true,
-    "manuscript/figures/fig5_docking_scores.png": true,
-    "manuscript/figures/fig_docking_poses_A_F.png": true,
-    "manuscript/figures/fig_docking_poses_G_L.png": true,
-    "manuscript/figures/fig_docking_poses_12_combined.png": true,
-    "manuscript/figures/fig_compare_ache_vs_alllhrc.png": true,
-    "manuscript/figures/fig_compare_ache_vs_fllhttr.png": true,
-    "manuscript/figures/fig_compare_ache_vs_ylsllqr.png": true
+  "cited_figure_sha256": {
+    "manuscript/figures/fig5_docking_scores.png": {
+      "expected": "9762e4a1f892894c57d216168869d47d3d3e6670839024264a8dbc73077c4ff3",
+      "matches": true
+    },
+    "manuscript/figures/fig_docking_poses_A_F.png": {
+      "expected": "eaffbea2bef9f40e6e2aeaed8aa8c7f4d6da30775dc2452a0a4c31fbaef7344b",
+      "matches": true
+    },
+    "manuscript/figures/fig_docking_poses_G_L.png": {
+      "expected": "fe1c6f48fe1f00d0d91e41a500858afe4f579d92f6194ff082079eb30eff66a5",
+      "matches": true
+    },
+    "manuscript/figures/fig_docking_poses_12_combined.png": {
+      "expected": "60d6947a5ebbdbe8f7787ec10cfc78b99cd974a4452d409b08f6a9b0aada6ed9",
+      "matches": true
+    },
+    "manuscript/figures/fig_compare_ache_vs_alllhrc.png": {
+      "expected": "01a82f635c6d1f779166a458731d08b8c00dbbd6a0b9e3bde058185ca8a6172a",
+      "matches": true
+    },
+    "manuscript/figures/fig_compare_ache_vs_fllhttr.png": {
+      "expected": "16df70af688e2ff1355cd3bb446be2fb22625fa609edd975a50e6201ee3e95ed",
+      "matches": true
+    },
+    "manuscript/figures/fig_compare_ache_vs_ylsllqr.png": {
+      "expected": "db214b1c62000596367e25912bd67b3068d74803d0043b1c5a479e464e6cda7b",
+      "matches": true
+    }
+  },
+  "length_order": {
+    "english_word_counts": {
+      "full": 5761,
+      "intermediate": 2229,
+      "concise": 1373
+    },
+    "chinese_character_counts": {
+      "full": 23040,
+      "intermediate": 9217,
+      "concise": 6055
+    }
   },
   "records": {
     "full/English": {
@@ -277,17 +309,414 @@
         "docx_is_byte_reproducible": true
       },
       "verdict": "PASS"
+    },
+    "intermediate/English": {
+      "label": "intermediate/English",
+      "markdown": "manuscript/md_alllhrc/intermediate/English.md",
+      "docx": "manuscript/md_alllhrc/intermediate/English.docx",
+      "markdown_sha256": "b674b5f9ced4d9c2d7623555bd0a032106877c21176d06d40e681d9c808885ea",
+      "docx_sha256": "57f265bbc6eb07e6675537abc1b47dc59fa2eb0c2f5d6f871ceee2417aaec3a4",
+      "body_word_count": 2229,
+      "body_character_count": 14810,
+      "table_data_row_counts": [
+        12,
+        8,
+        5
+      ],
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png",
+        "word/media/image4.png",
+        "word/media/image5.png",
+        "word/media/image6.png",
+        "word/media/image7.png"
+      ],
+      "drawings": 7,
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "rebuild_error": "",
+      "checks": {
+        "markdown_begins_with_analysis_methods_and_has_no_visible_title": true,
+        "only_analysis_methods_results_and_discussion_sections_remain": true,
+        "abstract_keywords_introduction_are_absent": true,
+        "methods_and_results_contain_no_citations": true,
+        "discussion_cites_high_impact_sci_literature": true,
+        "analysis_methods_are_detailed": true,
+        "docking_covers_all_12_candidate_peptides": true,
+        "pas_site_docking_analysis_is_explicit": true,
+        "md_covers_apo_and_three_complexes": true,
+        "all_principal_numeric_results_are_retained": true,
+        "figures_are_cited_in_text": true,
+        "markdown_embeds_seven_png_figures": true,
+        "binding_and_function_boundaries_are_explicit": true,
+        "three_markdown_tables_are_retained": true,
+        "docx_zip_crc_is_valid": true,
+        "docx_visible_content_starts_with_analysis_methods": true,
+        "docx_has_only_analysis_methods_results_and_discussion_headings": true,
+        "docx_core_title_is_neutral": true,
+        "docx_has_no_header_footer_page_or_comments": true,
+        "docx_embeds_seven_figures": true,
+        "docx_uses_journal_body_style_and_indent": true,
+        "docx_has_one_inch_margins": true,
+        "docx_has_three_three_line_tables": true,
+        "docx_is_byte_reproducible": true
+      },
+      "verdict": "PASS"
+    },
+    "intermediate/Chinese": {
+      "label": "intermediate/Chinese",
+      "markdown": "manuscript/md_alllhrc/intermediate/Chinese.md",
+      "docx": "manuscript/md_alllhrc/intermediate/Chinese.docx",
+      "markdown_sha256": "e14a6662ab205d5d319b775e1d84e557d700c12fe8edd2e8d419feedb5d61c65",
+      "docx_sha256": "269820a7513db3cbeca7d5c8611e4af7ad61e8ccbed6f21567ec84043a9fad8b",
+      "body_word_count": 1144,
+      "body_character_count": 9217,
+      "table_data_row_counts": [
+        12,
+        8,
+        5
+      ],
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png",
+        "word/media/image4.png",
+        "word/media/image5.png",
+        "word/media/image6.png",
+        "word/media/image7.png"
+      ],
+      "drawings": 7,
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "rebuild_error": "",
+      "checks": {
+        "markdown_begins_with_analysis_methods_and_has_no_visible_title": true,
+        "only_analysis_methods_results_and_discussion_sections_remain": true,
+        "abstract_keywords_introduction_are_absent": true,
+        "methods_and_results_contain_no_citations": true,
+        "discussion_cites_high_impact_sci_literature": true,
+        "analysis_methods_are_detailed": true,
+        "docking_covers_all_12_candidate_peptides": true,
+        "pas_site_docking_analysis_is_explicit": true,
+        "md_covers_apo_and_three_complexes": true,
+        "all_principal_numeric_results_are_retained": true,
+        "figures_are_cited_in_text": true,
+        "markdown_embeds_seven_png_figures": true,
+        "binding_and_function_boundaries_are_explicit": true,
+        "three_markdown_tables_are_retained": true,
+        "docx_zip_crc_is_valid": true,
+        "docx_visible_content_starts_with_analysis_methods": true,
+        "docx_has_only_analysis_methods_results_and_discussion_headings": true,
+        "docx_core_title_is_neutral": true,
+        "docx_has_no_header_footer_page_or_comments": true,
+        "docx_embeds_seven_figures": true,
+        "docx_uses_journal_body_style_and_indent": true,
+        "docx_has_one_inch_margins": true,
+        "docx_has_three_three_line_tables": true,
+        "docx_is_byte_reproducible": true
+      },
+      "verdict": "PASS"
+    },
+    "concise/English": {
+      "label": "concise/English",
+      "markdown": "manuscript/md_alllhrc/concise/English.md",
+      "docx": "manuscript/md_alllhrc/concise/English.docx",
+      "markdown_sha256": "0251ef6adb218ee3b704bfdc36b3697b98857cc6324a649f656badcc64dee44c",
+      "docx_sha256": "bde8c41fdc2fe9202816bbdd52a75cf949604ce93f8170e325758071e6a2fe23",
+      "body_word_count": 1373,
+      "body_character_count": 8583,
+      "table_data_row_counts": [
+        12,
+        6,
+        4
+      ],
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png",
+        "word/media/image4.png",
+        "word/media/image5.png",
+        "word/media/image6.png",
+        "word/media/image7.png"
+      ],
+      "drawings": 7,
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "rebuild_error": "",
+      "checks": {
+        "markdown_begins_with_analysis_methods_and_has_no_visible_title": true,
+        "only_analysis_methods_results_and_discussion_sections_remain": true,
+        "abstract_keywords_introduction_are_absent": true,
+        "methods_and_results_contain_no_citations": true,
+        "discussion_cites_high_impact_sci_literature": true,
+        "analysis_methods_are_detailed": true,
+        "docking_covers_all_12_candidate_peptides": true,
+        "pas_site_docking_analysis_is_explicit": true,
+        "md_covers_apo_and_three_complexes": true,
+        "all_principal_numeric_results_are_retained": true,
+        "figures_are_cited_in_text": true,
+        "markdown_embeds_seven_png_figures": true,
+        "binding_and_function_boundaries_are_explicit": true,
+        "three_markdown_tables_are_retained": true,
+        "docx_zip_crc_is_valid": true,
+        "docx_visible_content_starts_with_analysis_methods": true,
+        "docx_has_only_analysis_methods_results_and_discussion_headings": true,
+        "docx_core_title_is_neutral": true,
+        "docx_has_no_header_footer_page_or_comments": true,
+        "docx_embeds_seven_figures": true,
+        "docx_uses_journal_body_style_and_indent": true,
+        "docx_has_one_inch_margins": true,
+        "docx_has_three_three_line_tables": true,
+        "docx_is_byte_reproducible": true
+      },
+      "verdict": "PASS"
+    },
+    "concise/Chinese": {
+      "label": "concise/Chinese",
+      "markdown": "manuscript/md_alllhrc/concise/Chinese.md",
+      "docx": "manuscript/md_alllhrc/concise/Chinese.docx",
+      "markdown_sha256": "905ec0c0e38847d61bd827b0dcce37e040b3dc28292a29e145a22c0e1ed91967",
+      "docx_sha256": "3492d1e7ba62ce872730a564ed35a05fdbdd472b57b87edf118f3fe34136238d",
+      "body_word_count": 844,
+      "body_character_count": 6055,
+      "table_data_row_counts": [
+        12,
+        6,
+        4
+      ],
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png",
+        "word/media/image4.png",
+        "word/media/image5.png",
+        "word/media/image6.png",
+        "word/media/image7.png"
+      ],
+      "drawings": 7,
+      "table_audits": [
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        },
+        {
+          "table_border_values": {
+            "top": "single",
+            "left": "nil",
+            "bottom": "single",
+            "right": "nil",
+            "insideH": "nil",
+            "insideV": "nil"
+          },
+          "top_and_bottom_rules_present": true,
+          "vertical_and_body_rules_absent": true,
+          "header_bottom_rule_present_in_every_cell": true,
+          "body_cells_have_no_overriding_borders": true,
+          "shading_absent": true
+        }
+      ],
+      "rebuild_error": "",
+      "checks": {
+        "markdown_begins_with_analysis_methods_and_has_no_visible_title": true,
+        "only_analysis_methods_results_and_discussion_sections_remain": true,
+        "abstract_keywords_introduction_are_absent": true,
+        "methods_and_results_contain_no_citations": true,
+        "discussion_cites_high_impact_sci_literature": true,
+        "analysis_methods_are_detailed": true,
+        "docking_covers_all_12_candidate_peptides": true,
+        "pas_site_docking_analysis_is_explicit": true,
+        "md_covers_apo_and_three_complexes": true,
+        "all_principal_numeric_results_are_retained": true,
+        "figures_are_cited_in_text": true,
+        "markdown_embeds_seven_png_figures": true,
+        "binding_and_function_boundaries_are_explicit": true,
+        "three_markdown_tables_are_retained": true,
+        "docx_zip_crc_is_valid": true,
+        "docx_visible_content_starts_with_analysis_methods": true,
+        "docx_has_only_analysis_methods_results_and_discussion_headings": true,
+        "docx_core_title_is_neutral": true,
+        "docx_has_no_header_footer_page_or_comments": true,
+        "docx_embeds_seven_figures": true,
+        "docx_uses_journal_body_style_and_indent": true,
+        "docx_has_one_inch_margins": true,
+        "docx_has_three_three_line_tables": true,
+        "docx_is_byte_reproducible": true
+      },
+      "verdict": "PASS"
     }
   },
   "package_checks": {
-    "only_two_full_language_reports_are_delivered": true,
-    "all_full_language_reports_pass": true,
-    "md_concise_directory_is_absent": true,
+    "six_language_reports_are_delivered": true,
+    "all_language_reports_pass": true,
+    "length_order_is_full_then_intermediate_then_concise": true,
     "both_reports_have_no_abstract_or_introduction": true,
     "all_source_support_hashes_match": true,
     "all_six_screening_docx_files_are_unchanged": true,
-    "cited_figure_files_are_present": true,
-    "both_docx_files_embed_seven_figures": true
+    "cited_figure_files_match_frozen_sha256": true,
+    "all_docx_files_embed_seven_figures": true,
+    "all_versions_retain_principal_numerics": true
   },
   "citation_mode": "Discussion section cites high-impact SCI literature; Analysis methods and Results contain no citation markup.",
   "verdict": "PASS"
