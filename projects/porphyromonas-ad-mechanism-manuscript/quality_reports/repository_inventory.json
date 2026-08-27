@@ -4,24 +4,24 @@
     "quality_reports/repository_inventory.json (self-referential output)",
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
-  "total_files": 164,
-  "total_bytes": 4331979,
+  "total_files": 180,
+  "total_bytes": 10064159,
   "by_top_level_group": {
     "evidence": {
       "files": 18,
       "bytes": 573144
     },
     "manuscript": {
-      "files": 33,
-      "bytes": 2068590
+      "files": 42,
+      "bytes": 7762857
     },
     "project_root": {
       "files": 4,
-      "bytes": 49182
+      "bytes": 54577
     },
     "quality_reports": {
-      "files": 39,
-      "bytes": 194712
+      "files": 40,
+      "bytes": 201630
     },
     "references": {
       "files": 4,
@@ -37,11 +37,11 @@
     },
     "scripts": {
       "files": 28,
-      "bytes": 176833
+      "bytes": 178422
     },
     "source_materials": {
-      "files": 7,
-      "bytes": 1119828
+      "files": 13,
+      "bytes": 1143839
     },
     "submission": {
       "files": 6,
@@ -51,13 +51,13 @@
   "files": [
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
-      "size_bytes": 16445,
-      "sha256": "7c45d996db198891007721bae7e293e48618e72f05f6acf247e5c37ea1e776d7"
+      "size_bytes": 17605,
+      "sha256": "7b3293c8d8cdee630eaeb4f791a75441320ae03828918adecf7e023dc2f56b3a"
     },
     {
       "path": "README.md",
-      "size_bytes": 7379,
-      "sha256": "d0eb60d3d9d390757c764c6c7efebe77482eedb71ca3d39969ef7c7401d264a0"
+      "size_bytes": 9284,
+      "sha256": "fe09f2acd569ac93c438795385f61d24bbb37d8735cc7b0caa886e4e27baa203"
     },
     {
       "path": "SHA256SUMS.txt",
@@ -66,8 +66,8 @@
     },
     {
       "path": "VERSION_HISTORY.md",
-      "size_bytes": 24662,
-      "sha256": "9df9eb36182687b9764aa6dee64ddb62f25f9146852279fae08c3197d2ac097e"
+      "size_bytes": 26992,
+      "sha256": "a9afc1f9468e1336699620a51d82392c028633fd89c35a600fe670c937fc8ae3"
     },
     {
       "path": "evidence/.gitkeep",
@@ -215,6 +215,51 @@
       "sha256": "7931f14e8e36fef8c5cd6e0b9db8c9465b9bfb3de91b8ee93de33ee76db7f701"
     },
     {
+      "path": "manuscript/figures/fig_compare_ache_vs_alllhrc.pdf",
+      "size_bytes": 268980,
+      "sha256": "2e11fc5638e1d83b7f7db0f12260d2882bad1c5c5f24eb3bef6060122257fffe"
+    },
+    {
+      "path": "manuscript/figures/fig_compare_ache_vs_alllhrc.png",
+      "size_bytes": 905253,
+      "sha256": "01a82f635c6d1f779166a458731d08b8c00dbbd6a0b9e3bde058185ca8a6172a"
+    },
+    {
+      "path": "manuscript/figures/fig_compare_ache_vs_alllhrc.svg",
+      "size_bytes": 705734,
+      "sha256": "7aef6b755769726f81bb6ffde28956dfd182d255a14f565ec979c2a545bd66f1"
+    },
+    {
+      "path": "manuscript/figures/fig_compare_ache_vs_fllhttr.pdf",
+      "size_bytes": 270860,
+      "sha256": "2704398a098b4f60f78cdea6ab199863bb8adcbfdd87830b2fd7991393e62f60"
+    },
+    {
+      "path": "manuscript/figures/fig_compare_ache_vs_fllhttr.png",
+      "size_bytes": 903830,
+      "sha256": "16df70af688e2ff1355cd3bb446be2fb22625fa609edd975a50e6201ee3e95ed"
+    },
+    {
+      "path": "manuscript/figures/fig_compare_ache_vs_fllhttr.svg",
+      "size_bytes": 708782,
+      "sha256": "6805a1efe4d5466113029040da1f6fd65e6f4e9d1da76df5d41675aa341e1f7d"
+    },
+    {
+      "path": "manuscript/figures/fig_compare_ache_vs_ylsllqr.pdf",
+      "size_bytes": 270921,
+      "sha256": "14481766851ddac5c2b6e28417025945bccb399fcaa5eb577565d527a36328f8"
+    },
+    {
+      "path": "manuscript/figures/fig_compare_ache_vs_ylsllqr.png",
+      "size_bytes": 877546,
+      "sha256": "db214b1c62000596367e25912bd67b3068d74803d0043b1c5a479e464e6cda7b"
+    },
+    {
+      "path": "manuscript/figures/fig_compare_ache_vs_ylsllqr.svg",
+      "size_bytes": 710206,
+      "sha256": "c1cc9899dad2e290d4c6fc0aed1ce18035c2761658e54569d566d49754f4c611"
+    },
+    {
       "path": "manuscript/figures/prioritization_funnel.png",
       "size_bytes": 376757,
       "sha256": "841addbcf1b5398bf657a49aa203d2196348a53a29b1db145c29a642018026fe"
@@ -291,28 +336,28 @@
     },
     {
       "path": "manuscript/md_alllhrc/README.md",
-      "size_bytes": 3465,
-      "sha256": "af3e15a46b325da3d5197c93dcef9fab6fab4498d3254dea8ded55abe6a1582b"
+      "size_bytes": 3960,
+      "sha256": "cb978d4d62ed0ceb9e15c5fec6db95a6fa5de10db3be0f5e71103ed871ebcacb"
     },
     {
       "path": "manuscript/md_alllhrc/full/Chinese.docx",
-      "size_bytes": 10919,
-      "sha256": "c0cac75d82f9224b8bed580147e2d31518c48282c60ab9785f0d281dcd350011"
+      "size_bytes": 25218,
+      "sha256": "c91c000e64382084be2a0378a01b363e595182d04f0931f0938cf668aa928695"
     },
     {
       "path": "manuscript/md_alllhrc/full/Chinese.md",
-      "size_bytes": 12265,
-      "sha256": "bc62f6c5aaca222f4c8ec3c569d6ad9e2e9958480710180d6fcab989a8ddfbe6"
+      "size_bytes": 39097,
+      "sha256": "2661df3778ebc3f741b1dfdb7a55480f8d34d95be4791b3fbfbd9da6ae8f6513"
     },
     {
       "path": "manuscript/md_alllhrc/full/English.docx",
-      "size_bytes": 11011,
-      "sha256": "822e27efd48120362dca514675ef430b74b34abc29f855bed272055031bffd76"
+      "size_bytes": 21123,
+      "sha256": "b31b33741e5d3b97b4cc7875450321851a1c1b97f4ebd33b836839593cb45652"
     },
     {
       "path": "manuscript/md_alllhrc/full/English.md",
-      "size_bytes": 15926,
-      "sha256": "7abb00c5319ee763d43830193b967c172bcb36f58def21c860acb9047e5f30ec"
+      "size_bytes": 36343,
+      "sha256": "d12908af6887126ec2f339b5cec0f555eeebc90e71ecea41534d9ccd1f560b71"
     },
     {
       "path": "manuscript/supplementary_tables_bilingual.docx",
@@ -431,8 +476,8 @@
     },
     {
       "path": "quality_reports/md_alllhrc_package_audit.json",
-      "size_bytes": 8012,
-      "sha256": "423d92915307bf52c67d81ecbe99e9aa44e6be1d24b30bd8d6fd88eacf320328"
+      "size_bytes": 10012,
+      "sha256": "1bf6e55ab334b17fd2c40025c2991a370db776dc21260876748a718e1a4eedab"
     },
     {
       "path": "quality_reports/mechanical_check_en.json",
@@ -493,6 +538,11 @@
       "path": "quality_reports/v3.12_quality_summary.md",
       "size_bytes": 3405,
       "sha256": "2b04e2b76c94aac574081645aca4078e0996613c33eb7d7b89705a63ac5cc3ac"
+    },
+    {
+      "path": "quality_reports/v3.13_quality_summary.md",
+      "size_bytes": 4918,
+      "sha256": "0e5f2c1e92bd97fae0a77017e22eb6c3809f524562946625b12381941dee7f0d"
     },
     {
       "path": "quality_reports/v3.6_quality_summary.md",
@@ -666,8 +716,8 @@
     },
     {
       "path": "scripts/SYNC.md",
-      "size_bytes": 4955,
-      "sha256": "b941f0abbfa757146027b331b110edcd87b67793d6633d9ea6b808f3349e25a0"
+      "size_bytes": 4923,
+      "sha256": "8dd66809862876d9dbf0160dc67275e438ed31886fc24d9a70c66625062f1c64"
     },
     {
       "path": "scripts/audit_citation_inventory.py",
@@ -726,8 +776,8 @@
     },
     {
       "path": "scripts/audit_md_alllhrc_package.py",
-      "size_bytes": 13039,
-      "sha256": "b79a31def10226a619d1725d7aa7a7a6e1cef760f21e21105d4feb5123c83027"
+      "size_bytes": 14660,
+      "sha256": "d073f85d83d4f687e9f539071aa9bcf7edd99a9da58cb9cee22d9acd36a7f4d5"
     },
     {
       "path": "scripts/audit_submission_manuscripts.py",
@@ -818,6 +868,36 @@
       "path": "source_materials/md_alllhrc/peptide_rmsd_jump_diagnosis.txt",
       "size_bytes": 2614,
       "sha256": "43f3f84ae57b1f037e80f4aed3d9cb3614a0df92f64a7e3c92c2972291f6f3f3"
+    },
+    {
+      "path": "source_materials/md_results/RESULTS_ANALYSIS_v1.md",
+      "size_bytes": 11709,
+      "sha256": "2678919e6033430ad5b556372e7dc96bd9f0fa83d34f60c61aca3b71543608f2"
+    },
+    {
+      "path": "source_materials/md_results/SCI_Methods_GROMACS_MD_Simulation.md",
+      "size_bytes": 8435,
+      "sha256": "9d1be85cd0afaa3cc859ac699c91c5b556ff92f9b61cfe968232e696f4402194"
+    },
+    {
+      "path": "source_materials/md_results/compare_summary_alllhrc.csv",
+      "size_bytes": 720,
+      "sha256": "aaca2ad9611d20e0c1d1cc2fd318f146964680cc654bd69752beda287b5df5d8"
+    },
+    {
+      "path": "source_materials/md_results/compare_summary_fllhttr.csv",
+      "size_bytes": 720,
+      "sha256": "c48cee16a72c8381cf4d8e6cdcfa21501467962514ee831dba2c4fa0ee96fdf6"
+    },
+    {
+      "path": "source_materials/md_results/compare_summary_ylsllqr.csv",
+      "size_bytes": 722,
+      "sha256": "db561014757d8bfd708e6e8c5aa32f70a614813d315197a02cde491828876f05"
+    },
+    {
+      "path": "source_materials/md_results/docking_12peptides_summary.csv",
+      "size_bytes": 1705,
+      "sha256": "055acade7cfba02ac23ff97add253aba0e8fa4882cc4a5d6d8a26bbd37158dcc"
     },
     {
       "path": "source_materials/乙酰胆碱酯酶-β-淀粉样肽复合物分子动力学模拟_中文翻译.docx",

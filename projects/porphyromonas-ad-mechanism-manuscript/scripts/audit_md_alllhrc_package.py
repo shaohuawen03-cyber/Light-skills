@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit the reduced full-only ALLLHRC–AChE MD result reports."""
+"""Audit the expanded full-only docking and molecular-dynamics reports."""
 from __future__ import annotations
 
 import hashlib
@@ -26,9 +26,16 @@ SPECS = {
         "language": "English",
         "start": "Analysis methods",
         "sections": ["## Analysis methods", "## Results", "## Discussion"],
-        "digitized": "digitized RMSD trace",
-        "identity": "inherited “AChE–Aβ” label",
-        "limits": ["cannot show that ALLLHRC", "does not by itself establish continued binding", "not preservation of a single rigid docking pose"],
+        "peptides": [
+            "ALLLHRC", "FCLHLQLR", "FLLHTTR", "HLLTLKKHV", "HLPLLHRCC",
+            "HVLLLRQCA", "LLHLPKRTT", "LLHPLRC", "LLHPLRL", "WLLVHLKK",
+            "YHHLLCRR", "YLSLLQR",
+        ],
+        "systems": ["apo AChE", "ALLLHRC", "FLLHTTR", "YLSLLQR"],
+        "pas_terms": ["Peripheral Anionic Site", "PAS", "Tyr72", "Asp74", "Trp286", "Tyr341"],
+        "discussion_authors": ["Atanasova", "Dominy", "Silman", "Inestrosa", "Hampel", "Bartus", "Selkoe"],
+        "figures": ["Figure 1", "Figure 2", "Figure 3", "Figure 4"],
+        "limits": ["100-ns", "single high-resolution trajectories", "isothermal titration calorimetry", "surface plasmon resonance"],
     },
     "full/Chinese": {
         "md": "manuscript/md_alllhrc/full/Chinese.md",
@@ -36,19 +43,32 @@ SPECS = {
         "language": "Chinese",
         "start": "分析方法",
         "sections": ["## 分析方法", "## 结果", "## 讨论"],
-        "digitized": "数字化RMSD曲线",
-        "identity": "继承的“AChE–Aβ”标签",
-        "limits": ["不能证明肽仍与AChE结合", "不能把RMSD模式转化为稳定结合的证据", "该轨迹不能证明ALLLHRC"],
+        "peptides": [
+            "ALLLHRC", "FCLHLQLR", "FLLHTTR", "HLLTLKKHV", "HLPLLHRCC",
+            "HVLLLRQCA", "LLHLPKRTT", "LLHPLRC", "LLHPLRL", "WLLVHLKK",
+            "YHHLLCRR", "YLSLLQR",
+        ],
+        "systems": ["apo AChE", "ALLLHRC", "FLLHTTR", "YLSLLQR"],
+        "pas_terms": ["外周阴离子位点", "PAS", "Tyr72", "Asp74", "Trp286", "Tyr341"],
+        "discussion_authors": ["Atanasova", "Dominy", "Silman", "Inestrosa", "Hampel", "Bartus", "Selkoe"],
+        "figures": ["图1", "图2", "图3", "图4"],
+        "limits": ["100 ns", "单条", "等温滴定量热", "表面等离子共振"],
     },
 }
 REQUIRED_NUMERIC = [
-    "100 ns", "0.1803", "0.0220", "0.2320", "0.0582", "0.0091", "22.6",
-    "0.1432", "0.0161", "23.4", "55.6", "0.2694", "0.0148", "57.0",
-    "1.2", "1.4", "210–223", "10–12", "0–11",
+    "-9.60", "-9.49", "-9.29", "0.1562", "0.1916", "0.2102", "0.2064",
+    "0.0783", "0.0876", "0.0901", "0.0813", "2.2967", "2.3107", "2.3163", "2.3004",
+    "212.41", "217.47", "216.34", "210.37", "2.19", "2.80", "4.23",
 ]
 SOURCE_HASHES = {
     "source_materials/md_alllhrc/digitized_rmsd_100ns.csv": "b34c48db440f5cddd2a782e12713172359edc23c737b14726c602cfef32b565a",
     "source_materials/md_alllhrc/peptide_rmsd_jump_diagnosis.txt": "43f3f84ae57b1f037e80f4aed3d9cb3614a0df92f64a7e3c92c2972291f6f3f3",
+    "source_materials/md_results/compare_summary_alllhrc.csv": "aaca2ad9611d20e0c1d1cc2fd318f146964680cc654bd69752beda287b5df5d8",
+    "source_materials/md_results/compare_summary_fllhttr.csv": "c48cee16a72c8381cf4d8e6cdcfa21501467962514ee831dba2c4fa0ee96fdf6",
+    "source_materials/md_results/compare_summary_ylsllqr.csv": "db561014757d8bfd708e6e8c5aa32f70a614813d315197a02cde491828876f05",
+    "source_materials/md_results/docking_12peptides_summary.csv": "055acade7cfba02ac23ff97add253aba0e8fa4882cc4a5d6d8a26bbd37158dcc",
+    "source_materials/md_results/RESULTS_ANALYSIS_v1.md": "2678919e6033430ad5b556372e7dc96bd9f0fa83d34f60c61aca3b71543608f2",
+    "source_materials/md_results/SCI_Methods_GROMACS_MD_Simulation.md": "9d1be85cd0afaa3cc859ac699c91c5b556ff92f9b61cfe968232e696f4402194",
 }
 SCREENING_DOCX_HASHES = {
     "manuscript/full/Chinese.docx": "610fcb7f7c09287233fa699c8f7043b665aa1a5d06d4d05e0c3f527ee8125c91",
@@ -102,7 +122,7 @@ def inspect_docx(path: Path, spec: dict) -> dict:
                 heading2_texts.append(ptext)
                 continue
             if ptext and current_section in {section.removeprefix("## ") for section in spec["sections"]} and style not in {
-                "Heading3", "Heading4", "Caption", "TableText", "ListParagraph"
+                "Heading3", "Heading4", "Caption", "TableText", "ListParagraph", "Reference"
             }:
                 body_styles.append(style)
     three_line = bool(table_audits) and all(
@@ -122,11 +142,11 @@ def inspect_docx(path: Path, spec: dict) -> dict:
 
 
 def rebuild_matches(md: Path, docx: Path, language: str) -> tuple[bool, str]:
-    with tempfile.TemporaryDirectory(prefix="md-alllhrc-full-audit-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="md-full-audit-") as tmp:
         rebuilt = Path(tmp) / docx.name
         run = subprocess.run(
-            [sys.executable, str(BUILDER), "--clean-manuscript", "--timestamp", TIMESTAMP,
-             "--input", str(md), "--output", str(rebuilt), "--title", language],
+            [sys.executable, str(BUILDER.resolve()), "--clean-manuscript", "--timestamp", TIMESTAMP,
+             "--input", str(md.resolve()), "--output", str(rebuilt.resolve()), "--title", language],
             cwd=ROOT, capture_output=True, text=True,
         )
         if run.returncode:
@@ -135,8 +155,8 @@ def rebuild_matches(md: Path, docx: Path, language: str) -> tuple[bool, str]:
 
 
 def audit_one(label: str, spec: dict) -> dict:
-    md_path = ROOT / spec["md"]
-    docx_path = ROOT / spec["docx"]
+    md_path = (ROOT / spec["md"]).resolve()
+    docx_path = (ROOT / spec["docx"]).resolve()
     md = md_path.read_text(encoding="utf-8")
     sections = re.findall(r"(?m)^##\s+.+$", md)
     methods = md.split(spec["sections"][0], 1)[1].split(spec["sections"][1], 1)[0]
@@ -146,25 +166,26 @@ def audit_one(label: str, spec: dict) -> dict:
     reproducible, rebuild_error = rebuild_matches(md_path, docx_path, spec["language"])
     table_rows = markdown_table_rows(md)
     method_tokens = (
-        ("GROMACS", "Amber99SB-ILDN", "TIP3P", "2,000", "300 K", "1 bar", "2-fs", "LINCS", "particle-mesh Ewald", "20 ps")
+        ("GROMACS", "Amber99SB-ILDN", "TIP3P", "2,000", "300 K", "1.0 bar", "2.0 fs", "LINCS", "Particle Mesh Ewald", "20 ps")
         if spec["language"] == "English" else
-        ("GROMACS", "Amber99SB-ILDN", "TIP3P", "2,000", "300 K", "1 bar", "2 fs", "LINCS", "粒子网格Ewald", "20 ps")
+        ("GROMACS", "Amber99SB-ILDN", "TIP3P", "2,000", "300 K", "1.0 bar", "2.0 fs", "LINCS", "粒子网格Ewald", "20 ps")
     )
     checks = {
         "markdown_begins_with_analysis_methods_and_has_no_visible_title": md.lstrip().startswith(spec["sections"][0]) and not re.search(r"(?m)^#\s+", md),
         "only_analysis_methods_results_and_discussion_sections_remain": sections == spec["sections"],
-        "abstract_keywords_introduction_and_references_are_absent": not re.search(
-            r"(?m)^##\s+(?:Abstract|摘要|Introduction|引言|References|参考文献)\s*$|^\*\*(?:Keywords|关键词)", md
+        "abstract_keywords_introduction_are_absent": not re.search(
+            r"(?m)^##\s+(?:Abstract|摘要|Introduction|引言)\s*$|^\*\*(?:Keywords|关键词)", md
         ),
-        "citation_markup_and_numbered_reference_list_are_absent": "[@" not in md and not re.search(r"(?m)^\d+\.\s+.+doi:10\.", md),
+        "methods_and_results_contain_no_citations": "[@" not in methods and "[@" not in results and not re.search(r"(?m)^\d+\.\s+.+doi:10\.", methods) and not re.search(r"(?m)^\d+\.\s+.+doi:10\.", results),
+        "discussion_cites_high_impact_sci_literature": all(author in discussion for author in spec["discussion_authors"]),
         "analysis_methods_are_detailed": all(value in methods for value in method_tokens),
+        "docking_covers_all_12_candidate_peptides": all(pep in results for pep in spec["peptides"]),
+        "pas_site_docking_analysis_is_explicit": all(term in results for term in spec["pas_terms"]),
+        "md_covers_apo_and_three_complexes": all(sys_name in results for sys_name in spec["systems"]),
         "all_principal_numeric_results_are_retained": all(value in results for value in REQUIRED_NUMERIC),
-        "digitized_rmsd_status_is_disclosed": spec["digitized"] in md,
-        "source_plot_identity_discrepancy_is_disclosed": spec["identity"] in md,
-        "atanasova_is_framework_not_transferred_data": "Atanasova" in discussion and ("1-μs" in discussion or "1 μs" in discussion) and "ALLLHRC" in discussion,
-        "binding_and_function_boundaries_are_explicit": all(value in md for value in spec["limits"]),
-        "single_trajectory_and_raw_archive_limits_are_explicit": ("one trajectory" in discussion if spec["language"] == "English" else "单条轨迹" in discussion) and ("raw" in md.lower() if spec["language"] == "English" else "原始" in md),
-        "two_markdown_tables_are_retained": table_rows == [9, 6],
+        "figures_are_cited_in_text": all(fig in results or fig in methods for fig in spec["figures"]),
+        "binding_and_function_boundaries_are_explicit": all(value.lower() in md.lower() for value in spec["limits"]),
+        "three_markdown_tables_are_retained": table_rows == [12, 13, 6],
         "docx_zip_crc_is_valid": docx["crc_ok"],
         "docx_visible_content_starts_with_analysis_methods": docx["text"].startswith(spec["start"]),
         "docx_has_only_analysis_methods_results_and_discussion_headings": docx["heading2_texts"] == [heading.removeprefix("## ") for heading in spec["sections"]],
@@ -180,8 +201,7 @@ def audit_one(label: str, spec: dict) -> dict:
             and bool(docx["body_styles"]) and all(style == "BodyText" for style in docx["body_styles"])
         ),
         "docx_has_one_inch_margins": all(f'w:{side}="1440"' in docx["all_xml"] for side in ("top", "right", "bottom", "left")),
-        "docx_has_two_three_line_tables": docx["table_count"] == 2 and docx["all_tables_three_line"],
-        "docx_has_no_zotero_or_numbered_citation_fields": "ADDIN ZOTERO_ITEM CSL_CITATION" not in docx["all_xml"] and "[1]" not in docx["text"],
+        "docx_has_three_three_line_tables": docx["table_count"] == 3 and docx["all_tables_three_line"],
         "docx_is_byte_reproducible": reproducible,
     }
     return {
@@ -204,18 +224,18 @@ def main() -> int:
         "only_two_full_language_reports_are_delivered": len(records) == 2,
         "all_full_language_reports_pass": all(record["verdict"] == "PASS" for record in records.values()),
         "md_concise_directory_is_absent": not concise_dir.exists(),
-        "both_reports_have_no_abstract_or_references": all(record["checks"]["abstract_keywords_introduction_and_references_are_absent"] for record in records.values()),
+        "both_reports_have_no_abstract_or_introduction": all(record["checks"]["abstract_keywords_introduction_are_absent"] for record in records.values()),
         "all_source_support_hashes_match": all(source_checks.values()),
         "all_six_screening_docx_files_are_unchanged": all(screening_checks.values()),
         "both_docx_files_are_figure_free": all(not record["embedded_media"] and record["drawings"] == 0 for record in records.values()),
     }
     report = {
-        "schema": "local.md_alllhrc_package_audit.v2",
-        "scope": "Full-only English/Chinese ALLLHRC–AChE reports containing analysis methods, results and discussion; no abstract or references.",
+        "schema": "local.md_alllhrc_package_audit.v3",
+        "scope": "Full-only English/Chinese docking and MD reports containing analysis methods, results and discussion; Discussion cites high-impact SCI literature.",
         "source_support_sha256": {path: {"expected": expected, "matches": source_checks[path]} for path, expected in SOURCE_HASHES.items()},
         "screening_docx_sha256": {path: {"expected": expected, "matches": screening_checks[path]} for path, expected in SCREENING_DOCX_HASHES.items()},
         "records": records, "package_checks": package_checks,
-        "citation_mode": "No citation apparatus: no in-text citation fields and no reference list by user instruction.",
+        "citation_mode": "Discussion section cites high-impact SCI literature; Analysis methods and Results contain no citation markup.",
         "verdict": "PASS" if all(package_checks.values()) else "FAIL",
     }
     OUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

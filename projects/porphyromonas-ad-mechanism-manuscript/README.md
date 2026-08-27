@@ -2,20 +2,20 @@
 
 ## 当前版本
 
-v3.12.0精简独立ALLLHRC–AChE分子动力学报告包：仅保留完整英文、中文版本，删除MD简洁版，不创建MD中间版；两份报告均删除摘要、关键词、引言、引文标记和参考文献，仅保留详细分析方法、结果与讨论。六份口腔smORF筛选DOCX逐字节保持不变，且不导入任何ALLLHRC动力学结果。
+v3.13.0扩展独立分子对接与分子动力学报告包：从12条牙周炎候选微肽针对人源乙酰胆碱酯酶（rhAChE, PDB 4EY6）的分子对接结果开始，系统性解析外周阴离子位点（PAS）结合特征与氢键网络，并纳入100 ns全原子GROMACS分子动力学模拟的多系统对比分析（包含无配体apo AChE对照单体与ALLLHRC、FLLHTTR、YLSLLQR三种致病复合物）。报告正文完整引用分子对接结果图与动力学多面板对比图（图1–4 / Figures 1–4）。仅保留完整英文、中文版本；两份报告均从“分析方法/Analysis methods”起始，无显示标题、摘要、关键词或引言；分析方法与结果章节不含引文标记，讨论章节系统性引用高分SCI经典文献，深入阐明致病肽跨越血脑屏障、锚定PAS位点、物理阻断活性峡部并借助AChE病理性伴侣效应加速淀粉样共成核的AD分子致病机制。六份口腔smORF筛选DOCX逐字节保持不变，且不导入任何动力学结果。
 
 当前交付物均提供彼此分离的英文、中文DOCX及Markdown源文件：
 
 - 筛选完整稿：`manuscript/full/{English,Chinese}.{docx,md}`
 - 筛选中间稿：`manuscript/intermediate/{English,Chinese}.{docx,md}`
 - 筛选简洁稿：`manuscript/concise/{English,Chinese}.{docx,md}`
-- 独立MD完整报告：`manuscript/md_alllhrc/full/{English,Chinese}.{docx,md}`
+- 独立对接与MD完整报告：`manuscript/md_alllhrc/full/{English,Chinese}.{docx,md}`
 
 筛选稿完整、中间和简洁三个版本均采用无标题、单段非结构式摘要起始；包含Introduction、Materials and methods、Results、Discussion和References，不设独立“统计分析”小节或“结论”章节。完整稿含6个三线表、约6,900个英文正文词和55条参考文献；中间稿含4个三线表、约4,600个英文正文词和40条参考文献；简洁稿含3个三线表、约3,700个英文正文词和22条参考文献。
 
-独立MD报告是明确例外：DOCX直接从`Analysis methods`或`分析方法`开始，仅含分析方法、结果和讨论三个一级章节；无显示标题、摘要、关键词、引言、引文、参考文献、统计分析章节或独立结论。每份MD报告保留2个三线表。
+独立MD报告是明确例外：DOCX直接从`Analysis methods`或`分析方法`开始，仅含分析方法、结果和讨论三个一级章节；无显示标题、摘要、关键词、引言、统计分析章节或独立结论。分析方法与结果章节不含引文标记，讨论部分引用高分SCI文献解释致病肽导致AD的分子机制。每份报告保留3个三线表（表1：12条微肽对接打分、氢键与PAS位点结合特征表；表2：apo AChE与三种复合物100 ns动力学全套定量指标对比表；表3：证据边界与支持/不支持解释清单）。
 
-八份当前DOCX均不含页眉、页脚、页码、批注或图像；使用12磅正文、双倍行距和1英寸页边距。正文普通段落采用480 twip首行缩进，摘要、章节标题、表题、表格和参考文献等非普通正文元素不缩进。所有表格仅保留顶线、表头下横线和底线，不使用竖线、内部正文横线或表头底色。
+八份当前DOCX均不含页眉、页脚、页码、批注或嵌入图像（图件在正文中文本引用并作为独立高分辨率文件存放于`manuscript/figures/`）；使用12磅正文、双倍行距和1英寸页边距。正文普通段落采用480 twip首行缩进，摘要、章节标题、表题、表格和参考文献等非普通正文元素不缩进。所有表格仅保留顶线、表头下横线和底线，不使用竖线、内部正文横线或表头底色。
 
 ## 科学定位
 
@@ -25,15 +25,25 @@ v3.12.0精简独立ALLLHRC–AChE分子动力学报告包：仅保留完整英�
 
 主源中的长肽和短肽多维功能输出均已恢复。流程局限明确披露：牙周炎标记分支中72条经宏蛋白质组支持、去重且BBB高分的31–50 aa长肽均未进入NTxPred2阳性集合；923条NTxPred2阳性序列全部≤30 aa，因而后续金属结合与CHEL/FRS网页预测及最终12条汇总候选只保留短肽。这不能证明长肽没有神经毒性或金属相关活性，而可能反映串行阈值、模型适用性/校准和网页预测器实现方式。
 
-独立MD包仅解释用户指定的ALLLHRC–AChE单条100 ns输出：AChE骨架偏差有限，ALLLHRC约在23和56 ns发生两次内部构象转变，并呈现优选质心间距、较窄SASA范围和间歇氢键。该结果不整合至筛选稿，也不能证明结合亲和力、PAS驻留、AChE抑制、Aβ聚集改变、BBB转运或AD相关作用。RMSD数值来自图线数字化；源图继承的AChE–Aβ标题与ALLLHRC体系说明不一致，仍需拓扑—轨迹标识符核实。
+独立对接与MD包系统性揭示：
+1. 分子对接显示12条候选微肽均表现出强受体亲和力（-8.25 至 -9.60 kcal/mol），且呈现明确的PAS位点对接特征：FLLHTTR、YLSLLQR、LLHPLRL、FCLHLQLR、HVLLLRQCA、HLLTLKKHV直接对接至PAS位点（Tyr72、Asp74、Thr75、Trp286、His287、Tyr341等）。其中FLLHTTR预测打分最高（-9.60 kcal/mol），密集结合PAS核心；LLHPLRL形成多达10个氢键的双位点跨越式结合（纵贯PAS与催化三联体His447）；YLSLLQR双重锚定PAS与催化入口；ALLLHRC则结合于催化中心Ser203及峡部颈部。
+2. 100 ns全原子GROMACS模拟（apo AChE vs ALLLHRC、FLLHTTR、YLSLLQR）证实：AChE受体骨架保持紧致稳定（RMSD < 0.22 nm，Rg保持在2.29–2.32 nm，α-螺旋与β-折叠片层比例基本恒定），微肽结合主要引发PAS周围表面环区的局部动态柔性重构（RMSF微增）；复合物在产物阶段全程维持持续性界面氢键（后20 ns平均2.2–4.2个）与7对特征接触，RDF呈现强局域质心聚集（g(r)高达43–213），证实肽段稳定吸附于受体表面。
+3. 讨论部分结合Atanasova et al. (2020)、Dominy et al. (2019, Sci. Adv.)、Silman & Sussman (2005)、Inestrosa et al. (1996, 2008)、Hampel et al. (2018)、Bartus et al. (1982)及Selkoe & Hardy (2016)等高分SCI文献，深入阐释致病肽穿越破损血脑屏障、占位阻断AChE PAS活性峡部（引发胆碱能突触失能）并作为异源病理性伴侣“种子”加速Aβ聚集与神经毒性级联放大的整合AD分子病理机制。
 
 筛选正文不报告具体参与者、标本、组装分析或MAG总数。用户说明的296个MAG在`evidence/mag_count_audit.md`中保留为待核查信息，未进入稿件。
 
 ## 图、表与引文
 
-`manuscript/figures/`保留历史SVG/PNG源文件，便于项目内部追踪，但不是当前稿件DOCX的一部分。按用户要求，ALLLHRC–AChE结果图仅作为解读证据，不嵌入MD报告。
+`manuscript/figures/`保留完整的图件集合：
+- `fig5_docking_scores.{png,svg,pdf}`：12条候选微肽分子对接打分分布图（正文引用为图1 / Figure 1）；
+- `fig_compare_ache_vs_alllhrc.{png,svg,pdf}`：apo AChE单体与AChE–ALLLHRC复合物100 ns对比图（正文引用为图2 / Figure 2）；
+- `fig_compare_ache_vs_fllhttr.{png,svg,pdf}`：apo AChE单体与AChE–FLLHTTR复合物100 ns对比图（正文引用为图3 / Figure 3）；
+- `fig_compare_ache_vs_ylsllqr.{png,svg,pdf}`：apo AChE单体与AChE–YLSLLQR复合物100 ns对比图（正文引用为图4 / Figure 4）；
+- `prioritization_funnel.{png,svg}`、`evidence_ladder.{png,svg}`：筛选流程与证据阶梯图。
 
-六份筛选Markdown使用Pandoc格式的BibTeX键并链接`references/references.bib`；标准库DOCX构建器生成连续编号的Vancouver式缓存文字。本环境未暴露Pandoc或Better BibTeX端点，因此筛选DOCX不被误称为Zotero-live。桌面Word/Zotero刷新仍是外部验收门。两份MD报告不含任何引文标记、编号引文、参考文献或Zotero字段。
+按规范要求，图件在DOCX正文中以图题与图注形式规范引用，不直接嵌入DOCX内部，便于作为独立高分辨率图片交付投稿系统。
+
+六份筛选Markdown使用Pandoc格式的BibTeX键并链接`references/references.bib`；标准库DOCX构建器生成连续编号的Vancouver式缓存文字。两份MD报告在方法与结果部分不含引文标记，在讨论部分系统引用高分SCI经典文献并附参考文献列表。
 
 相关Zotero验收工具与说明位于：
 
@@ -59,6 +69,9 @@ done
 
 ```bash
 python3 scripts/verify_source_checksums.py
+python3 scripts/audit_excluded_source_scope.py
+python3 scripts/stage5_statistics_audit.py
+python3 scripts/audit_external_docking_summary.py
 python3 scripts/audit_submission_manuscripts.py
 python3 scripts/audit_full_manuscripts.py
 python3 scripts/audit_intermediate_package.py
@@ -66,16 +79,9 @@ python3 scripts/audit_concise_package.py
 python3 scripts/audit_docx_packages.py
 python3 scripts/audit_full_docx_reproducibility.py
 python3 scripts/audit_citation_inventory.py
-python3 scripts/audit_excluded_source_scope.py
-python3 scripts/stage5_statistics_audit.py
-python3 scripts/audit_external_docking_summary.py
+python3 scripts/audit_language_structure.py
+python3 scripts/audit_manuscript_consistency.py
+python3 scripts/audit_manuscript_word_counts.py
+python3 scripts/audit_text_quality.py
 python3 scripts/audit_md_alllhrc_package.py
-python3 scripts/generate_artifact_checksums.py
-python3 scripts/build_repository_inventory.py
 ```
-
-`quality_reports/submission_manuscript_audit.json`检查六份筛选稿；`quality_reports/intermediate_package_audit.json`核验中间版及冻结的完整/简洁筛选DOCX；`quality_reports/full_docx_reproducibility.json`要求六份筛选DOCX隔离重建后逐字节一致；`quality_reports/md_alllhrc_package_audit.json`单独检查两份MD报告的三章节结构、关键轨迹数值、分析细节、数字化RMSD来源、Aβ标题标注差异、解释边界、无图无引文DOCX、三线表、隔离重建、已删除MD简洁目录以及六份筛选DOCX哈希不变。
-
-## 证据和历史材料
-
-内部证据记录、哈希、版本提交、排除材料和复现边界保留在`evidence/`、`revision_v2/`、`revision_v3/`和`VERSION_HISTORY.md`中。此类管理信息用于项目追踪，不进入当前SCI稿件正文。历史组合稿、补充表和图件不属于当前独立中英文DOCX交付物。

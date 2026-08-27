@@ -43,11 +43,12 @@ Rules / 规则：
 | **v3.9.0 — restored multidimensional long/short results and attrition limitation** | 2026-08-17 | The annotated tag resolves the final v3.9.0 release commit | `porphyromonas-ad-manuscript-v3.9.0` | **Frozen prior screening release** | Restored all 22 principal-source UniDL4BioPep functional outputs for both long and short branches in all four manuscripts; retained exact counts and percentages in separate full-version tables and a compact concise table; documented that all 72 metaproteome-supported, dereplicated long BBB-high candidates were absent from the all-≤30-aa NTxPred2-positive set, so downstream metal/CHEL/FRS screening and the final aggregate 12 retained only short peptides; treated this as a serial-pipeline limitation rather than biological inactivity. / 四稿恢复主源长肽与短肽各22项UniDL4BioPep功能输出，完整稿分别列表、精简稿合并列表并保留精确计数与比例；明确72条经宏蛋白质组支持、去重且BBB高分的长肽均未进入全部≤30 aa的NTxPred2阳性集合，故后续金属/CHEL/FRS筛选及最终12条仅保留短肽；将其界定为串行流程局限，而非长肽无生物活性。 |
 | **v3.10.0 — standalone ALLLHRC–AChE MD package** | 2026-08-23 | The annotated tag resolves the final v3.10.0 release commit | `porphyromonas-ad-manuscript-v3.10.0` | **Frozen prior project release** | Preserved the four v3.9.0 screening DOCX files byte-for-byte and added separate full/concise English/Chinese manuscripts for the user-designated 100-ns ALLLHRC–AChE trajectory; interpreted RMSD, RMSF, center-of-mass RDF, SASA, secondary-structure fractions and hydrogen bonds using Atanasova et al. as a framework; disclosed that the RMSD diagnostic is digitized, the plot retains an inherited Aβ title, and raw/replicate data are incomplete; kept every new DOCX titleless and figure-free. / 原v3.9.0四份筛选DOCX逐字节保持不变；新增用户指定ALLLHRC–AChE 100 ns轨迹的完整/简洁中英文独立稿；以Atanasova等为框架解释RMSD、RMSF、质心RDF、SASA、二级结构比例和氢键；披露RMSD诊断来自数字化曲线、图标题继承Aβ文字且原始/重复数据不完整；新增DOCX继续无标题、无图。 |
 | **v3.11.0 — intermediate submission manuscripts** | 2026-08-23 | The annotated tag resolves the final v3.11.0 release commit | `porphyromonas-ad-manuscript-v3.11.0` | **Frozen prior project release** | Added separate English/Chinese intermediate screening manuscripts positioned between the full and concise variants, with approximately 4,600 English main-text words, 40 references and four three-line tables; retained all 22 paired long/short multidimensional outputs, funnel counts, the twelve-sequence composition/docking summary and the long-peptide attrition limitation; excluded the new standalone MD result and created no intermediate MD variant; preserved all pre-existing full, concise and MD DOCX hashes. / 在筛选论文完整稿与简洁稿之间新增独立中英文中间版，含约4,600个英文正文词、40条参考文献和4个三线表；保留全部22项长/短肽配对多维结果、漏斗计数、12条序列组成/对接汇总和长肽流失局限；不纳入新的独立MD结果，也不创建MD中间版；既有完整、简洁和MD DOCX哈希保持不变。 |
-| **v3.12.0 — full-only methods/results/discussion MD reports** | 2026-08-23 | The annotated tag resolves the final v3.12.0 release commit | `porphyromonas-ad-manuscript-v3.12.0` | **Current project release** | Reduced the standalone ALLLHRC–AChE package to separate full English and Chinese reports; deleted the concise MD variant; removed the title, abstract, keywords, Introduction, citation apparatus and References; retained only detailed Analysis methods, Results and Discussion with two three-line tables and explicit evidence limits; preserved all six full/intermediate/concise screening DOCX files byte-for-byte and did not import MD findings into them. / 独立ALLLHRC–AChE包仅保留完整英文、中文报告并删除MD简洁版；删除显示标题、摘要、关键词、引言、引文体系和参考文献；仅保留详细分析方法、结果、讨论、两个三线表及明确证据边界；六份完整/中间/简洁筛选DOCX逐字节不变，且不导入MD结果。 |
+| **v3.12.0 — full-only methods/results/discussion MD reports** | 2026-08-23 | The annotated tag resolves the final v3.12.0 release commit | `porphyromonas-ad-manuscript-v3.12.0` | **Frozen prior project release** | Reduced the standalone ALLLHRC–AChE package to separate full English and Chinese reports; deleted the concise MD variant; removed the title, abstract, keywords, Introduction, citation apparatus and References; retained only detailed Analysis methods, Results and Discussion with two three-line tables and explicit evidence limits; preserved all six full/intermediate/concise screening DOCX files byte-for-byte and did not import MD findings into them. / 独立ALLLHRC–AChE包仅保留完整英文、中文报告并删除MD简洁版；删除显示标题、摘要、关键词、引言、引文体系和参考文献；仅保留详细分析方法、结果、讨论、两个三线表及明确证据边界；六份完整/中间/简洁筛选DOCX逐字节不变，且不导入MD结果。 |
+| **v3.13.0 — expanded molecular docking and multi-system MD reports** | 2026-08-27 | The annotated tag resolves the final v3.13.0 release commit | `porphyromonas-ad-manuscript-v3.13.0` | **Current project release** | Expanded the standalone docking and MD report package to begin from molecular docking of all 12 candidate micropeptides against human AChE (PDB 4EY6) with detailed PAS engagement analysis, and integrated 100-ns GROMACS MD comparisons across unliganded apo AChE and three pathogenic complexes (ALLLHRC, FLLHTTR, YLSLLQR); in-text cited docking and MD comparison figures (Figures 1–4 / 图1–4); Methods and Results contain no citation markup; Discussion cites high-impact SCI literature explaining the oral–brain axis, BBB breach, PAS blockade (cholinergic deficit), and AChE pathological chaperone amyloid co-nucleation in AD; retained 3 three-line tables; preserved all six screening DOCX files byte-for-byte. / 扩展独立对接与MD报告包：从12条微肽针对人AChE的分子对接及PAS结合分析开始，整合apo AChE与三种致病复合物（ALLLHRC、FLLHTTR、YLSLLQR）的100 ns全原子MD多系统对比分析；正文引用对接与MD对比图件（图1–4）；方法与结果不含引文，讨论系统引用高分SCI文献深入阐明BBB跨越、PAS阻断、胆碱能失能及AChE病理性伴侣共成核的AD致病机制；保留3个三线表；六份筛选DOCX逐字节不变。 |
 
 ## 3. Scientific status and package relationship / 科学状态与版本关系
 
-**v3.0.0–v3.12.0 screening manuscripts support / 筛选稿可支持：**
+**v3.0.0–v3.13.0 screening manuscripts support / 筛选稿可支持：**
 
 - principal-source aggregate funnel and recomputed descriptive percentages;
 - twelve externally reported 7–9-aa sequence strings and independently recomputed composition;
@@ -55,24 +56,26 @@ Rules / 规则：
 - a versioned 100-ns GROMACS extension whose comparative trajectory analysis and integration remain pending;
 - a provenance-aware, hypothesis-generating validation roadmap.
 
-**The separate v3.12.0 ALLLHRC–AChE MD package supports / 独立MD稿可支持：**
+**The separate v3.13.0 molecular docking and MD package supports / 独立对接与MD报告支持：**
 
-- descriptive interpretation of one user-designated 100-ns ALLLHRC–AChE output;
-- limited AChE backbone deviation and two internal ALLLHRC RMSD transitions near 23 and 56 ns;
-- qualitative RMSF, center-of-mass RDF, SASA, secondary-structure and hydrogen-bond patterns;
-- explicit disclosure that the numeric RMSD diagnostic is plot-digitized and that the inherited Aβ plot title requires identity confirmation.
+- systematic AutoDock Vina molecular docking analysis of all 12 candidate micropeptides against human recombinant AChE (PDB 4EY6), including scores (-8.25 to -9.60 kcal/mol), intermolecular hydrogen bonds (3–10 bonds), and residue-specific PAS engagement;
+- explicit identification of micropeptides that dock into the canonical PAS (FLLHTTR, YLSLLQR, FCLHLQLR, HVLLLRQCA, HLLTLKKHV, LLHPLRL) versus catalytic/gorge neck binders (ALLLHRC, YHHLLCRR);
+- dual-site spanning architecture of LLHPLRL (bridging PAS Trp286/Tyr341 to catalytic His447 with 10 hydrogen bonds);
+- multi-system 100-ns all-atom GROMACS MD comparison of unliganded apo AChE vs three pathogenic complexes (ALLLHRC, FLLHTTR, YLSLLQR), confirming receptor globular stability (RMSD < 0.22 nm, Rg 2.29–2.32 nm, conserved α-helix ~33–34% and β-sheet ~17%), localized PAS loop flexibility (RMSF), persistent intermolecular hydrogen bonds (2.2–4.2 bonds), 7 persistent contact pairs, and strong center-of-mass spatial localization (g(r) 43–213);
+- in-text citations of docking scores and multi-panel MD trajectory comparison figures (Figures 1–4 / 图1–4);
+- Discussion-level integration of high-impact SCI literature explaining how pathogenic peptides cause AD via oral–brain axis translocation, BBB penetration, PAS active gorge obstruction (inducing cholinergic failure), and AChE-mediated pathological chaperone amyloid co-nucleation.
 
-**v3.0.0–v3.12.0 do not support / 不支持：**
+**v3.0.0–v3.13.0 do not support / 不支持：**
 
 - row-level linkage between the twelve strings and the principal screening funnel or stricter eight;
-- independently reproduced docking, verified pose/PAS residence, binding affinity, free energy, ensemble convergence, or biochemical AChE inhibition;
-- measured expression, BBB transport, toxicity, metal chemistry, altered Aβ aggregation, disease specificity, or AD causality.
+- in vitro measured binding affinity (Kd), inhibition constant (Ki), or biophysical aggregation kinetics without wet-lab validation;
+- measured in vivo BBB transport, tissue expression, or proven AD causality prior to prospective animal/cellular assays.
 
 **v3.1.0–v3.3.0 relationship / 精简稿关系：** v3.1.0 and v3.2.0 are frozen prior concise packages. v3.3.0 superseded them after SCI-structure revision and is now itself frozen after v3.6.0; none of these versions strengthens the underlying evidence. / v3.1.0和v3.2.0为冻结的既往精简稿；v3.3.0曾在SCI结构修订后取代它们，现也已被v3.6.0冻结；这些版本均不提高底层证据强度。
 
 **v3.5.0 full-package relationship / 完整稿关系：** v3.5.0 superseded v3.4.0 as the prior full release. Its historical deliverables remain frozen. / v3.5.0曾取代v3.4.0成为上一版完整稿，其历史交付物保持冻结。
 
-**v3.12.0 package relationship / 当前版本关系：** v3.12.0 preserves the six full, intermediate and concise screening DOCX files byte-for-byte. It reduces the separate ALLLHRC package to full English and Chinese reports containing only Analysis methods, Results and Discussion, deletes the concise MD variant, and continues to provide no intermediate MD variant. No MD result is imported into a screening manuscript. Historical combined bilingual manuscripts, supplementary files and figures remain outside the current DOCX deliverables. / v3.12.0逐字节保留六份筛选完整稿、中间稿和简洁稿DOCX；独立ALLLHRC包仅保留完整英文、中文报告，且仅含分析方法、结果和讨论；删除MD简洁版并继续不设置MD中间版；任何MD结果均未导入筛选稿。历史中英合并稿、补充文件和图件仍不属于当前DOCX交付物。
+**v3.13.0 package relationship / 当前版本关系：** v3.13.0 preserves the six full, intermediate, and concise screening DOCX files byte-for-byte. It expands the standalone docking and MD report package into full English and Chinese deliverables that begin with molecular docking and incorporate multi-system MD results. No docking or MD result is imported into the screening manuscripts. / v3.13.0逐字节保留六份筛选完整稿、中间稿和简洁稿DOCX；将独立对接与MD报告包扩展为从分子对接起始并包含多系统MD的完整中英文交付物；任何对接与MD结果均未导入筛选稿。
 
 **v3.2.0 provenance correction / v3.2.0来源修正：** PRJNA678453 is reported as a 22-participant cohort (11 orally healthy and 11 with periodontitis) producing 66 oral specimens; PRJEB65451 is reported as the derived EBI-EMG/MGnify TPA assembly project. / PRJNA678453按22名参与者（11名口腔健康、11名牙周炎）和66份口腔标本报告；PRJEB65451按衍生TPA组装项目报告。
 
@@ -88,8 +91,8 @@ The repository includes a guarded cross-platform helper: / 仓库提供带保护
 
 ```bash
 python3 scripts/manage_version_tag.py create \
-  --version 3.12.0 \
-  --message "v3.12.0: reduce standalone MD package to full methods-results-discussion reports" \
+  --version 3.13.0 \
+  --message "v3.13.0: expand standalone package to full docking and multi-system MD reports" \
   --push
 ```
 
@@ -97,9 +100,9 @@ Equivalent native Git commands / 等价Git命令：
 
 ```bash
 git status --short
-git tag -a porphyromonas-ad-manuscript-v3.12.0 \
-  -m "v3.12.0: reduce standalone MD package to full methods-results-discussion reports"
-git push origin refs/tags/porphyromonas-ad-manuscript-v3.12.0
+git tag -a porphyromonas-ad-manuscript-v3.13.0 \
+  -m "v3.13.0: expand standalone package to full docking and multi-system MD reports"
+git push origin refs/tags/porphyromonas-ad-manuscript-v3.13.0
 ```
 
 The helper refuses to tag a dirty working tree, the wrong branch, or an existing tag. / 脚本会拒绝脏工作区、错误分支或重复标签。
@@ -107,11 +110,12 @@ The helper refuses to tag a dirty working tree, the wrong branch, or an existing
 ## 5. Verify a tag / 核验标签
 
 ```bash
-python3 scripts/manage_version_tag.py verify --version 3.12.0
-git show --no-patch --decorate porphyromonas-ad-manuscript-v3.12.0
-git rev-list -n 1 porphyromonas-ad-manuscript-v3.12.0
+python3 scripts/manage_version_tag.py verify --version 3.13.0
+git show --no-patch --decorate porphyromonas-ad-manuscript-v3.13.0
+git rev-list -n 1 porphyromonas-ad-manuscript-v3.13.0
 
 # Earlier immutable baselines remain independently verifiable:
+python3 scripts/manage_version_tag.py verify --version 3.12.0
 python3 scripts/manage_version_tag.py verify --version 3.11.0
 python3 scripts/manage_version_tag.py verify --version 3.10.0
 python3 scripts/manage_version_tag.py verify --version 3.9.0
@@ -133,9 +137,10 @@ Recommended: create a separate worktree. / 推荐创建独立worktree，不改�
 ```powershell
 Set-Location 'E:\0writing\Light-skills'
 git fetch origin --tags
-git worktree add 'E:\0writing\Light-skills-restore-v3.12.0' porphyromonas-ad-manuscript-v3.12.0
+git worktree add 'E:\0writing\Light-skills-restore-v3.13.0' porphyromonas-ad-manuscript-v3.13.0
 
 # To inspect an earlier immutable baseline instead:
+git worktree add 'E:\0writing\Light-skills-restore-v3.12.0' porphyromonas-ad-manuscript-v3.12.0
 git worktree add 'E:\0writing\Light-skills-restore-v3.11.0' porphyromonas-ad-manuscript-v3.11.0
 git worktree add 'E:\0writing\Light-skills-restore-v3.4.0' porphyromonas-ad-manuscript-v3.4.0
 git worktree add 'E:\0writing\Light-skills-restore-v3.3.0' porphyromonas-ad-manuscript-v3.3.0
@@ -160,7 +165,7 @@ git worktree remove 'E:\0writing\Light-skills-restore-v3.0.0'
 ### 6.2 Restore one file from the tag
 
 ```bash
-git restore --source=porphyromonas-ad-manuscript-v3.12.0 -- \
+git restore --source=porphyromonas-ad-manuscript-v3.13.0 -- \
   projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/full/English.docx
 ```
 
