@@ -2,19 +2,33 @@
 
 ## Remote synchronization
 
-The Arena session branch is fixed to `arena/019ff377-light-skills`.
+The Arena session branch is fixed to `arena/01a04122-light-skills`.
 
-PowerShell (run each command as one line; do not use Bash `\` continuation):
+PowerShell (run each command as one line; do not use Bash `\\` continuation):
 
 ```powershell
 Set-Location 'E:\0writing\Light-skills'
 Test-Path '.git'
-git fetch origin 'refs/heads/arena/019ff377-light-skills:refs/remotes/origin/arena/019ff377-light-skills' --tags
-git switch arena/019ff377-light-skills
-git pull --ff-only origin arena/019ff377-light-skills
+Get-ChildItem -Path . -Filter '~*' -Recurse -Force -ErrorAction SilentlyContinue | Remove-Item -Force
+git fetch origin 'refs/heads/arena/01a04122-light-skills:refs/remotes/origin/arena/01a04122-light-skills' --tags
+git switch --track -c arena/01a04122-light-skills origin/arena/01a04122-light-skills
+git pull --ff-only origin arena/01a04122-light-skills
+git rev-parse HEAD
 ```
 
-`Test-Path '.git'` must return `True`. If it returns `False`, locate or clone the repository before running Git commands.
+`Test-Path '.git'` must return `True`. If it returns `False`, locate or clone the repository before running Git commands. Expected HEAD after a successful pull is `7ede267f0ba24ce73d9289d070c3a25918cdf026`.
+
+If the local branch already exists, replace the `git switch --track -c ...` line with:
+
+```powershell
+git switch arena/01a04122-light-skills
+```
+
+If Word lock copies or local DOCX edits block the switch/pull:
+
+```powershell
+git restore projects/porphyromonas-ad-mechanism-manuscript/manuscript/concise/Chinese.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/concise/English.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/intermediate/English.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/full/Chinese.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/full/English.docx
+```
 
 If the repository is not yet cloned:
 
@@ -22,8 +36,8 @@ If the repository is not yet cloned:
 Set-Location 'E:\0writing'
 git clone 'https://github.com/shaohuawen03-cyber/Light-skills.git' 'Light-skills'
 Set-Location 'E:\0writing\Light-skills'
-git fetch origin 'refs/heads/arena/019ff377-light-skills:refs/remotes/origin/arena/019ff377-light-skills' --tags
-git switch --track -c arena/019ff377-light-skills origin/arena/019ff377-light-skills
+git fetch origin 'refs/heads/arena/01a04122-light-skills:refs/remotes/origin/arena/01a04122-light-skills' --tags
+git switch --track -c arena/01a04122-light-skills origin/arena/01a04122-light-skills
 ```
 
 ## Project path
@@ -80,11 +94,11 @@ Repeat for the other screening sources, then perform Zotero Document Preferences
 After committing a clean tree on the fixed branch:
 
 ```bash
-python3 scripts/manage_version_tag.py create --version 3.13.0 --message "v3.13.0: expand standalone package to full docking and multi-system MD reports" --push
-python3 scripts/manage_version_tag.py verify --version 3.13.0
+python3 scripts/manage_version_tag.py create --version 3.14.0 --message "v3.14.0: rebuild standalone reports from local three-run Vina scores and pose composites" --push
+python3 scripts/manage_version_tag.py verify --version 3.14.0
 ```
 
-Existing release tags are immutable and must not be moved or overwritten.
+Existing release tags are immutable and must not be moved or overwritten. The helper currently expects branch `arena/019ff377-light-skills`; this session remains on `arena/01a04122-light-skills` and should not retarget that branch.
 
 ## Scientific boundary
 
