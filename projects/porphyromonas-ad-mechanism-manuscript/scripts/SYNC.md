@@ -32,7 +32,7 @@ git switch --track -c arena/019ff377-light-skills origin/arena/019ff377-light-sk
 projects/porphyromonas-ad-mechanism-manuscript/
 ```
 
-## Deterministic v3.13.0 rebuild
+## Deterministic v3.14.0 rebuild
 
 Run from the project root:
 
@@ -41,6 +41,7 @@ python3 scripts/verify_source_checksums.py
 python3 scripts/audit_excluded_source_scope.py
 python3 scripts/stage5_statistics_audit.py
 python3 scripts/audit_external_docking_summary.py
+python3 scripts/audit_local_vina_docking.py
 
 for language in English Chinese; do
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input "manuscript/full/${language}.md" --output "manuscript/full/${language}.docx" --title "${language}"
@@ -87,4 +88,4 @@ Existing release tags are immutable and must not be moved or overwritten.
 
 ## Scientific boundary
 
-These commands reproduce arithmetic checks, sequence-composition checks, reference mapping, the six screening manuscripts, and the two expanded standalone docking and MD reports. They also reproduce the DOCX packages from versioned Markdown and the preserved multi-system MD metrics. They do not claim in vitro binding validation, cellular neurotoxicity assays, or clinical causality without dedicated prospective wet-lab experiments. No standalone docking/MD result is integrated into a screening manuscript.
+These commands reproduce arithmetic checks, sequence-composition checks, the local three-run Vina summary audit, reference mapping, the six screening manuscripts, and the two expanded standalone docking and MD reports. They also reproduce the DOCX packages from versioned Markdown and the preserved multi-system MD metrics. They do not claim in vitro binding validation, cellular neurotoxicity assays, or clinical causality without dedicated prospective wet-lab experiments. No standalone docking/MD result is integrated into a screening manuscript.

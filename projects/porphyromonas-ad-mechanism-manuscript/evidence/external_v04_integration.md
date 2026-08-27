@@ -48,3 +48,7 @@ The revised manuscript separates three levels:
 - **future experimental or computational validation requirements**.
 
 No sentence may collapse these levels into a claim of reproduced docking, measured affinity, demonstrated BBB transport, experimental neurotoxicity, taxonomic origin, or AD mechanism.
+
+## Local three-run Vina archive (v3.14.0)
+
+On 2026-08-27 the user uploaded a local Vina summary and best-pose composites to `docking/`. A path-sanitized numeric copy is stored at `source_materials/md_results/local_vina_docking_summary.csv`. The standalone docking/MD reports now use this local three-run table as the docking score authority. Screening manuscripts remain frozen on the external v0.4 transcribed summaries and were not rewritten. Individual PDBQT files and configuration logs are still absent; do not describe the local archive as a complete raw docking deposit.

@@ -26,12 +26,20 @@
       "expected": "055acade7cfba02ac23ff97add253aba0e8fa4882cc4a5d6d8a26bbd37158dcc",
       "matches": true
     },
+    "source_materials/md_results/local_vina_docking_summary.csv": {
+      "expected": "7dd9c26e9f5b0cdf4e8b87a55cb498ec5e5f10fe0292eb880c5d74cacd769f82",
+      "matches": true
+    },
     "source_materials/md_results/RESULTS_ANALYSIS_v1.md": {
       "expected": "2678919e6033430ad5b556372e7dc96bd9f0fa83d34f60c61aca3b71543608f2",
       "matches": true
     },
     "source_materials/md_results/SCI_Methods_GROMACS_MD_Simulation.md": {
       "expected": "9d1be85cd0afaa3cc859ac699c91c5b556ff92f9b61cfe968232e696f4402194",
+      "matches": true
+    },
+    "docking/Summary_Vina_Docking.csv": {
+      "expected": "01d7987c43934f55661274694f3d75a307378235aabcf1ff85ec1de634fa50d0",
       "matches": true
     }
   },
@@ -61,19 +69,29 @@
       "matches": true
     }
   },
+  "cited_figure_files": {
+    "manuscript/figures/fig5_docking_scores.svg": true,
+    "manuscript/figures/fig5_docking_scores.png": true,
+    "manuscript/figures/fig_docking_poses_A_F.png": true,
+    "manuscript/figures/fig_docking_poses_G_L.png": true,
+    "manuscript/figures/fig_docking_poses_12_combined.png": true,
+    "manuscript/figures/fig_compare_ache_vs_alllhrc.png": true,
+    "manuscript/figures/fig_compare_ache_vs_fllhttr.png": true,
+    "manuscript/figures/fig_compare_ache_vs_ylsllqr.png": true
+  },
   "records": {
     "full/English": {
       "label": "full/English",
       "markdown": "manuscript/md_alllhrc/full/English.md",
       "docx": "manuscript/md_alllhrc/full/English.docx",
-      "markdown_sha256": "d12908af6887126ec2f339b5cec0f555eeebc90e71ecea41534d9ccd1f560b71",
-      "docx_sha256": "b31b33741e5d3b97b4cc7875450321851a1c1b97f4ebd33b836839593cb45652",
-      "body_word_count": 5041,
-      "body_character_count": 36036,
+      "markdown_sha256": "0d617433dac884f69f9cfc4b65f32706f807ae2537c64340b76e449714bfd9c1",
+      "docx_sha256": "c077096392b44ca1cf448ff16e9e0017fe69a492a9ac69e9b0e4766980dcbefc",
+      "body_word_count": 5609,
+      "body_character_count": 39777,
       "table_data_row_counts": [
         12,
         13,
-        6
+        7
       ],
       "embedded_media": [],
       "drawings": 0,
@@ -155,14 +173,14 @@
       "label": "full/Chinese",
       "markdown": "manuscript/md_alllhrc/full/Chinese.md",
       "docx": "manuscript/md_alllhrc/full/Chinese.docx",
-      "markdown_sha256": "2661df3778ebc3f741b1dfdb7a55480f8d34d95be4791b3fbfbd9da6ae8f6513",
-      "docx_sha256": "c91c000e64382084be2a0378a01b363e595182d04f0931f0938cf668aa928695",
-      "body_word_count": 1566,
-      "body_character_count": 20623,
+      "markdown_sha256": "7219a37a08a854ab284236d3573c132cf758f312d596fe1da1b1a1cfdf78df37",
+      "docx_sha256": "6c8e1250d76095b3552f4f270f312497f47c35369b555aa3adf71bd35091b6ff",
+      "body_word_count": 1650,
+      "body_character_count": 22093,
       "table_data_row_counts": [
         12,
         13,
-        6
+        7
       ],
       "embedded_media": [],
       "drawings": 0,
@@ -248,6 +266,7 @@
     "both_reports_have_no_abstract_or_introduction": true,
     "all_source_support_hashes_match": true,
     "all_six_screening_docx_files_are_unchanged": true,
+    "cited_figure_files_are_present": true,
     "both_docx_files_are_figure_free": true
   },
   "citation_mode": "Discussion section cites high-impact SCI literature; Analysis methods and Results contain no citation markup.",

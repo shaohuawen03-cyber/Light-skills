@@ -2,7 +2,7 @@
 
 ## 当前版本
 
-v3.13.0扩展独立分子对接与分子动力学报告包：从12条牙周炎候选微肽针对人源乙酰胆碱酯酶（rhAChE, PDB 4EY6）的分子对接结果开始，系统性解析外周阴离子位点（PAS）结合特征与氢键网络，并纳入100 ns全原子GROMACS分子动力学模拟的多系统对比分析（包含无配体apo AChE对照单体与ALLLHRC、FLLHTTR、YLSLLQR三种致病复合物）。报告正文完整引用分子对接结果图与动力学多面板对比图（图1–4 / Figures 1–4）。仅保留完整英文、中文版本；两份报告均从“分析方法/Analysis methods”起始，无显示标题、摘要、关键词或引言；分析方法与结果章节不含引文标记，讨论章节系统性引用高分SCI经典文献，深入阐明致病肽跨越血脑屏障、锚定PAS位点、物理阻断活性峡部并借助AChE病理性伴侣效应加速淀粉样共成核的AD分子致病机制。六份口腔smORF筛选DOCX逐字节保持不变，且不导入任何动力学结果。
+v3.14.0以用户上传的本地三次独立AutoDock Vina汇总表与最优构象复合图为对接权威来源，重建独立分子对接与分子动力学完整报告。对接打分同时报告最优单次亲和力（-8.25 至 -9.60 kcal/mol）与三次成功运行均值±标准差（-8.07 ± 0.16 至 -9.44 ± 0.09 kcal/mol，n = 3）；最优构象排序仍以FLLHTTR为最强（-9.60 kcal/mol），均值排序则以YLSLLQR为最强（-9.44 ± 0.09 kcal/mol），并明示FLLHTTR三次运行离散度最大（-8.77 ± 1.41 kcal/mol）。正文引用打分图、A–F/G–L最优构象图、12肽总览补充图及三套100 ns动力学对比图（图1–6、图S1 / Figures 1–6, Figure S1）。仅保留完整英文、中文版本；两份报告均从“分析方法/Analysis methods”起始，无显示标题、摘要、关键词或引言；分析方法与结果章节不含引文标记，讨论章节系统性引用高分SCI经典文献。六份口腔smORF筛选DOCX逐字节保持不变，且不导入任何对接或动力学结果。
 
 当前交付物均提供彼此分离的英文、中文DOCX及Markdown源文件：
 
@@ -13,7 +13,7 @@ v3.13.0扩展独立分子对接与分子动力学报告包：从12条牙周炎�
 
 筛选稿完整、中间和简洁三个版本均采用无标题、单段非结构式摘要起始；包含Introduction、Materials and methods、Results、Discussion和References，不设独立“统计分析”小节或“结论”章节。完整稿含6个三线表、约6,900个英文正文词和55条参考文献；中间稿含4个三线表、约4,600个英文正文词和40条参考文献；简洁稿含3个三线表、约3,700个英文正文词和22条参考文献。
 
-独立MD报告是明确例外：DOCX直接从`Analysis methods`或`分析方法`开始，仅含分析方法、结果和讨论三个一级章节；无显示标题、摘要、关键词、引言、统计分析章节或独立结论。分析方法与结果章节不含引文标记，讨论部分引用高分SCI文献解释致病肽导致AD的分子机制。每份报告保留3个三线表（表1：12条微肽对接打分、氢键与PAS位点结合特征表；表2：apo AChE与三种复合物100 ns动力学全套定量指标对比表；表3：证据边界与支持/不支持解释清单）。
+独立MD报告是明确例外：DOCX直接从`Analysis methods`或`分析方法`开始，仅含分析方法、结果和讨论三个一级章节；无显示标题、摘要、关键词、引言、统计分析章节或独立结论。分析方法与结果章节不含引文标记，讨论部分引用高分SCI文献解释致病肽导致AD的分子机制。每份报告保留3个三线表（表1：12条微肽本地三次Vina最优打分、均值±SD、氢键与PAS位点结合特征表；表2：apo AChE与三种复合物100 ns动力学全套定量指标对比表；表3：证据边界与支持/不支持解释清单，含FLLHTTR三次运行离散度边界）。
 
 八份当前DOCX均不含页眉、页脚、页码、批注或嵌入图像（图件在正文中文本引用并作为独立高分辨率文件存放于`manuscript/figures/`）；使用12磅正文、双倍行距和1英寸页边距。正文普通段落采用480 twip首行缩进，摘要、章节标题、表题、表格和参考文献等非普通正文元素不缩进。所有表格仅保留顶线、表头下横线和底线，不使用竖线、内部正文横线或表头底色。
 
@@ -26,7 +26,7 @@ v3.13.0扩展独立分子对接与分子动力学报告包：从12条牙周炎�
 主源中的长肽和短肽多维功能输出均已恢复。流程局限明确披露：牙周炎标记分支中72条经宏蛋白质组支持、去重且BBB高分的31–50 aa长肽均未进入NTxPred2阳性集合；923条NTxPred2阳性序列全部≤30 aa，因而后续金属结合与CHEL/FRS网页预测及最终12条汇总候选只保留短肽。这不能证明长肽没有神经毒性或金属相关活性，而可能反映串行阈值、模型适用性/校准和网页预测器实现方式。
 
 独立对接与MD包系统性揭示：
-1. 分子对接显示12条候选微肽均表现出强受体亲和力（-8.25 至 -9.60 kcal/mol），且呈现明确的PAS位点对接特征：FLLHTTR、YLSLLQR、LLHPLRL、FCLHLQLR、HVLLLRQCA、HLLTLKKHV直接对接至PAS位点（Tyr72、Asp74、Thr75、Trp286、His287、Tyr341等）。其中FLLHTTR预测打分最高（-9.60 kcal/mol），密集结合PAS核心；LLHPLRL形成多达10个氢键的双位点跨越式结合（纵贯PAS与催化三联体His447）；YLSLLQR双重锚定PAS与催化入口；ALLLHRC则结合于催化中心Ser203及峡部颈部。
+1. 本地三次Vina运行显示12条候选微肽均具有有利预测亲和力。最优单次打分介于 -8.25 至 -9.60 kcal/mol；三次运行均值介于 -8.07 ± 0.16 至 -9.44 ± 0.09 kcal/mol。最优构象呈现明确的PAS位点对接特征：FLLHTTR、YLSLLQR、LLHPLRL、FCLHLQLR、HVLLLRQCA、HLLTLKKHV直接对接至PAS位点（Tyr72、Asp74、Thr75、Trp286、His287、Tyr341等）。FLLHTTR最优构象打分最高（-9.60 kcal/mol）且密集结合PAS核心，但其三次运行SD最大（1.41 kcal/mol）；YLSLLQR三次运行均值最强（-9.44 ± 0.09 kcal/mol）并双重锚定PAS与催化入口；LLHPLRL形成多达10个氢键的双位点跨越式结合（纵贯PAS与催化三联体His447），三次运行SD最小（0.05 kcal/mol）；ALLLHRC结合于催化中心Ser203及峡部颈部，均值仍居前列（-9.18 ± 0.11 kcal/mol）。
 2. 100 ns全原子GROMACS模拟（apo AChE vs ALLLHRC、FLLHTTR、YLSLLQR）证实：AChE受体骨架保持紧致稳定（RMSD < 0.22 nm，Rg保持在2.29–2.32 nm，α-螺旋与β-折叠片层比例基本恒定），微肽结合主要引发PAS周围表面环区的局部动态柔性重构（RMSF微增）；复合物在产物阶段全程维持持续性界面氢键（后20 ns平均2.2–4.2个）与7对特征接触，RDF呈现强局域质心聚集（g(r)高达43–213），证实肽段稳定吸附于受体表面。
 3. 讨论部分结合Atanasova et al. (2020)、Dominy et al. (2019, Sci. Adv.)、Silman & Sussman (2005)、Inestrosa et al. (1996, 2008)、Hampel et al. (2018)、Bartus et al. (1982)及Selkoe & Hardy (2016)等高分SCI文献，深入阐释致病肽穿越破损血脑屏障、占位阻断AChE PAS活性峡部（引发胆碱能突触失能）并作为异源病理性伴侣“种子”加速Aβ聚集与神经毒性级联放大的整合AD分子病理机制。
 
@@ -35,10 +35,13 @@ v3.13.0扩展独立分子对接与分子动力学报告包：从12条牙周炎�
 ## 图、表与引文
 
 `manuscript/figures/`保留完整的图件集合：
-- `fig5_docking_scores.{png,svg,pdf}`：12条候选微肽分子对接打分分布图（正文引用为图1 / Figure 1）；
-- `fig_compare_ache_vs_alllhrc.{png,svg,pdf}`：apo AChE单体与AChE–ALLLHRC复合物100 ns对比图（正文引用为图2 / Figure 2）；
-- `fig_compare_ache_vs_fllhttr.{png,svg,pdf}`：apo AChE单体与AChE–FLLHTTR复合物100 ns对比图（正文引用为图3 / Figure 3）；
-- `fig_compare_ache_vs_ylsllqr.{png,svg,pdf}`：apo AChE单体与AChE–YLSLLQR复合物100 ns对比图（正文引用为图4 / Figure 4）；
+- `fig5_docking_scores.{png,svg}`：本地三次Vina运行均值±SD与最优单次打分图（正文引用为图1 / Figure 1）；
+- `fig_docking_poses_A_F.png`：ALLLHRC至HVLLLRQCA最优构象（图2 / Figure 2，A–F）；
+- `fig_docking_poses_G_L.png`：LLHLPKRTT至YLSLLQR最优构象（图3 / Figure 3，G–L）；
+- `fig_docking_poses_12_combined.png`：12条微肽最优构象总览（图S1 / Figure S1）；
+- `fig_compare_ache_vs_alllhrc.{png,svg,pdf}`：apo AChE单体与AChE–ALLLHRC复合物100 ns对比图（正文引用为图4 / Figure 4）；
+- `fig_compare_ache_vs_fllhttr.{png,svg,pdf}`：apo AChE单体与AChE–FLLHTTR复合物100 ns对比图（正文引用为图5 / Figure 5）；
+- `fig_compare_ache_vs_ylsllqr.{png,svg,pdf}`：apo AChE单体与AChE–YLSLLQR复合物100 ns对比图（正文引用为图6 / Figure 6）；
 - `prioritization_funnel.{png,svg}`、`evidence_ladder.{png,svg}`：筛选流程与证据阶梯图。
 
 按规范要求，图件在DOCX正文中以图题与图注形式规范引用，不直接嵌入DOCX内部，便于作为独立高分辨率图片交付投稿系统。

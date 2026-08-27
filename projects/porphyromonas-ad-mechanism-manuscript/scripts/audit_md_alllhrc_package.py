@@ -34,7 +34,7 @@ SPECS = {
         "systems": ["apo AChE", "ALLLHRC", "FLLHTTR", "YLSLLQR"],
         "pas_terms": ["Peripheral Anionic Site", "PAS", "Tyr72", "Asp74", "Trp286", "Tyr341"],
         "discussion_authors": ["Atanasova", "Dominy", "Silman", "Inestrosa", "Hampel", "Bartus", "Selkoe"],
-        "figures": ["Figure 1", "Figure 2", "Figure 3", "Figure 4"],
+        "figures": ["Figure 1", "Figure 2", "Figure 3", "Figure 4", "Figure 5", "Figure 6", "Figure S1"],
         "limits": ["100-ns", "single high-resolution trajectories", "isothermal titration calorimetry", "surface plasmon resonance"],
     },
     "full/Chinese": {
@@ -51,12 +51,13 @@ SPECS = {
         "systems": ["apo AChE", "ALLLHRC", "FLLHTTR", "YLSLLQR"],
         "pas_terms": ["外周阴离子位点", "PAS", "Tyr72", "Asp74", "Trp286", "Tyr341"],
         "discussion_authors": ["Atanasova", "Dominy", "Silman", "Inestrosa", "Hampel", "Bartus", "Selkoe"],
-        "figures": ["图1", "图2", "图3", "图4"],
+        "figures": ["图1", "图2", "图3", "图4", "图5", "图6", "图S1"],
         "limits": ["100 ns", "单条", "等温滴定量热", "表面等离子共振"],
     },
 }
 REQUIRED_NUMERIC = [
-    "-9.60", "-9.49", "-9.29", "0.1562", "0.1916", "0.2102", "0.2064",
+    "-9.60", "-9.49", "-9.29", "-8.77", "-9.44", "-9.18", "1.41",
+    "0.1562", "0.1916", "0.2102", "0.2064",
     "0.0783", "0.0876", "0.0901", "0.0813", "2.2967", "2.3107", "2.3163", "2.3004",
     "212.41", "217.47", "216.34", "210.37", "2.19", "2.80", "4.23",
 ]
@@ -67,9 +68,21 @@ SOURCE_HASHES = {
     "source_materials/md_results/compare_summary_fllhttr.csv": "c48cee16a72c8381cf4d8e6cdcfa21501467962514ee831dba2c4fa0ee96fdf6",
     "source_materials/md_results/compare_summary_ylsllqr.csv": "db561014757d8bfd708e6e8c5aa32f70a614813d315197a02cde491828876f05",
     "source_materials/md_results/docking_12peptides_summary.csv": "055acade7cfba02ac23ff97add253aba0e8fa4882cc4a5d6d8a26bbd37158dcc",
+    "source_materials/md_results/local_vina_docking_summary.csv": "7dd9c26e9f5b0cdf4e8b87a55cb498ec5e5f10fe0292eb880c5d74cacd769f82",
     "source_materials/md_results/RESULTS_ANALYSIS_v1.md": "2678919e6033430ad5b556372e7dc96bd9f0fa83d34f60c61aca3b71543608f2",
     "source_materials/md_results/SCI_Methods_GROMACS_MD_Simulation.md": "9d1be85cd0afaa3cc859ac699c91c5b556ff92f9b61cfe968232e696f4402194",
+    "docking/Summary_Vina_Docking.csv": "01d7987c43934f55661274694f3d75a307378235aabcf1ff85ec1de634fa50d0",
 }
+FIGURE_FILES = [
+    "manuscript/figures/fig5_docking_scores.svg",
+    "manuscript/figures/fig5_docking_scores.png",
+    "manuscript/figures/fig_docking_poses_A_F.png",
+    "manuscript/figures/fig_docking_poses_G_L.png",
+    "manuscript/figures/fig_docking_poses_12_combined.png",
+    "manuscript/figures/fig_compare_ache_vs_alllhrc.png",
+    "manuscript/figures/fig_compare_ache_vs_fllhttr.png",
+    "manuscript/figures/fig_compare_ache_vs_ylsllqr.png",
+]
 SCREENING_DOCX_HASHES = {
     "manuscript/full/Chinese.docx": "610fcb7f7c09287233fa699c8f7043b665aa1a5d06d4d05e0c3f527ee8125c91",
     "manuscript/full/English.docx": "98943ba415134a0ca47b00022371d9e75abe6d76cac9d8f540cc6984adca2c32",
@@ -185,7 +198,7 @@ def audit_one(label: str, spec: dict) -> dict:
         "all_principal_numeric_results_are_retained": all(value in results for value in REQUIRED_NUMERIC),
         "figures_are_cited_in_text": all(fig in results or fig in methods for fig in spec["figures"]),
         "binding_and_function_boundaries_are_explicit": all(value.lower() in md.lower() for value in spec["limits"]),
-        "three_markdown_tables_are_retained": table_rows == [12, 13, 6],
+        "three_markdown_tables_are_retained": table_rows == [12, 13, 7],
         "docx_zip_crc_is_valid": docx["crc_ok"],
         "docx_visible_content_starts_with_analysis_methods": docx["text"].startswith(spec["start"]),
         "docx_has_only_analysis_methods_results_and_discussion_headings": docx["heading2_texts"] == [heading.removeprefix("## ") for heading in spec["sections"]],
@@ -219,6 +232,7 @@ def main() -> int:
     records = {label: audit_one(label, spec) for label, spec in SPECS.items()}
     source_checks = {path: sha256(ROOT / path) == expected for path, expected in SOURCE_HASHES.items()}
     screening_checks = {path: sha256(ROOT / path) == expected for path, expected in SCREENING_DOCX_HASHES.items()}
+    figure_checks = {path: (ROOT / path).is_file() and (ROOT / path).stat().st_size > 0 for path in FIGURE_FILES}
     concise_dir = ROOT / "manuscript" / "md_alllhrc" / "concise"
     package_checks = {
         "only_two_full_language_reports_are_delivered": len(records) == 2,
@@ -227,6 +241,7 @@ def main() -> int:
         "both_reports_have_no_abstract_or_introduction": all(record["checks"]["abstract_keywords_introduction_are_absent"] for record in records.values()),
         "all_source_support_hashes_match": all(source_checks.values()),
         "all_six_screening_docx_files_are_unchanged": all(screening_checks.values()),
+        "cited_figure_files_are_present": all(figure_checks.values()),
         "both_docx_files_are_figure_free": all(not record["embedded_media"] and record["drawings"] == 0 for record in records.values()),
     }
     report = {
@@ -234,6 +249,7 @@ def main() -> int:
         "scope": "Full-only English/Chinese docking and MD reports containing analysis methods, results and discussion; Discussion cites high-impact SCI literature.",
         "source_support_sha256": {path: {"expected": expected, "matches": source_checks[path]} for path, expected in SOURCE_HASHES.items()},
         "screening_docx_sha256": {path: {"expected": expected, "matches": screening_checks[path]} for path, expected in SCREENING_DOCX_HASHES.items()},
+        "cited_figure_files": figure_checks,
         "records": records, "package_checks": package_checks,
         "citation_mode": "Discussion section cites high-impact SCI literature; Analysis methods and Results contain no citation markup.",
         "verdict": "PASS" if all(package_checks.values()) else "FAIL",
