@@ -84,17 +84,25 @@
       "label": "full/English",
       "markdown": "manuscript/md_alllhrc/full/English.md",
       "docx": "manuscript/md_alllhrc/full/English.docx",
-      "markdown_sha256": "0d617433dac884f69f9cfc4b65f32706f807ae2537c64340b76e449714bfd9c1",
-      "docx_sha256": "c077096392b44ca1cf448ff16e9e0017fe69a492a9ac69e9b0e4766980dcbefc",
-      "body_word_count": 5609,
-      "body_character_count": 39777,
+      "markdown_sha256": "3417d24e32ead14980056ec23a45a970c210f589ec466de18696316d5f65d69b",
+      "docx_sha256": "7cf8921269c4aae4c407f9fb3ae1156a751b1de76049651038dd28e1204b5ee9",
+      "body_word_count": 5744,
+      "body_character_count": 41128,
       "table_data_row_counts": [
         12,
         13,
         7
       ],
-      "embedded_media": [],
-      "drawings": 0,
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png",
+        "word/media/image4.png",
+        "word/media/image5.png",
+        "word/media/image6.png",
+        "word/media/image7.png"
+      ],
+      "drawings": 7,
       "table_audits": [
         {
           "table_border_values": {
@@ -155,13 +163,15 @@
         "md_covers_apo_and_three_complexes": true,
         "all_principal_numeric_results_are_retained": true,
         "figures_are_cited_in_text": true,
+        "markdown_embeds_seven_png_figures": true,
         "binding_and_function_boundaries_are_explicit": true,
         "three_markdown_tables_are_retained": true,
         "docx_zip_crc_is_valid": true,
         "docx_visible_content_starts_with_analysis_methods": true,
         "docx_has_only_analysis_methods_results_and_discussion_headings": true,
         "docx_core_title_is_neutral": true,
-        "docx_has_no_media_drawings_header_footer_page_or_comments": true,
+        "docx_has_no_header_footer_page_or_comments": true,
+        "docx_embeds_seven_figures": true,
         "docx_uses_journal_body_style_and_indent": true,
         "docx_has_one_inch_margins": true,
         "docx_has_three_three_line_tables": true,
@@ -173,17 +183,25 @@
       "label": "full/Chinese",
       "markdown": "manuscript/md_alllhrc/full/Chinese.md",
       "docx": "manuscript/md_alllhrc/full/Chinese.docx",
-      "markdown_sha256": "7219a37a08a854ab284236d3573c132cf758f312d596fe1da1b1a1cfdf78df37",
-      "docx_sha256": "6c8e1250d76095b3552f4f270f312497f47c35369b555aa3adf71bd35091b6ff",
-      "body_word_count": 1650,
-      "body_character_count": 22093,
+      "markdown_sha256": "bb90c5573c56f1d5a98e981179e207ba1681f920770f9d363227ca2edd867216",
+      "docx_sha256": "21ae0c401bdc365bc806b1f191b33e0f2b56318e7040b5ba79e9954c5871cff8",
+      "body_word_count": 1689,
+      "body_character_count": 22966,
       "table_data_row_counts": [
         12,
         13,
         7
       ],
-      "embedded_media": [],
-      "drawings": 0,
+      "embedded_media": [
+        "word/media/image1.png",
+        "word/media/image2.png",
+        "word/media/image3.png",
+        "word/media/image4.png",
+        "word/media/image5.png",
+        "word/media/image6.png",
+        "word/media/image7.png"
+      ],
+      "drawings": 7,
       "table_audits": [
         {
           "table_border_values": {
@@ -244,13 +262,15 @@
         "md_covers_apo_and_three_complexes": true,
         "all_principal_numeric_results_are_retained": true,
         "figures_are_cited_in_text": true,
+        "markdown_embeds_seven_png_figures": true,
         "binding_and_function_boundaries_are_explicit": true,
         "three_markdown_tables_are_retained": true,
         "docx_zip_crc_is_valid": true,
         "docx_visible_content_starts_with_analysis_methods": true,
         "docx_has_only_analysis_methods_results_and_discussion_headings": true,
         "docx_core_title_is_neutral": true,
-        "docx_has_no_media_drawings_header_footer_page_or_comments": true,
+        "docx_has_no_header_footer_page_or_comments": true,
+        "docx_embeds_seven_figures": true,
         "docx_uses_journal_body_style_and_indent": true,
         "docx_has_one_inch_margins": true,
         "docx_has_three_three_line_tables": true,
@@ -267,7 +287,7 @@
     "all_source_support_hashes_match": true,
     "all_six_screening_docx_files_are_unchanged": true,
     "cited_figure_files_are_present": true,
-    "both_docx_files_are_figure_free": true
+    "both_docx_files_embed_seven_figures": true
   },
   "citation_mode": "Discussion section cites high-impact SCI literature; Analysis methods and Results contain no citation markup.",
   "verdict": "PASS"

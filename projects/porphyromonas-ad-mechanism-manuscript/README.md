@@ -15,7 +15,7 @@ v3.14.0以用户上传的本地三次独立AutoDock Vina汇总表与最优构象
 
 独立MD报告是明确例外：DOCX直接从`Analysis methods`或`分析方法`开始，仅含分析方法、结果和讨论三个一级章节；无显示标题、摘要、关键词、引言、统计分析章节或独立结论。分析方法与结果章节不含引文标记，讨论部分引用高分SCI文献解释致病肽导致AD的分子机制。每份报告保留3个三线表（表1：12条微肽本地三次Vina最优打分、均值±SD、氢键与PAS位点结合特征表；表2：apo AChE与三种复合物100 ns动力学全套定量指标对比表；表3：证据边界与支持/不支持解释清单，含FLLHTTR三次运行离散度边界）。
 
-八份当前DOCX均不含页眉、页脚、页码、批注或嵌入图像（图件在正文中文本引用并作为独立高分辨率文件存放于`manuscript/figures/`）；使用12磅正文、双倍行距和1英寸页边距。正文普通段落采用480 twip首行缩进，摘要、章节标题、表题、表格和参考文献等非普通正文元素不缩进。所有表格仅保留顶线、表头下横线和底线，不使用竖线、内部正文横线或表头底色。
+六份筛选DOCX不含页眉、页脚、页码、批注或嵌入图像。两份独立对接与MD报告同样不含页眉、页脚、页码或批注，但在正文中嵌入7幅PNG图（图1打分图、图2/图3最优构象、图S1总览、图4–6三套100 ns动力学对比图）；高分辨率原图仍保存在`manuscript/figures/`。全部DOCX使用12磅正文、双倍行距和1英寸页边距。正文普通段落采用480 twip首行缩进，摘要、章节标题、图题、表题、表格和参考文献等非普通正文元素不缩进。所有表格仅保留顶线、表头下横线和底线，不使用竖线、内部正文横线或表头底色。
 
 ## 科学定位
 
@@ -44,7 +44,7 @@ v3.14.0以用户上传的本地三次独立AutoDock Vina汇总表与最优构象
 - `fig_compare_ache_vs_ylsllqr.{png,svg,pdf}`：apo AChE单体与AChE–YLSLLQR复合物100 ns对比图（正文引用为图6 / Figure 6）；
 - `prioritization_funnel.{png,svg}`、`evidence_ladder.{png,svg}`：筛选流程与证据阶梯图。
 
-按规范要求，图件在DOCX正文中以图题与图注形式规范引用，不直接嵌入DOCX内部，便于作为独立高分辨率图片交付投稿系统。
+筛选稿DOCX不嵌入图像。独立对接与MD报告在图题前嵌入对应PNG，便于直接阅读；高分辨率原图同时作为独立文件存放。
 
 六份筛选Markdown使用Pandoc格式的BibTeX键并链接`references/references.bib`；标准库DOCX构建器生成连续编号的Vancouver式缓存文字。两份MD报告在方法与结果部分不含引文标记，在讨论部分系统引用高分SCI经典文献并附参考文献列表。
 
@@ -64,7 +64,7 @@ for language in English Chinese; do
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input "manuscript/full/${language}.md" --output "manuscript/full/${language}.docx" --title "${language}"
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-23T00:00:00Z --bibliography references/references.bib --input "manuscript/intermediate/${language}.md" --output "manuscript/intermediate/${language}.docx" --title "${language}"
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input "manuscript/concise/${language}.md" --output "manuscript/concise/${language}.docx" --title "${language}"
-  python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-23T00:00:00Z --input "manuscript/md_alllhrc/full/${language}.md" --output "manuscript/md_alllhrc/full/${language}.docx" --title "${language}"
+  python3 scripts/build_docx_stdlib.py --clean-manuscript --allow-images --timestamp 2026-08-23T00:00:00Z --input "manuscript/md_alllhrc/full/${language}.md" --output "manuscript/md_alllhrc/full/${language}.docx" --title "${language}"
 done
 ```
 

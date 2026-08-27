@@ -253,6 +253,7 @@ def parse_markdown(
     section_page_breaks: bool = True,
     bibliography: Path | None = None,
     reject_images: bool = False,
+    journal_body: bool = False,
 ):
     lines = md_path.read_text(encoding="utf-8").splitlines()
     citation_numbers = manuscript_citation_numbers(md_path, bibliography)
@@ -293,7 +294,7 @@ def parse_markdown(
             while i < len(lines) and lines[i].lstrip().startswith("|"):
                 rows.append(split_table_row(lines[i]))
                 i += 1
-            body.append(table_xml(rows, citation_numbers, base_size=20 if reject_images else 17))
+            body.append(table_xml(rows, citation_numbers, base_size=20 if journal_body else 17))
             body.append('<w:p><w:pPr><w:spacing w:after="40"/></w:pPr></w:p>')
             continue
         heading = re.match(r"^(#{1,6})\s+(.+)$", line)
@@ -310,7 +311,7 @@ def parse_markdown(
             i += 1
             continue
         if re.match(r"^\d+\.\s+", line):
-            body.append(para_xml(line, "Reference", indent="360", base_size=24 if reject_images else 18, citation_numbers=citation_numbers))
+            body.append(para_xml(line, "Reference", indent="360", base_size=24 if journal_body else 18, citation_numbers=citation_numbers))
             i += 1
             continue
         if re.match(r"^[-*]\s+", line):
@@ -320,7 +321,7 @@ def parse_markdown(
         # Clean submission manuscripts use a two-character-equivalent (24 pt,
         # 480 twip) first-line indent for main-text paragraphs. Abstract text,
         # headings, keywords, captions, references, and tables remain flush left.
-        style = "BodyText" if reject_images and current_h2 not in ("Abstract", "摘要") else "Normal"
+        style = "BodyText" if journal_body and current_h2 not in ("Abstract", "摘要") else "Normal"
         if line.startswith("**Table") or line.startswith("**表") or line.startswith("**Figure") or line.startswith("**图"):
             style = "Caption"
         elif line.startswith("**Article type") or line.startswith("**Draft status") or line.startswith("**文章类型") or line.startswith("**稿件状态") or line.startswith("**Bilingual"):
@@ -384,6 +385,7 @@ def build(
     title: str,
     *,
     clean_manuscript: bool = False,
+    allow_images: bool = False,
     core_timestamp: str | None = None,
     bibliography: Path | None = None,
 ):
@@ -391,7 +393,8 @@ def build(
         md_path,
         section_page_breaks=not clean_manuscript,
         bibliography=bibliography,
-        reject_images=clean_manuscript,
+        reject_images=clean_manuscript and not allow_images,
+        journal_body=clean_manuscript,
     )
     ns = f'xmlns:w="{W}" xmlns:r="{R}" xmlns:wp="{WP}" xmlns:a="{A}" xmlns:pic="{PIC}"'
     header_footer_refs = "" if clean_manuscript else (
@@ -491,6 +494,11 @@ def main():
             "and automatic page breaks before top-level sections."
         ),
     )
+    parser.add_argument(
+        "--allow-images",
+        action="store_true",
+        help="Embed local PNG figures even when --clean-manuscript is set.",
+    )
     args = parser.parse_args()
     if args.core_timestamp:
         try:
@@ -504,6 +512,7 @@ def main():
         args.output.resolve(),
         args.title,
         clean_manuscript=args.clean_manuscript,
+        allow_images=args.allow_images,
         core_timestamp=args.core_timestamp,
         bibliography=args.bibliography.resolve() if args.bibliography else None,
     )

@@ -29,7 +29,8 @@ The reports have no displayed title, abstract, keywords, or Introduction. Method
 Both DOCX files:
 
 - begin directly with `Analysis methods` or `分析方法` and display no article title;
-- contain no header, footer, page number, comment, figure, or embedded media (figures are cited and delivered separately in `manuscript/figures/`);
+- contain no header, footer, page number, or comment;
+- embed seven PNG figures (docking scores, poses A–F, poses G–L, 12-pose overview, and three 100-ns MD comparisons) from `manuscript/figures/`;
 - use 12-point journal body text, double spacing, one-inch margins, and first-line-indented ordinary body paragraphs;
 - contain three editable three-line tables without vertical or full-grid borders;
 - compile deterministically using stdlib Python tooling.
@@ -40,7 +41,7 @@ From the project root:
 
 ```bash
 for language in English Chinese; do
-  python3 scripts/build_docx_stdlib.py --clean-manuscript \
+  python3 scripts/build_docx_stdlib.py --clean-manuscript --allow-images \
     --timestamp 2026-08-23T00:00:00Z \
     --input "manuscript/md_alllhrc/full/${language}.md" \
     --output "manuscript/md_alllhrc/full/${language}.docx" \

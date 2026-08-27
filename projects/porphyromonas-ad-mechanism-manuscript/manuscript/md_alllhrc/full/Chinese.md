@@ -58,11 +58,19 @@
 | 11 | YHHLLCRR | 7 | SER-125, SER-203, TRP-86, TYR-124, TYR-337 | 3.07 | -9.03 | -8.62 ± 0.43 | 未直接对接经典PAS；深入胆碱结合口袋（Trp86、Tyr337）并与催化Ser203及Tyr124、Ser125结合 |
 | 12 | YLSLLQR | 7 | GLU-202, SER-203, THR-75, TYR-124, TYR-337, TYR-72 | 3.08 | -9.49 | -9.44 ± 0.09 | 对接至PAS位点；双重结合PAS核心残基Tyr72、Thr75与催化/阴离子活性中心Ser203、Glu202、Tyr337；三次运行均值最强 |
 
+![图1. 12条候选微肽对人源AChE的本地AutoDock Vina对接打分。](../../figures/fig5_docking_scores.png)
+
 **图1. 12条候选微肽对人源AChE（PDB 4EY6）的本地AutoDock Vina对接打分。** 蓝色圆点为三次独立成功运行的均值，误差棒为相应标准差，橙色菱形标记最优单次打分。数值越负表示预测结合越强。Vina打分为经验排序指标，不能等同于实验结合自由能。
+
+![图2. ALLLHRC、FCLHLQLR、FLLHTTR、HLLTLKKHV、HLPLLHRCC和HVLLLRQCA的最优对接构象。](../../figures/fig_docking_poses_A_F.png)
 
 **图2. ALLLHRC、FCLHLQLR、FLLHTTR、HLLTLKKHV、HLPLLHRCC和HVLLLRQCA的最优对接构象（A–F）。** 各面板左侧为AChE整体位姿，右侧为放大接触视图。微肽以橙色棍状显示，接触残基为青色，氢键以虚线标示。
 
+![图3. LLHLPKRTT、LLHPLRC、LLHPLRL、WLLVHLKK、YHHLLCRR和YLSLLQR的最优对接构象。](../../figures/fig_docking_poses_G_L.png)
+
 **图3. LLHLPKRTT、LLHPLRC、LLHPLRL、WLLVHLKK、YHHLLCRR和YLSLLQR的最优对接构象（G–L）。** 显示约定与图2一致。LLHPLRL（I面板）从PAS门控残基Trp286/Tyr341跨越至催化His447。
+
+![图S1. 12条微肽最优对接构象总览。](../../figures/fig_docking_poses_12_combined.png)
 
 **图S1. 12条微肽最优对接构象总览。** 单页汇总图2与图3对应的A–L面板。
 
@@ -82,6 +90,18 @@
 ### 100 ns全原子分子动力学模拟：AChE单体与三种致病肽复合物的结构稳定性与构象变化
 
 为检验对接复合物在生理水溶液环境下的动态稳定性与致病构象特征，本研究对apo AChE空白对照单体与三种致病复合物体系（ALLLHRC、FLLHTTR、YLSLLQR）完成了100 ns（5,000帧）的全原子分子动力学模拟与全套多层次指标提取（表2，图4、图5、图6）。
+
+![图4. apo AChE与AChE–ALLLHRC 100 ns对比。](../../figures/fig_compare_ache_vs_alllhrc.png)
+
+**图4. apo AChE单体与AChE–ALLLHRC复合物100 ns分子动力学对比。** 各面板依次为骨架RMSD（A）、逐残基RMSF（B）、SASA（C）、回转半径（D）、二级结构比例（E）和分子间氢键（F）。
+
+![图5. apo AChE与AChE–FLLHTTR 100 ns对比。](../../figures/fig_compare_ache_vs_fllhttr.png)
+
+**图5. apo AChE单体与AChE–FLLHTTR复合物100 ns分子动力学对比。** 面板布局与图4相同。
+
+![图6. apo AChE与AChE–YLSLLQR 100 ns对比。](../../figures/fig_compare_ache_vs_ylsllqr.png)
+
+**图6. apo AChE单体与AChE–YLSLLQR复合物100 ns分子动力学对比。** 面板布局与图4相同。
 
 **表2. 100 ns分子动力学模拟全阶段定量指标对比表（最后20 ns稳态分析窗均值±标准差及全轨迹特征）。**
 

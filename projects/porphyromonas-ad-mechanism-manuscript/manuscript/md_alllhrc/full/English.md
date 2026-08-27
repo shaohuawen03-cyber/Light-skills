@@ -58,11 +58,19 @@ Local AutoDock Vina docking of the twelve candidate micropeptides against human 
 | 11 | YHHLLCRR | 7 | SER-125, SER-203, TRP-86, TYR-124, TYR-337 | 3.07 | -9.03 | -8.62 ± 0.43 | No direct PAS contact; deeply targets choline-binding pocket (Trp86, Tyr337) and catalytic Ser203, Ser125, and Tyr124 |
 | 12 | YLSLLQR | 7 | GLU-202, SER-203, THR-75, TYR-124, TYR-337, TYR-72 | 3.08 | -9.49 | -9.44 ± 0.09 | Yes (PAS engaged); simultaneously coordinates PAS residues Tyr72 and Thr75 with catalytic and anionic residues Ser203, Glu202, and Tyr337; strongest three-run mean |
 
+![Figure 1. Local AutoDock Vina scores of twelve candidate micropeptides against human AChE.](../../figures/fig5_docking_scores.png)
+
 **Figure 1. Local AutoDock Vina scores of twelve candidate micropeptides against human AChE (PDB 4EY6).** Blue circles show the mean affinity from three independent successful runs; whiskers show the corresponding standard deviation; orange diamonds mark the best-run affinity. More negative values indicate stronger predicted binding. Scores are empirical Vina ranking metrics, not experimental binding free energies.
+
+![Figure 2. Best-scoring docking poses of ALLLHRC, FCLHLQLR, FLLHTTR, HLLTLKKHV, HLPLLHRCC, and HVLLLRQCA.](../../figures/fig_docking_poses_A_F.png)
 
 **Figure 2. Best-scoring docking poses of ALLLHRC, FCLHLQLR, FLLHTTR, HLLTLKKHV, HLPLLHRCC, and HVLLLRQCA (panels A–F).** Each panel shows the global pose on AChE (left) and a magnified contact view (right). The peptide is shown in orange sticks; contacting AChE residues are cyan; hydrogen bonds are dashed.
 
+![Figure 3. Best-scoring docking poses of LLHLPKRTT, LLHPLRC, LLHPLRL, WLLVHLKK, YHHLLCRR, and YLSLLQR.](../../figures/fig_docking_poses_G_L.png)
+
 **Figure 3. Best-scoring docking poses of LLHLPKRTT, LLHPLRC, LLHPLRL, WLLVHLKK, YHHLLCRR, and YLSLLQR (panels G–L).** Display conventions match Figure 2. LLHPLRL (panel I) spans PAS gatekeepers Trp286/Tyr341 to catalytic His447.
+
+![Figure S1. Combined overview of all twelve best-scoring docking poses.](../../figures/fig_docking_poses_12_combined.png)
 
 **Figure S1. Combined overview of all twelve best-scoring docking poses.** Single-page layout of panels A–L corresponding to Figures 2 and 3.
 
@@ -82,6 +90,18 @@ These results confirm that periodontitis-derived micropeptides preferentially ta
 ### 100-ns all-atom molecular dynamics: Structural stability and conformational dynamics of apo AChE and three pathogenic peptide complexes
 
 To assess dynamic behavior in an explicit aqueous environment, 100-ns production simulations were completed for the unliganded apo AChE control and three micropeptide complexes (AChE–ALLLHRC, Figure 4; AChE–FLLHTTR, Figure 5; AChE–YLSLLQR, Figure 6) (Table 2, Figures 4–6).
+
+![Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns comparison.](../../figures/fig_compare_ache_vs_alllhrc.png)
+
+**Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns molecular dynamics comparison.** Panels show backbone RMSD (A), per-residue RMSF (B), SASA (C), radius of gyration (D), secondary-structure fractions (E), and intermolecular hydrogen bonds (F).
+
+![Figure 5. Apo AChE versus AChE–FLLHTTR 100-ns comparison.](../../figures/fig_compare_ache_vs_fllhttr.png)
+
+**Figure 5. Apo AChE versus AChE–FLLHTTR 100-ns molecular dynamics comparison.** Panel layout matches Figure 4.
+
+![Figure 6. Apo AChE versus AChE–YLSLLQR 100-ns comparison.](../../figures/fig_compare_ache_vs_ylsllqr.png)
+
+**Figure 6. Apo AChE versus AChE–YLSLLQR 100-ns molecular dynamics comparison.** Panel layout matches Figure 4.
 
 **Table 2. Quantitative trajectory metrics across 100-ns molecular dynamics simulations (mean ± standard deviation over the final 20-ns steady-state window and full-trajectory features).**
 

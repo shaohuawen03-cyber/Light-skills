@@ -135,7 +135,7 @@ def inspect_docx(path: Path, spec: dict) -> dict:
                 heading2_texts.append(ptext)
                 continue
             if ptext and current_section in {section.removeprefix("## ") for section in spec["sections"]} and style not in {
-                "Heading3", "Heading4", "Caption", "TableText", "ListParagraph", "Reference"
+                "Heading3", "Heading4", "Caption", "TableText", "ListParagraph", "Reference", "Figure"
             }:
                 body_styles.append(style)
     three_line = bool(table_audits) and all(
@@ -158,7 +158,7 @@ def rebuild_matches(md: Path, docx: Path, language: str) -> tuple[bool, str]:
     with tempfile.TemporaryDirectory(prefix="md-full-audit-") as tmp:
         rebuilt = Path(tmp) / docx.name
         run = subprocess.run(
-            [sys.executable, str(BUILDER.resolve()), "--clean-manuscript", "--timestamp", TIMESTAMP,
+            [sys.executable, str(BUILDER.resolve()), "--clean-manuscript", "--allow-images", "--timestamp", TIMESTAMP,
              "--input", str(md.resolve()), "--output", str(rebuilt.resolve()), "--title", language],
             cwd=ROOT, capture_output=True, text=True,
         )
@@ -197,15 +197,18 @@ def audit_one(label: str, spec: dict) -> dict:
         "md_covers_apo_and_three_complexes": all(sys_name in results for sys_name in spec["systems"]),
         "all_principal_numeric_results_are_retained": all(value in results for value in REQUIRED_NUMERIC),
         "figures_are_cited_in_text": all(fig in results or fig in methods for fig in spec["figures"]),
+        "markdown_embeds_seven_png_figures": len(re.findall(r"(?m)^!\[[^\]]*\]\(\.\./\.\./figures/[^)]+\.png\)$", md)) == 7,
         "binding_and_function_boundaries_are_explicit": all(value.lower() in md.lower() for value in spec["limits"]),
         "three_markdown_tables_are_retained": table_rows == [12, 13, 7],
         "docx_zip_crc_is_valid": docx["crc_ok"],
         "docx_visible_content_starts_with_analysis_methods": docx["text"].startswith(spec["start"]),
         "docx_has_only_analysis_methods_results_and_discussion_headings": docx["heading2_texts"] == [heading.removeprefix("## ") for heading in spec["sections"]],
         "docx_core_title_is_neutral": spec["language"] in docx["core_text"] and "ALLLHRC" not in docx["core_text"],
-        "docx_has_no_media_drawings_header_footer_page_or_comments": (
-            not docx["media"] and docx["drawings"] == 0 and not docx["header_footer"] and not docx["comments"]
-            and 'w:instr="PAGE"' not in docx["all_xml"] and "/relationships/image" not in docx["all_xml"]
+        "docx_has_no_header_footer_page_or_comments": (
+            not docx["header_footer"] and not docx["comments"] and 'w:instr="PAGE"' not in docx["all_xml"]
+        ),
+        "docx_embeds_seven_figures": (
+            docx["drawings"] == 7 and len(docx["media"]) == 7 and "/relationships/image" in docx["all_xml"]
         ),
         "docx_uses_journal_body_style_and_indent": (
             '<w:sz w:val="24"/><w:szCs w:val="24"/>' in docx["styles_xml"]
@@ -242,7 +245,7 @@ def main() -> int:
         "all_source_support_hashes_match": all(source_checks.values()),
         "all_six_screening_docx_files_are_unchanged": all(screening_checks.values()),
         "cited_figure_files_are_present": all(figure_checks.values()),
-        "both_docx_files_are_figure_free": all(not record["embedded_media"] and record["drawings"] == 0 for record in records.values()),
+        "both_docx_files_embed_seven_figures": all(record["drawings"] == 7 and len(record["embedded_media"]) == 7 for record in records.values()),
     }
     report = {
         "schema": "local.md_alllhrc_package_audit.v3",

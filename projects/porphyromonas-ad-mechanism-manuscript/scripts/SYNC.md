@@ -16,7 +16,7 @@ git pull --ff-only origin arena/01a04122-light-skills
 git rev-parse HEAD
 ```
 
-`Test-Path '.git'` must return `True`. If it returns `False`, locate or clone the repository before running Git commands. Expected HEAD after a successful pull is `7ede267f0ba24ce73d9289d070c3a25918cdf026`.
+`Test-Path '.git'` must return `True`. If it returns `False`, locate or clone the repository before running Git commands. After pulling, run `git rev-parse HEAD` and confirm it matches `origin/arena/01a04122-light-skills`.
 
 If the local branch already exists, replace the `git switch --track -c ...` line with:
 
@@ -61,7 +61,7 @@ for language in English Chinese; do
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-17T00:00:00Z --bibliography references/references.bib --input "manuscript/full/${language}.md" --output "manuscript/full/${language}.docx" --title "${language}"
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-23T00:00:00Z --bibliography references/references.bib --input "manuscript/intermediate/${language}.md" --output "manuscript/intermediate/${language}.docx" --title "${language}"
   python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-23T00:00:00Z --bibliography references/references.bib --input "manuscript/concise/${language}.md" --output "manuscript/concise/${language}.docx" --title "${language}"
-  python3 scripts/build_docx_stdlib.py --clean-manuscript --timestamp 2026-08-23T00:00:00Z --input "manuscript/md_alllhrc/full/${language}.md" --output "manuscript/md_alllhrc/full/${language}.docx" --title "${language}"
+  python3 scripts/build_docx_stdlib.py --clean-manuscript --allow-images --timestamp 2026-08-23T00:00:00Z --input "manuscript/md_alllhrc/full/${language}.md" --output "manuscript/md_alllhrc/full/${language}.docx" --title "${language}"
 done
 
 python3 scripts/audit_submission_manuscripts.py
