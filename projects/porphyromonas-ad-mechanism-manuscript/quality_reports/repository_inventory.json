@@ -4,8 +4,8 @@
     "quality_reports/repository_inventory.json (self-referential output)",
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
-  "total_files": 191,
-  "total_bytes": 43629194,
+  "total_files": 192,
+  "total_bytes": 43630441,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,7 +17,7 @@
     },
     "manuscript": {
       "files": 44,
-      "bytes": 34180108
+      "bytes": 34180466
     },
     "project_root": {
       "files": 4,
@@ -41,11 +41,11 @@
     },
     "scripts": {
       "files": 29,
-      "bytes": 186939
+      "bytes": 186955
     },
     "source_materials": {
-      "files": 14,
-      "bytes": 1144365
+      "files": 15,
+      "bytes": 1145238
     },
     "submission": {
       "files": 6,
@@ -56,7 +56,7 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 18722,
-      "sha256": "1103bf6ae688d3d14c6caaed73d68d3e7c6e43edf0bfb02a55477d58dfc38de3"
+      "sha256": "b344574487ed79e0f89e33e73589cb89cdbcef52f457bf7eadcfc14bc2632233"
     },
     {
       "path": "README.md",
@@ -380,23 +380,23 @@
     },
     {
       "path": "manuscript/md_alllhrc/full/Chinese.docx",
-      "size_bytes": 9673708,
-      "sha256": "21ae0c401bdc365bc806b1f191b33e0f2b56318e7040b5ba79e9954c5871cff8"
+      "size_bytes": 9673760,
+      "sha256": "ab4911892676e70e675e947eeb85c6acf59aa03cf981d34c05566a7241c5aedb"
     },
     {
       "path": "manuscript/md_alllhrc/full/Chinese.md",
-      "size_bytes": 43293,
-      "sha256": "bb90c5573c56f1d5a98e981179e207ba1681f920770f9d363227ca2edd867216"
+      "size_bytes": 43419,
+      "sha256": "3839f791495e5d62f485b4a4bab576d3b07b213aa8d9dc2ae3901e21a455794f"
     },
     {
       "path": "manuscript/md_alllhrc/full/English.docx",
-      "size_bytes": 9669739,
-      "sha256": "7cf8921269c4aae4c407f9fb3ae1156a751b1de76049651038dd28e1204b5ee9"
+      "size_bytes": 9669792,
+      "sha256": "4e61812397855ba2b6b94b6c67f618295ba88db5d7c7cfc372797c82bce454fc"
     },
     {
       "path": "manuscript/md_alllhrc/full/English.md",
-      "size_bytes": 41466,
-      "sha256": "3417d24e32ead14980056ec23a45a970c210f589ec466de18696316d5f65d69b"
+      "size_bytes": 41593,
+      "sha256": "c60eda6ec1f662edd97a853e71559b45024821938c619622a0b93827a2a03543"
     },
     {
       "path": "manuscript/supplementary_tables_bilingual.docx",
@@ -521,7 +521,7 @@
     {
       "path": "quality_reports/md_alllhrc_package_audit.json",
       "size_bytes": 11548,
-      "sha256": "10acb5acb322c327f4e8b29de4343197658c2d500d4f2b875e1ea4209176771a"
+      "sha256": "daa28337bac0469f762bb58816f3da44bf9b858b0bba9df5de6edca4e59e6506"
     },
     {
       "path": "quality_reports/mechanical_check_en.json",
@@ -765,8 +765,8 @@
     },
     {
       "path": "scripts/SYNC.md",
-      "size_bytes": 6100,
-      "sha256": "4076d854002cd06fecba264e99674275fa4cc677f5d0799d8cf47e0031a87960"
+      "size_bytes": 6116,
+      "sha256": "7ab35a894842e5e2c04613f3a75ae21e8a48d40627391303cee27447c6a8f1a1"
     },
     {
       "path": "scripts/audit_citation_inventory.py",
@@ -922,6 +922,11 @@
       "path": "source_materials/md_alllhrc/peptide_rmsd_jump_diagnosis.txt",
       "size_bytes": 2614,
       "sha256": "43f3f84ae57b1f037e80f4aed3d9cb3614a0df92f64a7e3c92c2972291f6f3f3"
+    },
+    {
+      "path": "source_materials/md_results/COMPARE_FIGURE_PROVENANCE.md",
+      "size_bytes": 873,
+      "sha256": "3dc4c840c57a7b942b8955a57e3bf2f4060db10c95713419865714cd3240efe8"
     },
     {
       "path": "source_materials/md_results/RESULTS_ANALYSIS_v1.md",

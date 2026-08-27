@@ -89,7 +89,9 @@
 
 ### 100 ns全原子分子动力学模拟：AChE单体与三种致病肽复合物的结构稳定性与构象变化
 
-为检验对接复合物在生理水溶液环境下的动态稳定性与致病构象特征，本研究对apo AChE空白对照单体与三种致病复合物体系（ALLLHRC、FLLHTTR、YLSLLQR）完成了100 ns（5,000帧）的全原子分子动力学模拟与全套多层次指标提取（表2，图4、图5、图6）。
+为检验对接复合物在生理水溶液环境下的动态稳定性与致病构象特征，本研究对apo AChE空白对照单体与三种致病复合物体系（ALLLHRC、FLLHTTR、YLSLLQR）完成了100 ns（5,000帧）的全原子分子动力学模拟与全套多层次指标提取（表2，图4、图5、图6）。以下三幅六面板图即为 apo 对照与 ALLLHRC、FLLHTTR、YLSLLQR 复合物的动力学对比图。
+
+<!-- PAGEBREAK -->
 
 ![图4. apo AChE与AChE–ALLLHRC 100 ns对比。](../../figures/fig_compare_ache_vs_alllhrc.png)
 

@@ -89,7 +89,9 @@ These results confirm that periodontitis-derived micropeptides preferentially ta
 
 ### 100-ns all-atom molecular dynamics: Structural stability and conformational dynamics of apo AChE and three pathogenic peptide complexes
 
-To assess dynamic behavior in an explicit aqueous environment, 100-ns production simulations were completed for the unliganded apo AChE control and three micropeptide complexes (AChE–ALLLHRC, Figure 4; AChE–FLLHTTR, Figure 5; AChE–YLSLLQR, Figure 6) (Table 2, Figures 4–6).
+To assess dynamic behavior in an explicit aqueous environment, 100-ns production simulations were completed for the unliganded apo AChE control and three micropeptide complexes (AChE–ALLLHRC, Figure 4; AChE–FLLHTTR, Figure 5; AChE–YLSLLQR, Figure 6) (Table 2, Figures 4–6). The six-panel plots below are the apo-versus-complex comparison figures for ALLLHRC, FLLHTTR, and YLSLLQR.
+
+<!-- PAGEBREAK -->
 
 ![Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns comparison.](../../figures/fig_compare_ache_vs_alllhrc.png)
 
