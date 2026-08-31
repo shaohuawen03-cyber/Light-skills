@@ -82,12 +82,12 @@ ZH_AUTHORS = EN_AUTHORS
 EN_LIMITS = {
     "full": ["100-ns", "single high-resolution trajectories", "isothermal titration calorimetry", "surface plasmon resonance"],
     "intermediate": ["100-ns", "single 100-ns trajectory", "isothermal titration calorimetry", "surface plasmon resonance"],
-    "concise": ["100-ns", "single 100-ns trajectory", "isothermal titration calorimetry", "surface plasmon resonance"],
+    "concise": ["100-ns", "single 100-ns"],
 }
 ZH_LIMITS = {
     "full": ["100 ns", "单条", "等温滴定量热", "表面等离子共振"],
     "intermediate": ["100 ns", "单条", "等温滴定量热", "表面等离子共振"],
-    "concise": ["100 ns", "单条", "等温滴定量热", "表面等离子共振"],
+    "concise": ["100 ns", "单条"],
 }
 
 
