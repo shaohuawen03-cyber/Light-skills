@@ -76,7 +76,7 @@ ZH_METHOD = {
 EN_AUTHORS = {
     "full": ["Atanasova", "Dominy", "Silman", "Inestrosa", "Hampel", "Bartus", "Selkoe"],
     "intermediate": ["Atanasova", "Dominy", "Silman", "Inestrosa", "Hampel", "Bartus", "Selkoe"],
-    "concise": ["Atanasova", "Dominy", "Silman", "Inestrosa"],
+    "concise": ["Atanasova", "Dominy", "Silman", "Inestrosa", "Selkoe", "Lushchekina", "De Ferrari"],
 }
 ZH_AUTHORS = EN_AUTHORS
 EN_LIMITS = {

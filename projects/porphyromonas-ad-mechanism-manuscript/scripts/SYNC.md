@@ -27,7 +27,7 @@ git switch arena/01a04122-light-skills
 If Word lock copies or local DOCX edits block the switch/pull:
 
 ```powershell
-git restore projects/porphyromonas-ad-mechanism-manuscript/manuscript/concise/Chinese.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/concise/English.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/intermediate/English.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/full/Chinese.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/full/English.docx
+git restore projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/concise/Chinese.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/concise/English.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/intermediate/Chinese.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/intermediate/English.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/full/Chinese.docx projects/porphyromonas-ad-mechanism-manuscript/manuscript/md_alllhrc/full/English.docx
 ```
 
 If the repository is not yet cloned:
