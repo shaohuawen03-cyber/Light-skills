@@ -5,7 +5,7 @@
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
   "total_files": 202,
-  "total_bytes": 82353607,
+  "total_bytes": 82345213,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,7 +17,7 @@
     },
     "manuscript": {
       "files": 53,
-      "bytes": 72878181
+      "bytes": 72869822
     },
     "project_root": {
       "files": 4,
@@ -25,7 +25,7 @@
     },
     "quality_reports": {
       "files": 43,
-      "bytes": 231409
+      "bytes": 231408
     },
     "references": {
       "files": 4,
@@ -41,7 +41,7 @@
     },
     "scripts": {
       "files": 29,
-      "bytes": 190330
+      "bytes": 190296
     },
     "source_materials": {
       "files": 15,
@@ -56,7 +56,7 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 19813,
-      "sha256": "0b852d842eb6210c379ac06ea0d388761a0bbd4e90663faba9058e52d4c13cf0"
+      "sha256": "39fca8bd7ffc1d9b884418e7510c27239de226eebbacdc87e1dd90db3e9c3629"
     },
     {
       "path": "README.md",
@@ -380,28 +380,28 @@
     },
     {
       "path": "manuscript/md_alllhrc/VERSIONS.md",
-      "size_bytes": 8989,
-      "sha256": "63dcaa6b1b199c27e7ae9081f0531d5f9a6026443626cc86f1606a5e75a9e540"
+      "size_bytes": 9059,
+      "sha256": "29a3b09b55ef605b7990ea3964099709717bd1d5f3fb0583289fb7fc0a555c87"
     },
     {
       "path": "manuscript/md_alllhrc/concise/Chinese.docx",
-      "size_bytes": 9658186,
-      "sha256": "145622ca0479a8413d78f4dcdf34aab3f4ba15f325ad2b4e67206d85ed6e3586"
+      "size_bytes": 9656883,
+      "sha256": "d20003d7380764fccd5cba21aef6426221e2233ce5e4ce5a56c6b461d45d98a2"
     },
     {
       "path": "manuscript/md_alllhrc/concise/Chinese.md",
-      "size_bytes": 12198,
-      "sha256": "9b956d6f0678ad5ba2176455e5e4be4a5774fc013250b6fdd1882bf8987a24fb"
+      "size_bytes": 9789,
+      "sha256": "a5db181d3fdae8ade040dabaa73fbd7ba991a033f34e73c895e6986ca62394a2"
     },
     {
       "path": "manuscript/md_alllhrc/concise/English.docx",
-      "size_bytes": 9657875,
-      "sha256": "d67385b100820c5c1f0d604a6691c7e8e1e4ff48a40bc629ba2eadd717d009a8"
+      "size_bytes": 9656420,
+      "sha256": "af2364d3dcff3b507127dbe1aba5f5aceae0081618e55d9da24401e6b36d9acf"
     },
     {
       "path": "manuscript/md_alllhrc/concise/English.md",
-      "size_bytes": 13633,
-      "sha256": "47a7979b8ce508aea4305130932ef2b87910f9cdfbd8b089818a3e82ba4f663c"
+      "size_bytes": 10371,
+      "sha256": "23275888aa325f9c988b837077c8c31c8f46625140a25745da9c22942b41fd3e"
     },
     {
       "path": "manuscript/md_alllhrc/full/Chinese.docx",
@@ -565,8 +565,8 @@
     },
     {
       "path": "quality_reports/md_alllhrc_package_audit.json",
-      "size_bytes": 27525,
-      "sha256": "5e640b873d363b87e477321828a34fa54f6e517182ad647b391278238885766e"
+      "size_bytes": 27524,
+      "sha256": "3f86e697c504429fa0de6fa3788b5c363525c6610cd95d1fa9dbb74a15b39965"
     },
     {
       "path": "quality_reports/mechanical_check_en.json",
@@ -880,8 +880,8 @@
     },
     {
       "path": "scripts/audit_md_alllhrc_package.py",
-      "size_bytes": 19052,
-      "sha256": "853c6e3818607936137717ed05689041cc66351b00a6662e03dab8a213ebd08a"
+      "size_bytes": 19018,
+      "sha256": "c9053c83034231168055d02fb08d812be26584b6496626683f86328272cf8581"
     },
     {
       "path": "scripts/audit_submission_manuscripts.py",

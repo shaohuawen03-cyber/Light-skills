@@ -103,12 +103,12 @@
     "english_word_counts": {
       "full": 5761,
       "intermediate": 2229,
-      "concise": 2095
+      "concise": 1657
     },
     "chinese_character_counts": {
       "full": 23040,
       "intermediate": 9217,
-      "concise": 7915
+      "concise": 6445
     }
   },
   "records": {
@@ -512,10 +512,10 @@
       "label": "concise/English",
       "markdown": "manuscript/md_alllhrc/concise/English.md",
       "docx": "manuscript/md_alllhrc/concise/English.docx",
-      "markdown_sha256": "47a7979b8ce508aea4305130932ef2b87910f9cdfbd8b089818a3e82ba4f663c",
-      "docx_sha256": "d67385b100820c5c1f0d604a6691c7e8e1e4ff48a40bc629ba2eadd717d009a8",
-      "body_word_count": 2095,
-      "body_character_count": 13446,
+      "markdown_sha256": "23275888aa325f9c988b837077c8c31c8f46625140a25745da9c22942b41fd3e",
+      "docx_sha256": "af2364d3dcff3b507127dbe1aba5f5aceae0081618e55d9da24401e6b36d9acf",
+      "body_word_count": 1657,
+      "body_character_count": 10230,
       "table_data_row_counts": [
         12,
         6,
@@ -611,10 +611,10 @@
       "label": "concise/Chinese",
       "markdown": "manuscript/md_alllhrc/concise/Chinese.md",
       "docx": "manuscript/md_alllhrc/concise/Chinese.docx",
-      "markdown_sha256": "9b956d6f0678ad5ba2176455e5e4be4a5774fc013250b6fdd1882bf8987a24fb",
-      "docx_sha256": "145622ca0479a8413d78f4dcdf34aab3f4ba15f325ad2b4e67206d85ed6e3586",
-      "body_word_count": 1040,
-      "body_character_count": 7915,
+      "markdown_sha256": "a5db181d3fdae8ade040dabaa73fbd7ba991a033f34e73c895e6986ca62394a2",
+      "docx_sha256": "d20003d7380764fccd5cba21aef6426221e2233ce5e4ce5a56c6b461d45d98a2",
+      "body_word_count": 893,
+      "body_character_count": 6445,
       "table_data_row_counts": [
         12,
         6,

@@ -87,32 +87,25 @@ apo AChE 与三种复合物在 100 ns 内保持球状折叠（表2，图4–6）
 
 ## 讨论
 
-文献中能够直接称为致病肽的，首先是 β-淀粉样肽（Aβ）本身。Selkoe 与 Hardy 综述的淀粉样级联指出：APP 经 β/γ 分泌酶切出 Aβ40/Aβ42，可溶寡聚体损伤突触，斑块为病理终点；家族性 AD 的 APP、PSEN 突变改变 Aβ 产量与长度，构成 Aβ 参与 AD 的遗传主证据。单凭一篇 AChE–Aβ 模拟不足以承担这一层。
-
-第二层是实验：AChE 如何帮 Aβ 致病。Inestrosa 等证明 AChE 经外周阴离子位点（PAS）加速 Aβ 成纤，AChE–Aβ 复合物比游离 Aβ 更具神经毒性。De Ferrari 等进一步定位 PAS 附近疏水基序，合成肽即可模拟全酶的促纤效应。Silman 与 Sussman 指出同一 PAS 还是 20 Å 活性峡部的静电门控，因此占位可同时打击催化与伴侣两种功能。
-
-第三层才是动力学。Lushchekina 等对人 AChE 与多条 Aβ 做加速 MD，显示 Aβ 被酶表面强烈吸引并形成稳定复合物，提出 AChE 为聚集成核中心。Atanasova 等将单条 Aβ 对接到 PAS 并运行 1 μs：复合物保持稳定，主驻留区为毗邻 PAS 的 344–361，结合靠氢键、芳香接触和疏水作用，酶骨架不解折叠。下列四步完全由本次对接构象与 100 ns 轨迹推出，是把牙周炎微肽放到上述 Aβ–AChE 病理链上的计算类比，而不是把这三条肽写成已被实验证实的 AD 致病肽。
+与本次计算直接相关的文献只保留四篇。Selkoe 与 Hardy 综述 Aβ 与 AD：APP 经 β/γ 分泌酶切出 Aβ40/Aβ42，可溶寡聚体损伤突触，家族性 APP/PSEN 突变改变 Aβ 产量与长度。Inestrosa 等用实验证明 AChE 经外周阴离子位点（PAS）加速 Aβ 成纤，AChE–Aβ 复合物比游离 Aβ 更具神经毒性。动力学方面，Lushchekina 等对人 AChE 与多条 Aβ 做加速 MD，显示 Aβ 被酶表面吸引并形成稳定复合物，提出 AChE 为聚集成核中心；Atanasova 等将单条 Aβ 对接到 PAS 并运行 1 μs，复合物保持稳定，主驻留区为毗邻 PAS 的 344–361。下列四步仅由本次对接与 100 ns 轨迹推出，是把牙周炎微肽放到这条 Aβ–AChE 链上的计算类比。
 
 1. PAS 识别与峡部入口占位。  
-   12 条微肽的最优构象富集于人源 AChE（PDB 4EY6）的 PAS 与峡部入口（图1–3，图S1）。FLLHTTR 锚定 Asp74、Tyr72、His287（最优 −9.60 kcal/mol，图2C）；YLSLLQR 同时接触 PAS（Tyr72、Thr75）与催化入口（Ser203、Glu202；三次均值 −9.44 ± 0.09 kcal/mol，图3L）；LLHPLRL 从门控残基 Trp286/Tyr341 跨越至催化 His447（10 个氢键，图3I）；HLLTLKKHV 触及 Tyr72 与 344–361 区的 Phe346。这与 Atanasova 将 Aβ 放置于 PAS、并在 344–361 发现主驻留区的几何逻辑一致：外源短肽同样可以成为 PAS 成核面上的配体。
+   12 条微肽的最优构象富集于人源 AChE（PDB 4EY6）的 PAS 与峡部入口（图1–3，图S1）。FLLHTTR 锚定 Asp74、Tyr72、His287（最优 −9.60 kcal/mol，图2C）；YLSLLQR 同时接触 PAS（Tyr72、Thr75）与催化入口（三次均值 −9.44 ± 0.09 kcal/mol，图3L）；LLHPLRL 从 Trp286/Tyr341 跨越至 His447（图3I）；HLLTLKKHV 触及 Tyr72 与 344–361 的 Phe346。几何上与 Atanasova 将 Aβ 置于 PAS、主驻留 344–361 一致。
 
 2. 复合物稳定、酶不崩解、肽不脱落。  
-   图4–6 的 apo 对照与三条复合物表明，AChE 在 100 ns 内保持球状折叠：骨架 RMSD < 0.22 nm，Rg 2.29–2.32 nm，α-螺旋约 33–34%、β-折叠约 17% 与 apo 重叠（E 面板）。复合物曲线略高于 apo，对应肽结合后 PAS 邻近环区的局部适应，而不是变性。F 面板氢键持续存在（后 20 ns：ALLLHRC 2.19 ± 0.80，FLLHTTR 2.80 ± 0.99，YLSLLQR 4.23 ± 1.24），各体系保留 7 对界面接触。计算意义上，肽处于 AChE 表面的结合态，具备作为病理性伴侣配体的驻留条件。
+   图4–6 显示 100 ns 内 AChE 保持球状折叠：RMSD < 0.22 nm，Rg 2.29–2.32 nm，α-螺旋约 33–34%、β-折叠约 17% 与 apo 重叠。复合物曲线略高于 apo，是 PAS 邻近环区适应，不是变性。后 20 ns 氢键持续（ALLLHRC 2.19 ± 0.80，FLLHTTR 2.80 ± 0.99，YLSLLQR 4.23 ± 1.24），各体系 7 对接触。这与 Lushchekina、Atanasova 的“复合物稳定、肽不进入本体溶剂”一致。
 
 3. 胆碱能传递受损。  
-   PAS 位于催化三联体上方约 20 Å 的峡部入口。轨迹中 RMSF 升幅集中于表面环区（B 面板），与门控呼吸被配体占用相符。物理占位可阻碍乙酰胆碱进入峡部并扰动门控，从而在计算模型中同时打击 AChE 的经典催化功能。这把 Bartus、Hampel 所述的胆碱能缺损，落到 PAS 被微肽占据这一具体结构事件上。
+   PAS 位于催化三联体上方约 20 Å 的峡部入口。RMSF 升幅集中于表面环区（B 面板）。物理占位可阻碍乙酰胆碱进入并扰动门控，在计算模型中同时打击 AChE 的催化功能。
 
 4. 病理性伴侣与淀粉样共成核。  
-   Inestrosa、De Ferrari 的实验把 PAS 定为促纤位点；Lushchekina 的加速 MD 与 Atanasova 的 1 μs 轨迹把该过程落实为肽在 PAS/344–361 多模式驻留、氢键维持界面、酶作为支架降低成核能垒。本次三条复合物给出同一类计算图景——稳定界面、持续极性网络、入口环区微扰、YLSLLQR 的 SASA 收缩（图6C）显示更紧密的界面埋藏。牙周炎微肽因此可作为异源“种子”改变 PAS 静电/疏水微环境，促进内源 Aβ 在同一表面上共成核；AChE–微肽–Aβ 三元组装在该模型中同时携带胆碱能阻断和增强的淀粉样毒性。Dominy 等在 AD 脑内检出 *Porphyromonas gingivalis*，为口腔来源配体进入中枢 PAS 提供病理背景。
+   Inestrosa 把 PAS 定为促纤位点；Lushchekina 与 Atanasova 把该过程落实为肽在 PAS/344–361 驻留、氢键维持界面、酶作为成核支架。本次三条复合物给出同一类计算图景：稳定界面、持续极性网络、入口环区微扰，以及 YLSLLQR 的 SASA 收缩（图6C）。牙周炎微肽因此可作为异源种子，促进内源 Aβ 在同一 PAS 表面上共成核。
 
-上述四步是对接与单条 100 ns 轨迹内的分子事件，不是实验结合常数，也不把 Vina 打分当作 Kd。FLLHTTR 最优构象（−9.60 kcal/mol）相对三次均值（−8.77 ± 1.41 kcal/mol）偏强，机制讨论以 PAS 几何与动力学驻留为主，不以单一最优打分排序致病性。
+上述步骤是对接与单条 100 ns 轨迹内的分子事件，不是实验结合常数，也不把 Vina 打分当作 Kd。
 
 ### 参考文献
 
-1. Atanasova, M., Dimitrov, I., & Ivanov, S. (2020). Molecular dynamics simulations of acetylcholinesterase – beta-amyloid peptide complex. *Cybernetics and Information Technologies*, 20(6), 140–154. https://doi.org/10.2478/cait-2020-0068
-2. Dominy, S. S., Lynch, C., Ermini, F., Benedyk, M., Marczyk, A., Forbes, A., Haditsch, M., et al. (2019). *Porphyromonas gingivalis* in Alzheimer's disease brains: Evidence for disease causation and treatment with small-molecule inhibitors. *Science Advances*, 5(1), eaau3333. https://doi.org/10.1126/sciadv.aau3333
-3. Silman, I., & Sussman, J. L. (2005). Acetylcholinesterase: ‘classical’ and ‘non-classical’ functions and pharmacology. *Current Opinion in Pharmacology*, 5(3), 293–302. https://doi.org/10.1016/j.coph.2005.01.014
-4. Inestrosa, N. C., Alvarez, A., Pérez, C. A., Moreno, R. D., Vicente, M., Link, C. A., Dayoub, O. I., et al. (1996). Acetylcholinesterase accelerates assembly of amyloid-β-peptides into Alzheimer's fibrils: possible role of the peripheral site of the enzyme. *Neuron*, 16(4), 881–891. https://doi.org/10.1016/S0896-6273(00)80108-7
-5. Inestrosa, N. C., Dinamarca, M. C., & Alvarez, A. (2008). Amyloid-cholinesterase interactions. Implications for Alzheimer's disease. *Molecular Neurobiology*, 38(3), 262–273. https://doi.org/10.1007/s12035-008-8043-6
-6. Hampel, H., Mesulam, M. M., Cuello, A. C., Farlow, M. R., Giacobini, E., Grossberg, G. T., Khachaturian, A. S., et al. (2018). The cholinergic system in the pathophysiology and treatment of Alzheimer's disease. *Brain*, 141(7), 1917–1933. https://doi.org/10.1093/brain/awy132
-7. Bartus, R. T., Dean, R. L., Beer, B., & Lippa, A. S. (1982). The cholinergic hypothesis of geriatric memory dysfunction. *Science*, 217(4558), 408–414. https://doi.org/10.1126/science.7046051
+1. Selkoe, D. J., & Hardy, J. (2016). The amyloid hypothesis of Alzheimer's disease at 25 years. *EMBO Molecular Medicine*, 8(6), 595–608. https://doi.org/10.15252/emmm.201606210
+2. Inestrosa, N. C., Alvarez, A., Pérez, C. A., Moreno, R. D., Vicente, M., Link, C. A., Dayoub, O. I., et al. (1996). Acetylcholinesterase accelerates assembly of amyloid-β-peptides into Alzheimer's fibrils: possible role of the peripheral site of the enzyme. *Neuron*, 16(4), 881–891. https://doi.org/10.1016/S0896-6273(00)80108-7
+3. Lushchekina, S. V., Kots, E. D., Novichkova, D. A., Petrov, K. A., & Masson, P. (2017). Role of acetylcholinesterase in β-amyloid aggregation studied by accelerated molecular dynamics. *BioNanoScience*, 7(2), 396–402. https://doi.org/10.1007/s12668-016-0375-x
+4. Atanasova, M., Dimitrov, I., & Ivanov, S. (2020). Molecular dynamics simulations of acetylcholinesterase – beta-amyloid peptide complex. *Cybernetics and Information Technologies*, 20(6), 140–154. https://doi.org/10.2478/cait-2020-0068
