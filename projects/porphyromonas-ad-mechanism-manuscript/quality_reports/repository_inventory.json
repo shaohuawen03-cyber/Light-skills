@@ -4,8 +4,8 @@
     "quality_reports/repository_inventory.json (self-referential output)",
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
-  "total_files": 229,
-  "total_bytes": 107033982,
+  "total_files": 233,
+  "total_bytes": 107042720,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -16,12 +16,12 @@
       "bytes": 573723
     },
     "manuscript": {
-      "files": 61,
-      "bytes": 94867503
+      "files": 65,
+      "bytes": 94875821
     },
     "project_root": {
       "files": 4,
-      "bytes": 61110
+      "bytes": 61530
     },
     "quality_reports": {
       "files": 43,
@@ -55,8 +55,8 @@
   "files": [
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
-      "size_bytes": 20690,
-      "sha256": "131d56cab9047a6fca02ed7a950a955f2d558005cee18b00ef71cfcd41422c34"
+      "size_bytes": 21110,
+      "sha256": "761d0de67cbd0cc20d93320973077f807f33c2ab635aa0ed2533db3ed341d9a9"
     },
     {
       "path": "README.md",
@@ -460,28 +460,48 @@
     },
     {
       "path": "manuscript/sci_combined/Chinese.docx",
-      "size_bytes": 9636537,
-      "sha256": "dd2d7940803b0539b5e7109d03948e3285340825923ada8a9fcd54552cbb6dd0"
+      "size_bytes": 9635519,
+      "sha256": "59231b0ae7f94279bff4d47efba6a86fb096794093bb725f833461e427d5bfd4"
     },
     {
       "path": "manuscript/sci_combined/Chinese.md",
-      "size_bytes": 30791,
-      "sha256": "31e9d66e2bbde2d7225298ad1546b2a031265b87b09def1c715d4589899dbdee"
+      "size_bytes": 29346,
+      "sha256": "ea8167c8e01a2ea26c6a3d5ab203a8693a55e63102b7faf51fdb4a7065159228"
     },
     {
       "path": "manuscript/sci_combined/English.docx",
-      "size_bytes": 9635731,
-      "sha256": "27c86441e20d6d15a8accb346235828aa79945737c4e66cc19f310e2c4a0d400"
+      "size_bytes": 9634819,
+      "sha256": "00663a4713672a40d82bcbe6c3461a20c3daf86c44636f78d277471df0a18a22"
     },
     {
       "path": "manuscript/sci_combined/English.md",
-      "size_bytes": 34086,
-      "sha256": "5ba34aeabe7c7607f1389d53d998fe5b093a5395d276204c32ed2bf915060e24"
+      "size_bytes": 32386,
+      "sha256": "5fec4d6a1e51acc669e56fada129d87987f2ee9dcda84195d562a6ce644f8f50"
+    },
+    {
+      "path": "manuscript/sci_combined/Limitations.docx",
+      "size_bytes": 5125,
+      "sha256": "3cc94000209e0f6ffbbabb058d05a73ff5f5bf31ae0792d3a48b149604f9ae46"
+    },
+    {
+      "path": "manuscript/sci_combined/Limitations.md",
+      "size_bytes": 1674,
+      "sha256": "69c10b0cc14e3b8b4f324cc67ac3159b87370578e152b5ab038a4295d893c7e9"
     },
     {
       "path": "manuscript/sci_combined/README.md",
       "size_bytes": 2391,
       "sha256": "0b19f411b82b33ade5b1d27ea3dced0619707010b9139dbf5bbcf9870db63bdb"
+    },
+    {
+      "path": "manuscript/sci_combined/局限性.docx",
+      "size_bytes": 5215,
+      "sha256": "49240090c568943d2da95bd2c5976cbcbddf6c16a487811a0bf82e1e1e90507c"
+    },
+    {
+      "path": "manuscript/sci_combined/局限性.md",
+      "size_bytes": 1379,
+      "sha256": "90e4a8d0d334218ca2808d337ab4fdbac718c0847b36eb928f91eff6681334d4"
     },
     {
       "path": "manuscript/supplementary_tables_bilingual.docx",
