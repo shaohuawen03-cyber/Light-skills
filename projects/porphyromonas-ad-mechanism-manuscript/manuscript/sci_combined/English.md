@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Periodontitis-associated oral dysbiosis has been linked to Alzheimer’s disease (AD), but a peptide-level path from the oral microbiome to a defined synaptic enzyme remains incomplete. This computation-only study joins an oral small open reading frame (smORF) screening cascade with local AutoDock Vina docking of twelve 7–9-aa candidate micropeptides into human acetylcholinesterase (AChE, PDB 4EY6) and 100-ns all-atom molecular dynamics (MD) of apo AChE versus three complexes (ALLLHRC, FLLHTTR, YLSLLQR). Sequence/proteomic filtering retained 33,786 periodontitis-labelled candidates from 11,721,988 smORFs; 3,518 were blood–brain-barrier (BBB)-high, 923 were NTxPred2-positive, and later filters produced a twelve-sequence set. Local three-run Vina scores ranged from -8.25 to -9.60 kcal/mol (best run) and from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (mean ± SD). FLLHTTR had the strongest best pose but the largest run-to-run SD; YLSLLQR had the strongest mean and, with FLLHTTR and LLHPLRL, contacted the peripheral anionic site (PAS). Over 100 ns the three complexes remained globular (backbone RMSD < 0.22 nm; α-helix ~33–34%, β-sheet ~17%), with persistent intermolecular hydrogen bonds (2.19–4.23 in the last 20 ns) and SASA contraction only for YLSLLQR. The poses and trajectories supply a computational analogy onto the experimental AChE–amyloid-β (Aβ) PAS chaperone pathway; they are not measured affinities or proof of AD causation.
+Periodontitis-associated oral dysbiosis has been linked to Alzheimer’s disease (AD), but a peptide-level path from the oral microbiome to a defined synaptic enzyme remains incomplete. This computation-only study joins an oral small open reading frame (smORF) screening cascade with local AutoDock Vina docking of twelve 7–9-aa candidate micropeptides into human acetylcholinesterase (AChE, PDB 4EY6) and 100-ns all-atom molecular dynamics (MD) of apo AChE versus three complexes (ALLLHRC, FLLHTTR, YLSLLQR). Sequence/proteomic filtering retained 33,786 periodontitis-labelled candidates from 11,721,988 smORFs; 3,518 were blood–brain-barrier (BBB)-high, 923 were NTxPred2-positive, and later filters produced a twelve-sequence set. Local three-run Vina scores ranged from -8.25 to -9.60 kcal/mol (best run) and from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (mean ± SD). FLLHTTR had the strongest best pose but the largest run-to-run SD; YLSLLQR had the strongest mean and, with FLLHTTR and LLHPLRL, contacted the peripheral anionic site (PAS). Over 100 ns the three complexes remained globular (backbone RMSD 0.16–0.19 nm; α-helix ~33%, β-sheet ~17%). FLLHTTR and YLSLLQR complexes were more stable than apo (0.1640 and 0.1625 nm versus 0.1897 nm). FLLHTTR formed the densest hydrogen-bond network (7.03 ± 1.28); only YLSLLQR contracted SASA (209.71 versus 212.25 nm²). The poses and trajectories supply a computational analogy onto the experimental AChE–amyloid-β (Aβ) PAS chaperone pathway; they are not measured affinities or proof of AD causation.
 
 **Keywords:** Alzheimer’s disease; *Porphyromonas gingivalis*; periodontitis; oral micropeptide; smORF; acetylcholinesterase; peripheral anionic site; molecular docking; molecular dynamics
 
@@ -38,7 +38,7 @@ Human recombinant AChE (rhAChE, PDB 4EY6, 2.40 Å) [@cheung2012ache] was prepare
 
 Four explicit-solvent GROMACS systems [@abraham2015gromacs] were simulated with Amber99SB-ILDN [@lindorfflarsen2010amber] and TIP3P water at 0.15 M NaCl: apo AChE (Chain A) and the AChE–ALLLHRC, AChE–FLLHTTR, and AChE–YLSLLQR complexes. Each system used a triclinic box with a 1.0 nm solute-to-boundary buffer. Equilibration comprised 2,000-step steepest-descent minimization, 1.0 ns restrained NVT heating to 300 K, 1.0 ns restrained NPT density equilibration, and 1.0 ns unrestrained NPT pre-equilibration. Production ran 100 ns (dt = 2.0 fs) in the NPT ensemble (300 K, 1.0 bar) with LINCS, 1.2 nm cutoffs, and Particle Mesh Ewald electrostatics. Frames were written every 20 ps.
 
-Trajectory metrics matching Figures 4–6 were backbone Cα RMSD, per-residue RMSF, solvent-accessible surface area (SASA), radius of gyration (Rg), DSSP occupancy, and intermolecular hydrogen bonds (`gmx hbond`; donor–acceptor ≤ 3.0 Å). Peptide self-fit RMSD and persistent interfacial contacts (7.0 Å cutoff) were recorded as supporting descriptors. Steady-state values are mean ± SD over the final 20 ns (80.0–100.0 ns). The protocol follows the AChE–Aβ MD logic of Atanasova and colleagues at a 100-ns rather than 1-μs window [@atanasova2020md].
+Trajectory metrics matching Figures 4–6 were backbone Cα RMSD, per-residue RMSF, solvent-accessible surface area (SASA), radius of gyration (Rg), DSSP occupancy, and intermolecular hydrogen bonds (`gmx hbond`; donor–acceptor ≤ 3.0 Å). Peptide self-fit RMSD and persistent interfacial contacts (7.0 Å cutoff) were recorded as supporting descriptors. Steady-state values are mean ± SD over the final 20 ns (80.0–100.0 ns). Apo-versus-complex six-panel figures and last-20-ns statistics are the mixed comparison in `shaohuawen03-cyber/asd` (branch `arena/01a03d09-asd`, commit `1712c4a`, directory `gromacs_md/combined_compare_mixed-20260906-144003`): ALLLHRC from the first production run; apo AChE, FLLHTTR, and YLSLLQR from the last successful reruns. The protocol follows the AChE–Aβ MD logic of Atanasova and colleagues at a 100-ns rather than 1-μs window [@atanasova2020md].
 
 ## Results
 
@@ -128,32 +128,32 @@ Production trajectories were completed for apo AChE and the ALLLHRC, FLLHTTR, an
 
 <!-- PAGEBREAK -->
 
-![Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns comparison.](../figures/fig_compare_ache_vs_alllhrc.png)
+![Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns comparison.](../figures/fig_compare_mixed_ache_vs_alllhrc.png)
 
-**Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns molecular dynamics comparison.** Panels A–F match the metrics in Table 4.
+**Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns molecular dynamics comparison.** Panels A–F match the metrics in Table 4. Complex RMSD (A) tracks apo; hydrogen bonds (F) decay from early high occupancy to ~2 in the last 20 ns.
 
-![Figure 5. Apo AChE versus AChE–FLLHTTR 100-ns comparison.](../figures/fig_compare_ache_vs_fllhttr.png)
+![Figure 5. Apo AChE versus AChE–FLLHTTR 100-ns comparison.](../figures/fig_compare_mixed_ache_vs_fllhttr.png)
 
-**Figure 5. Apo AChE versus AChE–FLLHTTR 100-ns molecular dynamics comparison.** Panel layout matches Figure 4. Complex RMSD (A) and Rg (D) show the largest elevation among the three peptides.
+**Figure 5. Apo AChE versus AChE–FLLHTTR 100-ns molecular dynamics comparison.** Panel layout matches Figure 4. After ~50 ns, complex RMSD (A) lies below apo; hydrogen-bond counts (F) remain dense (~6–10) throughout 100 ns.
 
-![Figure 6. Apo AChE versus AChE–YLSLLQR 100-ns comparison.](../figures/fig_compare_ache_vs_ylsllqr.png)
+![Figure 6. Apo AChE versus AChE–YLSLLQR 100-ns comparison.](../figures/fig_compare_mixed_ache_vs_ylsllqr.png)
 
-**Figure 6. Apo AChE versus AChE–YLSLLQR 100-ns molecular dynamics comparison.** Panel layout matches Figure 4. SASA (C) contracts relative to apo; hydrogen-bond counts (F) are the densest of the three complexes.
+**Figure 6. Apo AChE versus AChE–YLSLLQR 100-ns molecular dynamics comparison.** Panel layout matches Figure 4. Late RMSD (A) lies below apo; SASA (C) is the only complex that contracts relative to apo.
 
 **Table 4. Final-20-ns trajectory metrics for apo AChE and three peptide complexes (mean ± SD), aligned to Figures 4–6.**
 
 | Metric (last 20 ns) | apo AChE | AChE–ALLLHRC | AChE–FLLHTTR | AChE–YLSLLQR |
 | --- | --- | --- | --- | --- |
-| Backbone Cα RMSD (nm); Figure panels A | 0.1562 ± 0.0093 | 0.1916 ± 0.0092 | 0.2102 ± 0.0087 | 0.2064 ± 0.0136 |
-| Peptide self-fit RMSD (nm) | N/A | 0.2518 ± 0.0136 | 0.2697 ± 0.0217 | 0.1979 ± 0.0143 |
-| Per-residue RMSF mean (nm); Figure panels B | 0.0783 ± 0.0524 | 0.0876 ± 0.0581 | 0.0901 ± 0.0644 | 0.0813 ± 0.0574 |
-| SASA (nm²); Figure panels C | 212.41 ± 2.36 | 217.47 ± 2.49 | 216.34 ± 2.55 | 210.37 ± 2.91 |
-| Rg (nm); Figure panels D | 2.2967 ± 0.0043 | 2.3107 ± 0.0052 | 2.3163 ± 0.0059 | 2.3004 ± 0.0051 |
-| Intermolecular H-bonds; Figure panels F | N/A | 2.19 ± 0.80 | 2.80 ± 0.99 | 4.23 ± 1.24 |
+| Backbone Cα RMSD (nm); Figure panels A | 0.1897 ± 0.0090 | 0.1916 ± 0.0092 | 0.1640 ± 0.0080 | 0.1625 ± 0.0078 |
+| Peptide self-fit RMSD (nm) | N/A | 0.2518 ± 0.0136 | 0.1752 ± 0.0111 | 0.0911 ± 0.0098 |
+| Per-residue RMSF mean (nm); Figure panels B | 0.0835 ± 0.0659 | 0.0876 ± 0.0581 | 0.0778 ± 0.0504 | 0.0771 ± 0.0498 |
+| SASA (nm²); Figure panels C | 212.25 ± 2.89 | 217.47 ± 2.49 | 213.88 ± 2.36 | 209.71 ± 2.35 |
+| Rg (nm); Figure panels D | 2.3045 ± 0.0056 | 2.3107 ± 0.0052 | 2.2967 ± 0.0047 | 2.3028 ± 0.0051 |
+| Intermolecular H-bonds; Figure panels F | N/A | 2.19 ± 0.80 | 7.03 ± 1.28 | 2.93 ± 1.14 |
 | Persistent contact pairs | N/A | 7 | 7 | 7 |
-| DSSP α-helix / β-sheet (%); Figure panels E | 33.59 / 17.18 | 33.66 / 16.76 | 33.87 / 17.11 | 32.92 / 17.08 |
+| DSSP α-helix / β-sheet (%); Figure panels E | 33.44 / 17.35 | 33.66 / 16.76 | 32.92 / 17.52 | 33.31 / 17.02 |
 
-Figures 4A, 5A, and 6A show that apo RMSD remains near 0.16 nm, while complex RMSD stays below 0.22 nm. Receptor-only RMSD values (0.1653, 0.1767, and 0.1601 nm) confirm that FLLHTTR induces the largest receptor perturbation and that YLSLLQR barely shifts the enzyme backbone. RMSF (panels B) remains low in the catalytic core, with modest increases localized to surface loops. Rg (panels D) stays within 2.29–2.32 nm. SASA (panels C) rises slightly for ALLLHRC and FLLHTTR but contracts for YLSLLQR (210.37 nm²), matching the tighter interfacial burial in Figure 6C. Hydrogen bonds persist throughout 100 ns (panels F); YLSLLQR forms the densest network (4.23 ± 1.24). DSSP helix (~33–34%) and sheet (~17%) fractions overlay the apo bars in panels E. Each complex retains seven persistent contact pairs.
+Figures 4A, 5A, and 6A show that apo RMSD plateaus near 0.19 nm. ALLLHRC tracks that control (complex 0.1916 nm; AChE-only 0.1883 nm). FLLHTTR and YLSLLQR fall below apo after ~50–70 ns (complex 0.1640 and 0.1625 nm; AChE-only 0.1609 and 0.1607 nm), so peptide binding rigidifies rather than loosens the fold. Peptide self-fit RMSD is highest for ALLLHRC (0.2518 nm) and lowest for YLSLLQR (0.0911 nm). RMSF (panels B) stays low in the catalytic core; the largest excursion is the apo C-terminus, and mean RMSF is lower than apo for FLLHTTR (0.0778 nm) and YLSLLQR (0.0771 nm). Rg (panels D) remains 2.30–2.31 nm. SASA (panels C) rises for ALLLHRC (217.47 nm²), is near apo for FLLHTTR (213.88 nm²), and uniquely contracts for YLSLLQR (209.71 nm²; Figure 6C). Hydrogen bonds persist in every panel F, but the networks differ: ALLLHRC decays from early occupancy of ~6–10 to 2.19 ± 0.80 in the last 20 ns; FLLHTTR holds 7.03 ± 1.28 throughout (Figure 5F); YLSLLQR averages 2.93 ± 1.14. DSSP helix (~33%) and sheet (~17%) overlay the apo bars in panels E. Each complex retains seven persistent contact pairs. Center-of-mass RDF peaks remain at 1.22 nm (ALLLHRC), 1.80 nm (FLLHTTR), and 1.62 nm (YLSLLQR), consistent with surface rather than bulk-solvent residence.
 
 ### Evidence boundary
 
@@ -162,16 +162,16 @@ Figures 4A, 5A, and 6A show that apo RMSD remains near 0.16 nm, while complex RM
 | No. | Observation | Supported interpretation | Unsupported extrapolation |
 | --- | --- | --- | --- |
 | 1 | Best poses of FLLHTTR, YLSLLQR, and LLHPLRL contact PAS residues | Geometric complementarity to the PAS and gorge entrance | Vina scores are not experimental Kd or Ki |
-| 2 | Complex RMSD 0.16–0.21 nm with conserved DSSP | Localized loop adaptation without unfolding | Mild RMSD increase is not denaturation or dissociation |
-| 3 | Last-20-ns H-bonds 2.19–4.23 and seven contact pairs | Surface residence over 100 ns | Single trajectories do not prove irreversible nanomolar binding |
-| 4 | YLSLLQR SASA contraction and densest H-bond panel | Compact interfacial burial relative to apo | Cannot be equated with a macroscopic binding constant |
+| 2 | Complex RMSD 0.16–0.19 nm with conserved DSSP; FLLHTTR/YLSLLQR below apo | Folded enzyme; peptide binding can rigidify the scaffold | Lower RMSD is not denaturation, nor an experimental affinity |
+| 3 | Last-20-ns H-bonds 2.19–7.03 and seven contact pairs | Surface residence over 100 ns; FLLHTTR holds the densest polar network | Single trajectories do not prove irreversible nanomolar binding |
+| 4 | YLSLLQR unique SASA contraction; FLLHTTR densest H-bond panel | Distinct interfacial modes (burial versus polar occupancy) | Cannot be equated with a macroscopic binding constant |
 | 5 | FLLHTTR best-run -9.60 kcal/mol versus mean -8.77 ± 1.41 kcal/mol | Best pose is a high-scoring outlier; mean ranking favors YLSLLQR | A single best pose is not a converged affinity |
 
 ## Discussion
 
 ### Principal findings
 
-The screening cascade reduces a multimillion-candidate smORF space to a tractable twelve-sequence set, while local docking and 100-ns MD place those peptides on human AChE. The scientific contribution is not validation of a periodontal–AD mechanism. It is a bounded computational chain: an operational candidate list, residue-level PAS poses, and three folded complexes that remain surface-bound on a 100-ns window.
+The screening cascade reduces a multimillion-candidate smORF space to a tractable twelve-sequence set, while local docking and 100-ns MD place those peptides on human AChE. The mixed comparison changes the ranking that older apo/FLLHTTR/YLSLLQR trajectories had suggested: FLLHTTR and YLSLLQR now lie below apo in late RMSD, FLLHTTR—not YLSLLQR—holds the densest hydrogen-bond network (7.03 ± 1.28), and YLSLLQR remains the only complex with SASA burial and the most rigid peptide (self-fit RMSD 0.0911 nm). The scientific contribution is not validation of a periodontal–AD mechanism. It is a bounded computational chain: an operational candidate list, residue-level PAS poses, and three folded complexes that remain surface-bound on a 100-ns window, with peptide-specific interfacial modes.
 
 Microbiome peptide mining can narrow a sequence space efficiently, but biological claims require synthesis and controlled assays [@torres2024peptideantibiotics]. Here the funnel remains aggregate. Missing row-level identifiers prevent assigning any sequence to *P. gingivalis*, to a sample, or to the CHEL/FRS endpoint of 12. Similar healthy-labelled and periodontitis-labelled retention rates therefore cannot be read as disease enrichment.
 
@@ -183,13 +183,13 @@ Four papers define the pathway onto which the poses and trajectories are mapped.
    Best poses of the twelve micropeptides concentrate at the PAS and gorge mouth of human AChE (PDB 4EY6; Figures 1–3, Figure S1). FLLHTTR anchors Asp74, Tyr72 and His287 (best-run -9.60 kcal/mol; Figure 2C). YLSLLQR contacts PAS (Tyr72, Thr75) and the catalytic entrance (three-run mean -9.44 ± 0.09 kcal/mol; Figure 3L). LLHPLRL spans Trp286/Tyr341 to His447 (Figure 3I). HLLTLKKHV reaches Tyr72 and Phe346 in 344–361. The geometry matches Atanasova’s placement of Aβ at PAS with 344–361 as principal residence.
 
 2. A stable complex: the enzyme does not unfold and the peptide does not leave.  
-   Figures 4–6 show globular AChE over 100 ns: RMSD < 0.22 nm, Rg 2.29–2.32 nm, and α-helix ~33–34% / β-sheet ~17% overlaying apo. The modest rise of complex traces above apo is PAS-adjacent loop adaptation, not denaturation. Last-20-ns hydrogen bonds persist (ALLLHRC 2.19 ± 0.80, FLLHTTR 2.80 ± 0.99, YLSLLQR 4.23 ± 1.24), with seven contact pairs. This matches Lushchekina and Atanasova on a stable, surface-bound complex.
+   Figures 4–6 show globular AChE over 100 ns: RMSD 0.16–0.19 nm, Rg 2.30–2.31 nm, and α-helix ~33% / β-sheet ~17% overlaying apo. ALLLHRC tracks apo. FLLHTTR and YLSLLQR fall below apo in late RMSD (Figures 5A, 6A), so the previous reading of “complex RMSD rise as receptor strain” does not hold for the rerun trajectories: binding rigidifies the scaffold. Last-20-ns hydrogen bonds persist, with peptide-specific occupancy (ALLLHRC 2.19 ± 0.80 after early decay, FLLHTTR 7.03 ± 1.28 throughout, YLSLLQR 2.93 ± 1.14) and seven contact pairs. This matches Lushchekina and Atanasova on a stable, surface-bound complex.
 
 3. Impaired cholinergic transmission.  
-   The PAS sits at the entrance of the 20-Å gorge above the catalytic triad [@hampel2018cholinergic]. RMSF increases are confined to surface loops (panels B). Physical occupancy can impede acetylcholine entry and perturb gorge gating, so the same pose attacks AChE catalysis in the computational model.
+   The PAS sits at the entrance of the 20-Å gorge above the catalytic triad [@hampel2018cholinergic]. Catalytic-core RMSF remains low; the largest fluctuation is the apo C-terminus (panels B). Physical occupancy of the gorge mouth can impede acetylcholine entry even when global RMSF does not rise, so the same pose can still attack AChE catalysis in the computational model.
 
 4. Pathological chaperone activity and amyloid co-nucleation.  
-   Inestrosa established the PAS as a pro-fibrillar site; Lushchekina and Atanasova recast that process as peptide residence on PAS/344–361, with hydrogen bonds holding the interface while the enzyme scaffolds nucleation. The three complexes here give the same computational picture: a persistent polar network, entrance-loop perturbation, and SASA contraction for YLSLLQR (Figure 6C). Periodontal micropeptides can therefore act as heterologous seeds that co-nucleate endogenous Aβ on the same PAS surface.
+   Inestrosa established the PAS as a pro-fibrillar site; Lushchekina and Atanasova recast that process as peptide residence on PAS/344–361, with hydrogen bonds holding the interface while the enzyme scaffolds nucleation. The three complexes here split into two interfacial modes on that surface: FLLHTTR supplies a dense, persistent polar network (Figure 5F) that matches its PAS-rich docking pose (Figure 2C); YLSLLQR supplies compact burial (Figure 6C) and the most rigid bound peptide. ALLLHRC remains folded but its hydrogen-bond count decays (Figure 4F), consistent with a more mobile peptide. Periodontal micropeptides can therefore act as heterologous seeds that co-nucleate endogenous Aβ on the same PAS surface, with FLLHTTR the strongest polar occupant in this 100-ns set.
 
 These steps are molecular events inside the docking poses and single 100-ns trajectories. They are not experimental binding constants, and Vina scores are not Kd. Detection of *P. gingivalis* in AD brains [@dominy2019pgingivalis] supplies epidemiological context for asking the structural question; it does not transfer organism-level evidence onto untraced community peptides.
 
