@@ -8,19 +8,19 @@
 
 ## 引言
 
-阿尔茨海默病是进行性神经退行性疾病，淀粉样蛋白β（Aβ）、tau、突触衰竭、免疫激活与血管损伤相互作用，而不是单一线性级联[@scheltens2021alzheimer]。淀粉样生物学仍居核心：APP 经 β/γ 分泌酶切出 Aβ40/Aβ42，可溶寡聚体损伤突触，家族性 APP/PSEN 突变改变 Aβ 产量与长度[@selkoe2016amyloid]。基底前脑胆碱能传递丧失参与认知症状，AChE 抑制剂仍是既定对症治疗[@hampel2018cholinergic]。独立于催化功能，AChE 经外周阴离子位点（PAS）加速 Aβ 成纤，AChE–Aβ 复合物比游离 Aβ 更具神经毒性[@inestrosa1996ache]。PAS 疏水基序促进该伴侣活性[@deferrari2001motif]。这些事实使 AChE 成为有生物学依据的结构靶点，但并不使每一个获得计算评分的配体都成为 AD 致病因子。
+阿尔茨海默病是进行性神经退行性疾病，淀粉样蛋白β（Aβ）、tau、突触衰竭、免疫激活与血管损伤相互作用，而不是单一线性级联[@scheltens2021alzheimer]。淀粉样生物学仍居核心：APP 经 β/γ 分泌酶切出 Aβ40/Aβ42，可溶寡聚体损伤突触，家族性 APP/PSEN 突变改变 Aβ 产量与长度[@selkoe2016amyloid]。基底前脑胆碱能传递丧失参与认知症状，AChE 抑制剂仍是既定对症治疗[@hampel2018cholinergic]。独立于催化功能，AChE 经外周阴离子位点（PAS）加速 Aβ 成纤，AChE–Aβ 复合物比游离 Aβ 更具神经毒性[@inestrosa1996ache]。PAS 疏水基序促进该伴侣活性[@deferrari2001motif]。这些事实使 AChE 成为有生物学依据的结构靶点，但并不意味着每一个获得计算评分的配体都与 AD 相关。
 
 慢性牙周炎可维持系统性炎症负担和微生物产物的间歇暴露，由此推动口腔—脑轴研究[@chalmers2025primer]。疾病相关口腔活动具有物种和位点特异性，分类学丰度不能替代分子中介[@belstrom2021periodontitis]。牙龈卟啉单胞菌（*Porphyromonas gingivalis*）的牙龈蛋白酶与外膜囊泡提供了较充分的毒力背景[@guo2010gingipain; @ho2015omv]。观察性综合报告牙周病与认知障碍相关，效应估计随病例定义和校正而变化[@larvin2023periodontalcognition]；AD 队列中牙周炎与后续认知下降相关[@ide2016periodontitis]。AD 脑内曾检出 *P. gingivalis* 与牙龈蛋白酶[@dominy2019pgingivalis]，小鼠反复口腔暴露可驱动神经炎症和 Aβ 相关改变[@ilievski2018oral]。孟德尔随机化尚未确立牙周病对 AD 的遗传因果效应[@hu2024mendelian]。人体关联、实验合理性与遗传证据回答的是不同问题。
 
 微生物组编码的小蛋白构成规模庞大、映射仍不充分的候选空间[@sberro2019smallgenes; @durrant2021sorf]。牙周炎来源的 7–9 aa 微肽能否占据与 Aβ 相同的 AChE PAS，是筛选分数本身无法回答的结构问题。对人 AChE 与多条 Aβ 的加速 MD 显示 Aβ 被酶表面吸引，支持 AChE 作为成核中心[@lushchekina2017amd]。以 PAS 为中心的 1 μs AChE–Aβ 轨迹保持结合，主驻留区为毗邻 PAS 的 344–361[@atanasova2020md]。PAS 导向配体可在生化体系中抑制 AChE 诱导的 Aβ 聚集[@bartolini2003pas]，PDB 4EY6 提供 2.40 Å 人源 AChE 结构用于对接[@cheung2012ache]。
 
-因此，本文将此前分开的两层计算工作合并。其一，重建口腔 smORF 级联，说明 12 条 7–9 aa 序列如何被优先保留；其二，在本地将这 12 条肽对接入人源 AChE，并对三条代表性复合物相对 apo 对照完成 100 ns 模拟。目标是形成一篇边界清楚的原创研究叙述：筛选漏斗加上已完成的对接与 MD，作为把牙周炎微肽放到 AChE–Aβ PAS 通路上的计算类比。
+因此，本研究包含两个顺序计算阶段。首先重建口腔 smORF 级联，说明 12 条 7–9 aa 序列如何被优先保留；随后将这 12 条肽对接入人源 AChE，并对三条代表性复合物相对 apo 对照完成 100 ns 模拟。结果解释为把牙周炎微肽映射到 AChE–Aβ PAS 通路上的计算类比。
 
 ## 材料与方法
 
 ### 研究设计
 
-本研究为纯计算分析。筛选层是对汇总 smORF 计数、模型汇总和一张 12 条序列表的二次重建；未开展参与者招募、标本采集、预测器再训练或新组学处理。健康与牙周炎标签仅作为分支标签保留，不视为已经核实的肽层面疾病归属。对接与 MD 层使用本地三次 AutoDock Vina 构象和已完成的 100 ns GROMACS 轨迹，不沿用筛选稿中较旧的对接评分表。
+本研究为纯计算分析。筛选使用汇总 smORF 计数、模型汇总和一张 12 条序列表；未开展参与者招募、标本采集、预测器再训练或新组学处理。健康与牙周炎标签仅作为文库标签保留，不视为已经核实的肽层面疾病归属。对接与 MD 使用本地三次 AutoDock Vina 构象，以及对 apo AChE 与三条入选复合物的 100 ns GROMACS 轨迹。
 
 ### 口腔 smORF 筛选级联
 
@@ -153,11 +153,11 @@ UniDL4BioPep 提供第一层功能筛选：ESM-2（`esm2_t6_8M_UR50D`）嵌入�
 | 持续性接触对 | 不适用 | 7 | 7 | 7 |
 | DSSP α-螺旋 / β-折叠 (%)；图E面板 | 33.44 / 17.35 | 33.66 / 16.76 | 32.92 / 17.52 | 33.31 / 17.02 |
 
-图4A、图5A和图6A显示 apo RMSD 平台约 0.19 nm。ALLLHRC 与对照并行（复合物 0.1916 nm；仅受体 0.1883 nm）。FLLHTTR 与 YLSLLQR 在约 50–70 ns 后低于 apo（复合物 0.1640 和 0.1625 nm；仅受体 0.1609 和 0.1607 nm），说明肽结合使折叠变刚性而不是变松。微肽自拟合 RMSD 以 ALLLHRC 最高（0.2518 nm）、YLSLLQR 最低（0.0911 nm）。RMSF（B面板）在催化核心保持低值；最大波动来自 apo 的 C 端，FLLHTTR（0.0778 nm）与 YLSLLQR（0.0771 nm）的均值 RMSF 反而低于 apo。Rg（D面板）维持在 2.30–2.31 nm。SASA（C面板）在 ALLLHRC 升至 217.47 nm²，FLLHTTR 接近 apo（213.88 nm²），仅 YLSLLQR 收缩至 209.71 nm²（图6C）。氢键在各 F 面板持续，但模式不同：ALLLHRC 由早期约 6–10 个衰减至后 20 ns 的 2.19 ± 0.80；FLLHTTR 全程维持 7.03 ± 1.28（图5F）；YLSLLQR 均值为 2.93 ± 1.14。DSSP 螺旋（约 33%）与折叠（约 17%）与 apo 柱形重叠（E面板）。三个复合物均保留 7 对持续性接触。质心 RDF 峰分别位于 1.22 nm（ALLLHRC）、1.80 nm（FLLHTTR）和 1.62 nm（YLSLLQR），符合表面驻留而非本体溶剂。
+图4A、图5A和图6A显示 apo RMSD 平台约 0.19 nm。ALLLHRC 与对照接近（复合物 0.1916 nm；仅受体 0.1883 nm）。FLLHTTR 与 YLSLLQR 在约 50–70 ns 后低于 apo（复合物 0.1640 和 0.1625 nm；仅受体 0.1609 和 0.1607 nm），表明肽结合使折叠变刚性而不是变松。微肽自拟合 RMSD 以 ALLLHRC 最高（0.2518 nm）、YLSLLQR 最低（0.0911 nm）。RMSF（B面板）在催化核心保持低值；最大波动来自 apo 的 C 端，FLLHTTR（0.0778 nm）与 YLSLLQR（0.0771 nm）的均值 RMSF 反而低于 apo。Rg（D面板）维持在 2.30–2.31 nm。SASA（C面板）在 ALLLHRC 升至 217.47 nm²，FLLHTTR 接近 apo（213.88 nm²），仅 YLSLLQR 收缩至 209.71 nm²（图6C）。氢键在各 F 面板持续，但模式不同：ALLLHRC 由早期约 6–10 个衰减至后 20 ns 的 2.19 ± 0.80；FLLHTTR 全程维持 7.03 ± 1.28（图5F）；YLSLLQR 均值为 2.93 ± 1.14。DSSP 螺旋（约 33%）与折叠（约 17%）与 apo 柱形重叠（E面板）。三个复合物均保留 7 对持续性接触。质心 RDF 峰分别位于 1.22 nm（ALLLHRC）、1.80 nm（FLLHTTR）和 1.62 nm（YLSLLQR），符合表面驻留而非本体溶剂。
 
-### 证据边界
+### 对接与动力学观察的解释范围
 
-**表5. 分子对接与100 ns动力学结果的支持与不支持解释。**
+**表5. 分子对接与100 ns动力学观察的支持与不支持解释。**
 
 | 序号 | 观察 | 支持的解释 | 不支持的外推 |
 | --- | --- | --- | --- |
@@ -171,7 +171,7 @@ UniDL4BioPep 提供第一层功能筛选：ESM-2（`esm2_t6_8M_UR50D`）嵌入�
 
 ### 主要发现
 
-筛选级联把数百万条 smORF 空间收束为可操作的 12 条序列集，本地对接与 100 ns MD 则把这些肽放到人源 AChE 上。混合对比改变了旧 apo/FLLHTTR/YLSLLQR 轨迹给出的排序：FLLHTTR 与 YLSLLQR 后期 RMSD 低于 apo；最密氢键网络属于 FLLHTTR（7.03 ± 1.28）而不是 YLSLLQR；YLSLLQR 仍是唯一 SASA 收缩、肽最刚性的复合物（自拟合 RMSD 0.0911 nm）。科学贡献不是验证牙周—AD 机制，而是一条有边界的计算链：操作性候选清单、残基水平 PAS 构象，以及在 100 ns 窗口内保持表面结合、界面模式各异的三种折叠复合物。
+筛选级联把数百万条 smORF 空间收束为可操作的 12 条序列集，对接与 100 ns MD 则把这些肽放到人源 AChE 上。FLLHTTR 与 YLSLLQR 复合物后期 RMSD 低于 apo；FLLHTTR 氢键网络最密（7.03 ± 1.28）；YLSLLQR 是唯一出现 SASA 收缩、肽最刚性的复合物（自拟合 RMSD 0.0911 nm）。上述结果并不验证牙周—AD 机制，而是给出一条有边界的计算链：操作性候选清单、残基水平 PAS 构象，以及在 100 ns 内保持表面结合、界面模式各异的三种折叠复合物。
 
 微生物组肽挖掘可以有效缩小序列空间，但生物学主张需要合成与受控实验[@torres2024peptideantibiotics]。本文漏斗仍是汇总层面。缺少行级标识符，因此不能把任何序列归属于 *P. gingivalis*、某个样本或 CHEL/FRS 的 12 条终点。健康标记与牙周炎标记相近的保留率也不能解读为疾病富集。
 
@@ -183,7 +183,7 @@ UniDL4BioPep 提供第一层功能筛选：ESM-2（`esm2_t6_8M_UR50D`）嵌入�
    12 条微肽的最优构象富集于人源 AChE（PDB 4EY6）的 PAS 与峡部入口（图1–3，图S1）。FLLHTTR 锚定 Asp74、Tyr72、His287（最优 -9.60 kcal/mol，图2C）；YLSLLQR 同时接触 PAS（Tyr72、Thr75）与催化入口（三次均值 -9.44 ± 0.09 kcal/mol，图3L）；LLHPLRL 从 Trp286/Tyr341 跨越至 His447（图3I）；HLLTLKKHV 触及 Tyr72 与 344–361 的 Phe346。几何上与 Atanasova 将 Aβ 置于 PAS、主驻留 344–361 一致。
 
 2. 复合物稳定、酶不崩解、肽不脱落。  
-   图4–6 显示 100 ns 内 AChE 保持球状折叠：RMSD 0.16–0.19 nm，Rg 2.30–2.31 nm，α-螺旋约 33%、β-折叠约 17% 与 apo 重叠。ALLLHRC 与 apo 并行。FLLHTTR 与 YLSLLQR 后期 RMSD 低于 apo（图5A、图6A），因此旧解读“复合物 RMSD 升高等于受体受力”在重跑轨迹上不成立：结合使骨架变刚性。后 20 ns 氢键持续，但占有率因肽而异（ALLLHRC 早期衰减后为 2.19 ± 0.80，FLLHTTR 全程 7.03 ± 1.28，YLSLLQR 为 2.93 ± 1.14），各体系 7 对接触。这与 Lushchekina、Atanasova 的“复合物稳定、肽不进入本体溶剂”一致。
+   图4–6 显示 100 ns 内 AChE 保持球状折叠：RMSD 0.16–0.19 nm，Rg 2.30–2.31 nm，α-螺旋约 33%、β-折叠约 17% 与 apo 重叠。ALLLHRC 与 apo 轨迹接近。FLLHTTR 与 YLSLLQR 后期 RMSD 低于 apo（图5A、图6A），表明结合使骨架变刚性而不是受力松弛。后 20 ns 氢键持续，但占有率因肽而异（ALLLHRC 早期衰减后为 2.19 ± 0.80，FLLHTTR 全程 7.03 ± 1.28，YLSLLQR 为 2.93 ± 1.14），各体系 7 对接触。这与 Lushchekina、Atanasova 的“复合物稳定、肽不进入本体溶剂”一致。
 
 3. 胆碱能传递受损。  
    PAS 位于催化三联体上方约 20 Å 的峡部入口[@hampel2018cholinergic]。催化核心 RMSF 保持低值；最大波动来自 apo 的 C 端（B 面板）。即使全局 RMSF 不升高，峡部入口的物理占位仍可阻碍乙酰胆碱进入，在计算模型中同时打击 AChE 的催化功能。
