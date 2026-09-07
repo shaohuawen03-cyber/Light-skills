@@ -4,7 +4,7 @@ This folder holds a **new original-research article**. It is not a fourth length
 
 Sources (read-only; not edited here):
 
-- `manuscript/intermediate/` — oral-smORF screening cascade, aggregate funnel, twelve-sequence composition, and bounded periodontal–AD interpretation.
+- `manuscript/intermediate/` — oral-smORF screening cascade, aggregate funnel, twelve-sequence composition, and bounded periodontal–AD interpretation. In this combined article the cascade is UniDL4BioPep (22 tasks on 11,721,988 periodontitis-labelled smORFs) first, then metaproteome exact-match/dereplication.
 - `manuscript/md_alllhrc/concise/` — completed local three-run AutoDock Vina docking, 100-ns GROMACS trajectories, seven PNG figures, and the four-step computational PAS mechanism (Selkoe 2016; Inestrosa 1996; Lushchekina 2017; Atanasova 2020).
 - Method/table depth for docking and MD follows `manuscript/md_alllhrc/intermediate/` so that key residues, four-stage equilibration, and last-20-ns metrics remain inspectable.
 
@@ -12,7 +12,7 @@ The screening manuscripts stay figure-free. The three standalone docking/MD repo
 
 Docking numerics follow `source_materials/md_results/local_vina_docking_summary.csv` (FLLHTTR best-run −9.60 kcal/mol, three-run mean −8.77 ± 1.41 kcal/mol). The older screening docking table is not reused.
 
-MD Figures 4–6 and Table 4 follow the mixed comparison `gromacs_md/combined_compare_mixed-20260906-144003` in `shaohuawen03-cyber/asd` (`1712c4a`): ALLLHRC from the first run; apo, FLLHTTR, and YLSLLQR from the last successful reruns. Local copies: `manuscript/figures/fig_compare_mixed_ache_vs_{alllhrc,fllhttr,ylsllqr}.png` and `source_materials/md_results/combined_compare_mixed-20260906-144003/`. The superseded `fig_compare_ache_vs_*.png` files are not used here.
+MD Figures 4–6 and Table 5 follow the mixed comparison `gromacs_md/combined_compare_mixed-20260906-144003` in `shaohuawen03-cyber/asd` (`1712c4a`): ALLLHRC from the first run; apo, FLLHTTR, and YLSLLQR from the last successful reruns. Local copies: `manuscript/figures/fig_compare_mixed_ache_vs_{alllhrc,fllhttr,ylsllqr}.png` and `source_materials/md_results/combined_compare_mixed-20260906-144003/`. The superseded `fig_compare_ache_vs_*.png` files are not used here.
 
 ## Deliverables
 

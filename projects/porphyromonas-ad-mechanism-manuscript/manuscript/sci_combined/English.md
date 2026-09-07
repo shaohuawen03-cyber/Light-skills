@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Periodontitis-associated oral dysbiosis has been linked to Alzheimer’s disease (AD), but a peptide-level path from the oral microbiome to a defined synaptic enzyme remains incomplete. This computation-only study joins an oral small open reading frame (smORF) screening cascade with local AutoDock Vina docking of twelve 7–9-aa candidate micropeptides into human acetylcholinesterase (AChE, PDB 4EY6) and 100-ns all-atom molecular dynamics (MD) of apo AChE versus three complexes (ALLLHRC, FLLHTTR, YLSLLQR). Sequence/proteomic filtering retained 33,786 periodontitis-labelled candidates from 11,721,988 smORFs; 3,518 were blood–brain-barrier (BBB)-high, 923 were NTxPred2-positive, and later filters produced a twelve-sequence set. Local three-run Vina scores ranged from -8.25 to -9.60 kcal/mol (best run) and from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (mean ± SD). FLLHTTR had the strongest best pose but the largest run-to-run SD; YLSLLQR had the strongest mean and, with FLLHTTR and LLHPLRL, contacted the peripheral anionic site (PAS). Over 100 ns the three complexes remained globular (backbone RMSD 0.16–0.19 nm; α-helix ~33%, β-sheet ~17%). FLLHTTR and YLSLLQR complexes were more stable than apo (0.1640 and 0.1625 nm versus 0.1897 nm). FLLHTTR formed the densest hydrogen-bond network (7.03 ± 1.28); only YLSLLQR contracted SASA (209.71 versus 212.25 nm²). Taken together, the poses and trajectories support a possible pathogenic mechanism: periodontitis-derived micropeptides occupy the AChE PAS, impede acetylcholine access, and act as heterologous seeds that co-nucleate endogenous Aβ on the same pro-fibrillar surface.
+Periodontitis-associated oral dysbiosis has been linked to Alzheimer’s disease (AD), but a peptide-level path from the oral microbiome to a defined synaptic enzyme remains incomplete. This computation-only study joins an oral small open reading frame (smORF) screening cascade with local AutoDock Vina docking of twelve 7–9-aa candidate micropeptides into human acetylcholinesterase (AChE, PDB 4EY6) and 100-ns all-atom molecular dynamics (MD) of apo AChE versus three complexes (ALLLHRC, FLLHTTR, YLSLLQR). UniDL4BioPep first scored the 11,721,988 periodontitis-labelled smORFs on 22 tasks (BBB (BBP) ≥0.80: 1,125,832; 9.60%). Metaproteome matching then intersected BBB-high predictions with evidence-supported unique peptides, recovering 3,518 candidates; 923 were NTxPred2-positive, and later filters produced a twelve-sequence set. Local three-run Vina scores ranged from -8.25 to -9.60 kcal/mol (best run) and from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (mean ± SD). FLLHTTR had the strongest best pose but the largest run-to-run SD; YLSLLQR had the strongest mean and, with FLLHTTR and LLHPLRL, contacted the peripheral anionic site (PAS). Over 100 ns the three complexes remained globular (backbone RMSD 0.16–0.19 nm; α-helix ~33%, β-sheet ~17%). FLLHTTR and YLSLLQR complexes were more stable than apo (0.1640 and 0.1625 nm versus 0.1897 nm). FLLHTTR formed the densest hydrogen-bond network (7.03 ± 1.28); only YLSLLQR contracted SASA (209.71 versus 212.25 nm²). Taken together, the poses and trajectories support a possible pathogenic mechanism: periodontitis-derived micropeptides occupy the AChE PAS, impede acetylcholine access, and act as heterologous seeds that co-nucleate endogenous Aβ on the same pro-fibrillar surface.
 
 **Keywords:** Alzheimer’s disease; *Porphyromonas gingivalis*; periodontitis; oral micropeptide; smORF; acetylcholinesterase; peripheral anionic site; molecular docking; molecular dynamics
 
@@ -24,9 +24,9 @@ This was a computation-only analysis. Screening used aggregate smORF counts, mod
 
 ### Oral smORF screening cascade
 
-Translated smORFs encoding 4–50-aa peptides formed the starting libraries (11,269,961 healthy-labelled and 11,721,988 periodontitis-labelled sequences). Candidates were exact-matched against named oral genomic and metaproteomic resources, including HOMD [@chen2010homd] and salivary metaproteome catalogues [@belstrom2016metaproteomics], then dereplicated. Exact matches support sequence existence or prior observation, not expression in the analysed branch. The public-accession context of the source oral metagenomic/metatranscriptomic project is PRJNA678453 [@belstrom2021periodontitis].
+Translated smORFs encoding 4–50-aa peptides formed the starting libraries (11,269,961 healthy-labelled and 11,721,988 periodontitis-labelled sequences; PRJNA678453) [@belstrom2021periodontitis]. In line with antimicrobial-peptide discovery workflows, UniDL4BioPep was applied first to the full periodontitis-labelled library [@du2023unidl4biopep]: ESM-2 (`esm2_t6_8M_UR50D`) embeddings and 22 task-specific convolutional networks, each with a decision threshold of ≥0.80. Unified task names are ACE inhibitory, DPP-IV inhibitory, Bitter, Umami, Antimicrobial, Antimalarial (alternative), Antimalarial (main), Quorum sensing, Anticancer (main), Anticancer (alternative), Anti-MRSA, TTCA, BBB (BBP), Anti-parasitic (APP), NeuroPred, Antibacterial, Antifungal, Antiviral, Toxicity, Antioxidant FRS, Allergenicity, and cell-penetrating peptide (CPP). BBB (BBP) ≥0.80 defined the operational BBB-high set.
 
-UniDL4BioPep provided the first functional layer: ESM-2 (`esm2_t6_8M_UR50D`) embeddings followed by a task-specific convolutional network, with an output threshold of ≥0.80, including the operational “BBB-high” label [@du2023unidl4biopep]. Periodontitis-labelled BBB-high peptides within 7–50 aa were evaluated with NTxPred2 (ESM2-t30 neurotoxicity model) [@rathore2025ntxpred2]. Mebipred applied a two-tier neural network to Cu-, Fe-, and Zn-related binding potential at a 0.50 threshold [@aptekmann2022mebipred]. AnOxPePred supplied multi-task free-radical-scavenging (FRS) and chelation (CHEL) outputs [@olsen2020anoxpepred]; serial endpoints were CHEL≥0.25, CHEL≥0.25 with FRS<0.50, and CHEL≥0.25 with FRS<0.45. Serial model agreement was treated as computational triage, not independent biological confirmation.
+After UniDL4BioPep scoring, sequences were exact-matched against oral genomic and metaproteomic resources, including HOMD and salivary metaproteome catalogues, and dereplicated [@chen2010homd; @belstrom2016metaproteomics]. The periodontitis-labelled library yielded 33,786 evidence-supported unique peptides; their intersection with the 1,125,832 BBB (BBP) predictions recovered 3,518 candidates (3,446 short, 5–30 aa; 72 long, 31–50 aa). Peptides in that intersection within 7–50 aa were evaluated with NTxPred2 (ESM2-t30) [@rathore2025ntxpred2]. Mebipred applied a two-tier neural network to Cu-, Fe-, and Zn-related binding potential at a 0.50 threshold [@aptekmann2022mebipred]. AnOxPePred supplied multi-task free-radical-scavenging (FRS) and chelation (CHEL) outputs [@olsen2020anoxpepred]; serial endpoints were CHEL≥0.25, CHEL≥0.25 with FRS<0.50, and CHEL≥0.25 with FRS<0.45.
 
 A separate table listed twelve unique 7–9-aa sequences. Length and counts of histidine, cysteine, and basic residues were recalculated from each string.
 
@@ -44,29 +44,57 @@ Trajectory metrics matching Figures 4–6 were backbone Cα RMSD, per-residue RM
 
 ### Screening funnel and twelve-sequence composition
 
-Sequence-evidence filtering retained 31,510/11,269,961 healthy-labelled candidates (0.2796%) and 33,786/11,721,988 periodontitis-labelled candidates (0.2882%). In the periodontitis-labelled branch, 3,446 short and 72 long peptides were BBB-high (3,518 total). NTxPred2 evaluated 3,299/3,518 (93.77%) and classified 923/3,299 (27.98%) as model-positive; 219 candidates lay outside the 7–50-aa coverage window. Subsequent aggregate filters retained 111 mebipred-positive candidates, 15 with CHEL≥0.25, 12 with CHEL≥0.25 and FRS<0.50, and 8 with CHEL≥0.25 and FRS<0.45 (Table 1). A near-saturated UniDL4BioPep antimicrobial output (99.90% of periodontitis-labelled short peptides above 0.80) indicates that a common threshold is not equally calibrated across tasks.
+UniDL4BioPep scored all 11,721,988 periodontitis-labelled smORFs on 22 tasks at ≥0.80 (Table 1). The largest output was Antimicrobial (10,302,093; 87.89%), followed by Anti-parasitic (APP) (5,462,493; 46.60%) and Quorum sensing (4,491,507; 38.32%). BBB (BBP) returned 1,125,832 sequences (9.60%). DPP-IV inhibitory was the smallest (139,056; 1.19%). Task labels are overlapping; a peptide may count in more than one row.
 
-**Table 1. Aggregate oral-smORF prioritization counts.**
+**Table 1. UniDL4BioPep outputs on the full periodontitis-labelled library (11,721,988 smORFs; threshold ≥0.80).**
 
-| Stage | Operational rule | n | Denominator or limitation |
-| --- | --- | ---: | --- |
-| Healthy-labelled smORFs | 4–50 aa | 11,269,961 | Initial library |
+| No. | UniDL4BioPep task | n (≥0.80) | % of 11,721,988 |
+| --- | --- | ---: | ---: |
+| 1 | ACE inhibitory | 1,236,442 | 10.55 |
+| 2 | DPP-IV inhibitory | 139,056 | 1.19 |
+| 3 | Bitter | 1,831,185 | 15.62 |
+| 4 | Umami | 3,100,811 | 26.45 |
+| 5 | Antimicrobial | 10,302,093 | 87.89 |
+| 6 | Antimalarial (alternative) | 695,608 | 5.93 |
+| 7 | Antimalarial (main) | 2,010,724 | 17.15 |
+| 8 | Quorum sensing | 4,491,507 | 38.32 |
+| 9 | Anticancer (main) | 2,357,718 | 20.11 |
+| 10 | Anticancer (alternative) | 2,015,652 | 17.20 |
+| 11 | Anti-MRSA | 843,977 | 7.20 |
+| 12 | TTCA | 2,666,759 | 22.75 |
+| 13 | BBB (BBP) | 1,125,832 | 9.60 |
+| 14 | Anti-parasitic (APP) | 5,462,493 | 46.60 |
+| 15 | NeuroPred | 1,714,373 | 14.63 |
+| 16 | Antibacterial | 2,597,877 | 22.16 |
+| 17 | Antifungal | 2,960,118 | 25.25 |
+| 18 | Antiviral | 3,275,203 | 27.94 |
+| 19 | Toxicity | 1,714,299 | 14.62 |
+| 20 | Antioxidant FRS | 2,521,106 | 21.51 |
+| 21 | Allergenicity | 1,713,798 | 14.62 |
+| 22 | Cell-penetrating peptide (CPP) | 925,627 | 7.90 |
+
+Metaproteome exact-match and dereplication of the periodontitis-labelled library retained 33,786 evidence-supported unique peptides (healthy-labelled: 31,510/11,269,961). Intersection of the 1,125,832 BBB (BBP) predictions with that evidence-supported set recovered 3,518 peptides (3,446 short, 72 long). NTxPred2 evaluated 3,299/3,518 (93.77%) and classified 923/3,299 (27.98%) as model-positive. Subsequent filters retained 111 mebipred-positive candidates, 15 with CHEL≥0.25, 12 with CHEL≥0.25 and FRS<0.50, and 8 with CHEL≥0.25 and FRS<0.45 (Table 2).
+
+**Table 2. Serial prioritization after UniDL4BioPep prediction and metaproteome intersection.**
+
+| Stage | Operational rule | n | Denominator |
+| --- | --- | ---: | ---: |
 | Periodontitis-labelled smORFs | 4–50 aa | 11,721,988 | Initial library |
-| Evidence-filtered healthy-labelled | Exact match and dereplication | 31,510 | 11,269,961 |
-| Evidence-filtered periodontitis-labelled | Exact match and dereplication | 33,786 | 11,721,988 |
-| BBB-high short | UniDL4BioPep output≥0.80; 5–30 aa | 3,446 | 32,754 |
-| BBB-high long | UniDL4BioPep output≥0.80; 31–50 aa | 72 | 1,032 |
-| BBB-high total | Short + long | 3,518 | Arithmetic sum |
+| UniDL4BioPep BBB (BBP) | score ≥0.80 | 1,125,832 | 11,721,988 |
+| Evidence-supported unique peptides | Exact match and dereplication | 33,786 | 11,721,988 |
+| BBB-high ∩ evidence-supported | Intersection | 3,518 | 1,125,832 ∩ 33,786 |
+| Short (5–30 aa) | Length bin | 3,446 | 3,518 |
+| Long (31–50 aa) | Length bin | 72 | 3,518 |
 | NTxPred2 evaluated | 7–50 aa | 3,299 | 3,518 |
-| NTxPred2-positive | Model-positive label | 923 | 3,299 |
-| Metal-binding-positive | Mebipred output≥0.50 | 111 | Row-level handoff unavailable |
+| NTxPred2-positive | Model-positive | 923 | 3,299 |
+| Metal-binding-positive | Mebipred ≥0.50 | 111 | Row-level handoff unavailable |
 | CHEL-priority | CHEL≥0.25 | 15 | 111 |
 | Main set | CHEL≥0.25 and FRS<0.50 | 12 | 111 |
 | Stricter subset | CHEL≥0.25 and FRS<0.45 | 8 | Sequence membership unavailable |
 
-The twelve explicit sequences are unique 7–9-aa peptides of standard amino acids (Table 2). Eleven contain histidine, six contain cysteine, and every sequence contains at least one Arg or Lys. All 923 NTxPred2-positive peptides were ≤30 aa, so the downstream metal/CHEL/FRS filters retained only short peptides.
+The twelve explicit sequences are unique 7–9-aa peptides of standard amino acids (Table 3). Eleven contain histidine, six contain cysteine, and every sequence contains at least one Arg or Lys. All 923 NTxPred2-positive peptides were ≤30 aa, so the downstream metal/CHEL/FRS filters retained only short peptides.
 
-**Table 2. Composition of the twelve 7–9-aa candidate micropeptides.**
+**Table 3. Composition of the twelve 7–9-aa candidate micropeptides.**
 
 | No. | Sequence | Length | His | Cys | Arg+Lys |
 | ---: | --- | ---: | ---: | ---: | ---: |
@@ -85,9 +113,9 @@ The twelve explicit sequences are unique 7–9-aa peptides of standard amino aci
 
 ### Local three-run docking and PAS engagement
 
-All twelve ligands yielded favorable local Vina scores. Best-run affinities ranged from -8.25 to -9.60 kcal/mol and three-run means from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (Table 3, Figure 1). Best-pose ranking placed FLLHTTR first (-9.60 kcal/mol), then YLSLLQR (-9.49 kcal/mol) and ALLLHRC (-9.29 kcal/mol). Mean ranking placed YLSLLQR first (-9.44 ± 0.09 kcal/mol) and ALLLHRC second (-9.18 ± 0.11 kcal/mol). FLLHTTR retained the strongest single pose but the largest run-to-run SD (-8.77 ± 1.41 kcal/mol). Best poses formed 3–10 hydrogen bonds (mean length 2.83–3.28 Å; Figures 2 and 3; Figure S1).
+All twelve ligands yielded favorable local Vina scores. Best-run affinities ranged from -8.25 to -9.60 kcal/mol and three-run means from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (Table 4, Figure 1). Best-pose ranking placed FLLHTTR first (-9.60 kcal/mol), then YLSLLQR (-9.49 kcal/mol) and ALLLHRC (-9.29 kcal/mol). Mean ranking placed YLSLLQR first (-9.44 ± 0.09 kcal/mol) and ALLLHRC second (-9.18 ± 0.11 kcal/mol). FLLHTTR retained the strongest single pose but the largest run-to-run SD (-8.77 ± 1.41 kcal/mol). Best poses formed 3–10 hydrogen bonds (mean length 2.83–3.28 Å; Figures 2 and 3; Figure S1).
 
-**Table 3. Local AutoDock Vina scores and PAS engagement of twelve candidate micropeptides against human AChE (PDB 4EY6).**
+**Table 4. Local AutoDock Vina scores and PAS engagement of twelve candidate micropeptides against human AChE (PDB 4EY6).**
 
 | No. | Peptide | HBonds | Key residues | Best (kcal/mol) | Mean ± SD, n=3 (kcal/mol) | PAS engagement |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -124,13 +152,13 @@ Canonical PAS binders in the best pose were FLLHTTR (Figure 2C), YLSLLQR (Figure
 
 ### 100-ns molecular dynamics of apo AChE and three complexes
 
-Production trajectories were completed for apo AChE and the ALLLHRC, FLLHTTR, and YLSLLQR complexes (Table 4, Figures 4–6). Each six-panel figure compares the unliganded control with one peptide complex: backbone RMSD (A), per-residue RMSF (B), SASA (C), Rg (D), DSSP occupancy over the last 20 ns (E), and intermolecular hydrogen bonds (F).
+Production trajectories were completed for apo AChE and the ALLLHRC, FLLHTTR, and YLSLLQR complexes (Table 5, Figures 4–6). Each six-panel figure compares the unliganded control with one peptide complex: backbone RMSD (A), per-residue RMSF (B), SASA (C), Rg (D), DSSP occupancy over the last 20 ns (E), and intermolecular hydrogen bonds (F).
 
 <!-- PAGEBREAK -->
 
 ![Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns comparison.](../figures/fig_compare_mixed_ache_vs_alllhrc.png)
 
-**Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns molecular dynamics comparison.** Panels A–F match the metrics in Table 4. Complex RMSD (A) closely follows apo; hydrogen bonds (F) decay from early high occupancy to ~2 in the last 20 ns.
+**Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns molecular dynamics comparison.** Panels A–F match the metrics in Table 5. Complex RMSD (A) closely follows apo; hydrogen bonds (F) decay from early high occupancy to ~2 in the last 20 ns.
 
 ![Figure 5. Apo AChE versus AChE–FLLHTTR 100-ns comparison.](../figures/fig_compare_mixed_ache_vs_fllhttr.png)
 
@@ -140,7 +168,7 @@ Production trajectories were completed for apo AChE and the ALLLHRC, FLLHTTR, an
 
 **Figure 6. Apo AChE versus AChE–YLSLLQR 100-ns molecular dynamics comparison.** Panel layout matches Figure 4. Late RMSD (A) lies below apo; SASA (C) is the only complex that contracts relative to apo.
 
-**Table 4. Final-20-ns trajectory metrics for apo AChE and three peptide complexes (mean ± SD), aligned to Figures 4–6.**
+**Table 5. Final-20-ns trajectory metrics for apo AChE and three peptide complexes (mean ± SD), aligned to Figures 4–6.**
 
 | Metric (last 20 ns) | apo AChE | AChE–ALLLHRC | AChE–FLLHTTR | AChE–YLSLLQR |
 | --- | --- | --- | --- | --- |

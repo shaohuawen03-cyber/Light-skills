@@ -4,8 +4,8 @@
     "quality_reports/repository_inventory.json (self-referential output)",
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
-  "total_files": 233,
-  "total_bytes": 107042720,
+  "total_files": 234,
+  "total_bytes": 107050196,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,7 +17,7 @@
     },
     "manuscript": {
       "files": 65,
-      "bytes": 94875821
+      "bytes": 94881735
     },
     "project_root": {
       "files": 4,
@@ -41,11 +41,11 @@
     },
     "scripts": {
       "files": 29,
-      "bytes": 190776
+      "bytes": 190862
     },
     "source_materials": {
-      "files": 34,
-      "bytes": 3834969
+      "files": 35,
+      "bytes": 3836445
     },
     "submission": {
       "files": 6,
@@ -56,7 +56,7 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 21110,
-      "sha256": "761d0de67cbd0cc20d93320973077f807f33c2ab635aa0ed2533db3ed341d9a9"
+      "sha256": "d858e76d61ab557c54df084dee6ee316294f1ec103683424facf9953cd52f845"
     },
     {
       "path": "README.md",
@@ -460,23 +460,23 @@
     },
     {
       "path": "manuscript/sci_combined/Chinese.docx",
-      "size_bytes": 9635519,
-      "sha256": "59231b0ae7f94279bff4d47efba6a86fb096794093bb725f833461e427d5bfd4"
+      "size_bytes": 9636721,
+      "sha256": "7c603b53ea256575ac58d3ecafe109ac8714b1a9ceac38109af999a49bd02f77"
     },
     {
       "path": "manuscript/sci_combined/Chinese.md",
-      "size_bytes": 29346,
-      "sha256": "ea8167c8e01a2ea26c6a3d5ab203a8693a55e63102b7faf51fdb4a7065159228"
+      "size_bytes": 31029,
+      "sha256": "f04f5bfc540b6021cbaf5441db999c6aa66f555311b0b70e068861631122169d"
     },
     {
       "path": "manuscript/sci_combined/English.docx",
-      "size_bytes": 9634819,
-      "sha256": "00663a4713672a40d82bcbe6c3461a20c3daf86c44636f78d277471df0a18a22"
+      "size_bytes": 9635954,
+      "sha256": "3f0a18b9d321e15c37f95cf0f2b967f9d7b3cb0972c4ec047bd77185dd15962c"
     },
     {
       "path": "manuscript/sci_combined/English.md",
-      "size_bytes": 32386,
-      "sha256": "5fec4d6a1e51acc669e56fada129d87987f2ee9dcda84195d562a6ce644f8f50"
+      "size_bytes": 34120,
+      "sha256": "1ed2e5f9a5fc41a1ab89702da445d14c7b35ca5410f884c48a79997d6be36f2c"
     },
     {
       "path": "manuscript/sci_combined/Limitations.docx",
@@ -490,8 +490,8 @@
     },
     {
       "path": "manuscript/sci_combined/README.md",
-      "size_bytes": 2391,
-      "sha256": "0b19f411b82b33ade5b1d27ea3dced0619707010b9139dbf5bbcf9870db63bdb"
+      "size_bytes": 2551,
+      "sha256": "1e830463b547becd5b6d30b39cb44e5889a1a6c872090cc83bd610807b5cbf54"
     },
     {
       "path": "manuscript/sci_combined/局限性.docx",
@@ -875,8 +875,8 @@
     },
     {
       "path": "scripts/SYNC.md",
-      "size_bytes": 6805,
-      "sha256": "cdc37d6aed5d55e0e96b3a5575ba3e064ae22f3706b087987a9e51c983324234"
+      "size_bytes": 6891,
+      "sha256": "eefb089dbaaad7360f180495a8f04fd5936721aaeeb1ec35413c45599b428bc2"
     },
     {
       "path": "scripts/audit_citation_inventory.py",
@@ -1167,6 +1167,11 @@
       "path": "source_materials/md_results/local_vina_docking_summary.csv",
       "size_bytes": 526,
       "sha256": "7dd9c26e9f5b0cdf4e8b87a55cb498ec5e5f10fe0292eb880c5d74cacd769f82"
+    },
+    {
+      "path": "source_materials/unidl4biopep_periodontitis_full_library_22tasks.csv",
+      "size_bytes": 1476,
+      "sha256": "fa3ea295e088f5f36323429b464b81b9eeca00def5a8980a2ececb70e4a60336"
     },
     {
       "path": "source_materials/乙酰胆碱酯酶-β-淀粉样肽复合物分子动力学模拟_中文翻译.docx",
