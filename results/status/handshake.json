@@ -1,9 +1,9 @@
 {
-    "round":  1,
-    "arena_state":  "awaiting_check",
-    "local_state":  "passed",
-    "arena_updated":  "2026-09-18 12:57:59",
-    "local_updated":  "2026-09-18 20:59:54",
-    "host":  "LAPTOP-R77M5D6M",
-    "note":  "生成鲜味肽ML筛选毕业论文docx，已包含lark和cnki_agent对接，执行code/agent_task.ps1"
+  "round": 1,
+  "arena_state": "accepted",
+  "local_state": "passed",
+  "arena_updated": "2026-09-18 13:02:21",
+  "local_updated": "2026-09-18 20:59:54",
+  "host": "LAPTOP-R77M5D6M",
+  "note": "自循环成功：本机已生成鲜味肽ML筛选毕业论文docx，无需手动pull/push，值守flash模式正常，auth已钉到shaohuawen03-cyber，bsk doctor全绿，where.ps1深度修复已生效"
 }
