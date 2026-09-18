@@ -1,0 +1,10 @@
+{
+  "description": "ML umami peptide thesis docx generated via local self-loop",
+  "require_files": [
+    "deliverable/机器学习筛选鲜味肽_毕业论文.docx",
+    "deliverable/ML_Umami_Peptide_Screening_Thesis.docx"
+  ],
+  "min_bytes": {
+    "deliverable/机器学习筛选鲜味肽_毕业论文.docx": 10000
+  }
+}

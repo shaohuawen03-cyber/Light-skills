@@ -23,8 +23,8 @@ E:\0github\<clone>（工作副本 + deliverable 回传区，永不覆盖已有�
 <!-- BEGIN:AUTO-INDEX -->
 | 技能 | 版本 | 说明 |
 |---|---|---|
-| **arena-local-bridge** | 2.0 | arena-local-bridge — 最终版 skill（BrowserSkill 全家桶汇总） — 版本 v2.0（2026-09-18）。汇总：`git-sync`（git 打通+值守+自循环）、 |
-| **git-sync** | 2.9.2 | git-local-arena-sync — TRIGGER: user says 安装https://arena.ai/agent/01a0a821 的skills 与本地打通 (or 安装 arena/01a0a821-git-pull-arena skills). Do NOT open arena.ai (login… |
+| **arena-local-bridge** | 2.0 | arena-local-bridge — Arena local bridge — BrowserSkill full stack: git-sync bridge + bsk browser control (Agent Window/borrow/clipboard/snapshot) + arena.ai orchestration (continu… |
+| **git-sync** | 2.9.2 | git-sync — TRIGGER: user says 安装BrowserSkill的skills与本地打通 or 安装arena/01a0b237-browserskill or 安装Light-skills的skills与本地打通. Do NOT open ar… |
 | **light-citation** | - | light-citation — Verify scholarly references and claim-citation support for Light stage 10. Use when auditing a manuscript, claim map, bibliography, DOI/arXiv/PMID/ISBN/URL, Bib… |
 | **light-consistency** | - | light-consistency — >- |
 | **light-data-engineering** | - | light-data-engineering — >- |
