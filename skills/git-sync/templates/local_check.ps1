@@ -162,12 +162,27 @@ if (Test-Path -LiteralPath $loopChk) {
     Write-Output '[WARN] accept 2c: code\check_loop_summary.ps1 is missing - skipped (upgrade the skill)'
 }
 
-# 3. example: the deliverable must exist and not be empty
+# 3. self-loop task: run agent_task.ps1 if present (umami peptide ML thesis)
+# This makes watch.ps1 auto-execute the task without manual pull/push
+$agentTask = '.\code\agent_task.ps1'
+if (Test-Path -LiteralPath $agentTask) {
+    Write-Output "== running agent_task.ps1 (self-loop task)"
+    try {
+        $taskOut = (& powershell -NoProfile -ExecutionPolicy Bypass -File $agentTask 2>&1 | Out-String)
+        Write-Output $taskOut
+    } catch {
+        Write-Output ("[WARN] agent_task.ps1 threw: " + $_.Exception.Message)
+    }
+} else {
+    Write-Output "== no agent_task.ps1, skipping self-loop"
+}
+
+# 4. example: the deliverable must exist and not be empty
 # if (-not (Test-Path '.\deliverable\final.pptx')) {
 #     Write-Host '[FAIL] deliverable\final.pptx missing' -ForegroundColor Red; $fail = 1
 # }
 
-# 4. add your own checks here ...
+# 5. add your own checks here ...
 
 
 #    2d. v2.7.0 hands-free helpers must be in watch.ps1 (on disk after sync;

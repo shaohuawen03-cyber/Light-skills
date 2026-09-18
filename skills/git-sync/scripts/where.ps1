@@ -2,13 +2,16 @@
 # always knows which folder to work in.
 #
 # Usage (repo root or anywhere):
-#     .\where.ps1                              list every clone found
-#     .\where.ps1 -Want arena/01a0b237-browserskill
-#     .\where.ps1 -Want 01a09d79               partial match works (branch,
+#     .\\where.ps1                              list every clone found
+#     .\\where.ps1 -Want arena/01a0b237-browserskill
+#     .\\where.ps1 -Want 01a09d79               partial match works (branch,
 #                                              session id, or folder name)
 #
 # Scan roots: every ancestor of this script that is a git repo, plus the
-# children of E:\0github, E:\0github\git-sync and E:\0zhongqi (one level).
+# children of E:\\0github, E:\\0github\\git-sync, E:\\0github\\git-sync\\*,
+# E:\\0zhongqi and E:\\0github\\Light-skills_out etc (two levels under 0github).
+# v2.9.3 patch: depth 2 scan for E:\\0github\\git-sync to find BrowserSkill-01a0b237
+# inside git-sync folder (user reported where.cmd missed it).
 # Output is pure ASCII on purpose (PowerShell 5.1 codepage safety).
 
 param([string]$Want = '')
@@ -28,14 +31,31 @@ while ($cur -and $cur -ne (Split-Path -Parent $cur)) {
     $cur = Split-Path -Parent $cur
 }
 
-# 2. one-level children of the known work roots
+# 2. one-level and two-level children of the known work roots
 $roots = @()
 $cur = $start
 while ($cur -and $cur -ne (Split-Path -Parent $cur)) { $roots += $cur; $cur = Split-Path -Parent $cur }
+$roots += 'E:\0github'
+$roots += 'E:\0github\git-sync'
 $roots += 'E:\0zhongqi'
+$roots += 'E:\0zhongqi\zhongqi'
+$roots += 'E:\'
+
 foreach ($r in ($roots | Select-Object -Unique)) {
     if (-not (Test-Path -LiteralPath $r)) { continue }
-    Get-ChildItem -LiteralPath $r -Directory | ForEach-Object { Add-Cand $_.FullName }
+    # depth 1
+    try {
+        Get-ChildItem -LiteralPath $r -Directory -ErrorAction SilentlyContinue | ForEach-Object { Add-Cand $_.FullName }
+    } catch {}
+    # depth 2 only for E:\0github and E:\0github\git-sync (to find nested clones like git-sync\BrowserSkill-xxx)
+    if ($r -like 'E:\0github*' -or $r -eq 'E:\') {
+        try {
+            Get-ChildItem -LiteralPath $r -Directory -ErrorAction SilentlyContinue | ForEach-Object {
+                $sub = $_.FullName
+                Get-ChildItem -LiteralPath $sub -Directory -ErrorAction SilentlyContinue | ForEach-Object { Add-Cand $_.FullName }
+            }
+        } catch {}
+    }
 }
 
 $cands = $cands | Select-Object -Unique
