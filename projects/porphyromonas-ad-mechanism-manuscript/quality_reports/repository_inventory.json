@@ -4,8 +4,8 @@
     "quality_reports/repository_inventory.json (self-referential output)",
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
-  "total_files": 234,
-  "total_bytes": 107050196,
+  "total_files": 235,
+  "total_bytes": 107054888,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,7 +17,7 @@
     },
     "manuscript": {
       "files": 65,
-      "bytes": 94881735
+      "bytes": 94884951
     },
     "project_root": {
       "files": 4,
@@ -44,8 +44,8 @@
       "bytes": 190862
     },
     "source_materials": {
-      "files": 35,
-      "bytes": 3836445
+      "files": 36,
+      "bytes": 3837921
     },
     "submission": {
       "files": 6,
@@ -56,7 +56,7 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 21110,
-      "sha256": "d858e76d61ab557c54df084dee6ee316294f1ec103683424facf9953cd52f845"
+      "sha256": "6f83c1057046413e4e00e4e534c45b80b1ddf3cb7ef81757cbd008c336a3b055"
     },
     {
       "path": "README.md",
@@ -460,48 +460,48 @@
     },
     {
       "path": "manuscript/sci_combined/Chinese.docx",
-      "size_bytes": 9636721,
-      "sha256": "7c603b53ea256575ac58d3ecafe109ac8714b1a9ceac38109af999a49bd02f77"
+      "size_bytes": 9637417,
+      "sha256": "ec37738d168d8cb5e56e8a1e56fac9d39d344e2558b662759d8ff1c4a7495b8b"
     },
     {
       "path": "manuscript/sci_combined/Chinese.md",
-      "size_bytes": 31029,
-      "sha256": "f04f5bfc540b6021cbaf5441db999c6aa66f555311b0b70e068861631122169d"
+      "size_bytes": 31627,
+      "sha256": "aedc478bac96be93b0d2d3f4cb5514294133e4ce43342eb51b46c2f4b0d8f805"
     },
     {
       "path": "manuscript/sci_combined/English.docx",
-      "size_bytes": 9635954,
-      "sha256": "3f0a18b9d321e15c37f95cf0f2b967f9d7b3cb0972c4ec047bd77185dd15962c"
+      "size_bytes": 9636650,
+      "sha256": "289cad5fa77e82d347af97a1e3d9c4967f0edc716324d5bf079af3916a5085a0"
     },
     {
       "path": "manuscript/sci_combined/English.md",
-      "size_bytes": 34120,
-      "sha256": "1ed2e5f9a5fc41a1ab89702da445d14c7b35ca5410f884c48a79997d6be36f2c"
+      "size_bytes": 34821,
+      "sha256": "b0e3255b5754aa6c2b9e6eb6d45dfbaa5ccb4d5078bdc3a8ee060ef7456c2d6a"
     },
     {
       "path": "manuscript/sci_combined/Limitations.docx",
-      "size_bytes": 5125,
-      "sha256": "3cc94000209e0f6ffbbabb058d05a73ff5f5bf31ae0792d3a48b149604f9ae46"
+      "size_bytes": 5203,
+      "sha256": "f3736eae15c11a4ad1359ae82aedfe239f53c503edb62bf2beec4d4c1235d95c"
     },
     {
       "path": "manuscript/sci_combined/Limitations.md",
-      "size_bytes": 1674,
-      "sha256": "69c10b0cc14e3b8b4f324cc67ac3159b87370578e152b5ab038a4295d893c7e9"
+      "size_bytes": 1822,
+      "sha256": "1c31587b7c0ea39c60992f959472c96f7ddb1fdce13d7285192273d52e6deb8e"
     },
     {
       "path": "manuscript/sci_combined/README.md",
-      "size_bytes": 2551,
-      "sha256": "1e830463b547becd5b6d30b39cb44e5889a1a6c872090cc83bd610807b5cbf54"
+      "size_bytes": 2645,
+      "sha256": "912fd6abecee03bb33776597861764fdae9c6f67fc5d934c386ceeb157e47b00"
     },
     {
       "path": "manuscript/sci_combined/局限性.docx",
-      "size_bytes": 5215,
-      "sha256": "49240090c568943d2da95bd2c5976cbcbddf6c16a487811a0bf82e1e1e90507c"
+      "size_bytes": 5299,
+      "sha256": "6aa610d77ed78a7405d92e3842511081e72019bcd801e16cda394475ed571eb9"
     },
     {
       "path": "manuscript/sci_combined/局限性.md",
-      "size_bytes": 1379,
-      "sha256": "90e4a8d0d334218ca2808d337ab4fdbac718c0847b36eb928f91eff6681334d4"
+      "size_bytes": 1500,
+      "sha256": "bce40765e412e34f1367f2bc0fe535b95ba4b1963a44a6d09dcc00df474f2af4"
     },
     {
       "path": "manuscript/supplementary_tables_bilingual.docx",
@@ -1167,6 +1167,11 @@
       "path": "source_materials/md_results/local_vina_docking_summary.csv",
       "size_bytes": 526,
       "sha256": "7dd9c26e9f5b0cdf4e8b87a55cb498ec5e5f10fe0292eb880c5d74cacd769f82"
+    },
+    {
+      "path": "source_materials/unidl4biopep_healthy_full_library_22tasks.csv",
+      "size_bytes": 1476,
+      "sha256": "83403c7104f8c360747165e876879da9212abd70b235295bbdb4e80365b13a14"
     },
     {
       "path": "source_materials/unidl4biopep_periodontitis_full_library_22tasks.csv",

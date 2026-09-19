@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Periodontitis-associated oral dysbiosis has been linked to Alzheimer’s disease (AD), but a peptide-level path from the oral microbiome to a defined synaptic enzyme remains incomplete. This computation-only study joins an oral small open reading frame (smORF) screening cascade with local AutoDock Vina docking of twelve 7–9-aa candidate micropeptides into human acetylcholinesterase (AChE, PDB 4EY6) and 100-ns all-atom molecular dynamics (MD) of apo AChE versus three complexes (ALLLHRC, FLLHTTR, YLSLLQR). UniDL4BioPep first scored the 11,721,988 periodontitis-labelled smORFs on 22 tasks (BBB (BBP) ≥0.80: 1,125,832; 9.60%). Metaproteome matching then intersected BBB-high predictions with evidence-supported unique peptides, recovering 3,518 candidates; 923 were NTxPred2-positive, and later filters produced a twelve-sequence set. Local three-run Vina scores ranged from -8.25 to -9.60 kcal/mol (best run) and from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (mean ± SD). FLLHTTR had the strongest best pose but the largest run-to-run SD; YLSLLQR had the strongest mean and, with FLLHTTR and LLHPLRL, contacted the peripheral anionic site (PAS). Over 100 ns the three complexes remained globular (backbone RMSD 0.16–0.19 nm; α-helix ~33%, β-sheet ~17%). FLLHTTR and YLSLLQR complexes were more stable than apo (0.1640 and 0.1625 nm versus 0.1897 nm). FLLHTTR formed the densest hydrogen-bond network (7.03 ± 1.28); only YLSLLQR contracted SASA (209.71 versus 212.25 nm²). Taken together, the poses and trajectories support a possible pathogenic mechanism: periodontitis-derived micropeptides occupy the AChE PAS, impede acetylcholine access, and act as heterologous seeds that co-nucleate endogenous Aβ on the same pro-fibrillar surface.
+Periodontitis-associated oral dysbiosis has been linked to Alzheimer’s disease (AD), but a peptide-level path from the oral microbiome to a defined synaptic enzyme remains incomplete. This computation-only study joins an oral small open reading frame (smORF) screening cascade with local AutoDock Vina docking of twelve 7–9-aa candidate micropeptides into human acetylcholinesterase (AChE, PDB 4EY6) and 100-ns all-atom molecular dynamics (MD) of apo AChE versus three complexes (ALLLHRC, FLLHTTR, YLSLLQR). UniDL4BioPep first scored 11,269,961 healthy-labelled and 11,721,988 periodontitis-labelled smORFs on 22 tasks (periodontitis BBB (BBP) ≥0.80: 1,125,832; 9.60%). Metaproteome matching then intersected periodontitis BBB-high predictions with evidence-supported unique peptides, recovering 3,518 candidates; 923 were NTxPred2-positive, and later filters produced a twelve-sequence set. Local three-run Vina scores ranged from -8.25 to -9.60 kcal/mol (best run) and from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (mean ± SD). FLLHTTR had the strongest best pose but the largest run-to-run SD; YLSLLQR had the strongest mean and, with FLLHTTR and LLHPLRL, contacted the peripheral anionic site (PAS). Over 100 ns the three complexes remained globular (backbone RMSD 0.16–0.19 nm; α-helix ~33%, β-sheet ~17%). FLLHTTR and YLSLLQR complexes were more stable than apo (0.1640 and 0.1625 nm versus 0.1897 nm). FLLHTTR formed the densest hydrogen-bond network (7.03 ± 1.28); only YLSLLQR contracted SASA (209.71 versus 212.25 nm²). Taken together, the poses and trajectories support a possible pathogenic mechanism: periodontitis-derived micropeptides occupy the AChE PAS, impede acetylcholine access, and act as heterologous seeds that co-nucleate endogenous Aβ on the same pro-fibrillar surface.
 
 **Keywords:** Alzheimer’s disease; *Porphyromonas gingivalis*; periodontitis; oral micropeptide; smORF; acetylcholinesterase; peripheral anionic site; molecular docking; molecular dynamics
 
@@ -24,15 +24,15 @@ This was a computation-only analysis. Screening used aggregate smORF counts, mod
 
 ### Oral smORF screening cascade
 
-Translated smORFs encoding 4–50-aa peptides formed the starting libraries (11,269,961 healthy-labelled and 11,721,988 periodontitis-labelled sequences; PRJNA678453) [@belstrom2021periodontitis]. In line with antimicrobial-peptide discovery workflows, UniDL4BioPep was applied first to the full periodontitis-labelled library [@du2023unidl4biopep]: ESM-2 (`esm2_t6_8M_UR50D`) embeddings and 22 task-specific convolutional networks, each with a decision threshold of ≥0.80. Unified task names are ACE inhibitory, DPP-IV inhibitory, Bitter, Umami, Antimicrobial, Antimalarial (alternative), Antimalarial (main), Quorum sensing, Anticancer (main), Anticancer (alternative), Anti-MRSA, TTCA, BBB (BBP), Anti-parasitic (APP), NeuroPred, Antibacterial, Antifungal, Antiviral, Toxicity, Antioxidant FRS, Allergenicity, and cell-penetrating peptide (CPP). BBB (BBP) ≥0.80 defined the operational BBB-high set.
+Translated smORFs encoding 4–50-aa peptides formed the starting libraries (11,269,961 healthy-labelled and 11,721,988 periodontitis-labelled sequences; PRJNA678453) [@belstrom2021periodontitis]. In line with antimicrobial-peptide discovery workflows [@torres2024peptideantibiotics], UniDL4BioPep was applied first to both full libraries [@du2023unidl4biopep]: ESM-2 (`esm2_t6_8M_UR50D`) embeddings and 22 task-specific convolutional networks, each with a decision threshold of ≥0.80. Unified task names are ACE inhibitory, DPP-IV inhibitory, Bitter, Umami, Antimicrobial, Antimalarial (alternative), Antimalarial (main), Quorum sensing, Anticancer (main), Anticancer (alternative), Anti-MRSA, TTCA, BBB (BBP), Anti-parasitic (APP), NeuroPred, Antibacterial, Antifungal, Antiviral, Toxicity, Antioxidant FRS, Allergenicity, and cell-penetrating peptide (CPP). BBB (BBP) ≥0.80 defined the operational BBB-high set.
 
-After UniDL4BioPep scoring, sequences were exact-matched against oral genomic and metaproteomic resources, including HOMD and salivary metaproteome catalogues, and dereplicated [@chen2010homd; @belstrom2016metaproteomics]. The periodontitis-labelled library yielded 33,786 evidence-supported unique peptides; their intersection with the 1,125,832 BBB (BBP) predictions recovered 3,518 candidates (3,446 short, 5–30 aa; 72 long, 31–50 aa). Peptides in that intersection within 7–50 aa were evaluated with NTxPred2 (ESM2-t30) [@rathore2025ntxpred2]. Mebipred applied a two-tier neural network to Cu-, Fe-, and Zn-related binding potential at a 0.50 threshold [@aptekmann2022mebipred]. AnOxPePred supplied multi-task free-radical-scavenging (FRS) and chelation (CHEL) outputs [@olsen2020anoxpepred]; serial endpoints were CHEL≥0.25, CHEL≥0.25 with FRS<0.50, and CHEL≥0.25 with FRS<0.45.
+After UniDL4BioPep scoring, sequences were exact-matched against oral genomic and metaproteomic resources, including HOMD and salivary metaproteome catalogues, and dereplicated [@chen2010homd; @belstrom2016metaproteomics]. The healthy-labelled library yielded 31,510 evidence-supported unique peptides and the periodontitis-labelled library 33,786. Intersection of the periodontitis BBB (BBP) set (1,125,832) with the periodontitis evidence-supported peptides recovered 3,518 candidates (3,446 short, 5–30 aa; 72 long, 31–50 aa). Peptides in that intersection within 7–50 aa were evaluated with NTxPred2 (ESM2-t30) [@rathore2025ntxpred2]. Mebipred applied a two-tier neural network to Cu-, Fe-, and Zn-related binding potential at a 0.50 threshold [@aptekmann2022mebipred]. AnOxPePred supplied multi-task free-radical-scavenging (FRS) and chelation (CHEL) outputs [@olsen2020anoxpepred]; serial endpoints were CHEL≥0.25, CHEL≥0.25 with FRS<0.50, and CHEL≥0.25 with FRS<0.45.
 
 A separate table listed twelve unique 7–9-aa sequences. Length and counts of histidine, cysteine, and basic residues were recalculated from each string.
 
 ### Molecular docking
 
-Human recombinant AChE (rhAChE, PDB 4EY6, 2.40 Å) [@cheung2012ache] was prepared by removing galantamine and crystallographic waters, repairing internal chain breaks, and assigning physiological protonation (pH 7.4). The twelve peptides ALLLHRC, FCLHLQLR, FLLHTTR, HLLTLKKHV, HLPLLHRCC, HVLLLRQCA, LLHLPKRTT, LLHPLRC, LLHPLRL, WLLVHLKK, YHHLLCRR, and YLSLLQR were docked with AutoDock Vina (exhaustiveness = 32) [@trott2010vina; @eberhardt2021vina] into a grid centered on the PAS (Tyr72, Asp74, Thr75, Leu76, Trp286, His287, Tyr341) and spanning the gorge neck (Phe295), choline-binding subsite (Trp86, Glu202, Tyr337), and catalytic triad (Ser203, His447, Glu334). Each ligand was run three times (`N_Success` = 3). Best-run affinity, three-run mean ± SD, hydrogen-bond geometry, and PAS contacts were taken from the local three-run summary and the single best-scoring pose of each ligand. Individual PDBQT files and configuration logs are not archived. Vina scores are empirical ranking metrics, not experimental free energies.
+Human recombinant AChE (rhAChE, PDB 4EY6, 2.40 Å) [@cheung2012ache] was prepared by removing galantamine and crystallographic waters, repairing internal chain breaks, and assigning physiological protonation (pH 7.4). The twelve peptides ALLLHRC, FCLHLQLR, FLLHTTR, HLLTLKKHV, HLPLLHRCC, HVLLLRQCA, LLHLPKRTT, LLHPLRC, LLHPLRL, WLLVHLKK, YHHLLCRR, and YLSLLQR were docked with AutoDock Vina (exhaustiveness = 32) [@trott2010vina; @eberhardt2021vina] into a grid centered on the PAS (Tyr72, Asp74, Thr75, Leu76, Trp286, His287, Tyr341) and spanning the gorge neck (Phe295), choline-binding subsite (Trp86, Glu202, Tyr337), and catalytic triad (Ser203, His447, Glu334). Each ligand was run three times (`N_Success` = 3). Best-run affinity, three-run mean ± SD, hydrogen-bond geometry, and PAS contacts were taken from the local three-run summary and the single best-scoring pose of each ligand. Vina scores are empirical ranking metrics, not experimental free energies.
 
 ### Molecular dynamics
 
@@ -44,34 +44,34 @@ Trajectory metrics matching Figures 4–6 were backbone Cα RMSD, per-residue RM
 
 ### Screening funnel and twelve-sequence composition
 
-UniDL4BioPep scored all 11,721,988 periodontitis-labelled smORFs on 22 tasks at ≥0.80 (Table 1). The largest output was Antimicrobial (10,302,093; 87.89%), followed by Anti-parasitic (APP) (5,462,493; 46.60%) and Quorum sensing (4,491,507; 38.32%). BBB (BBP) returned 1,125,832 sequences (9.60%). DPP-IV inhibitory was the smallest (139,056; 1.19%). Task labels are overlapping; a peptide may count in more than one row.
+UniDL4BioPep scored both starting libraries on 22 tasks at ≥0.80 (Table 1). Hit rates were similar: Antimicrobial 9,882,657/11,269,961 healthy-labelled sequences (87.69%) versus 10,302,093/11,721,988 periodontitis-labelled sequences (87.89%); BBB (BBP) 1,095,861 (9.72%) versus 1,125,832 (9.60%). In both libraries the largest outputs were Antimicrobial, Anti-parasitic (APP), and Quorum sensing; DPP-IV inhibitory was the smallest. Task labels overlap; a peptide may count in more than one row. Subsequent prioritization used the periodontitis-labelled branch.
 
-**Table 1. UniDL4BioPep outputs on the full periodontitis-labelled library (11,721,988 smORFs; threshold ≥0.80).**
+**Table 1. UniDL4BioPep outputs on the healthy-labelled (11,269,961) and periodontitis-labelled (11,721,988) libraries (threshold ≥0.80).**
 
-| No. | UniDL4BioPep task | n (≥0.80) | % of 11,721,988 |
-| --- | --- | ---: | ---: |
-| 1 | ACE inhibitory | 1,236,442 | 10.55 |
-| 2 | DPP-IV inhibitory | 139,056 | 1.19 |
-| 3 | Bitter | 1,831,185 | 15.62 |
-| 4 | Umami | 3,100,811 | 26.45 |
-| 5 | Antimicrobial | 10,302,093 | 87.89 |
-| 6 | Antimalarial (alternative) | 695,608 | 5.93 |
-| 7 | Antimalarial (main) | 2,010,724 | 17.15 |
-| 8 | Quorum sensing | 4,491,507 | 38.32 |
-| 9 | Anticancer (main) | 2,357,718 | 20.11 |
-| 10 | Anticancer (alternative) | 2,015,652 | 17.20 |
-| 11 | Anti-MRSA | 843,977 | 7.20 |
-| 12 | TTCA | 2,666,759 | 22.75 |
-| 13 | BBB (BBP) | 1,125,832 | 9.60 |
-| 14 | Anti-parasitic (APP) | 5,462,493 | 46.60 |
-| 15 | NeuroPred | 1,714,373 | 14.63 |
-| 16 | Antibacterial | 2,597,877 | 22.16 |
-| 17 | Antifungal | 2,960,118 | 25.25 |
-| 18 | Antiviral | 3,275,203 | 27.94 |
-| 19 | Toxicity | 1,714,299 | 14.62 |
-| 20 | Antioxidant FRS | 2,521,106 | 21.51 |
-| 21 | Allergenicity | 1,713,798 | 14.62 |
-| 22 | Cell-penetrating peptide (CPP) | 925,627 | 7.90 |
+| No. | UniDL4BioPep task | Healthy n | Healthy % | Periodontitis n | Periodontitis % |
+| --- | --- | ---: | ---: | ---: | ---: |
+| 1 | ACE inhibitory | 1,237,451 | 10.98 | 1,236,442 | 10.55 |
+| 2 | DPP-IV inhibitory | 131,426 | 1.17 | 139,056 | 1.19 |
+| 3 | Bitter | 1,840,368 | 16.33 | 1,831,185 | 15.62 |
+| 4 | Umami | 3,094,287 | 27.46 | 3,100,811 | 26.45 |
+| 5 | Antimicrobial | 9,882,657 | 87.69 | 10,302,093 | 87.89 |
+| 6 | Antimalarial (alternative) | 703,632 | 6.24 | 695,608 | 5.93 |
+| 7 | Antimalarial (main) | 1,954,667 | 17.34 | 2,010,724 | 17.15 |
+| 8 | Quorum sensing | 4,161,825 | 36.93 | 4,491,507 | 38.32 |
+| 9 | Anticancer (main) | 2,404,084 | 21.33 | 2,357,718 | 20.11 |
+| 10 | Anticancer (alternative) | 1,979,643 | 17.57 | 2,015,652 | 17.20 |
+| 11 | Anti-MRSA | 769,955 | 6.83 | 843,977 | 7.20 |
+| 12 | TTCA | 2,618,849 | 23.24 | 2,666,759 | 22.75 |
+| 13 | BBB (BBP) | 1,095,861 | 9.72 | 1,125,832 | 9.60 |
+| 14 | Anti-parasitic (APP) | 5,517,278 | 48.96 | 5,462,493 | 46.60 |
+| 15 | NeuroPred | 1,690,436 | 15.00 | 1,714,373 | 14.63 |
+| 16 | Antibacterial | 2,658,234 | 23.59 | 2,597,877 | 22.16 |
+| 17 | Antifungal | 3,128,057 | 27.76 | 2,960,118 | 25.25 |
+| 18 | Antiviral | 3,362,295 | 29.83 | 3,275,203 | 27.94 |
+| 19 | Toxicity | 1,725,268 | 15.31 | 1,714,299 | 14.62 |
+| 20 | Antioxidant FRS | 2,643,538 | 23.46 | 2,521,106 | 21.51 |
+| 21 | Allergenicity | 1,635,019 | 14.51 | 1,713,798 | 14.62 |
+| 22 | Cell-penetrating peptide (CPP) | 1,029,770 | 9.14 | 925,627 | 7.90 |
 
 Metaproteome exact-match and dereplication of the periodontitis-labelled library retained 33,786 evidence-supported unique peptides (healthy-labelled: 31,510/11,269,961). Intersection of the 1,125,832 BBB (BBP) predictions with that evidence-supported set recovered 3,518 peptides (3,446 short, 72 long). NTxPred2 evaluated 3,299/3,518 (93.77%) and classified 923/3,299 (27.98%) as model-positive. Subsequent filters retained 111 mebipred-positive candidates, 15 with CHEL≥0.25, 12 with CHEL≥0.25 and FRS<0.50, and 8 with CHEL≥0.25 and FRS<0.45 (Table 2).
 
@@ -87,10 +87,10 @@ Metaproteome exact-match and dereplication of the periodontitis-labelled library
 | Long (31–50 aa) | Length bin | 72 | 3,518 |
 | NTxPred2 evaluated | 7–50 aa | 3,299 | 3,518 |
 | NTxPred2-positive | Model-positive | 923 | 3,299 |
-| Metal-binding-positive | Mebipred ≥0.50 | 111 | Row-level handoff unavailable |
+| Metal-binding-positive | Mebipred ≥0.50 | 111 | — |
 | CHEL-priority | CHEL≥0.25 | 15 | 111 |
 | Main set | CHEL≥0.25 and FRS<0.50 | 12 | 111 |
-| Stricter subset | CHEL≥0.25 and FRS<0.45 | 8 | Sequence membership unavailable |
+| Stricter subset | CHEL≥0.25 and FRS<0.45 | 8 | — |
 
 The twelve explicit sequences are unique 7–9-aa peptides of standard amino acids (Table 3). Eleven contain histidine, six contain cysteine, and every sequence contains at least one Arg or Lys. All 923 NTxPred2-positive peptides were ≤30 aa, so the downstream metal/CHEL/FRS filters retained only short peptides.
 
@@ -203,7 +203,7 @@ AD combines amyloid deposition with cholinergic failure [@selkoe2016amyloid; @ha
 
 ### From the oral cavity to cortical AChE
 
-Chronic periodontitis can deliver *P. gingivalis* products into the circulation through a breached epithelium, gingipains, and outer-membrane vesicles [@guo2010gingipain; @ho2015omv]. Systemic cytokines and proteases increase blood–brain-barrier permeability, allowing short, leucine-rich, cationic micropeptides that scored BBB-high in the screening cascade to reach cortical interstitial space [@chalmers2025primer; @dominy2019pgingivalis]. Once there, PAS docking provides a molecular landing site on a synaptic enzyme that is both a cholinergic hydrolase and an amyloid chaperone. In this possible mechanism the twelve periodontitis-derived sequences are pathogenic peptides not because RMSD rises, but because they occupy the experimentally established Aβ-binding PAS and remain bound for 100 ns.
+Chronic periodontitis can deliver *P. gingivalis* products into the circulation through a breached epithelium, gingipains, and outer-membrane vesicles [@guo2010gingipain; @ho2015omv]. Systemic cytokines and proteases increase blood–brain-barrier permeability, allowing short, leucine-rich, cationic micropeptides that scored BBB-high (a label similarly prevalent in both libraries) to reach cortical interstitial space [@chalmers2025primer; @dominy2019pgingivalis]. Once there, PAS docking provides a molecular landing site on a synaptic enzyme that is both a cholinergic hydrolase and an amyloid chaperone. In this possible mechanism the twelve periodontitis-derived sequences are pathogenic peptides not because RMSD rises, but because they occupy the experimentally established Aβ-binding PAS and remain bound for 100 ns.
 
 ## Conclusions
 
