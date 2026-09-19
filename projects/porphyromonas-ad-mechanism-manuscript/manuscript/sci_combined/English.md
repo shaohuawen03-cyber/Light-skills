@@ -44,38 +44,65 @@ Trajectory metrics matching Figures 4–6 were backbone Cα RMSD, per-residue RM
 
 ### Screening funnel and twelve-sequence composition
 
-UniDL4BioPep scored both starting libraries on 22 tasks at ≥0.80 (Table 1). Hit rates were similar: Antimicrobial 9,882,657/11,269,961 healthy-labelled sequences (87.69%) versus 10,302,093/11,721,988 periodontitis-labelled sequences (87.89%); BBB (BBP) 1,095,861 (9.72%) versus 1,125,832 (9.60%). In both libraries the largest outputs were Antimicrobial, Anti-parasitic (APP), and Quorum sensing; DPP-IV inhibitory was the smallest. Task labels overlap; a peptide may count in more than one row. Subsequent prioritization used the periodontitis-labelled branch.
+UniDL4BioPep scored both starting libraries on 22 tasks at ≥0.80. The complete periodontitis-labelled counts are in Table 1 and the complete healthy-labelled counts in Table 2. Hit rates were similar: Antimicrobial 10,302,093/11,721,988 periodontitis-labelled sequences (87.89%) versus 9,882,657/11,269,961 healthy-labelled sequences (87.69%); BBB (BBP) 1,125,832 (9.60%) versus 1,095,861 (9.72%). In both libraries the largest outputs were Antimicrobial, Anti-parasitic (APP), and Quorum sensing; DPP-IV inhibitory was the smallest. Task labels overlap; a peptide may count in more than one row. Subsequent prioritization used the periodontitis-labelled branch.
 
-**Table 1. UniDL4BioPep outputs on the healthy-labelled (11,269,961) and periodontitis-labelled (11,721,988) libraries (threshold ≥0.80).**
+**Table 1. UniDL4BioPep outputs on the periodontitis-labelled library (11,721,988 smORFs; threshold ≥0.80).**
 
-| No. | UniDL4BioPep task | Healthy n | Healthy % | Periodontitis n | Periodontitis % |
-| --- | --- | ---: | ---: | ---: | ---: |
-| 1 | ACE inhibitory | 1,237,451 | 10.98 | 1,236,442 | 10.55 |
-| 2 | DPP-IV inhibitory | 131,426 | 1.17 | 139,056 | 1.19 |
-| 3 | Bitter | 1,840,368 | 16.33 | 1,831,185 | 15.62 |
-| 4 | Umami | 3,094,287 | 27.46 | 3,100,811 | 26.45 |
-| 5 | Antimicrobial | 9,882,657 | 87.69 | 10,302,093 | 87.89 |
-| 6 | Antimalarial (alternative) | 703,632 | 6.24 | 695,608 | 5.93 |
-| 7 | Antimalarial (main) | 1,954,667 | 17.34 | 2,010,724 | 17.15 |
-| 8 | Quorum sensing | 4,161,825 | 36.93 | 4,491,507 | 38.32 |
-| 9 | Anticancer (main) | 2,404,084 | 21.33 | 2,357,718 | 20.11 |
-| 10 | Anticancer (alternative) | 1,979,643 | 17.57 | 2,015,652 | 17.20 |
-| 11 | Anti-MRSA | 769,955 | 6.83 | 843,977 | 7.20 |
-| 12 | TTCA | 2,618,849 | 23.24 | 2,666,759 | 22.75 |
-| 13 | BBB (BBP) | 1,095,861 | 9.72 | 1,125,832 | 9.60 |
-| 14 | Anti-parasitic (APP) | 5,517,278 | 48.96 | 5,462,493 | 46.60 |
-| 15 | NeuroPred | 1,690,436 | 15.00 | 1,714,373 | 14.63 |
-| 16 | Antibacterial | 2,658,234 | 23.59 | 2,597,877 | 22.16 |
-| 17 | Antifungal | 3,128,057 | 27.76 | 2,960,118 | 25.25 |
-| 18 | Antiviral | 3,362,295 | 29.83 | 3,275,203 | 27.94 |
-| 19 | Toxicity | 1,725,268 | 15.31 | 1,714,299 | 14.62 |
-| 20 | Antioxidant FRS | 2,643,538 | 23.46 | 2,521,106 | 21.51 |
-| 21 | Allergenicity | 1,635,019 | 14.51 | 1,713,798 | 14.62 |
-| 22 | Cell-penetrating peptide (CPP) | 1,029,770 | 9.14 | 925,627 | 7.90 |
+| No. | UniDL4BioPep task | n (≥0.80) | % of 11,721,988 |
+| --- | --- | ---: | ---: |
+| 1 | ACE inhibitory | 1,236,442 | 10.55 |
+| 2 | DPP-IV inhibitory | 139,056 | 1.19 |
+| 3 | Bitter | 1,831,185 | 15.62 |
+| 4 | Umami | 3,100,811 | 26.45 |
+| 5 | Antimicrobial | 10,302,093 | 87.89 |
+| 6 | Antimalarial (alternative) | 695,608 | 5.93 |
+| 7 | Antimalarial (main) | 2,010,724 | 17.15 |
+| 8 | Quorum sensing | 4,491,507 | 38.32 |
+| 9 | Anticancer (main) | 2,357,718 | 20.11 |
+| 10 | Anticancer (alternative) | 2,015,652 | 17.20 |
+| 11 | Anti-MRSA | 843,977 | 7.20 |
+| 12 | TTCA | 2,666,759 | 22.75 |
+| 13 | BBB (BBP) | 1,125,832 | 9.60 |
+| 14 | Anti-parasitic (APP) | 5,462,493 | 46.60 |
+| 15 | NeuroPred | 1,714,373 | 14.63 |
+| 16 | Antibacterial | 2,597,877 | 22.16 |
+| 17 | Antifungal | 2,960,118 | 25.25 |
+| 18 | Antiviral | 3,275,203 | 27.94 |
+| 19 | Toxicity | 1,714,299 | 14.62 |
+| 20 | Antioxidant FRS | 2,521,106 | 21.51 |
+| 21 | Allergenicity | 1,713,798 | 14.62 |
+| 22 | Cell-penetrating peptide (CPP) | 925,627 | 7.90 |
 
-Metaproteome exact-match and dereplication of the periodontitis-labelled library retained 33,786 evidence-supported unique peptides (healthy-labelled: 31,510/11,269,961). Intersection of the 1,125,832 BBB (BBP) predictions with that evidence-supported set recovered 3,518 peptides (3,446 short, 72 long). NTxPred2 evaluated 3,299/3,518 (93.77%) and classified 923/3,299 (27.98%) as model-positive. Subsequent filters retained 111 mebipred-positive candidates, 15 with CHEL≥0.25, 12 with CHEL≥0.25 and FRS<0.50, and 8 with CHEL≥0.25 and FRS<0.45 (Table 2).
+**Table 2. UniDL4BioPep outputs on the healthy-labelled library (11,269,961 smORFs; threshold ≥0.80).**
 
-**Table 2. Serial prioritization after UniDL4BioPep prediction and metaproteome intersection.**
+| No. | UniDL4BioPep task | n (≥0.80) | % of 11,269,961 |
+| --- | --- | ---: | ---: |
+| 1 | ACE inhibitory | 1,237,451 | 10.98 |
+| 2 | DPP-IV inhibitory | 131,426 | 1.17 |
+| 3 | Bitter | 1,840,368 | 16.33 |
+| 4 | Umami | 3,094,287 | 27.46 |
+| 5 | Antimicrobial | 9,882,657 | 87.69 |
+| 6 | Antimalarial (alternative) | 703,632 | 6.24 |
+| 7 | Antimalarial (main) | 1,954,667 | 17.34 |
+| 8 | Quorum sensing | 4,161,825 | 36.93 |
+| 9 | Anticancer (main) | 2,404,084 | 21.33 |
+| 10 | Anticancer (alternative) | 1,979,643 | 17.57 |
+| 11 | Anti-MRSA | 769,955 | 6.83 |
+| 12 | TTCA | 2,618,849 | 23.24 |
+| 13 | BBB (BBP) | 1,095,861 | 9.72 |
+| 14 | Anti-parasitic (APP) | 5,517,278 | 48.96 |
+| 15 | NeuroPred | 1,690,436 | 15.00 |
+| 16 | Antibacterial | 2,658,234 | 23.59 |
+| 17 | Antifungal | 3,128,057 | 27.76 |
+| 18 | Antiviral | 3,362,295 | 29.83 |
+| 19 | Toxicity | 1,725,268 | 15.31 |
+| 20 | Antioxidant FRS | 2,643,538 | 23.46 |
+| 21 | Allergenicity | 1,635,019 | 14.51 |
+| 22 | Cell-penetrating peptide (CPP) | 1,029,770 | 9.14 |
+
+Metaproteome exact-match and dereplication of the periodontitis-labelled library retained 33,786 evidence-supported unique peptides (healthy-labelled: 31,510/11,269,961). Intersection of the 1,125,832 BBB (BBP) predictions with that evidence-supported set recovered 3,518 peptides (3,446 short, 72 long). NTxPred2 evaluated 3,299/3,518 (93.77%) and classified 923/3,299 (27.98%) as model-positive. Subsequent filters retained 111 mebipred-positive candidates, 15 with CHEL≥0.25, 12 with CHEL≥0.25 and FRS<0.50, and 8 with CHEL≥0.25 and FRS<0.45 (Table 3).
+
+**Table 3. Serial prioritization after UniDL4BioPep prediction and metaproteome intersection.**
 
 | Stage | Operational rule | n | Denominator |
 | --- | --- | ---: | ---: |
@@ -92,9 +119,9 @@ Metaproteome exact-match and dereplication of the periodontitis-labelled library
 | Main set | CHEL≥0.25 and FRS<0.50 | 12 | 111 |
 | Stricter subset | CHEL≥0.25 and FRS<0.45 | 8 | — |
 
-The twelve explicit sequences are unique 7–9-aa peptides of standard amino acids (Table 3). Eleven contain histidine, six contain cysteine, and every sequence contains at least one Arg or Lys. All 923 NTxPred2-positive peptides were ≤30 aa, so the downstream metal/CHEL/FRS filters retained only short peptides.
+The twelve explicit sequences are unique 7–9-aa peptides of standard amino acids (Table 4). Eleven contain histidine, six contain cysteine, and every sequence contains at least one Arg or Lys. All 923 NTxPred2-positive peptides were ≤30 aa, so the downstream metal/CHEL/FRS filters retained only short peptides.
 
-**Table 3. Composition of the twelve 7–9-aa candidate micropeptides.**
+**Table 4. Composition of the twelve 7–9-aa candidate micropeptides.**
 
 | No. | Sequence | Length | His | Cys | Arg+Lys |
 | ---: | --- | ---: | ---: | ---: | ---: |
@@ -113,9 +140,9 @@ The twelve explicit sequences are unique 7–9-aa peptides of standard amino aci
 
 ### Local three-run docking and PAS engagement
 
-All twelve ligands yielded favorable local Vina scores. Best-run affinities ranged from -8.25 to -9.60 kcal/mol and three-run means from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (Table 4, Figure 1). Best-pose ranking placed FLLHTTR first (-9.60 kcal/mol), then YLSLLQR (-9.49 kcal/mol) and ALLLHRC (-9.29 kcal/mol). Mean ranking placed YLSLLQR first (-9.44 ± 0.09 kcal/mol) and ALLLHRC second (-9.18 ± 0.11 kcal/mol). FLLHTTR retained the strongest single pose but the largest run-to-run SD (-8.77 ± 1.41 kcal/mol). Best poses formed 3–10 hydrogen bonds (mean length 2.83–3.28 Å; Figures 2 and 3; Figure S1).
+All twelve ligands yielded favorable local Vina scores. Best-run affinities ranged from -8.25 to -9.60 kcal/mol and three-run means from -8.07 ± 0.16 to -9.44 ± 0.09 kcal/mol (Table 5, Figure 1). Best-pose ranking placed FLLHTTR first (-9.60 kcal/mol), then YLSLLQR (-9.49 kcal/mol) and ALLLHRC (-9.29 kcal/mol). Mean ranking placed YLSLLQR first (-9.44 ± 0.09 kcal/mol) and ALLLHRC second (-9.18 ± 0.11 kcal/mol). FLLHTTR retained the strongest single pose but the largest run-to-run SD (-8.77 ± 1.41 kcal/mol). Best poses formed 3–10 hydrogen bonds (mean length 2.83–3.28 Å; Figures 2 and 3; Figure S1).
 
-**Table 4. Local AutoDock Vina scores and PAS engagement of twelve candidate micropeptides against human AChE (PDB 4EY6).**
+**Table 5. Local AutoDock Vina scores and PAS engagement of twelve candidate micropeptides against human AChE (PDB 4EY6).**
 
 | No. | Peptide | HBonds | Key residues | Best (kcal/mol) | Mean ± SD, n=3 (kcal/mol) | PAS engagement |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -152,13 +179,13 @@ Canonical PAS binders in the best pose were FLLHTTR (Figure 2C), YLSLLQR (Figure
 
 ### 100-ns molecular dynamics of apo AChE and three complexes
 
-Production trajectories were completed for apo AChE and the ALLLHRC, FLLHTTR, and YLSLLQR complexes (Table 5, Figures 4–6). Each six-panel figure compares the unliganded control with one peptide complex: backbone RMSD (A), per-residue RMSF (B), SASA (C), Rg (D), DSSP occupancy over the last 20 ns (E), and intermolecular hydrogen bonds (F).
+Production trajectories were completed for apo AChE and the ALLLHRC, FLLHTTR, and YLSLLQR complexes (Table 6, Figures 4–6). Each six-panel figure compares the unliganded control with one peptide complex: backbone RMSD (A), per-residue RMSF (B), SASA (C), Rg (D), DSSP occupancy over the last 20 ns (E), and intermolecular hydrogen bonds (F).
 
 <!-- PAGEBREAK -->
 
 ![Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns comparison.](../figures/fig_compare_mixed_ache_vs_alllhrc.png)
 
-**Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns molecular dynamics comparison.** Panels A–F match the metrics in Table 5. Complex RMSD (A) closely follows apo; hydrogen bonds (F) decay from early high occupancy to ~2 in the last 20 ns.
+**Figure 4. Apo AChE versus AChE–ALLLHRC 100-ns molecular dynamics comparison.** Panels A–F match the metrics in Table 6. Complex RMSD (A) closely follows apo; hydrogen bonds (F) decay from early high occupancy to ~2 in the last 20 ns.
 
 ![Figure 5. Apo AChE versus AChE–FLLHTTR 100-ns comparison.](../figures/fig_compare_mixed_ache_vs_fllhttr.png)
 
@@ -168,7 +195,7 @@ Production trajectories were completed for apo AChE and the ALLLHRC, FLLHTTR, an
 
 **Figure 6. Apo AChE versus AChE–YLSLLQR 100-ns molecular dynamics comparison.** Panel layout matches Figure 4. Late RMSD (A) lies below apo; SASA (C) is the only complex that contracts relative to apo.
 
-**Table 5. Final-20-ns trajectory metrics for apo AChE and three peptide complexes (mean ± SD), aligned to Figures 4–6.**
+**Table 6. Final-20-ns trajectory metrics for apo AChE and three peptide complexes (mean ± SD), aligned to Figures 4–6.**
 
 | Metric (last 20 ns) | apo AChE | AChE–ALLLHRC | AChE–FLLHTTR | AChE–YLSLLQR |
 | --- | --- | --- | --- | --- |
