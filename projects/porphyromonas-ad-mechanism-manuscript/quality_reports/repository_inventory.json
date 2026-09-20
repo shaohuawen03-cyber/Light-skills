@@ -5,7 +5,7 @@
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
   "total_files": 235,
-  "total_bytes": 107056508,
+  "total_bytes": 107056554,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,7 +17,7 @@
     },
     "manuscript": {
       "files": 65,
-      "bytes": 94886571
+      "bytes": 94886617
     },
     "project_root": {
       "files": 4,
@@ -56,7 +56,7 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 21110,
-      "sha256": "8cd6febd9cba4be2eb9f9eb5954fa5bfc716c7270a9550382aa8822b98834aad"
+      "sha256": "f07e211537afdf2550a6b2e1d89dbfe6258d1bf1fade7bf5287430b332cd6003"
     },
     {
       "path": "README.md",
@@ -460,23 +460,23 @@
     },
     {
       "path": "manuscript/sci_combined/Chinese.docx",
-      "size_bytes": 9637440,
-      "sha256": "ecb4e716a467aaa98867fdbe222b6463775728c055cb633398f63ba517091bb6"
+      "size_bytes": 9637443,
+      "sha256": "c567a6164e8907f4684580c3c00526e461dc85f774f4746086b7b8be2d956dff"
     },
     {
       "path": "manuscript/sci_combined/Chinese.md",
-      "size_bytes": 32317,
-      "sha256": "bdb08e44b63d9ce11ccdd5c06ea3ff713b910af9754dddb476adc1006610b87d"
+      "size_bytes": 32293,
+      "sha256": "2594505d59992c3a7ff49547b3cf9f22e3b35df7869855eb12d6471ab6942e86"
     },
     {
       "path": "manuscript/sci_combined/English.docx",
-      "size_bytes": 9636673,
-      "sha256": "5b7f77ce07ecae987b6488bb7e2adbc35afdf1eca3f5d586e5a0178352e48ffc"
+      "size_bytes": 9636682,
+      "sha256": "3ad387670365a7dce7af4da80a0e5329321b9c87ab06e498c6f85479962cff91"
     },
     {
       "path": "manuscript/sci_combined/English.md",
-      "size_bytes": 35561,
-      "sha256": "410e84ca3a41f1bdef31a9d3e9f4170d677e17b31cea196f61b884b69588719e"
+      "size_bytes": 35569,
+      "sha256": "69c0fa79880ca6c55dba35f511f6fb6167bd5468b30ec5f979cbd17a6292d54f"
     },
     {
       "path": "manuscript/sci_combined/Limitations.docx",
@@ -490,8 +490,8 @@
     },
     {
       "path": "manuscript/sci_combined/README.md",
-      "size_bytes": 2789,
-      "sha256": "c8792406cd0246144a6102943d544ff7b074db374d3f38335ce7a8a78bdeefcb"
+      "size_bytes": 2839,
+      "sha256": "33d447299dce1850ae4b24b7a6dda08bb56493758d39a30c3da12a2938e0da9b"
     },
     {
       "path": "manuscript/sci_combined/局限性.docx",

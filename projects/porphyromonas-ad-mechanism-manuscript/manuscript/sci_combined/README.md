@@ -4,7 +4,7 @@ This folder holds a **new original-research article**. It is not a fourth length
 
 Sources (read-only; not edited here):
 
-- `manuscript/intermediate/` — oral-smORF screening cascade, aggregate funnel, twelve-sequence composition, and bounded periodontal–AD interpretation. In this combined article the cascade is UniDL4BioPep first (22 tasks on both the 11,269,961 healthy-labelled and 11,721,988 periodontitis-labelled libraries), then metaproteome exact-match/dereplication. Downstream docking uses the periodontitis branch.
+- `manuscript/intermediate/` — oral-smORF screening cascade, aggregate funnel, twelve-sequence composition, and bounded periodontal–AD interpretation. In this combined article UniDL4BioPep is run first on both libraries (Table 1 periodontitis, Table 2 healthy). Metaproteome exact-match/dereplication is applied only to the periodontitis-labelled branch; the healthy-labelled library is not dereplicated. Downstream docking uses the periodontitis branch.
 - `manuscript/md_alllhrc/concise/` — completed local three-run AutoDock Vina docking, 100-ns GROMACS trajectories, seven PNG figures, and the four-step computational PAS mechanism (Selkoe 2016; Inestrosa 1996; Lushchekina 2017; Atanasova 2020).
 - Method/table depth for docking and MD follows `manuscript/md_alllhrc/intermediate/` so that key residues, four-stage equilibration, and last-20-ns metrics remain inspectable.
 
