@@ -5,7 +5,7 @@
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
   "total_files": 256,
-  "total_bytes": 122353422,
+  "total_bytes": 122341400,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,7 +17,7 @@
     },
     "manuscript": {
       "files": 72,
-      "bytes": 109790781
+      "bytes": 109778759
     },
     "project_root": {
       "files": 4,
@@ -60,7 +60,7 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 23253,
-      "sha256": "886d4eef32d0a4021d0587b01cdbec62cd85633d53a1df3600ac25984fd63521"
+      "sha256": "cac9dce4923ba7ddbec6316c5eb68870cacb090bdf469b6cb7ab05bbbe624e4e"
     },
     {
       "path": "README.md",
@@ -519,23 +519,23 @@
     },
     {
       "path": "manuscript/sci_submission/Chinese.docx",
-      "size_bytes": 7211106,
-      "sha256": "e3a99a7ee5fb67208232afdc34256d94b934bf6e7b725028ac85f7908ab091dd"
+      "size_bytes": 7209574,
+      "sha256": "b2d149f67e615ca720efa7ebfdca21d287f1e5e51e0d24a626f299db8db57901"
     },
     {
       "path": "manuscript/sci_submission/Chinese.md",
-      "size_bytes": 38830,
-      "sha256": "8e98333683a08bce88e1c3f974b0efe7469203ae504f5122399b98a7d75f65a9"
+      "size_bytes": 34870,
+      "sha256": "265327336f94ae6b9a64b9e66d81fac5f4328750ae61c45a45da8a40290f05dd"
     },
     {
       "path": "manuscript/sci_submission/English.docx",
-      "size_bytes": 7210804,
-      "sha256": "125e266a8f3f6dbf205d89432b066a49c109abfadb9c6e0c7ebe034b33273de4"
+      "size_bytes": 7209079,
+      "sha256": "46727c43ea73cb1f5f64d64a99f1549de18411f60db6a67ab83cf2be3103ca09"
     },
     {
       "path": "manuscript/sci_submission/English.md",
-      "size_bytes": 44115,
-      "sha256": "6fa3c1c4ed8483db7be58b9023a83c4e5946487aecf176c9b3c554ec447c8958"
+      "size_bytes": 39310,
+      "sha256": "2c0dcddae43b503cc05bb840ab2292bb3cf2177c10bdc9dcb5a72a5344069c64"
     },
     {
       "path": "manuscript/sci_submission/README.md",
