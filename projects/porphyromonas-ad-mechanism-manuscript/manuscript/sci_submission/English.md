@@ -1,4 +1,4 @@
-# Deep-learning screening, molecular docking and 100-ns dynamics of periodontitis oral micropeptides targeting human acetylcholinesterase
+# Deep-learning screening, molecular docking and molecular dynamics of periodontitis oral micropeptides targeting human acetylcholinesterase
 
 ## Abstract
 

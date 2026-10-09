@@ -5,7 +5,7 @@
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
   "total_files": 256,
-  "total_bytes": 122341400,
+  "total_bytes": 122333315,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,7 +17,7 @@
     },
     "manuscript": {
       "files": 72,
-      "bytes": 109778759
+      "bytes": 109770674
     },
     "project_root": {
       "files": 4,
@@ -60,7 +60,7 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 23253,
-      "sha256": "cac9dce4923ba7ddbec6316c5eb68870cacb090bdf469b6cb7ab05bbbe624e4e"
+      "sha256": "f8bdc54898af2c58d0856c7465738388151c1918a63e748de628fd812de2db50"
     },
     {
       "path": "README.md",
@@ -319,13 +319,13 @@
     },
     {
       "path": "manuscript/figures/fig_screening_cascade.png",
-      "size_bytes": 212886,
-      "sha256": "6153bf7ca240f81389609c1c8e32f33bfcf57f62354950f1c3cdca4bd18e1adb"
+      "size_bytes": 210163,
+      "sha256": "2b5889e535714c71fe29d3ddc1ada70a75b2c090f5051f262c7dc19d6bcdd554"
     },
     {
       "path": "manuscript/figures/fig_screening_cascade.svg",
-      "size_bytes": 56917,
-      "sha256": "fa38233df3f4b3a99f402fa5f025802b6d227f84486ba23eb3ebf0b7b281adf4"
+      "size_bytes": 55690,
+      "sha256": "7ee953b6c5b10b42fbf35e5b5a7d2c8fa2e35e0bc4e9bc89f29ad9e2d9014e48"
     },
     {
       "path": "manuscript/figures/prioritization_funnel.png",
@@ -519,23 +519,23 @@
     },
     {
       "path": "manuscript/sci_submission/Chinese.docx",
-      "size_bytes": 7209574,
-      "sha256": "b2d149f67e615ca720efa7ebfdca21d287f1e5e51e0d24a626f299db8db57901"
+      "size_bytes": 7207505,
+      "sha256": "e98cf87f7d12b2454c4470027278a1ecf8de78793167ae80dc875a9cde3ab381"
     },
     {
       "path": "manuscript/sci_submission/Chinese.md",
       "size_bytes": 34870,
-      "sha256": "265327336f94ae6b9a64b9e66d81fac5f4328750ae61c45a45da8a40290f05dd"
+      "sha256": "046a41520d4fac2da5deae4d6b2f6390c51a2d4889985fd336a9b0587fdea35f"
     },
     {
       "path": "manuscript/sci_submission/English.docx",
-      "size_bytes": 7209079,
-      "sha256": "46727c43ea73cb1f5f64d64a99f1549de18411f60db6a67ab83cf2be3103ca09"
+      "size_bytes": 7207010,
+      "sha256": "e72c2f4d677f483ea005518da1590d975c31192b512eede24b60dbcd17bb6596"
     },
     {
       "path": "manuscript/sci_submission/English.md",
-      "size_bytes": 39310,
-      "sha256": "2c0dcddae43b503cc05bb840ab2292bb3cf2177c10bdc9dcb5a72a5344069c64"
+      "size_bytes": 39313,
+      "sha256": "049b1e282019b185ad67507060d8cfc0a350f7ccbb47cd14b2dc48e750891d14"
     },
     {
       "path": "manuscript/sci_submission/README.md",
