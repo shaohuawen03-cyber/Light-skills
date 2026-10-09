@@ -293,36 +293,5 @@ if (Test-Path -LiteralPath $critAbs) {
     Write-Output ('== success criteria: (none at ' + $critRel + ' - skipped)')
 }
 
-# Zotero hands-free import + URI relink when the handshake note asks for it.
-# Talks to 127.0.0.1:23119 (Zotero connector / local API / BBT) on this machine.
-$runZot = $false
-$hsRel = 'results\status\handshake.json'
-if (Test-Path -LiteralPath $hsRel) {
-    try {
-        $hsObj = Get-Content -LiteralPath $hsRel -Raw -Encoding UTF8 | ConvertFrom-Json
-        $blob = ''
-        if ($hsObj.note) { $blob = $blob + [string]$hsObj.note }
-        if ($blob -match 'zotero') { $runZot = $true }
-    } catch {
-        Write-Output ('   WARN handshake parse: ' + $_.Exception.Message)
-    }
-}
-if ($runZot) {
-    Write-Output '== zotero hands-free (127.0.0.1:23119)'
-    $zps = Join-Path (Get-Location) 'code\zotero_handsfree.ps1'
-    if (-not (Test-Path -LiteralPath $zps)) {
-        Write-Output '   FAIL missing code\zotero_handsfree.ps1'
-        $fail = 1
-    } else {
-        & powershell -NoProfile -ExecutionPolicy Bypass -File $zps
-        if ($LASTEXITCODE -ne 0) {
-            Write-Output ('   FAIL zotero_handsfree exit ' + $LASTEXITCODE)
-            $fail = 1
-        } else {
-            Write-Output '   OK zotero_handsfree'
-        }
-    }
-}
-
 if ($fail -eq 0) { Write-Output '== local checks passed' }
 exit $fail
