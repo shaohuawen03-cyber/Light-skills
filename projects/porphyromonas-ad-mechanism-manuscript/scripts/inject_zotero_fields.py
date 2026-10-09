@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Insert Zotero Word fields that Refresh can read. Visible citation text unchanged.
 
-Rebuilds from English_backup_pre-zotero.docx.
+Source is the current projects/English.docx (discussion already rewritten).
+A no-field snapshot is written to English_backup_pre-zotero.docx first.
 PREF uses Zotero DocumentData XML (data-version 3, fieldType=Field).
 BIBL field begins inside the first Reference paragraph and ends inside the last.
 In-text [n] runs become ADDIN ZOTERO_ITEM CSL_CITATION fields with full itemData.
+Library comes from English_Zotero_library.json (not rebuilt).
 """
 from __future__ import annotations
 
@@ -24,7 +26,12 @@ OUT_DOCX = Path("/home/user/Light-skills/projects/English.docx")
 DELIVERABLE = Path("/home/user/Light-skills/deliverable/English.docx")
 
 CITE_RE = re.compile(r"^\[(\d+(?:[–-]\d+)?(?:,\s*\d+(?:[–-]\d+)?)*)\]$")
+TOKEN_RE = re.compile(r"\[(\d+(?:[–-]\d+)?(?:,\s*\d+(?:[–-]\d+)?)*)\]")
 NOPROOF = "<w:rPr><w:noProof/></w:rPr>"
+RUN_RE = re.compile(
+    r"<w:r>(<w:rPr>.*?</w:rPr>)?<w:t([^>]*)>([^<]*)</w:t></w:r>",
+    re.DOTALL,
+)
 
 
 def parse_bib(path: Path) -> dict[str, dict]:
@@ -162,8 +169,31 @@ def item_field_xml(visible: str, items: list[dict]) -> str:
     )
 
 
-def wrap_citations(xml: str, num_key: dict[int, str], csl: dict[int, dict]) -> tuple[str, int]:
-    n_max = max(num_key)
+def split_mixed_runs(xml: str) -> str:
+    """Pull [n] tokens out of mixed w:t so each citation is its own run."""
+
+    def repl(m: re.Match) -> str:
+        rpr, _tattr, text = m.group(1) or "", m.group(2) or "", m.group(3)
+        if not TOKEN_RE.search(text) or CITE_RE.match(text):
+            return m.group(0)
+        parts: list[str] = []
+        last = 0
+        for cm in TOKEN_RE.finditer(text):
+            if cm.start() > last:
+                chunk = text[last : cm.start()]
+                parts.append(f'<w:r>{rpr}<w:t xml:space="preserve">{chunk}</w:t></w:r>')
+            parts.append(f"<w:r>{rpr}<w:t>{cm.group(0)}</w:t></w:r>")
+            last = cm.end()
+        if last < len(text):
+            chunk = text[last:]
+            parts.append(f'<w:r>{rpr}<w:t xml:space="preserve">{chunk}</w:t></w:r>')
+        return "".join(parts)
+
+    return RUN_RE.sub(repl, xml)
+
+
+def wrap_citations(xml: str, csl: dict[int, dict]) -> tuple[str, int]:
+    n_max = max(csl)
     count = 0
 
     def repl(m: re.Match) -> str:
@@ -177,7 +207,11 @@ def wrap_citations(xml: str, num_key: dict[int, str], csl: dict[int, dict]) -> t
         count += 1
         return item_field_xml(visible, [csl[n] for n in nums])
 
-    xml = re.sub(r"<w:r><w:t>(\[[^\[\]]+\])</w:t></w:r>", repl, xml)
+    xml = re.sub(
+        r"<w:r>(?:<w:rPr>.*?</w:rPr>)?<w:t(?: [^>]*)?>(\[[^\[\]]+\])</w:t></w:r>",
+        repl,
+        xml,
+    )
     return xml, count
 
 
@@ -264,19 +298,24 @@ def rewrite_docx(src: Path, dst: Path, new_xml: str) -> None:
 
 
 def main() -> None:
-    if not BACKUP.is_file():
-        raise SystemExit(f"missing backup {BACKUP}")
-    bib = parse_bib(BIB)
-    md = MD.read_text(encoding="utf-8")
-    num_key = number_to_key(md, bib)
-    csl = {n: to_csl(num_key[n], bib[num_key[n]], n) for n in num_key}
-    library = [csl[n] for n in sorted(csl)]
-    LIBRARY.write_text(json.dumps(library, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if not OUT_DOCX.is_file():
+        raise SystemExit(f"missing {OUT_DOCX}")
+    if not LIBRARY.is_file():
+        raise SystemExit(f"missing {LIBRARY}")
+    library = json.loads(LIBRARY.read_text(encoding="utf-8"))
+    csl = {int(item["id"]): item for item in library}
+    if len(csl) != 54:
+        raise SystemExit(f"library size {len(csl)} != 54")
 
-    with zipfile.ZipFile(BACKUP) as z:
+    with zipfile.ZipFile(OUT_DOCX) as z:
         xml = z.read("word/document.xml").decode("utf-8")
+    if "ZOTERO_ITEM" in xml:
+        raise SystemExit("English.docx already has Zotero fields; abort")
+    BACKUP.write_bytes(OUT_DOCX.read_bytes())
+
     before = plain_text(xml)
-    xml, n_fields = wrap_citations(xml, num_key, csl)
+    xml = split_mixed_runs(xml)
+    xml, n_fields = wrap_citations(xml, csl)
     xml = xml.replace("<w:body>", "<w:body>" + pref_paragraph(), 1)
     xml = wrap_bibliography(xml)
     after = plain_text(xml)
@@ -284,16 +323,18 @@ def main() -> None:
         raise SystemExit(f"Visible text changed ({len(before)} -> {len(after)}). Abort.")
     if n_fields < 1:
         raise SystemExit("no citation fields")
-    # bibl begin/end must sit inside w:p
-    if re.search(r"</w:p><w:r><w:rPr><w:noProof/></w:rPr><w:fldChar w:fldCharType=\"begin\"/>", xml):
+    if re.search(
+        r"</w:p><w:r><w:rPr><w:noProof/></w:rPr><w:fldChar w:fldCharType=\"begin\"/>",
+        xml,
+    ):
         raise SystemExit("BIBL begin still outside a paragraph")
-    rewrite_docx(BACKUP, OUT_DOCX, xml)
+    if "Inestrosa et al. showed" in after or "Dinamarca et al. used" in after:
+        raise SystemExit("old Author et al. sentence style still present")
+    rewrite_docx(OUT_DOCX, OUT_DOCX, xml)
     if DELIVERABLE.parent.is_dir():
-        rewrite_docx(BACKUP, DELIVERABLE, xml)
-        # deliverable should match OUT - rewrite from OUT after written
         DELIVERABLE.write_bytes(OUT_DOCX.read_bytes())
     print(f"backup {BACKUP}")
-    print(f"library {LIBRARY} items={len(library)}")
+    print(f"library {LIBRARY} items={len(csl)}")
     print(f"docx {OUT_DOCX} zotero_item_fields={n_fields}")
     print(
         f"ITEM={xml.count('ZOTERO_ITEM')} BIBL={xml.count('ZOTERO_BIBL')} "

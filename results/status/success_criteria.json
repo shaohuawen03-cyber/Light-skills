@@ -1,12 +1,15 @@
 {
-  "description": "English manuscript is present after discussion rewrite (plain numbered citations for manual Zotero import).",
+  "description": "Library JSON imported on the Windows Zotero; English.docx has Refresh-ready fields.",
   "require_files": [
     "projects/English.docx",
-    "deliverable/English.docx",
-    "deliverable/Chinese.docx"
+    "projects/English_Zotero_library.json",
+    "results/status/zotero_handsfree.json"
   ],
+  "require_contains": {
+    "results/status/zotero_handsfree.json": "\"ok\": true"
+  },
   "min_bytes": {
     "projects/English.docx": 100000,
-    "deliverable/English.docx": 100000
+    "projects/English_Zotero_library.json": 10000
   }
 }
