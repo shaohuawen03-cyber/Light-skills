@@ -4,8 +4,8 @@
     "quality_reports/repository_inventory.json (self-referential output)",
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
-  "total_files": 256,
-  "total_bytes": 122375430,
+  "total_files": 257,
+  "total_bytes": 122273911,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,11 +17,11 @@
     },
     "manuscript": {
       "files": 72,
-      "bytes": 109805894
+      "bytes": 109698599
     },
     "project_root": {
       "files": 4,
-      "bytes": 63673
+      "bytes": 63777
     },
     "quality_reports": {
       "files": 43,
@@ -40,8 +40,8 @@
       "bytes": 22522
     },
     "scripts": {
-      "files": 29,
-      "bytes": 190862
+      "files": 30,
+      "bytes": 196534
     },
     "source_materials": {
       "files": 37,
@@ -59,8 +59,8 @@
   "files": [
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
-      "size_bytes": 23253,
-      "sha256": "5bd55ea1d5253181ad03df0c8829767af31e7bcaf88f99aab01d5a06c73aa66a"
+      "size_bytes": 23357,
+      "sha256": "f9894dad0c65f04b01d01e77c385c34a8c2fa5c8edff278e57841a8fc291b131"
     },
     {
       "path": "README.md",
@@ -319,13 +319,13 @@
     },
     {
       "path": "manuscript/figures/fig_screening_cascade.png",
-      "size_bytes": 210163,
-      "sha256": "2b5889e535714c71fe29d3ddc1ada70a75b2c090f5051f262c7dc19d6bcdd554"
+      "size_bytes": 173579,
+      "sha256": "d340ec927ed7c7dc5c8e4cfdee9816fc26386714eeade77f8289b7392cd0cd26"
     },
     {
       "path": "manuscript/figures/fig_screening_cascade.svg",
-      "size_bytes": 55690,
-      "sha256": "7ee953b6c5b10b42fbf35e5b5a7d2c8fa2e35e0bc4e9bc89f29ad9e2d9014e48"
+      "size_bytes": 56747,
+      "sha256": "51fb1968664fbd9ebe2675d1635893cdd7f5161f544aadf5218f251b224779de"
     },
     {
       "path": "manuscript/figures/prioritization_funnel.png",
@@ -519,8 +519,8 @@
     },
     {
       "path": "manuscript/sci_submission/Chinese.docx",
-      "size_bytes": 7212552,
-      "sha256": "a528197c311be0ce20e0217dbce2bcc66484e80a7a58bed687527578271262b0"
+      "size_bytes": 7176668,
+      "sha256": "35d6008588a65584c164c6f98a7752a0376ee0e95a51b4f8a10b96fc2163d378"
     },
     {
       "path": "manuscript/sci_submission/Chinese.md",
@@ -529,8 +529,8 @@
     },
     {
       "path": "manuscript/sci_submission/English.docx",
-      "size_bytes": 7212016,
-      "sha256": "3db6d5d78885b075d889584d3256875bf3e0811c91d640d170f252df1952dc92"
+      "size_bytes": 7176132,
+      "sha256": "5a434e78328bca8624798645c5cd75ea7db569f567cbd121acbb2aff60eb65a4"
     },
     {
       "path": "manuscript/sci_submission/English.md",
@@ -1036,6 +1036,11 @@
       "path": "scripts/generate_funnel_figure.py",
       "size_bytes": 9428,
       "sha256": "5114cd0e344dc1e48ecb6c6c0e3f29774077763e9743b6f97d855120e89a0919"
+    },
+    {
+      "path": "scripts/generate_screening_cascade.py",
+      "size_bytes": 5672,
+      "sha256": "ea713698e907815298522450063dec0e31d4c73a12f8e1f324bf455002f13bfb"
     },
     {
       "path": "scripts/manage_version_tag.py",
