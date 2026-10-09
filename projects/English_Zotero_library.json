@@ -1,0 +1,2299 @@
+[
+  {
+    "id": "scheltens2021alzheimer",
+    "type": "article-journal",
+    "title": "Alzheimer's disease",
+    "author": [
+      {
+        "family": "Scheltens",
+        "given": "Philip"
+      },
+      {
+        "family": "De Strooper",
+        "given": "Bart"
+      },
+      {
+        "family": "Kivipelto",
+        "given": "Miia"
+      },
+      {
+        "family": "Holstege",
+        "given": "Henne"
+      },
+      {
+        "family": "Chételat",
+        "given": "Gael"
+      },
+      {
+        "family": "Teunissen",
+        "given": "Charlotte E."
+      },
+      {
+        "family": "Cummings",
+        "given": "Jeffrey"
+      },
+      {
+        "family": "van der Flier",
+        "given": "Wiesje M."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "container-title": "The Lancet",
+    "volume": "397",
+    "issue": "10284",
+    "page": "1577-1590",
+    "DOI": "10.1016/S0140-6736(20)32205-4"
+  },
+  {
+    "id": "selkoe2016amyloid",
+    "type": "article-journal",
+    "title": "The amyloid hypothesis of Alzheimer's disease at 25 years",
+    "author": [
+      {
+        "family": "Selkoe",
+        "given": "Dennis J."
+      },
+      {
+        "family": "Hardy",
+        "given": "John"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "container-title": "EMBO Molecular Medicine",
+    "volume": "8",
+    "issue": "6",
+    "page": "595-608",
+    "DOI": "10.15252/emmm.201606210"
+  },
+  {
+    "id": "hampel2018cholinergic",
+    "type": "article-journal",
+    "title": "The cholinergic system in the pathophysiology and treatment of Alzheimer's disease",
+    "author": [
+      {
+        "family": "Hampel",
+        "given": "Harald"
+      },
+      {
+        "family": "Mesulam",
+        "given": "M.-Marsel"
+      },
+      {
+        "family": "Cuello",
+        "given": "A. Claudio"
+      },
+      {
+        "family": "Farlow",
+        "given": "Martin R."
+      },
+      {
+        "family": "Giacobini",
+        "given": "Ezio"
+      },
+      {
+        "family": "Grossberg",
+        "given": "George T."
+      },
+      {
+        "family": "Khachaturian",
+        "given": "Ara S."
+      },
+      {
+        "family": "Vergallo",
+        "given": "Andrea"
+      },
+      {
+        "family": "Cavedo",
+        "given": "Enrica"
+      },
+      {
+        "family": "Snyder",
+        "given": "Peter J."
+      },
+      {
+        "family": "Khachaturian",
+        "given": "Zaven S."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "container-title": "Brain",
+    "volume": "141",
+    "issue": "7",
+    "page": "1917-1933",
+    "DOI": "10.1093/brain/awy132"
+  },
+  {
+    "id": "inestrosa1996ache",
+    "type": "article-journal",
+    "title": "Acetylcholinesterase accelerates assembly of amyloid-$\\beta$-peptides into Alzheimer's fibrils: possible role of the peripheral site of the enzyme",
+    "author": [
+      {
+        "family": "Inestrosa",
+        "given": "Nibaldo C."
+      },
+      {
+        "family": "Alvarez",
+        "given": "Alejandra"
+      },
+      {
+        "family": "Pérez",
+        "given": "Carlos A."
+      },
+      {
+        "family": "Moreno",
+        "given": "Rodrigo D."
+      },
+      {
+        "family": "Vicente",
+        "given": "Marcelo"
+      },
+      {
+        "family": "Linker",
+        "given": "Claudio"
+      },
+      {
+        "family": "Casanueva",
+        "given": "Olivia I."
+      },
+      {
+        "family": "Soto",
+        "given": "Claudio"
+      },
+      {
+        "family": "Garrido",
+        "given": "Jorge"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1996
+        ]
+      ]
+    },
+    "container-title": "Neuron",
+    "volume": "16",
+    "issue": "4",
+    "page": "881-891",
+    "DOI": "10.1016/s0896-6273(00)80108-7"
+  },
+  {
+    "id": "deferrari2001motif",
+    "type": "article-journal",
+    "title": "A structural motif of acetylcholinesterase that promotes amyloid $\\beta$-peptide fibril formation",
+    "author": [
+      {
+        "family": "De Ferrari",
+        "given": "G. V."
+      },
+      {
+        "family": "Canales",
+        "given": "M. A."
+      },
+      {
+        "family": "Shin",
+        "given": "I."
+      },
+      {
+        "family": "Weiner",
+        "given": "L. M."
+      },
+      {
+        "family": "Silman",
+        "given": "I."
+      },
+      {
+        "family": "Inestrosa",
+        "given": "N. C."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2001
+        ]
+      ]
+    },
+    "container-title": "Biochemistry",
+    "volume": "40",
+    "issue": "35",
+    "page": "10447-10457",
+    "DOI": "10.1021/bi0101392"
+  },
+  {
+    "id": "bartolini2003pas",
+    "type": "article-journal",
+    "title": "$\\beta$-Amyloid aggregation induced by human acetylcholinesterase: inhibition studies",
+    "author": [
+      {
+        "family": "Bartolini",
+        "given": "Manuela"
+      },
+      {
+        "family": "Bertucci",
+        "given": "Carlo"
+      },
+      {
+        "family": "Cavrini",
+        "given": "Vanni"
+      },
+      {
+        "family": "Andrisano",
+        "given": "Vincenza"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "container-title": "Biochemical Pharmacology",
+    "volume": "65",
+    "issue": "3",
+    "page": "407-416",
+    "DOI": "10.1016/s0006-2952(02)01514-9"
+  },
+  {
+    "id": "chalmers2025primer",
+    "type": "article-journal",
+    "title": "The role of the oral microbiome, host response, and periodontal disease treatment in Alzheimer's disease: A primer",
+    "author": [
+      {
+        "family": "Chalmers",
+        "given": "Jaclyn C."
+      },
+      {
+        "family": "Hernandez-Kapila",
+        "given": "Yvonne L."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": "Periodontology 2000",
+    "volume": "98",
+    "issue": "1",
+    "page": "220-227",
+    "DOI": "10.1111/prd.12631"
+  },
+  {
+    "id": "belstrom2021periodontitis",
+    "type": "article-journal",
+    "title": "Periodontitis associates with species-specific gene expression of the oral microbiota",
+    "author": [
+      {
+        "family": "Belstrøm",
+        "given": "Daniel"
+      },
+      {
+        "family": "Constancias",
+        "given": "Florentin"
+      },
+      {
+        "family": "Drautz-Moses",
+        "given": "Daniela I."
+      },
+      {
+        "family": "Schuster",
+        "given": "Stephan C."
+      },
+      {
+        "family": "Veleba",
+        "given": "Mark"
+      },
+      {
+        "family": "Mahé",
+        "given": "Frédéric"
+      },
+      {
+        "family": "Givskov",
+        "given": "Michael"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "container-title": "npj Biofilms and Microbiomes",
+    "volume": "7",
+    "page": "76",
+    "DOI": "10.1038/s41522-021-00247-y"
+  },
+  {
+    "id": "larvin2023periodontalcognition",
+    "type": "article-journal",
+    "title": "The impact of study factors in the association of periodontal disease and cognitive disorders: systematic review and meta-analysis",
+    "author": [
+      {
+        "family": "Larvin",
+        "given": "Heather"
+      },
+      {
+        "family": "Gao",
+        "given": "C."
+      },
+      {
+        "family": "Kang",
+        "given": "J."
+      },
+      {
+        "family": "Aggarwal",
+        "given": "V. R."
+      },
+      {
+        "family": "Pavitt",
+        "given": "S."
+      },
+      {
+        "family": "Wu",
+        "given": "J."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "container-title": "Age and Ageing",
+    "volume": "52",
+    "issue": "2",
+    "page": "afad015",
+    "DOI": "10.1093/ageing/afad015"
+  },
+  {
+    "id": "ide2016periodontitis",
+    "type": "article-journal",
+    "title": "Periodontitis and cognitive decline in Alzheimer's disease",
+    "author": [
+      {
+        "family": "Ide",
+        "given": "Mark"
+      },
+      {
+        "family": "Harris",
+        "given": "Marina"
+      },
+      {
+        "family": "Stevens",
+        "given": "Annette"
+      },
+      {
+        "family": "Sussams",
+        "given": "Rebecca"
+      },
+      {
+        "family": "Hopkins",
+        "given": "Viv"
+      },
+      {
+        "family": "Culliford",
+        "given": "David"
+      },
+      {
+        "family": "Fuller",
+        "given": "James"
+      },
+      {
+        "family": "Ibbett",
+        "given": "Paul"
+      },
+      {
+        "family": "Raybould",
+        "given": "Rachel"
+      },
+      {
+        "family": "Thomas",
+        "given": "Rhodri"
+      },
+      {
+        "family": "Puenter",
+        "given": "Ursula"
+      },
+      {
+        "family": "Teeling",
+        "given": "Jessica"
+      },
+      {
+        "family": "Perry",
+        "given": "V. Hugh"
+      },
+      {
+        "family": "Holmes",
+        "given": "Clive"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "container-title": "PLOS ONE",
+    "volume": "11",
+    "issue": "3",
+    "page": "e0151081",
+    "DOI": "10.1371/journal.pone.0151081"
+  },
+  {
+    "id": "hu2024mendelian",
+    "type": "article-journal",
+    "title": "Periodontal disease and risk of Alzheimer's disease: a two-sample Mendelian randomization",
+    "author": [
+      {
+        "family": "Hu",
+        "given": "C."
+      },
+      {
+        "family": "Li",
+        "given": "H."
+      },
+      {
+        "family": "Huang",
+        "given": "L."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": "Brain and Behavior",
+    "volume": "14",
+    "issue": "4",
+    "page": "e3486",
+    "DOI": "10.1002/brb3.3486"
+  },
+  {
+    "id": "guo2010gingipain",
+    "type": "article-journal",
+    "title": "Dichotomy of gingipains action as virulence factors: from cleaving substrates with the precision of a surgeon's knife to a meat chopper-like brutal degradation of proteins",
+    "author": [
+      {
+        "family": "Guo",
+        "given": "Y."
+      },
+      {
+        "family": "Nguyen",
+        "given": "K.-A."
+      },
+      {
+        "family": "Potempa",
+        "given": "J."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "container-title": "Periodontology 2000",
+    "volume": "54",
+    "issue": "1",
+    "page": "15-44",
+    "DOI": "10.1111/j.1600-0757.2010.00377.x"
+  },
+  {
+    "id": "ho2015omv",
+    "type": "article-journal",
+    "title": "Functional advantages of \\textitPorphyromonas gingivalis vesicles",
+    "author": [
+      {
+        "family": "Ho",
+        "given": "Meng-Hsuan"
+      },
+      {
+        "family": "Chen",
+        "given": "Chia-Huey"
+      },
+      {
+        "family": "Goodwin",
+        "given": "J. Shawn"
+      },
+      {
+        "family": "Wang",
+        "given": "Bing-Yan"
+      },
+      {
+        "family": "Xie",
+        "given": "Hua"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "container-title": "PLOS ONE",
+    "volume": "10",
+    "issue": "4",
+    "page": "e0123448",
+    "DOI": "10.1371/journal.pone.0123448"
+  },
+  {
+    "id": "dominy2019pgingivalis",
+    "type": "article-journal",
+    "title": "Porphyromonas gingivalis in Alzheimer's disease brains: Evidence for disease causation and treatment with small-molecule inhibitors",
+    "author": [
+      {
+        "family": "Dominy",
+        "given": "Stephen S."
+      },
+      {
+        "family": "Lynch",
+        "given": "Casey"
+      },
+      {
+        "family": "Ermini",
+        "given": "Florian"
+      },
+      {
+        "family": "Benedyk",
+        "given": "Marc"
+      },
+      {
+        "family": "Marczyk",
+        "given": "Anna"
+      },
+      {
+        "family": "Konradi",
+        "given": "Alvin"
+      },
+      {
+        "family": "Nguyen",
+        "given": "Manh"
+      },
+      {
+        "family": "Haditsch",
+        "given": "Ursula"
+      },
+      {
+        "family": "Raha",
+        "given": "Deepak"
+      },
+      {
+        "family": "Griffin",
+        "given": "Casey"
+      },
+      {
+        "family": "Holsinger",
+        "given": "Leslie J."
+      },
+      {
+        "family": "Arastu-Kapur",
+        "given": "Shirin"
+      },
+      {
+        "family": "Kaba",
+        "given": "Sharief"
+      },
+      {
+        "family": "Lee",
+        "given": "Amy"
+      },
+      {
+        "family": "Ryder",
+        "given": "Mark I."
+      },
+      {
+        "family": "Potempa",
+        "given": "Jan"
+      },
+      {
+        "family": "Mydel",
+        "given": "Piotr"
+      },
+      {
+        "family": "Hellvard",
+        "given": "Annelie"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "container-title": "Science Advances",
+    "volume": "5",
+    "issue": "1",
+    "page": "eaau3333",
+    "DOI": "10.1126/sciadv.aau3333"
+  },
+  {
+    "id": "ilievski2018oral",
+    "type": "article-journal",
+    "title": "Chronic oral application of a periodontal pathogen results in brain inflammation, neurodegeneration and amyloid beta production in wild type mice",
+    "author": [
+      {
+        "family": "Ilievski",
+        "given": "Vladimir"
+      },
+      {
+        "family": "Zuchowska",
+        "given": "Paulina K."
+      },
+      {
+        "family": "Green",
+        "given": "Stefan J."
+      },
+      {
+        "family": "Toth",
+        "given": "Peter T."
+      },
+      {
+        "family": "Ragozzino",
+        "given": "Michael E."
+      },
+      {
+        "family": "Le",
+        "given": "Khuong"
+      },
+      {
+        "family": "Aljewari",
+        "given": "Haider W."
+      },
+      {
+        "family": "O'Brien-Simpson",
+        "given": "Neil M."
+      },
+      {
+        "family": "Reynolds",
+        "given": "Eric C."
+      },
+      {
+        "family": "Watanabe",
+        "given": "Keiko"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "container-title": "PLOS ONE",
+    "volume": "13",
+    "issue": "10",
+    "page": "e0204941",
+    "DOI": "10.1371/journal.pone.0204941"
+  },
+  {
+    "id": "sberro2019smallgenes",
+    "type": "article-journal",
+    "title": "Large-Scale Analyses of Human Microbiomes Reveal Thousands of Small, Novel Genes",
+    "author": [
+      {
+        "family": "Sberro",
+        "given": "Hila"
+      },
+      {
+        "family": "Fremin",
+        "given": "Brayon J."
+      },
+      {
+        "family": "Zlitni",
+        "given": "Soumaya"
+      },
+      {
+        "family": "Edfors",
+        "given": "Fredrik"
+      },
+      {
+        "family": "Greenfield",
+        "given": "Nicholas"
+      },
+      {
+        "family": "Snyder",
+        "given": "Michael P."
+      },
+      {
+        "family": "Pavlopoulos",
+        "given": "Georgios A."
+      },
+      {
+        "family": "Kyrpides",
+        "given": "Nikos C."
+      },
+      {
+        "family": "Bhatt",
+        "given": "Ami S."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "container-title": "Cell",
+    "volume": "178",
+    "issue": "5",
+    "page": "1245-1259.e14",
+    "DOI": "10.1016/j.cell.2019.07.016"
+  },
+  {
+    "id": "durrant2021sorf",
+    "type": "article-journal",
+    "title": "Automated prediction and annotation of small open reading frames in microbial genomes",
+    "author": [
+      {
+        "family": "Durrant",
+        "given": "Matthew G."
+      },
+      {
+        "family": "Bhatt",
+        "given": "Ami S."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "container-title": "Cell Host \\& Microbe",
+    "volume": "29",
+    "issue": "1",
+    "page": "121-131.e4",
+    "DOI": "10.1016/j.chom.2020.11.002"
+  },
+  {
+    "id": "torres2024peptideantibiotics",
+    "type": "article-journal",
+    "title": "Mining human microbiomes reveals an untapped source of peptide antibiotics",
+    "author": [
+      {
+        "family": "Torres",
+        "given": "Marcelo D. T."
+      },
+      {
+        "family": "Brooks",
+        "given": "Emily F."
+      },
+      {
+        "family": "Cesaro",
+        "given": "Alessandro"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": "Cell",
+    "volume": "187",
+    "issue": "19",
+    "page": "5453-5467.e15",
+    "DOI": "10.1016/j.cell.2024.07.027"
+  },
+  {
+    "id": "du2023unidl4biopep",
+    "type": "article-journal",
+    "title": "UniDL4BioPep: a universal deep learning architecture for binary classification in peptide bioactivity",
+    "author": [
+      {
+        "family": "Du",
+        "given": "Zhenjiao"
+      },
+      {
+        "family": "Ding",
+        "given": "Xingjian"
+      },
+      {
+        "family": "Xu",
+        "given": "Yixiang"
+      },
+      {
+        "family": "Li",
+        "given": "Yonghui"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "container-title": "Briefings in Bioinformatics",
+    "volume": "24",
+    "issue": "3",
+    "page": "bbad135",
+    "DOI": "10.1093/bib/bbad135"
+  },
+  {
+    "id": "lushchekina2017amd",
+    "type": "article-journal",
+    "title": "Role of acetylcholinesterase in $\\beta$-amyloid aggregation studied by accelerated molecular dynamics",
+    "author": [
+      {
+        "family": "Lushchekina",
+        "given": "Sofya V."
+      },
+      {
+        "family": "Kots",
+        "given": "Ekaterina D."
+      },
+      {
+        "family": "Novichkova",
+        "given": "Dana A."
+      },
+      {
+        "family": "Petrov",
+        "given": "Konstantin A."
+      },
+      {
+        "family": "Masson",
+        "given": "Patrick"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2017
+        ]
+      ]
+    },
+    "container-title": "BioNanoScience",
+    "volume": "7",
+    "page": "396-402",
+    "DOI": "10.1007/s12668-016-0375-x"
+  },
+  {
+    "id": "atanasova2020md",
+    "type": "article-journal",
+    "title": "Molecular dynamics simulations of acetylcholinesterase -- beta-amyloid peptide complex",
+    "author": [
+      {
+        "family": "Atanasova",
+        "given": "Mariana"
+      },
+      {
+        "family": "Dimitrov",
+        "given": "Ivan"
+      },
+      {
+        "family": "Ivanov",
+        "given": "Stefan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "container-title": "Cybernetics and Information Technologies",
+    "volume": "20",
+    "issue": "6",
+    "page": "140-154",
+    "DOI": "10.2478/cait-2020-0068"
+  },
+  {
+    "id": "cheung2012ache",
+    "type": "article-journal",
+    "title": "Structures of human acetylcholinesterase in complex with pharmacologically important ligands",
+    "author": [
+      {
+        "family": "Cheung",
+        "given": "Jean"
+      },
+      {
+        "family": "Rudolph",
+        "given": "Michael J."
+      },
+      {
+        "family": "Burshteyn",
+        "given": "Fabian"
+      },
+      {
+        "family": "Cassidy",
+        "given": "Matthew S."
+      },
+      {
+        "family": "Gary",
+        "given": "Edwin N."
+      },
+      {
+        "family": "Love",
+        "given": "James"
+      },
+      {
+        "family": "Franklin",
+        "given": "Michael C."
+      },
+      {
+        "family": "Height",
+        "given": "Jonathan J."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "container-title": "Journal of Medicinal Chemistry",
+    "volume": "55",
+    "issue": "23",
+    "page": "10282-10286",
+    "DOI": "10.1021/jm300871x"
+  },
+  {
+    "id": "kryger1999e2020",
+    "type": "article-journal",
+    "title": "Structure of acetylcholinesterase complexed with E2020 (Aricept): implications for the design of new anti-Alzheimer drugs",
+    "author": [
+      {
+        "family": "Kryger",
+        "given": "Gilad"
+      },
+      {
+        "family": "Silman",
+        "given": "Israel"
+      },
+      {
+        "family": "Sussman",
+        "given": "Joel L."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1999
+        ]
+      ]
+    },
+    "container-title": "Structure",
+    "volume": "7",
+    "issue": "3",
+    "page": "297-307",
+    "DOI": "10.1016/s0969-2126(99)80040-9"
+  },
+  {
+    "id": "rice2000emboss",
+    "type": "article-journal",
+    "title": "EMBOSS: the European Molecular Biology Open Software Suite",
+    "author": [
+      {
+        "family": "Rice",
+        "given": "Peter"
+      },
+      {
+        "family": "Longden",
+        "given": "Ian"
+      },
+      {
+        "family": "Bleasby",
+        "given": "Alan"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "container-title": "Trends in Genetics",
+    "volume": "16",
+    "issue": "6",
+    "page": "276-277",
+    "DOI": "10.1016/S0168-9525(00)02024-2"
+  },
+  {
+    "id": "gu2024bbb",
+    "type": "article-journal",
+    "title": "Prediction of blood-brain barrier penetrating peptides based on data augmentation with Augur",
+    "author": [
+      {
+        "family": "Gu",
+        "given": "Z. F."
+      },
+      {
+        "family": "Hao",
+        "given": "Y. D."
+      },
+      {
+        "family": "Wang",
+        "given": "T. Y."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": "BMC Biology",
+    "volume": "22",
+    "page": "86",
+    "DOI": "10.1186/s12915-024-01883-4"
+  },
+  {
+    "id": "chen2010homd",
+    "type": "article-journal",
+    "title": "The Human Oral Microbiome Database: a web accessible resource for investigating oral microbe taxonomic and genomic information",
+    "author": [
+      {
+        "family": "Chen",
+        "given": "Tsute"
+      },
+      {
+        "family": "Yu",
+        "given": "Wen-Han"
+      },
+      {
+        "family": "Izard",
+        "given": "Jacques"
+      },
+      {
+        "family": "Baranova",
+        "given": "Oxana V."
+      },
+      {
+        "family": "Lakshmanan",
+        "given": "Abirami"
+      },
+      {
+        "family": "Dewhirst",
+        "given": "Floyd E."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "container-title": "Database",
+    "volume": "2010",
+    "page": "baq013",
+    "DOI": "10.1093/database/baq013"
+  },
+  {
+    "id": "escapa2018ehomd",
+    "type": "article-journal",
+    "title": "New Insights into Human Nostril Microbiome from the Expanded Human Oral Microbiome Database (eHOMD): a Resource for the Microbiome of the Human Aerodigestive Tract",
+    "author": [
+      {
+        "family": "Escapa",
+        "given": "Isabel F."
+      },
+      {
+        "family": "Chen",
+        "given": "Tsute"
+      },
+      {
+        "family": "Huang",
+        "given": "Yanmei"
+      },
+      {
+        "family": "Gajare",
+        "given": "Prasad"
+      },
+      {
+        "family": "Dewhirst",
+        "given": "Floyd E."
+      },
+      {
+        "family": "Lemon",
+        "given": "Katherine P."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2018
+        ]
+      ]
+    },
+    "container-title": "mSystems",
+    "volume": "3",
+    "issue": "6",
+    "page": "e00187-18",
+    "DOI": "10.1128/mSystems.00187-18"
+  },
+  {
+    "id": "belstrom2016metaproteomics",
+    "type": "article-journal",
+    "title": "Metaproteomics of saliva identifies human protein markers specific for individuals with periodontitis and dental caries compared to orally healthy controls",
+    "author": [
+      {
+        "family": "Belstrøm",
+        "given": "Daniel"
+      },
+      {
+        "family": "Jersie-Christensen",
+        "given": "Rosa R."
+      },
+      {
+        "family": "Lyon",
+        "given": "David"
+      },
+      {
+        "family": "Damgaard",
+        "given": "Christian"
+      },
+      {
+        "family": "Jensen",
+        "given": "Lars J."
+      },
+      {
+        "family": "Holmstrup",
+        "given": "Palle"
+      },
+      {
+        "family": "Olsen",
+        "given": "Jesper V."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2016
+        ]
+      ]
+    },
+    "container-title": "PeerJ",
+    "volume": "4",
+    "page": "e2433",
+    "DOI": "10.7717/peerj.2433"
+  },
+  {
+    "id": "jiang2022oralmetaproteomics",
+    "type": "article-journal",
+    "title": "In-Depth Metaproteomics Analysis of Oral Microbiome for Lung Cancer",
+    "author": [
+      {
+        "family": "Jiang",
+        "given": "Xiaoteng"
+      },
+      {
+        "family": "Zhang",
+        "given": "Y."
+      },
+      {
+        "family": "Wang",
+        "given": "H."
+      },
+      {
+        "family": "Wang",
+        "given": "Z."
+      },
+      {
+        "family": "Hu",
+        "given": "S."
+      },
+      {
+        "family": "Cao",
+        "given": "C."
+      },
+      {
+        "family": "Xiao",
+        "given": "H."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "container-title": "Research",
+    "volume": "2022",
+    "page": "9781578",
+    "DOI": "10.34133/2022/9781578"
+  },
+  {
+    "id": "yuan2025osample",
+    "type": "article-journal",
+    "title": "OSaMPle workflow for salivary metaproteomics analysis reveals dysbiosis in inflammatory bowel disease patients",
+    "author": [
+      {
+        "family": "Yuan",
+        "given": "Jing"
+      },
+      {
+        "family": "Sun",
+        "given": "Bowen"
+      },
+      {
+        "family": "Li",
+        "given": "Ming"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": "npj Biofilms and Microbiomes",
+    "volume": "11",
+    "page": "63",
+    "DOI": "10.1038/s41522-025-00692-z"
+  },
+  {
+    "id": "rathore2025ntxpred2",
+    "type": "article-journal",
+    "title": "A large language model for predicting neurotoxic peptides and neurotoxins",
+    "author": [
+      {
+        "family": "Rathore",
+        "given": "Anand Singh"
+      },
+      {
+        "family": "Jain",
+        "given": "Saloni"
+      },
+      {
+        "family": "Choudhury",
+        "given": "Shubham"
+      },
+      {
+        "family": "Raghava",
+        "given": "Gajendra P. S."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": "Protein Science",
+    "volume": "34",
+    "issue": "8",
+    "page": "e70200",
+    "DOI": "10.1002/pro.70200"
+  },
+  {
+    "id": "aptekmann2022mebipred",
+    "type": "article-journal",
+    "title": "mebipred: identifying metal-binding potential in protein sequence",
+    "author": [
+      {
+        "family": "Aptekmann",
+        "given": "Ariel A."
+      },
+      {
+        "family": "Buongiorno",
+        "given": "Joy"
+      },
+      {
+        "family": "Giovannelli",
+        "given": "Donato"
+      },
+      {
+        "family": "Glamoclija",
+        "given": "M. Jasmina"
+      },
+      {
+        "family": "Ferreiro",
+        "given": "Diego U."
+      },
+      {
+        "family": "Bromberg",
+        "given": "Yana"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "container-title": "Bioinformatics",
+    "volume": "38",
+    "issue": "14",
+    "page": "3532-3540",
+    "DOI": "10.1093/bioinformatics/btac358"
+  },
+  {
+    "id": "olsen2020anoxpepred",
+    "type": "article-journal",
+    "title": "AnOxPePred: using deep learning for the prediction of antioxidative properties of peptides",
+    "author": [
+      {
+        "family": "Olsen",
+        "given": "Tobias Hegelund"
+      },
+      {
+        "family": "Yesiltas",
+        "given": "Betül"
+      },
+      {
+        "family": "Marin",
+        "given": "Frederikke Isa"
+      },
+      {
+        "family": "Pertseva",
+        "given": "Margarita"
+      },
+      {
+        "family": "García-Moreno",
+        "given": "Pedro J."
+      },
+      {
+        "family": "Gregersen",
+        "given": "Simon"
+      },
+      {
+        "family": "Hansen",
+        "given": "Egon Bech"
+      },
+      {
+        "family": "Jacobsen",
+        "given": "Charlotte"
+      },
+      {
+        "family": "Lund",
+        "given": "Ole"
+      },
+      {
+        "family": "Overgaard",
+        "given": "Michael Toft"
+      },
+      {
+        "family": "Marcatili",
+        "given": "Paolo"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "container-title": "Scientific Reports",
+    "volume": "10",
+    "page": "21471",
+    "DOI": "10.1038/s41598-020-78319-w"
+  },
+  {
+    "id": "trott2010vina",
+    "type": "article-journal",
+    "title": "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading",
+    "author": [
+      {
+        "family": "Trott",
+        "given": "Oleg"
+      },
+      {
+        "family": "Olson",
+        "given": "Arthur J."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "container-title": "Journal of Computational Chemistry",
+    "volume": "31",
+    "issue": "2",
+    "page": "455-461",
+    "DOI": "10.1002/jcc.21334"
+  },
+  {
+    "id": "eberhardt2021vina",
+    "type": "article-journal",
+    "title": "AutoDock Vina 1.2.0: new docking methods, expanded force field, and Python bindings",
+    "author": [
+      {
+        "family": "Eberhardt",
+        "given": "Jocelyn"
+      },
+      {
+        "family": "Santos-Martins",
+        "given": "Diogo"
+      },
+      {
+        "family": "Tillack",
+        "given": "Andreas F."
+      },
+      {
+        "family": "Forli",
+        "given": "Stefano"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "container-title": "Journal of Chemical Information and Modeling",
+    "volume": "61",
+    "issue": "8",
+    "page": "3891-3898",
+    "DOI": "10.1021/acs.jcim.1c00203"
+  },
+  {
+    "id": "abraham2015gromacs",
+    "type": "article-journal",
+    "title": "GROMACS: high performance molecular simulations through multi-level parallelism from laptops to supercomputers",
+    "author": [
+      {
+        "family": "Abraham",
+        "given": "Mark James"
+      },
+      {
+        "family": "Murtola",
+        "given": "Teemu"
+      },
+      {
+        "family": "Schulz",
+        "given": "Roland"
+      },
+      {
+        "family": "Páll",
+        "given": "Szilárd"
+      },
+      {
+        "family": "Smith",
+        "given": "Jeremy C."
+      },
+      {
+        "family": "Hess",
+        "given": "Berk"
+      },
+      {
+        "family": "Lindahl",
+        "given": "Erik"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2015
+        ]
+      ]
+    },
+    "container-title": "SoftwareX",
+    "volume": "1--2",
+    "page": "19-25",
+    "DOI": "10.1016/j.softx.2015.06.001"
+  },
+  {
+    "id": "lindorfflarsen2010amber",
+    "type": "article-journal",
+    "title": "Improved side-chain torsion potentials for the Amber ff99SB protein force field",
+    "author": [
+      {
+        "family": "Lindorff-Larsen",
+        "given": "Kresten"
+      },
+      {
+        "family": "Piana",
+        "given": "Stefano"
+      },
+      {
+        "family": "Palmo",
+        "given": "Kim"
+      },
+      {
+        "family": "Maragakis",
+        "given": "Paul"
+      },
+      {
+        "family": "Klepeis",
+        "given": "John L."
+      },
+      {
+        "family": "Dror",
+        "given": "Ron O."
+      },
+      {
+        "family": "Shaw",
+        "given": "David E."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "container-title": "Proteins",
+    "volume": "78",
+    "issue": "8",
+    "page": "1950-1958",
+    "DOI": "10.1002/prot.22711"
+  },
+  {
+    "id": "alvarez1998ache",
+    "type": "article-journal",
+    "title": "Stable complexes involving acetylcholinesterase and amyloid-beta peptide change the biochemical properties of the enzyme and increase the neurotoxicity of Alzheimer's fibrils",
+    "author": [
+      {
+        "family": "Alvarez",
+        "given": "Alejandra"
+      },
+      {
+        "family": "Alarcon",
+        "given": "Rodrigo"
+      },
+      {
+        "family": "Opazo",
+        "given": "Carlos"
+      },
+      {
+        "family": "Campos",
+        "given": "Eliseo O."
+      },
+      {
+        "family": "Munoz",
+        "given": "Francisco J."
+      },
+      {
+        "family": "Calderon",
+        "given": "Francisco H."
+      },
+      {
+        "family": "Dajas",
+        "given": "Federico"
+      },
+      {
+        "family": "Gentry",
+        "given": "Mary K."
+      },
+      {
+        "family": "Doctor",
+        "given": "Bhupendra P."
+      },
+      {
+        "family": "De Mello",
+        "given": "Fernando G."
+      },
+      {
+        "family": "Inestrosa",
+        "given": "Nibaldo C."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1998
+        ]
+      ]
+    },
+    "container-title": "Journal of Neuroscience",
+    "volume": "18",
+    "issue": "9",
+    "page": "3213-3223",
+    "DOI": "10.1523/JNEUROSCI.18-09-03213.1998"
+  },
+  {
+    "id": "alvarez1997ache",
+    "type": "article-journal",
+    "title": "Acetylcholinesterase promotes the aggregation of amyloid-beta-peptide fragments by forming a complex with the growing fibrils",
+    "author": [
+      {
+        "family": "Alvarez",
+        "given": "Alejandra"
+      },
+      {
+        "family": "Opazo",
+        "given": "Carlos"
+      },
+      {
+        "family": "Alarcon",
+        "given": "Rodrigo"
+      },
+      {
+        "family": "Garrido",
+        "given": "Jorge"
+      },
+      {
+        "family": "Inestrosa",
+        "given": "Nibaldo C."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1997
+        ]
+      ]
+    },
+    "container-title": "Journal of Molecular Biology",
+    "volume": "272",
+    "issue": "3",
+    "page": "348-361",
+    "DOI": "10.1006/jmbi.1997.1245"
+  },
+  {
+    "id": "reyes1997mab",
+    "type": "article-journal",
+    "title": "A monoclonal antibody against acetylcholinesterase inhibits the formation of amyloid fibrils induced by the enzyme",
+    "author": [
+      {
+        "family": "Reyes",
+        "given": "Ariel E."
+      },
+      {
+        "family": "Perez",
+        "given": "Daniel R."
+      },
+      {
+        "family": "Alvarez",
+        "given": "Alejandra"
+      },
+      {
+        "family": "Garrido",
+        "given": "Jorge"
+      },
+      {
+        "family": "Gentry",
+        "given": "Mary K."
+      },
+      {
+        "family": "Doctor",
+        "given": "Bhupendra P."
+      },
+      {
+        "family": "Inestrosa",
+        "given": "Nibaldo C."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1997
+        ]
+      ]
+    },
+    "container-title": "Biochemical and Biophysical Research Communications",
+    "volume": "232",
+    "issue": "3",
+    "page": "652-655",
+    "DOI": "10.1006/bbrc.1997.6357"
+  },
+  {
+    "id": "rees2003ache",
+    "type": "article-journal",
+    "title": "Acetylcholinesterase promotes beta-amyloid plaques in cerebral cortex",
+    "author": [
+      {
+        "family": "Rees",
+        "given": "Tina"
+      },
+      {
+        "family": "Hammond",
+        "given": "Patti I."
+      },
+      {
+        "family": "Soreq",
+        "given": "Hermona"
+      },
+      {
+        "family": "Younkin",
+        "given": "Steven"
+      },
+      {
+        "family": "Brimijoin",
+        "given": "Stephen"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "container-title": "Neurobiology of Aging",
+    "volume": "24",
+    "issue": "6",
+    "page": "777-787",
+    "DOI": "10.1016/S0197-4580(02)00230-0"
+  },
+  {
+    "id": "garciaayllon2011ache",
+    "type": "article-journal",
+    "title": "Revisiting the role of acetylcholinesterase in Alzheimer's disease: cross-talk with P-tau and beta-amyloid",
+    "author": [
+      {
+        "family": "Garcia-Ayllon",
+        "given": "Maria-Salud"
+      },
+      {
+        "family": "Small",
+        "given": "David H."
+      },
+      {
+        "family": "Avila",
+        "given": "Jesus"
+      },
+      {
+        "family": "Saez-Valero",
+        "given": "Javier"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "container-title": "Frontiers in Molecular Neuroscience",
+    "volume": "4",
+    "page": "22",
+    "DOI": "10.3389/fnmol.2011.00022"
+  },
+  {
+    "id": "carvajal2011ache",
+    "type": "article-journal",
+    "title": "Interactions of AChE with Abeta aggregates in Alzheimer's brain: therapeutic relevance of IDN 5706",
+    "author": [
+      {
+        "family": "Carvajal",
+        "given": "Francisco J."
+      },
+      {
+        "family": "Inestrosa",
+        "given": "Nibaldo C."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2011
+        ]
+      ]
+    },
+    "container-title": "Frontiers in Molecular Neuroscience",
+    "volume": "4",
+    "page": "19",
+    "DOI": "10.3389/fnmol.2011.00019"
+  },
+  {
+    "id": "inestrosa2008ache",
+    "type": "article-journal",
+    "title": "Amyloid-cholinesterase interactions",
+    "author": [
+      {
+        "family": "Inestrosa",
+        "given": "Nibaldo C."
+      },
+      {
+        "family": "Dinamarca",
+        "given": "Margarita C."
+      },
+      {
+        "family": "Alvarez",
+        "given": "Alejandra"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2008
+        ]
+      ]
+    },
+    "container-title": "The FEBS Journal",
+    "volume": "275",
+    "issue": "4",
+    "page": "625-632",
+    "DOI": "10.1111/j.1742-4658.2007.06238.x"
+  },
+  {
+    "id": "dinamarca2010ache",
+    "type": "article-journal",
+    "title": "Amyloid-beta-acetylcholinesterase complexes potentiate neurodegenerative changes induced by the Abeta peptide. Implications for the pathogenesis of Alzheimer's disease",
+    "author": [
+      {
+        "family": "Dinamarca",
+        "given": "Margarita C."
+      },
+      {
+        "family": "Sagal",
+        "given": "Juan P."
+      },
+      {
+        "family": "Quintanilla",
+        "given": "Rodrigo A."
+      },
+      {
+        "family": "Godoy",
+        "given": "Juan A."
+      },
+      {
+        "family": "Arrazola",
+        "given": "Macarena S."
+      },
+      {
+        "family": "Inestrosa",
+        "given": "Nibaldo C."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "container-title": "Molecular Neurodegeneration",
+    "volume": "5",
+    "page": "4",
+    "DOI": "10.1186/1750-1326-5-4"
+  },
+  {
+    "id": "johnson2006pas",
+    "type": "article-journal",
+    "title": "The peripheral anionic site of acetylcholinesterase: structure, functions and potential role in rational drug design",
+    "author": [
+      {
+        "family": "Johnson",
+        "given": "Glynis"
+      },
+      {
+        "family": "Moore",
+        "given": "Samuel W."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2006
+        ]
+      ]
+    },
+    "container-title": "Current Pharmaceutical Design",
+    "volume": "12",
+    "issue": "2",
+    "page": "217-225",
+    "DOI": "10.2174/138161206775193127"
+  },
+  {
+    "id": "poole2013pg",
+    "type": "article-journal",
+    "title": "Determining the presence of periodontopathic virulence factors in short-term postmortem Alzheimer's disease brain tissue",
+    "author": [
+      {
+        "family": "Poole",
+        "given": "Sophie"
+      },
+      {
+        "family": "Singhrao",
+        "given": "Sim K."
+      },
+      {
+        "family": "Kesavalu",
+        "given": "Lakshmyya"
+      },
+      {
+        "family": "Curtis",
+        "given": "Michael A."
+      },
+      {
+        "family": "Crean",
+        "given": "StJohn"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "container-title": "Journal of Alzheimer's Disease",
+    "volume": "36",
+    "issue": "4",
+    "page": "665-677",
+    "DOI": "10.3233/JAD-121918"
+  },
+  {
+    "id": "haditsch2020cor388",
+    "type": "article-journal",
+    "title": "Alzheimer's disease-like neurodegeneration in \\textitPorphyromonas gingivalis infected neurons with persistent expression of active gingipains",
+    "author": [
+      {
+        "family": "Haditsch",
+        "given": "Ursula"
+      },
+      {
+        "family": "Roth",
+        "given": "Theresa"
+      },
+      {
+        "family": "Rodriguez",
+        "given": "Leo"
+      },
+      {
+        "family": "Hancock",
+        "given": "Sean"
+      },
+      {
+        "family": "Cecere",
+        "given": "Thomas"
+      },
+      {
+        "family": "Nguyen",
+        "given": "Mai"
+      },
+      {
+        "family": "Arastu-Kapur",
+        "given": "Shirin"
+      },
+      {
+        "family": "Broce",
+        "given": "Sean"
+      },
+      {
+        "family": "Raha",
+        "given": "Debasish"
+      },
+      {
+        "family": "Lynch",
+        "given": "Casey C."
+      },
+      {
+        "family": "Holsinger",
+        "given": "Leslie J."
+      },
+      {
+        "family": "Dominy",
+        "given": "Stephen S."
+      },
+      {
+        "family": "Ermini",
+        "given": "Florian"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "container-title": "Journal of Alzheimer's Disease",
+    "volume": "75",
+    "issue": "4",
+    "page": "1361-1376",
+    "DOI": "10.3233/JAD-200393"
+  },
+  {
+    "id": "lei2023pgbbb",
+    "type": "article-journal",
+    "title": "Porphyromonas gingivalis bacteremia increases the permeability of the blood-brain barrier via the Mfsd2a/Caveolin-1 mediated transcytosis pathway",
+    "author": [
+      {
+        "family": "Lei",
+        "given": "Shuang"
+      },
+      {
+        "family": "Li",
+        "given": "Jian"
+      },
+      {
+        "family": "Yu",
+        "given": "Jingjun"
+      },
+      {
+        "family": "Li",
+        "given": "Fulong"
+      },
+      {
+        "family": "Pan",
+        "given": "Yaping"
+      },
+      {
+        "family": "Chen",
+        "given": "Xu"
+      },
+      {
+        "family": "Ma",
+        "given": "Chunliang"
+      },
+      {
+        "family": "Zhao",
+        "given": "Weidong"
+      },
+      {
+        "family": "Tang",
+        "given": "Xiaolin"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "container-title": "International Journal of Oral Science",
+    "volume": "15",
+    "page": "3",
+    "DOI": "10.1038/s41368-022-00215-y"
+  },
+  {
+    "id": "barak1994pas",
+    "type": "article-journal",
+    "title": "Acetylcholinesterase peripheral anionic site degeneracy conferred by amino acid arrays sharing a common core",
+    "author": [
+      {
+        "family": "Barak",
+        "given": "Dov"
+      },
+      {
+        "family": "Kronman",
+        "given": "Chanoch"
+      },
+      {
+        "family": "Ordentlich",
+        "given": "Arie"
+      },
+      {
+        "family": "Ariel",
+        "given": "Naomi"
+      },
+      {
+        "family": "Bromberg",
+        "given": "Avigdor"
+      },
+      {
+        "family": "Marcus",
+        "given": "Dino"
+      },
+      {
+        "family": "Lazar",
+        "given": "Arie"
+      },
+      {
+        "family": "Velan",
+        "given": "Baruch"
+      },
+      {
+        "family": "Shafferman",
+        "given": "Avigdor"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1994
+        ]
+      ]
+    },
+    "container-title": "Journal of Biological Chemistry",
+    "volume": "269",
+    "issue": "9",
+    "page": "6296-6305",
+    "DOI": "10.1016/S0021-9258(17)37603-X"
+  },
+  {
+    "id": "mallender2000asp74",
+    "type": "article-journal",
+    "title": "Acetylthiocholine binds to Asp74 at the peripheral site of human acetylcholinesterase as the first step in the catalytic pathway",
+    "author": [
+      {
+        "family": "Mallender",
+        "given": "William D."
+      },
+      {
+        "family": "Szegletes",
+        "given": "Tivadar"
+      },
+      {
+        "family": "Rosenberry",
+        "given": "Terrone L."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2000
+        ]
+      ]
+    },
+    "container-title": "Biochemistry",
+    "volume": "39",
+    "issue": "26",
+    "page": "7753-7763",
+    "DOI": "10.1021/bi000210o"
+  },
+  {
+    "id": "sussman1991ache",
+    "type": "article-journal",
+    "title": "Atomic structure of acetylcholinesterase from Torpedo californica: a prototypic acetylcholine-binding protein",
+    "author": [
+      {
+        "family": "Sussman",
+        "given": "Joel L."
+      },
+      {
+        "family": "Harel",
+        "given": "Michal"
+      },
+      {
+        "family": "Frolow",
+        "given": "Felix"
+      },
+      {
+        "family": "Oefner",
+        "given": "Christian"
+      },
+      {
+        "family": "Goldman",
+        "given": "Adrian"
+      },
+      {
+        "family": "Toker",
+        "given": "Lilly"
+      },
+      {
+        "family": "Silman",
+        "given": "Israel"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          1991
+        ]
+      ]
+    },
+    "container-title": "Science",
+    "volume": "253",
+    "issue": "5022",
+    "page": "872-879",
+    "DOI": "10.1126/science.1678899"
+  },
+  {
+    "id": "dvir2010ache",
+    "type": "article-journal",
+    "title": "Acetylcholinesterase: from 3D structure to function",
+    "author": [
+      {
+        "family": "Dvir",
+        "given": "Hay"
+      },
+      {
+        "family": "Silman",
+        "given": "Israel"
+      },
+      {
+        "family": "Harel",
+        "given": "Michal"
+      },
+      {
+        "family": "Rosenberry",
+        "given": "Terrone L."
+      },
+      {
+        "family": "Sussman",
+        "given": "Joel L."
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2010
+        ]
+      ]
+    },
+    "container-title": "Chemico-Biological Interactions",
+    "volume": "187",
+    "issue": "1-3",
+    "page": "10-22",
+    "DOI": "10.1016/j.cbi.2010.01.042"
+  },
+  {
+    "id": "bourne2003pas",
+    "type": "article-journal",
+    "title": "Structural insights into ligand interactions at the acetylcholinesterase peripheral anionic site",
+    "author": [
+      {
+        "family": "Bourne",
+        "given": "Yves"
+      },
+      {
+        "family": "Taylor",
+        "given": "Palmer"
+      },
+      {
+        "family": "Radic",
+        "given": "Zoran"
+      },
+      {
+        "family": "Marchot",
+        "given": "Pascale"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2003
+        ]
+      ]
+    },
+    "container-title": "The EMBO Journal",
+    "volume": "22",
+    "issue": "1",
+    "page": "1-12",
+    "DOI": "10.1093/emboj/cdg005"
+  }
+]
