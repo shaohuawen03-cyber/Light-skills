@@ -2,7 +2,7 @@
 
 ## 摘要
 
-牙周炎与阿尔茨海默病（AD）在临床和实验中有关联，但仍缺少能够作用于突触酶的肽水平配体。对口腔小开放阅读框（smORF）做 UniDL4BioPep 打分，将 12 条 7–9 残基肽对接到人源乙酰胆碱酯酶（AChE），并对 apo AChE 与三种复合物做 100 ns 分子动力学（MD）。健康标记库 11,269,961 条与牙周炎标记库 11,721,988 条均按 ≥0.80 跑完 22 个分类头。随后仅对牙周炎分支与口腔基因组、宏蛋白质组目录做精确匹配。血脑屏障肽头阳性在健康库为 1,095,861 条（9.72%），在牙周炎库为 1,125,832 条（9.60%）。与 33,786 条目录支持的独特肽取交集得 3,518 条；经 NTxPred2、mebipred 与 AnOxPePred 收至 12 条明示序列。12 条均为 7–9 残基、pH 7.4 带净正电荷且富亮氨酸。本地 AutoDock Vina（三次）最优构象介于 −8.25 至 −9.60 kcal/mol。FLLHTTR、YLSLLQR 与 LLHPLRL 接触外周阴离子位点（PAS）。100 ns 内 FLLHTTR 与 YLSLLQR 复合物比 apo 更紧凑（骨架 RMSD 0.1640、0.1625 nm，相对 apo 0.1897 nm）。FLLHTTR 氢键网最密（7.03 ± 1.28）；仅 YLSLLQR 收缩溶剂可及面积。计算勾勒出口腔微肽占据促 Aβ 成纤同一 PAS 的可能路径。
+牙周炎与阿尔茨海默病（AD）在临床和实验中有关联，但仍缺少能够作用于突触酶的肽水平配体。用 EMBOSS getorf 从 PRJNA678453 宏基因组组装基因组预测小开放阅读框（sORF；健康 24 例、牙周炎 26 例），经 UniDL4BioPep 打分后将 12 条 7–9 残基肽对接到人源乙酰胆碱酯酶（AChE），并对 apo AChE 与三种复合物做 100 ns 分子动力学（MD）。健康标记库 11,269,961 条与牙周炎标记库 11,721,988 条均按 ≥0.80 跑完 22 个分类头。随后仅对牙周炎分支与口腔基因组、宏蛋白质组目录做精确匹配。血脑屏障肽头阳性在健康库为 1,095,861 条（9.72%），在牙周炎库为 1,125,832 条（9.60%）。与 33,786 条目录支持的独特肽取交集得 3,518 条；经 NTxPred2、mebipred 与 AnOxPePred 收至 12 条明示序列。12 条均为 7–9 残基、pH 7.4 带净正电荷且富亮氨酸。本地 AutoDock Vina（三次）最优构象介于 −8.25 至 −9.60 kcal/mol。FLLHTTR、YLSLLQR 与 LLHPLRL 接触外周阴离子位点（PAS）。100 ns 内 FLLHTTR 与 YLSLLQR 复合物比 apo 更紧凑（骨架 RMSD 0.1640、0.1625 nm，相对 apo 0.1897 nm）。FLLHTTR 氢键网最密（7.03 ± 1.28）；仅 YLSLLQR 收缩溶剂可及面积。计算勾勒出口腔微肽占据促 Aβ 成纤同一 PAS 的可能路径。
 
 **关键词：** 阿尔茨海默病；牙周炎；微肽；分子对接；分子动力学
 
@@ -20,7 +20,7 @@
 
 加速 MD 把 Aβ 放到 AChE 表面，并把该酶视为成核中心[@lushchekina2017amd]。1 μs、以 PAS 为中心的 AChE–Aβ 轨迹保持结合，主驻留区为残基 344–361[@atanasova2020md]。PDB 4EY6 给出 2.40 Å 人源 AChE 对接框架[@cheung2012ache]。连接催化三联体与 PAS 的芳香峡部早先在电鳗 AChE 上被定位[@kryger1999e2020]。仍缺少的是从口腔 smORF 取出、并在同一 PAS 上检验的肽水平配体。
 
-本研究对 PRJNA678453 的口腔 smORF 文库用 22 个 UniDL4BioPep 头打分，比较健康与牙周炎命中率，将牙周炎分支与口腔基因组和宏蛋白质组目录匹配，再用 NTxPred2、mebipred 和 AnOxPePred 收窄名单。12 条 7–9 aa 肽对接到人源 AChE。三个复合物与 apo 酶一起做 100 ns 模拟，检验肽是否留在 PAS 上且不使折叠打开。
+本研究用 EMBOSS getorf 从 PRJNA678453 的 MAG 预测 sORF（健康 24 例、牙周炎 26 例），对两库做 22 项 UniDL4BioPep 打分，将牙周炎分支与口腔基因组和宏蛋白质组目录匹配，再用 NTxPred2、mebipred 和 AnOxPePred 收窄名单。12 条 7–9 aa 肽对接到人源 AChE。三个复合物与 apo 酶一起做 100 ns 模拟，检验肽是否留在 PAS 上且不使折叠打开。
 
 ## 材料与方法
 
@@ -28,9 +28,9 @@
 
 工作为纯计算。未新增患者、标本、测序或湿实验。健康与牙周炎标记是文库标签，不是肽水平临床诊断。对接使用本地三次 AutoDock Vina 构象。MD 使用 apo AChE 与三种肽复合物的 100 ns GROMACS 轨迹。
 
-### 来源文库
+### 来源文库与 sORF 预测
 
-公共来源为 PRJNA678453，即牙周炎与口腔健康供体的成对口腔宏基因组与宏转录组[@belstrom2021periodontitis]。该 BioProject 上游处理已得到 4–50 aa 翻译 smORF 字符串；同一项目另有派生的 MGnify 第三方组装 PRJEB65451（metaSPAdes v3.15.3），并非第二个临床队列。本研究未重新组装读段或重新预测基因，而是对上述字符串做 22 项 UniDL4BioPep 打分，将牙周炎分支与口腔目录匹配，并将 12 条肽送入对接与 MD。文库规模为健康标记 11,269,961 条、牙周炎标记 11,721,988 条。
+公共来源为 PRJNA678453，即牙周炎与口腔健康供体的成对口腔宏基因组与宏转录组[@belstrom2021periodontitis]。同一 BioProject 另有派生的 MGnify 第三方组装 PRJEB65451（metaSPAdes v3.15.3），并非第二个临床队列。宏基因组组装基因组（MAG）按健康标记 24 例、牙周炎标记 26 例分入样本目录，296 个 MAG 文件经 GCA–SRR 元数据匹配。开放阅读框用 EMBOSS getorf 预测：细菌密码子表 11，起始密码子至终止密码子（`-find 0`），长度窗口 15–150 bp[@rice2000emboss]。完全相同的氨基酸串合并。各独特串在样本中的有无按存在/缺失记录，未把读段重新回贴到 MAG。打分库为健康标记 11,269,961 条、牙周炎标记 11,721,988 条 5–50 aa 肽。未新招患者；本研究完成的是 getorf 预测、22 项筛选、目录匹配、对接与 MD。
 
 ### UniDL4BioPep（22 项任务）
 
@@ -259,17 +259,21 @@ apo RMSD 平台约 0.19 nm（图5A–7A）。ALLLHRC 跟随对照（复合物 0.
 
 ## 讨论
 
-AChE 不只是乙酰胆碱水解酶。Inestrosa 等证明该酶经 PAS 加速 Aβ 成纤，且 AChE–Aβ 颗粒毒性高于游离肽[@inestrosa1996ache]。一段疏水 PAS 基序即足以产生伴侣效应[@deferrari2001motif]，PAS 导向配体可在生化测定中抑制 AChE 诱导的聚集[@bartolini2003pas]。这些实验把 PAS 定为胆碱能衰竭与淀粉样沉积之间的结构铰链[@selkoe2016amyloid; @hampel2018cholinergic]。本研究的对接与 100 ns 轨迹问的是：牙周炎来源微肽能否占据同一位点。
+AChE 水解乙酰胆碱，同时也加速 Aβ 组装。Inestrosa 等证明该酶经 PAS 加速成纤，且 AChE–Aβ 颗粒毒性高于游离肽[@inestrosa1996ache]。一段疏水 PAS 基序即足以产生伴侣效应[@deferrari2001motif]。PAS 导向配体在生化测定中抑制 AChE 诱导的聚集[@bartolini2003pas]。关于 AD 中 AChE 的综述把同一外周位点放进与 Aβ、磷酸化 tau 的交叉对话，斑块相关 AChE 仍对 PAS 阻断敏感[@garciaayllon2011ache; @carvajal2011ache]。这些实验把 PAS 定为胆碱能衰竭与淀粉样沉积之间的结构铰链[@selkoe2016amyloid; @hampel2018cholinergic]。本研究的对接与 100 ns 轨迹检验牙周炎来源微肽能否占据该位点。
 
-深度学习肽挖掘为这一问题提供了可行入口。Torres 等先对数百万条翻译的微生物组开放阅读框打分，再做实验过滤[@torres2024peptideantibiotics]。UniDL4BioPep 在 ESM-2 嵌入上沿用同一“先预测再过滤”逻辑，卷积头跨活性任务复用[@du2023unidl4biopep]。NTxPred2、mebipred 与 AnOxPePred 分别针对神经毒性、金属结合和抗氧化终点训练，并非针对 AChE 占据[@rathore2025ntxpred2; @aptekmann2022mebipred; @olsen2020anoxpepred]。串联分数因此是分诊栈，与这些原文的用法一致，不是独立湿实验重复。与 HOMD、eHOMD 和唾液宏蛋白质组的目录匹配支持该字符串曾经被观察到[@chen2010homd; @escapa2018ehomd; @belstrom2016metaproteomics]，这与其他口腔肽研究中这些资源的角色相同[@jiang2022oralmetaproteomics; @yuan2025osample; @sberro2019smallgenes]。
+口腔暴露路径在菌体和蛋白酶水平已有具体事例。Poole 等在短期死后 AD 脑组织中检出牙周致病毒力因子[@poole2013pg]。Dominy 等在 AD 脑内报告 *P. gingivalis* 与牙龈蛋白酶，并显示小鼠口腔感染升高脑内 Aβ1–42[@dominy2019pgingivalis]。Haditsch 等在持续表达活性牙龈蛋白酶的感染神经元中观察到 AD 样变性[@haditsch2020cor388]。Ilievski 等在野生型小鼠反复口腔给予牙周病原后产生神经炎症和 Aβ 相关改变[@ilievski2018oral]。牙龈蛋白酶与外膜囊泡可把细菌货物送出产生细胞[@guo2010gingipain; @ho2015omv]。综合分析与 AD 队列把牙周炎与后续认知下降联系起来[@larvin2023periodontalcognition; @ide2016periodontitis]。两样本孟德尔随机化并未支持遗传因果效应[@hu2024mendelian]。这些报告支持在 PAS 上检查口腔产物，并不能把 12 条肽归于 *P. gingivalis*，也不能证明跨细胞转运[@chalmers2025primer; @gu2024bbb; @belstrom2021periodontitis]。
 
-人源 AChE（PDB 4EY6）为峡部与 PAS 提供实验测定框架[@cheung2012ache]，沿用电鳗 AChE 上的芳香峡部定位[@kryger1999e2020]。AutoDock Vina 常作为第一轮排序引擎[@trott2010vina; @eberhardt2021vina]。在此设定下，FLLHTTR、YLSLLQR 与 LLHPLRL 的最优构象接触 Inestrosa 与 De Ferrari 指认为 Aβ 组装相关的 PAS 残基，HLLTLKKHV 到达 Atanasova 等 1 μs 轨迹中 Aβ 驻留的 344–361 区 Phe346[@atanasova2020md]。这些接触与既有 PAS 药理学一致，而不是筛选另造的新位点。
+深度学习肽挖掘提供了此处的过滤栈。Torres 等先对数百万条翻译的微生物组开放阅读框打分，再做实验过滤[@torres2024peptideantibiotics]。UniDL4BioPep 在 ESM-2 嵌入上沿用同一先预测再过滤逻辑[@du2023unidl4biopep]。NTxPred2、mebipred 与 AnOxPePred 分别针对神经毒性、金属结合和抗氧化终点训练[@rathore2025ntxpred2; @aptekmann2022mebipred; @olsen2020anoxpepred]。与 HOMD、eHOMD 和唾液宏蛋白质组的目录匹配支持该字符串曾经被观察到，这与其他口腔肽研究中这些资源的角色相同[@chen2010homd; @escapa2018ehomd; @belstrom2016metaproteomics; @jiang2022oralmetaproteomics; @yuan2025osample; @sberro2019smallgenes]。串联分数仍是分诊。
 
-AChE–Aβ 的 MD 已把该酶当作成核中心。加速采样把 Aβ 拉到 AChE 表面[@lushchekina2017amd]，1 μs、以 PAS 为中心的轨迹保持结合且不使折叠打开[@atanasova2020md]。同一占据模式在此出现在 100 ns 窗口：FLLHTTR 与 YLSLLQR 复合物比 apo 更紧凑，氢键持续，质心距离落在表面驻留范围。复合物 RMSD 低于 apo，在其他配体–蛋白 MD 中被读作结合后局部变刚；这一读法与 Lushchekina 描述的表面结合、不解离复合物相符，而不是肽把酶撑开。
+人源 AChE（PDB 4EY6）为峡部与 PAS 提供实验框架[@cheung2012ache]，沿用电鳗 AChE 上的芳香峡部定位[@kryger1999e2020]。AutoDock Vina 是第一轮排序引擎[@trott2010vina; @eberhardt2021vina]。FLLHTTR、YLSLLQR 与 LLHPLRL 的最优构象接触 Inestrosa 与 De Ferrari 指认为 Aβ 组装相关的 PAS 残基。HLLTLKKHV 到达 Atanasova 等 1 μs 轨迹中 Aβ 驻留的 344–361 区 Phe346[@atanasova2020md]。该几何即 Inestrosa 认定的促纤 PAS。
 
-口腔暴露路径由既有具体事例支持，而不是由本次打分表推出。AD 脑内曾检出 *P. gingivalis* 与牙龈蛋白酶[@dominy2019pgingivalis]。野生型小鼠反复口腔感染产生神经炎症和 Aβ 相关改变[@ilievski2018oral]。牙龈蛋白酶与外膜囊泡可把细菌货物送出产生细胞[@guo2010gingipain; @ho2015omv]。综合分析与 AD 队列把牙周炎与后续认知下降联系起来[@larvin2023periodontalcognition; @ide2016periodontitis]，而两样本孟德尔随机化并未支持遗传因果效应[@hu2024mendelian]。这些报告支持在 PAS 上检查口腔产物；并不能把 12 条肽归于 *P. gingivalis*，也不能证明血脑转运[@chalmers2025primer; @gu2024bbb; @belstrom2021periodontitis]。
+AChE–Aβ 的 MD 已把该酶当作成核中心。加速采样把 Aβ 拉到 AChE 表面[@lushchekina2017amd]。1 μs、以 PAS 为中心的轨迹保持结合且不使折叠打开[@atanasova2020md]。同一占据模式在此出现在 100 ns 窗口。FLLHTTR 与 YLSLLQR 比 apo 更紧凑；FLLHTTR 维持密氢键网（7.03 ± 1.28）；仅 YLSLLQR 收缩溶剂可及面积。复合物 RMSD 低于 apo，可读作结合后局部变刚，与 Lushchekina 描述的表面结合、不解离复合物相符。
 
-综上，上述文献事例支持一个有边界的结构假说：短、带正电、富亮氨酸的口腔微肽可以占据实验已定位的 Aβ 结合 PAS，并在 100 ns 尺度上留在那里。它们不能替代结合测定或 Aβ 聚集实验。
+四步机制由上述 PAS 文献推出。第一，PAS 识别：占据 Asp74、Tyr72、Trp286、Tyr341，把异源肽放在通向催化三联体的峡部入口[@hampel2018cholinergic; @cheung2012ache]。第二，持续的酶–肽复合物：分子间氢键持续，与 Lushchekina、Atanasova 的 AChE–Aβ 轨迹一致。第三，乙酰胆碱进入受限：20 Å 峡部入口的物理占据可在催化核心仍折叠时妨碍底物。第四，病理性伴侣活性：PAS 是已记录的促纤位点[@inestrosa1996ache; @deferrari2001motif; @carvajal2011ache]，停在那里的肽可降低内源 Aβ 的成核壁垒。折叠的 AChE 于是出示覆肽 PAS，Aβ 寡聚体可在其上共组装。
+
+AChE 的 PAS 药理学此前多为小分子。Bartolini 的 PAS 配体在不要求占据催化位点的情况下降低 AChE 诱导的聚集[@bartolini2003pas]。García-Ayllón 与 Carvajal 把斑块相关 AChE 当作治疗把手[@garciaayllon2011ache; @carvajal2011ache]。短阳离子肽占据的表面大于这些配体；此处构象因此检验口腔七肽能否坐在同一芳香簇上。
+
+上述文献事例支持一个有边界的结构假说：从 PRJNA678453 MAG 预测的短、带正电、富亮氨酸口腔微肽可以占据实验已定位的 Aβ 结合 PAS，并在 100 ns 尺度上留在那里。它们不能替代结合测定或 Aβ 聚集实验。
 
 ## 结论
 
@@ -300,16 +304,21 @@ AChE–Aβ 的 MD 已把该酶当作成核中心。加速采样把 Aβ 拉到 AC
 21. Atanasova M, Dimitrov I, Ivanov S. Molecular dynamics simulations of acetylcholinesterase–beta-amyloid peptide complex. *Cybern Inf Technol*. 2020;20(6):140–154. doi:10.2478/cait-2020-0068.
 22. Cheung J, Rudolph MJ, Burshteyn F, et al. Structures of human acetylcholinesterase in complex with pharmacologically important ligands. *J Med Chem*. 2012;55(23):10282–10286. doi:10.1021/jm300871x.
 23. Kryger G, Silman I, Sussman JL. Structure of acetylcholinesterase complexed with E2020 (Aricept): implications for drug design. *Structure*. 1999;7(3):297–307. doi:10.1016/s0969-2126(99)80040-9.
-24. Gu Y, Chen P, Wang B, et al. Prediction of blood-brain barrier penetrating peptides based on data augmentation with Augur. *BMC Biol*. 2024;22:86. doi:10.1186/s12915-024-01883-4.
-25. Chen T, Yu WH, Izard J, et al. The Human Oral Microbiome Database: a web accessible resource for investigating oral microbe taxonomic and genomic information. *Database (Oxford)*. 2010;2010:baq013. doi:10.1093/database/baq013.
-26. Escapa IF, Chen T, Huang Y, et al. New insights into human nostril microbiome from the expanded Human Oral Microbiome Database (eHOMD). *mSystems*. 2018;3(3):e00187-18. doi:10.1128/mSystems.00187-18.
-27. Belstrøm D, Jersie-Christensen RR, Lyon D, et al. Metaproteomics of saliva identifies human protein markers specific for individuals with periodontitis and dental caries compared to orally healthy controls. *PeerJ*. 2016;4:e2433. doi:10.7717/peerj.2433.
-28. Jiang X, Zhang Y, Wang H, et al. In-depth metaproteomics analysis of oral microbiome for lung cancer. *Research (Wash D C)*. 2022;2022:9781578. doi:10.34133/2022/9781578.
-29. Yuan J, Cao Q, Chen M, et al. OSaMPle workflow for salivary metaproteomics analysis reveals dysbiosis in inflammatory bowel disease patients. *npj Biofilms Microbiomes*. 2025;11:63. doi:10.1038/s41522-025-00692-z.
-30. Rathore AS, Jain S, Choudhury S, Raghava GPS. A large language model for predicting neurotoxic peptides and neurotoxins. *Protein Sci*. 2025;34(8):e70200. doi:10.1002/pro.70200.
-31. Aptekmann AA, Buongiorno J, Giovannelli D, et al. mebipred: identifying metal-binding potential in protein sequence. *Bioinformatics*. 2022;38(14):3532–3540. doi:10.1093/bioinformatics/btac358.
-32. Olsen TH, Yesiltas B, Marin FI, et al. AnOxPePred: using deep learning for the prediction of antioxidative properties of peptides. *Sci Rep*. 2020;10:21471. doi:10.1038/s41598-020-78319-w.
-33. Trott O, Olson AJ. AutoDock Vina: improving the speed and accuracy of docking with a new scoring function. *J Comput Chem*. 2010;31(2):455–461. doi:10.1002/jcc.21334.
-34. Eberhardt J, Santos-Martins D, Tillack AF, Forli S. AutoDock Vina 1.2.0: new docking methods, expanded force field, and Python bindings. *J Chem Inf Model*. 2021;61(8):3891–3898. doi:10.1021/acs.jcim.1c00203.
-35. Abraham MJ, Murtola T, Schulz R, et al. GROMACS: high performance molecular simulations through multi-level parallelism from laptops to supercomputers. *SoftwareX*. 2015;1–2:19–25. doi:10.1016/j.softx.2015.06.001.
-36. Lindorff-Larsen K, Piana S, Palmo K, et al. Improved side-chain torsion potentials for the Amber ff99SB protein force field. *Proteins*. 2010;78(8):1950–1958. doi:10.1002/prot.22711.
+24. Rice P, Longden I, Bleasby A. EMBOSS: the European Molecular Biology Open Software Suite. *Trends Genet*. 2000;16(6):276–277. doi:10.1016/S0168-9525(00)02024-2.
+25. Gu Y, Chen P, Wang B, et al. Prediction of blood-brain barrier penetrating peptides based on data augmentation with Augur. *BMC Biol*. 2024;22:86. doi:10.1186/s12915-024-01883-4.
+26. Chen T, Yu WH, Izard J, et al. The Human Oral Microbiome Database: a web accessible resource for investigating oral microbe taxonomic and genomic information. *Database (Oxford)*. 2010;2010:baq013. doi:10.1093/database/baq013.
+27. Escapa IF, Chen T, Huang Y, et al. New insights into human nostril microbiome from the expanded Human Oral Microbiome Database (eHOMD). *mSystems*. 2018;3(3):e00187-18. doi:10.1128/mSystems.00187-18.
+28. Belstrøm D, Jersie-Christensen RR, Lyon D, et al. Metaproteomics of saliva identifies human protein markers specific for individuals with periodontitis and dental caries compared to orally healthy controls. *PeerJ*. 2016;4:e2433. doi:10.7717/peerj.2433.
+29. Jiang X, Zhang Y, Wang H, et al. In-depth metaproteomics analysis of oral microbiome for lung cancer. *Research (Wash D C)*. 2022;2022:9781578. doi:10.34133/2022/9781578.
+30. Yuan J, Cao Q, Chen M, et al. OSaMPle workflow for salivary metaproteomics analysis reveals dysbiosis in inflammatory bowel disease patients. *npj Biofilms Microbiomes*. 2025;11:63. doi:10.1038/s41522-025-00692-z.
+31. Rathore AS, Jain S, Choudhury S, Raghava GPS. A large language model for predicting neurotoxic peptides and neurotoxins. *Protein Sci*. 2025;34(8):e70200. doi:10.1002/pro.70200.
+32. Aptekmann AA, Buongiorno J, Giovannelli D, et al. mebipred: identifying metal-binding potential in protein sequence. *Bioinformatics*. 2022;38(14):3532–3540. doi:10.1093/bioinformatics/btac358.
+33. Olsen TH, Yesiltas B, Marin FI, et al. AnOxPePred: using deep learning for the prediction of antioxidative properties of peptides. *Sci Rep*. 2020;10:21471. doi:10.1038/s41598-020-78319-w.
+34. Trott O, Olson AJ. AutoDock Vina: improving the speed and accuracy of docking with a new scoring function. *J Comput Chem*. 2010;31(2):455–461. doi:10.1002/jcc.21334.
+35. Eberhardt J, Santos-Martins D, Tillack AF, Forli S. AutoDock Vina 1.2.0: new docking methods, expanded force field, and Python bindings. *J Chem Inf Model*. 2021;61(8):3891–3898. doi:10.1021/acs.jcim.1c00203.
+36. Abraham MJ, Murtola T, Schulz R, et al. GROMACS: high performance molecular simulations through multi-level parallelism from laptops to supercomputers. *SoftwareX*. 2015;1–2:19–25. doi:10.1016/j.softx.2015.06.001.
+37. Lindorff-Larsen K, Piana S, Palmo K, et al. Improved side-chain torsion potentials for the Amber ff99SB protein force field. *Proteins*. 2010;78(8):1950–1958. doi:10.1002/prot.22711.
+38. García-Ayllón MS, Small DH, Avila J, Sáez-Valero J. Revisiting the role of acetylcholinesterase in Alzheimer’s disease: cross-talk with P-tau and β-amyloid. *Front Mol Neurosci*. 2011;4:22. doi:10.3389/fnmol.2011.00022.
+39. Carvajal FJ, Inestrosa NC. Interactions of AChE with Aβ aggregates in Alzheimer’s brain: therapeutic relevance of IDN 5706. *Front Mol Neurosci*. 2011;4:19. doi:10.3389/fnmol.2011.00019.
+40. Poole S, Singhrao SK, Kesavalu L, Curtis MA, Crean S. Determining the presence of periodontopathic virulence factors in short-term postmortem Alzheimer’s disease brain tissue. *J Alzheimers Dis*. 2013;36(4):665–677. doi:10.3233/JAD-121918.
+41. Haditsch U, Roth T, Rodriguez L, et al. Alzheimer’s disease-like neurodegeneration in *Porphyromonas gingivalis* infected neurons with persistent expression of active gingipains. *J Alzheimers Dis*. 2020;75(4):1361–1376. doi:10.3233/JAD-200393.
