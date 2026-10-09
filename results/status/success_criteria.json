@@ -1,0 +1,15 @@
+{
+  "description": "Local Zotero imported the 54 CSL items and English.docx ITEM uris were rewritten to real itemKeys.",
+  "require_files": [
+    "results/status/zotero_handsfree.json",
+    "projects/English.docx",
+    "projects/English_Zotero_library.json"
+  ],
+  "require_contains": {
+    "results/status/zotero_handsfree.json": "\"ok\": true"
+  },
+  "min_bytes": {
+    "projects/English.docx": 100000,
+    "projects/English_Zotero_library.json": 10000
+  }
+}
