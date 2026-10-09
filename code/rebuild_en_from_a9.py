@@ -14,7 +14,7 @@ import zipfile
 from html import escape
 from pathlib import Path
 
-from rewrite_discussion import EN_DELETE_PREFIXES, EN_REPLACE
+from discussion_texts import EN_DELETE_PREFIXES, EN_REPLACE
 
 ROOT = Path("/home/user/Light-skills")
 OUT = ROOT / "projects" / "English.docx"
