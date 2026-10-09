@@ -1,9 +1,9 @@
 {
-  "round": 1,
+  "round": 2,
   "arena_state": "awaiting_check",
   "local_state": "pending",
-  "arena_updated": "2026-10-09 07:23:51",
+  "arena_updated": "2026-10-09 08:16:12",
   "local_updated": null,
   "host": "",
-  "note": "zotero: import English_Zotero_library.json into local Zotero on 127.0.0.1:23119 (connector/saveItems), relink English.docx ITEM uris to real itemKeys, Word COM ZoteroRefresh. Close Word first. Keep Zotero running. Do not edit manuscript prose."
+  "note": "zotero: import projects/English_Zotero_library.json into local Zotero on 127.0.0.1:23119, relink E:\\0writing\\Light-skills-sync\\projects\\English.docx ITEM uris, Word COM ZoteroRefresh. Close Word. Keep Zotero running. Do not change discussion prose."
 }
