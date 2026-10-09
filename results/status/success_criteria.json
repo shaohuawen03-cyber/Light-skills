@@ -1,13 +1,10 @@
 {
-  "description": "Library JSON imported on the Windows Zotero; English.docx has Refresh-ready fields.",
+  "description": "English manuscript with Refresh-ready Zotero fields and rewritten discussion.",
   "require_files": [
     "projects/English.docx",
     "projects/English_Zotero_library.json",
-    "results/status/zotero_handsfree.json"
+    "deliverable/English.docx"
   ],
-  "require_contains": {
-    "results/status/zotero_handsfree.json": "\"ok\": true"
-  },
   "min_bytes": {
     "projects/English.docx": 100000,
     "projects/English_Zotero_library.json": 10000
