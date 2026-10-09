@@ -1,6 +1,6 @@
 [
   {
-    "id": "scheltens2021alzheimer",
+    "id": 1,
     "type": "article-journal",
     "title": "Alzheimer's disease",
     "author": [
@@ -37,6 +37,7 @@
         "given": "Wiesje M."
       }
     ],
+    "citation-key": "scheltens2021alzheimer",
     "issued": {
       "date-parts": [
         [
@@ -51,7 +52,7 @@
     "DOI": "10.1016/S0140-6736(20)32205-4"
   },
   {
-    "id": "selkoe2016amyloid",
+    "id": 2,
     "type": "article-journal",
     "title": "The amyloid hypothesis of Alzheimer's disease at 25 years",
     "author": [
@@ -64,6 +65,7 @@
         "given": "John"
       }
     ],
+    "citation-key": "selkoe2016amyloid",
     "issued": {
       "date-parts": [
         [
@@ -78,7 +80,7 @@
     "DOI": "10.15252/emmm.201606210"
   },
   {
-    "id": "hampel2018cholinergic",
+    "id": 3,
     "type": "article-journal",
     "title": "The cholinergic system in the pathophysiology and treatment of Alzheimer's disease",
     "author": [
@@ -127,6 +129,7 @@
         "given": "Zaven S."
       }
     ],
+    "citation-key": "hampel2018cholinergic",
     "issued": {
       "date-parts": [
         [
@@ -141,7 +144,7 @@
     "DOI": "10.1093/brain/awy132"
   },
   {
-    "id": "inestrosa1996ache",
+    "id": 4,
     "type": "article-journal",
     "title": "Acetylcholinesterase accelerates assembly of amyloid-$\\beta$-peptides into Alzheimer's fibrils: possible role of the peripheral site of the enzyme",
     "author": [
@@ -182,6 +185,7 @@
         "given": "Jorge"
       }
     ],
+    "citation-key": "inestrosa1996ache",
     "issued": {
       "date-parts": [
         [
@@ -196,7 +200,7 @@
     "DOI": "10.1016/s0896-6273(00)80108-7"
   },
   {
-    "id": "deferrari2001motif",
+    "id": 5,
     "type": "article-journal",
     "title": "A structural motif of acetylcholinesterase that promotes amyloid $\\beta$-peptide fibril formation",
     "author": [
@@ -225,6 +229,7 @@
         "given": "N. C."
       }
     ],
+    "citation-key": "deferrari2001motif",
     "issued": {
       "date-parts": [
         [
@@ -239,7 +244,7 @@
     "DOI": "10.1021/bi0101392"
   },
   {
-    "id": "bartolini2003pas",
+    "id": 6,
     "type": "article-journal",
     "title": "$\\beta$-Amyloid aggregation induced by human acetylcholinesterase: inhibition studies",
     "author": [
@@ -260,6 +265,7 @@
         "given": "Vincenza"
       }
     ],
+    "citation-key": "bartolini2003pas",
     "issued": {
       "date-parts": [
         [
@@ -274,7 +280,7 @@
     "DOI": "10.1016/s0006-2952(02)01514-9"
   },
   {
-    "id": "chalmers2025primer",
+    "id": 7,
     "type": "article-journal",
     "title": "The role of the oral microbiome, host response, and periodontal disease treatment in Alzheimer's disease: A primer",
     "author": [
@@ -287,6 +293,7 @@
         "given": "Yvonne L."
       }
     ],
+    "citation-key": "chalmers2025primer",
     "issued": {
       "date-parts": [
         [
@@ -301,7 +308,7 @@
     "DOI": "10.1111/prd.12631"
   },
   {
-    "id": "belstrom2021periodontitis",
+    "id": 8,
     "type": "article-journal",
     "title": "Periodontitis associates with species-specific gene expression of the oral microbiota",
     "author": [
@@ -334,6 +341,7 @@
         "given": "Michael"
       }
     ],
+    "citation-key": "belstrom2021periodontitis",
     "issued": {
       "date-parts": [
         [
@@ -347,7 +355,7 @@
     "DOI": "10.1038/s41522-021-00247-y"
   },
   {
-    "id": "larvin2023periodontalcognition",
+    "id": 9,
     "type": "article-journal",
     "title": "The impact of study factors in the association of periodontal disease and cognitive disorders: systematic review and meta-analysis",
     "author": [
@@ -376,6 +384,7 @@
         "given": "J."
       }
     ],
+    "citation-key": "larvin2023periodontalcognition",
     "issued": {
       "date-parts": [
         [
@@ -390,7 +399,7 @@
     "DOI": "10.1093/ageing/afad015"
   },
   {
-    "id": "ide2016periodontitis",
+    "id": 10,
     "type": "article-journal",
     "title": "Periodontitis and cognitive decline in Alzheimer's disease",
     "author": [
@@ -451,6 +460,7 @@
         "given": "Clive"
       }
     ],
+    "citation-key": "ide2016periodontitis",
     "issued": {
       "date-parts": [
         [
@@ -465,7 +475,7 @@
     "DOI": "10.1371/journal.pone.0151081"
   },
   {
-    "id": "hu2024mendelian",
+    "id": 11,
     "type": "article-journal",
     "title": "Periodontal disease and risk of Alzheimer's disease: a two-sample Mendelian randomization",
     "author": [
@@ -482,6 +492,7 @@
         "given": "L."
       }
     ],
+    "citation-key": "hu2024mendelian",
     "issued": {
       "date-parts": [
         [
@@ -496,7 +507,7 @@
     "DOI": "10.1002/brb3.3486"
   },
   {
-    "id": "guo2010gingipain",
+    "id": 12,
     "type": "article-journal",
     "title": "Dichotomy of gingipains action as virulence factors: from cleaving substrates with the precision of a surgeon's knife to a meat chopper-like brutal degradation of proteins",
     "author": [
@@ -513,6 +524,7 @@
         "given": "J."
       }
     ],
+    "citation-key": "guo2010gingipain",
     "issued": {
       "date-parts": [
         [
@@ -527,7 +539,7 @@
     "DOI": "10.1111/j.1600-0757.2010.00377.x"
   },
   {
-    "id": "ho2015omv",
+    "id": 13,
     "type": "article-journal",
     "title": "Functional advantages of \\textitPorphyromonas gingivalis vesicles",
     "author": [
@@ -552,6 +564,7 @@
         "given": "Hua"
       }
     ],
+    "citation-key": "ho2015omv",
     "issued": {
       "date-parts": [
         [
@@ -566,7 +579,7 @@
     "DOI": "10.1371/journal.pone.0123448"
   },
   {
-    "id": "dominy2019pgingivalis",
+    "id": 14,
     "type": "article-journal",
     "title": "Porphyromonas gingivalis in Alzheimer's disease brains: Evidence for disease causation and treatment with small-molecule inhibitors",
     "author": [
@@ -643,6 +656,7 @@
         "given": "Annelie"
       }
     ],
+    "citation-key": "dominy2019pgingivalis",
     "issued": {
       "date-parts": [
         [
@@ -657,7 +671,7 @@
     "DOI": "10.1126/sciadv.aau3333"
   },
   {
-    "id": "ilievski2018oral",
+    "id": 15,
     "type": "article-journal",
     "title": "Chronic oral application of a periodontal pathogen results in brain inflammation, neurodegeneration and amyloid beta production in wild type mice",
     "author": [
@@ -702,6 +716,7 @@
         "given": "Keiko"
       }
     ],
+    "citation-key": "ilievski2018oral",
     "issued": {
       "date-parts": [
         [
@@ -716,7 +731,7 @@
     "DOI": "10.1371/journal.pone.0204941"
   },
   {
-    "id": "sberro2019smallgenes",
+    "id": 16,
     "type": "article-journal",
     "title": "Large-Scale Analyses of Human Microbiomes Reveal Thousands of Small, Novel Genes",
     "author": [
@@ -757,6 +772,7 @@
         "given": "Ami S."
       }
     ],
+    "citation-key": "sberro2019smallgenes",
     "issued": {
       "date-parts": [
         [
@@ -771,7 +787,7 @@
     "DOI": "10.1016/j.cell.2019.07.016"
   },
   {
-    "id": "durrant2021sorf",
+    "id": 17,
     "type": "article-journal",
     "title": "Automated prediction and annotation of small open reading frames in microbial genomes",
     "author": [
@@ -784,6 +800,7 @@
         "given": "Ami S."
       }
     ],
+    "citation-key": "durrant2021sorf",
     "issued": {
       "date-parts": [
         [
@@ -798,7 +815,7 @@
     "DOI": "10.1016/j.chom.2020.11.002"
   },
   {
-    "id": "torres2024peptideantibiotics",
+    "id": 18,
     "type": "article-journal",
     "title": "Mining human microbiomes reveals an untapped source of peptide antibiotics",
     "author": [
@@ -815,6 +832,7 @@
         "given": "Alessandro"
       }
     ],
+    "citation-key": "torres2024peptideantibiotics",
     "issued": {
       "date-parts": [
         [
@@ -829,7 +847,7 @@
     "DOI": "10.1016/j.cell.2024.07.027"
   },
   {
-    "id": "du2023unidl4biopep",
+    "id": 19,
     "type": "article-journal",
     "title": "UniDL4BioPep: a universal deep learning architecture for binary classification in peptide bioactivity",
     "author": [
@@ -850,6 +868,7 @@
         "given": "Yonghui"
       }
     ],
+    "citation-key": "du2023unidl4biopep",
     "issued": {
       "date-parts": [
         [
@@ -864,7 +883,7 @@
     "DOI": "10.1093/bib/bbad135"
   },
   {
-    "id": "lushchekina2017amd",
+    "id": 20,
     "type": "article-journal",
     "title": "Role of acetylcholinesterase in $\\beta$-amyloid aggregation studied by accelerated molecular dynamics",
     "author": [
@@ -889,6 +908,7 @@
         "given": "Patrick"
       }
     ],
+    "citation-key": "lushchekina2017amd",
     "issued": {
       "date-parts": [
         [
@@ -902,7 +922,7 @@
     "DOI": "10.1007/s12668-016-0375-x"
   },
   {
-    "id": "atanasova2020md",
+    "id": 21,
     "type": "article-journal",
     "title": "Molecular dynamics simulations of acetylcholinesterase -- beta-amyloid peptide complex",
     "author": [
@@ -919,6 +939,7 @@
         "given": "Stefan"
       }
     ],
+    "citation-key": "atanasova2020md",
     "issued": {
       "date-parts": [
         [
@@ -933,7 +954,7 @@
     "DOI": "10.2478/cait-2020-0068"
   },
   {
-    "id": "cheung2012ache",
+    "id": 22,
     "type": "article-journal",
     "title": "Structures of human acetylcholinesterase in complex with pharmacologically important ligands",
     "author": [
@@ -970,6 +991,7 @@
         "given": "Jonathan J."
       }
     ],
+    "citation-key": "cheung2012ache",
     "issued": {
       "date-parts": [
         [
@@ -984,7 +1006,7 @@
     "DOI": "10.1021/jm300871x"
   },
   {
-    "id": "kryger1999e2020",
+    "id": 23,
     "type": "article-journal",
     "title": "Structure of acetylcholinesterase complexed with E2020 (Aricept): implications for the design of new anti-Alzheimer drugs",
     "author": [
@@ -1001,6 +1023,7 @@
         "given": "Joel L."
       }
     ],
+    "citation-key": "kryger1999e2020",
     "issued": {
       "date-parts": [
         [
@@ -1015,7 +1038,7 @@
     "DOI": "10.1016/s0969-2126(99)80040-9"
   },
   {
-    "id": "rice2000emboss",
+    "id": 24,
     "type": "article-journal",
     "title": "EMBOSS: the European Molecular Biology Open Software Suite",
     "author": [
@@ -1032,6 +1055,7 @@
         "given": "Alan"
       }
     ],
+    "citation-key": "rice2000emboss",
     "issued": {
       "date-parts": [
         [
@@ -1046,7 +1070,7 @@
     "DOI": "10.1016/S0168-9525(00)02024-2"
   },
   {
-    "id": "gu2024bbb",
+    "id": 25,
     "type": "article-journal",
     "title": "Prediction of blood-brain barrier penetrating peptides based on data augmentation with Augur",
     "author": [
@@ -1063,6 +1087,7 @@
         "given": "T. Y."
       }
     ],
+    "citation-key": "gu2024bbb",
     "issued": {
       "date-parts": [
         [
@@ -1076,7 +1101,7 @@
     "DOI": "10.1186/s12915-024-01883-4"
   },
   {
-    "id": "chen2010homd",
+    "id": 26,
     "type": "article-journal",
     "title": "The Human Oral Microbiome Database: a web accessible resource for investigating oral microbe taxonomic and genomic information",
     "author": [
@@ -1105,6 +1130,7 @@
         "given": "Floyd E."
       }
     ],
+    "citation-key": "chen2010homd",
     "issued": {
       "date-parts": [
         [
@@ -1118,7 +1144,7 @@
     "DOI": "10.1093/database/baq013"
   },
   {
-    "id": "escapa2018ehomd",
+    "id": 27,
     "type": "article-journal",
     "title": "New Insights into Human Nostril Microbiome from the Expanded Human Oral Microbiome Database (eHOMD): a Resource for the Microbiome of the Human Aerodigestive Tract",
     "author": [
@@ -1147,6 +1173,7 @@
         "given": "Katherine P."
       }
     ],
+    "citation-key": "escapa2018ehomd",
     "issued": {
       "date-parts": [
         [
@@ -1161,7 +1188,7 @@
     "DOI": "10.1128/mSystems.00187-18"
   },
   {
-    "id": "belstrom2016metaproteomics",
+    "id": 28,
     "type": "article-journal",
     "title": "Metaproteomics of saliva identifies human protein markers specific for individuals with periodontitis and dental caries compared to orally healthy controls",
     "author": [
@@ -1194,6 +1221,7 @@
         "given": "Jesper V."
       }
     ],
+    "citation-key": "belstrom2016metaproteomics",
     "issued": {
       "date-parts": [
         [
@@ -1207,7 +1235,7 @@
     "DOI": "10.7717/peerj.2433"
   },
   {
-    "id": "jiang2022oralmetaproteomics",
+    "id": 29,
     "type": "article-journal",
     "title": "In-Depth Metaproteomics Analysis of Oral Microbiome for Lung Cancer",
     "author": [
@@ -1240,6 +1268,7 @@
         "given": "H."
       }
     ],
+    "citation-key": "jiang2022oralmetaproteomics",
     "issued": {
       "date-parts": [
         [
@@ -1253,7 +1282,7 @@
     "DOI": "10.34133/2022/9781578"
   },
   {
-    "id": "yuan2025osample",
+    "id": 30,
     "type": "article-journal",
     "title": "OSaMPle workflow for salivary metaproteomics analysis reveals dysbiosis in inflammatory bowel disease patients",
     "author": [
@@ -1270,6 +1299,7 @@
         "given": "Ming"
       }
     ],
+    "citation-key": "yuan2025osample",
     "issued": {
       "date-parts": [
         [
@@ -1283,7 +1313,7 @@
     "DOI": "10.1038/s41522-025-00692-z"
   },
   {
-    "id": "rathore2025ntxpred2",
+    "id": 31,
     "type": "article-journal",
     "title": "A large language model for predicting neurotoxic peptides and neurotoxins",
     "author": [
@@ -1304,6 +1334,7 @@
         "given": "Gajendra P. S."
       }
     ],
+    "citation-key": "rathore2025ntxpred2",
     "issued": {
       "date-parts": [
         [
@@ -1318,7 +1349,7 @@
     "DOI": "10.1002/pro.70200"
   },
   {
-    "id": "aptekmann2022mebipred",
+    "id": 32,
     "type": "article-journal",
     "title": "mebipred: identifying metal-binding potential in protein sequence",
     "author": [
@@ -1347,6 +1378,7 @@
         "given": "Yana"
       }
     ],
+    "citation-key": "aptekmann2022mebipred",
     "issued": {
       "date-parts": [
         [
@@ -1361,7 +1393,7 @@
     "DOI": "10.1093/bioinformatics/btac358"
   },
   {
-    "id": "olsen2020anoxpepred",
+    "id": 33,
     "type": "article-journal",
     "title": "AnOxPePred: using deep learning for the prediction of antioxidative properties of peptides",
     "author": [
@@ -1410,6 +1442,7 @@
         "given": "Paolo"
       }
     ],
+    "citation-key": "olsen2020anoxpepred",
     "issued": {
       "date-parts": [
         [
@@ -1423,7 +1456,7 @@
     "DOI": "10.1038/s41598-020-78319-w"
   },
   {
-    "id": "trott2010vina",
+    "id": 34,
     "type": "article-journal",
     "title": "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading",
     "author": [
@@ -1436,6 +1469,7 @@
         "given": "Arthur J."
       }
     ],
+    "citation-key": "trott2010vina",
     "issued": {
       "date-parts": [
         [
@@ -1450,7 +1484,7 @@
     "DOI": "10.1002/jcc.21334"
   },
   {
-    "id": "eberhardt2021vina",
+    "id": 35,
     "type": "article-journal",
     "title": "AutoDock Vina 1.2.0: new docking methods, expanded force field, and Python bindings",
     "author": [
@@ -1471,6 +1505,7 @@
         "given": "Stefano"
       }
     ],
+    "citation-key": "eberhardt2021vina",
     "issued": {
       "date-parts": [
         [
@@ -1485,7 +1520,7 @@
     "DOI": "10.1021/acs.jcim.1c00203"
   },
   {
-    "id": "abraham2015gromacs",
+    "id": 36,
     "type": "article-journal",
     "title": "GROMACS: high performance molecular simulations through multi-level parallelism from laptops to supercomputers",
     "author": [
@@ -1518,6 +1553,7 @@
         "given": "Erik"
       }
     ],
+    "citation-key": "abraham2015gromacs",
     "issued": {
       "date-parts": [
         [
@@ -1531,7 +1567,7 @@
     "DOI": "10.1016/j.softx.2015.06.001"
   },
   {
-    "id": "lindorfflarsen2010amber",
+    "id": 37,
     "type": "article-journal",
     "title": "Improved side-chain torsion potentials for the Amber ff99SB protein force field",
     "author": [
@@ -1564,6 +1600,7 @@
         "given": "David E."
       }
     ],
+    "citation-key": "lindorfflarsen2010amber",
     "issued": {
       "date-parts": [
         [
@@ -1578,7 +1615,7 @@
     "DOI": "10.1002/prot.22711"
   },
   {
-    "id": "alvarez1998ache",
+    "id": 38,
     "type": "article-journal",
     "title": "Stable complexes involving acetylcholinesterase and amyloid-beta peptide change the biochemical properties of the enzyme and increase the neurotoxicity of Alzheimer's fibrils",
     "author": [
@@ -1627,6 +1664,7 @@
         "given": "Nibaldo C."
       }
     ],
+    "citation-key": "alvarez1998ache",
     "issued": {
       "date-parts": [
         [
@@ -1641,7 +1679,7 @@
     "DOI": "10.1523/JNEUROSCI.18-09-03213.1998"
   },
   {
-    "id": "alvarez1997ache",
+    "id": 39,
     "type": "article-journal",
     "title": "Acetylcholinesterase promotes the aggregation of amyloid-beta-peptide fragments by forming a complex with the growing fibrils",
     "author": [
@@ -1666,6 +1704,7 @@
         "given": "Nibaldo C."
       }
     ],
+    "citation-key": "alvarez1997ache",
     "issued": {
       "date-parts": [
         [
@@ -1680,7 +1719,7 @@
     "DOI": "10.1006/jmbi.1997.1245"
   },
   {
-    "id": "reyes1997mab",
+    "id": 40,
     "type": "article-journal",
     "title": "A monoclonal antibody against acetylcholinesterase inhibits the formation of amyloid fibrils induced by the enzyme",
     "author": [
@@ -1713,6 +1752,7 @@
         "given": "Nibaldo C."
       }
     ],
+    "citation-key": "reyes1997mab",
     "issued": {
       "date-parts": [
         [
@@ -1727,7 +1767,7 @@
     "DOI": "10.1006/bbrc.1997.6357"
   },
   {
-    "id": "rees2003ache",
+    "id": 41,
     "type": "article-journal",
     "title": "Acetylcholinesterase promotes beta-amyloid plaques in cerebral cortex",
     "author": [
@@ -1752,6 +1792,7 @@
         "given": "Stephen"
       }
     ],
+    "citation-key": "rees2003ache",
     "issued": {
       "date-parts": [
         [
@@ -1766,7 +1807,7 @@
     "DOI": "10.1016/S0197-4580(02)00230-0"
   },
   {
-    "id": "garciaayllon2011ache",
+    "id": 42,
     "type": "article-journal",
     "title": "Revisiting the role of acetylcholinesterase in Alzheimer's disease: cross-talk with P-tau and beta-amyloid",
     "author": [
@@ -1787,6 +1828,7 @@
         "given": "Javier"
       }
     ],
+    "citation-key": "garciaayllon2011ache",
     "issued": {
       "date-parts": [
         [
@@ -1800,7 +1842,7 @@
     "DOI": "10.3389/fnmol.2011.00022"
   },
   {
-    "id": "carvajal2011ache",
+    "id": 43,
     "type": "article-journal",
     "title": "Interactions of AChE with Abeta aggregates in Alzheimer's brain: therapeutic relevance of IDN 5706",
     "author": [
@@ -1813,6 +1855,7 @@
         "given": "Nibaldo C."
       }
     ],
+    "citation-key": "carvajal2011ache",
     "issued": {
       "date-parts": [
         [
@@ -1826,7 +1869,7 @@
     "DOI": "10.3389/fnmol.2011.00019"
   },
   {
-    "id": "inestrosa2008ache",
+    "id": 44,
     "type": "article-journal",
     "title": "Amyloid-cholinesterase interactions",
     "author": [
@@ -1843,6 +1886,7 @@
         "given": "Alejandra"
       }
     ],
+    "citation-key": "inestrosa2008ache",
     "issued": {
       "date-parts": [
         [
@@ -1857,7 +1901,7 @@
     "DOI": "10.1111/j.1742-4658.2007.06238.x"
   },
   {
-    "id": "dinamarca2010ache",
+    "id": 45,
     "type": "article-journal",
     "title": "Amyloid-beta-acetylcholinesterase complexes potentiate neurodegenerative changes induced by the Abeta peptide. Implications for the pathogenesis of Alzheimer's disease",
     "author": [
@@ -1886,6 +1930,7 @@
         "given": "Nibaldo C."
       }
     ],
+    "citation-key": "dinamarca2010ache",
     "issued": {
       "date-parts": [
         [
@@ -1899,7 +1944,7 @@
     "DOI": "10.1186/1750-1326-5-4"
   },
   {
-    "id": "johnson2006pas",
+    "id": 46,
     "type": "article-journal",
     "title": "The peripheral anionic site of acetylcholinesterase: structure, functions and potential role in rational drug design",
     "author": [
@@ -1912,6 +1957,7 @@
         "given": "Samuel W."
       }
     ],
+    "citation-key": "johnson2006pas",
     "issued": {
       "date-parts": [
         [
@@ -1926,7 +1972,7 @@
     "DOI": "10.2174/138161206775193127"
   },
   {
-    "id": "poole2013pg",
+    "id": 47,
     "type": "article-journal",
     "title": "Determining the presence of periodontopathic virulence factors in short-term postmortem Alzheimer's disease brain tissue",
     "author": [
@@ -1951,6 +1997,7 @@
         "given": "StJohn"
       }
     ],
+    "citation-key": "poole2013pg",
     "issued": {
       "date-parts": [
         [
@@ -1965,7 +2012,7 @@
     "DOI": "10.3233/JAD-121918"
   },
   {
-    "id": "haditsch2020cor388",
+    "id": 48,
     "type": "article-journal",
     "title": "Alzheimer's disease-like neurodegeneration in \\textitPorphyromonas gingivalis infected neurons with persistent expression of active gingipains",
     "author": [
@@ -2022,6 +2069,7 @@
         "given": "Florian"
       }
     ],
+    "citation-key": "haditsch2020cor388",
     "issued": {
       "date-parts": [
         [
@@ -2036,7 +2084,7 @@
     "DOI": "10.3233/JAD-200393"
   },
   {
-    "id": "lei2023pgbbb",
+    "id": 49,
     "type": "article-journal",
     "title": "Porphyromonas gingivalis bacteremia increases the permeability of the blood-brain barrier via the Mfsd2a/Caveolin-1 mediated transcytosis pathway",
     "author": [
@@ -2077,6 +2125,7 @@
         "given": "Xiaolin"
       }
     ],
+    "citation-key": "lei2023pgbbb",
     "issued": {
       "date-parts": [
         [
@@ -2090,7 +2139,7 @@
     "DOI": "10.1038/s41368-022-00215-y"
   },
   {
-    "id": "barak1994pas",
+    "id": 50,
     "type": "article-journal",
     "title": "Acetylcholinesterase peripheral anionic site degeneracy conferred by amino acid arrays sharing a common core",
     "author": [
@@ -2131,6 +2180,7 @@
         "given": "Avigdor"
       }
     ],
+    "citation-key": "barak1994pas",
     "issued": {
       "date-parts": [
         [
@@ -2145,7 +2195,7 @@
     "DOI": "10.1016/S0021-9258(17)37603-X"
   },
   {
-    "id": "mallender2000asp74",
+    "id": 51,
     "type": "article-journal",
     "title": "Acetylthiocholine binds to Asp74 at the peripheral site of human acetylcholinesterase as the first step in the catalytic pathway",
     "author": [
@@ -2162,6 +2212,7 @@
         "given": "Terrone L."
       }
     ],
+    "citation-key": "mallender2000asp74",
     "issued": {
       "date-parts": [
         [
@@ -2176,7 +2227,7 @@
     "DOI": "10.1021/bi000210o"
   },
   {
-    "id": "sussman1991ache",
+    "id": 52,
     "type": "article-journal",
     "title": "Atomic structure of acetylcholinesterase from Torpedo californica: a prototypic acetylcholine-binding protein",
     "author": [
@@ -2209,6 +2260,7 @@
         "given": "Israel"
       }
     ],
+    "citation-key": "sussman1991ache",
     "issued": {
       "date-parts": [
         [
@@ -2223,7 +2275,7 @@
     "DOI": "10.1126/science.1678899"
   },
   {
-    "id": "dvir2010ache",
+    "id": 53,
     "type": "article-journal",
     "title": "Acetylcholinesterase: from 3D structure to function",
     "author": [
@@ -2248,6 +2300,7 @@
         "given": "Joel L."
       }
     ],
+    "citation-key": "dvir2010ache",
     "issued": {
       "date-parts": [
         [
@@ -2262,7 +2315,7 @@
     "DOI": "10.1016/j.cbi.2010.01.042"
   },
   {
-    "id": "bourne2003pas",
+    "id": 54,
     "type": "article-journal",
     "title": "Structural insights into ligand interactions at the acetylcholinesterase peripheral anionic site",
     "author": [
@@ -2283,6 +2336,7 @@
         "given": "Pascale"
       }
     ],
+    "citation-key": "bourne2003pas",
     "issued": {
       "date-parts": [
         [
