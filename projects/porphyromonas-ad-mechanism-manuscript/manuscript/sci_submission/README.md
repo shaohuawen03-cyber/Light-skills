@@ -10,7 +10,7 @@ Rewritten from `manuscript/sci_combined/` plus methods depth from `manuscript/fu
 - Each predictor (UniDL4BioPep, NTxPred2, mebipred, AnOxPePred) has its own methods subsection with architecture, training set and threshold.
 - Source libraries: EMBOSS getorf on PRJNA678453 MAGs (24 healthy / 26 periodontitis samples, 296 MAG files, codon table 11, 15–150 bp, `-find 0`); presence/absence without read remapping. PRJEB65451 is a derived assembly, not a second cohort. Healthy library is scored only (no dereplication).
 - Introduction expanded to seven paragraphs (AD, PAS, epidemiology including Hu 2024 MR, *P. gingivalis*, smORF mining, AChE–Aβ MD, study route). It ends with “Here we scored / docked / simulated”, not a question list.
-- Discussion expanded (~1,170 English words): principal findings, 22-task library Δ, four-step PAS mechanism, oral-to-cortex route. No Limitations heading in the main text.
+- Discussion expanded (~1,790 English words): PAS literature cases, docking residue recurrence, RMSD/RMSF/Rg/H-bond/SASA read against AChE–Aβ MD, four-step PAS mechanism, oral-to-cortex route. No Limitations heading in the main text.
 
 ## Files
 

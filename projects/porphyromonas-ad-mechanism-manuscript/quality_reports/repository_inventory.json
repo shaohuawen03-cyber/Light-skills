@@ -5,7 +5,7 @@
     "Python bytecode caches (__pycache__ and *.pyc)"
   ],
   "total_files": 256,
-  "total_bytes": 122343999,
+  "total_bytes": 122375721,
   "by_top_level_group": {
     "docking": {
       "files": 5,
@@ -17,7 +17,7 @@
     },
     "manuscript": {
       "files": 72,
-      "bytes": 109779230
+      "bytes": 109806185
     },
     "project_root": {
       "files": 4,
@@ -29,7 +29,7 @@
     },
     "references": {
       "files": 4,
-      "bytes": 35078
+      "bytes": 39845
     },
     "revision_v2": {
       "files": 13,
@@ -60,7 +60,7 @@
     {
       "path": "ARTIFACT_SHA256SUMS.txt",
       "size_bytes": 23253,
-      "sha256": "ce43fbecf77f12ed718a1ec0405c57c11bff07dba4b6e7ac825e7c5fa5b31eab"
+      "sha256": "d33b21988c0e8d74ffe46294495a3c0c2fe6c7373db34db6465bd339a67c8605"
     },
     {
       "path": "README.md",
@@ -519,28 +519,28 @@
     },
     {
       "path": "manuscript/sci_submission/Chinese.docx",
-      "size_bytes": 7208795,
-      "sha256": "3e40dea6f063054765791ba39a5a9d0f8f7fa569d4b8083fce786be9b6117678"
+      "size_bytes": 7212592,
+      "sha256": "48a958344e52380ee72cdca5af9b07e0fa6e998626c0bd332c17d022b3193b58"
     },
     {
       "path": "manuscript/sci_submission/Chinese.md",
-      "size_bytes": 37713,
-      "sha256": "aadd98fb133071727eec67c374f1425fd4dd031987e7086ca289351d22ccc958"
+      "size_bytes": 46733,
+      "sha256": "782ccf9094d44d69446065554c2d81a6dc15ed009114d7cd14d6e374d72b9675"
     },
     {
       "path": "manuscript/sci_submission/English.docx",
-      "size_bytes": 7208201,
-      "sha256": "c194b846c1ae10d59fda52ab30cd648bda2a1583a9a4ee6d34abe0bd3f62eab5"
+      "size_bytes": 7212088,
+      "sha256": "ae1f7d410d93280d5fd9b154748e279a18e9e9a5519ea0c5c6c013d68f81105b"
     },
     {
       "path": "manuscript/sci_submission/English.md",
-      "size_bytes": 42419,
-      "sha256": "9679ed50165fec14324d8c9883410440aec9dc8746bb9be8849759f737d2c8a0"
+      "size_bytes": 52607,
+      "sha256": "cea740b7564b2ef287af3d2917e68e9977ccced61ceac1956eab9df44c2aca9d"
     },
     {
       "path": "manuscript/sci_submission/README.md",
-      "size_bytes": 2584,
-      "sha256": "f87e0afbd6fbee10b76a5dbd708828c211363ec5d39f13a4fa02febe6ce85afa"
+      "size_bytes": 2647,
+      "sha256": "13971fbe50e60e58214a6fd449b4ec0aa6eadb1c3cb87d2948d2c15cef726446"
     },
     {
       "path": "manuscript/supplementary_tables_bilingual.docx",
@@ -779,8 +779,8 @@
     },
     {
       "path": "references/references.bib",
-      "size_bytes": 25426,
-      "sha256": "29b921eb69c7243cca922396e73c3905ba1576df117f5481245be07f95dedc8f"
+      "size_bytes": 30193,
+      "sha256": "210cb9ea128aa6b49a42c74ba63b57923771d10540dc9c51ccd9f70869327627"
     },
     {
       "path": "references/verified_references.md",
