@@ -7,7 +7,14 @@ import zipfile
 from html import escape
 from pathlib import Path
 
-from discussion_texts import CN_DELETE_PREFIXES, CN_REPLACE, EN_DELETE_PREFIXES, EN_REPLACE
+from discussion_texts import (
+    CN_DELETE_PREFIXES,
+    CN_REPLACE,
+    EN_DELETE_PREFIXES,
+    EN_REPLACE,
+    METHOD_CN,
+    METHOD_EN,
+)
 
 ROOT = Path("/home/user/Light-skills")
 BACKUP = ROOT / "projects" / "English_backup_pre-zotero.docx"
@@ -93,10 +100,10 @@ def patch_docx(path: Path, mapping: dict[str, str], deletes: tuple[str, ...], de
 
 def main() -> None:
     # English.docx currently has Zotero fields; patch the clean backup.
-    patch_docx(BACKUP, EN_REPLACE, EN_DELETE_PREFIXES, BACKUP)
+    patch_docx(BACKUP, {**EN_REPLACE, **METHOD_EN}, EN_DELETE_PREFIXES, BACKUP)
     EN.write_bytes(BACKUP.read_bytes())
     print("copied clean English")
-    patch_docx(CN, CN_REPLACE, CN_DELETE_PREFIXES, CN)
+    patch_docx(CN, {**CN_REPLACE, **METHOD_CN}, CN_DELETE_PREFIXES, CN)
 
 
 if __name__ == "__main__":

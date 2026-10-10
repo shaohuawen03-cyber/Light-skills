@@ -119,25 +119,31 @@ EN_REPLACE = {
         "occupancy [6]. The present split is a computational analogue of that "
         "biochemical distinction, limited to one trajectory per complex."
     ),
-    "The calculations do not establish a four-step pathogenic cascade.": (
-        "Binding at PAS, hindrance of acetylcholine hydrolysis, and modulation of Aβ "
-        "nucleation remain separate problems. Only the first is treated here as a "
-        "predicted geometry. If a candidate were later shown to bind PAS in vitro, it could change "
-        "the local interaction environment of that surface. If the bound pose overlapped "
-        "the substrate path, catalytic activity would need a separate assay. The sign of "
-        "any effect on Aβ assembly is not given by docking or MD. Because PAS is a "
-        "documented pro-fibrillar site [4–5,43], a peptide remaining there could in "
-        "principle alter nucleation. A peptide that competed for Aβ-relevant PAS "
-        "contacts could also reduce AChE-mediated assembly. Occupancy of a "
-        "pro-fibrillar site is compatible with either outcome. PAS-directed small "
-        "molecules can block AChE-induced aggregation [6], which is the inhibitory "
-        "reading; AChE–Aβ complexes are more toxic than free peptide [4], which is the "
-        "promotional reading when the ligand is Aβ itself. An oral heptapeptide is "
-        "neither of those ligands. Folded AChE presenting a peptide-coated PAS has been "
-        "invoked to explain greater hippocampal damage of AChE–Aβ particles relative to "
-        "free fibrils [45]. That literature describes AChE–Aβ complexes, not the "
-        "present oral peptides. Peptide–AChE binding, AChE activity and Aβ aggregation "
-        "kinetics are required to choose between promotion and inhibition."
+    "Binding at PAS, hindrance of acetylcholine hydrolysis": (
+        "The cited PAS and AChE–Aβ papers support a four-step pathogenic cascade as a "
+        "hypothesis for an oral peptide that remains at PAS. First, PAS recognition: "
+        "occupancy of Asp74, Tyr72, Trp286 and Tyr341 places a heterologous cationic "
+        "peptide at the gorge mouth that feeds the catalytic triad, the first encounter "
+        "assigned to cationic substrate at this enzyme [22,51]. Second, a lasting "
+        "enzyme–peptide complex: intermolecular hydrogen bonds persist on the present "
+        "window, as in AChE–Aβ trajectories and in isolated stable complexes [20,21,38]. "
+        "Third, restricted acetylcholine access: physical blockage at the 20-Å gorge "
+        "entrance can hinder substrate even while the catalytic core remains folded, the "
+        "steric-blockade and allosteric mode described for PAS ligands [46,53]. Fourth, "
+        "pathological chaperone activity: AChE accelerates Aβ fibril assembly through the "
+        "PAS, and AChE–Aβ particles are more toxic than free peptide [4,38–39]. A short "
+        "hydrophobic PAS motif of the enzyme is sufficient for that chaperone effect [5]. "
+        "Reviews place plaque-associated AChE in cross-talk with Aβ still sensitive to "
+        "PAS blockade [43]. A peptide that remains at that surface can lower the "
+        "nucleation barrier for endogenous Aβ. Folded AChE would then present a "
+        "peptide-coated PAS on which Aβ oligomers can co-assemble, which accounts for "
+        "the greater hippocampal damage of AChE–Aβ particles relative to free fibrils "
+        "[45]. PAS-directed small molecules block AChE-induced aggregation [6]; those "
+        "ligands inhibit the chaperone surface. The AChE–Aβ literature describes a "
+        "peptide ligand that uses the same surface as a nucleation site [4,20,21]. An "
+        "oral heptapeptide that stays at PAS belongs with that peptide class. The four "
+        "steps remain a hypothesis: this study does not measure acetylcholine hydrolysis "
+        "or Aβ aggregation."
     ),
     "PAS pharmacology in AChE has mostly been small molecules.": (
         "PAS pharmacology in AChE has mostly been small molecules. PAS ligands reduce "
@@ -166,12 +172,11 @@ EN_REPLACE = {
         "and no Aβ aggregation assay were performed. In-vivo exposure, plasma stability "
         "and barrier crossing remain unknown. FLLHTTR and YLSLLQR supply the strongest "
         "computational case for predicted PAS contacts that persist on this window. The "
-        "work nominates those peptides and a testable hypothesis: oral micropeptides may "
-        "interact with AChE-PAS. If a biochemical interaction is confirmed, repeat "
-        "simulations and competition experiments can then locate the site and the "
-        "functional direction. Later assays of peptide–AChE binding, AChE catalysis "
-        "and Aβ aggregation, together with expression and exposure data, are required to "
-        "test that hypothesis."
+        "four-step cascade above is the working hypothesis: an oral micropeptide that "
+        "remains at PAS can form a lasting complex, restrict gorge access and coat the "
+        "documented chaperone surface. Later assays of peptide–AChE binding, AChE "
+        "catalysis and Aβ aggregation, together with expression and exposure data, are "
+        "required to test that cascade."
     ),
 }
 
@@ -257,20 +262,19 @@ CN_REPLACE = {
         "PAS 导向小分子可在不占据催化位点的情况下抑制 AChE 诱导的聚集[6]。"
         "此处分型只是该生化区分的计算类比，且每个复合物仅一条轨迹。"
     ),
-    "现有计算不能建立四步致病级联。": (
-        "PAS 结合、妨碍乙酰胆碱水解、调节 Aβ 成核仍是不同问题。此处只把第一项作为预测几何来处理。"
-        "若候选肽随后在体外被证明结合 PAS，则可能改变该表面的局部相互作用环境。"
-        "若结合构象与底物路径重叠，催化活性需要单独测定。"
-        "对接和 MD 不能给出对 Aβ 组装的作用方向。"
-        "PAS 是已记录的促纤位点[4–5,43]，停在那里的肽原则上可能改变成核；"
-        "若肽竞争性占据与 Aβ 相关的 PAS 接触，也可能减弱 AChE 介导的聚集。"
-        "占据促纤位点与两种结局都相容。"
-        "PAS 导向小分子可阻断 AChE 诱导的聚集[6]，这是抑制读法；"
-        "AChE–Aβ 复合物毒性高于游离肽[4]，这是配体为 Aβ 本身时的促进读法。"
-        "口腔七肽不是这两类配体。"
-        "折叠的 AChE 出示覆肽 PAS，曾被用来解释 AChE–Aβ 颗粒相对游离纤丝更强的海马损伤[45]。"
-        "那一文献描述的是 AChE–Aβ 复合物，不是本研究的口腔肽。"
-        "肽–AChE 结合、AChE 酶活和 Aβ 聚集动力学，才能在促进与抑制之间作出区分。"
+    "PAS 结合、妨碍乙酰胆碱水解、调节 Aβ 成核仍是不同问题。": (
+        "所引 PAS 与 AChE–Aβ 文献支持把四步致病级联作为假说，用于停在 PAS 上的口腔肽。"
+        "第一，PAS 识别：占据 Asp74、Tyr72、Trp286、Tyr341，把异源阳离子肽放在通向催化三联体的峡部入口，"
+        "即该酶上赋予阳离子底物的第一步[22,51]。"
+        "第二，持续的酶–肽复合物：分子间氢键在此窗口持续，与 AChE–Aβ 轨迹以及分离得到的稳定复合物一致[20,21,38]。"
+        "第三，乙酰胆碱进入受限：20 Å 峡部入口的物理占据可在催化核心仍折叠时妨碍底物，即 PAS 配体的空间阻断与别构方式[46,53]。"
+        "第四，病理性伴侣活性：AChE 经 PAS 加速 Aβ 成纤，且 AChE–Aβ 颗粒毒性高于游离肽[4,38–39]。"
+        "酶上一段疏水 PAS 基序即足以产生该伴侣效应[5]。综述把斑块相关 AChE 放进与 Aβ 的交叉对话，且仍对 PAS 阻断敏感[43]。"
+        "停在该表面的肽可降低内源 Aβ 的成核壁垒。折叠的 AChE 于是出示覆肽 PAS，Aβ 寡聚体可在其上共组装，"
+        "从而解释 AChE–Aβ 颗粒相对游离纤丝更强的海马损伤[45]。"
+        "PAS 导向小分子阻断 AChE 诱导的聚集[6]，它们抑制的是伴侣表面。"
+        "AChE–Aβ 文献描述的是把同一表面当成核位点的肽配体[4,20,21]。停在 PAS 上的口腔七肽属于后一类。"
+        "四步仍是假说：本研究未测定乙酰胆碱水解或 Aβ 聚集。"
     ),
     "AChE 的 PAS 药理学此前多为小分子。": (
         "AChE 的 PAS 药理学此前多为小分子。PAS 配体在不要求占据催化位点的情况下降低 AChE 诱导的聚集[6]。"
@@ -290,10 +294,77 @@ CN_REPLACE = {
         "未做肽–AChE 结合测定、AChE 酶活测定或 Aβ 聚集实验。"
         "体内暴露、血浆稳定性和屏障穿越仍未知。"
         "FLLHTTR 与 YLSLLQR 为预测 PAS 接触在此窗口上得以维持提供了最强的计算依据。"
-        "本研究提名这些肽，并提出可检验的假说：口腔微肽可能与 AChE-PAS 相互作用。"
-        "若生化相互作用得到确认，再用重复模拟和竞争实验定位作用位点与功能方向。"
-        "后续需要肽–AChE 结合、AChE 催化和 Aβ 聚集实验，并结合表达与暴露数据来检验该假说。"
+        "上述四步致病级联是工作假说：停在 PAS 上的口腔微肽可形成持续复合物、限制峡部进入并覆盖已记录的伴侣表面。"
+        "后续需要肽–AChE 结合、AChE 催化和 Aβ 聚集实验，并结合表达与暴露数据来检验该级联。"
     ),
 }
 
 CN_DELETE_PREFIXES: tuple[str, ...] = ()
+
+METHOD_EN = {
+    "The work is computational. No new patients": (
+        "The work is computational. No new patients, specimens, sequencing runs or wet "
+        "assays were added. Healthy and periodontitis tags are library labels; they are "
+        "not peptide-level clinical diagnoses. Ligand starting coordinates for docking "
+        "were AlphaFold3-predicted structures of the twelve peptides. All twelve were "
+        "docked with local three-run AutoDock Vina. MD used GROMACS 2025.1 on apo AChE "
+        "and three complexes taken from the best-run poses, as described below."
+    ),
+    "Ligand starting coordinates for the twelve peptides were predicted with AlphaFold3.": (
+        "The twelve peptide ligands were modelled with AlphaFold3; those predicted "
+        "structures were the starting coordinates for docking. Each model is a computed "
+        "conformer for a short, flexible chain, not a crystal structure, and it was used "
+        "only as the input geometry for docking. Human recombinant AChE (PDB 4EY6, "
+        "2.40 Å) was stripped of galantamine and crystal waters, chain breaks were "
+        "repaired, and protonation was set at pH 7.4 [22]. The twelve ligands ALLLHRC, "
+        "FCLHLQLR, FLLHTTR, HLLTLKKHV, HLPLLHRCC, HVLLLRQCA, LLHLPKRTT, LLHPLRC, "
+        "LLHPLRL, WLLVHLKK, YHHLLCRR and YLSLLQR were docked with AutoDock Vina, "
+        "exhaustiveness 32 [34–35]. The grid was centred on the PAS (Tyr72, Asp74, "
+        "Thr75, Leu76, Trp286, His287, Tyr341) and covered the gorge neck (Phe295), the "
+        "choline subsite (Trp86, Glu202, Tyr337) and the catalytic triad (Ser203, "
+        "His447, Glu334). Each ligand was run three times. We report best-run affinity, "
+        "three-run mean ± SD, hydrogen-bond count and PAS contact from the single best "
+        "pose. Vina scores rank poses; they are not experimental free energies."
+    ),
+    "Four explicit-solvent systems were built in GROMACS": (
+        "Ligand starting coordinates were the AlphaFold3-predicted peptide structures "
+        "carried forward from docking. Four explicit-solvent systems were built in "
+        "GROMACS 2025.1 with Amber99SB-ILDN and TIP3P water at 0.15 M NaCl [36–37]: apo "
+        "AChE (chain A) and the ALLLHRC, FLLHTTR and YLSLLQR complexes. These three "
+        "ligands were taken from the twelve docked peptides as the best-run Vina poses: "
+        "FLLHTTR and YLSLLQR as PAS contacts, ALLLHRC as a high-scoring catalytic-site "
+        "occupant without outer PAS aromatics, so that PAS geometry could be compared "
+        "with a strong non-PAS score. Each box was triclinic with a 1.0 nm solute-to-wall "
+        "buffer. Equilibration was 2,000 steps of steepest descent, 1.0 ns restrained "
+        "NVT to 300 K, 1.0 ns restrained NPT, and 1.0 ns free NPT. Production was 100 ns "
+        "(dt = 2.0 fs) at 300 K and 1.0 bar with LINCS, 1.2 nm cut-offs and "
+        "particle-mesh Ewald. Frames were stored every 20 ps."
+    ),
+}
+
+METHOD_CN = {
+    "工作为纯计算。未新增患者、标本、测序或湿实验。": (
+        "工作为纯计算。未新增患者、标本、测序或湿实验。健康与牙周炎标记是文库标签，不是肽水平临床诊断。"
+        "对接配体的起始坐标为 12 条肽的 AlphaFold3 预测结构。12 条均做本地三次 AutoDock Vina 对接。"
+        "MD 使用 GROMACS 2025.1，限于 apo AChE 与按下述规则从最优单次构象中取出的三个复合物。"
+    ),
+    "12 条肽的配体起始坐标用 AlphaFold3 预测。": (
+        "12 条肽配体用 AlphaFold3 建模，预测结构即为对接起始坐标。"
+        "每个模型是短柔性链的计算构象，不是晶体结构，仅作为对接输入几何。"
+        "人源重组 AChE（PDB 4EY6，2.40 Å）去除加兰他敏与结晶水，修复链断裂，并按 pH 7.4 分配质子化[22]。"
+        "12 条配体 ALLLHRC、FCLHLQLR、FLLHTTR、HLLTLKKHV、HLPLLHRCC、HVLLLRQCA、LLHLPKRTT、LLHPLRC、"
+        "LLHPLRL、WLLVHLKK、YHHLLCRR 和 YLSLLQR 用 AutoDock Vina 对接，exhaustiveness = 32[34–35]。"
+        "网格以 PAS（Tyr72、Asp74、Thr75、Leu76、Trp286、His287、Tyr341）为中心，覆盖峡部颈（Phe295）、"
+        "胆碱亚位点（Trp86、Glu202、Tyr337）和催化三联体（Ser203、His447、Glu334）。每条配体跑三次。"
+        "报告最优单次亲和力、三次均值±SD、氢键数和最优构象的 PAS 接触。Vina 分数用于排序，不是实验自由能。"
+    ),
+    "四个显式溶剂体系在 GROMACS 中以 Amber99SB-ILDN 和 TIP3P、0.15 M NaCl 构建": (
+        "配体起始坐标为对接沿用的 AlphaFold3 预测肽结构。"
+        "四个显式溶剂体系在 GROMACS 2025.1 中以 Amber99SB-ILDN 和 TIP3P、0.15 M NaCl 构建[36–37]："
+        "apo AChE（A 链）以及 ALLLHRC、FLLHTTR、YLSLLQR 复合物。"
+        "这三条取自 12 条已对接肽中最优单次 Vina 构象：FLLHTTR 与 YLSLLQR 为 PAS 接触，"
+        "ALLLHRC 为不接触外侧 PAS 芳香残基的高分催化位点占据者，以便把 PAS 几何与强非 PAS 分数对照。"
+        "盒子为三斜，溶质至壁缓冲 1.0 nm。平衡为 2,000 步最速下降、1.0 ns 受限 NVT 升至 300 K、1.0 ns 受限 NPT 和 1.0 ns 自由 NPT。"
+        "生产相 100 ns（dt = 2.0 fs），300 K、1.0 bar，LINCS、1.2 nm 截断和粒子网格 Ewald。每 20 ps 存一帧。"
+    ),
+}
