@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+"""Replace whole body paragraphs by prefix. Keeps document.xml namespaces."""
+from __future__ import annotations
+
+import argparse
+import re
+import zipfile
+from html import escape
+from pathlib import Path
+
+TOKEN = re.compile(r"\[(\d+(?:[–-]\d+)?(?:,\s*\d+(?:[–-]\d+)?)*)\]")
+P_RE = re.compile(r"<w:p(?: [^>]*)?>.*?</w:p>", re.DOTALL)
+
+
+def para_text(p_xml: str) -> str:
+    return "".join(re.findall(r"<w:t(?: [^>]*)?>([^<]*)</w:t>", p_xml))
+
+
+def runs_xml(text: str) -> str:
+    parts: list[str] = []
+    last = 0
+    for m in TOKEN.finditer(text):
+        if m.start() > last:
+            chunk = escape(text[last : m.start()], quote=False)
+            parts.append(f'<w:r><w:t xml:space="preserve">{chunk}</w:t></w:r>')
+        parts.append(f"<w:r><w:t>{escape(m.group(0), quote=False)}</w:t></w:r>")
+        last = m.end()
+    if last < len(text):
+        chunk = escape(text[last:], quote=False)
+        parts.append(f'<w:r><w:t xml:space="preserve">{chunk}</w:t></w:r>')
+    return "".join(parts)
+
+
+def replace_inner(p_xml: str, new_text: str) -> str:
+    ppr = p_xml.find("</w:pPr>")
+    start = ppr + len("</w:pPr>") if ppr >= 0 else p_xml.find(">") + 1
+    return p_xml[:start] + runs_xml(new_text) + "</w:p>"
+
+
+def rewrite_xml(xml: str, mapping: dict[str, str]) -> str:
+    out: list[str] = []
+    last = 0
+    unmatched = set(mapping)
+    n = 0
+    for m in P_RE.finditer(xml):
+        p = m.group(0)
+        txt = para_text(p).strip()
+        out.append(xml[last : m.start()])
+        hit = next((k for k in mapping if txt.startswith(k)), None)
+        if hit:
+            out.append(replace_inner(p, mapping[hit]))
+            unmatched.discard(hit)
+            n += 1
+        else:
+            out.append(p)
+        last = m.end()
+    out.append(xml[last:])
+    if unmatched:
+        raise SystemExit(f"unmatched: {sorted(unmatched)}")
+    print(f"replaced={n}")
+    return "".join(out)
+
+
+def patch_docx(path: Path, mapping: dict[str, str], dest: Path | None = None) -> None:
+    dest = dest or path
+    with zipfile.ZipFile(path) as z:
+        xml = z.read("word/document.xml").decode("utf-8")
+    new_xml = rewrite_xml(xml, mapping)
+    tmp = dest.with_suffix(".tmp.docx")
+    with zipfile.ZipFile(path, "r") as zin, zipfile.ZipFile(tmp, "w") as zout:
+        for info in zin.infolist():
+            data = new_xml.encode("utf-8") if info.filename == "word/document.xml" else zin.read(info.filename)
+            zout.writestr(info, data)
+    tmp.replace(dest)
+    print("wrote", dest, dest.stat().st_size)
+
+
+def main() -> None:
+    import sys
+
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from front_matter_texts import CN_FRONT, EN_FRONT
+
+    root = Path("/home/user/Light-skills")
+    backup = root / "projects" / "English_backup_pre-zotero.docx"
+    en = root / "projects" / "English.docx"
+    en_del = root / "deliverable" / "English.docx"
+    cn = root / "deliverable" / "Chinese.docx"
+
+    patch_docx(backup, EN_FRONT, backup)
+    en.write_bytes(backup.read_bytes())
+    print("copied clean English")
+
+    # inject after this script if --inject
+    if "--no-inject" not in sys.argv:
+        pass
+
+    patch_docx(cn, CN_FRONT, cn)
+
+
+if __name__ == "__main__":
+    main()
